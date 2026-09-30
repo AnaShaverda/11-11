@@ -1,0 +1,37 @@
+:root {
+  color-scheme: dark;
+  --color-bg-start: #071c61;
+  --color-bg-middle: #34217f;
+  --color-bg-end: #9d3ba9;
+  --color-purple: #7753db;
+  --color-magenta: #e85bcf;
+  --color-surface: rgba(49, 62, 151, 0.27);
+  --color-surface-elevated: rgba(105, 105, 205, 0.34);
+  --color-border: rgba(198, 211, 255, 0.49);
+  --color-text: #ffffff;
+  --color-text-secondary: #d9ddff;
+  --color-accent-pink: #fa79d3;
+  --color-accent-blue: #63c8ff;
+  --color-accent-green: #61dfbe;
+  --color-accent-orange: #ffc678;
+  --color-accent-birthday: #ff86d7;
+  --color-accent-wedding: #f9e9d8;
+  --color-accent-friendship: #ffb7db;
+  --radius: 18px;
+  --radius-large: 32px;
+  --space-1: 0.5rem;
+  --space-2: 0.75rem;
+  --space-3: 1rem;
+  --space-4: 1.5rem;
+  --space-5: 2rem;
+  --space-6: 3rem;
+  --content-max: 1120px;
+  --header-height: 94px;
+  --transition-fast: 180ms ease;
+  --transition-soft: 350ms ease;
+  --shadow-frame:
+    0 0 35px rgba(117, 137, 255, 0.18), inset 0 0 24px rgba(149, 117, 255, 0.07);
+  --shadow-glow:
+    0 12px 38px rgba(52, 36, 162, 0.35), 0 0 20px rgba(104, 155, 255, 0.24);
+  --glass-blur: 18px;
+}
