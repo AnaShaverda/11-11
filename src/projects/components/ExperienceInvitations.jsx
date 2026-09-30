@@ -3,8 +3,8 @@ import InvitationGallery from "../../invitations/components/InvitationGallery.js
 import { invitationTemplates } from "../../invitations/data/templates.js";
 import ExperienceSection from "./ExperienceSection.jsx";
 
-export default function ExperienceInvitations({ type, description }) {
-  const templates = invitationTemplates.filter((template) => template.eventTypes.includes(type));
+export default function ExperienceInvitations({ type, description, limit = 4 }) {
+  const templates = invitationTemplates.filter((template) => template.category === type).slice(0, limit);
   return (
     <ExperienceSection label="THE FIRST HELLO" title={`${type} invitations`} description={description} className="experience-invitations">
       <InvitationGallery templates={templates} />

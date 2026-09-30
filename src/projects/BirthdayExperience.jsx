@@ -5,9 +5,10 @@ import ExperienceCTA from "./components/ExperienceCTA.jsx";
 import ResponseCard from "./components/ResponseCard.jsx";
 import QuestionCard from "./components/QuestionCard.jsx";
 import { birthdayWishes, birthdayPrompts, birthdayGames } from "./data/showcases.js";
-import ThemeExplorer from "../themes/components/ThemeExplorer.jsx";
 import ThemeModulePreview from "../modules/components/ThemeModulePreview.jsx";
 import { themeDemoEvents } from "../themes/data/demoEvents.js";
+import { birthdayLandingAssets } from "../invitations/data/birthdayAssets.js";
+import BirthdayIllustrations from "../invitations/components/BirthdayIllustrations.jsx";
 
 export default function BirthdayExperience() {
   return (
@@ -15,10 +16,9 @@ export default function BirthdayExperience() {
       <Link className="experience-back" to="/projects">← All experiences</Link>
       <section className="birthday-hero">
         <div className="birthday-hero-copy"><span className="section-label">BIRTHDAY / 11:11</span><h1>Make another year <em>unforgettable.</em></h1><p>Thoughtful invitations, heartfelt words, and the little stories that make someone feel celebrated.</p><Link className="primary-link" to="/invitations?type=Birthday">Explore birthday invitations <span aria-hidden="true">↗</span></Link></div>
-        <div className="birthday-hero-art" aria-hidden="true"><span className="birthday-orbit orbit-one" /><span className="birthday-orbit orbit-two" /><span className="birthday-orbit orbit-three" /><span className="birthday-hero-number">11:11</span><span className="birthday-hero-star star-one">✦</span><span className="birthday-hero-star star-two">✳</span><span className="birthday-hero-art-copy">another trip<br />around the sun</span></div>
+        <div className="birthday-hero-art" aria-hidden="true"><BirthdayIllustrations assets={birthdayLandingAssets} slot="landing" eager /><span className="birthday-hero-number">11:11</span><span className="birthday-hero-art-copy">another trip<br />around the sun</span></div>
       </section>
-      <ThemeExplorer category="birthday" />
-      <ExperienceInvitations type="Birthday" description="A first glimpse of the celebration, designed to make people smile before the day even begins." />
+      <ExperienceInvitations type="Birthday" limit={6} description="A first glimpse of the celebration, designed to make people smile before the day even begins." />
       <ExperienceSection id="optional-modules" label="YOUR PEOPLE, YOUR WAY" title="Add the parts that feel like you" description="Invitation, event page, countdown, and gallery set the scene. Turn on a diary, messages, games, or a quiz when they fit your celebration.">
         <div className="birthday-module-demo"><div className="theme-canvas theme-retro-disco"><ThemeModulePreview moduleId="friendship-diary" event={themeDemoEvents.birthday} /></div><div className="theme-canvas theme-coquette"><ThemeModulePreview moduleId="friendship-diary" event={themeDemoEvents.birthday} /></div></div>
         <p className="module-demo-caption">The same Friendship Diary in two Birthday designs. <Link to="/modules/friendship-diary">See how the module works ↗</Link></p>

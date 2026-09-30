@@ -1,0 +1,112 @@
+/* The illustrations carry the Birthday identities; CSS keeps layout and restrained texture. */
+.preview-pink-glam .invitation-preview-graphic,
+.preview-midnight-luxury .invitation-preview-graphic,
+.preview-garden-party .invitation-preview-graphic,
+.preview-neon-night .invitation-preview-graphic,
+.preview-tropical-summer .invitation-preview-graphic,
+.preview-pink-glam .invitation-preview-decor,
+.preview-pastel-dream .invitation-preview-decor,
+.preview-garden-party .invitation-preview-decor,
+.preview-neon-night .invitation-preview-decor,
+.preview-tropical-summer .invitation-preview-decor,
+.preview-coquette .invitation-preview-shape,
+.preview-garden-party .invitation-preview-shape,
+.preview-pastel-dream .invitation-preview-shape,
+.preview-pastel-dream .invitation-preview-mark { display: none; }
+.invitation-preview-art.preview-tropical-summer .invitation-preview-graphic,
+.invitation-preview-art.preview-pastel-dream .invitation-preview-shape { display: none; }
+
+.birthday-design-page .design-type-glyph,
+.birthday-design-page .design-pattern-panel strong,
+.birthday-design-page .design-ticket-panel i,
+.birthday-design-page .design-support-card i { display: none; }
+.birthday-design-page:not(.design-type-painted) .design-support-card .birthday-illustration--support-1 { z-index: 0; right: -10%; bottom: -10%; width: 56%; height: 72%; opacity: .93; transform: rotate(7deg); }
+.birthday-design-page:not(.design-type-painted) .design-support-1 .birthday-illustration--support-1 { right: -12%; bottom: -15%; width: 58%; height: 76%; transform: rotate(-8deg); }
+.birthday-design-page:not(.design-type-painted) .design-support-2 .birthday-illustration--support-1 { right: -8%; bottom: -11%; width: 56%; height: 69%; transform: rotate(9deg); }
+.birthday-design-page:not(.design-type-painted) .design-support-card:not(.design-support-4) strong { max-width: 68%; }
+
+/* Metallic party themes: the real disco balls and party pieces replace fake frames. */
+.preview-retro-pop .invitation-preview-shape.shape-one { opacity: .62; }
+.preview-retro-pop .invitation-preview-shape.shape-two { opacity: .58; }
+.preview-y2k-digital { background: radial-gradient(circle at 87% 31%, #e8a9dd7a, transparent 34%), radial-gradient(circle at 15% 90%, #73cbea45, transparent 45%), #1a279c !important; }
+.preview-y2k-digital .invitation-preview-graphic { border: 0; box-shadow: none; opacity: .12 !important; }
+.preview-pink-glam { background: radial-gradient(circle at 84% 40%, #e980b685, transparent 41%), linear-gradient(145deg, #501e49, #81365f) !important; }
+.preview-pink-glam .birthday-illustration--invitation-1 { width: 43%; }
+.preview-pink-glam .birthday-illustration--invitation-2 { width: 21%; }
+.preview-midnight-luxury { background: radial-gradient(circle at 84% 47%, #78485867, transparent 43%), #111724 !important; }
+.preview-midnight-luxury::after { opacity: .55; }
+.preview-midnight-luxury .birthday-illustration--invitation-1 { width: 39%; }
+.preview-neon-night { background: radial-gradient(circle at 81% 47%, #b5248a6b, transparent 37%), linear-gradient(145deg, #0b0d2a, #261440) !important; }
+.preview-neon-night .birthday-illustration--invitation-1 { width: 42%; }
+.design-pattern-laser .design-type-board { background-image: radial-gradient(circle at 75% 55%, #a836976b, transparent 45%), linear-gradient(135deg, #0b0d2a, #201246); }
+
+/* Coquette uses the supplied illustrations rather than generated ornaments. */
+.invitation-preview-art.preview-coquette { background: #fff6ef; }
+.preview-coquette::before,
+.preview-coquette::after,
+.preview-coquette .invitation-preview-shape,
+.preview-coquette .invitation-preview-graphic,
+.preview-coquette .invitation-preview-decor,
+.preview-coquette .invitation-preview-mark,
+.preview-coquette .invitation-preview-edge span { display: none; }
+.preview-coquette .birthday-illustration--invitation-1 { z-index: 1; top: 22%; right: auto; left: 50%; width: 78%; height: 70%; opacity: .25; transform: translateX(-50%) rotate(-5deg); filter: none; }
+.preview-coquette .birthday-illustration--invitation-2 { top: 5%; right: auto; left: 50%; width: 25%; height: 24%; transform: translateX(-50%) rotate(-5deg); }
+.birthday-design-page.design-pattern-ribbon .design-type-mark { display: none; }
+.birthday-design-page.design-pattern-ribbon .design-type-words { grid-column: 2; }
+.birthday-design-page.design-pattern-ribbon .design-type-board .birthday-illustration--typography-1 { top: 17%; right: auto; bottom: auto; left: 8%; width: 31%; height: 62%; opacity: 1; transform: rotate(-6deg); }
+.preview-garden-party { background: radial-gradient(circle at 84% 65%, #eccbd47d, transparent 43%), radial-gradient(circle at 8% 2%, #d7e4c0, transparent 39%), #f5f4df !important; }
+.preview-garden-party.preview-layout-arch::after { opacity: .28; }
+.design-pattern-ribbon .design-type-board,
+.design-pattern-botanical .design-type-board { background-image: none; }
+.preview-pastel-dream { background: radial-gradient(circle at 89% 14%, #fbd0df, transparent 39%), linear-gradient(145deg, #f1e9fb, #dfecf1) !important; }
+.design-pattern-cloud .design-type-board { background-image: linear-gradient(145deg, #f3eafb, #e5f1f4); }
+.preview-pastel-dream .birthday-illustration--invitation-1 { width: 34%; }
+.preview-pastel-dream .birthday-illustration--invitation-2 { top: -5%; right: -3%; width: 61%; height: 29%; transform: rotate(-4deg); }
+.birthday-design-page.design-pattern-cloud .design-type-board .birthday-illustration--typography-1 { top: -5%; right: -2%; bottom: auto; left: auto; width: 54%; height: 30%; transform: rotate(-4deg); }
+
+/* Minimal keeps its editorial panel, with a single gold illustration as the focal mark. */
+.preview-minimal-editorial { background: linear-gradient(90deg, #f7f4ea 72%, #e4dfd2 72%) !important; }
+.preview-birthday.preview-minimal-editorial.has-birthday-illustrations .invitation-preview-graphic { opacity: 1; background: #1d1c1b; box-shadow: 5px 6px 0 #87775b; }
+.preview-minimal-editorial .invitation-preview-graphic span,
+.preview-minimal-editorial .invitation-preview-mark { display: none; }
+.preview-minimal-editorial .birthday-illustration--invitation-1 { top: 25%; right: 5%; width: 25%; height: 47%; transform: rotate(12deg); }
+
+/* Vivid citrus and glitter need warmer paper than the earlier cyan gradient. */
+.preview-tropical-summer { background: radial-gradient(circle at 90% 10%, #ffdf9d, transparent 36%), linear-gradient(145deg, #dcf4e9, #fdf0cb) !important; }
+.preview-tropical-summer .birthday-illustration--invitation-1 { z-index: 2; right: 5%; top: 24%; width: 34%; height: 58%; }
+.preview-tropical-summer .birthday-illustration--invitation-2 { z-index: 1; top: -7%; right: -10%; width: 53%; height: 114%; transform: rotate(5deg); opacity: .86; }
+.design-pattern-sunrise .design-type-board { background-image: linear-gradient(145deg, #d9f2e8, #fff0d0); }
+.design-type-summer .design-type-board { display: flex; align-items: center; min-height: 500px; }
+.design-type-summer .design-type-mark { display: none; }
+.design-type-summer .design-type-words { width: 59%; margin-left: auto; }
+.design-type-summer .design-type-board .birthday-illustration--typography-1 { top: 9%; right: auto; bottom: auto; left: 2%; width: 37%; height: 82%; transform: rotate(-6deg); }
+.design-type-summer .design-support-1 { color: #125f70; }
+.design-type-summer .design-support-3 { background: #125f70; }
+
+/* Local surfaces follow the illustration's own supporting colors. */
+.design-type-glam .design-support-2 { background: #f4bed6; color: #64194f; }
+.design-type-soft .design-support-1 { background: #c2e9f1; color: #634d88; }
+.design-type-botanical .design-support-2 { background: #eccbd4; color: #31563c; }
+.birthday-design-page.design-type-editorial .design-support-1 { background: #25221e; color: #f7f4ea; }
+.birthday-design-page.design-type-editorial .design-support-2 { background: #e4dfd2; }
+
+@media (max-width: 650px) {
+  .birthday-design-page:not(.design-type-painted) .design-support-card .birthday-illustration--support-1 { right: -5%; bottom: -11%; width: 44%; height: 68%; }
+  .birthday-design-page:not(.design-type-painted) .design-support-1 .birthday-illustration--support-1 { right: -7%; width: 43%; }
+  .birthday-design-page:not(.design-type-painted) .design-support-card:not(.design-support-4) strong { max-width: 68%; }
+  .preview-pink-glam .birthday-illustration--invitation-1 { width: 40%; }
+  .preview-coquette .birthday-illustration--invitation-1 { top: 25%; width: 94%; height: 64%; opacity: .23; }
+  .preview-coquette .birthday-illustration--invitation-2 { top: 6%; width: 28%; height: 22%; }
+  .preview-pastel-dream .birthday-illustration--invitation-2 { top: -3%; right: -5%; width: 62%; height: 26%; }
+  .birthday-design-page.design-pattern-cloud .design-type-board .birthday-illustration--typography-1 { top: -3%; right: -3%; left: auto; width: 60%; height: 25%; }
+  .birthday-design-page.design-pattern-ribbon .design-type-board .birthday-illustration--typography-1 { top: 9%; left: 28%; width: 44%; height: 31%; }
+  .birthday-design-page.design-pattern-ribbon .design-type-words { margin-top: 115px; }
+  .preview-midnight-luxury .birthday-illustration--invitation-1 { width: 37%; }
+  .preview-neon-night .birthday-illustration--invitation-1 { width: 39%; }
+  .preview-minimal-editorial .birthday-illustration--invitation-1 { top: 34%; right: 4%; width: 24%; height: 34%; }
+  .preview-tropical-summer .birthday-illustration--invitation-1 { right: 2%; top: 29%; width: 37%; height: 49%; }
+  .preview-tropical-summer .birthday-illustration--invitation-2 { right: -13%; width: 55%; }
+  .design-type-summer .design-type-board { align-items: flex-start; justify-content: center; padding-top: 55px; padding-bottom: 210px; }
+  .design-type-summer .design-type-words { width: 100%; margin: 0; }
+  .design-type-summer .design-type-board .birthday-illustration--typography-1 { top: auto; right: 3%; bottom: 3%; left: auto; width: 48%; height: 45%; }
+}

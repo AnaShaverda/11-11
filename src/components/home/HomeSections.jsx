@@ -28,7 +28,7 @@ export default function HomeSections() {
       <HomeSurpriseSection />
       <section className="home-invitations">
         <div className="home-section-top"><div><span className="home-section-index">04 / INVITATIONS</span><h2>Make a first impression.</h2><p>Different designs for different kinds of magic.</p></div><Link className="section-text-link" to="/invitations">Explore invitations <span aria-hidden="true">↗</span></Link></div>
-        <InvitationGallery templates={invitationTemplates.slice(0, 3)} />
+        <InvitationGallery templates={[invitationTemplates[0], invitationTemplates[10], invitationTemplates[2]]} />
       </section>
       <section className="home-interactive">
         <div className="home-section-intro"><span className="home-section-index">05 / THE GOOD STUFF</span><h2>Everyone becomes part of the story.</h2><p>11:11 goes beyond the invite with ideas that bring your people closer.</p></div>

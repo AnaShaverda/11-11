@@ -8,6 +8,11 @@ import "./styles/experiences.css";
 import "./styles/home.css";
 import "./styles/themes.css";
 import "./styles/theme-worlds.css";
+import "./styles/invitation-showcase.css";
+import "./styles/invitation-moodboards.css";
+import "./styles/birthday-illustrations.css";
+import "./styles/painted-summer.css";
+import "./styles/birthday-art-direction.css";
 import "./styles/category-previews.css";
 import "./styles/surprises.css";
 

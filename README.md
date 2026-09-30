@@ -15,10 +15,10 @@ Use `npm run build` to create a production bundle.
 
 - `/` — 11:11 homepage
 - `/projects` — Birthday, Wedding, Corporate, and Other Celebrations
-- `/projects/birthday` and `/projects/wedding` — category showcases with 10 themes each
+- `/projects/birthday` and `/projects/wedding` — category showcases with invitation preview selections
 - `/projects/corporate` and `/projects/other-celebrations` — category previews; Other contains Gender Reveal, Bachelorette Party, and Christening / ნათლობა
-- `/themes/:slug` — complete themed event preview with invitation, event details, countdown, gallery, RSVP presentation, and switchable module samples
-- `/invitations` and `/invitations/:slug` — invitation catalog and sample invitation previews
+- `/themes/:slug` — redirects to the public invitation catalog until full event themes are unlocked in a future flow
+- `/invitations` and `/invitations/:slug` — Birthday and Wedding storefront and public design-system presentations with static mood boards and event-card samples, including `/invitations/birthday-painted-summer`
 - `/modules/friendship-diary` — optional module showcase
 - `/surprises` — Digital Surprise presentation and local mock creator flow
 - `/surprises/demo` — interactive Birthday Surprise example; accepts optional `theme` and `modules` query parameters for previewing visual choices
@@ -31,9 +31,11 @@ Old project links, including `/projects/friendship-diary`, redirect to their cur
 - `src/app` owns routes and scopes the intro animation to the marketing pages.
 - `src/data/projects.js` holds the four main event categories and Other Celebrations subcategories.
 - `src/themes/data/themes.js` holds visual theme configuration, `themeStories.js` supplies theme-specific copy, and `demoEvents.js` holds separate mock event content.
-- `src/themes/components/ThemeCanvas.jsx` renders the full event flow for all 20 themes: hero, invitation, story, details and countdown, photo gallery, optional module, and a local reply preview. `src/styles/themes.css` provides tokens; `theme-worlds.css` gives each opened theme its own composition, invitation artwork, imagery treatment, and responsive styling.
+- `src/themes/components/ThemeCanvas.jsx` retains the full event flow for all 20 themes: hero, invitation, story, details and countdown, photo gallery, optional module, and a local reply preview. `src/styles/themes.css` provides tokens; `theme-worlds.css` retains each complete theme's composition, invitation artwork, imagery treatment, and responsive styling. These full views are not publicly routed yet.
 - `src/modules/data/eventModules.js` defines optional modules by category. `src/modules/components/ThemeModulePreview.jsx` renders them within the selected theme's CSS variables.
-- `src/invitations` holds invitation metadata, mock content, and reusable invitation preview components.
+- `src/invitations/data/templates.js` maps public designs to saved `themeId` values and records `unlockStatus`; `showcaseDesigns.js` defines each design's palette, typography, pattern, and static sample pieces; `invitationSamples.js` holds separate demo event copy. `birthdayAssets.js` assigns illustrations by Birthday theme, while `summerAssets.js` names the reusable Painted Summer artwork. Shared artwork and mood-board components render these records; Wedding previews continue to use type and CSS graphics. The original full invitation template components and registry remain in `src/invitations` for a future event creation and unlock flow.
+- `src/assets/birthday` keeps the renamed source PNG illustrations by subject. `public/images/birthday` contains their transparent, compressed WebP versions used by the public Birthday landing page and invitation showcases.
+- `src/assets/summer/painted` keeps the renamed original coastal PNGs. `public/images/summer/painted` holds transparent, compressed WebP copies for Painted Summer; the theme uses a curated subset of the collection.
 - `src/surprises/data/surprises.js` holds occasion options, central demo content, and enabled module IDs. `src/surprises/components` renders shared recipient-facing blocks and lightweight cake, gift, and letter interactions. It uses the existing theme IDs and CSS variables from `src/themes`, plus module metadata from `src/modules/data/eventModules.js`.
 - `public/images/surprise-memories.webp` is generated, compressed sample imagery for the demonstration gallery; it does not represent user uploads.
 - `public/images/birthday-editorial.webp` and `wedding-editorial.webp` are compressed sample photo sheets for the event themes.

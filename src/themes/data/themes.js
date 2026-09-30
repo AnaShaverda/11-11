@@ -9,6 +9,7 @@ export const birthdayThemes = [
   { id: "birthday-pastel-dream", slug: "birthday-pastel-dream", category: "birthday", name: "Pastel Dream", description: "Cloud-soft color and rounded shapes full of joy.", mood: "Airy · sweet · colorful", visual: "pastel-dream", layout: "cloud", decor: "☁" },
   { id: "birthday-minimal-editorial", slug: "birthday-minimal-editorial", category: "birthday", name: "Minimal Editorial", description: "Confident typography and space for the moment to breathe.", mood: "Neutral · graphic · modern", visual: "minimal-editorial", layout: "editorial", decor: "—" },
   { id: "birthday-tropical-summer", slug: "birthday-tropical-summer", category: "birthday", name: "Tropical Summer", description: "Citrus energy, pool-blue color, and sunshine all day.", mood: "Summer · citrus · lively", visual: "tropical-summer", layout: "split", decor: "☀" },
+  { id: "birthday-painted-summer", slug: "birthday-painted-summer", category: "birthday", name: "Painted Summer", description: "A breezy seaside celebration in watercolor, sun-warmed paper, and soft coastal color.", mood: "Coastal · painted · airy", visual: "painted-summer", layout: "split", decor: "✳" },
 ];
 
 export const weddingThemes = [

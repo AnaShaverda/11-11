@@ -1,0 +1,150 @@
+/* The public invitation gallery uses designed marks and patterns, never event photography. */
+.invitation-preview-graphic { background: radial-gradient(circle at 72% 22%, var(--showcase-accent) 0 15%, transparent 16%), repeating-linear-gradient(135deg, transparent 0 18px, #ffffff24 19px 20px), var(--showcase-secondary); }
+.invitation-preview-graphic span { font-size: clamp(4.5rem, 9vw, 8rem); text-align: center; }
+.preview-y2k-digital .invitation-preview-graphic { color: #eef9ff; background: radial-gradient(circle at 50% 45%, #b4caff, #7682da 42%, #1a216a 75%); }
+.preview-y2k-digital .invitation-preview-graphic span { color: #f8ffff; text-shadow: 3px 4px #4263bd, -2px -2px #9cf5ff, 0 0 20px #d8efff; }
+.preview-pink-glam .invitation-preview-graphic { color: #fff5fc; background: radial-gradient(circle at 30% 30%, #ffcbeb, transparent 26%), radial-gradient(circle at 80% 65%, #ff80ca, transparent 31%), #b74090; }
+.preview-midnight-luxury .invitation-preview-graphic { color: #cbb178; background: repeating-radial-gradient(circle at 50% 50%, #292739 0 18px, #bca77b 19px 20px, #111220 21px 42px); }
+.preview-garden-party .invitation-preview-graphic { color: #4d8052; background: radial-gradient(ellipse at 40% 65%, #f2f4d9 0 32%, transparent 33%), repeating-linear-gradient(145deg, #d6e6bf 0 18px, #b6cf9e 19px 20px); }
+.preview-neon-night .invitation-preview-graphic { color: #fb69e4; background: repeating-linear-gradient(0deg, transparent 0 16px, #63eaff35 17px 18px), linear-gradient(135deg, #19194f, #310d5f); }
+.preview-neon-night .invitation-preview-graphic span { text-shadow: 0 0 10px #fa72e4, 0 0 26px #e236c0, 0 0 40px #e236c0; }
+.preview-minimal-editorial .invitation-preview-graphic, .preview-editorial .invitation-preview-graphic { color: #fff; background: linear-gradient(145deg, #1a1a1a 0 65%, #474747 65%); }
+.preview-tropical-summer .invitation-preview-graphic { color: #f67b38; background: repeating-radial-gradient(circle at 50% 70%, #f6dc8b 0 21px, #91d9d4 22px 24px, #c8ece0 25px 44px); }
+.preview-tuscany .invitation-preview-graphic { color: #bd6745; background: repeating-linear-gradient(90deg, #f5dfbc 0 29px, #cf9b70 30px 32px), #f5dfbc; }
+.preview-coastal .invitation-preview-graphic { color: #5799b4; background: repeating-radial-gradient(ellipse at 50% 105%, #dff3f4 0 22px, #b4dce2 23px 25px, #eaf8f5 26px 48px); }
+.preview-bohemian .invitation-preview-graphic { color: #a06942; background: repeating-radial-gradient(circle at 50% 40%, #e7cba8 0 25px, #b99677 26px 28px, #f3e1c6 29px 48px); }
+.preview-modern-botanical .invitation-preview-graphic { color: #235a38; background: radial-gradient(ellipse at 10% 80%, #b1d0ad 0 19%, transparent 20%), radial-gradient(ellipse at 75% 15%, #9ec6a5 0 20%, transparent 21%), #d6e9d5; }
+.preview-y2k-digital .invitation-preview-graphic::before, .preview-neon-night .invitation-preview-graphic::before, .preview-minimal-editorial .invitation-preview-graphic::before, .preview-editorial .invitation-preview-graphic::before { border-radius: 0; }
+
+.invitation-design-page { width: min(100% - 64px, 1280px); }
+.design-hero { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, .9fr); align-items: center; gap: clamp(35px, 6vw, 90px); margin: 12px 0 110px; }
+.design-hero-art { min-width: 0; padding: 12px; border: 1px solid #ffffff69; border-radius: 27px; background: #ffffff16; box-shadow: 0 30px 80px #0709336b; }
+.design-hero-art .invitation-preview-art { min-height: 670px; border-radius: 16px; }
+.design-hero-copy { min-width: 0; }
+.design-hero-copy h1 { margin: 18px 0 22px; font-size: clamp(4rem, 6.7vw, 7rem); line-height: .96; letter-spacing: -.07em; }
+.design-hero-copy > p:first-of-type { max-width: 530px; margin: 0; color: #d8cff6; font-size: clamp(1.16rem, 1.7vw, 1.45rem); line-height: 1.45; }
+.design-hero-rule { height: 1px; margin: 34px 0; background: #ffffff55; }
+.design-hero-sample { display: grid; gap: 8px; }
+.design-hero-sample span, .design-page-end span { color: #fac4e7; font-size: .68rem; font-weight: 900; letter-spacing: .19em; }
+.design-hero-sample strong { font-family: Georgia, serif; font-size: clamp(1.7rem, 2.5vw, 2.6rem); font-weight: 400; }
+.design-hero-sample small { color: #ded6f4; font-size: .77rem; letter-spacing: .16em; }
+.design-hero-explainer { max-width: 460px; margin: 32px 0 22px; color: #d5cce9; font-size: .99rem; line-height: 1.6; }
+.design-hero-palette { display: flex; gap: 10px; }
+.design-hero-palette span { width: 28px; height: 28px; border: 1px solid #ffffff80; border-radius: 50%; box-shadow: 0 0 0 3px #ffffff17; }
+
+.design-board-section { margin: 0 0 105px; }
+.design-board-heading { display: grid; grid-template-columns: 190px minmax(0, 1fr); gap: 22px; align-items: end; margin: 0 0 24px; padding-bottom: 20px; border-bottom: 1px solid #ffffff4a; }
+.design-board-heading > span { padding-bottom: 8px; color: #f7c6e9; font-size: .65rem; font-weight: 900; letter-spacing: .16em; }
+.design-board-heading h2 { margin: 0 0 7px; font-size: clamp(2.5rem, 4.1vw, 4.6rem); line-height: 1.02; letter-spacing: -.055em; }
+.design-board-heading p { margin: 0; color: #d5c8ef; font-size: 1.04rem; }
+.design-board-surface { position: relative; min-width: 0; overflow: hidden; color: var(--showcase-ink); background-color: var(--showcase-paper); }
+.design-board-kicker { position: relative; z-index: 2; font-size: .7rem; font-weight: 800; letter-spacing: .2em; }
+.design-type-board { display: grid; grid-template-columns: 43% minmax(0, 1fr); align-items: center; gap: 3%; min-height: 500px; padding: 55px 5% 58px; border-radius: 16px; }
+.design-type-board > .design-board-kicker { position: absolute; top: 27px; left: 3%; }
+.design-type-mark { position: relative; z-index: 1; max-width: 100%; font-family: Georgia, serif; font-size: clamp(6rem, 16vw, 13rem); line-height: .85; letter-spacing: -.13em; white-space: nowrap; color: var(--showcase-accent); }
+.design-type-words { position: relative; z-index: 1; min-width: 0; }
+.design-type-words span { font-size: .7rem; font-weight: 900; letter-spacing: .21em; }
+.design-type-words h3 { margin: 20px 0 12px; font-family: Georgia, serif; font-size: clamp(3rem, 5.2vw, 6.5rem); line-height: .94; letter-spacing: -.07em; overflow-wrap: anywhere; }
+.design-type-words p { margin: 0; font-family: Georgia, serif; font-size: clamp(1.1rem, 1.8vw, 1.6rem); font-style: italic; }
+.design-type-glyph { position: absolute; right: 4%; top: 3%; color: var(--showcase-accent); font-size: 6rem; opacity: .7; }
+.design-type-bottom { position: absolute; right: 3%; bottom: 24px; left: 3%; display: flex; justify-content: space-between; gap: 20px; border-top: 1px solid currentColor; padding-top: 12px; font-size: .64rem; font-weight: 900; letter-spacing: .14em; }
+
+.design-elements-board { display: grid; grid-template-columns: 1.1fr .9fr; grid-template-rows: 290px 210px; gap: 16px; }
+.design-elements-board > * { border-radius: 14px; }
+.design-palette-panel { grid-row: 1 / 3; padding: 32px; }
+.design-palette-panel h3 { margin: 30px 0; font-family: Georgia, serif; font-size: clamp(2.7rem, 4vw, 4.7rem); font-weight: 400; line-height: 1.02; letter-spacing: -.055em; }
+.design-palette-swatches { display: grid; grid-template-columns: repeat(4, 1fr); gap: 13px; }
+.design-palette-swatch { display: grid; gap: 10px; min-width: 0; }
+.design-palette-swatch > span { display: block; height: 145px; border: 1px solid #7775; border-radius: 7px; }
+.design-palette-swatch small { font-size: .6rem; font-weight: 800; letter-spacing: .07em; overflow-wrap: anywhere; }
+.design-pattern-panel { padding: 25px; color: var(--showcase-paper); background-color: var(--showcase-ink); }
+.design-pattern-panel strong { position: absolute; top: 40px; right: 5%; font-family: Georgia, serif; font-size: clamp(9rem, 18vw, 16rem); font-weight: 400; line-height: 1; color: var(--showcase-accent); }
+.design-pattern-panel p { position: absolute; bottom: 20px; left: 25px; z-index: 1; margin: 0; font-family: Georgia, serif; font-size: 1.25rem; font-style: italic; }
+.design-ticket-panel { display: flex; flex-direction: column; justify-content: space-between; padding: 23px 28px; border: 2px dashed var(--showcase-ink); background: var(--showcase-secondary); }
+.design-ticket-panel > span { position: relative; z-index: 1; font-size: .7rem; font-weight: 900; letter-spacing: .14em; }
+.design-ticket-panel strong { position: relative; z-index: 1; font-family: Georgia, serif; font-size: clamp(2.8rem, 4vw, 4.5rem); line-height: 1; }
+.design-ticket-panel i { position: absolute; right: 3%; bottom: -20%; font-size: 12rem; line-height: 1; opacity: .28; }
+
+.design-support-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px; }
+.design-support-card { position: relative; display: flex; flex-direction: column; justify-content: space-between; min-width: 0; min-height: 290px; padding: 25px; overflow: hidden; border-radius: 12px; color: var(--showcase-ink); background: var(--showcase-paper); }
+.design-support-card > span, .design-support-card small { position: relative; z-index: 1; font-size: .68rem; font-weight: 900; letter-spacing: .14em; }
+.design-support-card strong { position: relative; z-index: 1; max-width: 100%; font-family: Georgia, serif; font-size: clamp(2rem, 2.7vw, 3.6rem); font-weight: 400; line-height: 1.02; letter-spacing: -.05em; overflow-wrap: anywhere; }
+.design-support-card small { line-height: 1.45; }
+.design-support-card i { position: absolute; right: -5%; bottom: 5%; color: var(--showcase-accent); font-size: 10rem; line-height: 1; opacity: .3; }
+.design-support-1 { color: var(--showcase-paper); background: var(--showcase-accent); }
+.design-support-1 i { color: var(--showcase-paper); opacity: .45; }
+.design-support-2 { background: var(--showcase-secondary); }
+.design-support-3 { color: var(--showcase-paper); background: var(--showcase-ink); }
+.design-support-3 i { color: var(--showcase-accent); opacity: .65; }
+.design-sample-note { margin: 18px 0 0; color: #c9c0e7; font-size: .84rem; }
+.design-page-end { display: flex; justify-content: space-between; align-items: end; gap: 30px; padding: 40px 0 15px; border-top: 1px solid #ffffff5c; }
+.design-page-end h2 { margin: 8px 0 0; font-size: clamp(2.2rem, 4vw, 4rem); letter-spacing: -.05em; }
+
+/* The same boards change their composition with each design's type and pattern data. */
+.design-type-pop .design-type-words h3, .design-type-pop .design-type-mark, .design-type-digital .design-type-words h3, .design-type-digital .design-type-mark, .design-type-neon .design-type-words h3, .design-type-editorial .design-type-words h3 { font-family: "Trebuchet MS", sans-serif; font-weight: 1000; text-transform: uppercase; }
+.design-type-digital .design-type-words h3 { text-shadow: 3px 3px var(--showcase-accent); }
+.design-type-glam .design-type-words h3, .design-type-romantic .design-type-words h3, .design-type-botanical .design-type-words h3, .design-type-soft .design-type-words h3, .design-type-coastal .design-type-words h3, .design-type-earthy .design-type-words h3 { font-style: italic; }
+.design-type-luxury .design-type-words h3, .design-type-classic .design-type-words h3, .design-type-celestial .design-type-words h3 { font-weight: 400; letter-spacing: .015em; text-transform: uppercase; }
+.design-type-neon .design-type-words h3 { color: var(--showcase-accent); text-shadow: 0 0 16px var(--showcase-accent); }
+.design-type-mediterranean .design-type-mark, .design-type-summer .design-type-mark { font-style: italic; }
+.design-type-editorial .design-type-words h3 { letter-spacing: -.1em; }
+.design-pattern-grid .design-type-board { background-image: linear-gradient(#1b4fab23 1px, transparent 1px), linear-gradient(90deg, #1b4fab23 1px, transparent 1px); background-size: 38px 38px; }
+.design-pattern-pixels .design-type-board { background-image: linear-gradient(#ffffff25 1px, transparent 1px), linear-gradient(90deg, #ffffff25 1px, transparent 1px); background-size: 25px 25px; }
+.design-pattern-sparkle .design-type-board { background-image: radial-gradient(circle at 20% 15%, var(--showcase-accent) 1px, transparent 3px), radial-gradient(circle at 70% 65%, var(--showcase-accent) 2px, transparent 5px); background-size: 65px 65px, 110px 110px; }
+.design-pattern-ribbon .design-type-board { background-image: radial-gradient(ellipse at 0 50%, var(--showcase-secondary), transparent 38%), radial-gradient(ellipse at 100% 50%, var(--showcase-secondary), transparent 38%); }
+.design-pattern-pinstripe .design-type-board, .design-pattern-lines .design-type-board { background-image: repeating-linear-gradient(90deg, transparent 0 35px, currentColor 36px 36.5px); background-blend-mode: soft-light; }
+.design-pattern-botanical .design-type-board { background-image: radial-gradient(ellipse at 10% 15%, var(--showcase-secondary) 0 8%, transparent 9%), radial-gradient(ellipse at 94% 85%, var(--showcase-secondary) 0 13%, transparent 14%); }
+.design-pattern-laser .design-type-board { background-image: repeating-linear-gradient(135deg, transparent 0 58px, var(--showcase-accent) 60px 61px, transparent 63px 120px); }
+.design-pattern-cloud .design-type-board { background-image: radial-gradient(ellipse at 20% 75%, var(--showcase-secondary), transparent 35%), radial-gradient(ellipse at 80% 20%, var(--showcase-accent), transparent 30%); }
+.design-pattern-sunrise .design-type-board { background-image: radial-gradient(circle at 8% 85%, var(--showcase-accent) 0 18%, transparent 19%), radial-gradient(circle at 92% 10%, var(--showcase-secondary) 0 13%, transparent 14%); }
+.design-pattern-frame .design-type-board::before { content: ""; position: absolute; inset: 23px; border: 1px solid var(--showcase-accent); }
+.design-pattern-tiles .design-type-board { background-image: repeating-linear-gradient(90deg, transparent 0 65px, var(--showcase-accent) 66px 67px), repeating-linear-gradient(0deg, transparent 0 65px, var(--showcase-accent) 66px 67px); background-size: 66px 66px; background-blend-mode: soft-light; }
+.design-pattern-waves .design-type-board { background-image: repeating-radial-gradient(ellipse at 50% 105%, transparent 0 28px, var(--showcase-secondary) 29px 31px, transparent 32px 62px); }
+.design-pattern-paper .design-type-board { background-image: repeating-linear-gradient(35deg, transparent 0 23px, var(--showcase-secondary) 24px 25px); }
+.design-pattern-stars .design-type-board { background-image: radial-gradient(var(--showcase-accent) 1px, transparent 1.5px); background-size: 28px 28px; }
+.design-pattern-botanical .design-pattern-panel { background-image: radial-gradient(ellipse at 75% 25%, #ffffff33 0 12%, transparent 13%); }
+.design-pattern-stars .design-pattern-panel, .design-pattern-sparkle .design-pattern-panel { background-image: radial-gradient(var(--showcase-accent) 1px, transparent 2px); background-size: 33px 33px; }
+.design-pattern-tiles .design-pattern-panel { background-image: repeating-linear-gradient(90deg, transparent 0 48px, #ffffff32 49px 50px), repeating-linear-gradient(0deg, transparent 0 48px, #ffffff32 49px 50px); }
+
+@media (max-width: 900px) {
+  .invitation-design-page { width: min(100% - 42px, 820px); }
+  .design-hero { gap: 30px; margin-bottom: 80px; }
+  .design-hero-art .invitation-preview-art { min-height: 560px; }
+  .design-hero-copy h1 { font-size: clamp(3.4rem, 6vw, 5rem); }
+  .design-type-board { min-height: 430px; }
+  .design-elements-board { grid-template-rows: 260px 190px; }
+  .design-support-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 650px) {
+  .invitation-design-page { width: min(100% - 28px, 430px); }
+  .design-hero { display: flex; flex-direction: column; align-items: stretch; gap: 30px; margin: 8px 0 72px; }
+  .design-hero-art { padding: 7px; }
+  .design-hero-art .invitation-preview-art { min-height: 510px; }
+  .design-hero-copy h1 { font-size: clamp(3.5rem, 13vw, 5rem); }
+  .design-hero-copy > p:first-of-type { font-size: 1.12rem; }
+  .design-hero-rule { margin: 23px 0; }
+  .design-hero-explainer { margin-top: 23px; }
+  .design-board-section { margin-bottom: 75px; }
+  .design-board-heading { grid-template-columns: 1fr; gap: 10px; }
+  .design-board-heading h2 { font-size: 2.55rem; }
+  .design-board-heading p { font-size: .95rem; }
+  .design-type-board { display: flex; flex-direction: column; align-items: flex-start; justify-content: center; gap: 14px; min-height: 500px; padding: 57px 24px 70px; }
+  .design-type-board > .design-board-kicker { left: 24px; }
+  .design-type-mark { max-width: 95%; font-size: clamp(6rem, 24vw, 9rem); }
+  .design-type-words h3 { margin: 11px 0 8px; font-size: clamp(2.8rem, 10vw, 4rem); }
+  .design-type-words p { font-size: 1rem; }
+  .design-type-glyph { top: 5%; font-size: 4.4rem; }
+  .design-type-bottom { right: 24px; bottom: 22px; left: 24px; font-size: .55rem; }
+  .design-type-bottom span:last-child { display: none; }
+  .design-elements-board { display: flex; flex-direction: column; gap: 13px; }
+  .design-palette-panel { min-height: 390px; padding: 25px; }
+  .design-palette-panel h3 { margin: 20px 0; font-size: 2.8rem; }
+  .design-palette-swatch > span { height: 120px; }
+  .design-pattern-panel { min-height: 235px; }
+  .design-pattern-panel strong { font-size: 11rem; }
+  .design-ticket-panel { min-height: 175px; }
+  .design-support-grid { grid-template-columns: 1fr; gap: 12px; }
+  .design-support-card { min-height: 230px; }
+  .design-support-card strong { font-size: clamp(2.1rem, 8vw, 3.4rem); }
+  .design-page-end { align-items: start; flex-direction: column; }
+}
