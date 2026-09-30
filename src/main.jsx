@@ -6,6 +6,10 @@ import "./styles/global.css";
 import "./styles/invitations.css";
 import "./styles/experiences.css";
 import "./styles/home.css";
+import "./styles/themes.css";
+import "./styles/theme-worlds.css";
+import "./styles/category-previews.css";
+import "./styles/surprises.css";
 
 createRoot(document.getElementById("root")).render(
   <React.StrictMode>

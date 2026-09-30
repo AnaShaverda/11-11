@@ -9,6 +9,10 @@ import ProjectDetailPage from "../pages/ProjectDetailPage.jsx";
 import NotFoundPage from "../pages/NotFoundPage.jsx";
 import InvitationsPage from "../invitations/pages/InvitationsPage.jsx";
 import InvitationPreviewPage from "../invitations/pages/InvitationPreviewPage.jsx";
+import ThemePreviewPage from "../themes/pages/ThemePreviewPage.jsx";
+import FriendshipDiaryModulePage from "../modules/pages/FriendshipDiaryModulePage.jsx";
+import SurpriseShowcasePage from "../surprises/pages/SurpriseShowcasePage.jsx";
+import SurpriseDemoPage from "../surprises/pages/SurpriseDemoPage.jsx";
 
 export default function App() {
   return (
@@ -23,6 +27,10 @@ export default function App() {
         <Route path="invitations" element={<InvitationsPage />} />
         <Route path="projects/:slug" element={<ProjectDetailPage />} />
         <Route path="invitations/:slug" element={<InvitationPreviewPage />} />
+        <Route path="themes/:slug" element={<ThemePreviewPage />} />
+        <Route path="modules/friendship-diary" element={<FriendshipDiaryModulePage />} />
+        <Route path="surprises" element={<SurpriseShowcasePage />} />
+        <Route path="surprises/demo" element={<SurpriseDemoPage />} />
         <Route path="*" element={<NotFoundPage />} />
       </Route>
     </Routes>

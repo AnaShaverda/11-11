@@ -18,7 +18,7 @@ export default function ProjectCard({ project, showDetails = false }) {
       {showDetails ? (
         <span className="project-card-details">
           <span className="project-description">{project.shortDescription}</span>
-          <span className="project-card-meta">{project.status === "ready" ? "Explore experience" : "Coming soon"} <span aria-hidden="true">↗</span></span>
+          <span className="project-card-meta">Explore category <span aria-hidden="true">↗</span></span>
         </span>
       ) : null}
     </Link>

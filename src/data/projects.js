@@ -1,23 +1,33 @@
 export const projects = [
-  { id: "birthday", slug: "birthday", title: "Birthday", category: "Celebration", shortDescription: "Make another year feel unforgettable, together.", accent: "pink", icon: "cake", status: "ready" },
-  { id: "wedding", slug: "wedding", title: "Wedding", category: "Milestone", shortDescription: "A beautiful space for your day and your story.", accent: "orange", icon: "rings", status: "ready" },
-  { id: "friendship", slug: "friendship-diary", title: "Friendship Diary", category: "Interactive", shortDescription: "Collect the stories only your friends could tell.", accent: "blue", icon: "smile", status: "ready" },
-  { id: "corporate", slug: "corporate-party", title: "Corporate Party", category: "Gathering", shortDescription: "Bring your team together beyond the ordinary.", accent: "violet", icon: "briefcase", status: "soon" },
-  { id: "memories", slug: "memories", title: "Memories", category: "Keepsake", shortDescription: "A place for the little moments that stay with us.", accent: "green", icon: "notes", status: "soon" },
-  { id: "photo-memories", slug: "photo-memories", title: "Photo Memories", category: "Keepsake", shortDescription: "See your favorite moments through every lens.", accent: "cyan", icon: "photo", status: "soon" },
-  { id: "party", slug: "party", title: "Party", category: "Celebration", shortDescription: "Turn any reason into a reason to celebrate.", accent: "coral", icon: "heart", status: "soon" },
-  { id: "custom", slug: "custom-event", title: "Custom Event", category: "Your idea", shortDescription: "Make room for a celebration that is all yours.", accent: "lilac", icon: "spark", status: "soon" },
+  { id: "birthday", slug: "birthday", title: "Birthday", category: "Event category", shortDescription: "Celebrate their story, their people, and another trip around the sun.", accent: "pink", icon: "cake", status: "ready" },
+  { id: "wedding", slug: "wedding", title: "Wedding", category: "Event category", shortDescription: "A beautiful digital home for one day and a lifetime of stories.", accent: "orange", icon: "rings", status: "ready" },
+  { id: "corporate", slug: "corporate", title: "Corporate", category: "Event category", shortDescription: "Make team gatherings, launches, and private dinners memorable.", accent: "violet", icon: "briefcase", status: "preview" },
+  { id: "other", slug: "other-celebrations", title: "Other Celebrations", category: "Event category", shortDescription: "Make room for every meaningful milestone and all your own ideas.", accent: "lilac", icon: "spark", status: "preview", subcategories: [
+    { id: "gender-reveal", title: "Gender Reveal", description: "A joyful surprise with a modern, playful feel.", visual: "reveal" },
+    { id: "bachelorette", title: "Bachelorette Party", description: "A stylish night for your favorite people.", visual: "bachelorette" },
+    { id: "christening", title: "Christening / ნათლობა", description: "A peaceful celebration for a cherished day.", visual: "christening" },
+  ] },
 ];
 
 const legacySlugs = {
   "birthday-wishes": "birthday",
-  "memories-in-notes": "memories",
-  "photo-album-of-memories": "photo-memories",
-  custom: "custom-event",
-  "love-at-first-sight": "party",
+  "friendship-diary": "birthday",
+  "corporate-party": "corporate",
+  memories: "birthday",
+  "memories-in-notes": "birthday",
+  "photo-memories": "birthday",
+  "photo-album-of-memories": "birthday",
+  party: "other-celebrations",
+  "love-at-first-sight": "other-celebrations",
+  "custom-event": "other-celebrations",
+  custom: "other-celebrations",
 };
 
 export function getProjectBySlug(slug) {
   const currentSlug = legacySlugs[slug] ?? slug;
   return projects.find((project) => project.slug === currentSlug);
+}
+
+export function getCanonicalProjectSlug(slug) {
+  return legacySlugs[slug] ?? slug;
 }

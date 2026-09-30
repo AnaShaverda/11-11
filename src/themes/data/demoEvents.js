@@ -1,0 +1,25 @@
+export const themeDemoEvents = {
+  birthday: {
+    title: "Nini’s 25th Birthday",
+    hostName: "Nini",
+    celebrationName: "25th Birthday",
+    date: "Sunday, 18 July 2027",
+    dateISO: "2027-07-18T20:00:00+04:00",
+    time: "20:00",
+    location: "Tbilisi, Georgia",
+    description: "Good friends. Bright nights. Another year of stories to tell.",
+    enabledModules: ["invitation", "countdown", "gallery"],
+  },
+  wedding: {
+    title: "Ana & Luka",
+    hostName: "Ana & Luka",
+    brideName: "Ana",
+    groomName: "Luka",
+    date: "Sunday, 12 September 2027",
+    dateISO: "2027-09-12T17:00:00+04:00",
+    time: "17:00",
+    location: "Tbilisi, Georgia",
+    description: "Together with our families, we invite you to celebrate a new chapter.",
+    enabledModules: ["invitation", "countdown", "gallery"],
+  },
+};

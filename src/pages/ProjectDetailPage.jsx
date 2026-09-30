@@ -1,18 +1,23 @@
-import { Link, useParams } from "react-router-dom";
+import { Link, Navigate, useParams } from "react-router-dom";
 import ProjectIcon from "../components/ui/ProjectIcon.jsx";
-import { getProjectBySlug } from "../data/projects.js";
+import { getCanonicalProjectSlug, getProjectBySlug } from "../data/projects.js";
 import BirthdayExperience from "../projects/BirthdayExperience.jsx";
 import WeddingExperience from "../projects/WeddingExperience.jsx";
-import FriendshipDiaryExperience from "../projects/FriendshipDiaryExperience.jsx";
+import CorporateExperience from "../projects/CorporateExperience.jsx";
+import OtherCelebrationsExperience from "../projects/OtherCelebrationsExperience.jsx";
 
 const experiencePages = {
   birthday: BirthdayExperience,
   wedding: WeddingExperience,
-  "friendship-diary": FriendshipDiaryExperience,
+  corporate: CorporateExperience,
+  "other-celebrations": OtherCelebrationsExperience,
 };
 
 export default function ProjectDetailPage() {
   const { slug } = useParams();
+  if (slug === "friendship-diary") return <Navigate to="/modules/friendship-diary" replace />;
+  const canonicalSlug = getCanonicalProjectSlug(slug);
+  if (canonicalSlug !== slug) return <Navigate to={`/projects/${canonicalSlug}`} replace />;
   const project = getProjectBySlug(slug);
   if (!project) {
     return (
