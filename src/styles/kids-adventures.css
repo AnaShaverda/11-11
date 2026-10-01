@@ -1,0 +1,48 @@
+/* Two original card silhouettes with painted crowns and editable text. */
+.theme-space-explorer {
+  --theme-bg: #182f47; --theme-ink: #fff1d7; --theme-accent: #e68b43; --theme-panel: #233d59; --theme-stroke: #fff1d730;
+  --theme-display: "Trebuchet MS", sans-serif; --world-paper: #233d59; --world-contrast: #92aecf20;
+  --world-photo: url("/images/birthday/space-explorer/cosmic-party.webp");
+  background: var(--theme-bg); color: var(--theme-ink);
+}
+.theme-dino-adventure {
+  --theme-bg: #f6edd9; --theme-ink: #354d33; --theme-accent: #bc683c; --theme-panel: #fcf5e5; --theme-stroke: #354d3330;
+  --theme-display: "Trebuchet MS", sans-serif; --world-paper: #fcf5e5; --world-contrast: #a9b79430;
+  --world-photo: url("/images/birthday/dino-adventure/jungle-party.webp");
+  background: var(--theme-bg); color: var(--theme-ink);
+}
+.theme-space-explorer::before, .theme-dino-adventure::before { display: none; }
+.photo-paper-space { border-radius: 46% 46% 16px 16px / 19% 19% 16px 16px; border: 1px solid #f4d59560; }
+.photo-paper-dino { border-radius: 45% 45% 15% 8% / 15% 15% 8% 5%; transform: rotate(-2deg); }
+.photo-paper-space > .modern-toast-opening, .photo-paper-dino > .modern-toast-opening { top: 25%; left: 15%; width: 70%; font-size: 5.3cqw; line-height: 1.3; color: var(--photo-ink); }
+.photo-paper-space > .modern-toast-name, .photo-paper-dino > .modern-toast-name { top: 31%; left: 14%; width: 72%; font-size: 13cqw; line-height: 1.04; flex-direction: column; gap: .15em; color: var(--photo-ink); }
+.photo-paper-space > .modern-toast-name > span:last-child, .photo-paper-dino > .modern-toast-name > span:last-child { font-size: .4em; font-weight: 700; letter-spacing: .08em; }
+.photo-paper-space > .modern-toast-age, .photo-paper-dino > .modern-toast-age { top: 42%; left: 30%; width: 40%; font-size: 37cqw; color: #e68b43; line-height: .85; transform: rotate(-6deg); }
+.photo-paper-dino > .modern-toast-age { color: #bc683c; transform: rotate(5deg); }
+.photo-paper-space > .modern-toast-closing, .photo-paper-dino > .modern-toast-closing { top: 62%; left: 20%; width: 65%; font-size: 4.7cqw; line-height: 1.2; color: var(--photo-ink); }
+.photo-paper-dino > .modern-toast-closing { left: 29%; width: 56%; top: 61%; }
+.photo-paper-space > .modern-toast-details, .photo-paper-dino > .modern-toast-details { bottom: 2%; left: 13%; width: 74%; padding: .35em .5em; background: var(--photo-paper); color: var(--photo-ink); font-size: 3cqw; border-radius: 8px; }
+.photo-paper-space > .birthday-illustration, .photo-paper-dino > .birthday-illustration { pointer-events: none; }
+:is(.design-type-space-explorer, .design-type-dino-adventure) .design-type-board { grid-template-columns: minmax(0, 1fr); min-height: 480px; padding-right: 42%; border-radius: 40px 4px 40px 4px; }
+:is(.design-type-space-explorer, .design-type-dino-adventure) .design-type-mark { display: none; }
+:is(.design-type-space-explorer, .design-type-dino-adventure) .design-type-words h3 { font-family: "Trebuchet MS", sans-serif; font-size: clamp(2.8rem, 5vw, 5.5rem); font-weight: 900; letter-spacing: -.045em; }
+:is(.design-type-space-explorer, .design-type-dino-adventure) .design-type-words p { font-family: "Trebuchet MS", sans-serif; font-size: 1.1rem; font-style: normal; line-height: 1.5; }
+.design-type-space-explorer .design-type-board { background: #182f47; color: #fff1d7; }
+.design-type-space-explorer .design-pattern-panel { background: #182f47; color: #fff1d7; }
+.design-type-space-explorer .design-ticket-panel { background: #e68b43; color: #182f47; }
+.design-type-dino-adventure .design-pattern-panel { background: #a9b794; color: #354d33; }
+.design-type-dino-adventure .design-ticket-panel { background: #f6edd9; color: #354d33; border: 1px solid #354d3330; }
+:is(.design-type-space-explorer, .design-type-dino-adventure) .design-support-card strong { max-width: 100%; }
+:is(.design-type-space-explorer, .design-type-dino-adventure) .design-support-3 strong { max-width: 68%; }
+:is(.theme-space-explorer, .theme-dino-adventure).photo-theme-experience .theme-world-hero h2 { font-weight: 900; }
+:is(.theme-space-explorer, .theme-dino-adventure) .theme-compact-photo { border: 0; box-shadow: none; transform: none; background-size: cover; }
+@media (max-width: 700px) {
+  :is(.design-type-space-explorer, .design-type-dino-adventure) .design-type-board { min-height: 420px; padding: 55px 34% 55px 6%; }
+  :is(.design-type-space-explorer, .design-type-dino-adventure) .design-type-words h3 { font-size: clamp(2.3rem, 8vw, 3.2rem); }
+}
+.photo-paper-space > .modern-toast-age, .photo-paper-dino > .modern-toast-age { top: 44%; font-size: 34cqw; }
+.photo-paper-space > .modern-toast-closing { top: 61%; left: 31%; width: 56%; }
+/* Composed frames belong only on the covers, never in the design boards. */
+:is(.design-type-space-explorer, .design-type-dino-adventure) .design-type-board { padding-right: 8%; }
+.design-pattern-cosmic-orbits .design-pattern-panel { background-image: radial-gradient(circle at 18% 24%, #eac472 0 2px, transparent 3px), radial-gradient(circle at 72% 48%, #fff1d7 0 1px, transparent 2px); background-size: 65px 80px, 49px 59px; }
+.design-pattern-jungle-canopy .design-pattern-panel { background-image: repeating-linear-gradient(70deg, transparent 0 35px, #354d3312 36px 38px, transparent 39px 65px); }

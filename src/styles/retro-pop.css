@@ -1,0 +1,55 @@
+.invitation-preview-art.full-image-cover.preview-retro-pop {
+  background: var(--cover-image) center / cover no-repeat;
+  color: #1749ad;
+}
+.retro-image-cover-copy {
+  position: absolute;
+  inset: 13% 17% 15%;
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.retro-image-opening {
+  font-size: clamp(9px, 1.8cqw, 14px);
+  font-weight: 900;
+  letter-spacing: .17em;
+  text-transform: uppercase;
+}
+.retro-image-title {
+  display: flex;
+  flex-direction: column;
+  margin-top: 3cqw;
+  color: #ff654f;
+  font-family: "Cooper Black", "Cooper Std Black", Georgia, serif;
+  font-size: 9.4cqw;
+  font-weight: 900;
+  line-height: .95;
+  letter-spacing: -.065em;
+  text-shadow: .3cqw .35cqw #1749ad;
+}
+.retro-image-title span:first-child { font-size: .7em; margin-bottom: .12em; }
+.retro-image-age {
+  margin: 2.5cqw 0 1cqw;
+  font-family: "Cooper Black", "Cooper Std Black", Georgia, serif;
+  font-size: 28cqw;
+  font-weight: 900;
+  font-style: italic;
+  line-height: .88;
+  letter-spacing: -.09em;
+  padding-right: .07em;
+  text-shadow: .6cqw .65cqw #ff654f;
+}
+.retro-image-cover-copy em {
+  margin-top: 2cqw;
+  font-family: Georgia, serif;
+  font-size: clamp(12px, 2.5cqw, 20px);
+  font-weight: 700;
+}
+.retro-image-details {
+  margin-top: 3cqw;
+  font-size: clamp(9px, 1.7cqw, 14px);
+  font-weight: 900;
+  letter-spacing: .13em;
+}

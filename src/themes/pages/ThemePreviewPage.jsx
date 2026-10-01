@@ -17,7 +17,7 @@ export default function ThemePreviewPage() {
 
   if (!theme) return <section className="inner-page copy-page"><h1>{t("themePreview.notFound.title")}</h1><p>{t("themePreview.notFound.description")}</p><Link className="text-link" to="/#projects">{t("common.exploreEvents")} <Icon name="arrow-up-right" size={18} /></Link></section>;
 
-  const event = themeDemoEvents[theme.category];
+  const event = themeDemoEvents[theme.id] ?? themeDemoEvents[theme.category];
   const template = invitationTemplates.find((item) => item.themeId === theme.id);
   const activeModule = options.includes(selectedModule) ? selectedModule : options[0];
   return (

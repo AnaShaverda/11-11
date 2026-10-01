@@ -24,8 +24,11 @@
 .invitation-collection .invitation-gallery { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 22px; }
 .invitation-collection .invitation-card:first-child { grid-column: span 2; }
 .invitation-collection .invitation-card:first-child .invitation-preview-art { min-height: 390px; }
-.invitation-showcase-card { border: 1px solid #e4d5ff75; border-radius: 19px; background: #1b1d60af; box-shadow: 0 16px 40px #0b0d3d44; }
-.invitation-showcase-card .invitation-card-bottom { min-height: 80px; padding: 15px 19px; }
+.invitation-showcase-card { display: flex; flex-direction: column; border: 1px solid #e4d5ff75; border-radius: 19px; background: #1b1d60af; box-shadow: 0 16px 40px #0b0d3d44; }
+.invitation-showcase-card > .invitation-preview-art { flex: 1 0 auto; }
+.invitation-showcase-card .invitation-card-bottom { flex: 0 0 104px; min-height: 104px; padding: 15px 19px; }
+.invitation-showcase-card .invitation-card-bottom > span:first-child { min-width: 0; }
+.invitation-showcase-card .invitation-card-bottom strong { line-height: 1.2; }
 .invitation-showcase-card .invitation-card-bottom strong { font-size: 1.12rem; }
 .invitation-showcase-card .invitation-card-bottom small { font-size: .76rem; }
 .invitation-showcase-card:hover .invitation-preview-art { filter: saturate(1.08); }

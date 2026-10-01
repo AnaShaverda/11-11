@@ -1,0 +1,32 @@
+.theme-cobalt-cheers { --theme-bg: #f7f5ed; --theme-ink: #0752ae; --theme-accent: #224a80; --theme-panel: #e8eef4; --theme-stroke: #0752ae40; --theme-display: Arial, sans-serif; --world-photo: url('/images/birthday/cobalt-cheers/blue-ink-toast.webp'); --world-paper: #f7f5ed; background: var(--theme-bg); color: var(--theme-ink); }
+.theme-ribbon-social { --theme-bg: #f5efe6; --theme-ink: #931e2e; --theme-accent: #ba655f; --theme-panel: #eedcda; --theme-stroke: #931e2e40; --theme-display: Georgia, serif; --world-photo: url('/images/birthday/ribbon-social/burgundy-ribbon-party.webp'); --world-paper: #f5efe6; background: var(--theme-bg); color: var(--theme-ink); }
+.invitation-preview-art.full-image-cover:is(.preview-cobalt-cheers,.preview-ribbon-social) { background: var(--cover-image) center / cover no-repeat; }
+.cobalt-poster-copy { position: absolute; inset: 5% 7%; color: #0752ae; border: 1px solid currentColor; border-radius: 4cqw; padding: 4cqw; }
+.cobalt-poster-heading { position: absolute; top: 4%; left: 5%; right: 5%; }
+.cobalt-poster-heading > span { display: block; font: 400 5cqw/1.1 Arial, sans-serif; text-transform: uppercase; letter-spacing: -.04em; }
+.cobalt-poster-heading > strong { display: block; font: 900 12cqw/.88 Arial, sans-serif; letter-spacing: -.065em; margin-top: 1cqw; }
+.cobalt-poster-bottom { position: absolute; bottom: 4%; left: 5%; right: 5%; display: flex; flex-direction: column; gap: 1.1cqw; }
+.social-date { text-align: right; font: 400 4cqw/1 Arial, sans-serif; letter-spacing: -.035em; }
+.social-menu { font: 400 1.9cqw/1.2 Arial, sans-serif; word-spacing: 1cqw; text-align: center; }
+.social-info-grid { display: grid; grid-template-columns: 2fr 1fr; border: 1px solid currentColor; font: italic 2.25cqw/1.3 Georgia, serif; }
+.social-info-grid > span { padding: 1cqw; min-width: 0; }
+.social-info-grid > span:first-child { border-right: 1px solid currentColor; }
+.social-info-grid > span:last-child { grid-column: 1 / -1; border-top: 1px solid currentColor; }
+.social-info-grid b { font: 700 1.65cqw/1.3 Arial, sans-serif; margin-right: 1cqw; }
+.ribbon-poster-copy { position: absolute; top: 23%; left: 25%; width: 50%; color: #931e2e; text-align: center; display: flex; flex-direction: column; align-items: center; }
+.ribbon-poster-opening { font: 700 1.5cqw/1.4 Arial, sans-serif; letter-spacing: .16em; text-transform: uppercase; }
+.ribbon-poster-name { font: italic 400 5.5cqw/1.1 Georgia, serif; margin-top: 2cqw; }
+.ribbon-poster-age { font: 700 23cqw/.95 Georgia, serif; letter-spacing: -.055em; margin: 1cqw 0 2cqw; }
+.ribbon-poster-date { font: 700 2.1cqw/1.3 Arial, sans-serif; }
+.ribbon-poster-location { font: 400 2.3cqw/1.3 Arial, sans-serif; margin-top: 1cqw; }
+.ribbon-poster-copy em { font: italic 2.3cqw/1.3 Georgia, serif; margin-top: 2cqw; }
+:is(.theme-cobalt-cheers,.theme-ribbon-social) .theme-invitation-card.full-image-cover { width: 100%; padding: 0; border: 0; box-shadow: none; }
+:is(.theme-cobalt-cheers,.theme-ribbon-social) .theme-world-hero-photo,
+:is(.theme-cobalt-cheers,.theme-ribbon-social) .theme-world-image > div { background-image: var(--world-photo); background-size: cover; }
+.design-type-cobalt-cheers .design-type-board { background: #f7f5ed; color: #0752ae; }
+.design-type-cobalt-cheers .design-type-words h3 { max-width: 9em; font-family: Arial, sans-serif; font-weight: 900; letter-spacing: -.065em; }
+.design-type-ribbon-social .design-type-board { background: #f5efe6; color: #931e2e; }
+.design-type-ribbon-social .design-type-words h3 { max-width: 9em; font-family: Georgia, serif; font-style: italic; font-weight: 400; }
+.design-pattern-cobalt-check .design-pattern-panel { background-color: #f7f5ed; background-image: conic-gradient(#0752ae 25%,transparent 0 50%,#0752ae 0 75%,transparent 0); background-size: 52px 52px; color: #f7f5ed; }
+.design-pattern-cobalt-check .design-pattern-panel p { background: #0752ae; padding: 12px; }
+.design-pattern-ribbon-lines .design-pattern-panel { background-color: #f5efe6; background-image: repeating-linear-gradient(135deg,transparent 0 40px,#931e2e30 41px 43px,transparent 44px 70px); color: #931e2e; }

@@ -1,0 +1,9 @@
+Mode: built-in image_gen
+Cover only: moodboard images unchanged.
+
+Use case: stylized-concept
+Asset type: full-bleed birthday invitation cover artwork.
+Primary request: a sophisticated Classic Celebration birthday illustration, one continuous painted image. Cream parchment atmosphere, ornate pink birthday cake with piped ivory frosting, cherries, red bows and three lit striped candles. Painterly gouache and oil pastel, charming handmade details, editorial stationery quality.
+Composition: square canvas. Cake sits in lower-right quadrant, occupying right 42% and lower 48%; small cherries and a flowing burgundy ribbon near bottom edge. A loose burgundy silk ribbon arcs along the very top and left edge, never creating a closed frame. Warm ivory negative space across upper middle and left 55% for live invitation typography. Faint warm gold paint accents. Full scene extends to every edge.
+Palette: warm ivory #fff4df, burgundy #722b36, cherry red #c84d4d, soft pink, antique gold #e6c990.
+Constraints: absolutely NO card, no inset rectangle, no paper object sitting on another background, no mockup, no collage, no panels, no text, no letters, no watermark. One unified artwork. The calm left and upper-middle region must remain readable.

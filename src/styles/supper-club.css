@@ -1,0 +1,65 @@
+/* Same photo-backed paper card as Modern Toast, with the illustrated treatment. */
+.theme-supper-club {
+  --theme-bg: #f3e7d2;
+  --theme-ink: #432923;
+  --theme-accent: #742b32;
+  --theme-panel: #f8eedf;
+  --theme-stroke: #742b3233;
+  --theme-display: Georgia, "Times New Roman", serif;
+  --world-paper: #f8eedf;
+  --world-contrast: #742b3210;
+  --world-photo: url("/images/birthday/supper-club/candlelit-dinner.webp");
+  background: var(--theme-bg);
+  color: var(--theme-ink);
+}
+.theme-supper-club::before { display: none; }
+.photo-paper-illustrated { justify-content: flex-start; }
+.photo-paper-illustrated > .modern-toast-opening {
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  max-width: 6em;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 10cqw;
+  font-style: italic;
+  letter-spacing: -.035em;
+  line-height: 1.08;
+  text-transform: none;
+}
+.photo-paper-illustrated > .modern-toast-name {
+  position: absolute;
+  top: 34%;
+  left: 10%;
+  max-width: 4.4em;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 15cqw;
+  font-weight: 400;
+  letter-spacing: -.055em;
+  line-height: 1.04;
+}
+.photo-paper-illustrated > .modern-toast-closing {
+  position: absolute;
+  bottom: 7%;
+  left: 10%;
+  margin: 0;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 5.5cqw;
+  font-style: italic;
+  letter-spacing: 0;
+}
+.photo-paper-illustrated:has(.modern-toast-details) > .modern-toast-closing { bottom: 11%; }
+.photo-paper-illustrated > .modern-toast-details { position: absolute; bottom: 3%; left: 10%; width: 80%; margin: 0; font-size: 3.2cqw; }
+.design-type-supper-club .design-type-board { grid-template-columns: minmax(0, 1fr); padding-right: 37%; min-height: 480px; border-radius: 2px; }
+.design-type-supper-club .design-type-mark { display: none; }
+.design-type-supper-club .design-type-words h3 { font-family: Georgia, "Times New Roman", serif; font-weight: 400; font-size: clamp(2.8rem, 5vw, 5.5rem); line-height: 1; letter-spacing: -.055em; }
+.design-type-supper-club .design-type-words p { font-size: 1.15rem; line-height: 1.45; }
+.design-type-supper-club .design-elements-board > *, .design-type-supper-club .design-support-card { border-radius: 2px; }
+.design-type-supper-club .design-pattern-panel { background: #742b32; color: #f3e7d2; }
+.design-type-supper-club .design-ticket-panel { background: #a78a51; border: 1px solid #43292333; }
+.birthday-design-page.design-type-supper-club .design-support-card strong { max-width: 100%; }
+.birthday-design-page.design-type-supper-club .design-support-3 strong { max-width: 60%; }
+.theme-supper-club .theme-compact-photo { border: 0; border-radius: 0; transform: none; box-shadow: none; background-size: cover; }
+@media (max-width: 700px) {
+  .design-type-supper-club .design-type-board { min-height: 430px; padding: 70px 33% 70px 6%; }
+  .design-type-supper-club .design-type-words h3 { font-size: clamp(2.2rem, 8vw, 3.5rem); }
+}

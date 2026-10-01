@@ -1,5 +1,22 @@
 // Demo content for the public preview only. Real event content will be supplied later.
 export const invitationSamples = {
+  "birthday-pink-post": {"title": "Mia’s Birthday", "name": "Mia", "age": 26, "date": "23 MAY", "time": "17:00", "location": "TBILISI", "line": "Come over. Let’s celebrate.", "mark": "26"},
+  "birthday-disco-scrapbook": {"title": "Priscilla’s Birthday", "name": "Priscilla", "age": 33, "date": "02 SEP", "time": "19:00", "location": "TBILISI", "line": "Save the date. Bring your sparkle.", "mark": "33"},
+  "birthday-velvet-post": {"title": "Marifer’s Birthday", "name": "Marifer", "age": 20, "date": "17 JAN", "time": "16:00", "location": "TBILISI", "line": "A toast to twenty.", "mark": "20"},
+  "birthday-checkerboard-cheers": {"title": "Alex’s Birthday Party", "name": "Alex", "age": 28, "date": "08 JUN", "time": "19:00", "location": "TBILISI", "line": "Let’s make a night of it.", "mark": "28"},
+  "birthday-pastel-disco": {"title": "Mia’s Disco Birthday", "name": "Mia", "age": 24, "date": "08 JUN", "time": "19:00", "location": "TBILISI", "line": "Meet me on the dance floor.", "mark": "24"},
+  "birthday-paper-garland": {"title": "Nini’s Birthday", "name": "Nini", "age": 9, "date": "18 JUL", "time": "15:00", "location": "TBILISI", "line": "A day full of happy wishes.", "mark": "9"},
+  "birthday-strawberry-social": { title: "Isabella’s Birthday", name: "Isabella", age: 22, date: "15 MAY", time: "13:00", location: "TBILISI", line: "A little cake. A lot of love.", mark: "22" },
+  "birthday-cobalt-cheers": { title: "Victoria’s Birthday Party", name: "Victoria", age: 25, date: "14 MAR", time: "19:00", location: "TBILISI", line: "Dress to impress", mark: "25" },
+  "birthday-ribbon-social": { title: "Harlem’s Birthday", name: "Harlem", age: 21, date: "27 DEC", time: "16:00", location: "TBILISI", line: "A toast to twenty-one", mark: "21" },
+  "birthday-football-club": { title: "Leo turns 10", name: "Leo", age: 10, date: "18 JUL", location: "TBILISI", line: "Let’s kick off the party!", mark: "10" },
+  "birthday-ballerina": { title: "Mia’s Ballet Birthday", name: "Mia", age: 8, date: "19 MAY", location: "TBILISI", line: "A little dance. A big wish.", mark: "8" },
+  "birthday-khinkali-beer": { title: "Alex turns 40", name: "Alex", age: 40, date: "18 JUL", location: "TBILISI", line: "Good food. Better company.", mark: "40" },
+  "birthday-space-explorer": { title: "Leo turns 7", name: "Leo", age: 7, date: "18 JUL", location: "TBILISI", line: "A birthday out of this world!", mark: "7" },
+  "birthday-dino-adventure": { title: "Leo turns 7", name: "Leo", age: 7, date: "18 JUL", location: "TBILISI", line: "A roaring good birthday!", mark: "7" },
+  "birthday-race-day": { title: "Leo turns 7", name: "Leo", age: 7, date: "18 JUL", location: "TBILISI", line: "Ready, set, celebrate!", mark: "7" },
+  "birthday-supper-club": { title: "Alex turns 40", name: "Alex", age: 40, date: "18 JUL", location: "TBILISI", line: "A seat at our table.", mark: "40" },
+  "birthday-modern-toast": { title: "Alex turns 40", name: "Alex", age: 40, date: "18 JUL", location: "TBILISI", line: "You’re invited", mark: "40" },
   "birthday-classic-celebration": {
     title: "Nini’s Birthday",
     date: "18 JUL",
@@ -26,6 +43,7 @@ export const invitationSamples = {
   },
   "birthday-y2k-party": {
     title: "Mari’s Y2K Party",
+    posterName: "Mari’s",
     date: "24 OCT",
     location: "TBILISI",
     line: "Party mode: on.",
@@ -52,13 +70,6 @@ export const invitationSamples = {
     line: "A little celebration.",
     mark: "୨୧",
   },
-  "birthday-midnight-luxury": {
-    title: "Luka’s Birthday Soirée",
-    date: "05 DEC",
-    location: "TBILISI",
-    line: "An evening to remember.",
-    mark: "XXV",
-  },
   "birthday-garden-party": {
     title: "Elene’s Garden Birthday",
     date: "14 JUN",
@@ -66,26 +77,14 @@ export const invitationSamples = {
     line: "Come wander awhile.",
     mark: "❀",
   },
-  "birthday-neon-night": {
-    title: "Saba’s Neon Night",
-    date: "21 NOV",
-    location: "TBILISI",
-    line: "Stay for the last song.",
-    mark: "✦",
-  },
   "birthday-pastel-dream": {
     title: "Tako’s Sweet 26",
+    posterName: "Tako’s",
+    posterAge: "26",
     date: "03 APR",
     location: "KUTAISI",
     line: "Make a wish.",
     mark: "26",
-  },
-  "birthday-minimal-editorial": {
-    title: "Giorgi’s 30th",
-    date: "12 SEP",
-    location: "TBILISI",
-    line: "Dinner with our people.",
-    mark: "30",
   },
   "birthday-tropical-summer": {
     title: "Mariam’s Summer Birthday",

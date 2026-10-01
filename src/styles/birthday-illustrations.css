@@ -1,5 +1,20 @@
 .birthday-illustration { position: absolute; display: block; width: auto; height: auto; max-width: 100%; max-height: 100%; object-fit: contain; pointer-events: none; user-select: none; -webkit-user-drag: none; }
 
+/* Configured artwork lives in its card; content always occupies a higher layer. */
+:is(.invitation-preview-art, .design-type-board, .design-pattern-panel, .design-support-card):has(> .birthday-illustration--configured) {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+}
+.design-type-board:has(> .birthday-illustration--configured) :is(.design-board-kicker, .design-type-mark, .design-type-words, .design-type-bottom),
+.design-pattern-panel:has(> .birthday-illustration--configured) :is(.design-board-kicker, p),
+.design-support-card:has(> .birthday-illustration--configured) > :is(span, strong, small) {
+  z-index: 3;
+}
+.invitation-preview-art:has(> .birthday-illustration--configured) > :is(.modern-toast-paper, .retro-poster) {
+  z-index: 3;
+}
+
 /* Birthday landing page: real stationery illustrations replace the old CSS orbit. */
 .birthday-hero-art .birthday-illustration--landing-1 { z-index: 1; top: 16%; left: 12%; width: 73%; height: 73%; transform: rotate(-7deg); filter: drop-shadow(0 24px 22px #15104166); }
 .birthday-hero-art .birthday-illustration--landing-2 { z-index: 0; top: -2%; right: -2%; width: 43%; height: 43%; transform: rotate(13deg); filter: drop-shadow(0 9px 17px #120d4e78); }

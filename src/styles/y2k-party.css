@@ -1,0 +1,64 @@
+.invitation-preview-art.full-image-cover.preview-y2k-digital {
+  background: var(--cover-image) center / cover no-repeat !important;
+  color: #eef7ff;
+}
+.y2k-image-cover-copy {
+  position: absolute;
+  z-index: 3;
+  inset: 18% 13% 15%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  font-family: "Arial Black", "Helvetica Neue", Arial, sans-serif;
+}
+.y2k-image-opening {
+  font-size: clamp(9px, 1.7cqw, 14px);
+  font-weight: 700;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+}
+.y2k-image-host {
+  margin-top: 4cqw;
+  font-size: 5cqw;
+  font-weight: 700;
+  font-style: italic;
+}
+.y2k-image-title {
+  margin-top: 1cqw;
+  padding-right: .06em;
+  background: linear-gradient(178deg, #fff 9%, #9dd1f4 25%, #fdfbff 38%, #466d9e 43%, #e8f6ff 50%, #7e9cb9 67%, #f4e3f6 84%, #fff 92%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  font-size: 24cqw;
+  font-weight: 1000;
+  font-style: italic;
+  line-height: 1;
+  letter-spacing: -.08em;
+  filter: drop-shadow(.25cqw .4cqw 0 #040a48) drop-shadow(0 0 1.2cqw #87d6ff40);
+}
+.y2k-image-party {
+  margin-top: -.2cqw;
+  color: #edacd5;
+  font-size: 9cqw;
+  font-weight: 900;
+  font-style: italic;
+  line-height: 1.1;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  text-shadow: .3cqw .4cqw #091249;
+}
+.y2k-image-cover-copy em {
+  margin-top: 3.5cqw;
+  color: #c7eaff;
+  font-size: clamp(12px, 2.2cqw, 19px);
+  font-style: normal;
+  font-weight: 700;
+}
+.y2k-image-details {
+  margin-top: 3cqw;
+  font-size: clamp(9px, 1.8cqw, 14px);
+  font-weight: 700;
+  letter-spacing: .14em;
+}

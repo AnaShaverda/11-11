@@ -8,7 +8,7 @@ export default function ThemeCard({ theme }) {
   const { t } = useLanguage();
   return (
     <Link className="theme-card" to={`/themes/${theme.slug}`} aria-label={t("themeCanvas.cardAria", { name: t(`themes.${theme.id}.name`) })}>
-      <ThemeCanvas theme={theme} event={themeDemoEvents[theme.category]} compact />
+      <ThemeCanvas theme={theme} event={themeDemoEvents[theme.id] ?? themeDemoEvents[theme.category]} compact />
       <span className="theme-card-caption"><span><strong>{t(`themes.${theme.id}.name`)}</strong><small>{t(`themes.${theme.id}.mood`)}</small></span><Icon name="arrow-up-right" size={18} /></span>
     </Link>
   );

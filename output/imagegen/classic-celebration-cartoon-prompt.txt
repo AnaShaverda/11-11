@@ -1,0 +1,7 @@
+Mode: built-in image_gen, referenced previous cover artwork.
+
+Use case: style-transfer
+Asset type: Classic Celebration full-bleed invitation artwork.
+Restyle the attached image as a tasteful hand-drawn cartoon illustration with believable cake construction. Preserve composition: a pink cherry birthday cake at lower right, three lit striped candles, burgundy ribbon at edges, warm cream open space on left for live text. No text in image.
+Use confident clean ink contours, simplified gouache color shapes, restrained soft shading, visible but subtle paper grain. Real cake proportions, distinct piped cream swirls, only a few naturally placed cherries, simple cream cake pedestal instead of elaborate gold metalwork. Simplify ribbon into plausible continuous folds and remove all the tiny flowers, ornate gilding and excessive decorative detail. Warm ivory, muted pink, cherry burgundy. Modern illustrated cookbook / editorial cartoon aesthetic, drawn by a human illustrator, flat yet tangible, charming and refined, no glossy 3D, no hyperrealistic oil painting, no busy AI-looking microtexture.
+Keep left central 40% uncluttered and light, cake on right 45%, square full-bleed single continuous illustration, NO inset card or separate panel, no typography, no collage, no watermark.

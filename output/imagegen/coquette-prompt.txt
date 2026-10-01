@@ -1,0 +1,8 @@
+Mode: built-in image_gen.
+References: https://fr.pinterest.com/pin/969188782601581513/ ; https://www.zazzle.com/pink_bow_coquette_birthday_party_invitation-256121506733482318
+
+Use case: stylized-concept
+Asset type: full-bleed Coquette birthday brunch invitation cover, square.
+Original delicate editorial illustration: one large pale blush silk bow at top center with believable tied loops and two long fine ribbon tails gently curling down near left and right outer edges. Warm ivory with pale ballet pink wash fills the entire image. Delicate ivory embroidered lace at the outermost edges, small scalloped textile stitches, subtle handmade paper grain. Restrained pretty details, confident fine dusty-rose ink contours and simplified gouache shading, drawn by a skilled human illustrator. No hyperrealistic oil microtexture. Romantic vintage coquette aesthetic with natural satin folds, soft and airy.
+Composition: main bow occupies upper 22%; ribbon tails stay outside central x18–82%. Keep center x20–80%, y28–82% plain warm ivory/light blush for directly overlaid live birthday typography. Lace only outer edge. Bottom corners have tiny folded ribbon ends, central bottom remains quiet. Very pale pink #f8d7e6, ivory #fff5ef, dusty rose #935775, muted blush #e5a6c4.
+ONE continuous full-bleed illustration, no separate paper card, no object mockup, no inset rectangle, no collage or panels, no text/letters/numbers/watermark. No disco, chrome, champagne, dark colors, large florals, excessive pearls, hearts or glitter. Tasteful and delicate, clear tactile cartoon-like shapes instead of busy AI ornamentation.
