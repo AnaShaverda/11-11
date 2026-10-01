@@ -2,6 +2,55 @@ export const defaultLanguage = "ka";
 export const languages = ["ka", "en"];
 export const languageNames = { ka: "ქართული", en: "English" };
 
+const authCopy = {
+  ka: {
+    "auth.login.title": "კეთილი იყოს შენი დაბრუნება",
+    "auth.login.description": "შენი განსაკუთრებული მომენტები გელოდება.",
+    "auth.login.action": "შესვლა",
+    "auth.login.alternative": "ახალი ხარ 11:11-ზე?",
+    "auth.register.title": "შექმენი ანგარიში",
+    "auth.register.description": "შენი განსაკუთრებული მომენტები აქ იწყება.",
+    "auth.register.action": "ანგარიშის შექმნა",
+    "auth.register.alternative": "უკვე გაქვს ანგარიში?",
+    "auth.field.name": "სახელი",
+    "auth.field.email": "ელფოსტა",
+    "auth.field.password": "პაროლი",
+    "auth.field.confirmPassword": "გაიმეორე პაროლი",
+    "auth.password.show": "აჩვენე პაროლი — {field}",
+    "auth.password.hide": "დამალე პაროლი — {field}",
+    "auth.password.hint": "მინიმუმ {passwordLength} სიმბოლო.",
+    "auth.validation.required": "გთხოვ, შეავსე ეს ველი.",
+    "auth.validation.nameShort": "სახელი მინიმუმ {nameLength} სიმბოლოს უნდა შეიცავდეს.",
+    "auth.validation.email": "შეიყვანე ელფოსტის სწორი მისამართი.",
+    "auth.validation.passwordShort": "პაროლი მინიმუმ {passwordLength} სიმბოლოს უნდა შეიცავდეს.",
+    "auth.validation.passwordMatch": "პაროლები ერთმანეთს არ ემთხვევა.",
+    "auth.submission.preview": "ეს ფორმის დემოა. შესვლა და ანგარიშის შექმნა სერვერთან დაკავშირების შემდეგ გახდება შესაძლებელი. მონაცემები არ გაგზავნილა და არ შენახულა.",
+  },
+  en: {
+    "auth.login.title": "Welcome back",
+    "auth.login.description": "Your special moments are waiting.",
+    "auth.login.action": "Sign in",
+    "auth.login.alternative": "New to 11:11?",
+    "auth.register.title": "Create your account",
+    "auth.register.description": "Your special moments start here.",
+    "auth.register.action": "Create account",
+    "auth.register.alternative": "Already have an account?",
+    "auth.field.name": "Name",
+    "auth.field.email": "Email",
+    "auth.field.password": "Password",
+    "auth.field.confirmPassword": "Confirm password",
+    "auth.password.show": "Show password — {field}",
+    "auth.password.hide": "Hide password — {field}",
+    "auth.password.hint": "At least {passwordLength} characters.",
+    "auth.validation.required": "Please fill in this field.",
+    "auth.validation.nameShort": "Use at least {nameLength} characters for your name.",
+    "auth.validation.email": "Enter a valid email address.",
+    "auth.validation.passwordShort": "Use at least {passwordLength} characters for your password.",
+    "auth.validation.passwordMatch": "The passwords don’t match.",
+    "auth.submission.preview": "This is a form preview. Sign in and account creation will be available when the backend is connected. Your details haven’t been sent or saved.",
+  },
+};
+
 const themeCatalog = [
   ["birthday-pink-post", "ვარდისფერი წერილი", "ვარდისფერი აკვარელი და პირადი წერილი", "Pink Post", "Blush watercolor & personal notes"],
   ["birthday-disco-scrapbook", "დისკოს ალბომი", "ფერადი ქაღალდი და დისკოს ბრჭყვიალა", "Disco Scrapbook", "Cut-paper colors & disco sparkle"],
@@ -325,3 +374,4 @@ const productCopy = {
   },
 };
 for (const language of languages) Object.assign(captions[language], productCopy[language]);
+for (const language of languages) Object.assign(captions[language], authCopy[language]);

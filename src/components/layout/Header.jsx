@@ -41,6 +41,7 @@ export default function Header() {
         ))}
       </nav>
       <div className="header-preferences">
+        <NavLink to="/login" className={({ isActive }) => `header-auth-link${isActive ? " is-active" : ""}`}>{t("auth.login.action")}</NavLink>
         <div className="language-switch" role="group" aria-label={t("nav.language")}>
           {languages.map((code) => <button key={code} type="button" lang={code} className={language === code ? "is-active" : ""} aria-label={languageNames[code] ?? code} aria-pressed={language === code} onClick={() => setLanguage(code)}>{code.toUpperCase()}</button>)}
         </div>

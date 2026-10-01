@@ -32,6 +32,7 @@ import "./styles/letter-parties.css";
 import "./styles/category-previews.css";
 import "./styles/surprises.css";
 import "./styles/appearance.css";
+import "./styles/auth.css";
 
 createRoot(document.getElementById("root")).render(
   <React.StrictMode>

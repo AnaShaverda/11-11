@@ -12,11 +12,15 @@ import FriendshipDiaryModulePage from "../modules/pages/FriendshipDiaryModulePag
 import SurpriseShowcasePage from "../surprises/pages/SurpriseShowcasePage.jsx";
 import SurpriseDemoPage from "../surprises/pages/SurpriseDemoPage.jsx";
 import ThemePreviewPage from "../themes/pages/ThemePreviewPage.jsx";
+import LoginPage from "../auth/pages/LoginPage.jsx";
+import RegisterPage from "../auth/pages/RegisterPage.jsx";
 
 export default function App() {
   return (
     <Routes>
       <Route element={<WebsiteLayout />}>
+        <Route path="login" element={<LoginPage />} />
+        <Route path="register" element={<RegisterPage />} />
         <Route element={<WebsiteIntroLayout />}>
           <Route index element={<HomePage />} />
           <Route path="about" element={<AboutPage />} />
