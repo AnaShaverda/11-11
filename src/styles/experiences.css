@@ -1,5 +1,5 @@
 .experience-page { width: min(100% - clamp(28px, 7vw, 100px), 1280px); margin: 0 auto; padding: 7px 0 75px; }
-.experience-back { display: inline-flex; align-items: center; min-height: 42px; margin: 0 0 14px; color: var(--color-text-secondary); font-size: .85rem; border-bottom: 1px solid rgba(215, 213, 255, .5); }
+.experience-back { display: inline-flex; align-items: center; gap: 7px; min-height: 42px; margin: 0 0 14px; color: var(--color-text-secondary); font-size: .85rem; border-bottom: 1px solid rgba(215, 213, 255, .5); }
 .experience-back:hover, .section-text-link:hover { color: #fff; }
 .section-label { display: inline-block; margin-bottom: 15px; color: #ffc1e8; font-size: .69rem; font-weight: 800; letter-spacing: .25em; }
 .experience-page h1, .experience-page h2, .experience-page h3, .experience-page p { margin-top: 0; }
@@ -13,6 +13,7 @@
 .experience-section h2, .experience-cta h2 { margin-bottom: 9px; font-size: clamp(2rem, 3.3vw, 3.4rem); line-height: 1.08; letter-spacing: -.045em; }
 .experience-section-heading p { max-width: 610px; margin-bottom: 0; font-size: 1.05rem; }
 .experience-invitations .invitation-gallery { grid-template-columns: repeat(2, minmax(0, 1fr)); max-width: 870px; }
+.birthday-experience .experience-invitations .invitation-gallery { grid-template-columns: repeat(3, minmax(0, 1fr)); max-width: none; }
 .experience-invitations .invitation-art { min-height: 230px; }
 .birthday-experience .experience-invitations .invitation-preview-art .invitation-preview-copy strong { font-size: clamp(1.55rem, 2vw, 2.1rem); }
 .birthday-experience .experience-invitations .invitation-preview-copy em { margin-top: 10px; font-size: .78rem; }
@@ -85,6 +86,9 @@
 .friendship-notebook small { color: #a765a1; font-size: .72rem; font-weight: 800; letter-spacing: .22em; }.friendship-notebook strong { margin: 18px 0 13px; font-family: Georgia, serif; font-size: clamp(1.8rem, 3vw, 2.7rem); line-height: 1.1; }.friendship-notebook p { margin: 0; color: #704d71; font-size: .99rem; }.notebook-signature { align-self: flex-end; margin-top: 23px; font-family: Georgia, serif; font-size: 1.1rem; font-style: italic; }
 .friendship-responses { grid-template-columns: repeat(2, minmax(0, 1fr)); }.friendship-final { background: linear-gradient(135deg, #273e9b, #a84faa); }
 
+@media (max-width: 1100px) {
+  .birthday-experience .experience-invitations .invitation-gallery { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
 @media (max-width: 1000px) {
   .question-grid, .game-grid, .wedding-feature-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .birthday-hero, .wedding-hero, .friendship-hero { grid-template-columns: minmax(0, 1fr) minmax(280px, .8fr); padding: 35px; }
@@ -98,6 +102,7 @@
   .wedding-hero h1 { font-size: clamp(3.3rem, 10vw, 5rem); }.wedding-hero-art { width: min(100%, 320px); height: 300px; margin-top: 10px; }.paper-front { padding: 20px 10px; }.paper-front strong { font-size: 3.3rem; }
   .friendship-notebook { width: min(100% - 15px, 360px); min-height: 260px; margin: 22px auto 10px; padding: 35px; }
   .experience-invitations .invitation-gallery { grid-template-columns: 1fr; max-width: 430px; }
+  .birthday-experience .experience-invitations .invitation-gallery { grid-template-columns: minmax(0, 1fr); width: min(100%, 430px); margin-inline: auto; }
   .response-grid, .wedding-responses, .friendship-responses { grid-template-columns: 1fr; }
   .memory-mosaic { grid-template-columns: 1fr 1fr; grid-template-rows: repeat(3, 135px); }.tile-one { grid-row: span 2; }.tile-three { grid-row: span 1; }.tile-four { grid-row: span 1; }
 }

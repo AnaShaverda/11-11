@@ -4,7 +4,6 @@ import WebsiteIntroLayout from "../components/layout/WebsiteIntroLayout.jsx";
 import HomePage from "../pages/HomePage.jsx";
 import AboutPage from "../pages/AboutPage.jsx";
 import ContactPage from "../pages/ContactPage.jsx";
-import ProjectsPage from "../pages/ProjectsPage.jsx";
 import ProjectDetailPage from "../pages/ProjectDetailPage.jsx";
 import NotFoundPage from "../pages/NotFoundPage.jsx";
 import InvitationsPage from "../invitations/pages/InvitationsPage.jsx";
@@ -21,7 +20,7 @@ export default function App() {
           <Route index element={<HomePage />} />
           <Route path="about" element={<AboutPage />} />
           <Route path="contact" element={<ContactPage />} />
-          <Route path="projects" element={<ProjectsPage />} />
+          <Route path="projects" element={<Navigate to="/#projects" replace />} />
         </Route>
         <Route path="invitations" element={<InvitationsPage />} />
         <Route path="projects/:slug" element={<ProjectDetailPage />} />

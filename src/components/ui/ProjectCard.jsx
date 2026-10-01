@@ -1,7 +1,10 @@
+import Icon from "./Icon.jsx";
 import { Link } from "react-router-dom";
 import ProjectIcon from "./ProjectIcon.jsx";
+import { useLanguage } from "../../localization/LanguageContext.jsx";
 
 export default function ProjectCard({ project, showDetails = false }) {
+  const { t } = useLanguage();
   return (
     <Link
       className={`project-card accent-${project.accent}${showDetails ? " project-card-detailed" : ""}`}
@@ -14,11 +17,11 @@ export default function ProjectCard({ project, showDetails = false }) {
           <span className="folder-spark">✦</span>
         </span>
       </span>
-      <span className="project-title">{project.title}</span>
+      <span className="project-title">{t(`common.${project.id}`)}</span>
       {showDetails ? (
         <span className="project-card-details">
-          <span className="project-description">{project.shortDescription}</span>
-          <span className="project-card-meta">Explore category <span aria-hidden="true">↗</span></span>
+          <span className="project-description">{t(`project.${project.id}.description`)}</span>
+          <span className="project-card-meta">{t("project.exploreCategory")} <Icon name="arrow-up-right" size={18} /></span>
         </span>
       ) : null}
     </Link>

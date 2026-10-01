@@ -1,0 +1,184 @@
+/* The platform shell changes appearance; invitation and experience artwork use
+   their own theme variables and deliberately keep their authored palettes. */
+:root[data-theme="light"] :focus-visible { outline-color: #255baf; }
+:root[data-theme="light"] ::selection { background: #bba9f0; color: #24204b; }
+
+:root[data-theme="light"] .brand-time { text-shadow: 0 2px 20px rgba(104, 93, 190, .2); }
+:root[data-theme="light"] .language-switch { border-color: var(--border-soft); background: rgba(255, 255, 255, .68); }
+:root[data-theme="light"] .language-switch button { color: var(--color-text-secondary); }
+:root[data-theme="light"] .language-switch button.is-active { background: linear-gradient(125deg, #d8eaff, #f4d3ee); color: #252157; box-shadow: 0 2px 10px rgba(103, 95, 179, .16); }
+:root[data-theme="light"] .appearance-switch { background: linear-gradient(135deg, #fff7e7, #f8dafa); color: #7a347a; }
+:root[data-theme="light"] .nav-link:hover,
+:root[data-theme="light"] .nav-link.is-active { color: var(--color-text); }
+:root[data-theme="light"] .nav-link.is-active::after { background: #7754bd; box-shadow: 0 0 9px rgba(119, 84, 189, .35); }
+:root[data-theme="light"] .decorative-layer { color: #7777c2; }
+:root[data-theme="light"] .deco-one,
+:root[data-theme="light"] .deco-four { color: #bc73b9; }
+
+:root[data-theme="light"] .hero-brand { border-color: rgba(122, 115, 193, .42); background: linear-gradient(128deg, rgba(211, 234, 255, .75), rgba(226, 213, 255, .72) 65%, rgba(255, 215, 239, .8)); box-shadow: inset 0 1px 35px rgba(255, 255, 255, .65), 0 14px 38px rgba(97, 95, 174, .13), 0 0 24px rgba(212, 142, 214, .22); text-shadow: 0 4px 18px rgba(149, 121, 210, .28); }
+:root[data-theme="light"] .intro-control { border-color: rgba(103, 120, 186, .38); background: linear-gradient(100deg, rgba(207, 232, 255, .85), rgba(226, 214, 255, .83) 65%, rgba(255, 206, 235, .86)); box-shadow: var(--shadow-card); }
+:root[data-theme="light"] .intro-control:hover { box-shadow: 0 12px 28px rgba(101, 107, 180, .2); }
+:root[data-theme="light"] .intro-control-arrow { border-color: var(--border-strong); }
+:root[data-theme="light"] .project-card { border-color: var(--border-soft); background: var(--surface-glass); box-shadow: var(--shadow-card); }
+:root[data-theme="light"] .project-card:hover { background: var(--surface-raised); box-shadow: 0 18px 38px rgba(75, 72, 144, .17); }
+:root[data-theme="light"] .home-hero-message { color: #624b8e; }
+:root[data-theme="light"] .home-grid-heading > span,
+:root[data-theme="light"] .home-section-index,
+:root[data-theme="light"] .project-card-meta { color: var(--text-accent); }
+:root[data-theme="light"] .home-possibilities,
+:root[data-theme="light"] .interactive-list,
+:root[data-theme="light"] .interactive-row { border-color: var(--border-soft); }
+:root[data-theme="light"] .possibility-row > span { border-color: var(--border-soft); color: var(--text-accent); }
+:root[data-theme="light"] .interactive-row:hover { background: rgba(226, 220, 255, .52); }
+:root[data-theme="light"] .interactive-row > span:first-child { color: var(--text-accent); }
+:root[data-theme="light"] .interactive-row > .ui-icon { color: var(--text-link); }
+:root[data-theme="light"] .home-final,
+:root[data-theme="light"] .experience-cta:not(.wedding-final):not(.friendship-final) { border-color: var(--border-soft); background: radial-gradient(circle at 12% 10%, rgba(144, 205, 255, .36), transparent 37%), radial-gradient(circle at 84% 35%, rgba(239, 162, 220, .38), transparent 38%), var(--surface-glass); box-shadow: var(--shadow-card); }
+
+:root[data-theme="light"] .text-link:hover,
+:root[data-theme="light"] .back-link:hover,
+:root[data-theme="light"] .experience-back:hover,
+:root[data-theme="light"] .section-text-link:hover,
+:root[data-theme="light"] .surprise-text-link:hover { color: #274b9a; }
+:root[data-theme="light"] .text-link,
+:root[data-theme="light"] .back-link,
+:root[data-theme="light"] .experience-back,
+:root[data-theme="light"] .section-text-link { border-color: var(--border-soft); }
+:root[data-theme="light"] .section-text-link,
+:root[data-theme="light"] .module-demo-caption a { color: var(--text-link); }
+:root[data-theme="light"] .section-label,
+:root[data-theme="light"] .preview-category { color: var(--text-accent); }
+:root[data-theme="light"] .response-card,
+:root[data-theme="light"] .question-card,
+:root[data-theme="light"] .game-card,
+:root[data-theme="light"] .corporate-preview-note { border-color: var(--border-soft); background: var(--surface-glass); box-shadow: var(--shadow-card); }
+:root[data-theme="light"] .response-card p { color: var(--color-text); }
+:root[data-theme="light"] .question-card > span,
+:root[data-theme="light"] .game-card > span { color: var(--text-accent); }
+:root[data-theme="light"] .game-card small,
+:root[data-theme="light"] .corporate-preview-note > span { color: var(--text-link); }
+:root[data-theme="light"] .corporate-occasions,
+:root[data-theme="light"] .corporate-occasions > div { border-color: var(--border-soft); }
+:root[data-theme="light"] .corporate-occasions span { color: var(--text-link); }
+:root[data-theme="light"] .wedding-experience { --color-text-secondary: #555675; }
+:root[data-theme="light"] .wedding-responses .response-card { background: var(--surface-glass); }
+
+/* These dark hero panels are part of the category illustrations. Keep their
+   original palette and explicitly retain readable copy above light page chrome. */
+:root[data-theme="light"] .birthday-hero,
+:root[data-theme="light"] .wedding-hero,
+:root[data-theme="light"] .friendship-hero,
+:root[data-theme="light"] .corporate-hero,
+:root[data-theme="light"] .wedding-final,
+:root[data-theme="light"] .friendship-final { color: #fff; }
+:root[data-theme="light"] .birthday-hero p,
+:root[data-theme="light"] .wedding-hero p,
+:root[data-theme="light"] .friendship-hero > div:not(.friendship-notebook) p,
+:root[data-theme="light"] .corporate-hero p,
+:root[data-theme="light"] .wedding-final p,
+:root[data-theme="light"] .friendship-final p { color: #f0eafa; }
+:root[data-theme="light"] .wedding-hero h1 em { color: #f7d4bb; }
+:root[data-theme="light"] .birthday-hero h1 em { color: #ff86d7; }
+:root[data-theme="light"] .birthday-hero .section-label,
+:root[data-theme="light"] .wedding-hero .section-label,
+:root[data-theme="light"] .friendship-hero .section-label,
+:root[data-theme="light"] .corporate-hero .section-label { color: #ffc1e8; }
+:root[data-theme="light"] .friendship-notebook p { color: #704d71; }
+:root[data-theme="light"] .wedding-feature-section p { color: #695366; }
+:root[data-theme="light"] .other-hero,
+:root[data-theme="light"] .friendship-module-hero { color: #fff; }
+:root[data-theme="light"] .other-hero p,
+:root[data-theme="light"] .friendship-module-hero p { color: #f0eafa; }
+:root[data-theme="light"] .other-options button { border-color: var(--border-soft); background: var(--surface-glass); color: var(--color-text); }
+:root[data-theme="light"] .other-options button.is-active { border-color: #ac74bd; background: #efd8f0; }
+:root[data-theme="light"] .other-options button small { color: var(--color-text-secondary); }
+:root[data-theme="light"] .theme-explorer-heading > span { color: var(--text-accent); }
+:root[data-theme="light"] .theme-explorer-heading > strong,
+:root[data-theme="light"] .theme-mood { border-color: var(--border-soft); color: var(--text-accent); }
+:root[data-theme="light"] .theme-card { border-color: var(--border-soft); background: var(--surface-glass); box-shadow: var(--shadow-card); }
+:root[data-theme="light"] .theme-card:hover { box-shadow: 0 18px 38px rgba(75, 72, 144, .17); }
+:root[data-theme="light"] .theme-card-caption > .ui-icon,
+:root[data-theme="light"] .theme-preview-toolbar > span { color: var(--text-link); }
+:root[data-theme="light"] .module-picker button { border-color: var(--border-soft); background: var(--surface-glass); color: var(--color-text); }
+:root[data-theme="light"] .module-picker button:hover { background: var(--surface-hover); }
+:root[data-theme="light"] .module-picker button.is-active { border-color: #ac86ce; background: #e9dcf6; color: #352452; }
+
+:root[data-theme="light"] .filter-button,
+:root[data-theme="light"] .style-filter-button { border-color: var(--border-soft); background: var(--surface-glass); color: var(--color-text); }
+:root[data-theme="light"] .filter-button:hover,
+:root[data-theme="light"] .style-filter-button:hover { border-color: var(--border-strong); background: var(--surface-hover); }
+:root[data-theme="light"] .filter-button.is-active,
+:root[data-theme="light"] .style-filter-button.is-active { border-color: #aa90d7; background: #e5d8fa; color: #28245b; }
+:root[data-theme="light"] .style-filter-button small { background: rgba(109, 93, 180, .12); }
+:root[data-theme="light"] .invitation-card,
+:root[data-theme="light"] .invitation-showcase-card,
+:root[data-theme="light"] .invitation-empty-state,
+:root[data-theme="light"] .invitation-storefront-note { border-color: var(--border-soft); background: var(--surface-glass); box-shadow: var(--shadow-card); }
+:root[data-theme="light"] .invitation-card-action,
+:root[data-theme="light"] .invitation-showcase-card .invitation-card-action { color: var(--text-link); }
+:root[data-theme="light"] .invitations-eyebrow,
+:root[data-theme="light"] .invitation-style-filter-label,
+:root[data-theme="light"] .invitation-collection-heading > span,
+:root[data-theme="light"] .invitation-collection-heading > small { color: var(--text-accent); }
+:root[data-theme="light"] .invitations-page .filter-count,
+:root[data-theme="light"] .invitation-empty-state p { color: var(--color-text-secondary); }
+:root[data-theme="light"] .invitation-collection-heading { border-color: var(--border-soft); }
+:root[data-theme="light"] .preview-canvas { border-color: var(--border-soft); background: var(--surface-glass); box-shadow: var(--shadow-card); }
+
+:root[data-theme="light"] .surprise-showcase-hero,
+:root[data-theme="light"] .home-surprise,
+:root[data-theme="light"] .projects-surprise-feature {
+  border-color: var(--border-soft);
+  background: radial-gradient(circle at 84% 19%, rgba(238, 145, 211, .48), transparent 39%), radial-gradient(circle at 12% 84%, rgba(139, 195, 255, .42), transparent 43%), linear-gradient(120deg, rgba(249, 252, 255, .88), rgba(230, 223, 255, .87) 60%, rgba(255, 224, 242, .85));
+  color: var(--color-text);
+  box-shadow: var(--shadow-card);
+}
+:root[data-theme="light"] .surprise-showcase-hero::after,
+:root[data-theme="light"] .home-surprise::before { opacity: .2; background-image: linear-gradient(#8788c1 1px, transparent 1px), linear-gradient(90deg, #8788c1 1px, transparent 1px); }
+:root[data-theme="light"] .surprise-showcase-copy h1 em,
+:root[data-theme="light"] .home-surprise h2 em { color: #a83c8b; }
+:root[data-theme="light"] .surprise-site-label { color: var(--text-accent); }
+:root[data-theme="light"] .surprise-showcase-copy > p,
+:root[data-theme="light"] .surprise-showcase-copy > small,
+:root[data-theme="light"] .home-surprise-copy p,
+:root[data-theme="light"] .home-surprise-copy > small,
+:root[data-theme="light"] .projects-surprise-feature p { color: var(--color-text-secondary); }
+:root[data-theme="light"] .surprise-showcase-hero .section-label,
+:root[data-theme="light"] .home-surprise .section-label { color: var(--text-accent); }
+:root[data-theme="light"] .surprise-text-link { border-color: var(--border-soft); color: var(--text-link); }
+:root[data-theme="light"] .projects-surprise-art { border-color: #bb78b7; color: #a83c8b; box-shadow: 0 0 0 23px rgba(192, 122, 221, .12); }
+:root[data-theme="light"] .home-surprise .surprise-phone-screen > p { color: var(--theme-ink); }
+
+:root[data-theme="light"] .surprise-flow li { border-color: var(--border-soft); color: var(--color-text-secondary); }
+:root[data-theme="light"] .surprise-flow li span { color: var(--text-accent); }
+:root[data-theme="light"] .surprise-config { border-color: var(--border-soft); background: linear-gradient(135deg, rgba(255,255,255,.82), rgba(235,228,255,.8) 64%, rgba(255,227,246,.78)); box-shadow: var(--shadow-card); }
+:root[data-theme="light"] .surprise-config-heading p,
+:root[data-theme="light"] .surprise-config-step p,
+:root[data-theme="light"] .surprise-config-preview > p,
+:root[data-theme="light"] .surprise-preview-summary,
+:root[data-theme="light"] .surprise-config-preview > small,
+:root[data-theme="light"] .surprise-share-concept p,
+:root[data-theme="light"] .surprise-share-concept small,
+:root[data-theme="light"] .surprise-demo-intro p,
+:root[data-theme="light"] .surprise-demo-toolbar > span { color: var(--color-text-secondary); }
+:root[data-theme="light"] .surprise-config-step { border-color: var(--border-soft); }
+:root[data-theme="light"] .surprise-config-step-heading > span { color: var(--text-accent); }
+:root[data-theme="light"] .surprise-occasion-options button,
+:root[data-theme="light"] .surprise-module-options button,
+:root[data-theme="light"] .surprise-demo-theme-switch button,
+:root[data-theme="light"] .surprise-theme-options button { border-color: var(--border-soft); background: var(--surface-glass); color: var(--color-text); }
+:root[data-theme="light"] .surprise-occasion-options button:hover,
+:root[data-theme="light"] .surprise-module-options button:hover,
+:root[data-theme="light"] .surprise-demo-theme-switch button:hover { background: var(--surface-hover); }
+:root[data-theme="light"] .surprise-occasion-options button.is-selected,
+:root[data-theme="light"] .surprise-module-options button.is-selected,
+:root[data-theme="light"] .surprise-demo-theme-switch button.is-selected { border-color: #ab79c4; background: #e5d0ef; color: #422953; }
+:root[data-theme="light"] .surprise-theme-options button.is-selected { border-color: #ac69bc; }
+:root[data-theme="light"] .surprise-config-preview { border-color: var(--border-soft); background: rgba(255,255,255,.68); }
+:root[data-theme="light"] .surprise-share-concept { border-color: var(--border-soft); }
+:root[data-theme="light"] .surprise-share-concept code { border-color: var(--border-soft); background: var(--surface-glass); color: var(--color-text); }
+
+@media (max-width: 600px) {
+  .surprise-showcase-copy h1 { font-size: clamp(1.85rem, 8.9vw, 2.75rem); overflow-wrap: anywhere; }
+  .home-surprise h2 { font-size: clamp(1.85rem, 8.9vw, 2.75rem); overflow-wrap: anywhere; }
+}

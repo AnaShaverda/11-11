@@ -3,6 +3,19 @@
 .invitations-page .invitations-heading h1 { max-width: 860px; margin-bottom: 17px; font-size: clamp(3.5rem, 7vw, 7rem); line-height: .95; letter-spacing: -.065em; }
 .invitations-page .invitations-heading p { font-size: clamp(1.06rem, 1.7vw, 1.35rem); line-height: 1.5; }
 .invitations-page .filter-count { color: #c7bbeb; font-size: .76rem !important; font-weight: 800; letter-spacing: .16em; text-transform: uppercase; }
+.invitation-style-filter-label { color: #f3c0e6; font-size: .7rem; font-weight: 900; letter-spacing: .13em; text-transform: uppercase; }
+.invitation-style-filter { display: grid; gap: 11px; margin-top: 26px; }
+.invitation-style-options { display: flex; flex-wrap: wrap; gap: 8px; }
+.style-filter-button { display: inline-flex; align-items: center; gap: 9px; min-height: 38px; padding: 7px 12px; border: 1px solid #d8c5ff78; border-radius: 999px; background: #2c2b79a8; color: #f7efff; cursor: pointer; font: inherit; font-size: .82rem; line-height: 1.2; transition: background var(--transition-fast), border-color var(--transition-fast); }
+.style-filter-button:hover { border-color: #f3c0e6; background: #5443a8; }
+.style-filter-button.is-active { border-color: #f7e8ff; background: #f7e8ff; color: #29205a; font-weight: 800; }
+.style-filter-button.is-empty:not(.is-active) { opacity: .62; }
+.style-filter-button small { display: grid; min-width: 22px; height: 22px; place-items: center; padding: 0 4px; border-radius: 50%; background: #ffffff22; font-size: .68rem; font-weight: 900; }
+.style-filter-button.is-active small { background: #30226520; }
+.invitation-style-filter + .filter-count { margin-top: 20px !important; }
+.invitation-empty-state { margin: 45px 0 25px; padding: clamp(26px, 4vw, 48px); border: 1px solid #e4d5ff75; border-radius: 19px; background: #1b1d60af; }
+.invitation-empty-state h2 { margin: 0 0 9px; font-size: clamp(1.5rem, 3vw, 2.1rem); }
+.invitation-empty-state p { margin: 0 0 20px; color: #d1c7ec; }
 .invitation-collection { margin-top: clamp(45px, 5vw, 70px); }
 .invitation-collection-heading { display: grid; grid-template-columns: auto minmax(0, 1fr) auto; align-items: end; gap: 24px; margin-bottom: 28px; padding-bottom: 25px; border-bottom: 1px solid #dcd2ff65; }
 .invitation-collection-heading > span, .invitation-collection-heading > small { color: #f3c0e6; font-size: .66rem; font-weight: 900; letter-spacing: .22em; white-space: nowrap; }
@@ -229,6 +242,10 @@
   .invitation-collection-heading { grid-template-columns: minmax(0, 1fr) auto; }
   .invitation-collection-heading > span { grid-column: 1 / -1; }
   .invitation-preview-copy strong { font-size: clamp(2.2rem, 4.3vw, 3.4rem); }
+}
+@media (max-width: 650px) {
+  .invitation-style-options { flex-wrap: nowrap; overflow-x: auto; padding-bottom: 8px; scrollbar-width: thin; }
+  .style-filter-button { flex: none; }
 }
 
 @media (max-width: 650px) {

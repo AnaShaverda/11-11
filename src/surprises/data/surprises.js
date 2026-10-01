@@ -1,12 +1,12 @@
 import { eventModules } from "../../modules/data/eventModules.js";
 
 export const surpriseOccasions = [
-  { id: "birthday", label: "Birthday", symbol: "✳", headline: "Another year of you.", note: "For the person whose day deserves more than a text.", themeIds: ["birthday-retro-disco", "birthday-coquette", "birthday-y2k-digital"] },
-  { id: "friendship", label: "Friendship", symbol: "♡", headline: "For my favorite person.", note: "All your inside jokes and shared stories in one place.", themeIds: ["birthday-coquette", "birthday-pastel-dream", "birthday-retro-disco"] },
-  { id: "romantic", label: "Romantic", symbol: "♥", headline: "A little world for us.", note: "Something tender to open whenever you miss each other.", themeIds: ["wedding-romantic-garden", "wedding-celestial", "birthday-coquette"] },
-  { id: "anniversary", label: "Anniversary", symbol: "✧", headline: "Another chapter together.", note: "A way to revisit everything you have become together.", themeIds: ["wedding-vintage-romance", "wedding-modern-editorial", "wedding-romantic-garden"] },
-  { id: "graduation", label: "Graduation", symbol: "★", headline: "Look how far you came.", note: "A celebration of the work, courage, and people behind it.", themeIds: ["birthday-y2k-digital", "birthday-minimal-editorial", "birthday-pastel-dream"] },
-  { id: "just-because", label: "Just Because", symbol: "✿", headline: "You deserve this today.", note: "No occasion needed to make someone feel seen.", themeIds: ["birthday-garden-party", "birthday-pastel-dream", "birthday-coquette"] },
+  { id: "birthday", label: "Birthday", icon: "asterisk", headline: "Another year of you.", note: "For the person whose day deserves more than a text.", themeIds: ["birthday-retro-disco", "birthday-coquette", "birthday-y2k-digital"] },
+  { id: "friendship", label: "Friendship", icon: "heart", headline: "For my favorite person.", note: "All your inside jokes and shared stories in one place.", themeIds: ["birthday-coquette", "birthday-pastel-dream", "birthday-retro-disco"] },
+  { id: "romantic", label: "Romantic", icon: "heart-filled", headline: "A little world for us.", note: "Something tender to open whenever you miss each other.", themeIds: ["wedding-romantic-garden", "wedding-celestial", "birthday-coquette"] },
+  { id: "anniversary", label: "Anniversary", icon: "sparkle", headline: "Another chapter together.", note: "A way to revisit everything you have become together.", themeIds: ["wedding-vintage-romance", "wedding-modern-editorial", "wedding-romantic-garden"] },
+  { id: "graduation", label: "Graduation", icon: "star", headline: "Look how far you came.", note: "A celebration of the work, courage, and people behind it.", themeIds: ["birthday-y2k-digital", "birthday-minimal-editorial", "birthday-pastel-dream"] },
+  { id: "just-because", label: "Just Because", icon: "flower", headline: "You deserve this today.", note: "No occasion needed to make someone feel seen.", themeIds: ["birthday-garden-party", "birthday-pastel-dream", "birthday-coquette"] },
 ];
 
 export const surpriseOptionalModuleIds = ["cake", "love-notes", "memories", "gallery", "timeline", "quiz", "wishes", "gift", "letter", "music"];

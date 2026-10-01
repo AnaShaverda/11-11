@@ -13,8 +13,8 @@ Use `npm run build` to create a production bundle.
 
 ## Public routes
 
-- `/` — 11:11 homepage
-- `/projects` — Birthday, Wedding, Corporate, and Other Celebrations
+- `/` — 11:11 homepage with Birthday, Wedding, Corporate, and Other Celebrations event types
+- `/projects` — redirects to the event types section on Home for older links
 - `/projects/birthday` and `/projects/wedding` — category showcases with invitation preview selections
 - `/projects/corporate` and `/projects/other-celebrations` — category previews; Other contains Gender Reveal, Bachelorette Party, and Christening / ნათლობა
 - `/themes/:slug` — redirects to the public invitation catalog until full event themes are unlocked in a future flow

@@ -1,6 +1,7 @@
 import { birthdayThemes, weddingThemes } from "../../themes/data/themes.js";
 import { showcaseDesigns } from "./showcaseDesigns.js";
 import { birthdayThemeAssets } from "./birthdayAssets.js";
+import { invitationStyleTags } from "./invitationStyles.js";
 
 // Public storefront metadata stays separate from the full invitation registry and demo event content.
 const storefront = {
@@ -36,6 +37,7 @@ export const invitationTemplates = [...birthdayThemes, ...weddingThemes].map((th
     category: theme.category === "birthday" ? "Birthday" : "Wedding",
     eventTypes: [theme.category === "birthday" ? "Birthday" : "Wedding"],
     style: preview.style,
+    styleTags: invitationStyleTags[preview.slug],
     shortDescription: theme.description,
     themeId: theme.id,
     visual: theme.visual,

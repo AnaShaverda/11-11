@@ -1,4 +1,4 @@
-import { eventModules } from "../data/eventModules.js";
+import { useLanguage } from "../../localization/LanguageContext.jsx";
 
 const examples = {
   "friendship-diary": { prompt: "How did we meet?", response: "One rainy evening, one long conversation, and a friendship that never stopped growing." },
@@ -11,14 +11,14 @@ const examples = {
 };
 
 export default function ThemeModulePreview({ moduleId, event }) {
-  const module = eventModules[moduleId];
+  const { t } = useLanguage();
   const example = examples[moduleId] ?? examples["guest-messages"];
   return (
     <div className="theme-module-preview">
-      <div className="theme-module-top"><span>OPTIONAL MODULE</span><span aria-hidden="true">✦</span></div>
-      <h3>{module.title}</h3>
-      <p>{module.description}</p>
-      <div className="theme-module-question"><small>{example.prompt}</small><strong>{example.response}</strong><span>— a guest at {event.hostName}’s event</span></div>
+      <div className="theme-module-top"><span>{t("modulePreview.label")}</span><span aria-hidden="true">✦</span></div>
+      <h3>{t(`modules.${moduleId}.title`)}</h3>
+      <p>{t(`modules.${moduleId}.description`)}</p>
+      <div className="theme-module-question"><small>{example.prompt}</small><strong>{example.response}</strong><span>{t("modulePreview.guest", { name: event.hostName })}</span></div>
     </div>
   );
 }

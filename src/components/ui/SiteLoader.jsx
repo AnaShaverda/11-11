@@ -1,4 +1,6 @@
 import { useEffect, useState } from "react";
+import { useLanguage } from "../../localization/LanguageContext.jsx";
+import Icon from "./Icon.jsx";
 
 const storageKey = "eleven-eleven-intro-shown";
 
@@ -14,6 +16,7 @@ function shouldShowLoader() {
 }
 
 export default function SiteLoader() {
+  const { t } = useLanguage();
   const [visible, setVisible] = useState(shouldShowLoader);
 
   useEffect(() => {
@@ -34,22 +37,22 @@ export default function SiteLoader() {
       className="site-loader-backdrop"
       role="status"
       aria-live="polite"
-      aria-label="Feelings are loading. Please wait."
+      aria-label={t("loader.status")}
     >
       <div className="site-loader-window" aria-hidden="true">
         <div className="site-loader-titlebar">
           <span className="site-loader-heart">♥</span>
           <span>11:11</span>
-          <span className="site-loader-close">×</span>
+          <span className="site-loader-close"><Icon name="close" size={16} /></span>
         </div>
         <div className="site-loader-body">
-          <p className="site-loader-message">Feelings are loading....</p>
+          <p className="site-loader-message">{t("loader.message")}</p>
           <div className="site-loader-progress">
             {Array.from({ length: 12 }, (_, index) => (
               <span key={index} />
             ))}
           </div>
-          <p className="site-loader-wait">Please Wait...</p>
+          <p className="site-loader-wait">{t("loader.wait")}</p>
         </div>
       </div>
     </div>

@@ -2,6 +2,8 @@ import React from "react";
 import { createRoot } from "react-dom/client";
 import { BrowserRouter } from "react-router-dom";
 import App from "./app/App.jsx";
+import { LanguageProvider } from "./localization/LanguageContext.jsx";
+import { AppearanceProvider } from "./appearance/AppearanceContext.jsx";
 import "./styles/global.css";
 import "./styles/invitations.css";
 import "./styles/experiences.css";
@@ -15,11 +17,12 @@ import "./styles/painted-summer.css";
 import "./styles/birthday-art-direction.css";
 import "./styles/category-previews.css";
 import "./styles/surprises.css";
+import "./styles/appearance.css";
 
 createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <BrowserRouter>
-      <App />
+      <LanguageProvider><AppearanceProvider><App /></AppearanceProvider></LanguageProvider>
     </BrowserRouter>
   </React.StrictMode>,
 );

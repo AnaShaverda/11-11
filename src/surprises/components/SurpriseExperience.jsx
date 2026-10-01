@@ -1,7 +1,9 @@
+import Icon from "../../components/ui/Icon.jsx";
 import InteractiveCake from "./InteractiveCake.jsx";
 import GiftReveal from "./GiftReveal.jsx";
 import LetterReveal from "./LetterReveal.jsx";
 import { MainMessage, LoveNotes, Memories, SurpriseGallery, StoryTimeline, MiniQuiz, Wishes, MusicConcept } from "./SurpriseBlocks.jsx";
+import { useLanguage } from "../../localization/LanguageContext.jsx";
 
 const moduleRenderers = {
   "main-message": ({ surprise }) => <MainMessage surprise={surprise} />,
@@ -18,5 +20,6 @@ const moduleRenderers = {
 };
 
 export default function SurpriseExperience({ surprise, theme, enabledModules = surprise.enabledModules }) {
-  return <article className={`theme-canvas theme-${theme.visual} surprise-experience`}><section className="surprise-cover"><div className="surprise-cover-orbit" aria-hidden="true">{theme.decor}</div><span>FROM {surprise.creatorName.toUpperCase()} · TO {surprise.recipientName.toUpperCase()}</span><h1>{surprise.title}</h1><p>{surprise.mainMessage}</p><a className="surprise-solid-button" href="#surprise-message">Begin the surprise <span aria-hidden="true">↘</span></a><div className="surprise-cover-bottom"><span>11:11 ✦</span><span>A LITTLE WORLD MADE FOR YOU</span></div></section><div className="surprise-content">{enabledModules.map((id) => { const render = moduleRenderers[id]; return render ? <div key={id}>{render({ surprise })}</div> : null; })}</div></article>;
+  const { t } = useLanguage();
+  return <article className={`theme-canvas theme-${theme.visual} surprise-experience`}><section className="surprise-cover"><div className="surprise-cover-orbit" aria-hidden="true">{theme.decor}</div><span>{t("surprise.cover.fromTo", { from: surprise.creatorName, to: surprise.recipientName })}</span><h1>{surprise.title}</h1><p>{surprise.mainMessage}</p><a className="surprise-solid-button" href="#surprise-message">{t("surprise.cover.begin")} <Icon name="arrow-down-right" size={18} /></a><div className="surprise-cover-bottom"><span>11:11 ✦</span><span>{t("surprise.cover.bottom")}</span></div></section><div className="surprise-content">{enabledModules.map((id) => { const render = moduleRenderers[id]; return render ? <div key={id}>{render({ surprise })}</div> : null; })}</div></article>;
 }

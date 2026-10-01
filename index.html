@@ -1,15 +1,22 @@
 <!doctype html>
-<html lang="en">
+<html lang="ka" data-theme="dark">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="theme-color" content="#100f49" />
+    <script>
+      try {
+        const savedTheme = localStorage.getItem("1111-theme");
+        document.documentElement.dataset.theme = savedTheme === "light" ? "light" : "dark";
+        if (savedTheme === "light") document.querySelector('meta[name="theme-color"]').content = "#edf1ff";
+      } catch { document.documentElement.dataset.theme = "dark"; }
+    </script>
     <meta
       name="description"
-      content="11:11 — make room for the moments that count."
+      content="11:11 — სივრცე მომენტებისთვის, რომლებიც მნიშვნელოვანია."
     />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <title>11:11 — Make it count</title>
+    <title>11:11 — აქციე მომენტი განსაკუთრებულად</title>
   </head>
   <body>
     <div id="root"></div>
