@@ -30,6 +30,7 @@ export default function InvitationPreviewPage() {
         <div className="design-hero-art"><InvitationArtwork template={template} large /></div>
         <div className="design-hero-copy"><span className="preview-category">{t(`common.${template.category.toLowerCase()}`)} {t("common.invitation")} · {t(`themes.${template.id}.style`)}</span><h1>{t(`themes.${template.id}.name`)}</h1><p>{t(`themes.${template.id}.description`)}</p><div className="design-hero-rule" /><div className="design-hero-sample"><span>{t("invitations.sample")}</span><strong>{sample.title}</strong><small>{sample.date} · {sample.location}</small></div><p className="design-hero-explainer">{t("invitations.explainer")}</p><div className="design-hero-palette" aria-label={t("invitations.colors")}>{design.palette.map((color) => <span key={color} style={{ backgroundColor: color }} />)}</div></div>
       </div>
+      <div className="design-page-end"><div><span>{t("product.demo.label")}</span><h2>{t("product.demo.title")}</h2><p>{t("product.demo.description")}</p></div><Link className="primary-link" to={`/experiences/${template.themeId}/demo`}>{t("product.demo.action")} <Icon name="arrow-up-right" size={18} /></Link></div>
       <InvitationMoodBoards template={template} sample={sample} />
       <div className="design-page-end"><div><span>{t("invitations.end.label")}</span><h2>{t("invitations.end.title")}</h2></div><Link className="primary-link" to="/invitations">{t("invitations.end.action")} <Icon name="arrow-up-right" size={18} /></Link></div>
     </section>

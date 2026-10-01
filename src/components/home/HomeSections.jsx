@@ -28,7 +28,7 @@ export default function HomeSections() {
       <HomeSurpriseSection />
       <section className="home-invitations">
         <div className="home-section-top"><div><span className="home-section-index">{t("home.invitations.index")}</span><h2>{t("home.invitations.title")}</h2><p>{t("home.invitations.description")}</p></div><Link className="section-text-link" to="/invitations">{t("common.exploreInvitations")} <Icon name="arrow-up-right" size={18} /></Link></div>
-        <InvitationGallery templates={[invitationTemplates[0], invitationTemplates[10], invitationTemplates[2]]} />
+        <InvitationGallery templates={["birthday-retro-pop", "birthday-painted-summer", "birthday-pink-glam"].map((slug) => invitationTemplates.find((template) => template.slug === slug))} />
       </section>
       <section className="home-interactive">
         <div className="home-section-intro"><span className="home-section-index">{t("home.interactive.index")}</span><h2>{t("home.interactive.title")}</h2><p>{t("home.interactive.description")}</p></div>

@@ -5,6 +5,8 @@ import { invitationStyleTags } from "./invitationStyles.js";
 
 // Public storefront metadata stays separate from the full invitation registry and demo event content.
 const storefront = {
+  "birthday-classic-celebration": { slug: "birthday-classic-celebration", title: "Classic Celebration", style: "Joyful & timeless" },
+  "birthday-floral-affair": { slug: "birthday-floral-affair", title: "Floral Affair", style: "Refined & blooming" },
   "birthday-retro-disco": { slug: "birthday-retro-pop", title: "Retro Pop", style: "Bold & playful", art: "retro-pop", fullTemplateSlug: "birthday-retro-pop" },
   "birthday-y2k-digital": { slug: "birthday-y2k-party", title: "Y2K Party", style: "Digital nostalgia" },
   "birthday-pink-glam": { slug: "birthday-pink-glam", title: "Pink Glam", style: "A party in full color" },
@@ -16,6 +18,7 @@ const storefront = {
   "birthday-minimal-editorial": { slug: "birthday-minimal-editorial", title: "Minimal Modern", style: "Quiet confidence" },
   "birthday-tropical-summer": { slug: "birthday-tropical-summer", title: "Tropical Summer", style: "Sunlit & lively" },
   "birthday-painted-summer": { slug: "birthday-painted-summer", title: "Painted Summer", style: "Hand-painted coast" },
+  "birthday-beer-party": { slug: "birthday-beer-party", title: "Beer Party", style: "Warm bar nights" },
   "wedding-timeless-white": { slug: "wedding-timeless-white", title: "Timeless White", style: "Classic elegance" },
   "wedding-modern-editorial": { slug: "wedding-editorial", title: "Modern Editorial", style: "Graphic & refined", art: "editorial", fullTemplateSlug: "wedding-editorial" },
   "wedding-romantic-garden": { slug: "wedding-romantic-garden", title: "Romantic Garden", style: "A day in bloom" },

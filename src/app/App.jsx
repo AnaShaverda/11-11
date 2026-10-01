@@ -11,6 +11,7 @@ import InvitationPreviewPage from "../invitations/pages/InvitationPreviewPage.js
 import FriendshipDiaryModulePage from "../modules/pages/FriendshipDiaryModulePage.jsx";
 import SurpriseShowcasePage from "../surprises/pages/SurpriseShowcasePage.jsx";
 import SurpriseDemoPage from "../surprises/pages/SurpriseDemoPage.jsx";
+import ThemePreviewPage from "../themes/pages/ThemePreviewPage.jsx";
 
 export default function App() {
   return (
@@ -26,6 +27,7 @@ export default function App() {
         <Route path="projects/:slug" element={<ProjectDetailPage />} />
         <Route path="invitations/:slug" element={<InvitationPreviewPage />} />
         <Route path="themes/:slug" element={<Navigate to="/invitations" replace />} />
+        <Route path="experiences/:slug/demo" element={<ThemePreviewPage />} />
         <Route path="modules/friendship-diary" element={<FriendshipDiaryModulePage />} />
         <Route path="surprises" element={<SurpriseShowcasePage />} />
         <Route path="surprises/demo" element={<SurpriseDemoPage />} />

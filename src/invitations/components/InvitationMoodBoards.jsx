@@ -9,7 +9,7 @@ function BoardHeading({ number, title, description, id }) {
 function TypographyBoard({ template, sample }) {
   const { t } = useLanguage();
   const { design } = template;
-  const showGeneratedDecor = template.slug !== "birthday-coquette";
+  const showGeneratedDecor = !["birthday-coquette", "birthday-floral-affair", "birthday-beer-party"].includes(template.slug);
   return (
     <section className="design-board-section" aria-labelledby="design-type-heading">
       <BoardHeading number="01" id="design-type-heading" title={t("moodboard.type.title")} description={t("moodboard.type.description")} />
@@ -28,7 +28,7 @@ function TypographyBoard({ template, sample }) {
 function ElementsBoard({ template, sample }) {
   const { t } = useLanguage();
   const { design } = template;
-  const showGeneratedDecor = template.slug !== "birthday-coquette";
+  const showGeneratedDecor = !["birthday-coquette", "birthday-floral-affair", "birthday-beer-party"].includes(template.slug);
   return (
     <section className="design-board-section" aria-labelledby="design-elements-heading">
       <BoardHeading number="02" id="design-elements-heading" title={t("moodboard.details.title")} description={t("moodboard.details.description")} />
@@ -44,7 +44,7 @@ function ElementsBoard({ template, sample }) {
 function SupportingCards({ template, sample }) {
   const { t } = useLanguage();
   const { design } = template;
-  const showGeneratedDecor = template.slug !== "birthday-coquette";
+  const showGeneratedDecor = !["birthday-coquette", "birthday-floral-affair", "birthday-beer-party"].includes(template.slug);
   const cards = [
     { label: t("moodboard.saveDate"), main: sample.date, sub: sample.title },
     { label: t("moodboard.details"), main: sample.location, sub: sample.line },

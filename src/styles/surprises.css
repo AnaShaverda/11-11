@@ -63,3 +63,13 @@
 @media (max-width: 390px) {
   .surprise-showcase-copy h1 { font-size: 3rem; }.surprise-showcase-hero { padding: 27px 17px; }.surprise-config { padding: 27px 14px; }.surprise-theme-swatch { height: 72px; }.surprise-theme-options strong { font-size: .67rem; }.surprise-cover h1 { font-size: 4.1rem; }.surprise-section { padding-inline: 18px; }.surprise-note-stack { grid-template-columns: 1fr; }.surprise-gallery-photos { grid-template-rows: repeat(2, 130px); }.surprise-timeline li { grid-template-columns: 55px minmax(0, 1fr); gap: 9px; }
 }
+
+.surprise-personal-fields { display: grid; gap: 16px; }
+.surprise-personal-fields label { display: grid; gap: 8px; color: var(--color-text); font-size: .88rem; font-weight: 700; }
+.surprise-personal-fields input, .surprise-personal-fields textarea { width: 100%; min-width: 0; padding: 12px 14px; border: 1px solid var(--border-soft); border-radius: 13px; background: var(--surface-glass); color: var(--color-text); font: inherit; }
+.surprise-personal-fields textarea { resize: vertical; }
+.surprise-personal-fields + small { display: block; margin-top: 14px; color: var(--color-text-secondary); line-height: 1.5; }
+.surprise-personal-fields input:focus-visible, .surprise-personal-fields textarea:focus-visible { outline: 2px solid var(--color-accent-pink); outline-offset: 3px; }
+.surprise-phone-screen h3, .surprise-phone-screen > p { overflow-wrap: anywhere; }
+
+.surprise-cover h1, .surprise-cover > p, .surprise-letter-card h2, .surprise-letter-card p { overflow-wrap: anywhere; }

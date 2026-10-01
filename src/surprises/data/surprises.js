@@ -45,7 +45,7 @@ export const birthdaySurprise = {
     ],
     quiz: { question: "Where did our best unplanned day begin?", options: ["At the coast", "At the airport", "At a concert"], answerIndex: 0 },
     wishes: ["More joy in the everyday moments.", "More adventures that light you up.", "More people who love you as much as you deserve.", "More dreams coming true this year."],
-    giftMessage: "You are a gift to everyone lucky enough to know you. Our next adventure is on me. ♥",
+    giftMessage: "You are a gift to everyone lucky enough to know you. Our next adventure is on me.",
     finalLetter: "Dear Nini,\n\nThere are people who make a place feel like home, even from far away. You are one of those people for me. Thank you for every long call, every brave idea, and every ordinary afternoon you made unforgettable.\n\nI hope this year brings you the freedom to chase what you love and the comfort of knowing you never have to do it alone. Until I can hug you in person, let this little world remind you how loved you are.\n\nHappy birthday.",
   },
 };

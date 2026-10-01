@@ -19,6 +19,8 @@ export const invitationStyleOptions = [
 
 // Tags describe the visible public preview, not features of a future created event.
 export const invitationStyleTags = {
+  "birthday-classic-celebration": ["light-neutral", "line-art"],
+  "birthday-floral-affair": ["floral", "light-neutral"],
   "birthday-retro-pop": ["cartoon", "retro", "line-art"],
   "birthday-y2k-party": ["metallic", "line-art", "retro"],
   "birthday-pink-glam": ["floral", "metallic"],
@@ -30,6 +32,7 @@ export const invitationStyleTags = {
   "birthday-minimal-editorial": ["light-neutral", "line-art"],
   "birthday-tropical-summer": ["green", "coastal"],
   "birthday-painted-summer": ["pastel", "coastal", "light-neutral"],
+  "birthday-beer-party": ["earthy", "brown", "dark"],
   "wedding-timeless-white": ["light-neutral", "line-art"],
   "wedding-editorial": ["line-art", "light-neutral"],
   "wedding-romantic-garden": ["floral", "green", "pastel"],
