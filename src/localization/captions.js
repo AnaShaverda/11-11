@@ -1,3 +1,5 @@
+import { interactionCopy } from "../modules/data/interactionCopy.js";
+
 export const defaultLanguage = "ka";
 export const languages = ["ka", "en"];
 export const languageNames = { ka: "ქართული", en: "English" };
@@ -325,3 +327,4 @@ const productCopy = {
   },
 };
 for (const language of languages) Object.assign(captions[language], productCopy[language]);
+for (const language of languages) Object.assign(captions[language], interactionCopy[language]);

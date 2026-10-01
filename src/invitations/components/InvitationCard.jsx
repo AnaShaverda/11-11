@@ -22,9 +22,9 @@ function RetroPoster({ sample, invitedLabel }) {
   );
 }
 
-export function InvitationArtwork({ template, large = false }) {
+export function InvitationArtwork({ template, large = false, sample: suppliedSample }) {
   const { t } = useLanguage();
-  const sample = invitationSamples[template.slug];
+  const sample = suppliedSample ?? invitationSamples[template.slug];
   const { design } = template;
   const photoCard = template.visualAssets?.photoCard;
   const coverImage = template.visualAssets?.coverImage;

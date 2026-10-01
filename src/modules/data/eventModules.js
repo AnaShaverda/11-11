@@ -1,4 +1,5 @@
 export const eventModules = {
+  "photo-upload": { title: "Photo Upload", description: "Collect photos from your guests." },
   invitation: { title: "Invitation", description: "A beautiful first hello." },
   countdown: { title: "Countdown", description: "Let the excitement build." },
   gallery: { title: "Photo Gallery", description: "The day through every lens." },
