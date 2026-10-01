@@ -1,0 +1,26 @@
+.theme-blue-pour { --theme-bg:#f6edcd; --theme-ink:#253b91; --theme-accent:#a7afd5; --theme-panel:#e8e6dc; --theme-stroke:#253b9130; --theme-display:Georgia,serif; --world-paper:#f6edcd; --world-photo:url('/images/wedding/blue-pour/playful-cobalt-pour.webp'); background:var(--theme-bg); color:var(--theme-ink); }
+.theme-heart-hideaway { --theme-bg:#faf5ec; --theme-ink:#24221f; --theme-accent:#d8c5bc; --theme-panel:#f1e9e1; --theme-stroke:#24221f30; --theme-display:Georgia,serif; --world-paper:#faf5ec; --world-photo:url('/images/wedding/heart-hideaway/heart-hidden-couple.webp'); background:var(--theme-bg); color:var(--theme-ink); }
+.theme-tipsy-together { --theme-bg:#faf7f0; --theme-ink:#24221f; --theme-accent:#c9c2b8; --theme-panel:#f0eae1; --theme-stroke:#24221f30; --theme-display:Georgia,serif; --world-paper:#faf7f0; --world-photo:url('/images/wedding/tipsy-together/oversized-wedding-toast.webp'); background:var(--theme-bg); color:var(--theme-ink); }
+.invitation-preview-art.full-image-cover:is(.preview-blue-pour,.preview-heart-hideaway,.preview-tipsy-together) { background:var(--cover-image) center / cover no-repeat; }
+.preview-blue-pour .wedding-ink-copy { color:#253b91; }
+.preview-blue-pour .wedding-ink-opening { top:18%; left:15%; width:62%; font:700 4cqw/1.2 Georgia,serif; }
+.preview-blue-pour .wedding-ink-copy > strong { top:29%; left:15%; width:62%; font:700 8cqw/1.05 Georgia,serif; text-transform:none; letter-spacing:-.04em; }
+.preview-blue-pour .wedding-ink-copy > em { top:44%; left:18%; width:56%; }
+.preview-blue-pour .wedding-ink-details { bottom:auto; top:55%; left:16%; width:60%; }
+:is(.preview-heart-hideaway,.preview-tipsy-together) .wedding-ink-copy { color:#24221f; }
+:is(.preview-heart-hideaway,.preview-tipsy-together) .wedding-ink-opening { top:11%; }
+:is(.preview-heart-hideaway,.preview-tipsy-together) .wedding-ink-copy > strong { top:23%; font:400 7cqw/1.1 'Chalkboard SE','Comic Sans MS',cursive; text-transform:none; letter-spacing:-.035em; }
+:is(.preview-heart-hideaway,.preview-tipsy-together) .wedding-ink-copy > em { top:37%; font-size:2.4cqw; }
+:is(.preview-heart-hideaway,.preview-tipsy-together) .wedding-ink-details { bottom:3%; }
+:is(.theme-blue-pour,.theme-heart-hideaway,.theme-tipsy-together) .theme-invitation-card.full-image-cover { width:100%; padding:0; border:0; box-shadow:none; }
+:is(.theme-blue-pour,.theme-heart-hideaway,.theme-tipsy-together) .theme-world-hero-photo,
+:is(.theme-blue-pour,.theme-heart-hideaway,.theme-tipsy-together) .theme-world-image > div { background-image:var(--world-photo); background-size:cover; }
+.design-type-blue-pour .design-type-board { background:#f6edcd; color:#253b91; }
+.design-type-heart-hideaway .design-type-board { background:#faf5ec; color:#24221f; }
+.design-type-tipsy-together .design-type-board { background:#faf7f0; color:#24221f; }
+:is(.design-type-blue-pour,.design-type-heart-hideaway,.design-type-tipsy-together) .design-type-words h3 { max-width:9em; font-family:Georgia,serif; }
+:is(.design-type-blue-pour,.design-type-heart-hideaway,.design-type-tipsy-together) .design-type-words p { max-width:16em; }
+.design-pattern-pour-wave .design-pattern-panel { background-color:#a7afd5; background-image:repeating-linear-gradient(135deg,transparent 0 40px,#f6edcd70 41px 43px,transparent 44px 70px); color:#253b91; }
+.design-pattern-heart-dots .design-pattern-panel { background-color:#faf5ec; background-image:radial-gradient(#24221f30 2px,transparent 3px); background-size:25px 25px; color:#24221f; }
+.design-pattern-tipsy-waves .design-pattern-panel { background-color:#faf7f0; background-image:repeating-linear-gradient(135deg,transparent 0 40px,#24221f20 41px 43px,transparent 44px 70px); color:#24221f; }
+.preview-heart-hideaway .wedding-ink-details { bottom:1%; font-size:1.6cqw; line-height:1.5; }

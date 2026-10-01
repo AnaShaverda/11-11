@@ -182,3 +182,9 @@
   .surprise-showcase-copy h1 { font-size: clamp(1.85rem, 8.9vw, 2.75rem); overflow-wrap: anywhere; }
   .home-surprise h2 { font-size: clamp(1.85rem, 8.9vw, 2.75rem); overflow-wrap: anywhere; }
 }
+
+
+:root[data-theme="light"] .ambient-sparkle { color: #8472b6; }
+:root[data-theme="light"] .background-shape { opacity: .22; }
+:root[data-theme="light"] .background-mountains { opacity: .12; }
+:root[data-theme="light"] .site-frame { border-color: var(--border-strong); }

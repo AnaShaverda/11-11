@@ -15,7 +15,7 @@ export default function ThemeModulePreview({ moduleId, event }) {
   const example = examples[moduleId] ?? examples["guest-messages"];
   return (
     <div className="theme-module-preview">
-      <div className="theme-module-top"><span>{t("modulePreview.label")}</span><span aria-hidden="true">✦</span></div>
+      <div className="theme-module-top"><span>{t("modulePreview.label")}</span></div>
       <h3>{t(`modules.${moduleId}.title`)}</h3>
       <p>{t(`modules.${moduleId}.description`)}</p>
       <div className="theme-module-question"><small>{example.prompt}</small><strong>{example.response}</strong><span>{t("modulePreview.guest", { name: event.hostName })}</span></div>

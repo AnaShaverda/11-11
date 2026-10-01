@@ -1,5 +1,19 @@
 // Demo content for the public preview only. Real event content will be supplied later.
 export const invitationSamples = {
+  "wedding-rose-letter": {"title": "Mariam & Luka", "date": "12 JUN 2027", "location": "TBILISI", "line": "Together, our favorite place to be.", "mark": "M&L"},
+  "wedding-first-dance": {"title": "Elene & Dato", "date": "22 MAY 2027", "location": "TBILISI", "line": "Our first dance. A lifetime together.", "mark": "E&D"},
+  "wedding-happily-away": {"title": "Nino & Giorgi", "date": "18 SEP 2027", "location": "TBILISI", "line": "Off to our next chapter, together.", "mark": "N&G"},
+  "wedding-our-people": {"title": "Mariam & Saba", "date": "12 AUG 2027", "location": "TBILISI", "line": "The best part is sharing it with you.", "mark": "M&S"},
+  "wedding-date-and-dinner": {"title": "Charlotte & Alex", "date": "16 JUL 2027", "location": "TBILISI", "line": "A date worth keeping. A table worth sharing.", "mark": "C&A"},
+  "wedding-little-vows": {"title": "Maria & Juan", "date": "26 APR 2027", "location": "TBILISI", "line": "Our next chapter starts with you.", "mark": "M&J"},
+  "wedding-celebration-table": {"title": "Sophia & Luca", "date": "12 SEP 2027", "location": "TBILISI", "line": "The best seat is the one beside you.", "mark": "S&L"},
+  "wedding-day-notes": {"title": "Nino & Giorgi", "date": "19 JUN 2027", "location": "TBILISI", "line": "Every little moment, together.", "mark": "N&G"},
+  "wedding-blue-clink": {"title": "Ana & Luka", "date": "16 JUL 2027", "location": "TBILISI", "line": "Here’s to all our tomorrows.", "mark": "A&L"},
+  "wedding-tipsy-together": {"title": "Mariam & Saba", "date": "12 AUG 2027", "location": "TBILISI", "line": "Good love. Great company. One happy day.", "mark": "M&S"},
+  "wedding-heart-hideaway": {"title": "Ana & Giorgi", "date": "19 JUN 2027", "location": "TBILISI", "line": "Two people. One beautiful beginning.", "mark": "A&G"},
+  "wedding-blue-pour": {"title": "Nino & Luka", "date": "12 JUN 2027", "location": "TBILISI", "line": "A little toast. A lifetime together.", "mark": "N&L"},
+  "wedding-garden-dance": { title: "Ana & Giorgi", date: "19 JUN 2027", location: "TBILISI", line: "Love, laughter, and a little dancing.", mark: "A&G" },
+  "wedding-ink-and-ivy": { title: "Nino & Luka", date: "12 JUN 2027", location: "TBILISI", line: "A little ink. A lifetime of love.", mark: "N&L" },
   "birthday-pink-post": {"title": "Mia’s Birthday", "name": "Mia", "age": 26, "date": "23 MAY", "time": "17:00", "location": "TBILISI", "line": "Come over. Let’s celebrate.", "mark": "26"},
   "birthday-disco-scrapbook": {"title": "Priscilla’s Birthday", "name": "Priscilla", "age": 33, "date": "02 SEP", "time": "19:00", "location": "TBILISI", "line": "Save the date. Bring your sparkle.", "mark": "33"},
   "birthday-velvet-post": {"title": "Marifer’s Birthday", "name": "Marifer", "age": 20, "date": "17 JAN", "time": "16:00", "location": "TBILISI", "line": "A toast to twenty.", "mark": "20"},
@@ -22,7 +36,7 @@ export const invitationSamples = {
     date: "18 JUL",
     location: "TBILISI",
     line: "Cake, candles, and you.",
-    mark: "✦",
+    mark: "",
   },
   "birthday-floral-affair": {
     title: "Maya’s Birthday Dinner",
@@ -61,7 +75,7 @@ export const invitationSamples = {
     date: "02 NOV",
     location: "BATUMI",
     line: "A night to sparkle.",
-    mark: "✦",
+    mark: "",
   },
   "birthday-coquette": {
     title: "Nini’s Birthday Brunch",
@@ -75,7 +89,7 @@ export const invitationSamples = {
     date: "14 JUN",
     location: "KAKHETI",
     line: "Come wander awhile.",
-    mark: "❀",
+    mark: "",
   },
   "birthday-pastel-dream": {
     title: "Tako’s Sweet 26",
@@ -91,7 +105,7 @@ export const invitationSamples = {
     date: "18 JUL",
     location: "BATUMI",
     line: "Follow the sun.",
-    mark: "☀",
+    mark: "",
   },
   "birthday-painted-summer": {
     title: "Maya’s Seaside Birthday",

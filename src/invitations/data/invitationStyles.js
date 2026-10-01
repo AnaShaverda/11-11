@@ -19,6 +19,20 @@ export const invitationStyleOptions = [
 
 // Tags describe the visible public preview, not features of a future created event.
 export const invitationStyleTags = {
+  "wedding-happily-away": ["line-art", "black-white", "light-neutral"],
+  "wedding-first-dance": ["line-art", "black-white", "light-neutral"],
+  "wedding-rose-letter": ["pastel", "light-neutral"],
+  "wedding-our-people": ["line-art", "black-white", "light-neutral"],
+  "wedding-date-and-dinner": ["line-art", "black-white", "light-neutral"],
+  "wedding-little-vows": ["line-art", "black-white", "light-neutral"],
+  "wedding-celebration-table": ["line-art", "black-white", "light-neutral"],
+  "wedding-day-notes": ["line-art", "black-white", "light-neutral"],
+  "wedding-blue-clink": ["line-art", "black-white", "light-neutral"],
+  "wedding-tipsy-together": ["line-art", "black-white", "light-neutral"],
+  "wedding-heart-hideaway": ["line-art", "black-white", "light-neutral"],
+  "wedding-blue-pour": ["line-art", "blue", "light-neutral"],
+  "wedding-garden-dance": ["cartoon", "pastel", "green", "light-neutral"],
+  "wedding-ink-and-ivy": ["line-art", "blue", "light-neutral"],
   "birthday-pink-post": ["cartoon", "pastel", "light-neutral"],
   "birthday-disco-scrapbook": ["cartoon", "pastel", "light-neutral"],
   "birthday-velvet-post": ["cartoon", "pastel", "light-neutral"],

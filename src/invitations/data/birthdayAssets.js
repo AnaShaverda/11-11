@@ -156,11 +156,11 @@ export const birthdayThemeAssets = {
     supportCards: [{ image: birthdayImages.khinkaliItem, right: "-8%", bottom: "-4%", width: "48%", height: "55%" }, null, { image: birthdayImages.beerItem, right: "-9%", bottom: "-5%", width: "40%", height: "77%" }, null],
   },
   "birthday-space-explorer": {
-    photoCard: { background: birthdayImages.spaceScene, variant: "space", paper: "#182f47", ink: "#fff1d7", artwork: [{ image: birthdayImages.spaceFrame, top: "0%", left: "0%", width: "100%", height: "100%", objectFit: "fill" }] },
+    photoCard: { background: birthdayImages.spaceScene, variant: "space", paper: "#182f47", ink: "#fff1d7", artwork: [{ image: birthdayImages.spaceFrame, top: "0%", left: "0%", width: "100%", height: "100%", objectFit: "contain" }] },
     invitation: [], typography: null, pattern: null, supportCards: [null, null, null, null],
   },
   "birthday-dino-adventure": {
-    photoCard: { background: birthdayImages.dinoScene, variant: "dino", paper: "#f6edd9", ink: "#354d33", artwork: [{ image: birthdayImages.dinoFrame, top: "0%", left: "0%", width: "100%", height: "100%", objectFit: "fill" }] },
+    photoCard: { background: birthdayImages.dinoScene, variant: "dino", paper: "#f6edd9", ink: "#354d33", artwork: [{ image: birthdayImages.dinoFrame, top: "0%", left: "0%", width: "100%", height: "100%", objectFit: "contain" }] },
     invitation: [], typography: null, pattern: null, supportCards: [null, null, null, null],
   },
   "birthday-race-day": {

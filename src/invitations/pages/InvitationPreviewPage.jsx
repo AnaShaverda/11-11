@@ -25,7 +25,7 @@ export default function InvitationPreviewPage() {
 
   return (
     <section className={`invitation-preview-page invitation-design-page design-type-${design.type} design-pattern-${design.pattern}${template.category === "Birthday" ? " birthday-design-page" : ""}`} style={paletteVars}>
-      <div className="preview-topline"><Link className="back-link" to={`/invitations?type=${template.category}`}><Icon name="arrow-left" size={18} /> {t(`invitations.${template.category.toLowerCase()}.title`)}</Link><span>11:11 / {t("invitations.showcase")}</span></div>
+      <div className="preview-topline"><Link className="back-link" to={`/projects/${template.category.toLowerCase()}`}><Icon name="arrow-left" size={18} /> {t(`invitations.${template.category.toLowerCase()}.title`)}</Link><span>11:11 / {t("invitations.showcase")}</span></div>
       <div className="design-hero">
         <div className="design-hero-art"><InvitationArtwork template={template} large /></div>
         <div className="design-hero-copy"><span className="preview-category">{t(`common.${template.category.toLowerCase()}`)} {t("common.invitation")} · {t(`themes.${template.id}.style`)}</span><h1>{t(`themes.${template.id}.name`)}</h1><p>{t(`themes.${template.id}.description`)}</p><div className="design-hero-rule" /><div className="design-hero-sample"><span>{t("invitations.sample")}</span><strong>{sample.title}</strong><small>{sample.date} · {sample.location}</small></div><p className="design-hero-explainer">{t("invitations.explainer")}</p><div className="design-hero-palette" aria-label={t("invitations.colors")}>{design.palette.map((color) => <span key={color} style={{ backgroundColor: color }} />)}</div></div>

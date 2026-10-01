@@ -15,10 +15,10 @@ function TypographyBoard({ template, sample }) {
       <BoardHeading number="01" id="design-type-heading" title={t("moodboard.type.title")} description={t("moodboard.type.description")} />
       <div className="design-type-board design-board-surface">
         <span className="design-board-kicker">11:11 / {t(`common.${template.category.toLowerCase()}`)}</span>
-        {showGeneratedDecor && <strong className="design-type-mark" aria-hidden="true">{sample.mark}</strong>}
+        {showGeneratedDecor && sample.mark && <strong className="design-type-mark" aria-hidden="true">{sample.mark}</strong>}
         <BirthdayIllustrations assets={template.visualAssets?.typography} slot="typography" />
         <div className="design-type-words"><span>{t("invitations.invited")}</span><h3>{design.specimen}</h3><p>{design.phrase}</p></div>
-        {showGeneratedDecor && <span className="design-type-glyph" aria-hidden="true">{design.motif}</span>}
+        {showGeneratedDecor && design.motif && <span className="design-type-glyph" aria-hidden="true">{design.motif}</span>}
         <div className="design-type-bottom"><span>{sample.date}</span><span>{sample.location}</span><span>{t("moodboard.shared")}</span></div>
       </div>
     </section>
@@ -34,8 +34,8 @@ function ElementsBoard({ template, sample }) {
       <BoardHeading number="02" id="design-elements-heading" title={t("moodboard.details.title")} description={t("moodboard.details.description")} />
       <div className="design-elements-board">
         <div className="design-palette-panel design-board-surface"><span className="design-board-kicker">{t("moodboard.palette")}</span><h3>{t(design.paletteTitleKey ?? "moodboard.palette.title")}</h3><div className="design-palette-swatches">{design.palette.map((color, index) => <div key={color} className="design-palette-swatch"><span style={{ backgroundColor: color }} /><small>{String(index + 1).padStart(2, "0")} · {color.toUpperCase()}</small></div>)}</div></div>
-        <div className="design-pattern-panel design-board-surface"><span className="design-board-kicker">{t("moodboard.pattern")}</span>{showGeneratedDecor && <strong aria-hidden="true">{design.motif}</strong>}<BirthdayIllustrations assets={template.visualAssets?.pattern} slot="pattern" /><p>{t(`themes.${template.id}.style`)}</p></div>
-        <div className="design-ticket-panel design-board-surface"><span>11:11 / {t("moodboard.occasion")}</span><strong>{sample.date}</strong><span>{sample.location} · {sample.title}</span>{showGeneratedDecor && <i aria-hidden="true">{design.motif}</i>}</div>
+        <div className="design-pattern-panel design-board-surface"><span className="design-board-kicker">{t("moodboard.pattern")}</span>{showGeneratedDecor && design.motif && <strong aria-hidden="true">{design.motif}</strong>}<BirthdayIllustrations assets={template.visualAssets?.pattern} slot="pattern" /><p>{t(`themes.${template.id}.style`)}</p></div>
+        <div className="design-ticket-panel design-board-surface"><span>11:11 / {t("moodboard.occasion")}</span><strong>{sample.date}</strong><span>{sample.location} · {sample.title}</span>{showGeneratedDecor && design.motif && <i aria-hidden="true">{design.motif}</i>}</div>
       </div>
     </section>
   );
@@ -54,7 +54,7 @@ function SupportingCards({ template, sample }) {
   return (
     <section className="design-board-section design-support-section" aria-labelledby="design-support-heading">
       <BoardHeading number="03" id="design-support-heading" title={t("moodboard.support.title")} description={t("moodboard.support.description")} />
-      <div className="design-support-grid">{cards.map((card, index) => <article className={`design-support-card design-support-${index + 1}`} key={card.label}><span>{card.label}</span><strong>{card.main}</strong><small>{card.sub}</small>{showGeneratedDecor && <i aria-hidden="true">{design.motif}</i>}<BirthdayIllustrations assets={template.visualAssets?.supportCards?.[index] ?? (index === 2 ? template.visualAssets?.support : null)} slot="support" /></article>)}</div>
+      <div className="design-support-grid">{cards.map((card, index) => <article className={`design-support-card design-support-${index + 1}`} key={card.label}><span>{card.label}</span><strong>{card.main}</strong><small>{card.sub}</small>{showGeneratedDecor && design.motif && <i aria-hidden="true">{design.motif}</i>}<BirthdayIllustrations assets={template.visualAssets?.supportCards?.[index] ?? (index === 2 ? template.visualAssets?.support : null)} slot="support" /></article>)}</div>
       <p className="design-sample-note">{t("moodboard.disclaimer")}</p>
     </section>
   );

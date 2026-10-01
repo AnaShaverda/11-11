@@ -50,3 +50,61 @@
 @media (max-width: 420px) {
   .project-card-detailed { min-height: 245px; }
 }
+
+/* Keep the welcome and category chooser together in the first viewport. */
+.home-page .home-hero { padding: clamp(12px, 2vh, 24px) 0 20px; }
+.home-page .hero-brand { width: min(340px, 100%); height: clamp(110px, 19vh, 155px); margin-bottom: 14px; border-radius: 28px; font-size: clamp(5rem, 7.5vw, 7rem); }
+.home-page .home-hero-message { margin: 0 0 16px; font-size: clamp(.9rem, 1.2vw, 1.05rem); }
+.home-page .intro-control { width: min(420px, 100%); min-height: 48px; padding: 8px 54px 8px 28px; font-size: 1.05rem; letter-spacing: .15em; }
+.home-page .intro-control-arrow { width: 34px; top: 6px; right: 6px; bottom: 6px; }
+.home-page .intro-control-arrow .ui-icon { width: 22px; height: 22px; }
+.home-page .home-projects { max-width: 780px; }
+.home-page .project-grid { gap: 12px 24px; }
+.home-page .project-card { min-height: 122px; padding: 8px 6px; }
+.home-page .project-card,
+:root[data-theme="light"] .home-page .project-card,
+:root[data-theme="light"] .home-page .project-card:hover { border: 0; background: transparent; box-shadow: none; backdrop-filter: none; }
+.home-page .project-card:hover { background: transparent; box-shadow: none; }
+.home-page .folder { width: 112px; height: 80px; }
+.home-page .folder-tab { height: 18px; }
+.home-page .folder-front { top: 17px; border-radius: 9px; }
+.home-page .folder-front svg { width: 34px; height: 34px; }
+.home-page .folder-spark { top: 10px; right: 8px; font-size: 1.05rem; }
+.home-page .project-title { font-size: .9rem; }
+@media (max-width: 900px) {
+  .home-page .home-projects { max-width: 460px; }
+}
+@media (max-width: 600px) {
+  .home-page .home-hero { padding: 10px 0 14px; }
+  .home-page .hero-brand { width: min(260px, 100%); height: 112px; margin-bottom: 10px; font-size: 5.2rem; border-radius: 23px; }
+  .home-page .home-hero-message { margin-bottom: 12px; font-size: .86rem; line-height: 1.4; letter-spacing: .03em; }
+  .home-page .intro-control { width: min(300px, 100%); min-height: 44px; font-size: .92rem; letter-spacing: .08em; }
+  .home-page .intro-control-arrow { width: 30px; }
+  .home-page .project-grid { gap: 8px 12px; }
+  .home-page .project-card { min-height: 104px; gap: 6px; padding: 6px 2px; }
+  .home-page .folder { width: 92px; height: 66px; }
+  .home-page .folder-tab { height: 15px; }
+  .home-page .folder-front { top: 14px; }
+  .home-page .folder-front svg { width: 28px; height: 28px; }
+  .home-page .folder-spark { top: 8px; right: 6px; font-size: .9rem; }
+  .home-page .project-title { font-size: .83rem; }
+}
+@media (max-width: 600px) and (max-height: 700px) {
+  .home-page .hero-brand { width: 220px; height: 88px; font-size: 4.3rem; }
+  .home-page .home-hero-message { font-size: .78rem; margin-bottom: 8px; }
+  .home-page .project-card { min-height: 88px; }
+  .home-page .folder { width: 78px; height: 56px; }
+  .home-page .folder-tab { height: 13px; }
+  .home-page .folder-front { top: 12px; }
+}
+@media (max-width: 360px) and (max-height: 700px) {
+  .site-frame:has(.home-page) .site-header { gap: 8px; padding: 12px 8px 8px; }
+  .site-frame:has(.home-page) .brand-time { font-size: 1.4rem; }
+  .site-frame:has(.home-page) .brand-name { font-size: .5rem; }
+  .site-frame:has(.home-page) .header-preferences { gap: 4px; }
+  .site-frame:has(.home-page) .header-auth-link { min-height: 40px; padding-inline: 8px; }
+  .site-frame:has(.home-page) .language-switch button { min-width: 30px; }
+  .site-frame:has(.home-page) .appearance-switch { width: 36px; height: 36px; }
+  .site-frame:has(.home-page) .main-nav { gap: 0 8px; }
+  .site-frame:has(.home-page) .nav-link { min-height: 34px; padding-block: 6px; font-size: .72rem; }
+}

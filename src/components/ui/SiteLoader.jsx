@@ -41,7 +41,7 @@ export default function SiteLoader() {
     >
       <div className="site-loader-window" aria-hidden="true">
         <div className="site-loader-titlebar">
-          <span className="site-loader-heart">♥</span>
+
           <span>11:11</span>
           <span className="site-loader-close"><Icon name="close" size={16} /></span>
         </div>

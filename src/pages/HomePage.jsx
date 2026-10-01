@@ -18,8 +18,7 @@ export default function HomePage() {
         className="home-projects"
         aria-label={t("common.exploreEvents")}
       >
-        <div className="home-grid-heading"><div><h2>{t("home.projects.title")}</h2><p>{t("home.projects.description")}</p></div><span>{t("home.projects.index")}</span></div>
-        <ProjectGrid projects={projects} showDetails />
+        <ProjectGrid projects={projects} />
       </section>
       <HomeSections />
     </div>

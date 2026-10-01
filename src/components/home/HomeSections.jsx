@@ -34,7 +34,7 @@ export default function HomeSections() {
         <div className="home-section-intro"><span className="home-section-index">{t("home.interactive.index")}</span><h2>{t("home.interactive.title")}</h2><p>{t("home.interactive.description")}</p></div>
         <div className="interactive-list">{interactive.map((item) => <Link to={item.to} className="interactive-row" key={item.number}><span>{item.number}</span><div><h3>{item.id === "diary" ? t("home.possibility.diary.title") : t(`home.interactive.${item.id}.title`)}</h3><p>{t(`home.interactive.${item.id}.description`)}</p></div><Icon name="arrow-up-right" size={18} /></Link>)}</div>
       </section>
-      <section className="home-final"><span aria-hidden="true" className="home-final-star">✳</span><h2>{t("home.final.title")}</h2><p>{t("home.final.description")}</p><Link className="primary-link" to="/#projects">{t("common.exploreEvents")} <Icon name="arrow-up-right" size={18} /></Link></section>
+      <section className="home-final"><h2>{t("home.final.title")}</h2><p>{t("home.final.description")}</p><Link className="primary-link" to="/#projects">{t("common.exploreEvents")} <Icon name="arrow-up-right" size={18} /></Link></section>
     </div>
   );
 }

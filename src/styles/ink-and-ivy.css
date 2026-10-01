@@ -1,0 +1,13 @@
+.theme-ink-and-ivy { --theme-bg:#f2ead7; --theme-ink:#273d81; --theme-accent:#9aa7c6; --theme-panel:#e8e5d8; --theme-stroke:#273d8130; --theme-display:Georgia,serif; --world-paper:#f2ead7; --world-photo:url('/images/wedding/ink-and-ivy/illustrated-wedding-story.webp'); background:var(--theme-bg); color:var(--theme-ink); }
+.invitation-preview-art.full-image-cover.preview-ink-and-ivy { background:var(--cover-image) center / cover no-repeat; color:#273d81; }
+.wedding-ink-copy { position:absolute; inset:0; text-align:center; color:#273d81; }
+.wedding-ink-opening { position:absolute; top:11%; left:20%; width:60%; font:400 5cqw/1.2 "Chalkboard SE","Comic Sans MS",cursive; }
+.wedding-ink-copy > strong { position:absolute; top:21%; left:18%; width:64%; font:400 6cqw/1.1 "Trebuchet MS",sans-serif; letter-spacing:.03em; text-transform:uppercase; }
+.wedding-ink-copy > em { position:absolute; top:34%; left:22%; width:56%; font:400 2.5cqw/1.3 "Chalkboard SE","Comic Sans MS",cursive; }
+.wedding-ink-details { position:absolute; bottom:4%; left:16%; width:68%; font:700 1.8cqw/1.7 'Trebuchet MS',sans-serif; text-transform:uppercase; letter-spacing:.1em; }
+.theme-ink-and-ivy .theme-invitation-card.full-image-cover { width:100%; padding:0; border:0; box-shadow:none; }
+.theme-ink-and-ivy .theme-world-hero-photo,
+.theme-ink-and-ivy .theme-world-image > div { background-image:var(--world-photo); background-size:cover; }
+.design-type-ink-and-ivy .design-type-board { background:#f2ead7; color:#273d81; }
+.design-type-ink-and-ivy .design-type-words h3 { max-width:9em; font-family:Georgia,serif; font-style:italic; font-weight:400; }
+.design-pattern-ivy-ink-lines .design-pattern-panel { background-color:#f2ead7; background-image:repeating-linear-gradient(135deg,transparent 0 42px,#273d8120 43px 44px,transparent 45px 70px); color:#273d81; }

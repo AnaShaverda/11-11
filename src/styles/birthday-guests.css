@@ -1,0 +1,208 @@
+/* Shared guest layout: each Birthday keeps its own artwork, palette and typeface. */
+.theme-experience.theme-birthday {
+  --guest-gutter: clamp(24px, 5vw, 72px);
+  border-radius: 18px;
+}
+.theme-experience.theme-birthday .theme-world-nav {
+  padding-inline: var(--guest-gutter);
+  background: var(--theme-bg);
+  letter-spacing: .08em;
+}
+.theme-experience.theme-birthday .theme-world-nav nav { align-items: center; gap: 24px; }
+.theme-experience.theme-birthday .theme-world-nav a { min-height: 44px; display: inline-flex; align-items: center; }
+.theme-experience.theme-birthday .theme-world-nav-rsvp {
+  padding-inline: 16px;
+  border: 1px solid var(--theme-stroke);
+  border-radius: 999px;
+  opacity: 1;
+}
+.theme-experience.theme-birthday :is(a, button, input):focus-visible {
+  outline: 2px solid var(--theme-ink);
+  outline-offset: 4px;
+}
+.theme-experience.theme-birthday .theme-world-hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, .9fr);
+  gap: clamp(28px, 5vw, 64px);
+  min-height: 580px;
+  padding: 64px var(--guest-gutter) 76px;
+  text-align: left;
+}
+.theme-experience.theme-birthday .theme-world-hero-copy {
+  display: block;
+  padding: 0;
+  border: 0;
+  background: none;
+  box-shadow: none;
+}
+.theme-experience.theme-birthday .theme-world-hero h2 {
+  margin-block: 18px 24px;
+  font-size: clamp(3.4rem, 6vw, 6.6rem);
+  line-height: 1.02;
+  text-transform: none;
+  letter-spacing: -.045em;
+}
+.theme-experience.theme-birthday .theme-world-hero-copy > p { max-width: 32ch; line-height: 1.6; font-size: 1.08rem; }
+.theme-experience.theme-birthday .theme-world-hero-date { justify-content: flex-start; letter-spacing: .04em; line-height: 1.5; }
+.theme-experience.theme-birthday .theme-world-button {
+  border-color: var(--theme-ink);
+  border-radius: 999px;
+  background: var(--theme-ink);
+  color: var(--theme-bg);
+  font-weight: 700;
+}
+.theme-experience.theme-birthday .theme-world-hero-visual {
+  position: relative;
+  top: auto;
+  right: auto;
+  align-self: center;
+  width: min(100%, 440px);
+  height: auto;
+  aspect-ratio: 1;
+  opacity: 1;
+  transform: none;
+}
+.theme-experience.theme-birthday .theme-world-hero-photo {
+  inset: 0;
+  border: 0;
+  border-radius: 12px;
+  background-size: cover;
+  background-position: center;
+  box-shadow: none;
+  transform: none;
+}
+.theme-experience.theme-birthday .theme-world-hero-caption {
+  display: block;
+  bottom: 14px;
+  left: 14px;
+  max-width: calc(100% - 28px);
+  border-radius: 999px;
+  padding: 10px 14px;
+  background: var(--theme-bg);
+  color: var(--theme-ink);
+  letter-spacing: .1em;
+  transform: none;
+}
+.theme-experience.theme-birthday .theme-world-scroll { display: none; }
+.theme-experience.theme-birthday .theme-world-ticker { min-height: 48px; font-size: .85rem; letter-spacing: .12em; }
+.theme-experience.theme-birthday .theme-world-section { padding: 72px var(--guest-gutter); scroll-margin-top: 24px; }
+.theme-experience.theme-birthday .theme-world-section h3 { font-size: clamp(2.5rem, 4.3vw, 4.6rem); line-height: 1.08; letter-spacing: -.035em; }
+.theme-experience.theme-birthday .theme-world-story { min-height: 0; gap: 40px; }
+.theme-experience.theme-birthday .theme-world-story-body p { font-size: 1.15rem; line-height: 1.7; }
+.theme-experience.theme-birthday .theme-world-section-heading p { font-size: 1rem; line-height: 1.65; }
+.theme-experience.theme-birthday .theme-world-invitation { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 48px; }
+/* Covers use one common square stage, rather than a fixed minimum pixel height. */
+.theme-experience.theme-birthday .theme-invitation-card {
+  width: min(100%, 440px);
+  min-height: 0;
+  height: auto;
+  aspect-ratio: 1;
+  padding: 0;
+  border: 0;
+  border-radius: 12px;
+  box-shadow: 0 12px 32px #00000014;
+  transform: none;
+}
+.theme-experience.theme-birthday .theme-invitation-card::before { display: none; }
+.theme-experience.theme-birthday .theme-invitation-card.photo-invitation-art {
+  background: var(--photo-card-background) var(--photo-card-position, center) / cover;
+}
+/* 1024 × 1536 paper illustrations retain their original 2:3 proportions. */
+:is(.theme-experience.theme-birthday .theme-invitation-card, #collection-birthday .birthday-card-artwork) .modern-toast-paper {
+  width: 57.333%;
+  height: 86%;
+  min-height: 0;
+  padding: 0;
+  aspect-ratio: 2 / 3;
+  transform: none;
+}
+:is(.theme-experience.theme-birthday, #collection-birthday) .modern-toast-paper:not(.photo-paper-playful, .photo-paper-illustrated) > :not(.modern-toast-curves, .birthday-illustration) {
+  position: absolute;
+  margin: 0;
+  left: 10%;
+  max-width: 80%;
+}
+:is(.theme-experience.theme-birthday, #collection-birthday) .modern-toast-paper:not(.photo-paper-playful, .photo-paper-illustrated) .modern-toast-opening { top: 8%; font-size: 4cqw; }
+:is(.theme-experience.theme-birthday, #collection-birthday) .modern-toast-paper:not(.photo-paper-playful, .photo-paper-illustrated) .modern-toast-age { top: 26%; left: 5%; width: 90%; max-width: 90%; text-align: center; font-size: 76cqw; }
+:is(.theme-experience.theme-birthday, #collection-birthday) .modern-toast-paper:not(.photo-paper-playful, .photo-paper-illustrated) .modern-toast-name { top: 64%; font-size: 9cqw; }
+:is(.theme-experience.theme-birthday, #collection-birthday) .modern-toast-paper:not(.photo-paper-playful, .photo-paper-illustrated) .modern-toast-closing { top: 83%; font-size: 3.5cqw; }
+:is(.theme-experience.theme-birthday, #collection-birthday) .modern-toast-paper:not(.photo-paper-playful, .photo-paper-illustrated) .modern-toast-details { bottom: 3%; font-size: 3cqw; line-height: 1.4; }
+.theme-experience.theme-birthday .full-image-cover-copy em { font-size: 3cqw; }
+.theme-experience.theme-birthday .full-image-cover-details { font-size: 2.3cqw; line-height: 1.5; letter-spacing: .04em; }
+.theme-experience.theme-birthday .theme-world-detail-grid { gap: 14px; border: 0; margin-top: 32px; }
+.theme-experience.theme-birthday .theme-world-detail-grid > div {
+  gap: 12px;
+  min-height: 0;
+  padding: 24px;
+  border: 1px solid var(--theme-stroke);
+  border-radius: 12px;
+  background: var(--theme-bg);
+}
+.theme-experience.theme-birthday .theme-world-detail-grid strong { font-size: clamp(1.35rem, 2vw, 2rem); line-height: 1.25; }
+.theme-experience.theme-birthday .theme-world-detail-grid small { line-height: 1.5; }
+.theme-experience.theme-birthday .theme-world-gallery-grid {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-rows: auto;
+  gap: 14px;
+}
+.theme-experience.theme-birthday .theme-world-image {
+  grid-row: auto;
+  grid-column: auto;
+  aspect-ratio: 1;
+  border: 0;
+  border-radius: 12px;
+  box-shadow: none;
+  transform: none;
+}
+.theme-experience.theme-birthday .theme-world-image > div { border-radius: inherit; background-size: cover; }
+.theme-experience.theme-birthday .theme-world-image figcaption { padding: 16px 12px; gap: 8px; letter-spacing: .04em; font-size: .65rem; }
+.theme-experience.theme-birthday .theme-world-module .theme-module-preview {
+  min-height: 0;
+  padding: 28px;
+  border: 1px solid var(--theme-stroke);
+  border-radius: 12px;
+  box-shadow: none;
+  transform: none;
+}
+.theme-experience.theme-birthday .theme-world-module .theme-module-preview h3 { font-size: clamp(1.8rem, 3vw, 2.8rem); }
+.theme-experience.theme-birthday .theme-world-rsvp { min-height: 0; }
+.theme-experience.theme-birthday .rsvp-preview { margin-top: 20px; }
+.theme-experience.theme-birthday .rsvp-preview fieldset { border-radius: 12px; background: var(--theme-bg); }
+.theme-experience.theme-birthday .rsvp-preview .theme-world-button { width: 100%; justify-content: center; }
+.theme-experience.theme-birthday .theme-world-footer { padding-inline: var(--guest-gutter); letter-spacing: .06em; }
+@media (max-width: 700px) {
+  .theme-preview-page:has(.theme-birthday) { width: calc(100% - 24px); }
+  .theme-preview-page:has(.theme-birthday) .theme-preview-intro h1 { font-size: 2.6rem; }
+  .theme-preview-page:has(.theme-birthday) .theme-preview-intro p { font-size: .95rem; }
+  .theme-experience.theme-birthday { --guest-gutter: 20px; border-radius: 14px; }
+  .theme-experience.theme-birthday .theme-world-nav { flex-direction: column; align-items: stretch; gap: 10px; padding-block: 16px 10px; }
+  .theme-experience.theme-birthday .theme-world-nav > span { max-width: none; }
+  .theme-experience.theme-birthday .theme-world-nav nav { justify-content: space-between; gap: 8px; }
+  .theme-experience.theme-birthday .theme-world-nav nav a { font-size: .6rem; letter-spacing: .01em; }
+  .theme-experience.theme-birthday .theme-world-nav-rsvp { padding-inline: 12px; }
+  .theme-experience.theme-birthday .theme-world-hero {
+    grid-template-columns: minmax(0, 1fr);
+    min-height: 0;
+    gap: 28px;
+    padding: 36px var(--guest-gutter);
+  }
+  .theme-experience.theme-birthday .theme-world-hero h2 { font-size: clamp(2.5rem, 10vw, 4rem); margin-block: 14px 18px; }
+  .theme-experience.theme-birthday .theme-world-hero-copy > p { font-size: 1rem; margin-bottom: 20px; }
+  .theme-experience.theme-birthday .theme-world-hero-date { margin-bottom: 22px; font-size: .75rem; }
+  .theme-experience.theme-birthday .theme-world-hero-visual { width: min(100%, 440px); }
+  .theme-experience.theme-birthday .theme-world-section { padding-block: 44px; }
+  .theme-experience.theme-birthday .theme-world-section h3 { font-size: clamp(2.1rem, 8vw, 3rem); }
+  .theme-experience.theme-birthday .theme-world-story { display: block; }
+  .theme-experience.theme-birthday .theme-world-story-body { padding-left: 16px; margin-top: 24px; }
+  .theme-experience.theme-birthday .theme-world-story-body p { font-size: 1rem; }
+  .theme-experience.theme-birthday .theme-world-invitation { display: block; }
+  .theme-experience.theme-birthday .theme-world-invitation .theme-world-section-heading { margin-bottom: 28px; }
+  .theme-experience.theme-birthday .theme-world-detail-grid { grid-template-columns: minmax(0, 1fr); gap: 10px; }
+  .theme-experience.theme-birthday .theme-world-detail-grid > div { padding: 20px; }
+  .theme-experience.theme-birthday .theme-world-gallery-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+  .theme-experience.theme-birthday .theme-world-image figcaption { padding: 12px 9px; font-size: .59rem; }
+  .theme-experience.theme-birthday .theme-world-image figcaption span { display: none; }
+  .theme-experience.theme-birthday .theme-world-community { display: block; }
+  .theme-experience.theme-birthday .theme-world-module .theme-module-preview { padding: 22px; }
+  .theme-experience.theme-birthday .theme-world-rsvp p { font-size: 1rem; line-height: 1.6; }
+}

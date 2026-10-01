@@ -15,7 +15,7 @@ export function CakeVisual({ litCandles = [true, true, true], onCandleClick, can
           ) : <span key={id} className="surprise-candle-control" aria-hidden="true">{candle}</span>;
         })}
       </div>
-      <div className="surprise-cake-icing" /><div className="surprise-cake-top" /><div className="surprise-cake-body"><span>✿</span><span>✦</span><span>✿</span></div><div className="surprise-cake-base" /><div className="surprise-cake-stand" />
+      <div className="surprise-cake-icing" /><div className="surprise-cake-top" /><div className="surprise-cake-body"></div><div className="surprise-cake-base" /><div className="surprise-cake-stand" />
     </div>
   );
 }

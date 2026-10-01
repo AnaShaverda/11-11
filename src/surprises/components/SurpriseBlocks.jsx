@@ -7,12 +7,12 @@ export function PhotoTile({ photo, label, className = "" }) {
 
 export function MainMessage({ surprise }) {
   const { t } = useLanguage();
-  return <section className="surprise-section surprise-message-section" id="surprise-message" aria-labelledby="message-title"><span className="surprise-section-number">{t("surprise.message.label")}</span><div className="surprise-letter-card"><span aria-hidden="true">♡</span><h2 id="message-title">{t("surprise.message.title", { name: surprise.recipientName })}</h2><p>{surprise.content.personalMessage}</p><strong>{t("surprise.message.sign", { name: surprise.creatorName })}</strong></div></section>;
+  return <section className="surprise-section surprise-message-section" id="surprise-message" aria-labelledby="message-title"><span className="surprise-section-number">{t("surprise.message.label")}</span><div className="surprise-letter-card"><h2 id="message-title">{t("surprise.message.title", { name: surprise.recipientName })}</h2><p>{surprise.content.personalMessage}</p><strong>{t("surprise.message.sign", { name: surprise.creatorName })}</strong></div></section>;
 }
 
 export function LoveNotes({ notes }) {
   const { t } = useLanguage();
-  return <section className="surprise-section surprise-notes-section" aria-labelledby="notes-title"><div className="surprise-section-copy"><span className="surprise-section-number">{t("surprise.notes.label")}</span><h2 id="notes-title">{t("surprise.notes.title")}</h2></div><div className="surprise-note-stack">{notes.map((note, index) => <article className="surprise-note" key={note}><span aria-hidden="true">{index % 2 ? "✦" : "♡"}</span><p>{note}</p></article>)}</div></section>;
+  return <section className="surprise-section surprise-notes-section" aria-labelledby="notes-title"><div className="surprise-section-copy"><span className="surprise-section-number">{t("surprise.notes.label")}</span><h2 id="notes-title">{t("surprise.notes.title")}</h2></div><div className="surprise-note-stack">{notes.map((note) => <article className="surprise-note" key={note}><p>{note}</p></article>)}</div></section>;
 }
 
 export function Memories({ memories }) {
@@ -38,10 +38,10 @@ export function MiniQuiz({ quiz }) {
 
 export function Wishes({ wishes }) {
   const { t } = useLanguage();
-  return <section className="surprise-section surprise-wishes-section" aria-labelledby="wishes-title"><div className="surprise-section-copy"><span className="surprise-section-number">{t("surprise.wishes.label")}</span><h2 id="wishes-title">{t("surprise.wishes.title")}</h2></div><div className="surprise-wishes-grid">{wishes.map((wish, index) => <article key={wish}><span aria-hidden="true">{["♡", "✦", "✿", "☀"][index % 4]}</span><p>{wish}</p></article>)}</div></section>;
+  return <section className="surprise-section surprise-wishes-section" aria-labelledby="wishes-title"><div className="surprise-section-copy"><span className="surprise-section-number">{t("surprise.wishes.label")}</span><h2 id="wishes-title">{t("surprise.wishes.title")}</h2></div><div className="surprise-wishes-grid">{wishes.map((wish) => <article key={wish}><p>{wish}</p></article>)}</div></section>;
 }
 
 export function MusicConcept() {
   const { t } = useLanguage();
-  return <section className="surprise-section surprise-music-section" aria-labelledby="music-title"><div><span className="surprise-section-number">{t("surprise.music.label")}</span><h2 id="music-title">{t("surprise.music.title")}</h2><p>{t("surprise.music.description")}</p></div><span aria-hidden="true">♫</span></section>;
+  return <section className="surprise-section surprise-music-section" aria-labelledby="music-title"><div><span className="surprise-section-number">{t("surprise.music.label")}</span><h2 id="music-title">{t("surprise.music.title")}</h2><p>{t("surprise.music.description")}</p></div></section>;
 }

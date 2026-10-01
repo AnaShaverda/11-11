@@ -13,13 +13,14 @@ Use `npm run build` to create a production bundle.
 
 ## Public routes
 
-- `/` — 11:11 homepage with Birthday, Wedding, Corporate, and Other Celebrations event types
+- `/` — original 11:11 homepage with category cards and a small invitation selection; choosing a card opens its full category view
 - `/projects` — redirects to the event types section on Home for older links
-- `/projects/birthday` and `/projects/wedding` — category showcases with invitation preview selections
-- `/projects/corporate` and `/projects/other-celebrations` — category previews; Other contains Gender Reveal, Bachelorette Party, and Christening / ნათლობა
+- `/projects/birthday` and `/projects/wedding` — complete category invitation collections with style filters, category switching, and expandable experience examples
+- `/projects/corporate` and `/projects/other-celebrations` — shared catalog category views with occasion filters; Other contains Gender Reveal, Bachelorette Party, and Christening / ნათლობა
 - `/experiences/:slug/demo` — public guest demo using an existing theme canvas, with a local RSVP and optional +1 example; return links lead back to the original invitation design
 - `/themes/:slug` — redirects to the public invitation catalog until full event themes are unlocked in a future flow
-- `/invitations` and `/invitations/:slug` — Birthday and Wedding storefront and public design-system presentations with static mood boards and event-card samples, including Classic Celebration, Floral Affair, and Painted Summer
+- `/invitations` — All view containing every category with independent filters; old `type` links open the matching full category view
+- `/invitations/:slug` — public design presentations with static mood boards and event-card samples; back links lead to their category collection
 - `/modules/friendship-diary` — optional module showcase
 - `/surprises` — Digital Surprise presentation and local mock creator flow
 - `/surprises/demo` — interactive Birthday Surprise example; accepts validated `occasion`, `theme`, and `modules` query parameters for previewing visual choices

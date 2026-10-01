@@ -1,18 +1,80 @@
 /* The illustrations carry the Birthday identities; CSS keeps layout and restrained texture. */
-.invitation-preview-art.preview-beer-party { background: #f6e7c8 !important; color: #783d37; }
-.preview-beer-party::before { opacity: .07; background-size: 34px 34px; }
+.invitation-preview-art.preview-beer-party {
+  background: #f6e7c8 !important;
+  color: #783d37;
+}
+.preview-beer-party::before {
+  opacity: 0.07;
+  background-size: 34px 34px;
+}
 .preview-beer-party .invitation-preview-edge,
-.preview-beer-party .invitation-preview-foot { color: #783d37; }
-.preview-beer-party .invitation-preview-copy { top: 24%; width: 73%; transform: none; }
-.preview-beer-party .invitation-preview-copy > span { color: #783d37; }
-.preview-beer-party .invitation-preview-copy strong { max-width: 7em; color: #783d37; font-weight: 900; font-style: normal; text-transform: uppercase; letter-spacing: -.075em; }
-.preview-beer-party .invitation-preview-copy em { color: #241b1b; }
-.preview-beer-party .birthday-illustration--invitation-1 { top: auto; right: -2%; bottom: 3%; width: 37%; height: 50%; filter: drop-shadow(0 8px 10px #783d3733); }
-.birthday-design-page.design-type-beer-party .design-type-board { background: #f6e7c8; color: #783d37; }
-.birthday-design-page.design-type-beer-party .design-type-words h3 { max-width: 9em; font-weight: 900; text-transform: uppercase; }
-.birthday-design-page.design-type-beer-party .design-type-board .birthday-illustration--typography-1 { right: 2%; bottom: 1%; width: 29%; height: 48%; }
-.birthday-design-page.design-pattern-bar-rings .design-pattern-panel { background-color: #d28a32; background-image: radial-gradient(circle at 70% 52%,transparent 0 18%,#f6e7c8 18.5% 19%,transparent 19.5% 27%,#783d37 27.5% 28%,transparent 28.5%); color: #241b1b; }
-.birthday-design-page.design-type-beer-party .design-support-card .birthday-illustration--support-1 { right: -5%; bottom: -9%; width: 47%; height: 65%; }
+.preview-beer-party .invitation-preview-foot {
+  color: #783d37;
+}
+.preview-beer-party .invitation-preview-copy {
+  top: 24%;
+  width: 73%;
+  transform: none;
+}
+.preview-beer-party .invitation-preview-copy > span {
+  color: #783d37;
+}
+.preview-beer-party .invitation-preview-copy strong {
+  max-width: 7em;
+  color: #783d37;
+  font-weight: 900;
+  font-style: normal;
+  text-transform: uppercase;
+  letter-spacing: -0.075em;
+}
+.preview-beer-party .invitation-preview-copy em {
+  color: #241b1b;
+}
+.preview-beer-party .birthday-illustration--invitation-1 {
+  top: auto;
+  right: -2%;
+  bottom: 3%;
+  width: 37%;
+  height: 50%;
+  filter: drop-shadow(0 8px 10px #783d3733);
+}
+.birthday-design-page.design-type-beer-party .design-type-board {
+  background: #f6e7c8;
+  color: #783d37;
+}
+.birthday-design-page.design-type-beer-party .design-type-words h3 {
+  max-width: 9em;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+.birthday-design-page.design-type-beer-party
+  .design-type-board
+  .birthday-illustration--typography-1 {
+  right: 2%;
+  bottom: 1%;
+  width: 29%;
+  height: 48%;
+}
+.birthday-design-page.design-pattern-bar-rings .design-pattern-panel {
+  background-color: #d28a32;
+  background-image: radial-gradient(
+    circle at 70% 52%,
+    transparent 0 18%,
+    #f6e7c8 18.5% 19%,
+    transparent 19.5% 27%,
+    #783d37 27.5% 28%,
+    transparent 28.5%
+  );
+  color: #241b1b;
+}
+.birthday-design-page.design-type-beer-party
+  .design-support-card
+  .birthday-illustration--support-1 {
+  right: -5%;
+  bottom: -9%;
+  width: 47%;
+  height: 65%;
+}
 .preview-pink-glam .invitation-preview-graphic,
 .preview-midnight-luxury .invitation-preview-graphic,
 .preview-garden-party .invitation-preview-graphic,
@@ -79,11 +141,44 @@
 .preview-retro-pop .invitation-preview-shape,
 .preview-retro-pop .invitation-preview-graphic,
 .preview-retro-pop .invitation-preview-decor,
-.preview-retro-pop .invitation-preview-mark { display: none; }
-.preview-retro-pop .birthday-illustration--invitation-1 { top: 51%; right: -8%; width: 54%; height: 49%; transform: rotate(-8deg); filter: none; }
-.preview-retro-pop .birthday-illustration--invitation-2 { top: auto; right: auto; bottom: -5%; left: -7%; width: 27%; height: 32%; transform: rotate(-13deg); filter: none; }
-.birthday-design-page.design-pattern-grid .design-type-board .birthday-illustration--typography-1 { top: auto; right: 3%; bottom: 3%; left: auto; width: 28%; height: 45%; }
-.birthday-design-page.design-pattern-grid .design-pattern-panel .birthday-illustration--pattern-1 { width: 68%; height: 85%; filter: none; }
+.preview-retro-pop .invitation-preview-mark {
+  display: none;
+}
+.preview-retro-pop .birthday-illustration--invitation-1 {
+  top: 51%;
+  right: -8%;
+  width: 54%;
+  height: 49%;
+  transform: rotate(-8deg);
+  filter: none;
+}
+.preview-retro-pop .birthday-illustration--invitation-2 {
+  top: auto;
+  right: auto;
+  bottom: -5%;
+  left: -7%;
+  width: 27%;
+  height: 32%;
+  transform: rotate(-13deg);
+  filter: none;
+}
+.birthday-design-page.design-pattern-grid
+  .design-type-board
+  .birthday-illustration--typography-1 {
+  top: auto;
+  right: 3%;
+  bottom: 3%;
+  left: auto;
+  width: 28%;
+  height: 45%;
+}
+.birthday-design-page.design-pattern-grid
+  .design-pattern-panel
+  .birthday-illustration--pattern-1 {
+  width: 68%;
+  height: 85%;
+  filter: none;
+}
 .preview-y2k-digital {
   background: radial-gradient(circle at 87% 31%, #e8a9dd7a, transparent 34%),
     radial-gradient(circle at 15% 90%, #73cbea45, transparent 45%), #1a279c !important;
@@ -315,8 +410,18 @@
 }
 
 @media (max-width: 650px) {
-  .preview-retro-pop .birthday-illustration--invitation-1 { top: 53%; right: -9%; width: 58%; height: 47%; }
-  .preview-retro-pop .birthday-illustration--invitation-2 { bottom: -3%; left: -5%; width: 25%; height: 26%; }
+  .preview-retro-pop .birthday-illustration--invitation-1 {
+    top: 53%;
+    right: -9%;
+    width: 58%;
+    height: 47%;
+  }
+  .preview-retro-pop .birthday-illustration--invitation-2 {
+    bottom: -3%;
+    left: -5%;
+    width: 25%;
+    height: 26%;
+  }
   .birthday-design-page:not(.design-type-painted)
     .design-support-card
     .birthday-illustration--support-1 {
@@ -458,8 +563,24 @@
   bottom: 9%;
   height: 43%;
 }
-.preview-classic-celebration .birthday-illustration--invitation-2 { top: 4%; right: 5%; width: 24%; height: 23%; transform: rotate(9deg); filter: none; }
-.preview-classic-celebration .birthday-illustration--invitation-3 { position: absolute; z-index: 2; left: 8%; bottom: 23%; width: 13%; height: 16%; object-fit: contain; filter: none; }
+.preview-classic-celebration .birthday-illustration--invitation-2 {
+  top: 4%;
+  right: 5%;
+  width: 24%;
+  height: 23%;
+  transform: rotate(9deg);
+  filter: none;
+}
+.preview-classic-celebration .birthday-illustration--invitation-3 {
+  position: absolute;
+  z-index: 2;
+  left: 8%;
+  bottom: 23%;
+  width: 13%;
+  height: 16%;
+  object-fit: cover;
+  filter: none;
+}
 
 .invitation-preview-art.preview-floral-affair {
   background: radial-gradient(circle at 100% 0, #f5d2df, transparent 35%),
@@ -640,8 +761,18 @@
     width: 66%;
     height: 40%;
   }
-  .preview-classic-celebration .birthday-illustration--invitation-2 { top: 5%; right: 5%; width: 25%; height: 20%; }
-  .preview-classic-celebration .birthday-illustration--invitation-3 { left: 5%; bottom: 25%; width: 15%; height: 14%; }
+  .preview-classic-celebration .birthday-illustration--invitation-2 {
+    top: 5%;
+    right: 5%;
+    width: 25%;
+    height: 20%;
+  }
+  .preview-classic-celebration .birthday-illustration--invitation-3 {
+    left: 5%;
+    bottom: 25%;
+    width: 15%;
+    height: 14%;
+  }
   .invitation-preview-art.preview-floral-affair .invitation-preview-copy {
     top: 15%;
     width: 86%;
@@ -694,57 +825,369 @@
 }
 
 /* Retro Pop is an event poster: type and printed geometry are the artwork. */
-.invitation-preview-art.preview-retro-pop { container-type: inline-size; background: #fff0d4; }
-.invitation-preview-art.preview-retro-pop::before { opacity: .23; background-image: linear-gradient(#1749ad52 1px, transparent 1px), linear-gradient(90deg, #1749ad52 1px, transparent 1px); background-size: 11% 11%; }
-.retro-poster { position: absolute; inset: 0; z-index: 2; overflow: hidden; color: #1749ad; }
-.retro-poster-kicker { position: absolute; top: 5%; left: 5%; z-index: 3; width: 25%; font-size: clamp(.5rem, 1.55cqw, .8rem); font-weight: 900; line-height: 1.1; letter-spacing: .13em; text-transform: uppercase; }
-.retro-poster-title { position: absolute; top: 13%; left: 5%; z-index: 3; display: grid; color: #ff654f; font-family: Georgia, 'Times New Roman', serif; font-size: clamp(2.35rem, 10.4cqw, 7.2rem); font-weight: 900; line-height: .81; letter-spacing: -.09em; text-transform: uppercase; }
-.retro-poster-title span:last-child { margin-top: .09em; }
-.retro-poster-sun { position: absolute; top: 14%; right: 9%; width: 31%; aspect-ratio: 1; border-radius: 50%; background: #ff7868; }
-.retro-poster-burst { position: absolute; top: 26%; right: 2%; z-index: 4; width: 27%; aspect-ratio: 1; background: #54cde6; clip-path: polygon(50% 0, 59% 34%, 85% 15%, 68% 42%, 100% 50%, 68% 58%, 85% 85%, 59% 66%, 50% 100%, 41% 66%, 15% 85%, 32% 58%, 0 50%, 32% 42%, 15% 15%, 41% 34%); }
-.retro-poster-age { position: absolute; top: 39%; left: 5%; z-index: 3; color: #1749ad; font-family: Georgia, 'Times New Roman', serif; font-size: clamp(9rem, 42cqw, 28rem); font-weight: 900; font-style: italic; line-height: .72; letter-spacing: -.16em; }
-.retro-poster-stripes { position: absolute; right: 3%; bottom: 15%; width: 28%; aspect-ratio: 1; border-radius: 100% 0 0 0; background: repeating-linear-gradient(90deg, #1749ad 0 2px, transparent 2px 7px); opacity: .8; }
-.retro-poster-details { position: absolute; right: 5%; bottom: 5%; left: 5%; z-index: 3; display: flex; justify-content: space-between; gap: 8%; border-top: 1px solid #1749ad; padding-top: 2%; font-size: clamp(.48rem, 1.45cqw, .78rem); font-weight: 900; letter-spacing: .1em; text-transform: uppercase; }
-.retro-poster-details span:last-child { text-align: right; }
-.design-type-pop .design-type-mark { color: #1749ad; font-family: Georgia, 'Times New Roman', serif; font-size: clamp(11rem, 26vw, 22rem); font-style: italic; letter-spacing: -.18em; }
-.design-type-pop .design-type-words h3 { color: #ff654f; font-family: Georgia, 'Times New Roman', serif; font-size: clamp(2.8rem, 4.5vw, 5.5rem); line-height: .87; }
-.design-type-pop .design-pattern-panel { background: #fff0d4; color: #1749ad; background-image: linear-gradient(#1749ad25 1px, transparent 1px), linear-gradient(90deg, #1749ad25 1px, transparent 1px); background-size: 26px 26px; }
-.design-type-pop .design-pattern-panel::after { content: ''; position: absolute; top: 14%; right: 10%; width: 45%; aspect-ratio: 1; background: #54cde6; clip-path: polygon(50% 0, 59% 34%, 85% 15%, 68% 42%, 100% 50%, 68% 58%, 85% 85%, 59% 66%, 50% 100%, 41% 66%, 15% 85%, 32% 58%, 0 50%, 32% 42%, 15% 15%, 41% 34%); }
-.design-type-pop .design-pattern-panel p { color: #1749ad; }
-.design-type-pop .design-support-card::after { content: ''; position: absolute; right: -10%; bottom: -22%; width: 60%; aspect-ratio: 1; border-radius: 50% 50% 0 0; background: repeating-radial-gradient(circle at bottom right, transparent 0 8px, currentColor 9px 11px, transparent 12px 20px); opacity: .22; }
+.invitation-preview-art.preview-retro-pop {
+  container-type: inline-size;
+  background: #fff0d4;
+}
+.invitation-preview-art.preview-retro-pop::before {
+  opacity: 0.23;
+  background-image: linear-gradient(#1749ad52 1px, transparent 1px),
+    linear-gradient(90deg, #1749ad52 1px, transparent 1px);
+  background-size: 11% 11%;
+}
+.retro-poster {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  overflow: hidden;
+  color: #1749ad;
+}
+.retro-poster-kicker {
+  position: absolute;
+  top: 5%;
+  left: 5%;
+  z-index: 3;
+  width: 25%;
+  font-size: clamp(0.5rem, 1.55cqw, 0.8rem);
+  font-weight: 900;
+  line-height: 1.1;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+}
+.retro-poster-title {
+  position: absolute;
+  top: 13%;
+  left: 5%;
+  z-index: 3;
+  display: grid;
+  color: #ff654f;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(2.35rem, 10.4cqw, 7.2rem);
+  font-weight: 900;
+  line-height: 0.81;
+  letter-spacing: -0.09em;
+  text-transform: uppercase;
+}
+.retro-poster-title span:last-child {
+  margin-top: 0.09em;
+}
+.retro-poster-sun {
+  position: absolute;
+  top: 14%;
+  right: 9%;
+  width: 31%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: #ff7868;
+}
+.retro-poster-burst {
+  position: absolute;
+  top: 26%;
+  right: 2%;
+  z-index: 4;
+  width: 27%;
+  aspect-ratio: 1;
+  background: #54cde6;
+  clip-path: polygon(
+    50% 0,
+    59% 34%,
+    85% 15%,
+    68% 42%,
+    100% 50%,
+    68% 58%,
+    85% 85%,
+    59% 66%,
+    50% 100%,
+    41% 66%,
+    15% 85%,
+    32% 58%,
+    0 50%,
+    32% 42%,
+    15% 15%,
+    41% 34%
+  );
+}
+.retro-poster-age {
+  position: absolute;
+  top: 39%;
+  left: 5%;
+  z-index: 3;
+  color: #1749ad;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(9rem, 42cqw, 28rem);
+  font-weight: 900;
+  font-style: italic;
+  line-height: 0.72;
+  letter-spacing: -0.16em;
+}
+.retro-poster-stripes {
+  position: absolute;
+  right: 3%;
+  bottom: 15%;
+  width: 28%;
+  aspect-ratio: 1;
+  border-radius: 100% 0 0 0;
+  background: repeating-linear-gradient(
+    90deg,
+    #1749ad 0 2px,
+    transparent 2px 7px
+  );
+  opacity: 0.8;
+}
+.retro-poster-details {
+  position: absolute;
+  right: 5%;
+  bottom: 5%;
+  left: 5%;
+  z-index: 3;
+  display: flex;
+  justify-content: space-between;
+  gap: 8%;
+  border-top: 1px solid #1749ad;
+  padding-top: 2%;
+  font-size: clamp(0.48rem, 1.45cqw, 0.78rem);
+  font-weight: 900;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+.retro-poster-details span:last-child {
+  text-align: right;
+}
+.design-type-pop .design-type-mark {
+  color: #1749ad;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(11rem, 26vw, 22rem);
+  font-style: italic;
+  letter-spacing: -0.18em;
+}
+.design-type-pop .design-type-words h3 {
+  color: #ff654f;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(2.8rem, 4.5vw, 5.5rem);
+  line-height: 0.87;
+}
+.design-type-pop .design-pattern-panel {
+  background: #fff0d4;
+  color: #1749ad;
+  background-image: linear-gradient(#1749ad25 1px, transparent 1px),
+    linear-gradient(90deg, #1749ad25 1px, transparent 1px);
+  background-size: 26px 26px;
+}
+.design-type-pop .design-pattern-panel::after {
+  content: "";
+  position: absolute;
+  top: 14%;
+  right: 10%;
+  width: 45%;
+  aspect-ratio: 1;
+  background: #54cde6;
+  clip-path: polygon(
+    50% 0,
+    59% 34%,
+    85% 15%,
+    68% 42%,
+    100% 50%,
+    68% 58%,
+    85% 85%,
+    59% 66%,
+    50% 100%,
+    41% 66%,
+    15% 85%,
+    32% 58%,
+    0 50%,
+    32% 42%,
+    15% 15%,
+    41% 34%
+  );
+}
+.design-type-pop .design-pattern-panel p {
+  color: #1749ad;
+}
+.design-type-pop .design-support-card::after {
+  content: "";
+  position: absolute;
+  right: -10%;
+  bottom: -22%;
+  width: 60%;
+  aspect-ratio: 1;
+  border-radius: 50% 50% 0 0;
+  background: repeating-radial-gradient(
+    circle at bottom right,
+    transparent 0 8px,
+    currentColor 9px 11px,
+    transparent 12px 20px
+  );
+  opacity: 0.22;
+}
 .design-type-pop .design-support-2::after,
-.design-type-pop .design-support-4::after { border-radius: 100% 0 0 0; background: repeating-linear-gradient(90deg, currentColor 0 2px, transparent 2px 8px); }
-.design-type-pop .design-support-card strong { font-weight: 800; }
+.design-type-pop .design-support-4::after {
+  border-radius: 100% 0 0 0;
+  background: repeating-linear-gradient(
+    90deg,
+    currentColor 0 2px,
+    transparent 2px 8px
+  );
+}
+.design-type-pop .design-support-card strong {
+  font-weight: 800;
+}
 @media (max-width: 650px) {
-  .retro-poster-title { top: 15%; font-size: clamp(2.2rem, 11cqw, 4.6rem); }
-  .retro-poster-sun { top: 20%; }
-  .retro-poster-burst { top: 31%; }
-  .retro-poster-age { top: 45%; font-size: 43cqw; }
-  .retro-poster-stripes { bottom: 18%; }
-  .design-type-pop .design-type-mark { font-size: 34vw; }
+  .retro-poster-title {
+    top: 15%;
+    font-size: clamp(2.2rem, 11cqw, 4.6rem);
+  }
+  .retro-poster-sun {
+    top: 20%;
+  }
+  .retro-poster-burst {
+    top: 31%;
+  }
+  .retro-poster-age {
+    top: 45%;
+    font-size: 43cqw;
+  }
+  .retro-poster-stripes {
+    bottom: 18%;
+  }
+  .design-type-pop .design-type-mark {
+    font-size: 34vw;
+  }
 }
 
 /* Y2K keeps the blue digital frame, with chrome type and abstract gel artwork. */
 .preview-y2k-digital .invitation-preview-shape,
 .preview-y2k-digital .invitation-preview-graphic,
-.preview-y2k-digital .invitation-preview-decor { display: none; }
-.invitation-preview-art.preview-y2k-digital { background: radial-gradient(circle at 82% 26%, #7999e3a1, transparent 34%), linear-gradient(155deg, #172ca4, #101d73) !important; }
-.preview-y2k-digital::before { opacity: .13; background-image: linear-gradient(#b7d9ff 1px, transparent 1px), linear-gradient(90deg, #b7d9ff 1px, transparent 1px); background-size: 27px 27px; }
-.invitation-preview-art.preview-y2k-digital .invitation-preview-copy { top: 18%; width: 74%; }
-.preview-y2k-digital .invitation-preview-copy strong { color: #eef7ff; font-size: clamp(2.7rem, 5vw, 5.2rem); line-height: .91; text-shadow: 3px 4px #6970d2; }
-.preview-y2k-digital .invitation-preview-copy > span { color: #b9e9ff; }
-.preview-y2k-digital .invitation-preview-mark { z-index: 3; top: 49%; right: auto; bottom: auto; left: 6%; background: linear-gradient(165deg, #fff 5%, #9edfff 24%, #ecdeff 40%, #5db5eb 55%, #eefaff 73%, #76abff 88%); background-clip: text; -webkit-background-clip: text; color: transparent; font-family: 'Trebuchet MS', sans-serif; font-size: clamp(8rem, 22vw, 18rem); font-weight: 1000; line-height: .76; letter-spacing: -.16em; opacity: 1; transform: none; filter: drop-shadow(5px 6px 0 #0b165e); }
-.preview-y2k-digital .birthday-illustration--invitation-1 { z-index: 2; top: 32%; right: -13%; width: 67%; height: 44%; transform: rotate(-17deg); filter: none; }
-.preview-y2k-digital .birthday-illustration--invitation-2 { z-index: 2; top: auto; right: 4%; bottom: 8%; width: 30%; height: 27%; transform: rotate(11deg); filter: none; }
-.design-type-digital .design-type-board .birthday-illustration--typography-1 { top: auto; right: -4%; bottom: 4%; left: auto; width: 45%; height: 44%; opacity: .65; }
-.design-type-digital .design-type-mark { background: linear-gradient(155deg, #fff, #8bd8ff 38%, #d8b9ed 55%, #71bcff 80%); background-clip: text; -webkit-background-clip: text; color: transparent; filter: drop-shadow(4px 5px 0 #0b165e); }
-.design-type-digital .design-pattern-panel .birthday-illustration--pattern-1 { width: 53%; height: 72%; }
-.design-type-digital .design-support-card .birthday-illustration--support-1 { width: 50%; height: 58%; }
-.design-type-digital .design-support-card strong { font-family: 'Trebuchet MS', sans-serif; font-size: clamp(1.8rem, 2.25vw, 3rem); font-weight: 900; letter-spacing: -.06em; text-transform: uppercase; }
+.preview-y2k-digital .invitation-preview-decor {
+  display: none;
+}
+.invitation-preview-art.preview-y2k-digital {
+  background: radial-gradient(circle at 82% 26%, #7999e3a1, transparent 34%),
+    linear-gradient(155deg, #172ca4, #101d73) !important;
+}
+.preview-y2k-digital::before {
+  opacity: 0.13;
+  background-image: linear-gradient(#b7d9ff 1px, transparent 1px),
+    linear-gradient(90deg, #b7d9ff 1px, transparent 1px);
+  background-size: 27px 27px;
+}
+.invitation-preview-art.preview-y2k-digital .invitation-preview-copy {
+  top: 18%;
+  width: 74%;
+}
+.preview-y2k-digital .invitation-preview-copy strong {
+  color: #eef7ff;
+  font-size: clamp(2.7rem, 5vw, 5.2rem);
+  line-height: 0.91;
+  text-shadow: 3px 4px #6970d2;
+}
+.preview-y2k-digital .invitation-preview-copy > span {
+  color: #b9e9ff;
+}
+.preview-y2k-digital .invitation-preview-mark {
+  z-index: 3;
+  top: 49%;
+  right: auto;
+  bottom: auto;
+  left: 6%;
+  background: linear-gradient(
+    165deg,
+    #fff 5%,
+    #9edfff 24%,
+    #ecdeff 40%,
+    #5db5eb 55%,
+    #eefaff 73%,
+    #76abff 88%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  font-family: "Trebuchet MS", sans-serif;
+  font-size: clamp(8rem, 22vw, 18rem);
+  font-weight: 1000;
+  line-height: 0.76;
+  letter-spacing: -0.16em;
+  opacity: 1;
+  transform: none;
+  filter: drop-shadow(5px 6px 0 #0b165e);
+}
+.preview-y2k-digital .birthday-illustration--invitation-1 {
+  z-index: 2;
+  top: 32%;
+  right: -13%;
+  width: 67%;
+  height: 44%;
+  transform: rotate(-17deg);
+  filter: none;
+}
+.preview-y2k-digital .birthday-illustration--invitation-2 {
+  z-index: 2;
+  top: auto;
+  right: 4%;
+  bottom: 8%;
+  width: 30%;
+  height: 27%;
+  transform: rotate(11deg);
+  filter: none;
+}
+.design-type-digital .design-type-board .birthday-illustration--typography-1 {
+  top: auto;
+  right: -4%;
+  bottom: 4%;
+  left: auto;
+  width: 45%;
+  height: 44%;
+  opacity: 0.65;
+}
+.design-type-digital .design-type-mark {
+  background: linear-gradient(
+    155deg,
+    #fff,
+    #8bd8ff 38%,
+    #d8b9ed 55%,
+    #71bcff 80%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  filter: drop-shadow(4px 5px 0 #0b165e);
+}
+.design-type-digital .design-pattern-panel .birthday-illustration--pattern-1 {
+  width: 53%;
+  height: 72%;
+}
+.design-type-digital .design-support-card .birthday-illustration--support-1 {
+  width: 50%;
+  height: 58%;
+}
+.design-type-digital .design-support-card strong {
+  font-family: "Trebuchet MS", sans-serif;
+  font-size: clamp(1.8rem, 2.25vw, 3rem);
+  font-weight: 900;
+  letter-spacing: -0.06em;
+  text-transform: uppercase;
+}
 @media (max-width: 650px) {
-  .invitation-preview-art.preview-y2k-digital .invitation-preview-copy { top: 19%; width: 78%; }
-  .preview-y2k-digital .invitation-preview-copy strong { font-size: clamp(2.25rem, 9vw, 3.5rem); }
-  .preview-y2k-digital .invitation-preview-mark { top: 52%; font-size: 39vw; }
-  .preview-y2k-digital .birthday-illustration--invitation-1 { top: 34%; right: -18%; width: 72%; height: 38%; }
-  .preview-y2k-digital .birthday-illustration--invitation-2 { right: 3%; bottom: 10%; width: 33%; height: 25%; }
+  .invitation-preview-art.preview-y2k-digital .invitation-preview-copy {
+    top: 19%;
+    width: 78%;
+  }
+  .preview-y2k-digital .invitation-preview-copy strong {
+    font-size: clamp(2.25rem, 9vw, 3.5rem);
+  }
+  .preview-y2k-digital .invitation-preview-mark {
+    top: 52%;
+    font-size: 39vw;
+  }
+  .preview-y2k-digital .birthday-illustration--invitation-1 {
+    top: 34%;
+    right: -18%;
+    width: 72%;
+    height: 38%;
+  }
+  .preview-y2k-digital .birthday-illustration--invitation-2 {
+    right: 3%;
+    bottom: 10%;
+    width: 33%;
+    height: 25%;
+  }
 }

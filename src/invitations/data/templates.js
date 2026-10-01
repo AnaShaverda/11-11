@@ -1,10 +1,25 @@
 import { birthdayThemes, weddingThemes } from "../../themes/data/themes.js";
 import { showcaseDesigns } from "./showcaseDesigns.js";
+import { weddingThemeAssets } from "./weddingAssets.js";
 import { birthdayThemeAssets } from "./birthdayAssets.js";
 import { invitationStyleTags } from "./invitationStyles.js";
 
 // Public storefront metadata stays separate from the full invitation registry and demo event content.
 const storefront = {
+  "wedding-rose-letter": {"slug": "wedding-rose-letter", "title": "Rose Letter", "style": "Blush watercolor & a wedding letter"},
+  "wedding-first-dance": {"slug": "wedding-first-dance", "title": "First Dance", "style": "A dancing couple & a ribbon frame"},
+  "wedding-happily-away": {"slug": "wedding-happily-away", "title": "Happily Away", "style": "A getaway doodle & a playful ink frame"},
+  "wedding-our-people": {"slug": "wedding-our-people", "title": "Our People", "style": "Simple cartoon guests & shared joy"},
+  "wedding-date-and-dinner": {"slug": "wedding-date-and-dinner", "title": "Date & Dinner", "style": "A blue-ink table & a date to keep"},
+  "wedding-little-vows": {"slug": "wedding-little-vows", "title": "Little Vows", "style": "Simple couple doodles & red notes"},
+  "wedding-celebration-table": {"slug": "wedding-celebration-table", "title": "Celebration Table", "style": "Simple pen sketches & a shared table"},
+  "wedding-day-notes": {"slug": "wedding-day-notes", "title": "Wedding Day Notes", "style": "Pastel doodles & a wedding-day timeline"},
+  "wedding-blue-clink": {"slug": "wedding-blue-clink", "title": "Blue Clink", "style": "Blue pen toasts & cream paper"},
+  "wedding-tipsy-together": {"slug": "wedding-tipsy-together", "title": "Tipsy Together", "style": "Playful wine-prop pen doodles"},
+  "wedding-heart-hideaway": {"slug": "wedding-heart-hideaway", "title": "Heart Hideaway", "style": "A heart & a little mystery"},
+  "wedding-blue-pour": {"slug": "wedding-blue-pour", "title": "Blue Pour", "style": "Cobalt ink & a playful pour"},
+  "wedding-garden-dance": { slug: "wedding-garden-dance", title: "Garden Dance", style: "Watercolor guests & garden disco" },
+  "wedding-ink-and-ivy": { slug: "wedding-ink-and-ivy", title: "Ink & Ivy", style: "Indigo illustrations & wildflowers" },
   "birthday-pink-post": {"slug": "birthday-pink-post", "title": "Pink Post", "style": "Blush watercolor & personal notes"},
   "birthday-disco-scrapbook": {"slug": "birthday-disco-scrapbook", "title": "Disco Scrapbook", "style": "Cut-paper colors & disco sparkle"},
   "birthday-velvet-post": {"slug": "birthday-velvet-post", "title": "Velvet Post", "style": "Wine stripes & blush ink"},
@@ -62,7 +77,7 @@ export const invitationTemplates = [...birthdayThemes, ...weddingThemes].map((th
     decor: theme.decor,
     previewArt: preview.art ?? theme.visual,
     design: showcaseDesigns[preview.slug],
-    visualAssets: birthdayThemeAssets[preview.slug] ?? null,
+    visualAssets: weddingThemeAssets[preview.slug] ?? birthdayThemeAssets[preview.slug] ?? null,
     fullTemplateSlug: preview.fullTemplateSlug ?? null,
     isPremium: true,
     unlockStatus: "locked",

@@ -14,7 +14,6 @@ export default function ProjectCard({ project, showDetails = false }) {
         <span className="folder-tab" />
         <span className="folder-front">
           <ProjectIcon name={project.icon} />
-          <span className="folder-spark">✦</span>
         </span>
       </span>
       <span className="project-title">{t(`common.${project.id}`)}</span>

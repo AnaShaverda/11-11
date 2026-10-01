@@ -1,8 +1,8 @@
 :root {
   color-scheme: dark;
-  --color-bg-start: #071c61;
-  --color-bg-middle: #34217f;
-  --color-bg-end: #9d3ba9;
+  --color-bg-start: #1e2279;
+  --color-bg-middle: #461986;
+  --color-bg-end: #7b1e4f;
   --color-purple: #7753db;
   --color-magenta: #e85bcf;
   --color-surface: rgba(49, 62, 151, 0.27);
@@ -35,14 +35,14 @@
     0 12px 38px rgba(52, 36, 162, 0.35), 0 0 20px rgba(104, 155, 255, 0.24);
   --glass-blur: 18px;
   /* Shared platform surfaces. Invitation artwork keeps its own palette. */
-  --page-background: radial-gradient(ellipse at 89% 8%, rgba(243, 91, 203, .75), transparent 28%), radial-gradient(ellipse at 53% 46%, rgba(108, 55, 199, .58), transparent 44%), radial-gradient(ellipse at 8% 72%, rgba(57, 72, 215, .72), transparent 35%), linear-gradient(115deg, var(--color-bg-start) 13%, var(--color-bg-middle) 61%, var(--color-bg-end) 110%);
-  --frame-background: linear-gradient(135deg, rgba(3, 21, 86, .19), rgba(44, 31, 127, .13) 54%, rgba(87, 39, 144, .15));
+  --page-background: linear-gradient(135deg, var(--color-bg-start), var(--color-bg-middle) 52%, var(--color-bg-end));
+  --frame-background: rgba(255, 255, 255, .06);
   --surface-glass: rgba(29, 31, 104, .37);
   --surface-raised: rgba(54, 48, 135, .52);
   --surface-hover: rgba(108, 102, 200, .52);
   --border-soft: rgba(215, 213, 255, .46);
   --border-strong: rgba(192, 207, 255, .73);
-  --grid-color: rgba(184, 206, 255, .075);
+  --grid-color: rgba(255, 255, 255, .025);
   --text-link: #d6e6ff;
   --text-accent: #ffc1e8;
   --shadow-card: 0 14px 35px rgba(12, 12, 58, .16);

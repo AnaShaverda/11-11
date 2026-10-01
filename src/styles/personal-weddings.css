@@ -1,0 +1,76 @@
+.theme-blue-clink { --theme-bg:#faf5e6; --theme-ink:#254499; --theme-accent:#a9b9dc; --theme-panel:#e8edf2; --theme-stroke:#25449930; --theme-display:Georgia,serif; --world-paper:#faf5e6; --world-photo:url('/images/wedding/blue-clink/blue-ink-wedding-clink.webp'); }
+.theme-wedding-day-notes { --theme-bg:#faf5e8; --theme-ink:#37362c; --theme-accent:#afc19e; --theme-panel:#eceddf; --theme-stroke:#37362c30; --theme-display:Georgia,serif; --world-paper:#faf5e8; --world-photo:url('/images/wedding/wedding-day-notes/pastel-wedding-day.webp'); }
+.theme-celebration-table { --theme-bg:#faf6ed; --theme-ink:#292723; --theme-accent:#c7beb0; --theme-panel:#f0e9de; --theme-stroke:#29272330; --theme-display:Georgia,serif; --world-paper:#faf6ed; --world-photo:url('/images/wedding/celebration-table/simple-celebration-table.webp'); }
+.theme-little-vows { --theme-bg:#faf6ee; --theme-ink:#292723; --theme-accent:#a34242; --theme-panel:#f2e7df; --theme-stroke:#29272330; --theme-display:Georgia,serif; --world-paper:#faf6ee; --world-photo:url('/images/wedding/little-vows/simple-couple-vows.webp'); }
+.theme-date-and-dinner { --theme-bg:#faf5e8; --theme-ink:#577a9a; --theme-accent:#b6c7d5; --theme-panel:#e7edf0; --theme-stroke:#577a9a30; --theme-display:Georgia,serif; --world-paper:#faf5e8; --world-photo:url('/images/wedding/date-and-dinner/blue-calendar-dinner.webp'); }
+.theme-our-people { --theme-bg:#f7eeea; --theme-ink:#292723; --theme-accent:#c9a8a0; --theme-panel:#eee0da; --theme-stroke:#29272330; --theme-display:Georgia,serif; --world-paper:#f7eeea; --world-photo:url('/images/wedding/our-people/cartoon-wedding-people.webp'); }
+:is(.theme-blue-clink,.theme-wedding-day-notes,.theme-celebration-table,.theme-little-vows,.theme-date-and-dinner,.theme-our-people,.theme-happily-away,.theme-first-dance,.theme-rose-letter) { background:var(--theme-bg); color:var(--theme-ink); }
+.invitation-preview-art.full-image-cover:is(.preview-blue-clink,.preview-wedding-day-notes,.preview-celebration-table,.preview-little-vows,.preview-date-and-dinner,.preview-our-people,.preview-happily-away,.preview-first-dance,.preview-rose-letter) { background:var(--cover-image) center / cover no-repeat; }
+.preview-blue-clink .wedding-ink-copy { color:#254499; }
+.preview-blue-clink .wedding-ink-opening { top:16%; }
+.preview-blue-clink .wedding-ink-copy > strong { top:28%; font:italic 400 7cqw/1.1 Georgia,serif; text-transform:none; }
+.preview-blue-clink .wedding-ink-copy > em { top:41%; }
+.preview-blue-clink .wedding-ink-details { bottom:7%; }
+:is(.preview-celebration-table,.preview-little-vows,.preview-our-people,.preview-happily-away,.preview-first-dance,.preview-rose-letter) .wedding-ink-copy { color:#292723; }
+.preview-celebration-table .wedding-ink-opening { top:10%; }
+.preview-celebration-table .wedding-ink-copy > strong { top:22%; font:400 7cqw/1.1 'Chalkboard SE','Comic Sans MS',cursive; text-transform:none; }
+.preview-celebration-table .wedding-ink-copy > em { top:37%; }
+.preview-celebration-table .wedding-ink-details { bottom:4%; }
+.preview-little-vows .wedding-ink-opening { top:10%; color:#a34242; }
+.preview-little-vows .wedding-ink-copy > strong { top:23%; color:#a34242; font:400 7cqw/1.1 'Chalkboard SE','Comic Sans MS',cursive; text-transform:none; }
+.preview-little-vows .wedding-ink-copy > em { top:32%; font-size:2.2cqw; }
+.preview-little-vows .wedding-ink-details { bottom:5%; }
+.preview-our-people .wedding-ink-opening { top:31%; left:28%; width:44%; }
+.preview-our-people .wedding-ink-copy > strong { top:43%; left:27%; width:46%; font:400 7cqw/1.1 'Chalkboard SE','Comic Sans MS',cursive; text-transform:none; }
+.preview-our-people .wedding-ink-copy > em { top:60%; left:28%; width:44%; font-size:2.2cqw; }
+.preview-our-people .wedding-ink-details { bottom:auto; top:72%; left:28%; width:44%; }
+.wedding-day-poster { position:absolute; inset:0; color:var(--theme-ink); text-align:center; }
+.day-poster-opening { position:absolute; top:12%; left:22%; width:56%; font:400 4cqw/1.2 'Chalkboard SE','Comic Sans MS',cursive; }
+.day-poster-names { position:absolute; top:24%; left:23%; width:54%; font:400 6cqw/1.1 Georgia,serif; letter-spacing:-.04em; }
+.day-poster-timeline { position:absolute; top:39%; left:30%; width:44%; margin:0; padding:0; list-style:none; text-align:left; }
+.day-poster-timeline li { display:flex; align-items:center; gap:2cqw; padding:1.5cqw 0; font:400 2.8cqw/1.2 'Chalkboard SE','Comic Sans MS',cursive; }
+.day-poster-timeline li > span { font:400 1.6cqw/1.2 Arial,sans-serif; color:#718464; border:1px solid #71846470; border-radius:50%; width:3cqw; height:3cqw; display:grid; place-items:center; flex-shrink:0; }
+.day-poster-details { position:absolute; top:75%; left:25%; width:50%; font:700 1.7cqw/1.6 'Trebuchet MS',sans-serif; letter-spacing:.04em; text-transform:uppercase; }
+.date-and-dinner .day-poster-opening { top:10%; }
+.date-and-dinner .day-poster-names { top:22%; left:18%; width:64%; font-size:6.5cqw; }
+.day-calendar { position:absolute; top:38%; left:24%; width:52%; display:grid; grid-template-columns:repeat(3,1fr); border-top:1px solid #577a9a60; border-bottom:1px solid #577a9a60; }
+.day-calendar > span { padding:2cqw 0; font:400 6cqw/1.1 Georgia,serif; position:relative; border-right:1px solid #577a9a60; }
+.day-calendar > span:last-child { border-right:0; }
+.selected-day::after { content:''; position:absolute; inset:4%; border:2px solid #577a9a90; border-radius:50%; transform:rotate(-8deg); }
+.date-and-dinner .day-poster-details { top:54%; }
+:is(.theme-blue-clink,.theme-wedding-day-notes,.theme-celebration-table,.theme-little-vows,.theme-date-and-dinner,.theme-our-people,.theme-happily-away,.theme-first-dance,.theme-rose-letter) .theme-invitation-card.full-image-cover { width:100%; padding:0; border:0; box-shadow:none; }
+:is(.theme-blue-clink,.theme-wedding-day-notes,.theme-celebration-table,.theme-little-vows,.theme-date-and-dinner,.theme-our-people,.theme-happily-away,.theme-first-dance,.theme-rose-letter) .theme-world-hero-photo,
+:is(.theme-blue-clink,.theme-wedding-day-notes,.theme-celebration-table,.theme-little-vows,.theme-date-and-dinner,.theme-our-people,.theme-happily-away,.theme-first-dance,.theme-rose-letter) .theme-world-image > div { background-image:var(--world-photo); background-size:cover; }
+.design-type-blue-clink .design-type-board { background:#faf5e6; color:#254499; }
+.design-type-wedding-day-notes .design-type-board { background:#faf5e8; color:#37362c; }
+.design-type-celebration-table .design-type-board { background:#faf6ed; color:#292723; }
+.design-type-little-vows .design-type-board { background:#faf6ee; color:#292723; }
+.design-type-date-and-dinner .design-type-board { background:#faf5e8; color:#577a9a; }
+.design-type-our-people .design-type-board { background:#f7eeea; color:#292723; }
+:is(.design-type-blue-clink,.design-type-wedding-day-notes,.design-type-celebration-table,.design-type-little-vows,.design-type-date-and-dinner,.design-type-our-people,.design-type-happily-away,.design-type-first-dance,.design-type-rose-letter) .design-type-words h3 { max-width:9em; font-family:Georgia,serif; font-weight:400; }
+:is(.design-type-blue-clink,.design-type-wedding-day-notes,.design-type-celebration-table,.design-type-little-vows,.design-type-date-and-dinner,.design-type-our-people,.design-type-happily-away,.design-type-first-dance,.design-type-rose-letter) .design-type-words p { max-width:16em; }
+:is(.design-pattern-blue-clink-lines,.design-pattern-table-lines) .design-pattern-panel { background-color:var(--showcase-paper); background-image:repeating-linear-gradient(135deg,transparent 0 40px,#25449915 41px 43px,transparent 44px 70px); color:var(--showcase-ink); }
+:is(.design-pattern-day-notes-grid,.design-pattern-dinner-calendar-grid) .design-pattern-panel { background-color:var(--showcase-paper); background-image:linear-gradient(#577a9a25 1px,transparent 1px),linear-gradient(90deg,#577a9a25 1px,transparent 1px); background-size:60px 60px; color:var(--showcase-ink); }
+:is(.design-pattern-little-vow-dots,.design-pattern-people-dots) .design-pattern-panel { background-color:var(--showcase-paper); background-image:radial-gradient(#29272325 2px,transparent 3px); background-size:25px 25px; color:var(--showcase-ink); }
+
+.theme-happily-away { --theme-bg:#faf6ed; --theme-ink:#292723; --theme-accent:#c7beb0; --theme-panel:#f0e9de; --theme-stroke:#29272330; --theme-display:Georgia,serif; --world-paper:#faf6ed; --world-photo:url('/images/wedding/happily-away/getaway-wedding-frame.webp'); }
+.preview-happily-away .wedding-ink-opening { top:15%; }
+.preview-happily-away .wedding-ink-copy > strong { top:27%; left:18%; width:64%; font:400 7cqw/1.1 'Chalkboard SE','Comic Sans MS',cursive; text-transform:none; }
+.preview-happily-away .wedding-ink-copy > em { top:39%; }
+.preview-happily-away .wedding-ink-details { top:47%; bottom:auto; }
+.design-type-happily-away .design-type-board { background:#faf6ed; color:#292723; }
+
+.theme-first-dance { --theme-bg:#faf6ed; --theme-ink:#292723; --theme-accent:#c7beb0; --theme-panel:#f0e9de; --theme-stroke:#29272330; --theme-display:Georgia,serif; --world-paper:#faf6ed; --world-photo:url('/images/wedding/first-dance/first-dance-frame.webp'); }
+.preview-first-dance .wedding-ink-opening { top:15%; }
+.preview-first-dance .wedding-ink-copy > strong { top:27%; left:18%; width:64%; font:400 7cqw/1.1 'Chalkboard SE','Comic Sans MS',cursive; text-transform:none; }
+.preview-first-dance .wedding-ink-copy > em { top:39%; }
+.preview-first-dance .wedding-ink-details { top:47%; bottom:auto; }
+.design-type-first-dance .design-type-board { background:#faf6ed; color:#292723; }
+
+.theme-rose-letter { --theme-bg:#f7f1e5; --theme-ink:#55463e; --theme-accent:#dfa5ad; --theme-panel:#f0d2ce; --theme-stroke:#55463e30; --theme-display:Georgia,serif; --world-paper:#f7f1e5; --world-photo:url('/images/wedding/rose-letter/watercolor-wedding-letter.webp'); }
+.preview-rose-letter .wedding-ink-copy { color:#55463e; }
+.preview-rose-letter .wedding-ink-opening { top:11%; font:700 2.4cqw/1.2 'Courier New',monospace; letter-spacing:.12em; }
+.preview-rose-letter .wedding-ink-copy > strong { top:20%; left:16%; width:68%; font:italic 400 8cqw/1.1 Georgia,serif; text-transform:none; }
+.preview-rose-letter .wedding-ink-copy > em { top:33%; font:400 2.4cqw/1.3 'Courier New',monospace; }
+.preview-rose-letter .wedding-ink-details { top:43%; bottom:auto; font-family:'Courier New',monospace; }
+.design-type-rose-letter .design-type-board { background:#f7f1e5; color:#55463e; }

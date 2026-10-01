@@ -115,3 +115,24 @@ a.invitation-card:hover { transform: translateY(-5px); box-shadow: 0 21px 38px r
   .invite-editorial { padding-left: 20px; padding-right: 20px; }
   .editorial-names { font-size: 3.1rem; }
 }
+
+.event-catalog.is-embedded { width: min(100% - clamp(28px, 7vw, 100px), 1280px); margin: 0 auto; }
+.event-catalog .invitations-heading h2 { max-width: 860px; margin: 0 0 17px; font-size: clamp(3rem, 6vw, 6rem); line-height: 1; letter-spacing: -.055em; }
+.event-catalog .invitation-collection-heading h1 { margin: 0 0 9px; font-size: clamp(2.6rem, 5vw, 5rem); line-height: 1; letter-spacing: -.055em; }
+.category-navigation { padding: 12px 0; }
+.category-navigation .filter-button { display: inline-flex; align-items: center; text-align: center; }
+.event-catalog, .invitation-collection { scroll-margin-top: 24px; }
+.event-catalog .experience-page { width: 100%; margin: 0; padding: 0; }
+.collection-experience { margin-top: 35px; border-top: 1px solid var(--border-soft); }
+.collection-experience summary { padding: 20px 0; cursor: pointer; font-weight: 700; }
+.other-experience.is-embedded .other-chooser { display: grid; grid-template-columns: 1fr; gap: 12px; padding: 0 0 24px; }
+.other-experience.is-embedded .other-options { flex-direction: row; flex-wrap: wrap; }
+.other-experience.is-embedded .other-options button { flex: 1 1 220px; }
+.event-catalog .invitation-style-options { flex-wrap: wrap; overflow: visible; }
+@media (max-width: 650px) {
+  .event-catalog.is-embedded { width: min(100% - 28px, 550px); }
+  .category-navigation { gap: 8px; }
+  .category-navigation .filter-button { padding: 9px 14px; font-size: .88rem; }
+  .event-catalog .invitation-style-options { gap: 6px; }
+  .event-catalog .style-filter-button { min-height: 44px; }
+}
