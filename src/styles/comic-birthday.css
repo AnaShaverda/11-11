@@ -1,0 +1,65 @@
+/* Normal covers inherit the shared square slot; fullscreen uses the same artwork. */
+.invitation-art:has(.comic-birthday-copy) { background: var(--showcase-paper) !important; color: var(--showcase-ink); }
+.invitation-art:has(.comic-birthday-copy)::before,
+.invitation-art:has(.comic-birthday-copy)::after { content: none !important; }
+.comic-birthday-art { position: absolute; inset: 0; z-index: 1; width: 100%; height: 100%; object-fit: fill; pointer-events: none; }
+.comic-birthday-copy { position: absolute; z-index: 3; inset: 0; color: var(--showcase-ink); }
+.comic-birthday-copy > * { position: absolute; margin: 0; }
+:root body .comic-birthday-copy * { font-family: "Comic Anton", "BPG Gorda", sans-serif !important; font-weight: 400; font-style: normal; text-transform: uppercase; }
+.comic-title { left: 7%; top: 13%; width: 72%; font-size: 13cqw; line-height: .94; letter-spacing: -.025em; }
+.comic-title > span { display: block; }
+.comic-opening { left: 7%; top: 5%; width: 35%; font-size: 3.1cqw; line-height: 1.15; letter-spacing: .045em; }
+.comic-host { left: 8%; top: 42%; width: 63%; font-size: 4.1cqw; line-height: 1.05; }
+.comic-host > span { margin-left: .22em; }
+.comic-age { left: 31%; top: 49%; width: 37%; text-align: center; font-size: 37cqw; line-height: .97; color: #ef342b; }
+.comic-details { left: 7%; top: 60%; width: 24%; font-size: 2.6cqw; line-height: 1.4; }
+.comic-details > span { display: block; }
+.comic-copy-city-after-dark .comic-opening { color: #ef342b; }
+.comic-copy-comic-cutout .comic-opening { left: 34%; top: 7%; width: 52%; }
+.comic-copy-comic-cutout .comic-title { left: 9%; top: 15%; width: 83%; font-size: 24cqw; line-height: 1; color: #075eb9; transform: rotate(-4deg); }
+.comic-copy-comic-cutout .comic-host { top: 49%; left: 10%; width: 53%; font-size: 6.5cqw; line-height: 1.02; }
+.comic-copy-comic-cutout .comic-host > span { display: block; margin: 0; }
+.comic-copy-comic-cutout .comic-details { left: 10%; top: 65%; width: 49%; font-size: 2.8cqw; }
+.comic-copy-retro-sport .comic-opening { left: 18%; top: 10%; width: 64%; text-align: center; color: #f6eedf; font-size: 2.8cqw; }
+:root body .comic-copy-retro-sport .comic-title { font-family: "Comic Graduate", "BPG Gorda", serif !important; }
+.comic-copy-retro-sport .comic-title { top: 16%; left: 5%; width: 90%; text-align: center; font-size: 12cqw; line-height: 1.04; letter-spacing: -.035em; -webkit-text-stroke: .25cqw #f6eedf; paint-order: stroke fill; }
+.comic-copy-retro-sport .comic-title > span { font-family: inherit !important; }
+.comic-copy-retro-sport .comic-host { top: 49%; left: 8%; width: 74%; text-align: center; font-size: 4.2cqw; }
+.comic-copy-retro-sport .comic-age { top: 56%; left: 30%; width: 39%; font-size: 31cqw; color: #101e32; }
+.comic-copy-retro-sport .comic-details { top: 64%; left: 6%; width: 24%; font-size: 2.4cqw; }
+.comic-footer { left: 5%; top: 97%; width: 90%; text-align: center; font-size: 1.4cqw; letter-spacing: .09em; line-height: 1.1; }
+.comic-copy-upside-down .comic-opening { left: 7%; top: 6%; width: 29%; }
+:root body .comic-copy-upside-down .comic-title { font-family: "Comic Lilita", "BPG Gorda", sans-serif !important; }
+.comic-copy-upside-down .comic-title { left: 15%; top: 34%; width: 70%; text-align: center; font-size: 12.7cqw; line-height: .88; letter-spacing: -.045em; transform: rotate(-3deg); }
+.comic-copy-upside-down .comic-title > span { font-family: inherit !important; }
+.comic-copy-upside-down .comic-host { left: 20%; top: 77%; width: 60%; text-align: center; font-size: 3.3cqw; }
+.comic-copy-upside-down .comic-details { left: 71%; top: 6%; width: 24%; font-size: 2.3cqw; }
+/* Georgian has wider forms; reduce only the lettering within its authored slots. */
+.invitation-art:lang(ka) .comic-title { font-size: 8.2cqw; line-height: 1.16; }
+.invitation-art:lang(ka) .comic-host { font-size: 3.3cqw; line-height: 1.3; }
+.invitation-art:lang(ka) .comic-copy-comic-cutout .comic-title { font-size: 15.3cqw; }
+.invitation-art:lang(ka) .comic-copy-comic-cutout .comic-host { font-size: 4.5cqw; }
+.invitation-art:lang(ka) .comic-copy-retro-sport .comic-title { font-size: 8.5cqw; }
+.invitation-art:lang(ka) .comic-copy-upside-down .comic-title { font-size: 8.5cqw; line-height: 1.4; }
+.invitation-art:lang(ka) .comic-details { font-size: 2.3cqw; }
+/* The image and copy use identical percentage positions in the taller composition. */
+.invitation-art--portrait .comic-title { font-size: 19.5cqw; }
+.invitation-art--portrait .comic-opening { font-size: 4cqw; }
+.invitation-art--portrait .comic-host { font-size: 5.3cqw; }
+.invitation-art--portrait .comic-age { font-size: 59cqw; }
+.invitation-art--portrait .comic-details { font-size: 3.5cqw; }
+.invitation-art--portrait .comic-copy-comic-cutout .comic-title { top: 18%; font-size: 24cqw; }
+.invitation-art--portrait .comic-copy-comic-cutout .comic-host { font-size: 9cqw; }
+.invitation-art--portrait .comic-copy-retro-sport .comic-title { font-size: 15cqw; line-height: 1.25; }
+.invitation-art--portrait .comic-copy-retro-sport .comic-age { font-size: 49cqw; }
+.invitation-art--portrait .comic-footer { font-size: 2cqw; }
+.invitation-art--portrait .comic-copy-upside-down .comic-title { font-size: 18.5cqw; line-height: 1; }
+.invitation-art--portrait .comic-copy-upside-down .comic-host { font-size: 4.3cqw; }
+.invitation-art--portrait .comic-copy-upside-down .comic-details { font-size: 3cqw; }
+.invitation-art--portrait:lang(ka) .comic-title { font-size: 12cqw; line-height: 1.25; }
+.invitation-art--portrait:lang(ka) .comic-host { font-size: 4.4cqw; }
+.invitation-art--portrait:lang(ka) .comic-copy-comic-cutout .comic-title { font-size: 15.3cqw; }
+.invitation-art--portrait:lang(ka) .comic-copy-comic-cutout .comic-host { font-size: 6.3cqw; }
+.invitation-art--portrait:lang(ka) .comic-copy-retro-sport .comic-title { font-size: 11cqw; }
+.invitation-art--portrait:lang(ka) .comic-copy-upside-down .comic-title { font-size: 12cqw; line-height: 1.4; }
+.invitation-art--portrait:lang(ka) .comic-details { font-size: 3cqw; }

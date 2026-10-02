@@ -28,7 +28,7 @@
   text-transform: uppercase;
 }
 .full-image-cover-copy strong {
-  font-family: Georgia, "Times New Roman", serif;
+  font-family: "Noto Serif Georgian";
   font-size: 7cqw;
   font-weight: 400;
   line-height: 1.02;
@@ -37,7 +37,7 @@
 .full-image-cover-copy em {
   max-width: 85%;
   margin-top: 3cqw;
-  font-family: Georgia, "Times New Roman", serif;
+  font-family: "Noto Serif Georgian";
   font-size: clamp(12px, 2.6cqw, 20px);
   line-height: 1.45;
 }
@@ -77,7 +77,7 @@
   text-shadow: 0 1px 9px #39072d40;
 }
 .full-image-cover.preview-pink-glam .full-image-cover-copy strong {
-  font-family: Didot, "Bodoni MT", Georgia, serif;
+  font-family: "Noto Serif Georgian";
   font-size: 8cqw;
   font-weight: 400;
   line-height: 1.06;
@@ -105,7 +105,7 @@
   font-size: clamp(9px, 1.65cqw, 14px);
 }
 .full-image-cover.preview-coquette .full-image-cover-copy strong {
-  font-family: Georgia, serif;
+  font-family: "Noto Serif Georgian";
   font-size: 6.6cqw;
   font-weight: 400;
   line-height: 1.08;
@@ -136,7 +136,7 @@
 }
 .full-image-cover.preview-garden-party .full-image-cover-copy strong {
   max-width: 9em;
-  font-family: Georgia, serif;
+  font-family: "Noto Serif Georgian";
   font-size: 6.2cqw;
   font-weight: 400;
   line-height: 1.06;
@@ -169,7 +169,7 @@
 }
 .full-image-cover.preview-tropical-summer .full-image-cover-copy strong {
   max-width: 8em;
-  font-family: Georgia, serif;
+  font-family: "Noto Serif Georgian";
   font-size: 6.3cqw;
   font-weight: 400;
   line-height: 1.04;
@@ -202,7 +202,7 @@
 }
 .full-image-cover.preview-painted-summer .full-image-cover-copy strong {
   max-width: 8.5em;
-  font-family: Georgia, serif;
+  font-family: "Noto Serif Georgian";
   font-size: 6.5cqw;
   font-style: italic;
   font-weight: 400;
@@ -231,7 +231,7 @@
   width: 49%;
 }
 .full-image-cover.preview-beer-party .full-image-cover-copy strong {
-  font-family: Georgia, serif;
+  font-family: "Noto Serif Georgian";
   font-size: 8cqw;
   font-weight: 900;
   line-height: 1.03;

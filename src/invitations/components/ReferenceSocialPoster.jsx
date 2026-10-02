@@ -1,10 +1,11 @@
+import { formatCardOpening } from "../data/cardTypography.js";
 import { useLanguage } from "../../localization/LanguageContext.jsx";
 
-export default function ReferenceSocialPoster({ variant, name, age, date, time, location, line }) {
-  const { language, t } = useLanguage();
-  const ka = language === "ka";
+export default function ReferenceSocialPoster({ variant, name, namePossessive, age, date, time, location, line, openingFont }) {
+  const { t, language } = useLanguage();
+  const host = namePossessive ?? t("cards.possessive", { name });
   return variant === "cobalt-cheers" ? <div className="cobalt-poster-copy">
-    <div className="cobalt-poster-heading"><span>{name}{ka ? "" : "’s"}</span><strong>{ka ? <>დაბადების<br />დღე</> : <>BIRTHDAY<br />PARTY</>}</strong></div>
-    <div className="cobalt-poster-bottom"><span className="social-date">{date}</span><span className="social-menu">{ka ? "სასმელი · მუსიკა · მეგობრები" : "DRINKS · FOOD · MUSIC · VIBES"}</span><div className="social-info-grid"><span><b>{ka ? "სტილი" : "WEAR"}</b> {line}</span><span><b>{ka ? "დრო" : "TIME"}</b> {time}</span><span><b>{ka ? "ადგილი" : "WHERE"}</b> {location}</span></div></div>
-  </div> : <div className="ribbon-poster-copy"><span className="ribbon-poster-opening">{t("invitations.invited")}</span><strong className="ribbon-poster-name">{name}{ka ? "" : "’s"}<br />{ka ? "დაბადების დღე" : "Birthday"}</strong><strong className="ribbon-poster-age">{age}</strong><span className="ribbon-poster-date">{date} · {time}</span><span className="ribbon-poster-location">{location}</span><em>{line}</em></div>;
+    <div className="cobalt-poster-heading"><span>{host}</span><strong>{t("cards.social.title.0")}<br />{t("cards.social.title.1")}</strong></div>
+    <div className="cobalt-poster-bottom"><span className="social-date">{date}</span><span className="social-menu">{t("cards.social.menu")}</span><div className="social-info-grid"><span><b>{t("cards.social.wear")}</b> {line}</span><span><b>{t("cards.social.time")}</b> {time}</span><span><b>{t("cards.social.where")}</b> {location}</span></div></div>
+  </div> : <div className="ribbon-poster-copy"><span className="ribbon-poster-opening">{formatCardOpening(t("invitations.invited"), language, openingFont)}</span><strong className="ribbon-poster-name">{host}<br />{t("cards.birthday")}</strong><strong className="ribbon-poster-age">{age}</strong><span className="ribbon-poster-date">{date} · {time}</span><span className="ribbon-poster-location">{location}</span><em>{line}</em></div>;
 }

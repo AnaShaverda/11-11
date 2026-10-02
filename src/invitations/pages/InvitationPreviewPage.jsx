@@ -2,7 +2,7 @@ import { getCategoryCaptionKey } from "../../data/projects.js";
 import Icon from "../../components/ui/Icon.jsx";
 import { Link, useParams } from "react-router-dom";
 import { getInvitationTemplate } from "../data/templates.js";
-import { invitationSamples } from "../data/invitationSamples.js";
+import { getInvitationSample } from "../../localization/cardCopy.js";
 import { InvitationArtwork } from "../components/InvitationCard.jsx";
 import InvitationMoodBoards, { ElementsBoard } from "../components/InvitationMoodBoards.jsx";
 import { useLanguage } from "../../localization/LanguageContext.jsx";
@@ -20,7 +20,7 @@ export default function InvitationPreviewPage() {
     </section>
   );
 
-  const sample = invitationSamples[template.slug];
+  const sample = getInvitationSample(template.slug, t);
   const { design } = template;
   const paletteVars = { "--showcase-paper": design.palette[0], "--showcase-ink": design.palette[1], "--showcase-accent": design.palette[2], "--showcase-secondary": design.palette[3] };
 

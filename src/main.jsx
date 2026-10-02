@@ -4,6 +4,7 @@ import { BrowserRouter } from "react-router-dom";
 import App from "./app/App.jsx";
 import { LanguageProvider } from "./localization/LanguageContext.jsx";
 import { AppearanceProvider } from "./appearance/AppearanceContext.jsx";
+import "./styles/fonts.css";
 import "./styles/global.css";
 import "./styles/invitations.css";
 import "./styles/experiences.css";
@@ -62,3 +63,10 @@ import "./styles/christening-cards.css";
 import "./styles/card-image-sizing.css";
 import "./styles/invitation-opening.css";
 import "./styles/card-typography.css";
+import "./styles/birthday-card-layout.css";
+
+import "./styles/girly-birthday.css";
+import "./styles/ivory-vows-watercolor.css";
+
+import "./styles/comic-birthday.css";
+import "./styles/pool-birthday.css";

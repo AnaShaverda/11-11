@@ -5,7 +5,7 @@
   --theme-accent: #b83d32;
   --theme-panel: #fff8ec;
   --theme-stroke: #19394730;
-  --theme-display: "Trebuchet MS", "Arial Rounded MT Bold", sans-serif;
+  --theme-display: "Noto Serif Georgian";
   --world-paper: #fff8ec;
   --world-contrast: #9fcce22b;
   --world-photo: url("/images/birthday/race-day/toy-racing-party.webp");
@@ -13,7 +13,7 @@
   color: var(--theme-ink);
 }
 .theme-race-day::before { display: none; }
-.photo-paper-playful { font-family: "Trebuchet MS", "Arial Rounded MT Bold", sans-serif; }
+.photo-paper-playful { font-family: "Noto Serif Georgian"; }
 .photo-paper-playful > .modern-toast-opening {
   position: absolute;
   top: 7%;
@@ -52,7 +52,7 @@
   margin: 0;
   padding: 0;
   text-align: center;
-  font-family: "Trebuchet MS", "Arial Rounded MT Bold", sans-serif;
+  font-family: "Noto Serif Georgian";
   font-size: 70cqw;
   line-height: .8;
   font-weight: 900;
@@ -73,8 +73,8 @@
 .photo-paper-playful > .modern-toast-details { position: absolute; bottom: 2%; left: 8%; width: 84%; margin: 0; color: #193947; font-size: 3.3cqw; line-height: 1.4; text-align: center; }
 .design-type-race-day .design-type-board { grid-template-columns: minmax(0, 1fr); min-height: 480px; padding-right: 39%; border-radius: 8px; }
 .design-type-race-day .design-type-mark { display: none; }
-.design-type-race-day .design-type-words h3 { font-family: "Trebuchet MS", sans-serif; font-weight: 900; font-size: clamp(2.8rem, 5vw, 5.5rem); color: #b83d32; letter-spacing: -.05em; }
-.design-type-race-day .design-type-words p { font-family: "Trebuchet MS", sans-serif; font-style: normal; font-size: 1.1rem; line-height: 1.5; }
+.design-type-race-day .design-type-words h3 { font-family: "Noto Serif Georgian"; font-weight: 900; font-size: clamp(2.8rem, 5vw, 5.5rem); color: #b83d32; letter-spacing: -.05em; }
+.design-type-race-day .design-type-words p { font-family: "Noto Serif Georgian"; font-style: normal; font-size: 1.1rem; line-height: 1.5; }
 .design-type-race-day .design-pattern-panel { background: #9fcce2; color: #193947; }
 .design-type-race-day .design-ticket-panel { border: 1px solid #19394740; background: #fff4df; }
 .birthday-design-page.design-type-race-day .design-support-card strong { max-width: 100%; }

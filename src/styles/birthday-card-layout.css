@@ -1,0 +1,162 @@
+/* Keep birthday copy inside the clear areas of each painted scene. Square
+   previews need proportional body text; portrait cards retain their larger type. */
+.invitation-art.preview-birthday:not(.invitation-art--portrait) .full-image-cover-copy > em {
+  font-size: clamp(8px, 2.7cqw, 16px);
+  line-height: 1.4;
+}
+.invitation-art.preview-birthday:not(.invitation-art--portrait) .full-image-cover-details {
+  font-size: clamp(8px, 2.5cqw, 14px);
+  line-height: 1.5;
+  letter-spacing: .04em;
+}
+.invitation-art.preview-birthday:lang(ka) .full-image-cover-details { letter-spacing: .01em; }
+
+/* Watercolor Wishes keeps its copy between the bunting and the small cake. */
+.invitation-art.preview-birthday.preview-paper-garland {
+  --opening-weight: 400;
+}
+.invitation-art.preview-birthday.preview-paper-garland .full-image-cover-copy {
+  top: 28%; left: 14%; width: 72%;
+  align-items: center; text-align: center;
+}
+:root body .invitation-art.preview-birthday.preview-paper-garland .full-image-cover-opening {
+  margin-bottom: 2cqw;
+  font-size: clamp(8px, 1.8cqw, 14px);
+}
+:root body .invitation-art.preview-birthday.preview-paper-garland .full-image-cover-copy > strong {
+  max-width: 100%; font-size: 6.5cqw; line-height: 1.18;
+}
+:root body .invitation-art.preview-birthday.preview-paper-garland:lang(ka) .full-image-cover-copy > strong {
+  font-size: 5.6cqw; line-height: 1.3;
+}
+.invitation-art.preview-birthday.preview-paper-garland .full-image-cover-copy > em {
+  max-width: 100%; margin-top: 2cqw;
+  font-size: clamp(8px, 2.4cqw, 16px); line-height: 1.4;
+}
+.invitation-art.preview-birthday.preview-paper-garland .full-image-cover-details {
+  margin-top: 2.5cqw; padding-top: 1.3cqw;
+  font-size: clamp(8px, 2.1cqw, 14px); font-weight: 400;
+  line-height: 1.55; letter-spacing: .04em;
+}
+.invitation-art.preview-birthday.preview-paper-garland.invitation-art--portrait .full-image-cover-copy { top: 31%; }
+:root body .invitation-art.preview-birthday.preview-paper-garland.invitation-art--portrait .full-image-cover-opening {
+  font-size: max(2.6cqw, 11px);
+}
+
+/* Pastel Disco's square scene has confetti rising from the lower-left corner.
+   Keep a compact text column above it and to the left of the mirror ball. */
+.invitation-art.preview-birthday.preview-pastel-disco:not(.invitation-art--portrait) .full-image-cover-copy {
+  top: 16%; left: 17%; width: 43%;
+}
+.invitation-art.preview-birthday.preview-pastel-disco:not(.invitation-art--portrait) .full-image-cover-opening { margin-bottom: 2cqw; }
+.invitation-art.preview-birthday.preview-pastel-disco:not(.invitation-art--portrait) .full-image-cover-copy > em { margin-top: 1.5cqw; }
+.invitation-art.preview-birthday.preview-pastel-disco:not(.invitation-art--portrait) .full-image-cover-details { margin-top: 2cqw; padding-top: 1.2cqw; }
+:root body .invitation-art.preview-birthday.preview-pastel-disco:not(.invitation-art--portrait):lang(ka) .full-image-cover-copy > strong { font-size: 6cqw; line-height: 1.25; max-width: 100%; }
+
+/* Narrow text columns share their space with cake, flowers or cocktail art. */
+.invitation-art.preview-birthday:not(.invitation-art--portrait):is(.preview-classic-celebration, .preview-floral-affair, .preview-beer-party, .preview-pink-glam) .full-image-cover-copy {
+  top: 20%;
+}
+.invitation-art.preview-birthday:not(.invitation-art--portrait):is(.preview-classic-celebration, .preview-floral-affair, .preview-beer-party, .preview-pink-glam) .full-image-cover-opening {
+  margin-bottom: 2cqw;
+}
+.invitation-art.preview-birthday:not(.invitation-art--portrait):is(.preview-classic-celebration, .preview-floral-affair, .preview-beer-party, .preview-pink-glam) .full-image-cover-details {
+  margin-top: 2.5cqw;
+  padding-top: 1.5cqw;
+}
+:root body .invitation-art.preview-birthday:lang(ka):is(.preview-classic-celebration, .preview-floral-affair) .full-image-cover-copy > strong {
+  font-size: 5.8cqw;
+  line-height: 1.25;
+}
+:root body .invitation-art.preview-birthday.preview-floral-affair:lang(ka) .full-image-cover-copy > strong { font-size: 5.4cqw; max-width: 100%; }
+.invitation-art.preview-birthday.preview-classic-celebration .full-image-cover-copy { width: 36%; }
+.invitation-art.preview-birthday.preview-floral-affair .full-image-cover-copy { width: 36%; }
+.invitation-art.preview-birthday.preview-beer-party:not(.invitation-art--portrait) .full-image-cover-copy { top: 12%; width: 45%; }
+.invitation-art.preview-birthday.preview-beer-party:not(.invitation-art--portrait) .full-image-cover-copy > em { max-width: 72%; }
+:root body .invitation-art.preview-birthday.preview-beer-party:lang(ka) .full-image-cover-copy > strong { font-size: 6.3cqw; line-height: 1.12; }
+:root body .invitation-art.preview-birthday.preview-pink-glam:lang(ka) .full-image-cover-copy > strong { font-size: 6.5cqw; line-height: 1.25; }
+:root body .invitation-art.preview-birthday.preview-checkerboard-cheers:lang(ka) .full-image-cover-copy > strong { font-size: 7cqw; line-height: 1.15; }
+.invitation-art.preview-birthday.preview-checkerboard-cheers .full-image-cover-copy { width: 62%; }
+.invitation-art.preview-birthday.preview-checkerboard-cheers .full-image-cover-details { margin-top: 2cqw; }
+
+/* Lift square-card details into the quiet sky above the table and waterline. */
+.invitation-art.preview-birthday:not(.invitation-art--portrait):is(.preview-garden-party, .preview-painted-summer, .preview-tropical-summer) .full-image-cover-copy {
+  top: 12%;
+  width: 68%;
+  left: 16%;
+}
+.invitation-art.preview-birthday:not(.invitation-art--portrait):is(.preview-garden-party, .preview-painted-summer, .preview-tropical-summer) .full-image-cover-opening { margin-bottom: 1.5cqw; }
+.invitation-art.preview-birthday:not(.invitation-art--portrait):is(.preview-garden-party, .preview-painted-summer, .preview-tropical-summer) .full-image-cover-copy > em { margin-top: 1.5cqw; max-width: 100%; }
+.invitation-art.preview-birthday:not(.invitation-art--portrait):is(.preview-garden-party, .preview-painted-summer, .preview-tropical-summer) .full-image-cover-details { margin-top: 1.5cqw; padding-top: 1cqw; }
+:root body .invitation-art.preview-birthday:lang(ka):is(.preview-garden-party, .preview-painted-summer, .preview-tropical-summer) .full-image-cover-copy > strong { font-size: 5.5cqw; line-height: 1.25; }
+.invitation-art.preview-birthday:lang(ka):is(.preview-garden-party, .preview-painted-summer, .preview-tropical-summer) .full-image-cover-copy > strong { max-width: 100%; }
+.invitation-art.preview-birthday.preview-garden-party:not(.invitation-art--portrait) .full-image-cover-copy { top: 16%; }
+.invitation-art.preview-birthday.preview-tropical-summer:not(.invitation-art--portrait) .full-image-cover-copy { top: 19%; }
+:root body .invitation-art.preview-birthday.preview-strawberry-social:lang(ka) .full-image-cover-copy > strong { font-size: 6.5cqw; max-width: 100%; }
+
+/* Georgian Y2K lettering has a longer word and needs its own display scale. */
+.invitation-art.preview-birthday:lang(ka) .y2k-image-title { font-size: 13cqw; line-height: 1.15; letter-spacing: -.04em; white-space: nowrap; }
+.invitation-art.preview-birthday:lang(ka) .y2k-image-party { font-size: 7cqw; line-height: 1.3; letter-spacing: .01em; }
+.invitation-art.preview-birthday:lang(ka) .y2k-image-cover-copy { inset: 18% 10% 12%; }
+.invitation-art.preview-birthday .y2k-image-details { letter-spacing: .04em; }
+
+/* A single paper geometry prevents larger previews from changing the layout.
+   The collection's existing ID rules otherwise win over the card selectors. */
+.invitation-art.preview-birthday.photo-invitation-art:not(.invitation-art--portrait) .modern-toast-paper {
+  width: 58% !important;
+  height: 86% !important;
+  min-height: 0 !important;
+  padding: 0 !important;
+}
+.invitation-art.preview-birthday .photo-paper-tavern > .modern-toast-opening {
+  left: 9%; top: 9%; width: 47%; max-width: 47%; font-size: 6.5cqw; line-height: 1.3; letter-spacing: .04em;
+}
+.invitation-art.preview-birthday .photo-paper-tavern > .photo-paper-note {
+  top: 10%; right: 5%; width: 32%; font-size: 4.5cqw; line-height: 1.5; letter-spacing: 0; transform: none;
+}
+.invitation-art.preview-birthday .photo-paper-tavern > .modern-toast-name {
+  top: 34%; left: 9%; width: 42%; max-width: 42%; font-size: 11cqw; line-height: 1.2;
+}
+.invitation-art.preview-birthday:lang(ka) .photo-paper-tavern > .modern-toast-name { font-size: 9cqw; }
+.invitation-art.preview-birthday .photo-paper-tavern > .modern-toast-closing {
+  top: 62%; bottom: auto; left: 9%; width: 42%; margin: 0; font-size: 5cqw; line-height: 1.4; letter-spacing: .02em;
+}
+.invitation-art.preview-birthday .photo-paper-tavern > .photo-paper-caption {
+  top: 73%; bottom: auto; left: 9%; width: 42%; font-size: 3.8cqw; line-height: 1.4; letter-spacing: .04em;
+}
+.invitation-art.preview-birthday .photo-paper-tavern > .modern-toast-details { font-size: 3.8cqw; }
+:root body .invitation-art.preview-birthday:lang(ka) .photo-paper-illustrated > .modern-toast-name { line-height: 1.25; }
+.invitation-art.preview-birthday.preview-supper-club .modern-toast-name {
+  top: 33%; width: 44%; max-width: 44%; font-size: 11cqw;
+}
+.invitation-art.preview-birthday.preview-supper-club:lang(ka) .modern-toast-name { font-size: 9cqw; }
+
+/* The plain paper uses fixed anchors in every format, rather than a flex stack
+   whose height depends on the translated name and the large numeral. */
+.invitation-art.preview-birthday.preview-modern-toast .modern-toast-paper > :not(.modern-toast-curves, .birthday-illustration) {
+  position: absolute; left: 10%; width: 80%; max-width: 80%; margin: 0;
+}
+.invitation-art.preview-birthday.preview-modern-toast .modern-toast-opening { top: 8%; font-size: 4.5cqw; }
+.invitation-art.preview-birthday.preview-modern-toast .modern-toast-age {
+  top: 26%; left: 5% !important; width: 90% !important; max-width: 90% !important;
+  font-size: 68cqw !important; line-height: .85; text-align: center;
+}
+:root body .invitation-art.preview-birthday.preview-modern-toast .modern-toast-name { top: 64%; font-size: 9cqw; line-height: 1.25; }
+.invitation-art.preview-birthday.preview-modern-toast .modern-toast-closing { top: 84%; font-size: 4cqw; line-height: 1.4; }
+.invitation-art.preview-birthday.preview-modern-toast .modern-toast-details { bottom: 3%; font-size: 3.8cqw; line-height: 1.4; }
+
+/* Leave a visible gap above the age and keep the invitation off the rocket. */
+.invitation-art.preview-birthday.preview-race-day .modern-toast-name { top: 16%; font-size: 8.5cqw; line-height: 1.25; }
+.invitation-art.preview-birthday.preview-race-day:lang(ka) .modern-toast-name { gap: .1em; font-size: 8cqw; }
+.invitation-art.preview-birthday.preview-race-day .modern-toast-age { top: 33%; font-size: 60cqw; }
+.invitation-art.preview-birthday.preview-race-day .modern-toast-closing { top: 64%; left: 34%; width: 60%; font-size: 5cqw; line-height: 1.4; }
+.invitation-art.preview-birthday.preview-space-explorer .modern-toast-closing { top: 63%; left: 43%; width: 45%; font-size: 4cqw; line-height: 1.4; }
+
+/* Legible poster details stay below the hands, inside the blue frame. */
+.invitation-art.preview-birthday.preview-cobalt-cheers .cobalt-poster-bottom { bottom: 3%; gap: 1cqw; }
+.invitation-art.preview-birthday.preview-cobalt-cheers .social-date { align-self: center; font-size: 3cqw; line-height: 1.4; }
+.invitation-art.preview-birthday.preview-cobalt-cheers .social-menu { font-size: max(7px, 2.3cqw); line-height: 1.4; }
+.invitation-art.preview-birthday.preview-cobalt-cheers .social-info-grid { font-size: max(8px, 2.8cqw); line-height: 1.3; }
+.invitation-art.preview-birthday.preview-cobalt-cheers .social-info-grid b { font-size: max(7px, 2.4cqw); line-height: 1.3; }
+.invitation-art.preview-birthday.preview-cobalt-cheers .social-info-grid > span { padding: .8cqw; }
+.invitation-art.preview-birthday.preview-cobalt-cheers:lang(ka) .cobalt-poster-heading > strong { font-size: 10.5cqw; line-height: 1.05; }

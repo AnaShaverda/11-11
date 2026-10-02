@@ -3,18 +3,18 @@
 .christening-card-copy { position:absolute; z-index:3; left:17%; width:66%; top:30%; display:flex; flex-direction:column; align-items:center; text-align:center; color:var(--showcase-ink); }
 .christening-card-opening { font-size:3.1cqw; font-style:italic; }
 .christening-card-copy strong { display:flex; flex-direction:column; margin-top:4cqw; }
-:root body .christening-card-copy strong span { font-family:Georgia,'Noto Serif Georgian',serif !important; font-size:9.1cqw; font-weight:400; line-height:1.18; letter-spacing:-.045em; }
+:root body .christening-card-copy strong span { font-family: "Noto Serif Georgian" !important; font-size:9.1cqw; font-weight:400; line-height:1.18; letter-spacing:-.045em; }
 .christening-card-copy em { max-width:94%; margin-top:5cqw; font-size:2.7cqw; line-height:1.65; }
 .christening-card-details { margin-top:5cqw; padding-top:3cqw; border-top:1px solid color-mix(in srgb,var(--showcase-ink) 40%,transparent); font-size:2.45cqw; letter-spacing:.09em; line-height:1.9; }
 .christening-card-closing { margin-top:5cqw; max-width:90%; font-size:2.05cqw; line-height:1.6; }
-:root body .preview-christening-blush-grace .christening-card-copy strong span { font-family:'Great Vibes Bridal',cursive !important; font-size:12cqw; line-height:1.08; letter-spacing:0; }
-:root body .christening-card-copy:lang(ka) strong span { font-family:'Noto Serif Georgian',serif !important; font-size:8.6cqw; line-height:1.4; letter-spacing:-.03em; }
+:root body .preview-christening-blush-grace .christening-card-copy strong span { font-family: "BPG Irubaqidze" !important; font-size:12cqw; line-height:1.08; letter-spacing:0; }
+:root body .christening-card-copy:lang(ka) strong span { font-family: "Noto Serif Georgian" !important; font-size:8.6cqw; line-height:1.4; letter-spacing:-.03em; }
 .christening-card-copy:lang(ka) em { font-size:2.4cqw; }
 .design-type-christening-card .design-hero-art { max-width:500px; width:100%; margin-inline:auto; }
 .design-type-christening-card .design-hero { align-items:center; }
 
-:root body .preview-christening-blush-petals .christening-card-copy strong span { font-family:"Great Vibes Bridal",cursive !important; font-size:12cqw; line-height:1.08; letter-spacing:0; }
-:root body .preview-christening-blush-petals .christening-card-copy:lang(ka) strong span { font-family:"Noto Serif Georgian",serif !important; font-size:8.6cqw; line-height:1.4; letter-spacing:-.03em; }
+:root body .preview-christening-blush-petals .christening-card-copy strong span { font-family: "BPG Irubaqidze" !important; font-size:12cqw; line-height:1.08; letter-spacing:0; }
+:root body .preview-christening-blush-petals .christening-card-copy:lang(ka) strong span { font-family: "Noto Serif Georgian" !important; font-size:8.6cqw; line-height:1.4; letter-spacing:-.03em; }
 /* Use the existing square invitation format and original detail-card height. */
 .invitation-preview-art.full-image-cover { aspect-ratio:1; }
 .invitation-preview-art[class*="preview-christening-"],
@@ -44,7 +44,7 @@
 :root body .christening-card-copy:lang(ka) strong span,
 :root body [class*="design-theme-bridal-"] .design-type-words h3,
 :root body [class*="design-theme-christening-"] .design-type-words h3 {
-  font-family:var(--font-main) !important; font-weight:400; font-style:normal;
+  font-family: var(--font-main) !important; font-weight:400; font-style:normal;
 }
 .design-type-christening-card .design-type-words { max-width:100%; }
 :root body [class*="design-theme-bridal-"] .design-type-words h3 { font-size:clamp(3rem,5.2vw,6.5rem); }

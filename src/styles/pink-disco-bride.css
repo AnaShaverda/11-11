@@ -4,7 +4,7 @@
   --theme-accent: #d93283;
   --theme-panel: #fff5f9;
   --theme-stroke: #681b4630;
-  --theme-display: Georgia, serif;
+  --theme-display: "Noto Serif Georgian";
   --world-paper: #ffe5ef;
   --world-photo: url('/images/bridal/pink-disco/pink-disco-bride-cover.webp');
   background: var(--theme-bg);
@@ -20,14 +20,14 @@
 .preview-pink-disco-bride .full-image-cover-details { margin-top: 3cqw; font-size: 1.7cqw; border-color: #681b4640; }
 .theme-pink-disco-bride .theme-invitation-card.full-image-cover { width: 100%; padding: 0; border: 0; box-shadow: none; }
 .theme-pink-disco-bride .theme-world-hero { background: linear-gradient(140deg, #fff5f9, #ffc9df); }
-.theme-pink-disco-bride .theme-world-hero h2 { font-family: Georgia, serif; font-style: italic; }
+.theme-pink-disco-bride .theme-world-hero h2 { font-family: "Noto Serif Georgian"; font-style: italic; }
 .theme-pink-disco-bride .theme-world-hero-photo,
 .theme-pink-disco-bride .theme-world-image > div { background-image: var(--world-photo); background-size: cover; }
 .theme-pink-disco-bride .theme-world-image:nth-child(even) > div { background: #fff5f9 url('/images/bridal/pink-disco/veiled-disco-ball.webp') center / 70% auto no-repeat; }
 .theme-pink-disco-bride .theme-world-image:nth-child(3) > div { background: #f9c6db url('/images/bridal/pink-disco/pink-coupe-bow.webp') center / 65% auto no-repeat; }
 .design-theme-pink-disco-bride .design-type-board { background: #ffe5ef; color: #681b46; }
 .design-theme-pink-disco-bride .design-type-words { position: relative; z-index: 3; max-width: 70%; }
-.design-theme-pink-disco-bride .design-type-words h3 { font-family: Georgia, serif; font-style: italic; }
+.design-theme-pink-disco-bride .design-type-words h3 { font-family: "Noto Serif Georgian"; font-style: italic; }
 .design-theme-pink-disco-bride .design-support-card { overflow: hidden; }
 .design-theme-pink-disco-bride .design-support-card > strong,
 .design-theme-pink-disco-bride .design-support-card > small { position: relative; z-index: 3; max-width: 70%; }
@@ -38,7 +38,7 @@
   --theme-accent: #b43e6a;
   --theme-panel: #fff5f9;
   --theme-stroke: #8b285030;
-  --theme-display: Georgia, serif;
+  --theme-display: "Noto Serif Georgian";
   --world-paper: #f9dce7;
   --world-photo: url('/images/bridal/pink-line/pink-bridal-scrapbook-cover.webp');
   background: var(--theme-bg);
@@ -54,14 +54,14 @@
 .preview-pink-disco-lines .full-image-cover-details { margin-top: 3cqw; font-size: 1.7cqw; border-color: #8b285040; }
 .theme-pink-disco-lines .theme-invitation-card.full-image-cover { width: 100%; padding: 0; border: 0; box-shadow: none; }
 .theme-pink-disco-lines .theme-world-hero { background: linear-gradient(140deg, #fff5f9, #ffc9df); }
-.theme-pink-disco-lines .theme-world-hero h2 { font-family: Georgia, serif; font-style: italic; }
+.theme-pink-disco-lines .theme-world-hero h2 { font-family: "Noto Serif Georgian"; font-style: italic; }
 .theme-pink-disco-lines .theme-world-hero-photo,
 .theme-pink-disco-lines .theme-world-image > div { background-image: var(--world-photo); background-size: cover; }
 .theme-pink-disco-lines .theme-world-image:nth-child(even) > div { background: #fff5f9 url('/images/bridal/pink-line/disco-bow-lines.webp') center / 70% auto no-repeat; }
 .theme-pink-disco-lines .theme-world-image:nth-child(3) > div { background: #f9c6db url('/images/bridal/pink-line/coupe-lines.webp') center / 65% auto no-repeat; }
 .design-theme-pink-disco-lines .design-type-board { background: #f9dce7; color: #8b2850; }
 .design-theme-pink-disco-lines .design-type-words { position: relative; z-index: 3; max-width: 70%; }
-.design-theme-pink-disco-lines .design-type-words h3 { font-family: Georgia, serif; font-style: italic; }
+.design-theme-pink-disco-lines .design-type-words h3 { font-family: "Noto Serif Georgian"; font-style: italic; }
 .design-theme-pink-disco-lines .design-support-card { overflow: hidden; }
 .design-theme-pink-disco-lines .design-support-card > strong,
 .design-theme-pink-disco-lines .design-support-card > small { position: relative; z-index: 3; max-width: 70%; }

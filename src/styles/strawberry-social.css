@@ -1,4 +1,4 @@
-.theme-strawberry-social { --theme-bg: #fff7eb; --theme-ink: #7b402c; --theme-accent: #ee86a7; --theme-panel: #fbe4e7; --theme-stroke: #7b402c30; --theme-display: Georgia, serif; --world-paper: #fff7eb; --world-photo: url('/images/birthday/strawberry-social/painted-berry-birthday.webp'); background: var(--theme-bg); color: var(--theme-ink); }
+.theme-strawberry-social { --theme-bg: #fff7eb; --theme-ink: #7b402c; --theme-accent: #ee86a7; --theme-panel: #fbe4e7; --theme-stroke: #7b402c30; --theme-display: "Noto Serif Georgian"; --world-paper: #fff7eb; --world-photo: url('/images/birthday/strawberry-social/painted-berry-birthday.webp'); background: var(--theme-bg); color: var(--theme-ink); }
 .invitation-preview-art.full-image-cover.preview-strawberry-social { background: var(--cover-image) center / cover no-repeat; color: #7b402c; }
 .full-image-cover.preview-strawberry-social .full-image-cover-copy { top: 12%; left: 20%; width: 60%; align-items: center; text-align: center; }
 .full-image-cover.preview-strawberry-social .full-image-cover-copy strong { font: italic 400 8cqw/1.02 Georgia, serif; letter-spacing: -.04em; max-width: 9em; }
@@ -9,5 +9,5 @@
 .theme-strawberry-social .theme-world-hero-photo,
 .theme-strawberry-social .theme-world-image > div { background-image: var(--world-photo); background-size: cover; }
 .design-type-strawberry-social .design-type-board { background: #fff7eb; color: #7b402c; }
-.design-type-strawberry-social .design-type-words h3 { max-width: 9em; font-family: Georgia, serif; font-style: italic; font-weight: 400; }
+.design-type-strawberry-social .design-type-words h3 { max-width: 9em; font-family: "Noto Serif Georgian"; font-style: italic; font-weight: 400; }
 .design-pattern-strawberry-stripes .design-pattern-panel { background-color: #fff7eb; background-image: repeating-linear-gradient(90deg,#ee86a770 0 30px,transparent 30px 62px); color: #7b402c; }

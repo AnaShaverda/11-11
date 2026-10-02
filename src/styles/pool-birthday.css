@@ -1,0 +1,21 @@
+.invitation-art:has(.pool-birthday-copy) { background: var(--showcase-paper) !important; color: var(--showcase-ink); }
+.invitation-art:has(.pool-birthday-copy)::before,
+.invitation-art:has(.pool-birthday-copy)::after { content: none !important; }
+.pool-birthday-art { position: absolute; inset: 0; z-index: 1; width: 100%; height: 100%; object-fit: fill; pointer-events: none; }
+.pool-birthday-copy { position: absolute; inset: 0; z-index: 3; color: var(--showcase-ink); text-align: center; }
+.pool-birthday-copy > * { position: absolute; left: 23%; width: 54%; margin: 0; font-weight: 700; text-transform: uppercase; }
+:root body .pool-birthday-copy * { font-family: var(--design-font-family) !important; font-synthesis: weight; }
+.pool-title { top: 29%; left: 19%; width: 62%; font-size: 12.5cqw; line-height: 1.1; transform: rotate(-4deg); }
+.pool-host { top: 46%; font-size: 4.7cqw; line-height: 1.3; }
+.pool-opening { top: 55%; font-size: 4.7cqw; line-height: 1.3; }
+.pool-details { top: 66%; font-size: 3cqw; line-height: 1.65; }
+.invitation-art--portrait .pool-title { top: 30%; font-size: 15cqw; }
+.invitation-art--portrait .pool-host { font-size: 6.2cqw; }
+.invitation-art--portrait .pool-opening { font-size: 6.2cqw; }
+.invitation-art--portrait .pool-details { font-size: 4.3cqw; }
+.invitation-art:lang(ka) .pool-title { font-size: 9cqw; }
+.invitation-art:lang(ka) :is(.pool-host, .pool-opening) { font-size: 3.4cqw; }
+.invitation-art:lang(ka) .pool-details { font-size: 2.7cqw; }
+.invitation-art--portrait:lang(ka) .pool-title { font-size: 12.5cqw; }
+.invitation-art--portrait:lang(ka) :is(.pool-host, .pool-opening) { font-size: 4.6cqw; }
+.invitation-art--portrait:lang(ka) .pool-details { font-size: 3.8cqw; }

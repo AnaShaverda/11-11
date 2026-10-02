@@ -1,3 +1,6 @@
+import { comicBirthdayStyles } from "./comicBirthdayDesigns.js";
+import { poolBirthdayStyles } from "./poolBirthdayDesigns.js";
+import { girlyBirthdayStyles } from "./girlyBirthdayDesigns.js";
 export const invitationStyleOptions = [
   { id: "all", label: "All styles" },
   { id: "cartoon", label: "Cartoonish" },
@@ -19,6 +22,9 @@ export const invitationStyleOptions = [
 
 // Tags describe the visible public preview, not features of a future created event.
 export const invitationStyleTags = {
+  ...girlyBirthdayStyles,
+  ...comicBirthdayStyles,
+  ...poolBirthdayStyles,
   "christening-olive-full-frame": ["minimal", "floral"],
   "christening-blue-full-frame": ["minimal", "floral"],
   "christening-little-dreamer": ["minimal", "floral"],
@@ -91,7 +97,7 @@ export const invitationStyleTags = {
   "birthday-velvet-post": ["cartoon", "pastel", "light-neutral"],
   "birthday-checkerboard-cheers": ["cartoon", "retro", "light-neutral"],
   "birthday-pastel-disco": ["cartoon", "pastel", "light-neutral"],
-  "birthday-paper-garland": ["cartoon", "pastel", "light-neutral"],
+  "birthday-paper-garland": ["minimal", "pastel", "light-neutral"],
   "birthday-strawberry-social": ["cartoon", "pink", "pastel", "light-neutral"],
   "birthday-cobalt-cheers": ["cartoon", "blue", "retro", "light-neutral"],
   "birthday-ribbon-social": ["cartoon", "red", "retro", "light-neutral"],

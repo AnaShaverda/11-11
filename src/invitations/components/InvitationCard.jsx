@@ -1,10 +1,13 @@
+import ComicBirthdayPoster from "./ComicBirthdayPoster.jsx";
+import PoolBirthdayPoster from "./PoolBirthdayPoster.jsx";
+import LineBirthdayPoster from "./LineBirthdayPoster.jsx";
 import ChristeningCardPoster from "./ChristeningCardPoster.jsx";
 import RetroBridalPoster from "./RetroBridalPoster.jsx";
 import { getCategoryCaptionKey } from "../../data/projects.js";
 import BridalLinePoster from "./BridalLinePoster.jsx";
 import GenderRevealPoster from "./GenderRevealPoster.jsx";
 import { Link } from "react-router-dom";
-import { invitationSamples } from "../data/invitationSamples.js";
+import { getInvitationSample } from "../../localization/cardCopy.js";
 import BirthdayIllustrations from "./BirthdayIllustrations.jsx";
 import { useLanguage } from "../../localization/LanguageContext.jsx";
 import Icon from "../../components/ui/Icon.jsx";
@@ -18,7 +21,7 @@ import { photoCardStyle } from "../data/assetPresentation.js";
 import { recipientArtwork } from "../data/recipientArtwork.js";
 import { recipientLayeredScenes } from "../data/recipientLayeredScenes.js";
 import { recipientTableArtwork } from "../data/recipientTableArtwork.js";
-import { getCardTypography } from "../data/cardTypography.js";
+import { formatCardOpening, getCardTypography } from "../data/cardTypography.js";
 
 function RetroPoster({ sample, invitedLabel }) {
   return (
@@ -51,8 +54,9 @@ export function InvitationArtwork({
   ariaLabel,
 }) {
   const { t, language } = useLanguage();
-  const sample = sampleOverride ?? invitationSamples[template.slug];
+  const sample = sampleOverride ?? getInvitationSample(template.slug, t);
   const typography = getCardTypography(template);
+  const invitedLabel = formatCardOpening(t("invitations.invited"), language, typography.opening);
   const { design } = template;
   const photoCard = template.visualAssets?.photoCard;
   const layeredScene = presentation === "portrait" && recipientLayeredScenes[template.slug];
@@ -69,6 +73,7 @@ export function InvitationArtwork({
       lang={language}
       data-card-font={typography.display}
       data-card-accent={typography.accent}
+      data-card-opening={typography.opening}
       className={`invitation-art invitation-preview-art theme-${
         template.visual
       } preview-${template.previewArt} preview-layout-${
@@ -96,10 +101,16 @@ export function InvitationArtwork({
         <div className="invitation-layered-copy">
           <InvitationArtwork template={template} large={large} sample={sample} presentation="square" ariaLabel={ariaLabel} />
         </div>
+      ) : template.visualAssets?.comicBirthday ? (
+        <ComicBirthdayPoster sample={sample} variant={template.visual} />
+      ) : template.visualAssets?.paintedPool ? (
+        <PoolBirthdayPoster sample={sample} variant={template.visual} />
+      ) : template.visualAssets?.lineArt ? (
+        <LineBirthdayPoster sample={sample} variant={template.visual} />
       ) : template.visualAssets?.christeningCard ? (
         <ChristeningCardPoster {...sample} variant={template.visual} />
       ) : template.visualAssets?.retroBridal ? (
-        <RetroBridalPoster {...sample} variant={template.visual} />
+        <RetroBridalPoster {...sample} variant={template.visual} openingFont={typography.opening} />
       ) : coverImage &&
         ["cherry-toast", "little-yes", "blush-lift"].includes(
           template.visual
@@ -149,14 +160,14 @@ export function InvitationArtwork({
         <WeddingInkPoster {...sample} />
       ) : coverImage &&
         ["cobalt-cheers", "ribbon-social"].includes(template.visual) ? (
-        <ReferenceSocialPoster variant={template.visual} {...sample} />
+        <ReferenceSocialPoster variant={template.visual} {...sample} openingFont={typography.opening} />
       ) : coverImage && template.slug === "birthday-pastel-dream" ? (
         <div className="pastel-image-cover-copy">
           <span className="pastel-image-opening">
-            {t("invitations.invited")}
+            {invitedLabel}
           </span>
           <strong className="pastel-image-name">{sample.posterName}</strong>
-          <span className="pastel-image-sweet">Sweet</span>
+          <span className="pastel-image-sweet">{t("cards.sweet")}</span>
           <strong className="pastel-image-age">{sample.posterAge}</strong>
           <em>{sample.line}</em>
           <span className="pastel-image-details">
@@ -165,10 +176,10 @@ export function InvitationArtwork({
         </div>
       ) : coverImage && template.slug === "birthday-y2k-party" ? (
         <div className="y2k-image-cover-copy">
-          <span className="y2k-image-opening">{t("invitations.invited")}</span>
+          <span className="y2k-image-opening">{invitedLabel}</span>
           <span className="y2k-image-host">{sample.posterName}</span>
-          <strong className="y2k-image-title">Y2K</strong>
-          <strong className="y2k-image-party">Party</strong>
+          <strong className="y2k-image-title">{t("cards.y2k")}</strong>
+          <strong className="y2k-image-party">{t("cards.party")}</strong>
           <em>{sample.line}</em>
           <span className="y2k-image-details">
             {sample.date} · {sample.location}
@@ -177,7 +188,7 @@ export function InvitationArtwork({
       ) : coverImage && template.slug === "birthday-retro-pop" ? (
         <div className="retro-image-cover-copy">
           <span className="retro-image-opening">
-            {t("invitations.invited")}
+            {invitedLabel}
           </span>
           <strong className="retro-image-title">
             <span>{sample.posterName}</span>
@@ -191,6 +202,7 @@ export function InvitationArtwork({
         </div>
       ) : coverImage ? (
         <FullImageInvitationPoster
+          handwrittenOpening={typography.opening === "birthday"}
           variant={template.visual}
           title={sample.title}
           line={sample.line}
@@ -204,11 +216,11 @@ export function InvitationArtwork({
           age={sample.age}
           turns={t("modernToast.turns", { age: sample.age })}
           opening={t("modernToast.celebration")}
-          closing={t("invitations.invited")}
+          closing={invitedLabel}
           details={sample.details ?? (presentation === "portrait" ? `${sample.date} · ${sample.location}` : undefined)}
         />
       ) : template.slug === "birthday-retro-pop" ? (
-        <RetroPoster sample={sample} invitedLabel={t("invitations.invited")} />
+        <RetroPoster sample={sample} invitedLabel={invitedLabel} />
       ) : (
         <>
           <span className="invitation-preview-edge">
@@ -239,7 +251,7 @@ export function InvitationArtwork({
             </>
           )}
           <span className="invitation-preview-copy">
-            <span>{t("invitations.invited")}</span>
+            <span>{invitedLabel}</span>
             <strong>{sample.title}</strong>
             <em>{sample.line}</em>
           </span>
@@ -250,6 +262,20 @@ export function InvitationArtwork({
             <span>{t("invitations.invites")}</span>
           </span>
         </>
+      )}
+      {template.visualAssets?.paintedAttire && (
+        <img
+          className="ivory-vows-attire"
+          src={template.visualAssets.paintedAttire}
+          alt=""
+          aria-hidden="true"
+          loading={large ? "eager" : "lazy"}
+          decoding="async"
+          draggable="false"
+        />
+      )}
+      {(template.visualAssets?.comicBirthday || template.visualAssets?.paintedPool) && (
+        <img className={template.visualAssets.comicBirthday ? "comic-birthday-art" : "pool-birthday-art"} src={coverImage} alt="" aria-hidden="true" loading={large ? "eager" : "lazy"} decoding="async" draggable="false" />
       )}
       {!coverImage && (
         <BirthdayIllustrations
@@ -264,7 +290,7 @@ export function InvitationArtwork({
 
 export default function InvitationCard({ template }) {
   const { t } = useLanguage();
-  const sample = invitationSamples[template.slug];
+  const sample = getInvitationSample(template.slug, t);
   return (
     <Link
       id={`design-${template.slug}`}

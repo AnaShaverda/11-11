@@ -1,14 +1,16 @@
 import { useLanguage } from "../../localization/LanguageContext.jsx";
 
+const headingVariants = new Set(["bear-hug", "up-in-the-air", "special-delivery", "little-wonder", "pink-or-blue"]);
+
 export default function GenderRevealPoster({ title, line, date, time, location, variant }) {
-  const { language } = useLanguage();
-  const ka = language === "ka";
+  const { language, t } = useLanguage();
+  const heading = headingVariants.has(variant) ? variant : "default";
   return <div lang={language} className={`reveal-poster-copy reveal-poster-${variant}`}>
-    <span className="reveal-heading">{variant === "bear-hug" ? (ka ? "პატარა ჩახუტება" : "A little bear hug") : variant === "up-in-the-air" ? (ka ? "პატარა სიურპრიზი" : "A little surprise") : variant === "special-delivery" ? (ka ? "პატარა გზავნილი" : "Special delivery!") : variant === "little-wonder" ? (ka ? "პატარა სასწაული" : "Oh, baby!") : ka ? "ვარდისფერი თუ ცისფერი?" : variant === "pink-or-blue" ? "Pink or Blue?" : "He or She?"}</span>
+    <span className="reveal-heading">{t(`cards.reveal.${heading}`)}</span>
     <span className="reveal-message">{line}</span>
-    <span className="reveal-invited">{ka ? "შემოგვიერთდით სქესის გაგების წვეულებაზე" : "Join us for a gender reveal"}</span>
+    <span className="reveal-invited">{t("cards.reveal.invited")}</span>
     <strong className="reveal-name">{title}</strong>
     <span className="reveal-details">{date}{time && <> · {time}</>}<br />{location}</span>
-    <span className="reveal-closing">{ka ? "პატარა სიურპრიზი, დიდი სიყვარული." : "A little surprise. A lot of love."}</span>
+    <span className="reveal-closing">{t("cards.reveal.closing")}</span>
   </div>;
 }

@@ -6,7 +6,7 @@ import AboutPage from "../pages/AboutPage.jsx";
 import ContactPage from "../pages/ContactPage.jsx";
 import ProjectDetailPage from "../pages/ProjectDetailPage.jsx";
 import NotFoundPage from "../pages/NotFoundPage.jsx";
-import { projects } from "../data/projects.js";
+import { getInvitationCatalogLink, readCatalogCategory } from "../invitations/data/catalogFilters.js";
 import InvitationsPage from "../invitations/pages/InvitationsPage.jsx";
 import InvitationPreviewPage from "../invitations/pages/InvitationPreviewPage.jsx";
 import FriendshipDiaryModulePage from "../modules/pages/FriendshipDiaryModulePage.jsx";
@@ -20,12 +20,8 @@ import InvitationOpeningPage from "../invitations/pages/InvitationOpeningPage.js
 function InvitationCatalogRedirect() {
   const { search, hash, state } = useLocation();
   const params = new URLSearchParams(search);
-  const type = params.get("type")?.toLowerCase();
-  const project = projects.find((item) => item.id === type || item.slug === type);
-  params.delete("type");
-  const query = params.toString();
-  if (!new URLSearchParams(search).has("type")) return <InvitationsPage />;
-  return <Navigate to={`${project ? `/projects/${project.slug}` : "/invitations"}${query ? `?${query}` : ""}${hash}`} state={state} replace />;
+  if (!params.has("type")) return <InvitationsPage />;
+  return <Navigate to={{ ...getInvitationCatalogLink(readCatalogCategory(params), params), hash }} state={state} replace />;
 }
 
 export default function App() {

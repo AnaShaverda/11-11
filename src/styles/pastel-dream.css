@@ -19,7 +19,7 @@
 }
 .pastel-image-name {
   margin-top: 3.5cqw;
-  font-family: Georgia, serif;
+  font-family: "Noto Serif Georgian";
   font-size: 6cqw;
   font-weight: 400;
   line-height: 1.1;
@@ -27,14 +27,14 @@
 }
 .pastel-image-sweet {
   margin-top: 2cqw;
-  font-family: Georgia, serif;
+  font-family: "Noto Serif Georgian";
   font-style: italic;
   font-size: 5cqw;
   line-height: 1.1;
 }
 .pastel-image-age {
   margin-top: 1cqw;
-  font-family: Didot, "Bodoni MT", Georgia, serif;
+  font-family: "Noto Serif Georgian";
   font-size: 27cqw;
   font-weight: 400;
   line-height: .95;
@@ -43,7 +43,7 @@
 }
 .pastel-image-cover-copy em {
   margin-top: 2cqw;
-  font-family: Georgia, serif;
+  font-family: "Noto Serif Georgian";
   font-size: clamp(12px, 2.5cqw, 20px);
 }
 .pastel-image-details {

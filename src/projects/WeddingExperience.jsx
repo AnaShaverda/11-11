@@ -15,7 +15,7 @@ export default function WeddingExperience() {
       <ExperienceSection label={t("wedding.messages.label")} title={t("wedding.messages.title")} description={t("wedding.messages.description")}>
         <div className="response-grid wedding-responses">{weddingMessages.map((message) => <ResponseCard key={message.name} response={message} />)}</div>
       </ExperienceSection>
-      <ExperienceCTA className="wedding-final" title={t("wedding.cta.title")} text={t("wedding.cta.text")} to="/projects/wedding#collection-wedding" action={t("wedding.exploreInvitations")} />
+      <ExperienceCTA className="wedding-final" title={t("wedding.cta.title")} text={t("wedding.cta.text")} to="/invitations?category=wedding#collection-wedding" action={t("wedding.exploreInvitations")} />
     </div>
   );
 }

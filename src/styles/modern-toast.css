@@ -5,7 +5,7 @@
   --theme-accent: #435b6a;
   --theme-panel: #f5f2eb;
   --theme-stroke: #18283330;
-  --theme-display: Didot, "Bodoni MT", "Times New Roman", serif;
+  --theme-display: "Noto Serif Georgian";
   --world-paper: #f5f2eb;
   --world-contrast: #788b9614;
   --world-photo: url("/images/birthday/modern-toast/celebration-still-life.webp");
@@ -35,7 +35,7 @@
   background: var(--photo-paper, #eeeae1);
   color: var(--photo-ink, #182833);
   box-shadow: 0 14px 35px #080f1740, inset 0 0 0 1px #ffffff55;
-  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-family: "Noto Serif Georgian";
   text-align: left;
 }
 .photo-invitation-art:not(.is-large) { height: 390px; }
@@ -53,7 +53,7 @@
   display: block;
   align-self: center;
   margin: 15% 0 12%;
-  font-family: Didot, "Bodoni MT", "Times New Roman", serif;
+  font-family: "Noto Serif Georgian";
   font-size: 83cqw;
   line-height: .78;
   font-weight: 400;
@@ -83,9 +83,9 @@
 
 .design-type-modern-toast .design-type-board { grid-template-columns: minmax(0, 1fr); min-height: 480px; padding-right: 36%; border-radius: 2px; }
 .design-type-modern-toast .design-type-mark { display: none; }
-.design-type-modern-toast .design-type-words h3 { font-family: Didot, "Bodoni MT", "Times New Roman", serif; font-weight: 400; font-size: clamp(2.9rem, 5.2vw, 6rem); letter-spacing: -.04em; }
+.design-type-modern-toast .design-type-words h3 { font-family: "Noto Serif Georgian"; font-weight: 400; font-size: clamp(2.9rem, 5.2vw, 6rem); letter-spacing: -.04em; }
 .design-type-modern-toast .design-type-board .birthday-illustration--typography-1 { top: 10%; right: 5%; bottom: auto; width: 23%; height: 77%; transform: none; opacity: 1; }
-.design-type-modern-toast .design-type-board .design-type-words p { font-family: "Helvetica Neue", Arial, sans-serif; font-size: 1rem; font-style: normal; line-height: 1.5; }
+.design-type-modern-toast .design-type-board .design-type-words p { font-family: "Noto Serif Georgian"; font-size: 1rem; font-style: normal; line-height: 1.5; }
 .design-type-modern-toast .design-elements-board > *, .design-type-modern-toast .design-support-card { border-radius: 2px; }
 .design-type-modern-toast .design-pattern-panel { background: #182833; }
 .design-type-modern-toast .design-pattern-panel::before { content: ""; position: absolute; width: 70%; height: 90%; top: -15%; right: -10%; border: 1px solid #c5c7c8; border-bottom-left-radius: 70%; box-shadow: -15px 15px 0 -1px #182833, -15px 15px 0 0 #788b96, -30px 30px 0 -1px #182833, -30px 30px 0 0 #788b96, -45px 45px 0 -1px #182833, -45px 45px 0 0 #788b96; }
@@ -98,7 +98,7 @@
 .photo-theme-experience.composition-editorial .theme-world-hero h2 { font-weight: 400; font-size: clamp(4rem, 7vw, 7.5rem); text-transform: none; line-height: .98; }
 .photo-theme-experience .theme-world-hero-photo { background-size: cover; background-position: var(--photo-card-position, center); border: 0; box-shadow: none; transform: none; }
 .photo-theme-experience .theme-world-hero-caption { transform: none; bottom: -4%; left: 6%; background: var(--theme-bg); color: var(--theme-ink); }
-.photo-theme-experience .theme-world-ticker { background: var(--theme-ink); color: var(--theme-bg); font-family: "Helvetica Neue", Arial, sans-serif; font-weight: 400; font-size: .9rem; letter-spacing: .2em; }
+.photo-theme-experience .theme-world-ticker { background: var(--theme-ink); color: var(--theme-bg); font-family: "Noto Serif Georgian"; font-weight: 400; font-size: .9rem; letter-spacing: .2em; }
 .photo-theme-experience .modern-toast-invitation { display: grid; grid-template-columns: minmax(0, 1fr); place-items: center; padding: 35px 0; min-height: 650px; background: #283640 var(--photo-card-background) var(--photo-card-position, center) / cover; border: 0; box-shadow: 0 18px 35px #1828331a; text-align: left; }
 .photo-theme-experience .modern-toast-invitation::before { display: none; }
 .modern-toast-invitation .modern-toast-paper { width: 68%; min-height: 550px; padding: 12% 8%; }

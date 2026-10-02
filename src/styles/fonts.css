@@ -1,0 +1,103 @@
+/* Local font registry. Keep one registration per family; no remote or system fonts. */
+@font-face { font-family: "Pool Kalam"; src: url('/fonts/cards/pool-kalam-bold.ttf') format('truetype'); font-weight: 700; font-style: normal; font-display: swap; }
+@font-face { font-family: "Comic Anton"; src: url('/fonts/cards/comic-anton.ttf') format('truetype'); font-weight: 400; font-style: normal; font-display: swap; }
+@font-face { font-family: "Comic Lilita"; src: url('/fonts/cards/comic-lilita.ttf') format('truetype'); font-weight: 400; font-style: normal; font-display: swap; }
+@font-face { font-family: "Comic Graduate"; src: url('/fonts/cards/comic-graduate.ttf') format('truetype'); font-weight: 400; font-style: normal; font-display: swap; }
+
+@font-face {
+  font-family: "3D Unicode";
+  src: url('/fonts/3d_unicode.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Heritage Legacy";
+  src: url("/fonts/heritage-legacy.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+@font-face {
+  font-family: "Noto Serif Georgian";
+  src: url("/fonts/noto-serif-georgian.ttf") format("truetype");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+@font-face {
+  font-family: "Casmera Demo";
+  src: url('/fonts/cards/casmera-demo.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Magnola Demo";
+  src: url('/fonts/cards/magnola-demo.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Zalino";
+  src: url('/fonts/cards/zalino.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Elegance Natural Valentine";
+  src: url('/fonts/cards/elegance-natural-valentine.ttf') format('truetype'),
+       url('/fonts/cards/elegance-natural-valentine.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Birthday";
+  src: url('/fonts/cards/birthday.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+@font-face {
+  font-family: "BPG Gorda";
+  src: url('/fonts/cards/georgian/gorda.ttf') format('truetype');
+  font-weight: 400; font-style: normal; font-display: swap;
+}
+
+@font-face {
+  font-family: "BPG Chveulebrivi";
+  src: url('/fonts/cards/georgian/chveulebrivi.ttf') format('truetype');
+  font-weight: 400; font-style: normal; font-display: swap;
+}
+
+@font-face {
+  font-family: "BPG Serif Modern";
+  src: url('/fonts/cards/georgian/serif-modern.ttf') format('truetype');
+  font-weight: 400; font-style: normal; font-display: swap;
+}
+
+@font-face {
+  font-family: "BPG Nateli";
+  src: url('/fonts/cards/georgian/nateli.ttf') format('truetype');
+  font-weight: 400; font-style: normal; font-display: swap;
+}
+
+@font-face {
+  font-family: "BPG Irubaqidze";
+  src: url('/fonts/cards/georgian/irubaqidze.otf') format('opentype');
+  font-weight: 400; font-style: normal; font-display: swap;
+}

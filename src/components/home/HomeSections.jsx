@@ -12,8 +12,8 @@ const possibilities = [
 
 const interactive = [
   { number: "01", id: "diary", to: "/modules/friendship-diary" },
-  { number: "02", id: "wishes", to: "/projects/birthday" },
-  { number: "03", id: "memories", to: "/projects/birthday#optional-modules" },
+  { number: "02", id: "wishes", to: "/invitations?category=birthday" },
+  { number: "03", id: "memories", to: "/invitations?category=birthday#optional-modules" },
 ];
 
 export default function HomeSections() {

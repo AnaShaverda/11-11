@@ -1,3 +1,8 @@
+import { comicBirthdayCaptions } from "../invitations/data/comicBirthdayDesigns.js";
+import { poolBirthdayCaptions } from "../invitations/data/poolBirthdayDesigns.js";
+import { girlyBirthdayCaptions } from "../invitations/data/girlyBirthdayDesigns.js";
+import { cardCopy } from "./cardCopy.js";
+
 export const defaultLanguage = "ka";
 export const languages = ["ka", "en"];
 export const languageNames = { ka: "ქართული", en: "English" };
@@ -375,10 +380,10 @@ const themeCatalog = [
   ],
   [
     "birthday-paper-garland",
-    "ფერადი გირლანდები",
-    "მოხატული გირლანდები და ტორტი",
-    "Paper Garland",
-    "Painted streamers & birthday cake",
+    "ფერადი სურვილები",
+    "აკვარელის ნაზი ტორტი, გირლანდა და ვარსკვლავები",
+    "Watercolor Wishes",
+    "Soft watercolor cake, bunting & sparkles",
   ],
   [
     "birthday-strawberry-social",
@@ -912,10 +917,10 @@ const themeDescriptions = [
   ],
   [
     "birthday-paper-garland",
-    "აკვარლით მოხატული გირლანდები და მხიარული დაბადების დღე.",
-    "ფერადი გირლანდები",
-    "Watercolor streamers, colorful bunting, and a joyful birthday cake.",
-    "Colorful · cheerful · handmade",
+    "აკვარელით ნაზად მოხატული ტორტი, პასტელის გირლანდა და პატარა ვარსკვლავები სუფთა ფონზე.",
+    "პასტელი · ნაზი · აკვარელი",
+    "A loosely painted birthday cake, pastel bunting, and delicate sparkles on a clean background.",
+    "Pastel · airy · watercolor",
   ],
   [
     "birthday-strawberry-social",
@@ -2826,3 +2831,111 @@ Object.assign(captions.ka, {
   "invitationOpening.original": "ორიგინალი",
   "invitationOpening.portrait": "ვერტიკალური",
 });
+
+Object.assign(captions.ka, cardCopy.ka, {
+  "cards.possessive": "{name}",
+  "cards.sweet": "ტკბილი",
+  "cards.y2k": "2000-იანები",
+  "cards.party": "წვეულება",
+  "cards.christening.opening": "პატარა ბედნიერება",
+  "cards.christening.title": "ნათლობა",
+  "cards.christening.closing": "ოჯახთან და საყვარელ ადამიანებთან ერთად",
+  "cards.bridal.opening": "მოწვეული ხარ",
+  "cards.bridal.title": "პატარძლის",
+  "cards.engagement.opening": "ჩვენი ნიშნობა",
+  "cards.bridal.toast": "პატარძლის წვეულება",
+  "cards.reveal.bear-hug": "პატარა ჩახუტება",
+  "cards.reveal.up-in-the-air": "პატარა სიურპრიზი",
+  "cards.reveal.special-delivery": "პატარა გზავნილი",
+  "cards.reveal.little-wonder": "პატარა სასწაული",
+  "cards.reveal.pink-or-blue": "ვარდისფერი თუ ცისფერი?",
+  "cards.reveal.default": "ვარდისფერი თუ ცისფერი?",
+  "cards.reveal.invited": "შემოგვიერთდით სქესის გაგების წვეულებაზე",
+  "cards.reveal.closing": "პატარა სიურპრიზი, დიდი სიყვარული.",
+  "cards.wedding.saveDate": "შეინახეთ თარიღი",
+  "cards.wedding.day": "ქორწილის დღე: {day}",
+  "cards.wedding.step.0": "ცერემონია",
+  "cards.wedding.step.1": "სადღეგრძელო",
+  "cards.wedding.step.2": "ვახშამი",
+  "cards.wedding.step.3": "ცეკვა",
+  "cards.birthday": "დაბადების დღე",
+  "cards.social.title.0": "დაბადების",
+  "cards.social.title.1": "დღე",
+  "cards.social.menu": "სასმელი · მუსიკა · მეგობრები",
+  "cards.social.wear": "სტილი",
+  "cards.social.time": "დრო",
+  "cards.social.where": "ადგილი"
+});
+
+Object.assign(captions.en, cardCopy.en, {
+  "cards.possessive": "{name}’s",
+  "cards.sweet": "Sweet",
+  "cards.y2k": "Y2K",
+  "cards.party": "Party",
+  "cards.christening.opening": "A little blessing",
+  "cards.christening.title": "Christening",
+  "cards.christening.closing": "Together with family & favorite people",
+  "cards.bridal.opening": "YOU’RE INVITED TO",
+  "cards.bridal.title": "Bridal",
+  "cards.engagement.opening": "Celebrating our engagement",
+  "cards.bridal.toast": "A toast to the bride-to-be",
+  "cards.reveal.bear-hug": "A little bear hug",
+  "cards.reveal.up-in-the-air": "A little surprise",
+  "cards.reveal.special-delivery": "Special delivery!",
+  "cards.reveal.little-wonder": "Oh, baby!",
+  "cards.reveal.pink-or-blue": "Pink or Blue?",
+  "cards.reveal.default": "He or She?",
+  "cards.reveal.invited": "Join us for a gender reveal",
+  "cards.reveal.closing": "A little surprise. A lot of love.",
+  "cards.wedding.saveDate": "Save the date",
+  "cards.wedding.day": "Wedding day: {day}",
+  "cards.wedding.step.0": "The ceremony",
+  "cards.wedding.step.1": "A little toast",
+  "cards.wedding.step.2": "Dinner together",
+  "cards.wedding.step.3": "Dancing all night",
+  "cards.birthday": "Birthday",
+  "cards.social.title.0": "BIRTHDAY",
+  "cards.social.title.1": "PARTY",
+  "cards.social.menu": "DRINKS · FOOD · MUSIC · VIBES",
+  "cards.social.wear": "WEAR",
+  "cards.social.time": "TIME",
+  "cards.social.where": "WHERE"
+});
+
+Object.assign(captions.ka, {
+  "cards.date.compact": "{day} {month} {year}",
+  "cards.month.1": "იანვარი",
+  "cards.month.2": "თებერვალი",
+  "cards.month.3": "მარტი",
+  "cards.month.4": "აპრილი",
+  "cards.month.5": "მაისი",
+  "cards.month.6": "ივნისი",
+  "cards.month.7": "ივლისი",
+  "cards.month.8": "აგვისტო",
+  "cards.month.9": "სექტემბერი",
+  "cards.month.10": "ოქტომბერი",
+  "cards.month.11": "ნოემბერი",
+  "cards.month.12": "დეკემბერი"
+});
+
+Object.assign(captions.en, {
+  "cards.date.compact": "{day} {month} {year}",
+  "cards.month.1": "January",
+  "cards.month.2": "February",
+  "cards.month.3": "March",
+  "cards.month.4": "April",
+  "cards.month.5": "May",
+  "cards.month.6": "June",
+  "cards.month.7": "July",
+  "cards.month.8": "August",
+  "cards.month.9": "September",
+  "cards.month.10": "October",
+  "cards.month.11": "November",
+  "cards.month.12": "December"
+});
+
+Object.assign(captions.en, girlyBirthdayCaptions.en);
+Object.assign(captions.ka, girlyBirthdayCaptions.ka);
+
+Object.assign(captions.en, comicBirthdayCaptions.en, poolBirthdayCaptions.en);
+Object.assign(captions.ka, comicBirthdayCaptions.ka, poolBirthdayCaptions.ka);

@@ -2,7 +2,7 @@ import { Link, useParams, useSearchParams } from "react-router-dom";
 import { useLayoutEffect } from "react";
 import { InvitationArtwork } from "../components/InvitationCard.jsx";
 import { getInvitationTemplate } from "../data/templates.js";
-import { invitationSamples } from "../data/invitationSamples.js";
+import { getInvitationSample } from "../../localization/cardCopy.js";
 import { useLanguage } from "../../localization/LanguageContext.jsx";
 import ScrollManager from "../../components/layout/ScrollManager.jsx";
 import { recipientArtwork } from "../data/recipientArtwork.js";
@@ -21,7 +21,7 @@ export default function InvitationOpeningPage() {
 
   if (!template) return <main className="inner-page copy-page"><h1>{t("invitations.notFound.title")}</h1><Link to="/invitations">{t("invitations.allInvitations")}</Link></main>;
 
-  const sample = invitationSamples[template.slug];
+  const sample = getInvitationSample(template.slug, t);
   const palette = template.design.palette;
   return <main className="invitation-opening" style={{ "--invitation-paper": palette[0], "--invitation-ink": palette[1], "--invitation-accent": palette[2] }} aria-label={sample.title}>
     <ScrollManager />

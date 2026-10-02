@@ -13,13 +13,12 @@ Use `npm run build` to create a production bundle.
 
 ## Public routes
 
-- `/` — original 11:11 homepage with category cards and a small invitation selection; choosing a card opens its full category view
+- `/` — original 11:11 homepage with category cards and a small invitation selection; choosing a card opens the invitations catalog with that category selected
 - `/projects` — redirects to the event types section on Home for older links
-- `/projects/birthday` and `/projects/wedding` — complete category invitation collections with style filters, category switching, and expandable experience examples
-- `/projects/corporate` and `/projects/other-celebrations` — shared catalog category views with occasion filters; Other contains Gender Reveal, Bachelorette Party, and Christening / ნათლობა
+- `/projects/:slug` — compatibility redirects to the matching category in `/invitations`; the Friendship Diary link redirects to its module
 - `/experiences/:slug/demo` — public guest demo using an existing theme canvas, with a local RSVP and optional +1 example; page navigation uses the header
 - `/themes/:slug` — redirects to the public invitation catalog until full event themes are unlocked in a future flow
-- `/invitations` — All collections with categories and a shared style selector; old `type` links open the matching full category view
+- `/invitations` — one catalog for All, Birthday, Wedding, Other Celebrations, and Corporate. `?category=birthday` (or `wedding`, `other`, `corporate`) selects a category in place; `style` and `occasion` refine the results. Legacy `type` links redirect to `category` URLs. The heading and catalog controls remain stable across category changes.
 - `/invitations/:slug` — public design presentations with static mood boards and event-card samples; page navigation uses the header
 - `/modules/friendship-diary` — optional module showcase
 - `/surprises` — Digital Surprise presentation and local mock creator flow
@@ -110,7 +109,7 @@ Catalog interaction rules:
 - Category choices, selects, text inputs, and textareas share a text-first underlined style: transparent background, square corners, and only a bottom border. Hover strengthens the underline; keyboard focus adds an inset bottom line without a glow or layout shift. Auth and personalization fields share these states. Preserve a system focus outline in forced-color mode.
 - Use one shared style selector. Update results immediately because these local filters do not require network loading. Keep the user's scroll position stable while refining.
 - Show the result count and a removable style selection. The selected filter's × is the only clear action; omit duplicate reset buttons, including in empty results. Corporate remains an occasion preview with a disabled style filter. Other Celebrations includes Gender Reveal, Bridal Parties, Bachelorette Party, and Christening as subcategories; selecting an occasion filters only that collection and preserves the style. Bridal designs retain their existing preview URLs.
-- Store the applied style in the URL so reload, history, and category navigation retain it. Older category style links are accepted; the first requested legacy style becomes the shared style when viewing All. Search has been replaced with category browsing, so old `q` parameters no longer narrow results and are removed on filter changes.
+- Store the selected category and applied style in the `/invitations` URL so reload, history, and category navigation retain them. Homepage folders link directly to this filtered catalog; category tabs and mobile dropdowns update the same page in place. Older category style links are accepted; the first requested legacy style becomes the shared style when viewing All. Search has been replaced with category browsing, so old `q` parameters no longer narrow results and are removed on filter changes.
 - Use the top header for page navigation; omit page-level back links. Normal browser history retains scroll, focused cards, open category details, and the home carousel position. Keep scroll snapshots free of form content. Programmatically focused route headings have no visual outline; keyboard focus remains visible on interactive controls.
 - Category choices share one continuous baseline and a 3px active marker that moves between choices in 240ms. Disable that transition for reduced motion. Category and filter changes replace the current browsing entry, retain the style, and avoid filling Back history with intermediate selections.
 - Invitation browsing cards show the design name and opening arrow, with a compact caption. Keep detailed style descriptions on the preview page and in the filter choices.

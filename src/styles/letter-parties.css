@@ -1,6 +1,6 @@
-.theme-velvet-post { --theme-bg:#f5d8dd; --theme-ink:#842638; --theme-accent:#be6579; --theme-panel:#f9e6e7; --theme-stroke:#84263830; --theme-display:Georgia,serif; --world-paper:#f5d8dd; --world-photo:url('/images/birthday/velvet-post/blush-wine-stationery.webp'); background:var(--theme-bg); color:var(--theme-ink); }
-.theme-disco-scrapbook { --theme-bg:#faf3e3; --theme-ink:#2d2929; --theme-accent:#eabe4a; --theme-panel:#f2e5c7; --theme-stroke:#2d292930; --theme-display:Georgia,serif; --world-paper:#faf3e3; --world-photo:url('/images/birthday/disco-scrapbook/analog-disco-party.webp'); background:var(--theme-bg); color:var(--theme-ink); }
-.theme-pink-post { --theme-bg:#f7f1e5; --theme-ink:#55463e; --theme-accent:#e6b8c3; --theme-panel:#f1dbe0; --theme-stroke:#55463e30; --theme-display:Georgia,serif; --world-paper:#f7f1e5; --world-photo:url('/images/birthday/pink-post/watercolor-birthday-post.webp'); background:var(--theme-bg); color:var(--theme-ink); }
+.theme-velvet-post { --theme-bg:#f5d8dd; --theme-ink:#842638; --theme-accent:#be6579; --theme-panel:#f9e6e7; --theme-stroke:#84263830; --theme-display: "Noto Serif Georgian"; --world-paper:#f5d8dd; --world-photo:url('/images/birthday/velvet-post/blush-wine-stationery.webp'); background:var(--theme-bg); color:var(--theme-ink); }
+.theme-disco-scrapbook { --theme-bg:#faf3e3; --theme-ink:#2d2929; --theme-accent:#eabe4a; --theme-panel:#f2e5c7; --theme-stroke:#2d292930; --theme-display: "Noto Serif Georgian"; --world-paper:#faf3e3; --world-photo:url('/images/birthday/disco-scrapbook/analog-disco-party.webp'); background:var(--theme-bg); color:var(--theme-ink); }
+.theme-pink-post { --theme-bg:#f7f1e5; --theme-ink:#55463e; --theme-accent:#e6b8c3; --theme-panel:#f1dbe0; --theme-stroke:#55463e30; --theme-display: "Noto Serif Georgian"; --world-paper:#f7f1e5; --world-photo:url('/images/birthday/pink-post/watercolor-birthday-post.webp'); background:var(--theme-bg); color:var(--theme-ink); }
 .invitation-preview-art.full-image-cover:is(.preview-velvet-post,.preview-disco-scrapbook,.preview-pink-post) { background:var(--cover-image) center / cover no-repeat; }
 .full-image-cover.preview-velvet-post { color:#842638; }
 .full-image-cover.preview-velvet-post .full-image-cover-copy { top:19%; left:22%; width:56%; align-items:center; text-align:center; }
@@ -16,9 +16,9 @@
 .full-image-cover.preview-pink-post { color:#55463e; }
 .full-image-cover.preview-pink-post .full-image-cover-copy { top:13%; left:22%; width:56%; align-items:center; text-align:center; }
 .full-image-cover.preview-pink-post .full-image-cover-copy strong { font:italic 400 8cqw/1.04 Georgia,serif; letter-spacing:-.025em; }
-.full-image-cover.preview-pink-post .full-image-cover-opening { font-family:'Courier New',monospace; letter-spacing:.12em; }
+.full-image-cover.preview-pink-post .full-image-cover-opening { font-family: "Noto Serif Georgian"; letter-spacing:.12em; }
 .full-image-cover.preview-pink-post .full-image-cover-copy em { font:400 2.4cqw/1.3 'Courier New',monospace; max-width:100%; }
-.full-image-cover.preview-pink-post .full-image-cover-details { margin-top:3cqw; border-top-color:#55463e50; font-family:'Courier New',monospace; }
+.full-image-cover.preview-pink-post .full-image-cover-details { margin-top:3cqw; border-top-color:#55463e50; font-family: "Noto Serif Georgian"; }
 :is(.theme-velvet-post,.theme-disco-scrapbook,.theme-pink-post) .theme-invitation-card.full-image-cover { width:100%; padding:0; border:0; box-shadow:none; }
 :is(.theme-velvet-post,.theme-disco-scrapbook,.theme-pink-post) .theme-invitation-card .full-image-cover-details { max-width:100%; font-size:1.8cqw; letter-spacing:.04em; }
 :is(.theme-velvet-post,.theme-disco-scrapbook,.theme-pink-post) .theme-world-hero-photo,
@@ -26,7 +26,7 @@
 .design-type-velvet-post .design-type-board { background:#f5d8dd; color:#842638; }
 .design-type-disco-scrapbook .design-type-board { background:#faf3e3; color:#2d2929; }
 .design-type-pink-post .design-type-board { background:#f7f1e5; color:#55463e; }
-:is(.design-type-velvet-post,.design-type-disco-scrapbook,.design-type-pink-post) .design-type-words h3 { max-width:9em; font-family:Georgia,serif; font-style:italic; font-weight:400; }
+:is(.design-type-velvet-post,.design-type-disco-scrapbook,.design-type-pink-post) .design-type-words h3 { max-width:9em; font-family: "Noto Serif Georgian"; font-style:italic; font-weight:400; }
 .design-pattern-velvet-stripes .design-pattern-panel { background-color:#842638; background-image:repeating-linear-gradient(90deg,#be657960 0 24px,transparent 24px 48px); color:#f5d8dd; }
 .design-pattern-scrapbook-grid .design-pattern-panel { background-color:#faf3e3; background-image:linear-gradient(#2d292940 1px,transparent 1px),linear-gradient(90deg,#2d292940 1px,transparent 1px); background-size:80px 80px; color:#2d2929; }
 .design-pattern-pink-paper .design-pattern-panel { background-color:#e6b8c3; background-image:repeating-linear-gradient(135deg,transparent 0 60px,#f7f1e570 61px 62px,transparent 63px 90px); color:#55463e; }

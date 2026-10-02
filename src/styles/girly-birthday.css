@@ -1,0 +1,64 @@
+/* Square discovery cards and portrait invitations use matching illustrated variants. */
+.invitation-art:has(.line-birthday-copy) { color: var(--showcase-ink); background-color: var(--showcase-paper); }
+.line-birthday-copy { position: absolute; z-index: 3; inset: 0; text-align: center; color: var(--showcase-ink); }
+.line-birthday-copy > * { position: absolute; margin: 0; left: 23%; width: 54%; }
+.line-birthday-opening { top: 32%; font-size: 2.8cqw; letter-spacing: .13em; line-height: 1.4; }
+.line-birthday-title { top: 42%; font-size: 13cqw; line-height: 1.02; font-weight: 400; letter-spacing: -.04em; text-wrap: balance; }
+.line-birthday-phrase { top: 73%; font-size: 2.8cqw; line-height: 1.45; font-style: normal; text-wrap: balance; }
+.line-birthday-details { bottom: 10%; font-size: 2.4cqw; line-height: 1.7; letter-spacing: .07em; }
+:root body .line-birthday-copy :is(.line-birthday-opening, .line-birthday-phrase, .line-birthday-details) { font-family: "Zalino", "BPG Serif Modern", "Noto Serif Georgian" !important; }
+:root body .line-birthday-copy :is(.line-birthday-title, .line-birthday-phrase) { font-family: var(--design-font-family) !important; font-synthesis: weight; font-feature-settings: var(--design-font-features); }
+:root body .preview-party-doodles .line-birthday-title { letter-spacing: 0; }
+.preview-party-doodles .line-birthday-opening { top: 37%; }
+.preview-party-doodles .line-birthday-title { top: 44%; }
+.preview-party-doodles .line-birthday-phrase { top: 74%; left: 36%; width: 48%; font-size: 3cqw; }
+.preview-white-and-blue .line-birthday-opening { top: 91%; }
+.preview-white-and-blue .line-birthday-title { top: 51%; left: 14%; width: 72%; font-size: 15cqw; }
+:root body .preview-white-and-blue .line-birthday-phrase { top: 83%; font-size: 5cqw; font-style: italic; }
+.preview-pink-minimal .line-birthday-opening { top: 6%; }
+.preview-pink-minimal .line-birthday-title { top: 12%; left: 19%; width: 62%; font-size: 16cqw; line-height: .92; letter-spacing: -.035em; }
+.preview-pink-minimal .line-birthday-phrase { top: 86%; font-size: 2.4cqw; }
+/* Scale the original cherries separately so the bottom waves keep their position. */
+.invitation-art.full-image-cover.preview-pink-minimal { background: var(--cover-image) center top / 100% 400% no-repeat !important; }
+.invitation-art.full-image-cover.preview-pink-minimal::before,
+.invitation-art.full-image-cover.preview-pink-minimal::after {
+  content: ""; display: block; position: absolute; inset: 0; width: 100%; height: 100%;
+  border: 0; border-radius: 0; opacity: 1; pointer-events: none;
+  background: var(--cover-image) center / 100% 100% no-repeat;
+}
+.invitation-art.full-image-cover.preview-pink-minimal::before { transform: scale(.9); clip-path: inset(0 0 10% 0); }
+.invitation-art.full-image-cover.preview-pink-minimal::after { transform: none; clip-path: inset(91% 0 0 0); }
+:root body .line-birthday-copy:lang(ka) .line-birthday-title { font-size: 9cqw; line-height: 1.2; }
+:root body .preview-white-and-blue .line-birthday-copy:lang(ka) .line-birthday-title { font-size: 10cqw; }
+:root body .preview-pink-minimal .line-birthday-copy:lang(ka) .line-birthday-title { font-size: 14cqw; }
+:root body .preview-party-doodles .line-birthday-copy:lang(ka) .line-birthday-title { left: 12%; width: 76%; font-size: 7.5cqw; }
+.preview-pink-minimal .line-birthday-copy:lang(ka) .line-birthday-phrase { left: 5%; width: 90%; font-size: 2.2cqw; }
+/* Fullscreen keeps the tall reference composition; normal card dimensions are inherited. */
+.invitation-opening:has(.line-birthday-copy) .invitation-opening-frame:not(.is-original) { aspect-ratio: 1 / 2; width: min(100%, calc((100svh - 32px) / 2)); }
+.invitation-opening .invitation-art--portrait:has(.line-birthday-copy) { aspect-ratio: 1 / 2 !important; }
+.invitation-art--portrait .line-birthday-copy > * { left: 13%; width: 74%; }
+.invitation-art--portrait .line-birthday-opening { top: 33%; font-size: 4.4cqw; letter-spacing: .15em; }
+.invitation-art--portrait .line-birthday-title { top: 43%; font-size: 20cqw; line-height: 1; }
+.invitation-art--portrait .line-birthday-phrase { top: 73%; font-size: 5cqw; letter-spacing: .06em; line-height: 1.5; }
+.invitation-art--portrait.preview-ribbon-sketch .line-birthday-phrase { left: 25%; width: 50%; }
+.invitation-art--portrait.preview-party-doodles .line-birthday-opening { top: 39%; }
+.invitation-art--portrait.preview-party-doodles .line-birthday-title { top: 46%; font-size: 18cqw; line-height: 1.04; }
+.invitation-art--portrait.preview-party-doodles .line-birthday-phrase { top: 65%; left: 13%; width: 74%; font-size: 4.5cqw; line-height: 1.4; }
+.invitation-art--portrait.preview-white-and-blue .line-birthday-title { top: 58%; left: 7%; width: 86%; font-size: 19cqw; line-height: 1.02; }
+:root body .invitation-art--portrait.preview-white-and-blue .line-birthday-phrase { top: 78%; font-size: 7cqw; letter-spacing: 0; }
+.invitation-art--portrait.preview-white-and-blue .line-birthday-opening { top: 89%; }
+.invitation-art--portrait.preview-pink-minimal .line-birthday-opening { top: 6%; }
+.invitation-art--portrait.preview-pink-minimal .line-birthday-title { top: 12%; left: 8%; width: 84%; font-size: 33cqw; line-height: .92; }
+.invitation-art--portrait.preview-pink-minimal .line-birthday-phrase { top: 86%; font-size: 4.5cqw; }
+:root body .invitation-art--portrait .line-birthday-copy:lang(ka) .line-birthday-title { font-size: 14cqw; line-height: 1.2; }
+:root body .invitation-art--portrait.preview-pink-minimal .line-birthday-copy:lang(ka) .line-birthday-title { font-size: 17cqw; top: 20%; }
+:root body .invitation-art--portrait.preview-party-doodles .line-birthday-copy:lang(ka) .line-birthday-title { left: 7%; width: 86%; font-size: 11.5cqw; }
+.invitation-art--portrait.preview-pink-minimal .line-birthday-copy:lang(ka) .line-birthday-phrase { top: 86%; font-size: 3.4cqw; }
+/* Companion moodboards keep each study's two-color palette. */
+.design-pattern-modern-birthday-lines { --showcase-accent: var(--showcase-ink); --showcase-secondary: var(--showcase-paper); }
+.design-pattern-modern-birthday-lines .design-support-message h3 { font-size: clamp(2rem, 4.4vw, 4.5rem); line-height: 1.1; letter-spacing: -.03em; }
+.design-pattern-modern-birthday-lines .design-pattern-panel { background: var(--showcase-paper); color: var(--showcase-ink); }
+.design-pattern-modern-birthday-lines .design-pattern-panel p { max-width: 85%; font-family: "Noto Serif Georgian" !important; font-size: .85rem; font-style: normal; line-height: 1.45; }
+.design-pattern-modern-birthday-lines .design-support-card { background: var(--showcase-paper); color: var(--showcase-ink); }
+.design-pattern-modern-birthday-lines .design-support-3 { padding-bottom: 95px; }
+.design-pattern-modern-birthday-lines .design-palette-swatches { grid-template-columns: repeat(2, minmax(0, 1fr)); }

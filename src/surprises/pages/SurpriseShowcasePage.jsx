@@ -1,7 +1,7 @@
 import Icon from "../../components/ui/Icon.jsx";
 import { useEffect, useState } from "react";
 import { Link, useLocation, useNavigate, useSearchParams } from "react-router-dom";
-import { getThemeBySlug } from "../../themes/data/themes.js";
+import { getThemeBySlug } from "../../themes/data/themeRegistry.js";
 import SurprisePhonePreview from "../components/SurprisePhonePreview.jsx";
 import { surpriseOccasions, surpriseOptionalModuleIds } from "../data/surprises.js";
 import { useLanguage } from "../../localization/LanguageContext.jsx";

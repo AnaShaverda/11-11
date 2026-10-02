@@ -1,5 +1,5 @@
 /* A single Birthday identity layered onto the shared invitation showcase. */
-.theme-painted-summer { --theme-bg: #fff9eb; --theme-ink: #23566f; --theme-accent: #df7f77; --theme-panel: #e2f1ec; --theme-stroke: #7eabb777; --theme-display: Georgia, serif; }
+.theme-painted-summer { --theme-bg: #fff9eb; --theme-ink: #23566f; --theme-accent: #df7f77; --theme-panel: #e2f1ec; --theme-stroke: #7eabb777; --theme-display: "Noto Serif Georgian"; }
 
 .invitation-preview-art.preview-painted-summer {
   --preview-accent: #cb706c;
@@ -10,7 +10,7 @@
 .preview-painted-summer::after { content: ""; position: absolute; inset: 14px; z-index: 0; border: 1px solid #53869a73; border-radius: 45% 45% 2px 2px / 11% 11% 2px 2px; pointer-events: none; }
 .preview-painted-summer .invitation-preview-copy { top: 31%; left: 7%; width: 56%; }
 .preview-painted-summer .invitation-preview-copy > span { color: #be6663; }
-.preview-painted-summer .invitation-preview-copy strong { font-family: Georgia, serif; font-size: clamp(1.9rem, 2.6vw, 3.1rem); font-style: italic; font-weight: 400; letter-spacing: -.055em; line-height: 1.02; }
+.preview-painted-summer .invitation-preview-copy strong { font-family: "Noto Serif Georgian"; font-size: clamp(1.9rem, 2.6vw, 3.1rem); font-style: italic; font-weight: 400; letter-spacing: -.055em; line-height: 1.02; }
 .preview-painted-summer .invitation-preview-copy em { color: #527989; }
 .preview-painted-summer .invitation-preview-mark, .preview-painted-summer .invitation-preview-decor { display: none; }
 .preview-painted-summer .invitation-preview-shape.shape-one { right: -10%; bottom: -24%; width: 60%; height: 53%; border-radius: 50%; background: #cce9e5ad; filter: blur(6px); }
@@ -24,7 +24,7 @@
 .birthday-design-page.design-type-painted .design-type-board { display: flex; justify-content: flex-end; min-height: 530px; background: radial-gradient(ellipse at 13% 80%, #cfebea 0 18%, transparent 43%), #fff9eb; }
 .design-type-painted .design-type-board .design-type-mark { position: absolute; top: 8%; left: 5%; font-size: clamp(4.5rem, 10vw, 8rem); letter-spacing: -.1em; opacity: .12; }
 .design-type-painted .design-type-board .design-type-words { width: 57%; margin-left: auto; }
-.design-type-painted .design-type-words h3 { font-family: Georgia, serif; font-style: italic; font-weight: 400; color: #23566f; }
+.design-type-painted .design-type-words h3 { font-family: "Noto Serif Georgian"; font-style: italic; font-weight: 400; color: #23566f; }
 .design-type-painted .design-type-board .birthday-illustration--typography-1 { top: auto; right: auto; bottom: 4%; left: 3%; width: 28%; height: 59%; transform: rotate(-5deg); }
 .design-type-painted .design-type-board .birthday-illustration--typography-2 { z-index: 0; top: 4%; left: 26%; width: 20%; height: 40%; transform: rotate(7deg); }
 .design-type-painted .design-type-glyph { display: none; }

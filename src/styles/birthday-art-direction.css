@@ -544,7 +544,7 @@
   top: 22% !important;
 }
 .preview-classic-celebration .invitation-preview-copy strong {
-  font-family: Georgia, serif;
+  font-family: "Noto Serif Georgian";
   font-weight: 500;
   letter-spacing: -0.05em;
 }
@@ -604,7 +604,7 @@
   width: 49%;
 }
 .preview-floral-affair .invitation-preview-copy strong {
-  font-family: Georgia, serif;
+  font-family: "Noto Serif Georgian";
   font-style: italic;
   font-weight: 400;
   overflow-wrap: anywhere;
@@ -861,7 +861,7 @@
   z-index: 3;
   display: grid;
   color: #ff654f;
-  font-family: Georgia, "Times New Roman", serif;
+  font-family: "Noto Serif Georgian";
   font-size: clamp(2.35rem, 10.4cqw, 7.2rem);
   font-weight: 900;
   line-height: 0.81;
@@ -913,7 +913,7 @@
   left: 5%;
   z-index: 3;
   color: #1749ad;
-  font-family: Georgia, "Times New Roman", serif;
+  font-family: "Noto Serif Georgian";
   font-size: clamp(9rem, 42cqw, 28rem);
   font-weight: 900;
   font-style: italic;
@@ -955,14 +955,14 @@
 }
 .design-type-pop .design-type-mark {
   color: #1749ad;
-  font-family: Georgia, "Times New Roman", serif;
+  font-family: "Noto Serif Georgian";
   font-size: clamp(11rem, 26vw, 22rem);
   font-style: italic;
   letter-spacing: -0.18em;
 }
 .design-type-pop .design-type-words h3 {
   color: #ff654f;
-  font-family: Georgia, "Times New Roman", serif;
+  font-family: "Noto Serif Georgian";
   font-size: clamp(2.8rem, 4.5vw, 5.5rem);
   line-height: 0.87;
 }
@@ -1101,7 +1101,7 @@
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
-  font-family: "Trebuchet MS", sans-serif;
+  font-family: "Noto Serif Georgian";
   font-size: clamp(8rem, 22vw, 18rem);
   font-weight: 1000;
   line-height: 0.76;
@@ -1160,7 +1160,7 @@
   height: 58%;
 }
 .design-type-digital .design-support-card strong {
-  font-family: "Trebuchet MS", sans-serif;
+  font-family: "Noto Serif Georgian";
   font-size: clamp(1.8rem, 2.25vw, 3rem);
   font-weight: 900;
   letter-spacing: -0.06em;

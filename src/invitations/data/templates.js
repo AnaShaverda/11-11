@@ -1,5 +1,8 @@
+import { comicBirthdayStorefront } from "./comicBirthdayDesigns.js";
+import { poolBirthdayStorefront } from "./poolBirthdayDesigns.js";
+import { girlyBirthdayStorefront } from "./girlyBirthdayDesigns.js";
 import { celebrationThemeAssets } from "./celebrationAssets.js";
-import { birthdayThemes, weddingThemes, celebrationThemes } from "../../themes/data/themes.js";
+import { birthdayThemes, weddingThemes, celebrationThemes, isThemeActive } from "../../themes/data/themeRegistry.js";
 import { showcaseDesigns } from "./showcaseDesigns.js";
 import { weddingThemeAssets } from "./weddingAssets.js";
 import { birthdayThemeAssets } from "./birthdayAssets.js";
@@ -7,6 +10,9 @@ import { invitationStyleTags } from "./invitationStyles.js";
 
 // Public storefront metadata stays separate from the full invitation registry and demo event content.
 const storefront = {
+  ...girlyBirthdayStorefront,
+  ...comicBirthdayStorefront,
+  ...poolBirthdayStorefront,
   "christening-olive-full-frame": {"slug": "christening-olive-full-frame", "title": "Olive Watercolor Frame", "style": "A complete watercolor frame of soft olive leaves."},
   "christening-blue-full-frame": {"slug": "christening-blue-full-frame", "title": "Blue Watercolor Frame", "style": "A complete frame of little blue flowers, ribbons, and a soft dove."},
   "christening-little-dreamer": {"slug": "christening-little-dreamer", "title": "Little Dreamer", "style": "A tiny sleeping baby, a simple watercolor frame, and soft painted sparkles."},
@@ -79,7 +85,7 @@ const storefront = {
   "birthday-velvet-post": {"slug": "birthday-velvet-post", "title": "Velvet Post", "style": "Wine stripes & blush ink"},
   "birthday-checkerboard-cheers": {"slug": "birthday-checkerboard-cheers", "title": "Checkerboard Cheers", "style": "Orange checks & painted cocktails"},
   "birthday-pastel-disco": {"slug": "birthday-pastel-disco", "title": "Pastel Disco", "style": "Pastel sparkles & painted disco"},
-  "birthday-paper-garland": {"slug": "birthday-paper-garland", "title": "Paper Garland", "style": "Painted streamers & birthday cake"},
+  "birthday-paper-garland": {"slug": "birthday-paper-garland", "title": "Watercolor Wishes", "style": "Soft watercolor cake, bunting & sparkles"},
   "birthday-strawberry-social": { slug: "birthday-strawberry-social", title: "Strawberry Social", style: "Painted stripes & strawberry shortcake" },
   "birthday-cobalt-cheers": { slug: "birthday-cobalt-cheers", title: "Cobalt Cheers", style: "Blue ink & cocktail cheers" },
   "birthday-ribbon-social": { slug: "birthday-ribbon-social", title: "Ribbon Social", style: "Burgundy ribbons & cocktail sketches" },
@@ -108,6 +114,7 @@ export const invitationTemplates = [...birthdayThemes, ...weddingThemes, ...cele
   const preview = storefront[theme.id];
   return {
     id: theme.id,
+    status: theme.status,
     slug: preview.slug,
     title: preview.title,
     category: theme.category === "birthday" ? "Birthday" : theme.category === "wedding" ? "Wedding" : "Other",
@@ -128,6 +135,8 @@ export const invitationTemplates = [...birthdayThemes, ...weddingThemes, ...cele
     unlockStatus: "locked",
   };
 });
+
+export const activeInvitationTemplates = invitationTemplates.filter(isThemeActive);
 
 export function getInvitationTemplate(slug) {
   return invitationTemplates.find((template) => template.slug === slug);

@@ -24,13 +24,13 @@ a.invitation-card:hover { transform: translateY(-5px); box-shadow: 0 21px 38px r
 .art-retro-pop .art-title { color: #ff5b4d; transform: rotate(-5deg); text-shadow: 4px 4px #2448a9; }
 .art-editorial { color: #492438; background: linear-gradient(150deg, #fff7ea, #f3e5d5); }
 .art-editorial::before { content: ''; position: absolute; inset: 17px 20px -50px; border: 1px solid #b59470; border-radius: 150px 150px 0 0; }
-.art-editorial .art-title { font-family: Georgia, 'Times New Roman', serif; font-size: clamp(3rem, 5vw, 4.5rem); font-weight: 400; letter-spacing: .15em; }
+.art-editorial .art-title { font-family: "Noto Serif Georgian"; font-size: clamp(3rem, 5vw, 4.5rem); font-weight: 400; letter-spacing: .15em; }
 .art-editorial .art-ornament { color: #b48d6b; }
 .art-disco { color: #fb70d5; background: radial-gradient(circle at 65% 30%, #7348a7, #161637 67%); }
 .art-disco::before { content: ''; position: absolute; width: 240px; height: 240px; right: -70px; bottom: -110px; border-radius: 50%; background: repeating-conic-gradient(#e7b8fa 0 10deg, #7f5cb9 10deg 20deg); opacity: .5; }
 .art-golden { color: #6e4e41; background: linear-gradient(170deg, #f8e9d6, #eec5a2 55%, #c8857f); }
 .art-golden::before { content: ''; position: absolute; width: 190px; height: 190px; bottom: -95px; border-radius: 50%; background: #fff4cc; box-shadow: 0 0 45px #fff6d9; }
-.art-golden .art-title { font-family: Georgia, 'Times New Roman', serif; font-style: italic; font-weight: 400; }
+.art-golden .art-title { font-family: "Noto Serif Georgian"; font-style: italic; font-weight: 400; }
 .art-after-dark { color: #d7faff; background: linear-gradient(135deg, #071527, #10386d 55%, #402077); }
 .art-after-dark::before { content: ''; position: absolute; width: 270px; height: 270px; border: 2px solid #78edf2; border-radius: 50%; transform: rotate(-25deg) scaleX(1.6); opacity: .45; }
 .art-after-dark .art-title { letter-spacing: .05em; text-shadow: 0 0 18px #63d8ec; }
@@ -61,10 +61,10 @@ a.invitation-card:hover { transform: translateY(-5px); box-shadow: 0 21px 38px r
 .retro-sticker-right { right: -20px; bottom: 55px; color: #50cbe7; font-size: 8rem; }
 .retro-intro { align-self: flex-start; margin-left: 3px; transform: rotate(-9deg); font-size: 2.4rem; font-weight: 900; font-style: italic; text-decoration: underline; text-decoration-thickness: 3px; text-underline-offset: 7px; }
 .retro-name { width: 100%; margin: 13px 0 -10px; color: #ff5f4d; font-size: clamp(3.9rem, 12vw, 5.9rem); line-height: .95; font-weight: 1000; letter-spacing: -.1em; text-transform: uppercase; text-shadow: 3px 4px #2047a1; overflow-wrap: anywhere; }
-.retro-birthday { z-index: 1; margin-bottom: 10px; transform: rotate(-7deg); font-family: Georgia, 'Times New Roman', serif; font-size: clamp(2.9rem, 10vw, 5.3rem); font-style: italic; font-weight: 800; line-height: .95; letter-spacing: -.09em; }
+.retro-birthday { z-index: 1; margin-bottom: 10px; transform: rotate(-7deg); font-family: "Noto Serif Georgian"; font-size: clamp(2.9rem, 10vw, 5.3rem); font-style: italic; font-weight: 800; line-height: .95; letter-spacing: -.09em; }
 .retro-age { display: grid; place-items: center; width: min(260px, 84%); height: 230px; margin: 15px auto 8px; transform: rotate(-7deg); background: rgba(255, 166, 162, .56); box-shadow: 16px 11px 0 rgba(251, 120, 105, .32); }
 .retro-age span { transform: rotate(7deg); color: #1749b4; font-size: clamp(8rem, 31vw, 11.5rem); font-weight: 1000; line-height: 1; letter-spacing: -.1em; padding-right: .1em; }
-.retro-message { z-index: 1; margin: 20px 0 26px; color: #ff5c49; font-family: Georgia, 'Times New Roman', serif; font-size: clamp(1.7rem, 7vw, 2.8rem); font-style: italic; font-weight: 800; line-height: 1; transform: rotate(-4deg); }
+.retro-message { z-index: 1; margin: 20px 0 26px; color: #ff5c49; font-family: "Noto Serif Georgian"; font-size: clamp(1.7rem, 7vw, 2.8rem); font-style: italic; font-weight: 800; line-height: 1; transform: rotate(-4deg); }
 .retro-details { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); width: calc(100% + 48px); margin-top: auto; padding: 21px 6px 20px; border-top: 3px solid #1748a7; background: rgba(255, 239, 210, .91); }
 .retro-details > div { display: flex; flex-direction: column; align-items: center; min-width: 0; padding: 0 5px; }
 .retro-details > div + div { border-left: 1px solid rgba(23, 72, 167, .45); }
@@ -73,11 +73,11 @@ a.invitation-card:hover { transform: translateY(-5px); box-shadow: 0 21px 38px r
 .retro-details strong { font-size: clamp(.74rem, 2.4vw, 1rem); line-height: 1.15; text-transform: uppercase; overflow-wrap: anywhere; }
 .retro-bottom-mark { align-self: flex-end; margin-top: 15px; font-size: .68rem; font-weight: 900; letter-spacing: .25em; }
 
-.invite-editorial { display: flex; flex-direction: column; align-items: center; min-height: 760px; padding: 65px 30px 38px; background: #fbf4e9; color: #4d2437; text-align: center; font-family: Georgia, 'Times New Roman', serif; isolation: isolate; }
+.invite-editorial { display: flex; flex-direction: column; align-items: center; min-height: 760px; padding: 65px 30px 38px; background: #fbf4e9; color: #4d2437; text-align: center; font-family: "Noto Serif Georgian"; isolation: isolate; }
 .invite-editorial::before { content: ''; position: absolute; z-index: -1; inset: 22px 17px -110px; border: 1px solid #ad8b68; border-radius: 200px 200px 0 0; }
 .editorial-arch { position: absolute; z-index: -2; width: 280px; height: 240px; bottom: -92px; border-radius: 50% 50% 0 0; background: linear-gradient(145deg, #d7b494, #b17d66 55%, #5c4b54); opacity: .65; }
 .editorial-star { color: #b18c67; font-size: 3.4rem; line-height: 1; }
-.editorial-opening { max-width: 270px; margin: 26px auto 27px; font-family: 'Trebuchet MS', 'Segoe UI', sans-serif; font-size: .8rem; line-height: 1.8; letter-spacing: .16em; text-transform: uppercase; }
+.editorial-opening { max-width: 270px; margin: 26px auto 27px; font-family: "Noto Serif Georgian"; font-size: .8rem; line-height: 1.8; letter-spacing: .16em; text-transform: uppercase; }
 .editorial-names { display: flex; flex-direction: column; align-items: center; width: 100%; margin: 0; font-size: clamp(3.2rem, 13vw, 5.2rem); font-weight: 400; line-height: .97; letter-spacing: .02em; text-transform: uppercase; overflow-wrap: anywhere; }
 .editorial-names em { position: relative; width: 100%; margin: 5px 0; color: #ad8b68; font-size: .72em; line-height: 1; font-weight: 400; }
 .editorial-names em::before, .editorial-names em::after { content: ''; position: absolute; top: 50%; width: 30%; height: 1px; background: #ad8b68; }
@@ -85,7 +85,7 @@ a.invitation-card:hover { transform: translateY(-5px); box-shadow: 0 21px 38px r
 .editorial-rule { width: 100px; height: 1px; margin: 35px 0 29px; background: #ad8b68; }
 .editorial-date { margin: 0; font-size: clamp(1.3rem, 5vw, 1.85rem); letter-spacing: .12em; text-transform: uppercase; line-height: 1.25; }
 .editorial-time { margin: 16px 0 27px; color: #6b4a4e; font-size: 1.1rem; font-style: italic; }
-.editorial-location { max-width: 285px; margin: 0; font-family: 'Trebuchet MS', 'Segoe UI', sans-serif; font-size: .85rem; font-weight: 800; letter-spacing: .19em; line-height: 1.5; text-transform: uppercase; }
+.editorial-location { max-width: 285px; margin: 0; font-family: "Noto Serif Georgian"; font-size: .85rem; font-weight: 800; letter-spacing: .19em; line-height: 1.5; text-transform: uppercase; }
 .editorial-rule-small { width: 42px; margin: 25px 0 14px; }
 .editorial-footer { margin: 0; color: #75595b; font-size: .86rem; font-style: italic; }
 .editorial-footer span { color: #ad8b68; }

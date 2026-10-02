@@ -1,6 +1,6 @@
-/* Shared website typography. Card display exceptions are scoped in card-typography.css.
-   Georgian glyphs use the locally bundled Noto Serif Georgian family. */
+/* Downloaded fonts only; each family and weight is shared by both languages. */
 :root body,
 :root body * {
   font-family: var(--font-main) !important;
+  font-synthesis: none;
 }

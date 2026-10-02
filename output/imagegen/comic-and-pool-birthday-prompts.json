@@ -1,0 +1,50 @@
+[
+  {
+    "slug": "city-after-dark",
+    "generator": "built-in image_gen",
+    "source": "/Users/mac/.codex/generated_images/01a0fded-c5d5-70f0-9061-b505b5e7c2c3/exec-b4eed371-d58c-4a8b-931b-eb95b40eaa95.png",
+    "original": "src/assets/birthday/city-after-dark/comic-artwork.png",
+    "asset": "public/images/birthday/city-after-dark/comic-artwork.webp",
+    "prompt": "Use case: stylized-concept. Asset type: TEXT-FREE birthday invitation artwork for a real web project. Use the attached APPROVED moodboard only as a style and composition reference for the named option. Generate ONE single SQUARE 1:1 full-bleed artwork, flat 2D handmade retro comic screenprint, tiny authentic ink grain, red/cobalt/navy/ivory limited palette. No photograph, no mockup, no shadow or outside margins, no labels or swatches. ABSOLUTELY NO TEXT OR NUMERALS OR LETTERING anywhere: leave the typography areas blank so real HTML can be overlaid. Keep motifs flat and simple, crisp printed shapes. No characters or logos. Match option 01 CITY AFTER DARK. Deep midnight navy background (#101e32), angular dark city skyline ONLY along bottom 24% with cobalt blue rectangular windows; an ivory moon at bottom right behind rooftops. Upper-right delicate ivory diagonal web strand, one small dangling ivory spider at x89% y28%. Keep x8%-76%, y8%-53% completely empty dark navy for title. Keep x25%-65% y52%-90% as visually quiet navy (low buildings only) for a giant red age number. No baked numeral. Leave lower-left x5%-23% y64%-83% quiet navy for information. NO central web frame, no whole-page web wallpaper."
+  },
+  {
+    "slug": "comic-cutout",
+    "generator": "built-in image_gen",
+    "source": "/Users/mac/.codex/generated_images/01a0fded-c5d5-70f0-9061-b505b5e7c2c3/exec-e73c0b89-e3df-44a9-92c4-d3b73fb79a7e.png",
+    "original": "src/assets/birthday/comic-cutout/comic-artwork.png",
+    "asset": "public/images/birthday/comic-cutout/comic-artwork.webp",
+    "prompt": "Use case: stylized-concept. Asset type: TEXT-FREE birthday invitation artwork for a real web project. Use the attached APPROVED moodboard only as a style and composition reference for the named option. Generate ONE single SQUARE 1:1 full-bleed artwork, flat 2D handmade retro comic screenprint, tiny authentic ink grain, red/cobalt/navy/ivory limited palette. No photograph, no mockup, no shadow or outside margins, no labels or swatches. ABSOLUTELY NO TEXT OR NUMERALS OR LETTERING anywhere: leave the typography areas blank so real HTML can be overlaid. Keep motifs flat and simple, crisp printed shapes. No characters or logos. Match option 02 COMIC CUTOUT. Warm ivory (#f6eedf) background. Small red angular comic paper-cut bursts and navy halftone dots only along upper-left corner and bottom-left corner; navy geometric city rooftops and cobalt dotted halftone just in bottom-right 22%. A simple dark navy spider at x78%, y58%, width14%. A red handprinted underline at x12%-85%, y43%. Keep upper central area x10%-92% y10%-40% entirely blank ivory for enormous blue PARTY lettering. Keep middle-left x10%-55% y49%-80% entirely blank ivory for name, age and details. Text-free, even the red bursts and bottom corners MUST have NO lettering."
+  },
+  {
+    "slug": "retro-sport",
+    "generator": "built-in image_gen",
+    "source": "/Users/mac/.codex/generated_images/01a0fded-c5d5-70f0-9061-b505b5e7c2c3/exec-a9869ee7-db2e-45da-b4ac-b46d39c76cc4.png",
+    "original": "src/assets/birthday/retro-sport/comic-artwork.png",
+    "asset": "public/images/birthday/retro-sport/comic-artwork.webp",
+    "prompt": "Use case: stylized-concept. Asset type: TEXT-FREE birthday invitation artwork for a real web project. Use the attached APPROVED moodboard only as a style and composition reference for the named option. Generate ONE single SQUARE 1:1 full-bleed artwork, flat 2D handmade retro comic screenprint, tiny authentic ink grain, red/cobalt/navy/ivory limited palette. No photograph, no mockup, no shadow or outside margins, no labels or swatches. ABSOLUTELY NO TEXT OR NUMERALS OR LETTERING anywhere: leave the typography areas blank so real HTML can be overlaid. Keep motifs flat and simple, crisp printed shapes. No characters or logos. Match option 03 RETRO SPORT. Top 46% is solid printed scarlet red (#eb352d). Bottom 54% is warm ivory (#f6eedf). Thin navy/ivory/red horizontal sports poster stripes at y46% and y91%-94%. Three little ivory stars across top at y5%, tiny delicate ivory spiderweb in top-right 12%. One simple red spider at x83%, y67%, width11%. Keep top x8%-88% y12%-42% empty red for college-like navy lettering. Keep bottom x30%-68% y55%-88% completely blank ivory for oversized navy age number. Keep x6%-26% y65%-83% ivory empty for event details. NO TEXT NO NUMERALS anywhere. Flat vintage athletic birthday stationery background."
+  },
+  {
+    "slug": "upside-down",
+    "generator": "built-in image_gen",
+    "source": "/Users/mac/.codex/generated_images/01a0fded-c5d5-70f0-9061-b505b5e7c2c3/exec-c4c8d309-81d4-4716-ab39-dba5a30a2805.png",
+    "original": "src/assets/birthday/upside-down/comic-artwork.png",
+    "asset": "public/images/birthday/upside-down/comic-artwork.webp",
+    "prompt": "Use case: stylized-concept. Asset type: TEXT-FREE birthday invitation artwork for a real web project. Use the attached APPROVED moodboard only as a style and composition reference for the named option. Generate ONE single SQUARE 1:1 full-bleed artwork, flat 2D handmade retro comic screenprint, tiny authentic ink grain, red/cobalt/navy/ivory limited palette. No photograph, no mockup, no shadow or outside margins, no labels or swatches. ABSOLUTELY NO TEXT OR NUMERALS OR LETTERING anywhere: leave the typography areas blank so real HTML can be overlaid. Keep motifs flat and simple, crisp printed shapes. No characters or logos. Match option 04 UPSIDE DOWN. Saturated cobalt blue (#0b58ad) paper with very restrained ink grain. A tiny red spider hangs from one thin ivory vertical thread at x50%, from top edge to y24%. Its red body is y24%, total width13%; a few small ivory excitement strokes around it. A navy flat geometric skyline with a few ivory and cobalt windows only in bottom 19%, buildings taller at edges and low in center. A red printed underline at x15%-80% y73%. Keep x10%-90% y34%-69% completely blank cobalt for huge playful cream lettering. Keep x12%-80% y78%-85% quiet cobalt for host line above skyline. Top-left and top-right x8%-33% and x70%-94% y6%-19% quiet blue for small information. NO TEXT NO NUMERALS NO labels."
+  },
+  {
+    "slug": "pink-lido",
+    "generator": "built-in image_gen",
+    "source": "/Users/mac/.codex/generated_images/01a0fded-c5d5-70f0-9061-b505b5e7c2c3/exec-25e5a839-7d17-4d36-90ef-4322470222b4.png",
+    "original": "src/assets/birthday/pink-lido/pool-artwork.png",
+    "asset": "public/images/birthday/pink-lido/pool-artwork.webp",
+    "prompt": "Use case: stylized-concept. Generate ONE square 1:1 full-bleed TEXT-FREE children's pool-party birthday invitation illustration from the named APPROVED moodboard option in the attached board. Hand-painted gouache with matte watercolor paper grain, charming naive summer resort style, broad irregular brushstrokes, small imperfections, simple shapes, not detailed. No photograph, no people, no 3D, no mockup, no shadow, no outer margins, no swatches, no labels. ABSOLUTELY NO TEXT, NUMERALS, OR LETTERING anywhere: keep the central pool water clean and quiet for real editable typography. Match option 01 PINK LIDO: pink and pale blush broad imperfect VERTICAL striped deck around a big oval mint-aqua pool, viewed from above. Ivory pool rim. One yellow and ivory striped parasol cropped in upper right, one pink and pale blush painted swim ring in lower left, two very small loose green leaf shapes at upper left/lower right. Keep center x28%-72% y24%-76% completely free of objects, with soft low-contrast loosely painted white ripples on light mint water. The pool dominates about 80% of canvas with deck around edges. Warm nostalgic cheerful painted stationery."
+  },
+  {
+    "slug": "blue-splash",
+    "generator": "built-in image_gen",
+    "source": "/Users/mac/.codex/generated_images/01a0fded-c5d5-70f0-9061-b505b5e7c2c3/exec-81234b0f-3216-4e71-9561-0c532fa68265.png",
+    "original": "src/assets/birthday/blue-splash/pool-artwork.png",
+    "asset": "public/images/birthday/blue-splash/pool-artwork.webp",
+    "prompt": "Use case: stylized-concept. Generate ONE square 1:1 full-bleed TEXT-FREE children's pool-party birthday invitation illustration from the named APPROVED moodboard option in the attached board. Hand-painted gouache with matte watercolor paper grain, charming naive summer resort style, broad irregular brushstrokes, small imperfections, simple shapes, not detailed. No photograph, no people, no 3D, no mockup, no shadow, no outer margins, no swatches, no labels. ABSOLUTELY NO TEXT, NUMERALS, OR LETTERING anywhere: keep the central pool water clean and quiet for real editable typography. Match option 02 BLUE SPLASH: chunky wobbly pale blue and ivory GINGHAM deck border around a large simple aqua rectangular swimming pool with slightly irregular painted corners, viewed from above. A pink curved two-rail pool ladder in upper-right corner. One yellow and ivory striped swim ring cropped along lower-right edge. Watery white loose reflections soft low contrast. Keep center x24%-76% y24%-76% clean quiet light-aqua open for cobalt lettering. Broad painterly irregular blue checks, soft sunny watercolor paper, no foliage or other props."
+  }
+]

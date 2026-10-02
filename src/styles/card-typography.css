@@ -1,51 +1,60 @@
-/* The supplied fonts contain Latin glyphs only. Explicit coverage keeps Georgian,
-   missing demo punctuation, and numbers in complete, locally bundled families. */
-@font-face {
-  font-family: "Card Casmera";
-  src: url('/fonts/cards/casmera-demo.ttf') format('truetype');
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-  unicode-range: U+0041-005A, U+0061-007A;
+/* Every text role tries its supplied font first in both languages.
+   Downloaded companions cover only glyphs missing from that font. */
+.invitation-art[data-card-font="casmera-3d"] {
+  --card-display: "Casmera Demo";
+  --card-georgian: "3D Unicode", "BPG Gorda";
+  --card-tracking: 0em;
+  --card-features: "kern" 1, "dlig" 1;
 }
-@font-face {
-  font-family: "Card Magnola";
-  src: url('/fonts/cards/magnola-demo.ttf') format('truetype');
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-  unicode-range: U+0041-005A, U+0061-007A;
+.invitation-art[data-card-font="magnola-3d"] {
+  --card-display: "Magnola Demo";
+  --card-georgian: "3D Unicode", "BPG Chveulebrivi";
+  --card-tracking: -.01em;
+  --card-features: "kern" 1, "ss01" 1;
 }
-@font-face {
-  font-family: "Card Zalino";
-  src: url('/fonts/cards/zalino.ttf') format('truetype');
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-  unicode-range: U+0020-007E, U+00A0-024F, U+2000-206F;
+.invitation-art[data-card-font="elegance-3d"] {
+  --card-display: "Elegance Natural Valentine";
+  --card-georgian: "3D Unicode", "BPG Nateli";
+  --card-tracking: 0em;
+  --card-features: "kern" 1;
 }
-@font-face {
-  font-family: "Card Elegance";
-  src: url('/fonts/cards/elegance-natural-valentine.ttf') format('truetype');
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-  unicode-range: U+0020-007E, U+00A0-024F, U+2000-206F;
+.invitation-art[data-card-font="zalino-3d"] {
+  --card-display: "Zalino";
+  --card-georgian: "3D Unicode", "BPG Serif Modern";
+  --card-tracking: -.02em;
+  --card-features: "kern" 1;
 }
-@font-face {
-  font-family: "Card Birthday";
-  src: url('/fonts/cards/birthday.otf') format('opentype');
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-  unicode-range: U+0020-007E, U+00A0-024F, U+2000-206F;
+.invitation-art[data-card-font="casmera"] {
+  --card-display: "Casmera Demo";
+  --card-georgian: "BPG Gorda";
+  --card-tracking: 0em;
+  --card-features: "kern" 1, "dlig" 1;
 }
-
-.invitation-art[data-card-font="casmera"] { --card-display: "Card Casmera"; }
-.invitation-art[data-card-font="magnola"] { --card-display: "Card Magnola"; }
-.invitation-art[data-card-font="zalino"] { --card-display: "Card Zalino"; }
-.invitation-art[data-card-font="elegance"] { --card-display: "Card Elegance"; }
-.invitation-art[data-card-accent="birthday"] { --card-accent: "Card Birthday"; }
+.invitation-art[data-card-font="magnola"] {
+  --card-display: "Magnola Demo";
+  --card-georgian: "BPG Chveulebrivi";
+  --card-tracking: -.01em;
+  --card-features: "kern" 1, "ss01" 1;
+}
+.invitation-art[data-card-font="zalino"] {
+  --card-display: "Zalino";
+  --card-georgian: "BPG Serif Modern";
+  --card-tracking: -.02em;
+  --card-features: "kern" 1;
+}
+.invitation-art[data-card-font="elegance"] {
+  --card-display: "Elegance Natural Valentine";
+  --card-georgian: "BPG Nateli";
+  --card-tracking: 0em;
+  --card-features: "kern" 1;
+}
+.invitation-art[data-card-font="birthday"] {
+  --card-display: "Birthday";
+  --card-georgian: "BPG Irubaqidze";
+  --card-tracking: 0em;
+  --card-features: "liga" 1;
+}
+.invitation-art[data-card-accent="birthday"] { --card-accent: "Birthday"; }
 
 /* Only live display text inside the artwork receives a decorative font.
    Descendant spans need the same exception to the site's shared font rule. */
@@ -59,6 +68,8 @@
   .christening-card-copy > strong,
   .ribbon-poster-name,
   .modern-toast-name,
+  .reveal-name,
+  .reveal-heading,
   .pastel-image-name
 ),
 :root body .invitation-art[data-card-font] :is(
@@ -70,13 +81,18 @@
   .retro-bridal-copy > strong,
   .christening-card-copy > strong,
   .ribbon-poster-name,
-  .modern-toast-name
+  .modern-toast-name,
+  .reveal-name,
+  .reveal-heading
 ) span {
-  font-family: var(--card-display), "Noto Serif Georgian", Georgia, serif !important;
-  font-weight: 400;
+  font-family: var(--card-display), var(--card-georgian) !important;
+
   font-style: normal;
-  font-synthesis: none;
-  letter-spacing: -.025em;
+  font-synthesis: weight;
+  letter-spacing: var(--card-tracking);
+  font-kerning: normal;
+  font-feature-settings: var(--card-features);
+  text-wrap: balance;
 }
 
 :root body .invitation-art[data-card-accent] :is(
@@ -84,12 +100,14 @@
   .pastel-image-sweet,
   .christening-card-copy > strong > span:first-child
 ) {
-  font-family: var(--card-accent), "Noto Serif Georgian", Georgia, serif !important;
-  font-weight: 400;
+  font-family: var(--card-accent), "BPG Irubaqidze" !important;
+
   font-style: normal;
-  font-synthesis: none;
+  font-synthesis: weight;
   letter-spacing: 0;
   line-height: 1.3;
+  font-variant-ligatures: common-ligatures contextual;
+  text-transform: none;
 }
 
 /* Short handwritten accents complement, rather than compete with, the title. */
@@ -111,6 +129,8 @@
   .christening-card-copy > strong,
   .ribbon-poster-name,
   .modern-toast-name,
+  .reveal-name,
+  .reveal-heading,
   .pastel-image-name
 ) {
   line-height: 1.3;
@@ -119,4 +139,145 @@
 }
 :root body .invitation-art[data-card-accent]:lang(ka) .christening-card-copy > strong > span:first-child {
   font-size: 7.6cqw;
+}
+
+/* Connected handwriting needs natural spacing and additional vertical room. */
+:root body .invitation-art[data-card-font="birthday"] :is(
+  .full-image-cover-copy > strong,
+  .wedding-ink-copy > strong
+) {
+  line-height: 1.28;
+  letter-spacing: 0;
+  font-variant-ligatures: common-ligatures contextual;
+}
+:root body .invitation-art[data-card-font="birthday"].preview-coquette .full-image-cover-copy > strong {
+  font-size: 8cqw;
+}
+:root body .invitation-art[data-card-font="birthday"].preview-ballerina .full-image-cover-copy > strong {
+  font-size: 8cqw;
+}
+
+/* Keep the photo-card signature in the paper's clear strip above the drawing. */
+:root body .invitation-art[data-card-font="birthday"].preview-sweet-snapshot .wedding-ink-opening {
+  top: 10%;
+}
+:root body .invitation-art[data-card-font="birthday"].preview-sweet-snapshot .wedding-ink-copy > strong {
+  top: 14%;
+  font-size: 5.8cqw;
+  line-height: 1.1;
+}
+:root body .invitation-art--layered[data-card-font="birthday"].preview-sweet-snapshot .wedding-ink-opening {
+  top: 6%;
+}
+:root body .invitation-art--layered[data-card-font="birthday"].preview-sweet-snapshot .wedding-ink-copy > strong {
+  top: 11%;
+}
+
+/* Georgian display companions are downloaded files, assigned per theme. */
+/* Greeting treatments follow the card's art direction in both scripts. */
+.invitation-art[data-card-opening="birthday"] {
+  --opening-latin: "Birthday"; --opening-georgian: "BPG Irubaqidze";
+  --opening-tracking: 0em; --opening-case: none;
+}
+.invitation-art[data-card-opening="casmera"] {
+  --opening-latin: "Casmera Demo"; --opening-georgian: "BPG Gorda";
+  --opening-tracking: .08em; --opening-case: uppercase;
+}
+.invitation-art[data-card-opening="magnola"] {
+  --opening-latin: "Magnola Demo"; --opening-georgian: "BPG Chveulebrivi";
+  --opening-tracking: .08em; --opening-case: uppercase;
+}
+.invitation-art[data-card-opening="zalino"] {
+  --opening-latin: "Zalino"; --opening-georgian: "BPG Serif Modern";
+  --opening-tracking: .1em; --opening-case: uppercase;
+}
+.invitation-art[data-card-opening="elegance"] {
+  --opening-latin: "Elegance Natural Valentine"; --opening-georgian: "BPG Nateli";
+  --opening-tracking: .1em; --opening-case: uppercase;
+}
+:root body .invitation-art[data-card-opening][lang] :is(
+  .full-image-cover-opening, .invitation-preview-copy > span:first-child,
+  .retro-poster-kicker, .retro-image-opening, .y2k-image-opening,
+  .pastel-image-opening, .modern-toast-opening, .modern-toast-closing, .ribbon-poster-opening,
+  .wedding-ink-opening, .day-poster-opening, .bridal-line-opening,
+  .retro-bridal-opening, .christening-card-opening, .reveal-invited
+) {
+  font-family: var(--opening-latin), var(--opening-georgian) !important;
+
+  font-style: normal;
+  letter-spacing: var(--opening-tracking);
+  text-transform: var(--opening-case);
+  font-kerning: normal;
+  font-synthesis: weight;
+}
+:root body .invitation-art[data-card-opening="birthday"][lang] :is(
+  .full-image-cover-opening, .retro-bridal-opening, .christening-card-opening,
+  .wedding-ink-opening, .bridal-line-opening, .ribbon-poster-opening
+) {
+  font-size: 4.4cqw;
+  line-height: 1.3;
+  letter-spacing: 0;
+}
+:root body .invitation-art[data-card-opening]:lang(ka) :is(
+  .full-image-cover-opening, .invitation-preview-copy > span:first-child,
+  .retro-poster-kicker, .retro-image-opening, .y2k-image-opening,
+  .pastel-image-opening, .modern-toast-opening, .modern-toast-closing, .ribbon-poster-opening,
+  .wedding-ink-opening, .day-poster-opening, .bridal-line-opening,
+  .retro-bridal-opening, .christening-card-opening, .reveal-invited
+) {
+  letter-spacing: .01em;
+  line-height: 1.4;
+  text-transform: none;
+}
+
+/* These Georgian faces have smaller letter bodies than the Latin displays.
+   Compensate on the card's opening line without enlarging dates or body copy. */
+:root body .invitation-art[data-card-opening][lang="ka"] :is(
+  .full-image-cover-opening, .retro-image-opening, .y2k-image-opening,
+  .pastel-image-opening, .ribbon-poster-opening, .retro-bridal-opening,
+  .christening-card-opening, .wedding-ink-opening, .day-poster-opening
+) {
+  font-size: max(2.8cqw, 10px);
+}
+:root body .invitation-art[data-card-opening="birthday"][lang="ka"] :is(
+  .full-image-cover-opening, .ribbon-poster-opening, .retro-bridal-opening,
+  .christening-card-opening, .wedding-ink-opening
+) {
+  font-size: max(4.4cqw, 12px);
+}
+
+:root body .invitation-art,
+:root body .invitation-art * {
+  font-family: "Zalino", "BPG Serif Modern", "Noto Serif Georgian" !important;
+
+  font-synthesis: weight;
+}
+
+/* Fonts are shared; each theme's forced role weights apply to both languages. */
+:root body .invitation-art[data-card-font][lang] :is(
+  .invitation-preview-copy > strong, .full-image-cover-copy > strong,
+  .wedding-ink-copy > strong, .day-poster-names, .bridal-line-copy > strong,
+  .retro-bridal-copy > strong, .christening-card-copy > strong,
+  .ribbon-poster-name, .modern-toast-name, .reveal-name, .reveal-heading,
+  .pastel-image-name, .retro-poster-title, .retro-image-title,
+  .y2k-image-title, .y2k-image-party, .cobalt-poster-heading
+),
+:root body .invitation-art[data-card-font][lang] :is(
+  .invitation-preview-copy > strong, .full-image-cover-copy > strong,
+  .wedding-ink-copy > strong, .day-poster-names, .bridal-line-copy > strong,
+  .retro-bridal-copy > strong, .christening-card-copy > strong,
+  .ribbon-poster-name, .modern-toast-name, .reveal-name, .reveal-heading,
+  .pastel-image-name, .retro-poster-title, .retro-image-title,
+  .y2k-image-title, .y2k-image-party, .cobalt-poster-heading
+) :is(span, strong) {
+  font-family: var(--card-display), var(--card-georgian), "Noto Serif Georgian" !important;
+
+  font-synthesis: weight;
+}
+:root body .invitation-art[data-card-accent][lang] :is(
+  .retro-bridal-host, .pastel-image-sweet,
+  .christening-card-copy > strong > span:first-child
+) {
+  font-family: var(--card-accent), "BPG Irubaqidze", "Noto Serif Georgian" !important;
+
 }

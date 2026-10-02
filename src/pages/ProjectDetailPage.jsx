@@ -1,7 +1,7 @@
 import Icon from "../components/ui/Icon.jsx";
 import { Link, Navigate, useLocation, useParams } from "react-router-dom";
-import { getCanonicalProjectSlug, getProjectBySlug } from "../data/projects.js";
-import InvitationsPage from "../invitations/pages/InvitationsPage.jsx";
+import { getProjectBySlug } from "../data/projects.js";
+import { getInvitationCatalogLink } from "../invitations/data/catalogFilters.js";
 import { useLanguage } from "../localization/LanguageContext.jsx";
 
 export default function ProjectDetailPage() {
@@ -9,8 +9,6 @@ export default function ProjectDetailPage() {
   const { slug } = useParams();
   const { search, hash, state } = useLocation();
   if (slug === "friendship-diary") return <Navigate to={`/modules/friendship-diary${search}${hash}`} state={state} replace />;
-  const canonicalSlug = getCanonicalProjectSlug(slug);
-  if (canonicalSlug !== slug) return <Navigate to={`/projects/${canonicalSlug}${search}${hash}`} state={state} replace />;
   const project = getProjectBySlug(slug);
   if (!project) {
     return (
@@ -22,6 +20,6 @@ export default function ProjectDetailPage() {
     );
   }
 
-  return <InvitationsPage project={project} />;
+  return <Navigate to={{ ...getInvitationCatalogLink(project, new URLSearchParams(search)), hash }} state={state} replace />;
 
 }

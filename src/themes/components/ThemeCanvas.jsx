@@ -1,3 +1,4 @@
+import { formatCardDate, localizeCardRecord } from "../../localization/cardCopy.js";
 import Icon from "../../components/ui/Icon.jsx";
 import RSVPPreview from "../../modules/components/RSVPPreview.jsx";
 import { demoGuest } from "../data/demoGuests.js";
@@ -15,18 +16,16 @@ function daysUntil(isoDate) {
 
 function Invitation({ theme, event, story, template }) {
   const { language, t } = useLanguage();
-  const compactDate = new Intl.DateTimeFormat(language === "ka" ? "ka-GE" : "en-GB", {
-    day: "numeric", month: "short", year: "numeric", timeZone: "Asia/Tbilisi",
-  }).format(new Date(event.dateISO));
+  const compactDate = formatCardDate(event.dateISO, language, t);
   const birthday = theme.category === "birthday";
-  if ((theme.subcategory === "gender-reveal" || theme.subcategory === "bridal-party" || birthday || ["ink-and-ivy", "garden-dance", "blue-pour", "heart-hideaway", "tipsy-together", "blue-clink", "wedding-day-notes", "celebration-table", "little-vows", "date-and-dinner", "our-people", "happily-away", "first-dance", "rose-letter", "sage-letter", "side-by-side", "come-rain-or-shine", "ribbon-revel", "ivory-vows", "garden-table", "linked-steps", "colorful-company", "heartmarked", "portrait-promise", "sweet-snapshot", "happy-table", "watercolor-banquet", "ring-and-spark", "golden-promise", "cherry-toast", "little-yes", "blush-lift"].includes(theme.visual)) && template) return (
+  if ((template?.visualAssets?.christeningCard || theme.subcategory === "gender-reveal" || theme.subcategory === "bridal-party" || birthday || ["ink-and-ivy", "garden-dance", "blue-pour", "heart-hideaway", "tipsy-together", "blue-clink", "wedding-day-notes", "celebration-table", "little-vows", "date-and-dinner", "our-people", "happily-away", "first-dance", "rose-letter", "sage-letter", "side-by-side", "come-rain-or-shine", "ribbon-revel", "ivory-vows", "garden-table", "linked-steps", "colorful-company", "heartmarked", "portrait-promise", "sweet-snapshot", "happy-table", "watercolor-banquet", "ring-and-spark", "golden-promise", "cherry-toast", "little-yes", "blush-lift"].includes(theme.visual)) && template) return (
     <InvitationArtwork
       template={template}
       large
       className="theme-invitation-card"
       ariaLabel={t("themeCanvas.aria", { name: t(`themes.${theme.id}.name`) })}
       sample={{
-        title: event.title, name: event.hostName, age: event.age ?? 25,
+        title: event.title, name: event.hostName, namePossessive: event.hostNamePossessive, age: event.age ?? 25,
         posterName: event.hostName, posterAge: event.age ?? 25, posterOccasion: event.celebrationName,
         line: event.description,
         date: ["cobalt-cheers", "ribbon-social", "wedding-day-notes", "date-and-dinner", "colorful-company"].includes(theme.visual) ? compactDate : theme.subcategory === "gender-reveal" ? compactDate : `${compactDate} · ${event.time}`,
@@ -40,7 +39,7 @@ function Invitation({ theme, event, story, template }) {
       {theme.decor && <span className="theme-invite-ornament" aria-hidden="true">{theme.decor}</span>}
       <p className="theme-invite-opening">{story.inviteOpening}</p>
       {birthday ? (
-        <div className="theme-invite-names theme-invite-birthday"><span>{event.hostName}’s</span><em>{event.celebrationName}</em></div>
+        <div className="theme-invite-names theme-invite-birthday"><span>{event.hostNamePossessive ?? t("cards.possessive", { name: event.hostName })}</span><em>{event.celebrationName}</em></div>
       ) : (
         <div className="theme-invite-names theme-invite-wedding"><span>{event.brideName}</span><em>&amp;</em><span>{event.groomName}</span></div>
       )}
@@ -83,7 +82,7 @@ export default function ThemeCanvas({ theme, event, compact = false, moduleId })
   const { t } = useLanguage();
   if (compact) return <CompactCanvas theme={theme} event={event} />;
 
-  const story = themeStories[theme.visual];
+  const story = localizeCardRecord("stories", theme.visual, themeStories[theme.visual], t);
   const birthday = theme.category === "birthday";
   const template = invitationTemplates.find((item) => item.themeId === theme.id);
   const assets = template?.visualAssets ?? birthdayThemeAssets[theme.id];

@@ -1,9 +1,15 @@
+import { comicBirthdayPortraits } from "./comicBirthdayDesigns.js";
+import { poolBirthdayPortraits } from "./poolBirthdayDesigns.js";
+import { girlyBirthdayPortraits } from "./girlyBirthdayDesigns.js";
 // Portrait variants; original catalog images remain unchanged.
 export const recipientArtwork = {
+  ...girlyBirthdayPortraits,
+  ...comicBirthdayPortraits,
+  ...poolBirthdayPortraits,
   "birthday-ballerina": "/images/recipient/birthday-ballerina/invitation-portrait.webp",
   "birthday-beer-party": "/images/recipient/birthday-beer-party/invitation-portrait.webp",
   "birthday-checkerboard-cheers": "/images/recipient/birthday-checkerboard-cheers/invitation-portrait.webp",
-  "birthday-classic-celebration": "/images/recipient/birthday-classic-celebration/invitation-portrait.webp",
+  "birthday-classic-celebration": "/images/recipient/birthday-classic-celebration/invitation-portrait-cartoon-ribbon-frame.webp",
   "birthday-cobalt-cheers": "/images/recipient/birthday-cobalt-cheers/invitation-portrait.webp",
   "birthday-coquette": "/images/recipient/birthday-coquette/invitation-portrait.webp",
   "birthday-disco-scrapbook": "/images/recipient/birthday-disco-scrapbook/invitation-portrait.webp",
@@ -11,7 +17,7 @@ export const recipientArtwork = {
   "birthday-football-club": "/images/recipient/birthday-football-club/invitation-portrait.webp",
   "birthday-garden-party": "/images/recipient/birthday-garden-party/invitation-portrait.webp",
   "birthday-painted-summer": "/images/recipient/birthday-painted-summer/invitation-portrait.webp",
-  "birthday-paper-garland": "/images/recipient/birthday-paper-garland/invitation-portrait.webp",
+  "birthday-paper-garland": "/images/recipient/birthday-paper-garland/watercolor-wishes-portrait.webp",
   "birthday-pastel-disco": "/images/recipient/birthday-pastel-disco/invitation-portrait.webp",
   "birthday-pastel-dream": "/images/recipient/birthday-pastel-dream/invitation-portrait.webp",
   "birthday-pink-glam": "/images/recipient/birthday-pink-glam/invitation-portrait.webp",
@@ -75,7 +81,7 @@ export const recipientArtwork = {
   "wedding-heart-hideaway": "/images/recipient/wedding-heart-hideaway/invitation-portrait.webp",
   "wedding-heartmarked": "/images/recipient/wedding-heartmarked/invitation-portrait.webp",
   "wedding-ink-and-ivy": "/images/recipient/wedding-ink-and-ivy/invitation-portrait.webp",
-  "wedding-ivory-vows": "/images/recipient/wedding-ivory-vows/invitation-portrait.webp",
+  "wedding-ivory-vows": "/images/wedding/ivory-vows/watercolor-attire-option-04.webp",
   "wedding-linked-steps": "/images/recipient/wedding-linked-steps/invitation-portrait.webp",
   "wedding-little-vows": "/images/recipient/wedding-little-vows/invitation-portrait.webp",
   "wedding-little-yes": "/images/recipient/wedding-little-yes/invitation-portrait.webp",

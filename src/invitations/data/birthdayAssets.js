@@ -1,3 +1,6 @@
+import { comicBirthdayAssets } from "./comicBirthdayDesigns.js";
+import { poolBirthdayAssets } from "./poolBirthdayDesigns.js";
+import { girlyBirthdayAssets } from "./girlyBirthdayDesigns.js";
 import { paintedSummerAssets } from "./summerAssets.js";
 
 const image = (group, name) => `/images/birthday/${group}/${name}.webp`;
@@ -24,7 +27,7 @@ export const birthdayImages = {
   y2kCover: image("y2k-party", "chrome-cyber-party"),
   retroCover: image("retro-pop", "screenprint-groove"),
   floralCover: image("floral-affair", "illustrated-lily-dinner"),
-  classicCover: image("classic-celebration", "cherry-candle-celebration"),
+  classicCover: image("classic-celebration", "cherry-candle-celebration-cartoon-ribbon-frame"),
   khinkaliScene: image("khinkali-beer", "georgian-tavern"),
   khinkaliItem: image("khinkali-beer", "painted-khinkali"),
   beerItem: image("khinkali-beer", "painted-beer-mug"),
@@ -122,12 +125,15 @@ export const birthdayImages = {
 // Photo-backed cards also accept photoCard: { background, backgroundPosition,
 // variant: "age" | "illustrated" | "playful" | "space" | "dino" | "tavern", paper, ink, artwork: [asset, ...] }.
 export const birthdayThemeAssets = {
+  ...girlyBirthdayAssets,
+  ...comicBirthdayAssets,
+  ...poolBirthdayAssets,
   "birthday-pink-post": {"coverImage": "/images/birthday/pink-post/watercolor-birthday-post.webp", "invitation": [], "typography": {"image": "/images/birthday/pink-post/sealed-blush-envelope.webp", "right": "0%", "bottom": "9%", "width": "24%", "height": "36%"}, "pattern": null, "supportCards": [null, null, {"image": "/images/birthday/pink-post/sealed-blush-envelope.webp", "right": "-3%", "bottom": "0%", "width": "42%", "height": "55%"}]},
   "birthday-disco-scrapbook": {"coverImage": "/images/birthday/disco-scrapbook/analog-disco-party.webp", "invitation": [], "typography": {"image": "/images/birthday/disco-scrapbook/sketched-olive-martini.webp", "right": "0%", "bottom": "9%", "width": "24%", "height": "36%"}, "pattern": null, "supportCards": [null, null, {"image": "/images/birthday/disco-scrapbook/sketched-olive-martini.webp", "right": "-3%", "bottom": "0%", "width": "42%", "height": "55%"}]},
   "birthday-velvet-post": {"coverImage": "/images/birthday/velvet-post/blush-wine-stationery.webp", "invitation": [], "typography": {"image": "/images/birthday/velvet-post/bow-birthday-cake.webp", "right": "0%", "bottom": "9%", "width": "24%", "height": "36%"}, "pattern": null, "supportCards": [null, null, {"image": "/images/birthday/velvet-post/bow-martini.webp", "right": "-3%", "bottom": "0%", "width": "42%", "height": "55%"}]},
   "birthday-checkerboard-cheers": {"coverImage": "/images/birthday/checkerboard-cheers/red-checker-toast.webp", "invitation": [], "typography": {"image": "/images/birthday/checkerboard-cheers/painted-olive-martini.webp", "right": "0%", "bottom": "9%", "width": "24%", "height": "36%"}, "pattern": null, "supportCards": [null, null, {"image": "/images/birthday/checkerboard-cheers/painted-olive-martini.webp", "right": "-3%", "bottom": "0%", "width": "42%", "height": "55%"}]},
   "birthday-pastel-disco": {"coverImage": "/images/birthday/pastel-disco/painted-pastel-disco.webp", "invitation": [], "typography": {"image": "/images/birthday/pastel-disco/watercolor-mirror-ball.webp", "right": "0%", "bottom": "9%", "width": "24%", "height": "36%"}, "pattern": null, "supportCards": [null, null, {"image": "/images/birthday/pastel-disco/watercolor-mirror-ball.webp", "right": "-3%", "bottom": "0%", "width": "42%", "height": "55%"}]},
-  "birthday-paper-garland": {"coverImage": "/images/birthday/paper-garland/painted-paper-party.webp", "invitation": [], "typography": {"image": "/images/birthday/paper-garland/candle-cake.webp", "right": "0%", "bottom": "9%", "width": "24%", "height": "36%"}, "pattern": null, "supportCards": [null, null, {"image": "/images/birthday/paper-garland/candle-cake.webp", "right": "-3%", "bottom": "0%", "width": "42%", "height": "55%"}]},
+  "birthday-paper-garland": {"coverImage": "/images/birthday/paper-garland/watercolor-wishes-square.webp", "invitation": [], "typography": null, "pattern": null, "supportCards": [null, null, null]},
   "birthday-strawberry-social": { coverImage: birthdayImages.strawberryCover, invitation: [], typography: { image: birthdayImages.strawberryCake, right: "0%", bottom: "9%", width: "24%", height: "36%" }, pattern: null, supportCards: [null, null, { image: birthdayImages.strawberryBerries, right: "-3%", bottom: "0%", width: "42%", height: "55%" }] },
   "birthday-cobalt-cheers": { coverImage: birthdayImages.cobaltCover, invitation: [], typography: { image: birthdayImages.cobaltItem, right: "0%", bottom: "9%", width: "24%", height: "32%" }, pattern: null, supportCards: [null, null, { image: birthdayImages.cobaltItem, right: "-3%", bottom: "0%", width: "42%", height: "55%" }] },
   "birthday-ribbon-social": { coverImage: birthdayImages.ribbonCover, invitation: [], typography: { image: birthdayImages.ribbonItem, right: "1%", bottom: "9%", width: "23%", height: "37%" }, pattern: null, supportCards: [null, null, { image: birthdayImages.ribbonItem, right: "-3%", bottom: "0%", width: "42%", height: "58%" }] },

@@ -166,11 +166,11 @@
 .theme-y2k-digital .theme-world-nav, .theme-y2k-digital .theme-world-ticker { border-radius: 0; }
 .theme-y2k-digital .theme-world-hero { background: radial-gradient(circle at 85% 25%, #db90ff77, transparent 40%), linear-gradient(135deg, #0a1988, #373cc8); }
 .theme-y2k-digital .theme-world-hero-photo { background-position: right bottom; }
-.theme-y2k-digital .theme-world-hero h2 { font-family: "Trebuchet MS", sans-serif; font-weight: 1000; text-transform: uppercase; text-shadow: 0 0 22px #9be8ff; }
+.theme-y2k-digital .theme-world-hero h2 { font-family: "Noto Serif Georgian"; font-weight: 1000; text-transform: uppercase; text-shadow: 0 0 22px #9be8ff; }
 .theme-y2k-digital .theme-invitation-card { background: linear-gradient(#e9f5ff, #b6cfff); color: #13237f; border: 3px solid #75aaff; border-radius: 20px; box-shadow: 13px 14px 0 #07135d, inset 0 0 0 8px #eaf4ff; }
 .theme-y2k-digital .theme-invitation-card::before { inset: 32px 15px 15px; border: 1px solid #6590db; border-radius: 8px; }
 .theme-y2k-digital .theme-invite-top { top: 19px; padding: 8px; border-bottom: 2px solid #8cadf5; }
-.theme-y2k-digital .theme-invite-names { font-family: "Trebuchet MS", sans-serif; font-weight: 1000; text-transform: uppercase; text-shadow: 4px 4px #a386ed; }
+.theme-y2k-digital .theme-invite-names { font-family: "Noto Serif Georgian"; font-weight: 1000; text-transform: uppercase; text-shadow: 4px 4px #a386ed; }
 .theme-y2k-digital .theme-invite-shape.shape-one { width: 110px; height: 110px; right: -25px; top: 28%; background: repeating-conic-gradient(#eaefff 0 25%, #759be4 25% 50%) 0 0 / 20px 20px; transform: rotate(18deg); opacity: .45; }
 .theme-y2k-digital .theme-world-gallery-grid { gap: 8px; }
 
@@ -226,7 +226,7 @@
 .theme-neon-night .theme-world-hero-seal { color: #ff53d4; box-shadow: 0 0 30px #ff43c8; }
 .theme-neon-night .theme-invitation-card { background: #0d1030; color: #f4eaff; border: 3px solid #43dcf5; box-shadow: 0 0 30px #49dff788, inset 0 0 28px #ec3fce66; }
 .theme-neon-night .theme-invitation-card::before { border: 2px solid #e64aba; box-shadow: 0 0 16px #ec3fce; }
-.theme-neon-night .theme-invite-names { font-family: "Trebuchet MS", sans-serif; font-weight: 900; font-style: italic; text-transform: uppercase; color: #ff89e7; text-shadow: 0 0 18px #ed3dc5; }
+.theme-neon-night .theme-invite-names { font-family: "Noto Serif Georgian"; font-weight: 900; font-style: italic; text-transform: uppercase; color: #ff89e7; text-shadow: 0 0 18px #ed3dc5; }
 .theme-neon-night .theme-world-image > div { filter: saturate(1.7) hue-rotate(300deg); }
 
 .theme-pastel-dream .theme-world-hero { background: radial-gradient(circle at 65% 25%, #f9d1e2, transparent 30%), radial-gradient(circle at 10% 75%, #bce7f3, transparent 35%), #e7e0fa; }
@@ -277,16 +277,16 @@
 
 .theme-modern-editorial.theme-experience { --world-paper: #fff; background: #fff; }
 .theme-modern-editorial .theme-world-hero { background: linear-gradient(90deg, #fff 75%, #171717 75%); }
-.theme-modern-editorial .theme-world-hero h2 { font-family: "Trebuchet MS", sans-serif; font-size: clamp(4.2rem, 6vw, 6.5rem); font-weight: 1000; text-transform: uppercase; letter-spacing: -.09em; }
+.theme-modern-editorial .theme-world-hero h2 { font-family: "Noto Serif Georgian"; font-size: clamp(4.2rem, 6vw, 6.5rem); font-weight: 1000; text-transform: uppercase; letter-spacing: -.09em; }
 .theme-modern-editorial .theme-world-hero-photo, .theme-modern-editorial .theme-world-image > div { filter: grayscale(1) contrast(1.1); }
 .theme-modern-editorial .theme-world-hero-photo { border: 0; box-shadow: 18px 18px 0 #111; }
 .theme-modern-editorial .theme-world-hero-seal { border-radius: 0; background: #111; color: #fff; }
-.theme-modern-editorial .theme-world-ticker { background: #151515; color: #fff; font-family: "Trebuchet MS", sans-serif; font-weight: 900; }
+.theme-modern-editorial .theme-world-ticker { background: #151515; color: #fff; font-family: "Noto Serif Georgian"; font-weight: 900; }
 .theme-modern-editorial .theme-invitation-card { align-items: flex-start; background: #fff; color: #111; border: 2px solid #111; box-shadow: 18px 18px 0 #111; text-align: left; }
 .theme-modern-editorial .theme-invitation-card::before { display: none; }
 .theme-modern-editorial .theme-invite-top { position: static; align-self: stretch; border-bottom: 2px solid #111; padding-bottom: 17px; }
 .theme-modern-editorial .theme-invite-ornament { margin-top: 65px; color: #111; }
-.theme-modern-editorial .theme-invite-names { align-items: flex-start; font-family: "Trebuchet MS", sans-serif; font-weight: 900; text-transform: uppercase; letter-spacing: -.09em; }
+.theme-modern-editorial .theme-invite-names { align-items: flex-start; font-family: "Noto Serif Georgian"; font-weight: 900; text-transform: uppercase; letter-spacing: -.09em; }
 .theme-modern-editorial .theme-invite-names em { align-self: flex-end; color: #111; }
 .theme-modern-editorial .theme-invite-divider { width: 100%; background: #111; }
 .theme-modern-editorial .theme-world-gallery-grid { grid-template-columns: repeat(4, 1fr); grid-template-rows: 400px; }

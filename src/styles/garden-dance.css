@@ -1,4 +1,4 @@
-.theme-garden-dance { --theme-bg:#fffaf0; --theme-ink:#6e7754; --theme-accent:#e8a8bf; --theme-panel:#edf0df; --theme-stroke:#6e775430; --theme-display:Georgia,serif; --world-paper:#fffaf0; --world-photo:url('/images/wedding/garden-dance/watercolor-wedding-party.webp'); background:var(--theme-bg); color:var(--theme-ink); }
+.theme-garden-dance { --theme-bg:#fffaf0; --theme-ink:#6e7754; --theme-accent:#e8a8bf; --theme-panel:#edf0df; --theme-stroke:#6e775430; --theme-display: "Noto Serif Georgian"; --world-paper:#fffaf0; --world-photo:url('/images/wedding/garden-dance/watercolor-wedding-party.webp'); background:var(--theme-bg); color:var(--theme-ink); }
 .invitation-preview-art.full-image-cover.preview-garden-dance { background:var(--cover-image) center / cover no-repeat; color:#6e7754; }
 .preview-garden-dance .wedding-ink-copy { color:#6e7754; }
 .preview-garden-dance .wedding-ink-opening { top:25%; font:400 4cqw/1.2 'Chalkboard SE','Comic Sans MS',cursive; }
@@ -9,6 +9,6 @@
 .theme-garden-dance .theme-world-hero-photo,
 .theme-garden-dance .theme-world-image > div { background-image:var(--world-photo); background-size:cover; }
 .design-type-garden-dance .design-type-board { background:#fffaf0; color:#6e7754; }
-.design-type-garden-dance .design-type-words h3 { max-width:9em; font-family:Georgia,serif; font-weight:400; }
+.design-type-garden-dance .design-type-words h3 { max-width:9em; font-family: "Noto Serif Georgian"; font-weight:400; }
 .design-type-garden-dance .design-type-words p { max-width:16em; }
 .design-pattern-garden-dance-confetti .design-pattern-panel { background-color:#fffaf0; background-image:radial-gradient(#e8a8bf90 3px,transparent 4px),radial-gradient(#abd0d690 3px,transparent 4px); background-position:0 0,20px 20px; background-size:40px 40px; color:#6e7754; }

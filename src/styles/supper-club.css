@@ -5,7 +5,7 @@
   --theme-accent: #742b32;
   --theme-panel: #f8eedf;
   --theme-stroke: #742b3233;
-  --theme-display: Georgia, "Times New Roman", serif;
+  --theme-display: "Noto Serif Georgian";
   --world-paper: #f8eedf;
   --world-contrast: #742b3210;
   --world-photo: url("/images/birthday/supper-club/candlelit-dinner.webp");
@@ -19,7 +19,7 @@
   top: 10%;
   left: 10%;
   max-width: 6em;
-  font-family: Georgia, "Times New Roman", serif;
+  font-family: "Noto Serif Georgian";
   font-size: 10cqw;
   font-style: italic;
   letter-spacing: -.035em;
@@ -31,7 +31,7 @@
   top: 34%;
   left: 10%;
   max-width: 4.4em;
-  font-family: Georgia, "Times New Roman", serif;
+  font-family: "Noto Serif Georgian";
   font-size: 15cqw;
   font-weight: 400;
   letter-spacing: -.055em;
@@ -42,7 +42,7 @@
   bottom: 7%;
   left: 10%;
   margin: 0;
-  font-family: Georgia, "Times New Roman", serif;
+  font-family: "Noto Serif Georgian";
   font-size: 5.5cqw;
   font-style: italic;
   letter-spacing: 0;
@@ -51,7 +51,7 @@
 .photo-paper-illustrated > .modern-toast-details { position: absolute; bottom: 3%; left: 10%; width: 80%; margin: 0; font-size: 3.2cqw; }
 .design-type-supper-club .design-type-board { grid-template-columns: minmax(0, 1fr); padding-right: 37%; min-height: 480px; border-radius: 2px; }
 .design-type-supper-club .design-type-mark { display: none; }
-.design-type-supper-club .design-type-words h3 { font-family: Georgia, "Times New Roman", serif; font-weight: 400; font-size: clamp(2.8rem, 5vw, 5.5rem); line-height: 1; letter-spacing: -.055em; }
+.design-type-supper-club .design-type-words h3 { font-family: "Noto Serif Georgian"; font-weight: 400; font-size: clamp(2.8rem, 5vw, 5.5rem); line-height: 1; letter-spacing: -.055em; }
 .design-type-supper-club .design-type-words p { font-size: 1.15rem; line-height: 1.45; }
 .design-type-supper-club .design-elements-board > *, .design-type-supper-club .design-support-card { border-radius: 2px; }
 .design-type-supper-club .design-pattern-panel { background: #742b32; color: #f3e7d2; }

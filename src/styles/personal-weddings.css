@@ -4,7 +4,7 @@
   --theme-accent: #a9b9dc;
   --theme-panel: #e8edf2;
   --theme-stroke: #25449930;
-  --theme-display: Georgia, serif;
+  --theme-display: "Noto Serif Georgian";
   --world-paper: #faf5e6;
   --world-photo: url("/images/wedding/blue-clink/blue-ink-wedding-clink.webp");
 }
@@ -14,7 +14,7 @@
   --theme-accent: #afc19e;
   --theme-panel: #eceddf;
   --theme-stroke: #37362c30;
-  --theme-display: Georgia, serif;
+  --theme-display: "Noto Serif Georgian";
   --world-paper: #faf5e8;
   --world-photo: url("/images/wedding/wedding-day-notes/pastel-wedding-day.webp");
 }
@@ -24,7 +24,7 @@
   --theme-accent: #c7beb0;
   --theme-panel: #f0e9de;
   --theme-stroke: #29272330;
-  --theme-display: Georgia, serif;
+  --theme-display: "Noto Serif Georgian";
   --world-paper: #faf6ed;
   --world-photo: url("/images/wedding/celebration-table/simple-celebration-table.webp");
 }
@@ -34,7 +34,7 @@
   --theme-accent: #a34242;
   --theme-panel: #f2e7df;
   --theme-stroke: #29272330;
-  --theme-display: Georgia, serif;
+  --theme-display: "Noto Serif Georgian";
   --world-paper: #faf6ee;
   --world-photo: url("/images/wedding/little-vows/simple-couple-vows.webp");
 }
@@ -44,7 +44,7 @@
   --theme-accent: #b6c7d5;
   --theme-panel: #e7edf0;
   --theme-stroke: #577a9a30;
-  --theme-display: Georgia, serif;
+  --theme-display: "Noto Serif Georgian";
   --world-paper: #faf5e8;
   --world-photo: url("/images/wedding/date-and-dinner/blue-calendar-dinner.webp");
 }
@@ -54,7 +54,7 @@
   --theme-accent: #c9a8a0;
   --theme-panel: #eee0da;
   --theme-stroke: #29272330;
-  --theme-display: Georgia, serif;
+  --theme-display: "Noto Serif Georgian";
   --world-paper: #f7eeea;
   --world-photo: url("/images/wedding/our-people/cartoon-wedding-people.webp");
 }
@@ -474,7 +474,7 @@
   .design-type-words
   h3 {
   max-width: 9em;
-  font-family: Georgia, serif;
+  font-family: "Noto Serif Georgian";
   font-weight: 400;
 }
 :is(
@@ -543,7 +543,7 @@
   --theme-accent: #c7beb0;
   --theme-panel: #f0e9de;
   --theme-stroke: #29272330;
-  --theme-display: Georgia, serif;
+  --theme-display: "Noto Serif Georgian";
   --world-paper: #faf6ed;
   --world-photo: url("/images/wedding/happily-away/getaway-wedding-frame.webp");
 }
@@ -575,7 +575,7 @@
   --theme-accent: #c7beb0;
   --theme-panel: #f0e9de;
   --theme-stroke: #29272330;
-  --theme-display: Georgia, serif;
+  --theme-display: "Noto Serif Georgian";
   --world-paper: #faf6ed;
   --world-photo: url("/images/wedding/first-dance/first-dance-frame.webp");
 }
@@ -607,7 +607,7 @@
   --theme-accent: #dfa5ad;
   --theme-panel: #f0d2ce;
   --theme-stroke: #55463e30;
-  --theme-display: Georgia, serif;
+  --theme-display: "Noto Serif Georgian";
   --world-paper: #f7f1e5;
   --world-photo: url("/images/wedding/rose-letter/watercolor-wedding-letter.webp");
 }
@@ -633,7 +633,7 @@
 .preview-rose-letter .wedding-ink-details {
   top: 43%;
   bottom: auto;
-  font-family: "Courier New", monospace;
+  font-family: "Noto Serif Georgian";
 }
 .design-type-rose-letter .design-type-board {
   background: #f7f1e5;
@@ -646,7 +646,7 @@
   --theme-accent: #beb8ac;
   --theme-panel: #e9e5dc;
   --theme-stroke: #25252230;
-  --theme-display: Georgia, serif;
+  --theme-display: "Noto Serif Georgian";
   --world-paper: #faf8f2;
   --world-photo: url("/images/wedding/side-by-side/walking-together.webp");
 }
@@ -686,7 +686,7 @@
   --theme-accent: #beb8ac;
   --theme-panel: #e9e5dc;
   --theme-stroke: #25252230;
-  --theme-display: Georgia, serif;
+  --theme-display: "Noto Serif Georgian";
   --world-paper: #faf8f2;
   --world-photo: url("/images/wedding/come-rain-or-shine/wind-and-wedding.webp");
 }
@@ -726,7 +726,7 @@
   --theme-accent: #ec9ca6;
   --theme-panel: #f0e5df;
   --theme-stroke: #566b5230;
-  --theme-display: Georgia, serif;
+  --theme-display: "Noto Serif Georgian";
   --world-paper: #fffaf0;
   --world-photo: url("/images/wedding/ribbon-revel/colorful-wedding-dancers.webp");
 }
@@ -766,9 +766,9 @@
   --theme-accent: #ba9a58;
   --theme-panel: #eee9da;
   --theme-stroke: #655a4830;
-  --theme-display: Georgia, serif;
+  --theme-display: "Noto Serif Georgian";
   --world-paper: #fcfaf3;
-  --world-photo: url("/images/wedding/ivory-vows/watercolor-wedding-attire.webp");
+  --world-photo: url("/images/wedding/ivory-vows/watercolor-attire-option-04.webp");
 }
 .preview-ivory-vows .wedding-ink-copy {
   color: #655a48;
@@ -806,7 +806,7 @@
   --theme-accent: #bc9a71;
   --theme-panel: #e7edde;
   --theme-stroke: #49724c30;
-  --theme-display: Georgia, serif;
+  --theme-display: "Noto Serif Georgian";
   --world-paper: #fffaf0;
   --world-photo: url("/images/wedding/garden-table/watercolor-garden-table.webp");
 }
@@ -846,7 +846,7 @@
   --theme-accent: #c39196;
   --theme-panel: #f0e3e0;
   --theme-stroke: #923a4930;
-  --theme-display: Georgia, serif;
+  --theme-display: "Noto Serif Georgian";
   --world-paper: #faf6ef;
   --world-photo: url("/images/wedding/linked-steps/burgundy-wedding-steps.webp");
 }
@@ -887,7 +887,7 @@
   font-style: normal;
 }
 .preview-ribbon-revel .wedding-ink-copy > em {
-  font-family: "Chalkboard SE", "Comic Sans MS", cursive;
+  font-family: "Noto Serif Georgian";
 }
 .preview-linked-steps .wedding-ink-copy > strong {
   font-size: 6.5cqw;
@@ -899,7 +899,7 @@
   --theme-accent: #e99680;
   --theme-panel: #e9ead7;
   --theme-stroke: #476d6730;
-  --theme-display: Georgia, serif;
+  --theme-display: "Noto Serif Georgian";
   --world-paper: #fbf6e9;
   --world-photo: url("/images/wedding/colorful-company/color-pencil-dinner.webp");
 }
@@ -939,7 +939,7 @@
   --theme-accent: #d29aa3;
   --theme-panel: #f2e3de;
   --theme-stroke: #9c334930;
-  --theme-display: Georgia, serif;
+  --theme-display: "Noto Serif Georgian";
   --world-paper: #faf6ef;
   --world-photo: url("/images/wedding/heartmarked/burgundy-calendar-toast.webp");
 }
@@ -979,7 +979,7 @@
   --theme-accent: #c8a465;
   --theme-panel: #e8eef0;
   --theme-stroke: #315e8730;
-  --theme-display: Georgia, serif;
+  --theme-display: "Noto Serif Georgian";
   --world-paper: #fcfaf3;
   --world-photo: url("/images/wedding/portrait-promise/naive-blue-wedding-portrait.webp");
 }
@@ -1019,7 +1019,7 @@
   --theme-accent: #eaa2ad;
   --theme-panel: #d8dfc8;
   --theme-stroke: #452e3830;
-  --theme-display: Georgia, serif;
+  --theme-display: "Noto Serif Georgian";
   --world-paper: #faf5e8;
   --world-photo: url("/images/wedding/sweet-snapshot/sage-envelope-portrait.webp");
 }
@@ -1059,7 +1059,7 @@
   --theme-accent: #e69b8b;
   --theme-panel: #efe5d5;
   --theme-stroke: #365f6430;
-  --theme-display: Georgia, serif;
+  --theme-display: "Noto Serif Georgian";
   --world-paper: #fffaf0;
   --world-photo: url("/images/wedding/happy-table/colorful-pen-wedding-table.webp");
 }
@@ -1226,7 +1226,7 @@
   --theme-accent: #9eaf91;
   --theme-panel: #d9e2cf;
   --theme-stroke: #41544630;
-  --theme-display: Georgia, serif;
+  --theme-display: "Noto Serif Georgian";
   --world-paper: #f7f1e5;
   --world-photo: url("/images/wedding/sage-letter/watercolor-wedding-letter.webp");
 }
@@ -1252,7 +1252,7 @@
 .preview-sage-letter .wedding-ink-details {
   top: 43%;
   bottom: auto;
-  font-family: "Courier New", monospace;
+  font-family: "Noto Serif Georgian";
 }
 .design-type-sage-letter .design-type-board {
   background: #f7f1e5;
@@ -1271,7 +1271,7 @@
   --theme-accent: #dca6b2;
   --theme-panel: #e8edf1;
   --theme-stroke: #55514e30;
-  --theme-display: Georgia, serif;
+  --theme-display: "Noto Serif Georgian";
   --world-paper: #faf6ee;
   background: var(--theme-bg);
   color: var(--theme-ink);
@@ -1331,7 +1331,7 @@
   inset: 0;
   color: #55514e;
   text-align: center;
-  font-family: Georgia, serif;
+  font-family: "Noto Serif Georgian";
 }
 .reveal-poster-copy > * {
   position: absolute;
@@ -1416,7 +1416,7 @@
   .design-type-words
   h3 {
   max-width: 9em;
-  font-family: Georgia, serif;
+  font-family: "Noto Serif Georgian";
   font-weight: 400;
 }
 :is(
@@ -1452,7 +1452,7 @@
   --theme-accent: #dca6b2;
   --theme-panel: #e8edf1;
   --theme-stroke: #55514e30;
-  --theme-display: Georgia, serif;
+  --theme-display: "Noto Serif Georgian";
   --world-paper: #faf6ee;
   --world-photo: url("/images/celebrations/little-wonder/painted-booties.webp");
   background: var(--theme-bg);
@@ -1464,7 +1464,7 @@
   --theme-accent: #dca6b2;
   --theme-panel: #e8edf1;
   --theme-stroke: #55514e30;
-  --theme-display: Georgia, serif;
+  --theme-display: "Noto Serif Georgian";
   --world-paper: #faf6ee;
   --world-photo: url("/images/celebrations/bear-hug/pink-blue-teddies.webp");
   background: var(--theme-bg);
@@ -1476,7 +1476,7 @@
   --theme-accent: #dca6b2;
   --theme-panel: #e8edf1;
   --theme-stroke: #55514e30;
-  --theme-display: Georgia, serif;
+  --theme-display: "Noto Serif Georgian";
   --world-paper: #faf6ee;
   --world-photo: url("/images/celebrations/special-delivery/watercolor-stork.webp");
   background: var(--theme-bg);
@@ -1488,7 +1488,7 @@
   --theme-accent: #dca6b2;
   --theme-panel: #e8edf1;
   --theme-stroke: #55514e30;
-  --theme-display: Georgia, serif;
+  --theme-display: "Noto Serif Georgian";
   --world-paper: #faf6ee;
   --world-photo: url("/images/celebrations/up-in-the-air/pastel-air-balloons.webp");
   background: var(--theme-bg);
@@ -1652,22 +1652,22 @@
 }
 .design-type-little-wonder .design-type-words h3 {
   max-width: 9em;
-  font-family: Georgia, serif;
+  font-family: "Noto Serif Georgian";
   font-weight: 400;
 }
 .design-type-bear-hug .design-type-words h3 {
   max-width: 9em;
-  font-family: Georgia, serif;
+  font-family: "Noto Serif Georgian";
   font-weight: 400;
 }
 .design-type-special-delivery .design-type-words h3 {
   max-width: 9em;
-  font-family: Georgia, serif;
+  font-family: "Noto Serif Georgian";
   font-weight: 400;
 }
 .design-type-up-in-the-air .design-type-words h3 {
   max-width: 9em;
-  font-family: Georgia, serif;
+  font-family: "Noto Serif Georgian";
   font-weight: 400;
 }
 .design-type-little-wonder .design-type-words p {
@@ -1721,7 +1721,7 @@
   --theme-accent: #d9a08c;
   --theme-panel: #e6eadf;
   --theme-stroke: #4b645b30;
-  --theme-display: Georgia, serif;
+  --theme-display: "Noto Serif Georgian";
   --world-paper: #faf6ee;
   --world-photo: url("/images/wedding/watercolor-banquet/watercolor-banquet-table.webp");
 }
@@ -1762,7 +1762,7 @@
   --theme-accent: #b34942;
   --theme-panel: #eee5d8;
   --theme-stroke: #36352f30;
-  --theme-display: Georgia, serif;
+  --theme-display: "Noto Serif Georgian";
   --world-paper: #f7f7ee;
   --world-photo: url("/images/wedding/ring-and-spark/ink-wedding-rings.webp");
 }
@@ -1801,7 +1801,7 @@
   --theme-accent: #b5796a;
   --theme-panel: #eee5d8;
   --theme-stroke: #5e635430;
-  --theme-display: Georgia, serif;
+  --theme-display: "Noto Serif Georgian";
   --world-paper: #f7f7ee;
   --world-photo: url("/images/wedding/golden-promise/watercolor-wedding-rings.webp");
 }
@@ -1845,7 +1845,7 @@
   --theme-accent: #bd4246;
   --theme-panel: #eee7de;
   --theme-stroke: #29272430;
-  --theme-display: Georgia, serif;
+  --theme-display: "Noto Serif Georgian";
   --world-paper: #fffdf7;
   --world-photo: url("/images/wedding/cherry-toast/bride-cocktail-lines.webp");
 }
@@ -1860,7 +1860,7 @@
   --theme-accent: #79866d;
   --theme-panel: #eee7de;
   --theme-stroke: #29272430;
-  --theme-display: Georgia, serif;
+  --theme-display: "Noto Serif Georgian";
   --world-paper: #fffdf7;
   --world-photo: url("/images/wedding/little-yes/ring-hand-lines.webp");
 }
@@ -1875,7 +1875,7 @@
   --theme-accent: #c68d7d;
   --theme-panel: #eee7de;
   --theme-stroke: #29272430;
-  --theme-display: Georgia, serif;
+  --theme-display: "Noto Serif Georgian";
   --world-paper: #fffdf7;
   --world-photo: url("/images/wedding/blush-lift/blush-balloon-lines.webp");
 }

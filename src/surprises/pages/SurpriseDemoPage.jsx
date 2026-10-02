@@ -1,5 +1,5 @@
 import { useLocation, useSearchParams } from "react-router-dom";
-import { getThemeBySlug } from "../../themes/data/themes.js";
+import { getThemeBySlug } from "../../themes/data/themeRegistry.js";
 import SurpriseExperience from "../components/SurpriseExperience.jsx";
 import { birthdaySurprise } from "../data/surprises.js";
 import { useLanguage } from "../../localization/LanguageContext.jsx";

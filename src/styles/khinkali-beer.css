@@ -1,7 +1,7 @@
 /* Georgian birthday table: separate illustrations, shared photo-backed cover. */
 .theme-khinkali-beer {
   --theme-bg: #f3e7d2; --theme-ink: #432923; --theme-accent: #742b32; --theme-panel: #f8eedf; --theme-stroke: #742b3233;
-  --theme-display: Georgia, "Times New Roman", serif; --world-paper: #f8eedf; --world-contrast: #742b3210;
+  --theme-display: "Noto Serif Georgian"; --world-paper: #f8eedf; --world-contrast: #742b3210;
   --world-photo: url("/images/birthday/khinkali-beer/georgian-tavern.webp");
   background: var(--theme-bg); color: var(--theme-ink);
 }
@@ -10,13 +10,13 @@
 .photo-paper-tavern > .modern-toast-opening { top: 11%; font-size: 9cqw; width: 48%; max-width: none; }
 .photo-paper-tavern > .modern-toast-name { top: 35%; width: 49%; max-width: none; font-size: 13cqw; }
 .photo-paper-tavern > .modern-toast-closing { top: 61%; bottom: auto; width: 48%; font-size: 5.6cqw; }
-.photo-paper-tavern > .photo-paper-note { position: absolute; top: 12%; right: 5%; width: 34%; font-family: Georgia, serif; font-size: 5cqw; font-style: italic; white-space: pre-line; line-height: 1.4; text-align: center; transform: rotate(-12deg); letter-spacing: -.04em; }
+.photo-paper-tavern > .photo-paper-note { position: absolute; top: 12%; right: 5%; width: 34%; font-family: "Noto Serif Georgian"; font-size: 5cqw; font-style: italic; white-space: pre-line; line-height: 1.4; text-align: center; transform: rotate(-12deg); letter-spacing: -.04em; }
 .photo-paper-tavern > .photo-paper-caption { position: absolute; bottom: 13%; left: 10%; width: 33%; font-size: 2.8cqw; letter-spacing: .22em; white-space: pre-line; line-height: 1.8; }
 .photo-paper-tavern:has(.modern-toast-details) > .modern-toast-closing { top: 60%; bottom: auto; }
 .photo-paper-tavern > .modern-toast-details { font-size: 2.8cqw; }
 .design-type-khinkali-beer .design-type-board { grid-template-columns: minmax(0, 1fr); padding-right: 38%; min-height: 480px; border-radius: 2px; }
 .design-type-khinkali-beer .design-type-mark { display: none; }
-.design-type-khinkali-beer .design-type-words h3 { font-family: Georgia, serif; font-weight: 400; font-size: clamp(2.8rem, 5vw, 5.5rem); line-height: 1; letter-spacing: -.055em; }
+.design-type-khinkali-beer .design-type-words h3 { font-family: "Noto Serif Georgian"; font-weight: 400; font-size: clamp(2.8rem, 5vw, 5.5rem); line-height: 1; letter-spacing: -.055em; }
 .design-type-khinkali-beer .design-type-words p { font-size: 1.15rem; line-height: 1.45; }
 .design-type-khinkali-beer .design-pattern-panel { background: #742b32; color: #f3e7d2; }
 .design-type-khinkali-beer .design-ticket-panel { background: #bd8e40; color: #432923; border: 1px solid #43292333; }

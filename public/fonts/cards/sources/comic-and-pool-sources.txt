@@ -1,0 +1,7 @@
+Fonts for the approved comic and pool birthday invitation studies, served locally.
+Kalam Bold: https://github.com/google/fonts/tree/main/ofl/kalam
+Anton: https://github.com/google/fonts/tree/main/ofl/anton
+Lilita One: https://github.com/google/fonts/tree/main/ofl/lilitaone
+Graduate: https://github.com/google/fonts/tree/main/ofl/graduate
+Each font's SIL Open Font License is saved alongside the font file.
+Existing Georgian companions provide Georgian glyphs.

@@ -291,7 +291,7 @@
   top: 11%;
   right: 10%;
   color: var(--preview-accent);
-  font-family: Georgia, serif;
+  font-family: "Noto Serif Georgian";
   font-size: 5rem;
   line-height: 1;
   opacity: 0.8;
@@ -302,7 +302,7 @@
   right: 5%;
   bottom: 11%;
   color: var(--preview-accent);
-  font-family: var(--theme-display, Georgia, serif);
+  font-family: var(--theme-display) !important;
   font-size: 6rem;
   font-weight: 900;
   line-height: 1;
@@ -327,7 +327,7 @@
   letter-spacing: 0.2em;
 }
 .invitation-preview-copy strong {
-  font-family: var(--theme-display, Georgia, serif);
+  font-family: var(--theme-display) !important;
   font-size: clamp(2.2rem, 3.1vw, 3.85rem);
   font-weight: 500;
   line-height: 0.97;
@@ -337,7 +337,7 @@
 .invitation-preview-copy em {
   max-width: 280px;
   margin-top: 17px;
-  font-family: Georgia, serif;
+  font-family: "Noto Serif Georgian";
   font-size: 0.9rem;
   line-height: 1.3;
 }
@@ -383,7 +383,7 @@
   position: relative;
   z-index: 1;
   display: block;
-  font-family: Georgia, serif;
+  font-family: "Noto Serif Georgian";
   font-size: clamp(5rem, 10vw, 9rem);
   line-height: 1;
   text-shadow: 0 3px 20px #0002;
@@ -518,7 +518,7 @@
 }
 .preview-retro-pop .invitation-preview-copy strong {
   color: #fc5b4b;
-  font-family: "Trebuchet MS", sans-serif;
+  font-family: "Noto Serif Georgian";
   font-weight: 1000;
   text-transform: uppercase;
   letter-spacing: -0.09em;
@@ -533,7 +533,7 @@
   right: 5%;
   bottom: 14%;
   color: #1750b7;
-  font-family: "Trebuchet MS", sans-serif;
+  font-family: "Noto Serif Georgian";
   font-size: 9rem;
   opacity: 0.94;
   transform: rotate(-9deg);
@@ -576,7 +576,7 @@
   width: 62%;
 }
 .preview-y2k-digital .invitation-preview-copy strong {
-  font-family: "Trebuchet MS", sans-serif;
+  font-family: "Noto Serif Georgian";
   font-weight: 1000;
   text-transform: uppercase;
   letter-spacing: -0.07em;
@@ -597,7 +597,7 @@
   right: 7%;
   bottom: 4%;
   color: #9ed8ff;
-  font-family: "Trebuchet MS", sans-serif;
+  font-family: "Noto Serif Georgian";
   font-size: 3rem;
   opacity: 1;
 }
@@ -755,7 +755,7 @@
 }
 .preview-neon-night .invitation-preview-copy strong {
   color: #ff80dd;
-  font-family: "Trebuchet MS", sans-serif;
+  font-family: "Noto Serif Georgian";
   font-weight: 1000;
   font-style: italic;
   text-transform: uppercase;
@@ -922,7 +922,7 @@
   color: #111;
 }
 .preview-editorial .invitation-preview-copy strong {
-  font-family: "Trebuchet MS", sans-serif;
+  font-family: "Noto Serif Georgian";
   font-weight: 900 !important;
   text-transform: uppercase;
   letter-spacing: -0.085em;

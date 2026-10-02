@@ -1,7 +1,46 @@
 import assert from "node:assert/strict";
 import test from "node:test";
-import { readCatalogFilters, readCatalogOccasion, updateCatalogFilters } from "../src/invitations/data/catalogFilters.js";
+import { getInvitationCatalogLink, readCatalogCategory, readCatalogFilters, readCatalogOccasion, updateCatalogFilters } from "../src/invitations/data/catalogFilters.js";
+import { projects, getProjectBySlug } from "../src/data/projects.js";
 import { celebrationThemes, weddingThemes, getThemeBySlug } from "../src/themes/data/themes.js";
+
+test("the shared catalog validates category URLs and accepts legacy type links", () => {
+  for (const project of projects) {
+    assert.equal(readCatalogCategory(new URLSearchParams(`category=${project.id}`)), project);
+    assert.equal(readCatalogCategory(new URLSearchParams(`type=${project.slug}`)), project);
+  }
+  assert.equal(readCatalogCategory(new URLSearchParams("category=WEDDING"))?.id, "wedding");
+  assert.equal(readCatalogCategory(new URLSearchParams("category=birthday&type=wedding"))?.id, "birthday");
+  for (const query of ["", "category=all", "category=unknown", "type=unknown"]) {
+    assert.equal(readCatalogCategory(new URLSearchParams(query)), null);
+  }
+});
+
+test("category switching uses one route, keeps style, and scopes occasions to Other", () => {
+  const original = new URLSearchParams("category=other&style=pastel&occasion=christening&ref=home");
+  const all = getInvitationCatalogLink(null, original);
+  assert.equal(all.pathname, "/invitations");
+  assert.equal(all.search, "style=pastel&occasion=christening&ref=home");
+  const birthday = getInvitationCatalogLink(projects[0], original);
+  assert.equal(birthday.pathname, "/invitations");
+  assert.equal(birthday.search, "category=birthday&style=pastel&ref=home");
+  assert.equal(original.get("category"), "other");
+  assert.equal(original.get("occasion"), "christening");
+});
+
+test("old project and type links migrate to category URLs with their style", () => {
+  const project = getProjectBySlug("birthday-wishes");
+  const link = getInvitationCatalogLink(project, new URLSearchParams("birthdayStyle=green&q=garden"));
+  assert.deepEqual(link, { pathname: "/invitations", search: "category=birthday&style=green" });
+  const params = new URLSearchParams("type=other-celebrations&otherStyle=pastel&occasion=bridal-party");
+  const migrated = getInvitationCatalogLink(readCatalogCategory(params), params);
+  assert.equal(migrated.pathname, "/invitations");
+  assert.equal(readCatalogCategory(new URLSearchParams(migrated.search))?.id, "other");
+  assert.equal(new URLSearchParams(migrated.search).get("occasion"), "bridal-party");
+  assert.equal(new URLSearchParams(migrated.search).get("style"), "pastel");
+  assert.equal(new URLSearchParams(migrated.search).has("type"), false);
+  assert.equal(new URLSearchParams(migrated.search).has("otherStyle"), false);
+});
 
 test("current filters take precedence over older category-specific links", () => {
   assert.deepEqual(readCatalogFilters(new URLSearchParams("q=garden&birthdayStyle=green"), "birthday"), { style: "green" });

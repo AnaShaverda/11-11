@@ -1,0 +1,15 @@
+/* The approved option 04 garment pair is shared by every invitation format. */
+.invitation-art.full-image-cover.preview-ivory-vows { background: var(--showcase-paper) !important; }
+.ivory-vows-attire {
+  position: absolute; z-index: 2; left: 12%; top: 32%; width: 76%; height: 55%;
+  object-fit: contain; pointer-events: none;
+}
+.preview-ivory-vows .wedding-ink-opening { top: 6%; }
+.preview-ivory-vows .wedding-ink-copy > strong { top: 14%; }
+.preview-ivory-vows .wedding-ink-copy > em { top: 25%; }
+.preview-ivory-vows .wedding-ink-details { top: 90%; bottom: auto; }
+.invitation-art--portrait.preview-ivory-vows .ivory-vows-attire { left: 6%; top: 33%; width: 88%; height: 50%; }
+.invitation-art--portrait.preview-ivory-vows .wedding-ink-opening { top: 7%; }
+.invitation-art--portrait.preview-ivory-vows .wedding-ink-copy > strong { top: 15%; }
+.invitation-art--portrait.preview-ivory-vows .wedding-ink-copy > em { top: 24%; }
+.invitation-art--portrait.preview-ivory-vows .wedding-ink-details { top: 88%; bottom: auto; }

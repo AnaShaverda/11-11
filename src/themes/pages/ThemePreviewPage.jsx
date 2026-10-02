@@ -3,8 +3,8 @@ import Icon from "../../components/ui/Icon.jsx";
 import { useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import ThemeCanvas from "../components/ThemeCanvas.jsx";
-import { getThemeBySlug } from "../data/themes.js";
-import { themeDemoEvents } from "../data/demoEvents.js";
+import { getThemeBySlug } from "../data/themeRegistry.js";
+import { getThemeDemoEvent } from "../../localization/cardCopy.js";
 import { optionalModulesByCategory } from "../../modules/data/eventModules.js";
 import { useLanguage } from "../../localization/LanguageContext.jsx";
 import { invitationTemplates } from "../../invitations/data/templates.js";
@@ -18,7 +18,7 @@ export default function ThemePreviewPage() {
 
   if (!theme) return <section className="inner-page copy-page"><h1>{t("themePreview.notFound.title")}</h1><p>{t("themePreview.notFound.description")}</p><Link className="text-link" to="/#projects">{t("common.exploreEvents")} <Icon name="arrow-up-right" size={18} /></Link></section>;
 
-  const event = themeDemoEvents[theme.id] ?? themeDemoEvents[theme.category];
+  const event = getThemeDemoEvent(theme.id, t) ?? getThemeDemoEvent(theme.category, t);
   const template = invitationTemplates.find((item) => item.themeId === theme.id);
   const activeModule = options.includes(selectedModule) ? selectedModule : options[0];
   return (

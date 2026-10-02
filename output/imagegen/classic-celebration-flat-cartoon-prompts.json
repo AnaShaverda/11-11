@@ -1,0 +1,16 @@
+{
+  "mode": "built-in image_gen",
+  "transparent_background": false,
+  "prompts": [
+    {
+      "format": "square",
+      "prompt": "Use case: precise-object-edit.\nAsset type: birthday invitation background with separate live text.\nPrimary request: change ONLY the background behind the existing cartoon cake to match a clean flat cartoon style. Remove all paper grain, mottling, watercolor washes, brush marks and photographic texture. Use a completely smooth pale warm cream backdrop, approximately #FFF3DE. Make the tabletop at the bottom a single smooth pastel blush-pink shape, approximately #F4D1CD, with a simple gently curved upper edge following the existing tabletop height. Place just one flat muted rosy oval contact shadow under the pedestal. This should feel like an elegant simple 2D cartoon birthday card, using crisp flat color areas, no texture and no gradients. Keep the entire upper and left area quiet and clear for live website text.\nConstraints: preserve the cake and stand exactly as supplied: same drawn details, contours, colors, bows, frosting, cherries, candles and flames; same position, size and cropping. Preserve canvas aspect ratio and framing. The only changes are the background and ground shadow. Keep the large outer ribbon absent. Do not add decorative objects, confetti, patterns, balloons or frames. No text, lettering, watermark. Output only the finished artwork.\nInput image: edit target, square artwork.",
+      "source": "/Users/mac/Desktop/11-11/public/images/birthday/classic-celebration/cherry-candle-celebration-cartoon-no-ribbon.webp"
+    },
+    {
+      "format": "portrait",
+      "prompt": "Use case: precise-object-edit.\nAsset type: birthday invitation background with separate live text.\nPrimary request: change ONLY the background behind the existing cartoon cake to match a clean flat cartoon style. Remove all paper grain, mottling, watercolor washes, brush marks and photographic texture. Use a completely smooth pale warm cream backdrop, approximately #FFF3DE. Make the tabletop at the bottom a single smooth pastel blush-pink shape, approximately #F4D1CD, with a simple gently curved upper edge following the existing tabletop height. Place just one flat muted rosy oval contact shadow under the pedestal. This should feel like an elegant simple 2D cartoon birthday card, using crisp flat color areas, no texture and no gradients. Keep the entire upper and left area quiet and clear for live website text.\nConstraints: preserve the cake and stand exactly as supplied: same drawn details, contours, colors, bows, frosting, cherries, candles and flames; same position, size and cropping. Preserve canvas aspect ratio and framing. The only changes are the background and ground shadow. Keep the large outer ribbon absent. Do not add decorative objects, confetti, patterns, balloons or frames. No text, lettering, watermark. Output only the finished artwork.\nInput image: edit target, portrait artwork.",
+      "source": "/Users/mac/Desktop/11-11/public/images/recipient/birthday-classic-celebration/invitation-portrait-cartoon-no-ribbon.webp"
+    }
+  ]
+}

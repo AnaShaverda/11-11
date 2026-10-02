@@ -1,13 +1,13 @@
 /* Two original card silhouettes with painted crowns and editable text. */
 .theme-space-explorer {
   --theme-bg: #182f47; --theme-ink: #fff1d7; --theme-accent: #e68b43; --theme-panel: #233d59; --theme-stroke: #fff1d730;
-  --theme-display: "Trebuchet MS", sans-serif; --world-paper: #233d59; --world-contrast: #92aecf20;
+  --theme-display: "Noto Serif Georgian"; --world-paper: #233d59; --world-contrast: #92aecf20;
   --world-photo: url("/images/birthday/space-explorer/cosmic-party.webp");
   background: var(--theme-bg); color: var(--theme-ink);
 }
 .theme-dino-adventure {
   --theme-bg: #f6edd9; --theme-ink: #354d33; --theme-accent: #bc683c; --theme-panel: #fcf5e5; --theme-stroke: #354d3330;
-  --theme-display: "Trebuchet MS", sans-serif; --world-paper: #fcf5e5; --world-contrast: #a9b79430;
+  --theme-display: "Noto Serif Georgian"; --world-paper: #fcf5e5; --world-contrast: #a9b79430;
   --world-photo: url("/images/birthday/dino-adventure/jungle-party.webp");
   background: var(--theme-bg); color: var(--theme-ink);
 }
@@ -25,8 +25,8 @@
 .photo-paper-space > .birthday-illustration, .photo-paper-dino > .birthday-illustration { pointer-events: none; }
 :is(.design-type-space-explorer, .design-type-dino-adventure) .design-type-board { grid-template-columns: minmax(0, 1fr); min-height: 480px; padding-right: 42%; border-radius: 40px 4px 40px 4px; }
 :is(.design-type-space-explorer, .design-type-dino-adventure) .design-type-mark { display: none; }
-:is(.design-type-space-explorer, .design-type-dino-adventure) .design-type-words h3 { font-family: "Trebuchet MS", sans-serif; font-size: clamp(2.8rem, 5vw, 5.5rem); font-weight: 900; letter-spacing: -.045em; }
-:is(.design-type-space-explorer, .design-type-dino-adventure) .design-type-words p { font-family: "Trebuchet MS", sans-serif; font-size: 1.1rem; font-style: normal; line-height: 1.5; }
+:is(.design-type-space-explorer, .design-type-dino-adventure) .design-type-words h3 { font-family: "Noto Serif Georgian"; font-size: clamp(2.8rem, 5vw, 5.5rem); font-weight: 900; letter-spacing: -.045em; }
+:is(.design-type-space-explorer, .design-type-dino-adventure) .design-type-words p { font-family: "Noto Serif Georgian"; font-size: 1.1rem; font-style: normal; line-height: 1.5; }
 .design-type-space-explorer .design-type-board { background: #182f47; color: #fff1d7; }
 .design-type-space-explorer .design-pattern-panel { background: #182f47; color: #fff1d7; }
 .design-type-space-explorer .design-ticket-panel { background: #e68b43; color: #182f47; }

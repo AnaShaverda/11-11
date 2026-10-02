@@ -22,7 +22,7 @@
   flex-direction: column;
   margin-top: 3cqw;
   color: #ff654f;
-  font-family: "Cooper Black", "Cooper Std Black", Georgia, serif;
+  font-family: "Noto Serif Georgian";
   font-size: 9.4cqw;
   font-weight: 900;
   line-height: .95;
@@ -32,7 +32,7 @@
 .retro-image-title span:first-child { font-size: .7em; margin-bottom: .12em; }
 .retro-image-age {
   margin: 2.5cqw 0 1cqw;
-  font-family: "Cooper Black", "Cooper Std Black", Georgia, serif;
+  font-family: "Noto Serif Georgian";
   font-size: 28cqw;
   font-weight: 900;
   font-style: italic;
@@ -43,7 +43,7 @@
 }
 .retro-image-cover-copy em {
   margin-top: 2cqw;
-  font-family: Georgia, serif;
+  font-family: "Noto Serif Georgian";
   font-size: clamp(12px, 2.5cqw, 20px);
   font-weight: 700;
 }
@@ -53,3 +53,11 @@
   font-weight: 900;
   letter-spacing: .13em;
 }
+
+/* Georgian occasion names need more room than the English display heading. */
+.invitation-art:lang(ka) .retro-image-title {
+  font-size: 6.3cqw;
+  letter-spacing: -.03em;
+}
+.invitation-art:lang(ka) .retro-image-age { font-size: 24cqw; }
+.invitation-art:lang(ka) .retro-image-details { letter-spacing: .02em; }

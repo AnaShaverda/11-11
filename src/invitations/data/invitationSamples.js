@@ -1,5 +1,11 @@
+import { comicBirthdaySamples } from "./comicBirthdayDesigns.js";
+import { poolBirthdaySamples } from "./poolBirthdayDesigns.js";
+import { girlyBirthdaySamples } from "./girlyBirthdayDesigns.js";
 // Demo content for the public preview only. Real event content will be supplied later.
 export const invitationSamples = {
+  ...girlyBirthdaySamples,
+  ...comicBirthdaySamples,
+  ...poolBirthdaySamples,
   "christening-olive-full-frame": {"title": "Sofia’s Christening", "name": "Sofia", "date": "18 MAY 2027 · 13:00", "location": "TBILISI", "line": "Join us for a day of love & light."},
   "christening-blue-full-frame": {"title": "Sofia’s Christening", "name": "Sofia", "date": "18 MAY 2027 · 13:00", "location": "TBILISI", "line": "Join us for a day of love & light."},
   "christening-little-dreamer": {"title": "Sofia’s Christening", "name": "Sofia", "date": "18 MAY 2027 · 13:00", "location": "TBILISI", "line": "Join us for a day of love & light."},
