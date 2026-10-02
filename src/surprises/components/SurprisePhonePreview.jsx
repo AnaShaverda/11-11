@@ -1,5 +1,5 @@
-import Icon from "../../components/ui/Icon.jsx";
 import { Link } from "react-router-dom";
+import Icon from "../../components/ui/Icon.jsx";
 import { getThemeBySlug } from "../../themes/data/themes.js";
 import { birthdaySurprise } from "../data/surprises.js";
 import { CakeVisual } from "./InteractiveCake.jsx";

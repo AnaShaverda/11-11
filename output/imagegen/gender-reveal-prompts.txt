@@ -1,0 +1,23 @@
+Mode: built-in image_gen
+
+revealStripesPrompt
+Use case: stylized-concept. Original square flat gender reveal invitation background inspired by soft striped stationery. Warm ivory textured paper. Outer margins alternating narrow pale blush pink and dusty baby-blue watercolor vertical stripes, irregular hand-painted translucent washes. Central large ivory blank area x18%-82%,y15%-87% enclosed by a thin loosely drawn wavy dusty-blue ribbon frame with small curled corners and one tiny blush bow centered at top y12%. All central area completely empty for live editable lettering. Simple restrained hand-painted art, subtle natural paper fibers, imperfect organic lines, no polished vectors, no glossy 3D, no shadows, no photo mockup, no words numbers watermark logos. Frame distinct from reference with gentler rounded curves and tiny bow.
+
+revealRibbonPrompt
+Use case: stylized-concept. Original square gender reveal invitation background, flat ivory lightly textured paper. A thin flowing ribbon border with small loose twists: left side blush pink watercolor, right side dusty blue watercolor, joined by one airy two-color bow centered top y11%. Border inset10%, curly bottom corners, original asymmetrical hand-painted curves. Keep ALL center x22%-78%,y22%-83% entirely blank for live headings names and date. No stripes. Simple delicate watercolor, uneven translucent washes, no realistic rendering, no 3D shine, no photo card mockup, no text numbers logos watermarks. A warm refined easy drawing.
+
+revealBalloonsPrompt
+Use case: stylized-concept. Original square gender reveal invitation background, warm ivory subtle watercolor paper. Two small delicate hand-painted balloons clustered near upper-left x25%,y28%, one powder blue and one blush pink, simple translucent pigment washes, small bows at tied necks and slender gently wandering strings to y69%, contained left x12%-36%. Right and center x38%-85%,y23%-83% entirely blank for editable card wording. Tiny pale blue/pink watercolor petal sprigs at bottom-left and bottom-right, very sparse. Original airy simple watercolor art, no photo surroundings, no shadows no bokeh, no 3D no glossy rendering, no text logos numbers. Flat card artwork only.
+
+revealFootprintsPrompt
+Use case: stylized-concept. Square flat gender reveal invitation background on warm ivory paper with very subtle grain. Centered across y33%-51%, two small pairs of simple baby footprint stamps: dusty powder-blue pair left and blush-pink pair right, each foot has one soft rounded sole and five tiny toe dots, anatomically recognizable as footprints, delicate irregular watercolor pigment. Different gentle rotations rather than exact symmetry. Upper x15%-85%,y8%-28% fully blank for live title; lower x15%-85%,y57%-91% fully blank for live host name and party details. Minimal simple warm stationery, no decorative border no extra objects no shadows no photo mockup no glossy rendering no words numbers logos or watermark.
+
+revealBowPrompt
+Use case: stylized-concept. Single transparent decorative component for a gender reveal invitation: one loose hand-painted ribbon bow, left loop soft blush pink, right loop dusty baby blue, two short flowing tails. Minimal delicate watercolor, natural uneven wash and edges, airy simple drawing, no glossy finish no text no frame no card no background. Genuine transparent background, one connected motif.
+
+revealBalloonComponentPrompt
+Use case: stylized-concept. Single connected decorative motif: two small pastel watercolor balloons, one dusty baby-blue and one blush pink, overlapping gently, tiny bows and thin strings tied together underneath. Simple irregular translucent pigment washes, restrained handmade drawing. Genuine transparent background, no text no card no background scenery no shadows no 3D gloss.
+
+revealFootprintComponentPrompt
+Use case: stylized-concept. Individual decorative motif, two very simple tiny baby footprint watercolor stamps next to each other, one powder blue and one blush pink. Each footprint one softly irregular rounded sole and five tiny toe dots. Sparse muted pigment washes, flat delicate watercolor. Genuine transparent background, no lettering no frame no card no shadows no realistic rendering.
+

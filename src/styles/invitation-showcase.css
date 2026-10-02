@@ -204,9 +204,9 @@
   flex: 1 0 auto;
 }
 .invitation-showcase-card .invitation-card-bottom {
-  flex: 0 0 104px;
-  min-height: 104px;
-  padding: 15px 19px;
+  flex: 0 0 auto;
+  min-height: 64px;
+  padding: 12px 14px;
 }
 .invitation-showcase-card .invitation-card-bottom > span:first-child {
   min-width: 0;

@@ -19,7 +19,18 @@ export const invitationStyleOptions = [
 
 // Tags describe the visible public preview, not features of a future created event.
 export const invitationStyleTags = {
+  "gender-reveal-tiny-footprints": ["pastel", "light-neutral"],
+  "gender-reveal-little-wonder": ["pastel", "light-neutral"],
+  "gender-reveal-bear-hug": ["pastel", "light-neutral"],
+  "gender-reveal-special-delivery": ["pastel", "light-neutral"],
+  "gender-reveal-up-in-the-air": ["pastel", "light-neutral"],
+  "gender-reveal-little-surprise": ["pastel", "light-neutral"],
+  "gender-reveal-ribbon-surprise": ["pastel", "light-neutral"],
+  "gender-reveal-pink-or-blue": ["pastel", "light-neutral"],
   "wedding-happy-table": ["line-art", "light-neutral"],
+  "wedding-watercolor-banquet": ["line-art", "light-neutral"],
+  "wedding-ring-and-spark": ["line-art", "light-neutral"],
+  "wedding-golden-promise": ["line-art", "light-neutral"],
   "wedding-sweet-snapshot": ["line-art", "light-neutral"],
   "wedding-portrait-promise": ["line-art", "light-neutral"],
   "wedding-heartmarked": ["line-art", "light-neutral"],
@@ -33,6 +44,7 @@ export const invitationStyleTags = {
   "wedding-happily-away": ["line-art", "black-white", "light-neutral"],
   "wedding-first-dance": ["line-art", "black-white", "light-neutral"],
   "wedding-rose-letter": ["pastel", "light-neutral"],
+  "wedding-sage-letter": ["pastel", "green", "light-neutral"],
   "wedding-our-people": ["line-art", "black-white", "light-neutral"],
   "wedding-date-and-dinner": ["line-art", "black-white", "light-neutral"],
   "wedding-little-vows": ["line-art", "black-white", "light-neutral"],

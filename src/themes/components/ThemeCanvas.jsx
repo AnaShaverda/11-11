@@ -19,7 +19,7 @@ function Invitation({ theme, event, story, template }) {
     day: "numeric", month: "short", year: "numeric", timeZone: "Asia/Tbilisi",
   }).format(new Date(event.dateISO));
   const birthday = theme.category === "birthday";
-  if ((birthday || ["ink-and-ivy", "garden-dance", "blue-pour", "heart-hideaway", "tipsy-together", "blue-clink", "wedding-day-notes", "celebration-table", "little-vows", "date-and-dinner", "our-people", "happily-away", "first-dance", "rose-letter", "side-by-side", "come-rain-or-shine", "ribbon-revel", "ivory-vows", "garden-table", "linked-steps", "colorful-company", "heartmarked", "portrait-promise", "sweet-snapshot", "happy-table"].includes(theme.visual)) && template) return (
+  if ((theme.subcategory === "gender-reveal" || birthday || ["ink-and-ivy", "garden-dance", "blue-pour", "heart-hideaway", "tipsy-together", "blue-clink", "wedding-day-notes", "celebration-table", "little-vows", "date-and-dinner", "our-people", "happily-away", "first-dance", "rose-letter", "sage-letter", "side-by-side", "come-rain-or-shine", "ribbon-revel", "ivory-vows", "garden-table", "linked-steps", "colorful-company", "heartmarked", "portrait-promise", "sweet-snapshot", "happy-table", "watercolor-banquet", "ring-and-spark", "golden-promise"].includes(theme.visual)) && template) return (
     <InvitationArtwork
       template={template}
       large
@@ -29,7 +29,7 @@ function Invitation({ theme, event, story, template }) {
         title: event.title, name: event.hostName, age: event.age ?? 25,
         posterName: event.hostName, posterAge: event.age ?? 25, posterOccasion: event.celebrationName,
         line: event.description,
-        date: ["cobalt-cheers", "ribbon-social", "wedding-day-notes", "date-and-dinner", "colorful-company"].includes(theme.visual) ? compactDate : `${compactDate} · ${event.time}`,
+        date: ["cobalt-cheers", "ribbon-social", "wedding-day-notes", "date-and-dinner", "colorful-company"].includes(theme.visual) ? compactDate : theme.subcategory === "gender-reveal" ? compactDate : `${compactDate} · ${event.time}`,
         time: event.time, location: event.location, details: `${compactDate} · ${event.time} · ${event.location}`,
       }}
     />

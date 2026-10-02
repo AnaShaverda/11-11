@@ -1,5 +1,5 @@
 import Icon from "../components/ui/Icon.jsx";
-import { Link, Navigate, useParams } from "react-router-dom";
+import { Link, Navigate, useLocation, useParams } from "react-router-dom";
 import { getCanonicalProjectSlug, getProjectBySlug } from "../data/projects.js";
 import InvitationsPage from "../invitations/pages/InvitationsPage.jsx";
 import { useLanguage } from "../localization/LanguageContext.jsx";
@@ -7,9 +7,10 @@ import { useLanguage } from "../localization/LanguageContext.jsx";
 export default function ProjectDetailPage() {
   const { t } = useLanguage();
   const { slug } = useParams();
-  if (slug === "friendship-diary") return <Navigate to="/modules/friendship-diary" replace />;
+  const { search, hash, state } = useLocation();
+  if (slug === "friendship-diary") return <Navigate to={`/modules/friendship-diary${search}${hash}`} state={state} replace />;
   const canonicalSlug = getCanonicalProjectSlug(slug);
-  if (canonicalSlug !== slug) return <Navigate to={`/projects/${canonicalSlug}`} replace />;
+  if (canonicalSlug !== slug) return <Navigate to={`/projects/${canonicalSlug}${search}${hash}`} state={state} replace />;
   const project = getProjectBySlug(slug);
   if (!project) {
     return (

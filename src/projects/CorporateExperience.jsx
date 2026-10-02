@@ -23,7 +23,6 @@ export default function CorporateExperience({ embedded = false }) {
   return (
     <div className={`experience-page corporate-experience${embedded ? " is-embedded" : ""}`}>
       {!embedded ? <>
-      <Link className="experience-back" to="/invitations"><Icon name="arrow-left" size={18} /> {t("common.allEvents")}</Link>
       <section className="corporate-hero"><div><span className="section-label">{t("corporate.hero.label")}</span><h1>{t("corporate.hero.title")}</h1><p>{t("corporate.hero.description")}</p><Link className="primary-link" to="/invitations">{t("corporate.explore")} <Icon name="arrow-up-right" size={18} /></Link></div><div className="corporate-visual" aria-hidden="true"><span>11:11</span><strong>{t("corporate.art.title")}</strong><small>{t("corporate.art.caption")}</small></div></section>
       </> : null}
       <div className="invitation-style-filter" role="group" aria-label={t("catalog.corporateFilter")}>

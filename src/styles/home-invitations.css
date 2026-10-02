@@ -1,0 +1,33 @@
+.home-invitations .home-section-top { align-items: center; margin-bottom: 24px; }
+.home-invitations-link { display: inline-flex; flex: none; align-items: center; justify-content: center; gap: 12px; min-height: 48px; padding: 12px 16px; border-radius: 10px; background: var(--surface-hover); color: var(--color-text); font-size: .875rem; font-weight: 600; line-height: 1.4; transition: background var(--transition-fast); }
+.home-invitations-link:hover { background: var(--surface-raised); }
+.home-invitations-track { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); align-items: stretch; gap: 20px; }
+.home-invitation-slide { min-width: 0; }
+.home-invitations .invitation-card { height: 100%; border-radius: 16px; }
+.home-invitations .birthday-card-artwork { position: relative; height: auto; aspect-ratio: 1; overflow: hidden; flex: none; }
+.home-invitations .birthday-card-artwork > .invitation-preview-art { position: absolute; inset: 0; width: 100%; height: 100%; min-height: 0; }
+.home-invitations .invitation-card > .invitation-preview-art { flex: none; min-height: 0; aspect-ratio: 1; }
+.home-invitations .invitation-card-bottom { display: grid; grid-template-columns: minmax(0, 1fr) 18px; align-items: center; gap: 10px; flex: 1 0 auto; min-height: 64px; padding: 14px; }
+.home-invitations .invitation-card-bottom strong { font-size: 1rem; line-height: 1.35; }
+.home-invitations .invitation-card-action { margin-top: 0; }
+.home-invitations .invitation-card-action-label { display: none; }
+.home-carousel-controls { display: none; }
+
+@media (max-width: 800px) {
+  .home-invitations .home-section-top { display: grid; gap: 20px; }
+  .home-invitations-link { justify-self: start; }
+  .home-invitations-track { display: flex; gap: 16px; overflow-x: auto; overscroll-behavior-x: contain; scroll-snap-type: x mandatory; scrollbar-width: none; padding: 4px 2px 12px; }
+  .home-invitations-track::-webkit-scrollbar { display: none; }
+  .home-invitation-slide { flex: 0 0 min(85%, 340px); scroll-snap-align: start; }
+  .home-invitations-track::after { content: ""; flex: 0 0 calc(100% - min(85%, 340px) - 16px); }
+  .home-carousel-controls { display: flex; align-items: center; justify-content: space-between; gap: 16px; margin-top: 8px; }
+  .home-carousel-controls button { display: grid; place-items: center; width: 44px; height: 44px; padding: 0; border: 0; border-radius: 10px; background: var(--surface-glass); color: var(--color-text); cursor: pointer; }
+  .home-carousel-controls button:hover { background: var(--surface-hover); }
+  .home-carousel-controls button:disabled { opacity: .35; cursor: default; }
+  .home-carousel-position { display: flex; align-items: center; gap: 14px; }
+  .home-carousel-position [role="status"] { min-width: 42px; color: var(--color-text-secondary); font-size: .8125rem; }
+  .home-carousel-dots { display: flex; gap: 6px; align-items: center; }
+  .home-carousel-dots span { width: 6px; height: 6px; border-radius: 999px; background: var(--color-text-secondary); opacity: .35; }
+  .home-carousel-dots span.is-active { width: 18px; opacity: 1; }
+  .home-invitations :focus-visible { outline: 2px solid var(--ui-field-focus); outline-offset: 2px; }
+}

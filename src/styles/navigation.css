@@ -1,0 +1,20 @@
+:root[data-theme] :is(.filter-button, .style-filter-button, .other-options button, .module-picker button, .surprise-occasion-options button, .surprise-module-options button, .surprise-demo-theme-switch button) { background: transparent; color: var(--color-text); border: 0; border-bottom: 1px solid var(--ui-field-border); border-radius: 0; box-shadow: none; }
+:root[data-theme] :is(.filter-button.is-active, .style-filter-button.is-active, .other-options button.is-active, .module-picker button.is-active, .surprise-occasion-options button.is-selected, .surprise-module-options button.is-selected, .surprise-demo-theme-switch button.is-selected) { background: transparent; border-bottom-color: var(--ui-field-focus); box-shadow: inset 0 -1px 0 var(--ui-field-focus); }
+:root[data-theme] :is(.filter-button, .style-filter-button, .other-options button, .module-picker button, .surprise-occasion-options button, .surprise-module-options button, .surprise-demo-theme-switch button):hover { background: transparent; border-bottom-color: var(--ui-field-focus); transform: none; }
+:root[data-theme] :is(.catalog-controls .filter-button, .filter-button, .style-filter-button, .catalog-filter-chip, .other-options button, .module-picker button, .surprise-occasion-options button, .surprise-module-options button, .surprise-demo-theme-switch button):focus-visible { outline: none; border-bottom-color: var(--ui-field-focus); box-shadow: inset 0 -2px 0 var(--ui-field-focus); }
+
+.event-catalog .category-navigation { position: relative; flex-wrap: nowrap; gap: 24px; overflow-x: auto; scrollbar-width: none; border-bottom: 1px solid var(--ui-field-border); }
+.event-catalog .category-navigation::-webkit-scrollbar { display: none; }
+:root[data-theme] .event-catalog .category-navigation .filter-button { flex: none; padding-inline: 0; border: 0; box-shadow: none; font-weight: 500; white-space: nowrap; }
+:root[data-theme] .event-catalog .category-navigation .filter-button.is-active { font-weight: 700; }
+:root[data-theme] .event-catalog .category-navigation .filter-button:focus-visible { box-shadow: inset 0 -2px 0 var(--ui-field-focus); }
+.category-active-line { position: absolute; bottom: 0; left: 0; height: 3px; width: var(--category-active-width, 0px); background: var(--color-text); transform: translateX(var(--category-active-left, 0px)); transition: transform 240ms ease, width 240ms ease; pointer-events: none; }
+@media (prefers-reduced-motion: reduce) { .category-active-line { transition: none; transition-duration: 0s !important; } }
+@media (forced-colors: active) {
+  :root[data-theme] :is(.filter-button, .style-filter-button, .catalog-filter-chip, .other-options button, .module-picker button, .surprise-occasion-options button, .surprise-module-options button, .surprise-demo-theme-switch button):focus-visible { outline: 2px solid Highlight; outline-offset: 2px; }
+}
+
+/* Metadata-only toolbars have no content at this breakpoint. */
+@media (max-width: 800px) {
+  .preview-topline, .theme-preview-toolbar, .surprise-demo-toolbar { display: none; }
+}

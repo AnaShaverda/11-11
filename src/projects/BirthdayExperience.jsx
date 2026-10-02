@@ -1,5 +1,5 @@
-import Icon from "../components/ui/Icon.jsx";
 import { Link } from "react-router-dom";
+import Icon from "../components/ui/Icon.jsx";
 import ExperienceSection from "./components/ExperienceSection.jsx";
 import ExperienceCTA from "./components/ExperienceCTA.jsx";
 import ResponseCard from "./components/ResponseCard.jsx";
@@ -15,7 +15,7 @@ export default function BirthdayExperience() {
     <div className="experience-page birthday-experience">
       <ExperienceSection id="optional-modules" label={t("birthday.modules.label")} title={t("birthday.modules.title")} description={t("birthday.modules.description")}>
         <div className="birthday-module-demo"><div className="theme-canvas theme-retro-disco"><ThemeModulePreview moduleId="friendship-diary" event={themeDemoEvents.birthday} /></div><div className="theme-canvas theme-coquette"><ThemeModulePreview moduleId="friendship-diary" event={themeDemoEvents.birthday} /></div></div>
-        <p className="module-demo-caption">{t("birthday.modules.caption")} <Link to="/modules/friendship-diary">{t("birthday.modules.link")} <Icon name="arrow-up-right" size={18} /></Link></p>
+        <p className="module-demo-caption">{t("birthday.modules.caption")} <Link id="friendship-diary-preview" to="/modules/friendship-diary">{t("birthday.modules.link")} <Icon name="arrow-up-right" size={18} /></Link></p>
       </ExperienceSection>
       <ExperienceSection label={t("birthday.wishes.label")} title={t("birthday.wishes.title")} description={t("birthday.wishes.description")}>
         <div className="response-grid">{birthdayWishes.map((wish) => <ResponseCard key={wish.name} response={wish} />)}</div>

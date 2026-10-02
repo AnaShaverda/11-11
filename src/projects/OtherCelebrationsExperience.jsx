@@ -20,7 +20,6 @@ export default function OtherCelebrationsExperience({ project, embedded = false 
   return (
     <div className={`experience-page other-experience${embedded ? " is-embedded" : ""}`}>
       {!embedded ? <>
-      <Link className="experience-back" to="/#projects"><Icon name="arrow-left" size={18} /> {t("common.allEvents")}</Link>
       <section className="other-hero"><span className="section-label">{t("other.hero.label")}</span><h1>{t("other.hero.title")}</h1><p>{t("other.hero.description")}</p></section>
       </> : null}
       <section className="other-chooser" aria-label={t("other.chooser.aria")}>{!embedded ? <div className="other-chooser-intro"><span className="section-label">{t("other.chooser.label")}</span><h2>{t("other.chooser.title")}</h2><p>{t("other.chooser.description")}</p></div> : <span className="invitation-style-filter-label">{t("catalog.occasion")}</span>}<div className="other-options" role="group" aria-label={t("other.preview.aria")}>{project.subcategories.map((item) => <button key={item.id} type="button" className={selectedId === item.id ? "is-active" : ""} aria-pressed={selectedId === item.id} onClick={() => setSelectedId(item.id)}><span>{t(`project.${item.id === "gender-reveal" ? "genderReveal" : item.id}`)}</span><small>{t(`project.${item.id === "gender-reveal" ? "genderReveal" : item.id}.description`)}</small></button>)}</div></section>

@@ -1,0 +1,8 @@
+Mode: built-in image_gen
+
+revealBearPrompt
+Use case: stylized-concept. Original square gender reveal invitation background on warm ivory subtly textured watercolor paper. Bottom center y72%-91% two VERY SIMPLE small teddy bears sitting shoulder-to-shoulder, left pale blush pink and right powder blue. Round ears, oval bodies, tiny round paws, dot eyes, small dot nose and one-stroke smiles. No realistic fur, no fine facial details, no complex anatomy; a few loose pencil contours and sparse uneven watercolor patches, charming easy storybook doodle. One tiny warm cream heart between paws. Thin loose rounded watercolor border inset6%, top and left pale pink, right and bottom pale blue, irregular gentle line, not polished symmetry. Upper center x18%-82%,y13%-65% entirely blank for editable card wording. No text letters numbers, no logo watermark, no glossy 3D, no photo mockup, no elaborate shading. Simple sweet pink-blue baby celebration.
+
+revealBearComponentPrompt
+Use case: stylized-concept. One connected very simple watercolor decorative motif: two tiny teddy bears sitting shoulder-to-shoulder, left blush pink, right powder blue, round ears and oval bodies, round paws, dot eyes and dot noses, one-stroke smiles, holding one little ivory heart between them. Minimal pencil lines, uneven soft watercolor fills, no fur detail no elaborate rendering no 3D gloss. Genuine transparent background, no words no paper frame or card.
+

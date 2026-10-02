@@ -3,12 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="theme-color" content="#100f49" />
+    <meta name="theme-color" content="#070f50" />
     <script>
       try {
         const savedTheme = localStorage.getItem("1111-theme");
         document.documentElement.dataset.theme = savedTheme === "light" ? "light" : "dark";
-        if (savedTheme === "light") document.querySelector('meta[name="theme-color"]').content = "#edf1ff";
+        if (savedTheme === "light") document.querySelector('meta[name="theme-color"]').content = "#eef2ff";
       } catch { document.documentElement.dataset.theme = "dark"; }
     </script>
     <meta

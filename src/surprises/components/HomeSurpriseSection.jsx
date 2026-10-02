@@ -1,5 +1,5 @@
-import Icon from "../../components/ui/Icon.jsx";
 import { Link } from "react-router-dom";
+import Icon from "../../components/ui/Icon.jsx";
 import SurprisePhonePreview from "./SurprisePhonePreview.jsx";
 import { useLanguage } from "../../localization/LanguageContext.jsx";
 

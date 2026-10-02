@@ -1,0 +1,8 @@
+Mode: built-in image_gen
+
+Cover
+Use case: precise-object-edit. Edit this square invitation background: change every blush pink envelope surface to soft muted SAGE GREEN watercolor, pale grey-green with darker moss-green folds. REMOVE the upper-right ribbon bow entirely, replace that area seamlessly with matching blank ivory paper. Keep warm ivory paper, natural paper grain, layout, blank upper center, envelope folds and cream wax seal with interlocking rings as supplied. Preserve delicate irregular watercolor washes. No ribbon anywhere on main card, no text, no numbers, no new objects, no glossy render. Full square image.
+
+Transparent component
+Use case: stylized-concept. Single individual decorative component for sage-green watercolor invitation: one irregular small cream wax seal stamped with two interlocking rings, with a small sage-green paper leaf tucked behind. Soft simple watercolor illustration, restrained detail, organic uneven edges, muted cream and sage palette. No ribbon, no text, no numbers, no card or envelope background, no glossy 3D or photo. Genuine transparent background, one connected motif.
+

@@ -52,7 +52,18 @@ const authCopy = {
 };
 
 const themeCatalog = [
+  ["gender-reveal-tiny-footprints", "პატარა ნაკვალევი", "ბავშვის აკვარელის ნაკვალევი", "Tiny Footprints", "Watercolor baby footprints"],
+  ["gender-reveal-little-wonder", "პატარა სასწაული", "პატარა აკვარელის ფეხსაცმელი და მოხატული ჩარჩო", "Little Wonder", "Tiny watercolor booties & a painted border"],
+  ["gender-reveal-bear-hug", "დათუნიების ჩახუტება", "ორი პატარა ვარდისფერი და ცისფერი დათუნია", "Bear Hug", "Two little watercolor bears in pink and blue"],
+  ["gender-reveal-special-delivery", "პატარა გზავნილი", "ზღაპრული წერო და პატარა სიურპრიზი", "Special Delivery", "A storybook stork & a little surprise"],
+  ["gender-reveal-up-in-the-air", "ცაში აფრენილი", "ვარდისფერი და ცისფერი საჰაერო ბუშტები", "Up in the Air", "Pink-and-blue hot air balloons"],
+  ["gender-reveal-little-surprise", "პატარა სიურპრიზი", "პასტელის ბუშტები და სპილოსძვლისფერი ქაღალდი", "Little Surprise", "Pastel balloons & ivory paper"],
+  ["gender-reveal-ribbon-surprise", "ლენტის სიურპრიზი", "ორფერი აკვარელის ლენტები", "Ribbon Surprise", "Two-color watercolor ribbons"],
+  ["gender-reveal-pink-or-blue", "ვარდისფერი თუ ცისფერი", "რბილი ზოლები და ლენტის ჩარჩო", "Pink or Blue", "Soft stripes & a ribbon frame"],
   ["wedding-happy-table", "მხიარული სუფრა", "ფერადი ნახატები და საქორწილო სუფრა", "Happy Table", "Colorful pen doodles & a wedding table"],
+  ["wedding-watercolor-banquet", "აკვარელის ბანკეტი", "ფერადი ნახატები და საქორწილო სუფრა", "Watercolor Banquet", "Loose watercolor & a wedding banquet"],
+  ["wedding-ring-and-spark", "ბეჭედი და ნაპერწკალი", "კალმით დახატული ბეჭდები და ყვითელი ნაპერწკლები", "Ring & Spark", "Simple ink rings & yellow sparkles"],
+  ["wedding-golden-promise", "ოქროს დაპირება", "აკვარელის ბეჭდები და ოქროსფერი ნაპერწკლები", "Golden Promise", "Watercolor rings & little golden sparkles"],
   ["wedding-sweet-snapshot", "ტკბილი ჩანახატი", "წყვილის მარტივი ნახატი და ვარდისფერი კონვერტი", "Sweet Snapshot", "Simple couple doodles & a blush envelope"],
   ["wedding-portrait-promise", "პორტრეტის დაპირება", "მარტივი პორტრეტი და ლურჯი ყვავილების ჩარჩო", "Portrait Promise", "Simple pencil portraits & a blue floral border"],
   ["wedding-heartmarked", "გულით მონიშნული", "ბორდოსფერი სადღეგრძელო და გულით მონიშნული კალენდარი", "Heartmarked", "Burgundy toasts & a heartmarked calendar"],
@@ -64,6 +75,7 @@ const themeCatalog = [
   ["wedding-come-rain-or-shine", "წვიმაში თუ მზეში", "წყვილი ქარში და კალმით დახატული ქოლგა", "Come Rain or Shine", "A wind-swept couple & an ink umbrella"],
   ["wedding-side-by-side", "ერთად", "წყვილის პატარა ნახატი და მშვიდი სპილოსძვლისფერი ქაღალდი", "Side by Side", "A small ink couple & quiet ivory paper"],
   ["wedding-rose-letter", "ვარდისფერი წერილი", "ვარდისფერი აკვარელი და საქორწილო წერილი", "Rose Letter", "Blush watercolor & a wedding letter"],
+  ["wedding-sage-letter", "სალბისფერი წერილი", "სალბისფერი აკვარელი და საქორწილო წერილი", "Sage Letter", "Sage watercolor & a wedding letter"],
   ["wedding-first-dance", "პირველი ცეკვა", "მოცეკვავე წყვილი და ლენტის ჩარჩო", "First Dance", "A dancing couple & a ribbon frame"],
   ["wedding-happily-away", "ბედნიერი მგზავრობა", "საქორწილო მანქანა და კალმით დახატული ჩარჩო", "Happily Away", "A getaway doodle & a playful ink frame"],
   ["wedding-our-people", "ჩვენი ადამიანები", "მარტივი სტუმრების ნახატები და საერთო სიხარული", "Our People", "Simple cartoon guests & shared joy"],
@@ -118,7 +130,18 @@ const themeCatalog = [
 ];
 
 const themeDescriptions = [
+  ["gender-reveal-tiny-footprints", "ბავშვის აკვარელის ნაკვალევი სქესის გაგების მხიარული წვეულებისთვის.", "ვარდისფერი · ცისფერი · აკვარელი", "Watercolor baby footprints for a joyful gender reveal gathering.", "Pink · blue · hand-painted"],
+  ["gender-reveal-little-wonder", "პატარა აკვარელის ფეხსაცმელი და მოხატული ჩარჩო სქესის გაგების მხიარული წვეულებისთვის.", "ვარდისფერი · ცისფერი · აკვარელი", "Tiny watercolor booties & a painted border for a joyful gender reveal gathering.", "Pink · blue · hand-painted"],
+  ["gender-reveal-bear-hug", "ორი პატარა ვარდისფერი და ცისფერი დათუნია სქესის გაგების მხიარული წვეულებისთვის.", "ვარდისფერი · ცისფერი · აკვარელი", "Two little watercolor bears in pink and blue for a joyful gender reveal gathering.", "Pink · blue · hand-painted"],
+  ["gender-reveal-special-delivery", "ზღაპრული წერო და პატარა სიურპრიზი სქესის გაგების მხიარული წვეულებისთვის.", "ვარდისფერი · ცისფერი · აკვარელი", "A storybook stork & a little surprise for a joyful gender reveal gathering.", "Pink · blue · hand-painted"],
+  ["gender-reveal-up-in-the-air", "ვარდისფერი და ცისფერი საჰაერო ბუშტები სქესის გაგების მხიარული წვეულებისთვის.", "ვარდისფერი · ცისფერი · აკვარელი", "Pink-and-blue hot air balloons for a joyful gender reveal gathering.", "Pink · blue · hand-painted"],
+  ["gender-reveal-little-surprise", "პასტელის ბუშტები და სპილოსძვლისფერი ქაღალდი სქესის გაგების მხიარული წვეულებისთვის.", "ვარდისფერი · ცისფერი · აკვარელი", "Pastel balloons & ivory paper for a joyful gender reveal gathering.", "Pink · blue · hand-painted"],
+  ["gender-reveal-ribbon-surprise", "ორფერი აკვარელის ლენტები სქესის გაგების მხიარული წვეულებისთვის.", "ვარდისფერი · ცისფერი · აკვარელი", "Two-color watercolor ribbons for a joyful gender reveal gathering.", "Pink · blue · hand-painted"],
+  ["gender-reveal-pink-or-blue", "რბილი ზოლები და ლენტის ჩარჩო სქესის გაგების მხიარული წვეულებისთვის.", "ვარდისფერი · ცისფერი · აკვარელი", "Soft stripes & a ribbon frame for a joyful gender reveal gathering.", "Pink · blue · hand-painted"],
   ["wedding-happy-table", "ფერადი ნახატები და საქორწილო სუფრა თბილ სპილოსძვლისფერ ქაღალდზე.", "ნახატი · მხიარული · პირადი", "Colorful pen doodles & a wedding table on warm ivory paper.", "Drawn · playful · personal"],
+  ["wedding-watercolor-banquet", "ფერადი ნახატები და საქორწილო სუფრა თბილ სპილოსძვლისფერ ქაღალდზე.", "ნახატი · მხიარული · პირადი", "Loose watercolor & a wedding banquet on warm ivory paper.", "Drawn · playful · personal"],
+  ["wedding-ring-and-spark", "კალმით დახატული ბეჭდები და ყვითელი ნაპერწკლები თბილ სპილოსძვლისფერ ქაღალდზე.", "ნახატი · მხიარული · პირადი", "Simple ink rings & yellow sparkles on warm ivory paper.", "Drawn · playful · personal"],
+  ["wedding-golden-promise", "აკვარელის ბეჭდები და ოქროსფერი ნაპერწკლები თბილ სპილოსძვლისფერ ქაღალდზე.", "ნახატი · მხიარული · პირადი", "Watercolor rings & little golden sparkles on warm ivory paper.", "Drawn · playful · personal"],
   ["wedding-sweet-snapshot", "წყვილის მარტივი ნახატი და ვარდისფერი კონვერტი თბილ სპილოსძვლისფერ ქაღალდზე.", "ნახატი · მხიარული · პირადი", "Simple couple doodles & a blush envelope on warm ivory paper.", "Drawn · playful · personal"],
   ["wedding-portrait-promise", "მარტივი პორტრეტი და ლურჯი ყვავილების ჩარჩო თბილ სპილოსძვლისფერ ქაღალდზე.", "ნახატი · მხიარული · პირადი", "Simple pencil portraits & a blue floral border on warm ivory paper.", "Drawn · playful · personal"],
   ["wedding-heartmarked", "ბორდოსფერი სადღეგრძელო და გულით მონიშნული კალენდარი თბილ სპილოსძვლისფერ ქაღალდზე.", "ნახატი · მხიარული · პირადი", "Burgundy toasts & a heartmarked calendar on warm ivory paper.", "Drawn · playful · personal"],
@@ -130,6 +153,7 @@ const themeDescriptions = [
   ["wedding-come-rain-or-shine", "მხიარული წყვილი ქოლგის ქვეშ, საერთო მომავლისკენ მიმავალი.", "სპილოსძვლისფერი · კალამი · სადა", "A playful ink couple sharing an umbrella and the road ahead.", "Ivory · ink · understated"],
   ["wedding-side-by-side", "წყვილის პატარა ნახატი მათი ახალი ცხოვრების დასაწყისში.", "სპილოსძვლისფერი · კალამი · სადა", "A small expressive drawing of a couple walking into their next chapter.", "Ivory · ink · understated"],
   ["wedding-rose-letter", "მხიარული ვარდისფერი აკვარელი და საქორწილო წერილი თბილ სპილოსძვლისფერ ქაღალდზე.", "ვარდისფერი · რომანტიკული · პირადი", "A blush watercolor envelope with an ivory wedding note and a delicate seal.", "Blush · romantic · personal"],
+  ["wedding-sage-letter", "მხიარული სალბისფერი აკვარელი და საქორწილო წერილი თბილ სპილოსძვლისფერ ქაღალდზე.", "სალბისფერი · რომანტიკული · პირადი", "A sage watercolor envelope with an ivory wedding note and a delicate seal.", "Sage · romantic · personal"],
   ["wedding-first-dance", "მხიარული მოცეკვავე წყვილი და ლენტის ჩარჩო თბილ სპილოსძვლისფერ ქაღალდზე.", "კალამი · მხიარული · მარადიული", "A playful dancing couple and a loose ribbon frame on warm ivory paper.", "Ink · playful · timeless"],
   ["wedding-happily-away", "პატარა საქორწილო მანქანა, თავისუფალი ჩარჩო და ახალი ბედნიერი თავი.", "კალამი · მხიარული · მარადიული", "A little getaway car, a loose ink frame, and a joyful new chapter.", "Ink · playful · timeless"],
   ["wedding-our-people", "კალმით დახატული მეგობრული სტუმრები ჩვენი საერთო დღის გარშემო იკრიბებიან.", "ხელით დახატული · მხიარული · პირადი", "Friendly pen-drawn wedding guests gather around a day made for all of us.", "Hand-drawn · playful · personal"],
@@ -240,6 +264,9 @@ export const captions = {
 };
 
 Object.assign(captions.ka, {
+  "nav.menu": "მენიუ", "nav.openMenu": "მენიუს გახსნა", "nav.closeMenu": "მენიუს დახურვა",
+  "appearance.label": "გარეგნობა", "appearance.choice.dark": "მუქი", "appearance.choice.light": "ღია",
+  "home.carousel.controls": "მოსაწვევების დათვალიერება", "home.carousel.previous": "წინა მოსაწვევი", "home.carousel.next": "შემდეგი მოსაწვევი", "home.carousel.position": "{current} / {total}",
   "themeCanvas.aria": "{name} მოსაწვევის დიზაინი", "themeCanvas.birthdayInvite": "დაბადების დღის მოსაწვევი", "themeCanvas.weddingInvite": "ქორწილის მოსაწვევი", "themeCanvas.gallery.label": "03 / მომენტები", "themeCanvas.gallery.birthday.0": "საცეკვაო მოედანი", "themeCanvas.gallery.birthday.1": "ჩაიფიქრე სურვილი", "themeCanvas.gallery.birthday.2": "ჩვენი ადამიანები", "themeCanvas.gallery.birthday.3": "კიდევ ერთი სადღეგრძელო", "themeCanvas.gallery.wedding.0": "ერთად", "themeCanvas.gallery.wedding.1": "სუფრა", "themeCanvas.gallery.wedding.2": "დაპირება", "themeCanvas.gallery.wedding.3": "დღესასწაული", "themeCanvas.nav": "ღონისძიების ნიმუშის სექციები", "themeCanvas.nav.invitation": "მოსაწვევი", "themeCanvas.nav.details": "დეტალები", "themeCanvas.nav.moments": "მომენტები", "themeCanvas.nav.rsvp": "პასუხი", "themeCanvas.open": "გახსენი მოსაწვევი", "themeCanvas.scroll": "გადაახვიე და აღმოაჩინე", "themeCanvas.story": "01 / ისტორია", "themeCanvas.invitation.label": "02 / მოსაწვევი", "themeCanvas.invitation.title": "პირველი მისალმება ამ მომენტისთვის.", "themeCanvas.invitation.description": "ასე მოდის დღესასწაული: დღის პატარა ნაწილი, სანამ ის დაიწყება.", "themeCanvas.celebration": "დღესასწაული", "themeCanvas.celebrateBirthday": "მოდი, ერთად ვიზეიმოთ.", "themeCanvas.celebrateWedding": "შემოგვიერთდი ამ დღეს.", "themeCanvas.when": "როდის", "themeCanvas.at": "{time}-ზე", "themeCanvas.where": "სად", "themeCanvas.birthdayShoes": "ჩაიცვი შენი საყვარელი საცეკვაო ფეხსაცმელი", "themeCanvas.weddingSeeYou": "მოუთმენლად გელით", "themeCanvas.countdown": "უკუთვლა", "themeCanvas.days": "{count} დღე", "themeCanvas.until": "დღესასწაულამდე", "themeCanvas.community": "04 / შენი ადამიანები", "themeCanvas.rsvp": "05 / ადგილი დაიკავე", "themeCanvas.reply": "შენი პასუხის ნახვა", "themeCanvas.replied": "პასუხი ნაჩვენებია", "themeCanvas.replyNote": "რეალურ ღონისძიებაზე ეს პასუხი მასპინძელს გაეგზავნებოდა.", "themeCanvas.previewNote": "ინტერაქტიული მაგალითი · პასუხი არ ინახება", "themeCanvas.cardAria": "{name} თემის წინასწარი ნახვა",
   "template.its": "ეს არის", "template.birthday": "დაბადების დღე!", "template.turning": "უსრულდება {age}", "template.date": "თარიღი", "template.time": "დრო", "template.place": "ადგილი", "template.at": "{time}-ზე", "template.together": "ახალი თავი ერთად",
   "modulePreview.label": "არჩევითი მოდული", "modulePreview.guest": "— სტუმარი {name}-ის ღონისძიებაზე", "themePreview.notFound.title": "თემა ვერ მოიძებნა", "themePreview.notFound.description": "ეს დიზაინი კოლექციაში არ არის.", "themePreview.experience": "ღონისძიების გამოცდილება", "themePreview.design": "დიზაინი", "themePreview.makeYours": "შენებური გახადე", "themePreview.title": "ერთი თემა, შენი ისტორიის მეტი ნაწილი.", "themePreview.description": "აირჩიე დამატებითი ფუნქცია და ნახე, როგორ ერწყმის ამ დიზაინს.", "themePreview.aria": "დამატებითი ღონისძიების მოდულების ნახვა", "themePreview.more": "მეტი დიზაინის ნახვა", "themeExplorer.choose": "აირჩიე დიზაინი", "themeExplorer.title": "ერთი დღესასწაული, შენი სტილის უამრავი გზა.", "themeExplorer.description": "დაიწყე ვიზუალური სამყაროთი, რომელიც მოგწონს. მოსაწვევები და დამატებითი ფუნქციები მას მოერგება.",
@@ -258,6 +285,9 @@ Object.assign(captions.ka, {
 });
 
 Object.assign(captions.en, {
+  "nav.menu": "Menu", "nav.openMenu": "Open menu", "nav.closeMenu": "Close menu",
+  "appearance.label": "Appearance", "appearance.choice.dark": "Dark", "appearance.choice.light": "Light",
+  "home.carousel.controls": "Browse invitations", "home.carousel.previous": "Previous invitation", "home.carousel.next": "Next invitation", "home.carousel.position": "{current} of {total}",
   "themeCanvas.aria": "{name} invitation design", "themeCanvas.birthdayInvite": "A BIRTHDAY INVITATION", "themeCanvas.weddingInvite": "A WEDDING INVITATION", "themeCanvas.gallery.label": "03 / MOMENTS", "themeCanvas.gallery.birthday.0": "The dance floor", "themeCanvas.gallery.birthday.1": "Make a wish", "themeCanvas.gallery.birthday.2": "Our people", "themeCanvas.gallery.birthday.3": "One more toast", "themeCanvas.gallery.wedding.0": "Together", "themeCanvas.gallery.wedding.1": "The table", "themeCanvas.gallery.wedding.2": "The promise", "themeCanvas.gallery.wedding.3": "The celebration", "themeCanvas.nav": "Event preview sections", "themeCanvas.nav.invitation": "Invitation", "themeCanvas.nav.details": "Details", "themeCanvas.nav.moments": "Moments", "themeCanvas.nav.rsvp": "RSVP", "themeCanvas.open": "Open the invitation", "themeCanvas.scroll": "SCROLL TO EXPLORE", "themeCanvas.story": "01 / THE STORY", "themeCanvas.invitation.label": "02 / THE INVITATION", "themeCanvas.invitation.title": "A first hello, made for this moment.", "themeCanvas.invitation.description": "This is how the celebration arrives: a little piece of the day, before the day begins.", "themeCanvas.celebration": "THE CELEBRATION", "themeCanvas.celebrateBirthday": "Come celebrate with us.", "themeCanvas.celebrateWedding": "Join us for the day.", "themeCanvas.when": "WHEN", "themeCanvas.at": "At {time}", "themeCanvas.where": "WHERE", "themeCanvas.birthdayShoes": "Bring your favorite dancing shoes", "themeCanvas.weddingSeeYou": "We can’t wait to see you there", "themeCanvas.countdown": "COUNTING DOWN", "themeCanvas.days": "{count} days", "themeCanvas.until": "Until the celebration", "themeCanvas.community": "04 / YOUR PEOPLE", "themeCanvas.rsvp": "05 / SAVE YOUR PLACE", "themeCanvas.reply": "Preview your reply", "themeCanvas.replied": "Reply previewed", "themeCanvas.replyNote": "A real event page would send this response to the host.", "themeCanvas.previewNote": "Interactive example · no response is saved", "themeCanvas.cardAria": "Preview {name} theme",
   "template.its": "IT’S", "template.birthday": "Birthday!", "template.turning": "Turning {age}", "template.date": "DATE", "template.time": "TIME", "template.place": "PLACE", "template.at": "at {time}", "template.together": "A new chapter, together",
   "modulePreview.label": "OPTIONAL MODULE", "modulePreview.guest": "— a guest at {name}’s event", "themePreview.notFound.title": "Theme not found", "themePreview.notFound.description": "That design isn’t in the collection.", "themePreview.experience": "EVENT EXPERIENCE", "themePreview.design": "DESIGN", "themePreview.makeYours": "MAKE IT YOURS", "themePreview.title": "One theme, more of your story.", "themePreview.description": "Choose an optional feature to see how it belongs inside this design.", "themePreview.aria": "Preview optional event modules", "themePreview.more": "Explore more designs", "themeExplorer.choose": "CHOOSE YOUR DESIGN", "themeExplorer.title": "One celebration. So many ways to make it yours.", "themeExplorer.description": "Start with a visual world you love. Invitations and optional features follow its look.",
@@ -427,18 +457,44 @@ for (const language of languages) Object.assign(captions[language], productCopy[
 for (const language of languages) Object.assign(captions[language], authCopy[language]);
 
 Object.assign(captions.en, {
-  "catalog.title": "Find an invitation for your celebration",
-  "catalog.description": "Birthday, wedding, work, or another little milestone. Explore every collection here, or choose your occasion above.",
+  "catalog.title": "Find your invitation",
+  "catalog.description": "Choose a design that feels like you.",
   "catalog.more": "Explore more for {category}",
   "catalog.occasion": "Occasion",
   "catalog.allOccasions": "All occasions",
   "catalog.corporateFilter": "Corporate occasion filters",
+  "catalog.category": "Category",
+  "catalog.filter": "Filter",
+  "catalog.style.remove": "Remove style: {style}",
+  "catalog.filters.applied": "Applied filters",
+  "catalog.filters.reset": "Reset filters",
+  "catalog.result.one": "{count} design found",
+  "catalog.result.many": "{count} designs found",
+  "catalog.empty.title": "No designs match yet",
+  "catalog.empty.description": "Try another style, or reset the filter to see all designs in this category.",
+  "catalog.back": "Back to results",
 });
 Object.assign(captions.ka, {
-  "catalog.title": "იპოვე მოსაწვევი შენი დღესასწაულისთვის",
-  "catalog.description": "დაბადების დღე, ქორწილი, კორპორატიული შეხვედრა თუ სხვა მნიშვნელოვანი მომენტი. დაათვალიერე ყველა კოლექცია ან აირჩიე შემთხვევა ზემოთ.",
+  "catalog.title": "იპოვე შენი მოსაწვევი",
+  "catalog.description": "მოსაწვევი შენი განწყობით.",
   "catalog.more": "ნახე მეტი: {category}",
   "catalog.occasion": "შემთხვევა",
   "catalog.allOccasions": "ყველა შემთხვევა",
   "catalog.corporateFilter": "კორპორატიული შემთხვევის ფილტრები",
+  "catalog.category": "კატეგორია",
+  "catalog.filter": "ფილტრი",
+  "catalog.style.remove": "სტილის წაშლა: {style}",
+  "catalog.filters.applied": "არჩეული ფილტრები",
+  "catalog.filters.reset": "ფილტრების გასუფთავება",
+  "catalog.result.one": "ნაპოვნია {count} დიზაინი",
+  "catalog.result.many": "ნაპოვნია {count} დიზაინი",
+  "catalog.empty.title": "შესაბამისი დიზაინი ვერ მოიძებნა",
+  "catalog.empty.description": "სცადე სხვა სტილი ან გაასუფთავე ფილტრი ამ კატეგორიის ყველა დიზაინის სანახავად.",
+  "catalog.back": "შედეგებზე დაბრუნება",
 });
+
+Object.assign(captions.ka, { "navigation.back": "უკან", "navigation.home": "მთავარზე დაბრუნება", "navigation.design": "დიზაინზე დაბრუნება", "navigation.invitations": "ყველა მოსაწვევი" });
+
+Object.assign(captions.en, {"invitations.other.title": "Celebration invitations", "invitations.other.description": "A first hello for every happy milestone.", "themeCanvas.gallery.other.0": "The happy guesses", "themeCanvas.gallery.other.1": "Sweet little details", "themeCanvas.gallery.other.2": "Our people", "themeCanvas.gallery.other.3": "The big surprise"});
+
+Object.assign(captions.ka, {"invitations.other.title": "დღესასწაულის მოსაწვევები", "invitations.other.description": "პირველი მისალმება ყოველი ბედნიერი მომენტისთვის.", "themeCanvas.gallery.other.0": "მხიარული ვარაუდები", "themeCanvas.gallery.other.1": "პატარა დეტალები", "themeCanvas.gallery.other.2": "ჩვენი ადამიანები", "themeCanvas.gallery.other.3": "დიდი სიურპრიზი"});

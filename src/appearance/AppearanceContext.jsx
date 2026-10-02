@@ -31,7 +31,7 @@ export function AppearanceProvider({ children }) {
     document.documentElement.dataset.theme = theme;
     document
       .querySelector('meta[name="theme-color"]')
-      ?.setAttribute("content", theme === "light" ? "#edf1ff" : "#100f49");
+      ?.setAttribute("content", theme === "light" ? "#eef2ff" : "#070f50");
   }, [theme]);
 
   const value = useMemo(

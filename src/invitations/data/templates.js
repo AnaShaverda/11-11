@@ -1,4 +1,5 @@
-import { birthdayThemes, weddingThemes } from "../../themes/data/themes.js";
+import { celebrationThemeAssets } from "./celebrationAssets.js";
+import { birthdayThemes, weddingThemes, celebrationThemes } from "../../themes/data/themes.js";
 import { showcaseDesigns } from "./showcaseDesigns.js";
 import { weddingThemeAssets } from "./weddingAssets.js";
 import { birthdayThemeAssets } from "./birthdayAssets.js";
@@ -6,7 +7,18 @@ import { invitationStyleTags } from "./invitationStyles.js";
 
 // Public storefront metadata stays separate from the full invitation registry and demo event content.
 const storefront = {
+  "gender-reveal-tiny-footprints": {"slug": "gender-reveal-tiny-footprints", "title": "Tiny Footprints", "style": "Watercolor baby footprints"},
+  "gender-reveal-little-wonder": {"slug": "gender-reveal-little-wonder", "title": "Little Wonder", "style": "Tiny watercolor booties & a painted border"},
+  "gender-reveal-bear-hug": {"slug": "gender-reveal-bear-hug", "title": "Bear Hug", "style": "Two little watercolor bears in pink and blue"},
+  "gender-reveal-special-delivery": {"slug": "gender-reveal-special-delivery", "title": "Special Delivery", "style": "A storybook stork & a little surprise"},
+  "gender-reveal-up-in-the-air": {"slug": "gender-reveal-up-in-the-air", "title": "Up in the Air", "style": "Pink-and-blue hot air balloons"},
+  "gender-reveal-little-surprise": {"slug": "gender-reveal-little-surprise", "title": "Little Surprise", "style": "Pastel balloons & ivory paper"},
+  "gender-reveal-ribbon-surprise": {"slug": "gender-reveal-ribbon-surprise", "title": "Ribbon Surprise", "style": "Two-color watercolor ribbons"},
+  "gender-reveal-pink-or-blue": {"slug": "gender-reveal-pink-or-blue", "title": "Pink or Blue", "style": "Soft stripes & a ribbon frame"},
   "wedding-happy-table": {"slug": "wedding-happy-table", "title": "Happy Table", "style": "Colorful pen doodles & a wedding table"},
+  "wedding-watercolor-banquet": {"slug": "wedding-watercolor-banquet", "title": "Watercolor Banquet", "style": "Loose watercolor & a wedding banquet"},
+  "wedding-ring-and-spark": {"slug": "wedding-ring-and-spark", "title": "Ring & Spark", "style": "Simple ink rings & yellow sparkles"},
+  "wedding-golden-promise": {"slug": "wedding-golden-promise", "title": "Golden Promise", "style": "Watercolor rings & little golden sparkles"},
   "wedding-sweet-snapshot": {"slug": "wedding-sweet-snapshot", "title": "Sweet Snapshot", "style": "Simple couple doodles & a blush envelope"},
   "wedding-portrait-promise": {"slug": "wedding-portrait-promise", "title": "Portrait Promise", "style": "Simple pencil portraits & a blue floral border"},
   "wedding-heartmarked": {"slug": "wedding-heartmarked", "title": "Heartmarked", "style": "Burgundy toasts & a heartmarked calendar"},
@@ -18,6 +30,7 @@ const storefront = {
   "wedding-come-rain-or-shine": {"slug": "wedding-come-rain-or-shine", "title": "Come Rain or Shine", "style": "A wind-swept couple & an ink umbrella"},
   "wedding-side-by-side": {"slug": "wedding-side-by-side", "title": "Side by Side", "style": "A small ink couple & quiet ivory paper"},
   "wedding-rose-letter": {"slug": "wedding-rose-letter", "title": "Rose Letter", "style": "Blush watercolor & a wedding letter"},
+  "wedding-sage-letter": {"slug": "wedding-sage-letter", "title": "Sage Letter", "style": "Sage watercolor & a wedding letter"},
   "wedding-first-dance": {"slug": "wedding-first-dance", "title": "First Dance", "style": "A dancing couple & a ribbon frame"},
   "wedding-happily-away": {"slug": "wedding-happily-away", "title": "Happily Away", "style": "A getaway doodle & a playful ink frame"},
   "wedding-our-people": {"slug": "wedding-our-people", "title": "Our People", "style": "Simple cartoon guests & shared joy"},
@@ -61,14 +74,15 @@ const storefront = {
   "birthday-beer-party": { slug: "birthday-beer-party", title: "Beer Party", style: "Warm bar nights" },
 };
 
-export const invitationTemplates = [...birthdayThemes, ...weddingThemes].map((theme) => {
+export const invitationTemplates = [...birthdayThemes, ...weddingThemes, ...celebrationThemes].map((theme) => {
   const preview = storefront[theme.id];
   return {
     id: theme.id,
     slug: preview.slug,
     title: preview.title,
-    category: theme.category === "birthday" ? "Birthday" : "Wedding",
-    eventTypes: [theme.category === "birthday" ? "Birthday" : "Wedding"],
+    category: theme.category === "birthday" ? "Birthday" : theme.category === "wedding" ? "Wedding" : "Other",
+    subcategory: theme.subcategory,
+    eventTypes: [theme.category === "birthday" ? "Birthday" : theme.category === "wedding" ? "Wedding" : "Other"],
     style: preview.style,
     styleTags: invitationStyleTags[preview.slug],
     shortDescription: theme.description,
@@ -78,7 +92,7 @@ export const invitationTemplates = [...birthdayThemes, ...weddingThemes].map((th
     decor: theme.decor,
     previewArt: preview.art ?? theme.visual,
     design: showcaseDesigns[preview.slug],
-    visualAssets: weddingThemeAssets[preview.slug] ?? birthdayThemeAssets[preview.slug] ?? null,
+    visualAssets: celebrationThemeAssets[preview.slug] ?? weddingThemeAssets[preview.slug] ?? birthdayThemeAssets[preview.slug] ?? null,
     fullTemplateSlug: preview.fullTemplateSlug ?? null,
     isPremium: true,
     unlockStatus: "locked",

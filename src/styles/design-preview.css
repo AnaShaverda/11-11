@@ -1,0 +1,34 @@
+.invitation-design-page .design-hero { align-items: start; gap: clamp(28px, 4vw, 56px); margin-bottom: 48px; }
+.design-hero-summary h1 { margin: 12px 0; font-size: var(--ui-font-title); line-height: 1.2; letter-spacing: -.035em; }
+.design-hero-summary > p { margin: 0; color: var(--color-text-secondary); font-size: 1rem; line-height: 1.6; }
+.design-hero-summary .preview-category { font-size: .8125rem; letter-spacing: .08em; line-height: 1.5; }
+.design-elements-compact { margin: 32px 0 0; }
+.design-elements-compact .design-board-heading { display: block; margin: 0 0 16px; padding: 0; }
+.design-elements-compact .design-board-heading > span { display: block; padding: 0; color: var(--text-accent); font-size: .75rem; line-height: 1.4; letter-spacing: .1em; }
+:root[data-theme] .design-elements-compact .design-board-heading h2 { margin: 10px 0 8px; font-size: 1.5rem; line-height: 1.25; }
+.design-elements-compact .design-board-heading p { color: var(--color-text-secondary); font-size: .875rem; line-height: 1.5; }
+.design-elements-compact .design-elements-board { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); grid-template-rows: auto auto; gap: 12px; }
+.design-elements-compact .design-elements-board > * { min-width: 0; border-radius: 10px; }
+.design-elements-compact .design-palette-panel { grid-column: 1 / -1; grid-row: auto; min-height: 0; padding: 16px; }
+.design-elements-compact .design-board-kicker { font-size: .6875rem; line-height: 1.4; letter-spacing: .06em; }
+.design-elements-compact .design-palette-panel h3 { margin: 10px 0 14px; font-size: 1.375rem; line-height: 1.2; letter-spacing: -.025em; }
+.design-elements-compact .design-palette-swatches { gap: 8px; }
+.design-elements-compact .design-palette-swatch { gap: 6px; }
+.design-elements-compact .design-palette-swatch > span { height: 50px; }
+.design-elements-compact .design-palette-swatch small { font-size: .6875rem; line-height: 1.4; letter-spacing: 0; }
+.design-elements-compact .design-pattern-panel, .design-elements-compact .design-ticket-panel { min-height: 150px; padding: 16px; }
+.design-elements-compact .design-pattern-panel > strong { font-size: 4rem; }
+.design-elements-compact .design-pattern-panel > p { font-size: .75rem; line-height: 1.4; }
+.design-elements-compact .design-ticket-panel > strong { font-size: 1.375rem; line-height: 1.2; }
+.design-elements-compact .design-ticket-panel > span { font-size: .6875rem; line-height: 1.4; letter-spacing: .02em; }
+.invitation-design-page .design-page-end { padding-block: 24px; }
+.invitation-design-page .design-page-end p { color: var(--color-text-secondary); font-size: .875rem; line-height: 1.5; }
+.invitation-design-page .design-page-end span { color: var(--text-accent); }
+
+@media (max-width: 800px) {
+  .invitation-design-page .design-hero { display: grid; grid-template-columns: 1fr; gap: 24px; }
+  .design-hero-copy { display: contents; }
+  .design-hero-summary { order: -1; }
+  .design-elements-compact { margin-top: 0; }
+  .design-elements-compact .design-pattern-panel, .design-elements-compact .design-ticket-panel { padding: 12px; }
+}

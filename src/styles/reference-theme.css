@@ -1,0 +1,127 @@
+/* Shared shell derived from the supplied navy / magenta folder reference. */
+.site-background::before {
+  background-size: 90px 90px;
+  mask-image: linear-gradient(transparent 25vh, #000 90vh);
+}
+:root[data-theme] .site-frame { border-color: transparent; background: var(--frame-background); }
+.site-header { position: relative; z-index: 2; background: var(--header-background); border-radius: 32px 32px 0 0; }
+:root[data-theme] .brand-time { text-shadow: none; }
+:root[data-theme] .language-switch { background: var(--surface-glass); border-color: var(--border-soft); }
+:root[data-theme] .language-switch button { color: var(--color-text-secondary); }
+:root[data-theme] .language-switch button.is-active { background: var(--surface-hover); color: var(--color-text); box-shadow: none; }
+:root[data-theme] .appearance-switch { background: var(--surface-glass); color: var(--color-text); box-shadow: none; }
+:root[data-theme] .nav-link:hover, :root[data-theme] .nav-link.is-active { color: var(--color-text); }
+:root[data-theme] .nav-link.is-active::after { background: var(--color-text); box-shadow: none; }
+.header-menu, .header-preference-row { display: contents; }
+.main-nav ul { display: flex; align-items: center; gap: inherit; margin: 0; padding: 0; list-style: none; }
+.mobile-menu-toggle, .header-preference-label, .language-name, .mobile-appearance-switch { display: none; }
+
+/* Separate sections with space and hierarchy, without horizontal rules. */
+:root[data-theme] :is(.home-possibilities, .interactive-list, .interactive-row, .catalog-results-bar, .invitation-collection-heading, .collection-experience, .corporate-occasions, .corporate-occasions > div, .surprise-flow li, .surprise-config-step, .surprise-share-concept, .surprise-cover, .surprise-cover-bottom, .surprise-content > div, .theme-world-nav, .theme-world-ticker, .theme-world-detail-grid, .theme-world-footer, .theme-topline, .design-board-heading, .design-page-end) {
+  border-top: 0; border-bottom: 0;
+}
+:root[data-theme] .theme-world-detail-grid > div + div { border-top: 0; }
+:root[data-theme] .back-link { border-bottom: 0; }
+.site-main hr { display: none; }
+.design-hero-rule { display: none; }
+
+/* Keep page titles compact; invitation poster typography remains artwork. */
+:root[data-theme] :is(.surprise-showcase-copy h1, .friendship-module-hero h1, .theme-preview-intro h1, .preview-intro h1, .experience-page h1, .inner-page.copy-page h1) {
+  max-width: 24ch; font-size: var(--ui-font-title); line-height: 1.2; letter-spacing: -.035em;
+}
+:root[data-theme] :is(.home-more h2, .surprise-flow h2, .surprise-config-heading h2, .surprise-share-concept h2, .surprise-demo-intro h2, .theme-explorer-heading h2, .theme-options h2, .design-board-heading h2, .design-page-end h2, .experience-section h2, .experience-cta h2, .other-chooser h2) {
+  font-size: var(--ui-font-section); line-height: 1.25; letter-spacing: -.025em;
+}
+:root[data-theme] .home-more .home-surprise h2 { font-size: clamp(1.875rem, 3vw, 2.5rem); line-height: 1.2; }
+:root[data-theme] .surprise-showcase-hero { min-height: 0; padding: clamp(28px, 3vw, 48px); }
+.surprise-showcase-visual { min-height: 540px; }
+:root[data-theme] .surprise-cover h1 { max-width: 18ch; font-size: clamp(2.5rem, 5vw, 4rem); line-height: 1.05; }
+:root[data-theme] .surprise-section h2 { font-size: clamp(1.75rem, 3vw, 2.5rem); line-height: 1.2; }
+
+/* Use actual document-folder SVGs, rather than CSS folders with inner symbols. */
+:root[data-theme] .folder { width: min(144px, 100%); height: auto; aspect-ratio: 160 / 172; filter: none; }
+.document-folder { display: block; width: 100%; height: 100%; overflow: visible; }
+.accent-blue { --folder-light: #16d4ef; --folder-dark: #0874f4; }
+.accent-pink { --folder-light: #ffa4c1; --folder-dark: #f55b9a; }
+.accent-orange { --folder-light: #ffe190; --folder-dark: #ff9b0b; }
+.accent-violet { --folder-light: #6555fa; --folder-dark: #a32aee; }
+.home-page .home-projects { width: min(100%, 660px); max-width: 660px; }
+.home-page .project-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px 20px; }
+.home-page .project-card { gap: 12px; padding: 8px 0; }
+.home-page .project-title { font-size: 1rem; font-weight: 500; line-height: 1.35; }
+:root[data-theme] .home-page .hero-brand { width: min(250px, 100%); height: 100px; font-size: 4.6rem; background: var(--surface-glass); backdrop-filter: none; }
+:root[data-theme] .home-page .intro-control { background: var(--header-background); backdrop-filter: none; }
+:root[data-theme] .home-hero-message { color: var(--color-text-secondary); }
+
+/* Surrounding artwork stays small and outside the primary content. */
+.ornament-field { height: max(900px, 100svh); }
+:root[data-theme] .ambient-sparkle { color: var(--ornament-star); }
+.ambient-cube { position: absolute; width: 34px; height: 38px; }
+.cube-right { right: 4%; top: 33%; transform: rotate(12deg); }
+.cube-left { left: 5%; top: 73%; transform: rotate(-14deg); }
+:root[data-theme] .background-mountains { top: 23%; bottom: auto; left: 24%; width: 145px; opacity: .85; }
+.site-background:has(.home-page) .ambient-sparkle:nth-child(2) { left: 27%; }
+:root[data-theme] .site-background:not(:has(.home-page)) .background-mountains { left: auto; right: 3%; top: 20%; width: 100px; }
+
+/* Platform cards and panels use the same palette across routes. */
+:root[data-theme] :is(.invitation-card, .invitation-showcase-card, .theme-card, .auth-panel, .invitation-empty-state, .invitation-storefront-note, .preview-canvas, .response-card, .question-card, .game-card, .corporate-preview-note, .project-card-detailed, .surprise-config-preview) {
+  border-color: var(--border-soft); background: var(--surface-glass); box-shadow: var(--shadow-card);
+}
+:root[data-theme] :is(.filter-button, .style-filter-button, .other-options button, .module-picker button, .surprise-occasion-options button, .surprise-module-options button, .surprise-demo-theme-switch button, .surprise-theme-options button) {
+  background: var(--surface-glass); color: var(--color-text); border-color: var(--border-soft);
+}
+:root[data-theme] :is(.filter-button.is-active, .style-filter-button.is-active, .other-options button.is-active, .module-picker button.is-active, .surprise-occasion-options button.is-selected, .surprise-module-options button.is-selected, .surprise-demo-theme-switch button.is-selected) {
+  background: var(--surface-hover); color: var(--color-text); border-color: var(--ui-field-focus);
+}
+:root[data-theme] :is(.home-final, .home-surprise, .projects-surprise-feature, .surprise-showcase-hero, .surprise-config) {
+  background: var(--header-background); border-color: var(--border-soft); box-shadow: var(--shadow-card); color: var(--color-text);
+}
+:root[data-theme] :is(.home-section-index, .project-card-meta, .preview-category, .section-label, .surprise-site-label) { color: var(--text-accent); }
+:root[data-theme] .invitation-card-action { color: var(--text-link); }
+:root[data-theme] .auth-panel { backdrop-filter: none; }
+:root[data-theme] .auth-submit:hover { box-shadow: var(--shadow-card); }
+:root[data-theme] .surprise-theme-options button.is-selected { border-color: var(--ui-field-focus); box-shadow: none; }
+:root[data-theme] :is(.surprise-config-heading p, .surprise-config-step p, .surprise-config-preview > p, .surprise-config-preview > small, .surprise-preview-summary, .surprise-share-concept p, .surprise-share-concept small) { color: var(--color-text-secondary); }
+
+@media (max-width: 1100px) {
+  :root[data-theme] .site-frame .site-header { height: auto; min-height: 72px; flex-wrap: wrap; justify-content: space-between; gap: 0; padding: 12px 18px; text-align: left; border-radius: 24px 24px 0 0; }
+  .site-header .brand { align-items: flex-start; }
+  .site-header .brand-time { font-size: 1.7rem; }
+  .site-header .brand-name { font-size: .55rem; }
+  .mobile-menu-toggle { display: inline-flex; align-items: center; justify-content: center; gap: 8px; min-width: 92px; min-height: 44px; padding: 10px 12px; border: 0; border-radius: 10px; background: var(--surface-glass); color: var(--color-text); font-size: .875rem; line-height: 1.4; cursor: pointer; }
+  .mobile-menu-toggle:hover, .mobile-menu-toggle[aria-expanded="true"] { background: var(--surface-hover); }
+  .mobile-menu-toggle:focus-visible { outline: 2px solid var(--ui-field-focus); outline-offset: 3px; }
+  .header-menu { display: none; width: 100%; padding-top: 20px; }
+  .header-menu.is-open { display: block; }
+  :root[data-theme] .header-menu .main-nav { display: block; width: 100%; margin: 0; }
+  .header-menu .main-nav ul { display: grid; gap: 4px; }
+  :root[data-theme] .header-menu .nav-link { display: flex; align-items: center; justify-self: stretch; width: 100%; min-height: 44px; padding: 10px 12px; font-size: 1rem; line-height: 1.5; border-radius: 10px; }
+  .header-menu .nav-link.is-active { background: var(--surface-glass); font-weight: 700; }
+  .header-menu .nav-link.is-active::after { content: none; }
+  .header-menu .nav-link:hover { background: var(--surface-hover); }
+  .header-menu .header-preferences { display: grid; gap: 16px; width: 100%; margin-top: 24px; padding: 0 4px 4px; }
+  .header-preference-row { display: grid; grid-template-columns: minmax(0, .7fr) minmax(0, 1.7fr); align-items: center; gap: 12px; }
+  .header-preference-label { display: block; color: var(--color-text-secondary); font-size: .875rem; line-height: 1.4; overflow-wrap: anywhere; }
+  :root[data-theme] .header-menu .header-auth-link { order: 3; min-height: 44px; border-radius: 10px; font-size: 1rem; }
+  .header-menu .language-switch, .mobile-appearance-switch { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 4px; min-width: 0; padding: 3px; border: 0; border-radius: 10px; background: var(--surface-glass); }
+  .header-menu .language-code, .header-menu .appearance-switch { display: none; }
+  .header-menu .language-name { display: inline; }
+  .header-menu .language-switch button, .mobile-appearance-switch button { display: flex; align-items: center; justify-content: center; gap: 6px; min-width: 0; min-height: 44px; padding: 6px; border: 0; border-radius: 7px; background: transparent; color: var(--color-text-secondary); font-size: .875rem; font-weight: 500; line-height: 1.4; cursor: pointer; }
+  :root[data-theme] .header-menu .language-switch button.is-active, .mobile-appearance-switch button[aria-pressed="true"] { background: var(--surface-hover); color: var(--color-text); font-weight: 700; }
+  .mobile-appearance-switch button:hover { background: var(--surface-hover); }
+  .header-menu :focus-visible { outline: 2px solid var(--ui-field-focus); outline-offset: 2px; }
+}
+
+@media (max-width: 600px) {
+  .site-header { border-radius: 22px 22px 0 0; }
+  .home-page .project-title { font-size: .875rem; }
+  :root[data-theme] .home-page .hero-brand { width: 220px; height: 88px; font-size: 4rem; }
+  .ambient-cube { width: 24px; height: 26px; }
+  .cube-right { right: 2%; top: 34%; }
+  .cube-left { left: 0; top: 82%; width: 20px; }
+  :root[data-theme] .background-mountains { left: 5%; top: 24%; width: 90px; opacity: .65; }
+}
+@media (max-width: 900px) {
+  .home-page .home-projects { width: min(100%, 344px); max-width: 344px; }
+  .home-page .project-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+}

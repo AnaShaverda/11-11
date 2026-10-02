@@ -1,6 +1,6 @@
 import Icon from "../../components/ui/Icon.jsx";
-import { useState } from "react";
-import { Link, useLocation, useSearchParams } from "react-router-dom";
+import { useEffect, useState } from "react";
+import { Link, useLocation, useNavigate, useSearchParams } from "react-router-dom";
 import { getThemeBySlug } from "../../themes/data/themes.js";
 import SurprisePhonePreview from "../components/SurprisePhonePreview.jsx";
 import { surpriseOccasions, surpriseOptionalModuleIds } from "../data/surprises.js";
@@ -13,6 +13,7 @@ export default function SurpriseShowcasePage() {
   const { t } = useLanguage();
   const [params] = useSearchParams();
   const location = useLocation();
+  const navigate = useNavigate();
   const initial = readPreviewConfig(params);
   const [personalization, setPersonalization] = useState(() => previewPersonalization(location.state?.personalization));
   const [occasionId, setOccasionId] = useState(initial.occasion.id);
@@ -22,6 +23,13 @@ export default function SurpriseShowcasePage() {
   const theme = getThemeBySlug(themeId);
   const demoLink = `/surprises/demo?${previewParams(occasionId, theme.id, selectedModules)}`;
   const { availableModules } = readPreviewConfig(new URLSearchParams({ occasion: occasionId }));
+
+  useEffect(() => {
+    const search = previewParams(occasionId, themeId, selectedModules).toString();
+    const saved = previewPersonalization(location.state?.personalization);
+    if (location.search.slice(1) === search && JSON.stringify(saved) === JSON.stringify(personalization)) return;
+    navigate({ pathname: location.pathname, search, hash: location.hash }, { replace: true, state: { ...location.state, personalization, preserveScroll: true } });
+  }, [occasionId, themeId, selectedModules, personalization, location, navigate]);
 
   function chooseOccasion(item) {
     setOccasionId(item.id);
@@ -34,7 +42,7 @@ export default function SurpriseShowcasePage() {
   }
 
   return <div className="surprise-showcase">
-    <Link className="back-link" to="/"><Icon name="arrow-left" size={18} /> {t("common.home")}</Link>
+
     <section className="surprise-showcase-hero" aria-labelledby="surprise-title">
       <div className="surprise-showcase-copy"><span className="surprise-site-label">{t("surprises.label")}</span><h1 id="surprise-title">{t("surprises.hero.question")} <em>{t("surprises.hero.emphasis")}</em></h1><p>{t("surprises.showcase.description")}</p><div className="surprise-showcase-actions"><a className="primary-link" href="#create-surprise">{t("surprises.create")} <Icon name="arrow-up-right" size={18} /></a><Link className="surprise-text-link" to="/surprises/demo">{t("surprises.openExample")} <Icon name="arrow-right" size={18} /></Link></div><small>{t("surprises.launchNote")}</small></div>
       <div className="surprise-showcase-visual"><span className="surprise-visual-glow" aria-hidden="true"/><SurprisePhonePreview /></div>

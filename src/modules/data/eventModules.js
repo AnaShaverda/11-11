@@ -21,6 +21,7 @@ export const eventModules = {
 };
 
 export const optionalModulesByCategory = {
+  other: ["guest-messages", "quiz", "rsvp"],
   birthday: ["friendship-diary", "guest-messages", "quiz", "games"],
   wedding: ["guest-book", "guest-messages", "memories", "rsvp"],
 };

@@ -1,3 +1,4 @@
+import GenderRevealPoster from "./GenderRevealPoster.jsx";
 import { Link } from "react-router-dom";
 import { invitationSamples } from "../data/invitationSamples.js";
 import BirthdayIllustrations from "./BirthdayIllustrations.jsx";
@@ -39,7 +40,7 @@ export function InvitationArtwork({ template, large = false, sample: sampleOverr
       aria-hidden={ariaLabel ? undefined : true}
       aria-label={ariaLabel}
     >
-      {coverImage && template.visual === "heartmarked" ? <WeddingHeartPoster {...sample} /> : coverImage && ["wedding-day-notes", "date-and-dinner", "colorful-company"].includes(template.visual) ? <WeddingDayPoster variant={template.visual} {...sample} /> : coverImage && ["ink-and-ivy", "garden-dance", "blue-pour", "heart-hideaway", "tipsy-together", "blue-clink", "wedding-day-notes", "celebration-table", "little-vows", "date-and-dinner", "our-people", "happily-away", "first-dance", "rose-letter", "side-by-side", "come-rain-or-shine", "ribbon-revel", "ivory-vows", "garden-table", "linked-steps", "colorful-company", "heartmarked", "portrait-promise", "sweet-snapshot", "happy-table"].includes(template.visual) ? <WeddingInkPoster {...sample} /> : coverImage && ["cobalt-cheers", "ribbon-social"].includes(template.visual) ? <ReferenceSocialPoster variant={template.visual} {...sample} /> : coverImage && template.slug === "birthday-pastel-dream" ? <div className="pastel-image-cover-copy">
+      {coverImage && template.subcategory === "gender-reveal" ? <GenderRevealPoster {...sample} variant={template.visual} /> : coverImage && template.visual === "heartmarked" ? <WeddingHeartPoster {...sample} /> : coverImage && ["wedding-day-notes", "date-and-dinner", "colorful-company"].includes(template.visual) ? <WeddingDayPoster variant={template.visual} {...sample} /> : coverImage && ["ink-and-ivy", "garden-dance", "blue-pour", "heart-hideaway", "tipsy-together", "blue-clink", "wedding-day-notes", "celebration-table", "little-vows", "date-and-dinner", "our-people", "happily-away", "first-dance", "rose-letter", "sage-letter", "side-by-side", "come-rain-or-shine", "ribbon-revel", "ivory-vows", "garden-table", "linked-steps", "colorful-company", "heartmarked", "portrait-promise", "sweet-snapshot", "happy-table", "watercolor-banquet", "ring-and-spark", "golden-promise"].includes(template.visual) ? <WeddingInkPoster {...sample} /> : coverImage && ["cobalt-cheers", "ribbon-social"].includes(template.visual) ? <ReferenceSocialPoster variant={template.visual} {...sample} /> : coverImage && template.slug === "birthday-pastel-dream" ? <div className="pastel-image-cover-copy">
         <span className="pastel-image-opening">{t("invitations.invited")}</span>
         <strong className="pastel-image-name">{sample.posterName}</strong>
         <span className="pastel-image-sweet">Sweet</span>
@@ -75,11 +76,11 @@ export default function InvitationCard({ template }) {
   const { t } = useLanguage();
   const sample = invitationSamples[template.slug];
   return (
-    <Link className="invitation-card invitation-showcase-card" to={`/invitations/${template.slug}`} aria-label={`${t("common.exploreDesign")}: ${t(`themes.${template.id}.name`)}: ${sample.title}`}>
+    <Link id={`design-${template.slug}`} className="invitation-card invitation-showcase-card" to={`/invitations/${template.slug}`} aria-label={`${t("common.exploreDesign")}: ${t(`themes.${template.id}.name`)}: ${sample.title}`}>
       {template.category === "Birthday" ? <div className="birthday-card-artwork" style={{ "--card-paper": template.design.palette[0] }}><InvitationArtwork template={template} /></div> : <InvitationArtwork template={template} />}
       <span className="invitation-card-bottom">
-        <span><strong>{t(`themes.${template.id}.name`)}</strong><small>{t(`common.${template.category.toLowerCase()}`)} / {t(`themes.${template.id}.style`)}</small></span>
-        <span className="invitation-card-action">{t("common.exploreDesign")} <Icon name="arrow-up-right" size={16} /></span>
+        <span><strong>{t(`themes.${template.id}.name`)}</strong></span>
+        <span className="invitation-card-action"><span className="invitation-card-action-label">{t("common.exploreDesign")}</span> <Icon name="arrow-up-right" size={16} /></span>
       </span>
     </Link>
   );

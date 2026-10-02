@@ -22,7 +22,7 @@ export default function ThemePreviewPage() {
   const activeModule = options.includes(selectedModule) ? selectedModule : options[0];
   return (
     <div className="theme-preview-page">
-      <div className="theme-preview-toolbar"><Link className="back-link" to={`/invitations/${template.slug}`}><Icon name="arrow-left" size={18} /> {t("common.design")}</Link><span>{t("product.demo.label")}</span></div>
+      <div className="theme-preview-toolbar"><span>{t("product.demo.label")}</span></div>
       <div className="theme-preview-intro"><div><span className="section-label">{t(`common.${theme.category}`)} {t("themePreview.design")}</span><h1>{t(`themes.${theme.id}.name`)}</h1><p>{t(`themes.${theme.id}.description`)}</p></div><span className="theme-mood">{t(`themes.${theme.id}.mood`)}</span></div>
       <p className="module-demo-caption">{t("product.demo.notice")}</p>
       <ThemeCanvas key={theme.slug} theme={theme} event={event} moduleId={activeModule} />

@@ -17,20 +17,14 @@ import LoginPage from "../auth/pages/LoginPage.jsx";
 import RegisterPage from "../auth/pages/RegisterPage.jsx";
 
 function InvitationCatalogRedirect() {
-  const { search } = useLocation();
+  const { search, hash, state } = useLocation();
   const params = new URLSearchParams(search);
   const type = params.get("type")?.toLowerCase();
   const project = projects.find((item) => item.id === type || item.slug === type);
-  const style = params.get("style");
   params.delete("type");
-  params.delete("style");
-  if (style && style !== "all") {
-    if (project) params.set(`${project.id}Style`, style);
-    else for (const id of ["birthday", "wedding"]) params.set(`${id}Style`, style);
-  }
   const query = params.toString();
-  if (!project && !new URLSearchParams(search).has("type") && !new URLSearchParams(search).has("style")) return <InvitationsPage />;
-  return <Navigate to={`${project ? `/projects/${project.slug}` : "/invitations"}${query ? `?${query}` : ""}`} replace />;
+  if (!new URLSearchParams(search).has("type")) return <InvitationsPage />;
+  return <Navigate to={`${project ? `/projects/${project.slug}` : "/invitations"}${query ? `?${query}` : ""}${hash}`} state={state} replace />;
 }
 
 export default function App() {

@@ -38,6 +38,11 @@ import "./styles/category-previews.css";
 import "./styles/surprises.css";
 import "./styles/appearance.css";
 import "./styles/auth.css";
+import "./styles/usability.css";
+import "./styles/reference-theme.css";
+import "./styles/home-invitations.css";
+import "./styles/design-preview.css";
+import "./styles/navigation.css";
 
 createRoot(document.getElementById("root")).render(
   <React.StrictMode>
