@@ -4,14 +4,14 @@
 .theme-little-vows { --theme-bg:#faf6ee; --theme-ink:#292723; --theme-accent:#a34242; --theme-panel:#f2e7df; --theme-stroke:#29272330; --theme-display:Georgia,serif; --world-paper:#faf6ee; --world-photo:url('/images/wedding/little-vows/simple-couple-vows.webp'); }
 .theme-date-and-dinner { --theme-bg:#faf5e8; --theme-ink:#577a9a; --theme-accent:#b6c7d5; --theme-panel:#e7edf0; --theme-stroke:#577a9a30; --theme-display:Georgia,serif; --world-paper:#faf5e8; --world-photo:url('/images/wedding/date-and-dinner/blue-calendar-dinner.webp'); }
 .theme-our-people { --theme-bg:#f7eeea; --theme-ink:#292723; --theme-accent:#c9a8a0; --theme-panel:#eee0da; --theme-stroke:#29272330; --theme-display:Georgia,serif; --world-paper:#f7eeea; --world-photo:url('/images/wedding/our-people/cartoon-wedding-people.webp'); }
-:is(.theme-blue-clink,.theme-wedding-day-notes,.theme-celebration-table,.theme-little-vows,.theme-date-and-dinner,.theme-our-people,.theme-happily-away,.theme-first-dance,.theme-rose-letter) { background:var(--theme-bg); color:var(--theme-ink); }
-.invitation-preview-art.full-image-cover:is(.preview-blue-clink,.preview-wedding-day-notes,.preview-celebration-table,.preview-little-vows,.preview-date-and-dinner,.preview-our-people,.preview-happily-away,.preview-first-dance,.preview-rose-letter) { background:var(--cover-image) center / cover no-repeat; }
+:is(.theme-blue-clink,.theme-wedding-day-notes,.theme-celebration-table,.theme-little-vows,.theme-date-and-dinner,.theme-our-people,.theme-happily-away,.theme-first-dance,.theme-rose-letter,.theme-side-by-side,.theme-come-rain-or-shine,.theme-ribbon-revel,.theme-ivory-vows,.theme-garden-table,.theme-linked-steps,.theme-colorful-company,.theme-heartmarked,.theme-portrait-promise,.theme-sweet-snapshot,.theme-happy-table) { background:var(--theme-bg); color:var(--theme-ink); }
+.invitation-preview-art.full-image-cover:is(.preview-blue-clink,.preview-wedding-day-notes,.preview-celebration-table,.preview-little-vows,.preview-date-and-dinner,.preview-our-people,.preview-happily-away,.preview-first-dance,.preview-rose-letter,.preview-side-by-side,.preview-come-rain-or-shine,.preview-ribbon-revel,.preview-ivory-vows,.preview-garden-table,.preview-linked-steps,.preview-colorful-company,.preview-heartmarked,.preview-portrait-promise,.preview-sweet-snapshot,.preview-happy-table) { background:var(--cover-image) center / cover no-repeat; }
 .preview-blue-clink .wedding-ink-copy { color:#254499; }
 .preview-blue-clink .wedding-ink-opening { top:16%; }
 .preview-blue-clink .wedding-ink-copy > strong { top:28%; font:italic 400 7cqw/1.1 Georgia,serif; text-transform:none; }
 .preview-blue-clink .wedding-ink-copy > em { top:41%; }
 .preview-blue-clink .wedding-ink-details { bottom:7%; }
-:is(.preview-celebration-table,.preview-little-vows,.preview-our-people,.preview-happily-away,.preview-first-dance,.preview-rose-letter) .wedding-ink-copy { color:#292723; }
+:is(.preview-celebration-table,.preview-little-vows,.preview-our-people,.preview-happily-away,.preview-first-dance,.preview-rose-letter,.preview-side-by-side,.preview-come-rain-or-shine,.preview-ribbon-revel,.preview-ivory-vows,.preview-garden-table,.preview-linked-steps,.preview-colorful-company,.preview-heartmarked,.preview-portrait-promise,.preview-sweet-snapshot,.preview-happy-table) .wedding-ink-copy { color:#292723; }
 .preview-celebration-table .wedding-ink-opening { top:10%; }
 .preview-celebration-table .wedding-ink-copy > strong { top:22%; font:400 7cqw/1.1 'Chalkboard SE','Comic Sans MS',cursive; text-transform:none; }
 .preview-celebration-table .wedding-ink-copy > em { top:37%; }
@@ -38,17 +38,17 @@
 .day-calendar > span:last-child { border-right:0; }
 .selected-day::after { content:''; position:absolute; inset:4%; border:2px solid #577a9a90; border-radius:50%; transform:rotate(-8deg); }
 .date-and-dinner .day-poster-details { top:54%; }
-:is(.theme-blue-clink,.theme-wedding-day-notes,.theme-celebration-table,.theme-little-vows,.theme-date-and-dinner,.theme-our-people,.theme-happily-away,.theme-first-dance,.theme-rose-letter) .theme-invitation-card.full-image-cover { width:100%; padding:0; border:0; box-shadow:none; }
-:is(.theme-blue-clink,.theme-wedding-day-notes,.theme-celebration-table,.theme-little-vows,.theme-date-and-dinner,.theme-our-people,.theme-happily-away,.theme-first-dance,.theme-rose-letter) .theme-world-hero-photo,
-:is(.theme-blue-clink,.theme-wedding-day-notes,.theme-celebration-table,.theme-little-vows,.theme-date-and-dinner,.theme-our-people,.theme-happily-away,.theme-first-dance,.theme-rose-letter) .theme-world-image > div { background-image:var(--world-photo); background-size:cover; }
+:is(.theme-blue-clink,.theme-wedding-day-notes,.theme-celebration-table,.theme-little-vows,.theme-date-and-dinner,.theme-our-people,.theme-happily-away,.theme-first-dance,.theme-rose-letter,.theme-side-by-side,.theme-come-rain-or-shine,.theme-ribbon-revel,.theme-ivory-vows,.theme-garden-table,.theme-linked-steps,.theme-colorful-company,.theme-heartmarked,.theme-portrait-promise,.theme-sweet-snapshot,.theme-happy-table) .theme-invitation-card.full-image-cover { width:100%; padding:0; border:0; box-shadow:none; }
+:is(.theme-blue-clink,.theme-wedding-day-notes,.theme-celebration-table,.theme-little-vows,.theme-date-and-dinner,.theme-our-people,.theme-happily-away,.theme-first-dance,.theme-rose-letter,.theme-side-by-side,.theme-come-rain-or-shine,.theme-ribbon-revel,.theme-ivory-vows,.theme-garden-table,.theme-linked-steps,.theme-colorful-company,.theme-heartmarked,.theme-portrait-promise,.theme-sweet-snapshot,.theme-happy-table) .theme-world-hero-photo,
+:is(.theme-blue-clink,.theme-wedding-day-notes,.theme-celebration-table,.theme-little-vows,.theme-date-and-dinner,.theme-our-people,.theme-happily-away,.theme-first-dance,.theme-rose-letter,.theme-side-by-side,.theme-come-rain-or-shine,.theme-ribbon-revel,.theme-ivory-vows,.theme-garden-table,.theme-linked-steps,.theme-colorful-company,.theme-heartmarked,.theme-portrait-promise,.theme-sweet-snapshot,.theme-happy-table) .theme-world-image > div { background-image:var(--world-photo); background-size:cover; }
 .design-type-blue-clink .design-type-board { background:#faf5e6; color:#254499; }
 .design-type-wedding-day-notes .design-type-board { background:#faf5e8; color:#37362c; }
 .design-type-celebration-table .design-type-board { background:#faf6ed; color:#292723; }
 .design-type-little-vows .design-type-board { background:#faf6ee; color:#292723; }
 .design-type-date-and-dinner .design-type-board { background:#faf5e8; color:#577a9a; }
 .design-type-our-people .design-type-board { background:#f7eeea; color:#292723; }
-:is(.design-type-blue-clink,.design-type-wedding-day-notes,.design-type-celebration-table,.design-type-little-vows,.design-type-date-and-dinner,.design-type-our-people,.design-type-happily-away,.design-type-first-dance,.design-type-rose-letter) .design-type-words h3 { max-width:9em; font-family:Georgia,serif; font-weight:400; }
-:is(.design-type-blue-clink,.design-type-wedding-day-notes,.design-type-celebration-table,.design-type-little-vows,.design-type-date-and-dinner,.design-type-our-people,.design-type-happily-away,.design-type-first-dance,.design-type-rose-letter) .design-type-words p { max-width:16em; }
+:is(.design-type-blue-clink,.design-type-wedding-day-notes,.design-type-celebration-table,.design-type-little-vows,.design-type-date-and-dinner,.design-type-our-people,.design-type-happily-away,.design-type-first-dance,.design-type-rose-letter,.design-type-side-by-side,.design-type-come-rain-or-shine,.design-type-ribbon-revel,.design-type-ivory-vows,.design-type-garden-table,.design-type-linked-steps,.design-type-colorful-company,.design-type-heartmarked,.design-type-portrait-promise,.design-type-sweet-snapshot,.design-type-happy-table) .design-type-words h3 { max-width:9em; font-family:Georgia,serif; font-weight:400; }
+:is(.design-type-blue-clink,.design-type-wedding-day-notes,.design-type-celebration-table,.design-type-little-vows,.design-type-date-and-dinner,.design-type-our-people,.design-type-happily-away,.design-type-first-dance,.design-type-rose-letter,.design-type-side-by-side,.design-type-come-rain-or-shine,.design-type-ribbon-revel,.design-type-ivory-vows,.design-type-garden-table,.design-type-linked-steps,.design-type-colorful-company,.design-type-heartmarked,.design-type-portrait-promise,.design-type-sweet-snapshot,.design-type-happy-table) .design-type-words p { max-width:16em; }
 :is(.design-pattern-blue-clink-lines,.design-pattern-table-lines) .design-pattern-panel { background-color:var(--showcase-paper); background-image:repeating-linear-gradient(135deg,transparent 0 40px,#25449915 41px 43px,transparent 44px 70px); color:var(--showcase-ink); }
 :is(.design-pattern-day-notes-grid,.design-pattern-dinner-calendar-grid) .design-pattern-panel { background-color:var(--showcase-paper); background-image:linear-gradient(#577a9a25 1px,transparent 1px),linear-gradient(90deg,#577a9a25 1px,transparent 1px); background-size:60px 60px; color:var(--showcase-ink); }
 :is(.design-pattern-little-vow-dots,.design-pattern-people-dots) .design-pattern-panel { background-color:var(--showcase-paper); background-image:radial-gradient(#29272325 2px,transparent 3px); background-size:25px 25px; color:var(--showcase-ink); }
@@ -74,3 +74,124 @@
 .preview-rose-letter .wedding-ink-copy > em { top:33%; font:400 2.4cqw/1.3 'Courier New',monospace; }
 .preview-rose-letter .wedding-ink-details { top:43%; bottom:auto; font-family:'Courier New',monospace; }
 .design-type-rose-letter .design-type-board { background:#f7f1e5; color:#55463e; }
+
+.theme-side-by-side { --theme-bg:#faf8f2; --theme-ink:#252522; --theme-accent:#beb8ac; --theme-panel:#e9e5dc; --theme-stroke:#25252230; --theme-display:Georgia,serif; --world-paper:#faf8f2; --world-photo:url('/images/wedding/side-by-side/walking-together.webp'); }
+.preview-side-by-side .wedding-ink-copy { color:#252522; }
+.preview-side-by-side .wedding-ink-opening { top:12%; font:400 2.4cqw/1.2 Georgia,serif; letter-spacing:.08em; }
+.preview-side-by-side .wedding-ink-copy > strong { top:22%; left:15%; width:70%; font:italic 400 7cqw/1.1 Georgia,serif; text-transform:none; }
+.preview-side-by-side .wedding-ink-copy > em { top:35%; font:400 2.2cqw/1.3 Georgia,serif; }
+.preview-side-by-side .wedding-ink-details { top:85%; bottom:auto; font:400 1.8cqw/1.6 Georgia,serif; letter-spacing:.06em; }
+.design-type-side-by-side .design-type-board { background:#faf8f2; color:#252522; }
+
+.theme-come-rain-or-shine { --theme-bg:#faf8f2; --theme-ink:#252522; --theme-accent:#beb8ac; --theme-panel:#e9e5dc; --theme-stroke:#25252230; --theme-display:Georgia,serif; --world-paper:#faf8f2; --world-photo:url('/images/wedding/come-rain-or-shine/wind-and-wedding.webp'); }
+.preview-come-rain-or-shine .wedding-ink-copy { color:#252522; }
+.preview-come-rain-or-shine .wedding-ink-opening { top:12%; font:400 2.4cqw/1.2 Georgia,serif; letter-spacing:.08em; }
+.preview-come-rain-or-shine .wedding-ink-copy > strong { top:22%; left:15%; width:70%; font:italic 400 7cqw/1.1 Georgia,serif; text-transform:none; }
+.preview-come-rain-or-shine .wedding-ink-copy > em { top:32%; font:400 2.2cqw/1.3 Georgia,serif; }
+.preview-come-rain-or-shine .wedding-ink-details { top:85%; bottom:auto; font:400 1.8cqw/1.6 Georgia,serif; letter-spacing:.06em; }
+.design-type-come-rain-or-shine .design-type-board { background:#faf8f2; color:#252522; }
+
+.theme-ribbon-revel { --theme-bg:#fffaf0; --theme-ink:#566b52; --theme-accent:#ec9ca6; --theme-panel:#f0e5df; --theme-stroke:#566b5230; --theme-display:Georgia,serif; --world-paper:#fffaf0; --world-photo:url('/images/wedding/ribbon-revel/colorful-wedding-dancers.webp'); }
+.preview-ribbon-revel .wedding-ink-copy { color:#566b52; }
+.preview-ribbon-revel .wedding-ink-opening { top:22%; font:400 2.4cqw/1.2 Georgia,serif; letter-spacing:.08em; }
+.preview-ribbon-revel .wedding-ink-copy > strong { top:34%; left:15%; width:70%; font:italic 400 7cqw/1.1 Georgia,serif; text-transform:none; }
+.preview-ribbon-revel .wedding-ink-copy > em { top:46%; font:400 2.2cqw/1.3 Georgia,serif; }
+.preview-ribbon-revel .wedding-ink-details { top:51%; bottom:auto; font:400 1.8cqw/1.6 Georgia,serif; letter-spacing:.06em; }
+.design-type-ribbon-revel .design-type-board { background:#fffaf0; color:#566b52; }
+
+.theme-ivory-vows { --theme-bg:#fcfaf3; --theme-ink:#655a48; --theme-accent:#ba9a58; --theme-panel:#eee9da; --theme-stroke:#655a4830; --theme-display:Georgia,serif; --world-paper:#fcfaf3; --world-photo:url('/images/wedding/ivory-vows/watercolor-wedding-attire.webp'); }
+.preview-ivory-vows .wedding-ink-copy { color:#655a48; }
+.preview-ivory-vows .wedding-ink-opening { top:9%; font:400 2.4cqw/1.2 Georgia,serif; letter-spacing:.08em; }
+.preview-ivory-vows .wedding-ink-copy > strong { top:17%; left:15%; width:70%; font:italic 400 7cqw/1.1 Georgia,serif; text-transform:none; }
+.preview-ivory-vows .wedding-ink-copy > em { top:28%; font:400 2.2cqw/1.3 Georgia,serif; }
+.preview-ivory-vows .wedding-ink-details { top:94%; bottom:auto; font:400 1.8cqw/1.6 Georgia,serif; letter-spacing:.06em; }
+.design-type-ivory-vows .design-type-board { background:#fcfaf3; color:#655a48; }
+
+.theme-garden-table { --theme-bg:#fffaf0; --theme-ink:#49724c; --theme-accent:#bc9a71; --theme-panel:#e7edde; --theme-stroke:#49724c30; --theme-display:Georgia,serif; --world-paper:#fffaf0; --world-photo:url('/images/wedding/garden-table/watercolor-garden-table.webp'); }
+.preview-garden-table .wedding-ink-copy { color:#49724c; }
+.preview-garden-table .wedding-ink-opening { top:19%; font:400 2.4cqw/1.2 Georgia,serif; letter-spacing:.08em; }
+.preview-garden-table .wedding-ink-copy > strong { top:28%; left:15%; width:70%; font:italic 400 7cqw/1.1 Georgia,serif; text-transform:none; }
+.preview-garden-table .wedding-ink-copy > em { top:40%; font:400 2.2cqw/1.3 Georgia,serif; }
+.preview-garden-table .wedding-ink-details { top:49%; bottom:auto; font:400 1.8cqw/1.6 Georgia,serif; letter-spacing:.06em; }
+.design-type-garden-table .design-type-board { background:#fffaf0; color:#49724c; }
+
+.theme-linked-steps { --theme-bg:#faf6ef; --theme-ink:#923a49; --theme-accent:#c39196; --theme-panel:#f0e3e0; --theme-stroke:#923a4930; --theme-display:Georgia,serif; --world-paper:#faf6ef; --world-photo:url('/images/wedding/linked-steps/burgundy-wedding-steps.webp'); }
+.preview-linked-steps .wedding-ink-copy { color:#923a49; }
+.preview-linked-steps .wedding-ink-opening { top:12%; font:400 2.4cqw/1.2 Georgia,serif; letter-spacing:.08em; }
+.preview-linked-steps .wedding-ink-copy > strong { top:22%; left:15%; width:70%; font:italic 400 7cqw/1.1 Georgia,serif; text-transform:none; }
+.preview-linked-steps .wedding-ink-copy > em { top:34%; font:400 2.2cqw/1.3 Georgia,serif; }
+.preview-linked-steps .wedding-ink-details { top:94%; bottom:auto; font:400 1.8cqw/1.6 Georgia,serif; letter-spacing:.06em; }
+.design-type-linked-steps .design-type-board { background:#faf6ef; color:#923a49; }
+
+.preview-ribbon-revel .wedding-ink-opening { font:400 3.5cqw/1.2 'Chalkboard SE','Comic Sans MS',cursive; }
+.preview-ribbon-revel .wedding-ink-copy > strong { font-style:normal; }
+.preview-ribbon-revel .wedding-ink-copy > em { font-family:'Chalkboard SE','Comic Sans MS',cursive; }
+.preview-linked-steps .wedding-ink-copy > strong { font-size:6.5cqw; }
+
+.theme-colorful-company { --theme-bg:#fbf6e9; --theme-ink:#476d67; --theme-accent:#e99680; --theme-panel:#e9ead7; --theme-stroke:#476d6730; --theme-display:Georgia,serif; --world-paper:#fbf6e9; --world-photo:url('/images/wedding/colorful-company/color-pencil-dinner.webp'); }
+.preview-colorful-company .wedding-ink-copy { color:#476d67; }
+.preview-colorful-company .wedding-ink-opening { top:10%; font:400 2.4cqw/1.2 Georgia,serif; letter-spacing:.08em; }
+.preview-colorful-company .wedding-ink-copy > strong { top:22%; left:15%; width:70%; font:italic 400 7cqw/1.1 Georgia,serif; text-transform:none; }
+.preview-colorful-company .wedding-ink-copy > em { top:35%; font:400 2.2cqw/1.3 Georgia,serif; }
+.preview-colorful-company .wedding-ink-details { top:54%; bottom:auto; font:400 1.8cqw/1.6 Georgia,serif; letter-spacing:.06em; }
+.design-type-colorful-company .design-type-board { background:#fbf6e9; color:#476d67; }
+
+.theme-heartmarked { --theme-bg:#faf6ef; --theme-ink:#9c3349; --theme-accent:#d29aa3; --theme-panel:#f2e3de; --theme-stroke:#9c334930; --theme-display:Georgia,serif; --world-paper:#faf6ef; --world-photo:url('/images/wedding/heartmarked/burgundy-calendar-toast.webp'); }
+.preview-heartmarked .wedding-ink-copy { color:#9c3349; }
+.preview-heartmarked .wedding-ink-opening { top:8%; font:400 2.4cqw/1.2 Georgia,serif; letter-spacing:.08em; }
+.preview-heartmarked .wedding-ink-copy > strong { top:27%; left:15%; width:70%; font:italic 400 7cqw/1.1 Georgia,serif; text-transform:none; }
+.preview-heartmarked .wedding-ink-copy > em { top:35%; font:400 2.2cqw/1.3 Georgia,serif; }
+.preview-heartmarked .wedding-ink-details { top:76%; bottom:auto; font:400 1.8cqw/1.6 Georgia,serif; letter-spacing:.06em; }
+.design-type-heartmarked .design-type-board { background:#faf6ef; color:#9c3349; }
+
+.theme-portrait-promise { --theme-bg:#fcfaf3; --theme-ink:#315e87; --theme-accent:#c8a465; --theme-panel:#e8eef0; --theme-stroke:#315e8730; --theme-display:Georgia,serif; --world-paper:#fcfaf3; --world-photo:url('/images/wedding/portrait-promise/naive-blue-wedding-portrait.webp'); }
+.preview-portrait-promise .wedding-ink-copy { color:#315e87; }
+.preview-portrait-promise .wedding-ink-opening { top:11%; font:400 2.4cqw/1.2 Georgia,serif; letter-spacing:.08em; }
+.preview-portrait-promise .wedding-ink-copy > strong { top:79%; left:15%; width:70%; font:italic 400 7cqw/1.1 Georgia,serif; text-transform:none; }
+.preview-portrait-promise .wedding-ink-copy > em { top:29%; font:400 2.2cqw/1.3 Georgia,serif; }
+.preview-portrait-promise .wedding-ink-details { top:19%; bottom:auto; font:400 1.8cqw/1.6 Georgia,serif; letter-spacing:.06em; }
+.design-type-portrait-promise .design-type-board { background:#fcfaf3; color:#315e87; }
+
+.theme-sweet-snapshot { --theme-bg:#faf5e8; --theme-ink:#452e38; --theme-accent:#eaa2ad; --theme-panel:#d8dfc8; --theme-stroke:#452e3830; --theme-display:Georgia,serif; --world-paper:#faf5e8; --world-photo:url('/images/wedding/sweet-snapshot/sage-envelope-portrait.webp'); }
+.preview-sweet-snapshot .wedding-ink-copy { color:#452e38; }
+.preview-sweet-snapshot .wedding-ink-opening { top:10%; font:400 2.4cqw/1.2 Georgia,serif; letter-spacing:.08em; }
+.preview-sweet-snapshot .wedding-ink-copy > strong { top:16%; left:15%; width:70%; font:italic 400 7cqw/1.1 Georgia,serif; text-transform:none; }
+.preview-sweet-snapshot .wedding-ink-copy > em { top:72%; font:400 2.2cqw/1.3 Georgia,serif; }
+.preview-sweet-snapshot .wedding-ink-details { top:62%; bottom:auto; font:400 1.8cqw/1.6 Georgia,serif; letter-spacing:.06em; }
+.design-type-sweet-snapshot .design-type-board { background:#faf5e8; color:#452e38; }
+
+.theme-happy-table { --theme-bg:#fffaf0; --theme-ink:#365f64; --theme-accent:#e69b8b; --theme-panel:#efe5d5; --theme-stroke:#365f6430; --theme-display:Georgia,serif; --world-paper:#fffaf0; --world-photo:url('/images/wedding/happy-table/colorful-pen-wedding-table.webp'); }
+.preview-happy-table .wedding-ink-copy { color:#365f64; }
+.preview-happy-table .wedding-ink-opening { top:10%; font:400 2.4cqw/1.2 Georgia,serif; letter-spacing:.08em; }
+.preview-happy-table .wedding-ink-copy > strong { top:22%; left:15%; width:70%; font:italic 400 7cqw/1.1 Georgia,serif; text-transform:none; }
+.preview-happy-table .wedding-ink-copy > em { top:35%; font:400 2.2cqw/1.3 Georgia,serif; }
+.preview-happy-table .wedding-ink-details { top:92%; bottom:auto; font:400 1.8cqw/1.6 Georgia,serif; letter-spacing:.06em; }
+.design-type-happy-table .design-type-board { background:#fffaf0; color:#365f64; }
+
+.colorful-company .day-poster-opening { top:10%; }
+.colorful-company .day-poster-names { top:22%; left:18%; width:64%; font-size:6.5cqw; }
+.colorful-company .day-poster-details { top:51%; }
+.colorful-company .day-calendar { border-color:#476d6760; }
+.colorful-company .day-calendar > span { border-color:#476d6760; }
+.colorful-company .selected-day::after { border-color:#df8e79; transform:rotate(-11deg); }
+.preview-portrait-promise .wedding-ink-opening { font:400 4cqw/1.2 'Chalkboard SE','Comic Sans MS',cursive; }
+.preview-portrait-promise .wedding-ink-copy > strong { font:400 6.5cqw/1.1 'Chalkboard SE','Comic Sans MS',cursive; }
+.preview-portrait-promise .wedding-ink-copy > em { display:none; }
+.preview-portrait-promise .wedding-ink-details { font-size:1.7cqw; }
+.preview-sweet-snapshot .wedding-ink-opening { font:700 3cqw/1.2 'Chalkboard SE','Comic Sans MS',cursive; }
+.preview-sweet-snapshot .wedding-ink-copy > strong { font:400 5cqw/1.1 'Chalkboard SE','Comic Sans MS',cursive; }
+.preview-sweet-snapshot .wedding-ink-copy > em { display:none; }
+.preview-happy-table .wedding-ink-opening { font:400 4cqw/1.2 'Chalkboard SE','Comic Sans MS',cursive; }
+.preview-happy-table .wedding-ink-copy > strong { font:400 7cqw/1.1 'Chalkboard SE','Comic Sans MS',cursive; }
+.preview-happy-table .wedding-ink-copy > em { font:400 2.5cqw/1.3 'Chalkboard SE','Comic Sans MS',cursive; }
+.preview-heartmarked .wedding-ink-copy > strong { left:20%; width:60%; font-size:6cqw; }
+.preview-heartmarked .wedding-ink-opening { font:italic 400 5cqw/1.2 Georgia,serif; }
+.preview-heartmarked .wedding-ink-copy > em { top:33%; font-size:1.8cqw; }
+.heart-calendar-grid { position:absolute; inset:0; background:linear-gradient(90deg,transparent 17.8%,#413c37 17.8% 18%,transparent 18% 82%,#413c37 82% 82.2%,transparent 82.2%),linear-gradient(0deg,transparent 13.8%,#413c37 13.8% 14%,transparent 14% 79.8%,#413c37 79.8% 80%,transparent 80%); }
+.heart-calendar-grid > span { position:absolute; color:#9c3349; font:400 4cqw/1.1 Georgia,serif; }
+.heart-calendar-previous { top:23%; left:7%; }
+.heart-calendar-next { bottom:5%; right:8%; }
+.heart-calendar-day { position:absolute; top:16%; right:15%; width:10cqw; height:10cqw; display:grid; place-items:center; z-index:2; }
+.heart-calendar-day::before { content:'♥'; position:absolute; inset:0; display:grid; place-items:center; color:#bb4055; font:400 14cqw/1 Georgia,serif; transform:rotate(-8deg); }
+.heart-calendar-day::after { content:none; }
+.heart-calendar-day > span { position:relative; z-index:1; color:#fffaf0; font:700 3.2cqw/1 Arial,sans-serif; }

@@ -19,6 +19,17 @@ export const invitationStyleOptions = [
 
 // Tags describe the visible public preview, not features of a future created event.
 export const invitationStyleTags = {
+  "wedding-happy-table": ["line-art", "light-neutral"],
+  "wedding-sweet-snapshot": ["line-art", "light-neutral"],
+  "wedding-portrait-promise": ["line-art", "light-neutral"],
+  "wedding-heartmarked": ["line-art", "light-neutral"],
+  "wedding-colorful-company": ["line-art", "light-neutral"],
+  "wedding-linked-steps": ["line-art", "light-neutral"],
+  "wedding-garden-table": ["green", "pastel", "light-neutral"],
+  "wedding-ivory-vows": ["light-neutral", "pastel"],
+  "wedding-ribbon-revel": ["pastel", "cartoon"],
+  "wedding-come-rain-or-shine": ["line-art", "light-neutral"],
+  "wedding-side-by-side": ["line-art", "light-neutral"],
   "wedding-happily-away": ["line-art", "black-white", "light-neutral"],
   "wedding-first-dance": ["line-art", "black-white", "light-neutral"],
   "wedding-rose-letter": ["pastel", "light-neutral"],

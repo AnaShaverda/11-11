@@ -1,5 +1,16 @@
 // Demo content for the public preview only. Real event content will be supplied later.
 export const invitationSamples = {
+  "wedding-happy-table": {"title": "Sofia & Luka", "date": "12 SEP 2027", "location": "TBILISI", "line": "The best seat is the one beside you.", "mark": "S&L"},
+  "wedding-sweet-snapshot": {"title": "Elene & Dato", "date": "25 APR 2027", "location": "TBILISI", "line": "A little note from the two of us.", "mark": "E&D"},
+  "wedding-portrait-promise": {"title": "Ana & Luka", "date": "09 MAY 2027", "location": "TBILISI", "line": "A little portrait. A lifetime together.", "mark": "A&L"},
+  "wedding-heartmarked": {"title": "Nino & Giorgi", "date": "23 OCT 2027", "location": "TBILISI", "line": "A date for love, a night for a toast.", "mark": "N&G"},
+  "wedding-colorful-company": {"title": "Charlotte & Alex", "date": "16 JUL 2027", "location": "TBILISI", "line": "Our favorite date, in full color.", "mark": "C&A"},
+  "wedding-linked-steps": {"title": "Sofia & Aleksandre", "date": "12 FEB 2027", "location": "TBILISI", "line": "Our next step is forever.", "mark": "S&A"},
+  "wedding-garden-table": {"title": "Nino & Levan", "date": "24 JUL 2027", "location": "TBILISI", "line": "A place at our table, a place in our hearts.", "mark": "N&L"},
+  "wedding-ivory-vows": {"title": "Mariam & Sandro", "date": "12 SEP 2027", "location": "TBILISI", "line": "Dressed for our next chapter.", "mark": "M&S"},
+  "wedding-ribbon-revel": {"title": "Elene & Giorgi", "date": "19 JUN 2027", "location": "TBILISI", "line": "A day for love. A night for dancing.", "mark": "E&G"},
+  "wedding-come-rain-or-shine": {"title": "Nina & Sandro", "date": "18 AUG 2027", "location": "TBILISI", "line": "Whatever the weather, always together.", "mark": "N&S"},
+  "wedding-side-by-side": {"title": "Ana & Levan", "date": "20 JUN 2027", "location": "TBILISI", "line": "Every step, together.", "mark": "A&L"},
   "wedding-rose-letter": {"title": "Mariam & Luka", "date": "12 JUN 2027", "location": "TBILISI", "line": "Together, our favorite place to be.", "mark": "M&L"},
   "wedding-first-dance": {"title": "Elene & Dato", "date": "22 MAY 2027", "location": "TBILISI", "line": "Our first dance. A lifetime together.", "mark": "E&D"},
   "wedding-happily-away": {"title": "Nino & Giorgi", "date": "18 SEP 2027", "location": "TBILISI", "line": "Off to our next chapter, together.", "mark": "N&G"},

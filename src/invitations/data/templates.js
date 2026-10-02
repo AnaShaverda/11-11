@@ -6,6 +6,17 @@ import { invitationStyleTags } from "./invitationStyles.js";
 
 // Public storefront metadata stays separate from the full invitation registry and demo event content.
 const storefront = {
+  "wedding-happy-table": {"slug": "wedding-happy-table", "title": "Happy Table", "style": "Colorful pen doodles & a wedding table"},
+  "wedding-sweet-snapshot": {"slug": "wedding-sweet-snapshot", "title": "Sweet Snapshot", "style": "Simple couple doodles & a blush envelope"},
+  "wedding-portrait-promise": {"slug": "wedding-portrait-promise", "title": "Portrait Promise", "style": "Simple pencil portraits & a blue floral border"},
+  "wedding-heartmarked": {"slug": "wedding-heartmarked", "title": "Heartmarked", "style": "Burgundy toasts & a heartmarked calendar"},
+  "wedding-colorful-company": {"slug": "wedding-colorful-company", "title": "Colorful Company", "style": "Colorful pencil sketches & a date to keep"},
+  "wedding-linked-steps": {"slug": "wedding-linked-steps", "title": "Linked Steps", "style": "Burgundy line art & a shared next step"},
+  "wedding-garden-table": {"slug": "wedding-garden-table", "title": "Garden Table", "style": "Watercolor dinner & a green ribbon frame"},
+  "wedding-ivory-vows": {"slug": "wedding-ivory-vows", "title": "Ivory Vows", "style": "Watercolor wedding attire & delicate gold"},
+  "wedding-ribbon-revel": {"slug": "wedding-ribbon-revel", "title": "Ribbon Revel", "style": "Colorful watercolor guests & flowing ribbons"},
+  "wedding-come-rain-or-shine": {"slug": "wedding-come-rain-or-shine", "title": "Come Rain or Shine", "style": "A wind-swept couple & an ink umbrella"},
+  "wedding-side-by-side": {"slug": "wedding-side-by-side", "title": "Side by Side", "style": "A small ink couple & quiet ivory paper"},
   "wedding-rose-letter": {"slug": "wedding-rose-letter", "title": "Rose Letter", "style": "Blush watercolor & a wedding letter"},
   "wedding-first-dance": {"slug": "wedding-first-dance", "title": "First Dance", "style": "A dancing couple & a ribbon frame"},
   "wedding-happily-away": {"slug": "wedding-happily-away", "title": "Happily Away", "style": "A getaway doodle & a playful ink frame"},
@@ -48,16 +59,6 @@ const storefront = {
   "birthday-tropical-summer": { slug: "birthday-tropical-summer", title: "Tropical Summer", style: "Sunlit & lively" },
   "birthday-painted-summer": { slug: "birthday-painted-summer", title: "Painted Summer", style: "Hand-painted coast" },
   "birthday-beer-party": { slug: "birthday-beer-party", title: "Beer Party", style: "Warm bar nights" },
-  "wedding-timeless-white": { slug: "wedding-timeless-white", title: "Timeless White", style: "Classic elegance" },
-  "wedding-modern-editorial": { slug: "wedding-editorial", title: "Modern Editorial", style: "Graphic & refined", art: "editorial", fullTemplateSlug: "wedding-editorial" },
-  "wedding-romantic-garden": { slug: "wedding-romantic-garden", title: "Romantic Garden", style: "A day in bloom" },
-  "wedding-black-tie": { slug: "wedding-black-tie", title: "Black Tie", style: "Formal after dark" },
-  "wedding-tuscany": { slug: "wedding-tuscany", title: "Tuscany", style: "Warm & sunlit" },
-  "wedding-coastal": { slug: "wedding-coastal", title: "Coastal", style: "Soft sea air" },
-  "wedding-bohemian": { slug: "wedding-bohemian", title: "Bohemian", style: "Earthy & heartfelt" },
-  "wedding-vintage-romance": { slug: "wedding-vintage-romance", title: "Vintage Romance", style: "Old-world charm" },
-  "wedding-celestial": { slug: "wedding-celestial", title: "Celestial", style: "Written in the stars" },
-  "wedding-modern-botanical": { slug: "wedding-modern-botanical", title: "Modern Botanical", style: "Sculptural greenery" },
 };
 
 export const invitationTemplates = [...birthdayThemes, ...weddingThemes].map((theme) => {

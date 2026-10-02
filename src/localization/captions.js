@@ -52,6 +52,17 @@ const authCopy = {
 };
 
 const themeCatalog = [
+  ["wedding-happy-table", "მხიარული სუფრა", "ფერადი ნახატები და საქორწილო სუფრა", "Happy Table", "Colorful pen doodles & a wedding table"],
+  ["wedding-sweet-snapshot", "ტკბილი ჩანახატი", "წყვილის მარტივი ნახატი და ვარდისფერი კონვერტი", "Sweet Snapshot", "Simple couple doodles & a blush envelope"],
+  ["wedding-portrait-promise", "პორტრეტის დაპირება", "მარტივი პორტრეტი და ლურჯი ყვავილების ჩარჩო", "Portrait Promise", "Simple pencil portraits & a blue floral border"],
+  ["wedding-heartmarked", "გულით მონიშნული", "ბორდოსფერი სადღეგრძელო და გულით მონიშნული კალენდარი", "Heartmarked", "Burgundy toasts & a heartmarked calendar"],
+  ["wedding-colorful-company", "ფერადი შეკრება", "ფერადი ნახატები და დასამახსოვრებელი თარიღი", "Colorful Company", "Colorful pencil sketches & a date to keep"],
+  ["wedding-linked-steps", "ერთად გადადგმული ნაბიჯები", "ბორდოსფერი ხაზები და საერთო ნაბიჯი", "Linked Steps", "Burgundy line art & a shared next step"],
+  ["wedding-garden-table", "ბაღის სუფრა", "აკვარელის სუფრა და მწვანე ლენტის ჩარჩო", "Garden Table", "Watercolor dinner & a green ribbon frame"],
+  ["wedding-ivory-vows", "სპილოსძვლისფერი აღთქმები", "აკვარელის საქორწილო სამოსი და ნაზი ოქროსფერი", "Ivory Vows", "Watercolor wedding attire & delicate gold"],
+  ["wedding-ribbon-revel", "ლენტების ზეიმი", "ფერადი სტუმრები და აკვარელის ლენტები", "Ribbon Revel", "Colorful watercolor guests & flowing ribbons"],
+  ["wedding-come-rain-or-shine", "წვიმაში თუ მზეში", "წყვილი ქარში და კალმით დახატული ქოლგა", "Come Rain or Shine", "A wind-swept couple & an ink umbrella"],
+  ["wedding-side-by-side", "ერთად", "წყვილის პატარა ნახატი და მშვიდი სპილოსძვლისფერი ქაღალდი", "Side by Side", "A small ink couple & quiet ivory paper"],
   ["wedding-rose-letter", "ვარდისფერი წერილი", "ვარდისფერი აკვარელი და საქორწილო წერილი", "Rose Letter", "Blush watercolor & a wedding letter"],
   ["wedding-first-dance", "პირველი ცეკვა", "მოცეკვავე წყვილი და ლენტის ჩარჩო", "First Dance", "A dancing couple & a ribbon frame"],
   ["wedding-happily-away", "ბედნიერი მგზავრობა", "საქორწილო მანქანა და კალმით დახატული ჩარჩო", "Happily Away", "A getaway doodle & a playful ink frame"],
@@ -107,6 +118,17 @@ const themeCatalog = [
 ];
 
 const themeDescriptions = [
+  ["wedding-happy-table", "ფერადი ნახატები და საქორწილო სუფრა თბილ სპილოსძვლისფერ ქაღალდზე.", "ნახატი · მხიარული · პირადი", "Colorful pen doodles & a wedding table on warm ivory paper.", "Drawn · playful · personal"],
+  ["wedding-sweet-snapshot", "წყვილის მარტივი ნახატი და ვარდისფერი კონვერტი თბილ სპილოსძვლისფერ ქაღალდზე.", "ნახატი · მხიარული · პირადი", "Simple couple doodles & a blush envelope on warm ivory paper.", "Drawn · playful · personal"],
+  ["wedding-portrait-promise", "მარტივი პორტრეტი და ლურჯი ყვავილების ჩარჩო თბილ სპილოსძვლისფერ ქაღალდზე.", "ნახატი · მხიარული · პირადი", "Simple pencil portraits & a blue floral border on warm ivory paper.", "Drawn · playful · personal"],
+  ["wedding-heartmarked", "ბორდოსფერი სადღეგრძელო და გულით მონიშნული კალენდარი თბილ სპილოსძვლისფერ ქაღალდზე.", "ნახატი · მხიარული · პირადი", "Burgundy toasts & a heartmarked calendar on warm ivory paper.", "Drawn · playful · personal"],
+  ["wedding-colorful-company", "ფერადი ნახატები და დასამახსოვრებელი თარიღი თბილ სპილოსძვლისფერ ქაღალდზე.", "ნახატი · მხიარული · პირადი", "Colorful pencil sketches & a date to keep on warm ivory paper.", "Drawn · playful · personal"],
+  ["wedding-linked-steps", "ერთად ჩაკიდებული ხელები და ბორდოსფრად დახატული საქორწილო ნაბიჯები.", "სპილოსძვლისფერი · კალამი · სადა", "Linked hands and wedding steps drawn in simple burgundy ink.", "Ivory · ink · understated"],
+  ["wedding-garden-table", "ბაღის ვახშამი თბილ განათებასა და მწვანე ლენტის ჩარჩოში.", "სპილოსძვლისფერი · კალამი · სადა", "A garden dinner beneath warm lights and a loose green ribbon frame.", "Ivory · ink · understated"],
+  ["wedding-ivory-vows", "სპილოსძვლისფერი კაბა და პიჯაკი ნაზ ოქროსფერ საკიდებზე.", "აკვარელი · რომანტიკული · პირადი", "An ivory gown and dinner jacket on delicate gold hangers, painted with quiet charm.", "Watercolor · romantic · personal"],
+  ["wedding-ribbon-revel", "მოცეკვავე სტუმრები ფერად სამოსში, ნაზი ლენტები და ყვავილები.", "აკვარელი · რომანტიკული · პირადი", "New dancing guests in bright outfits, soft ribbons, and airy flowers.", "Watercolor · romantic · personal"],
+  ["wedding-come-rain-or-shine", "მხიარული წყვილი ქოლგის ქვეშ, საერთო მომავლისკენ მიმავალი.", "სპილოსძვლისფერი · კალამი · სადა", "A playful ink couple sharing an umbrella and the road ahead.", "Ivory · ink · understated"],
+  ["wedding-side-by-side", "წყვილის პატარა ნახატი მათი ახალი ცხოვრების დასაწყისში.", "სპილოსძვლისფერი · კალამი · სადა", "A small expressive drawing of a couple walking into their next chapter.", "Ivory · ink · understated"],
   ["wedding-rose-letter", "მხიარული ვარდისფერი აკვარელი და საქორწილო წერილი თბილ სპილოსძვლისფერ ქაღალდზე.", "ვარდისფერი · რომანტიკული · პირადი", "A blush watercolor envelope with an ivory wedding note and a delicate seal.", "Blush · romantic · personal"],
   ["wedding-first-dance", "მხიარული მოცეკვავე წყვილი და ლენტის ჩარჩო თბილ სპილოსძვლისფერ ქაღალდზე.", "კალამი · მხიარული · მარადიული", "A playful dancing couple and a loose ribbon frame on warm ivory paper.", "Ink · playful · timeless"],
   ["wedding-happily-away", "პატარა საქორწილო მანქანა, თავისუფალი ჩარჩო და ახალი ბედნიერი თავი.", "კალამი · მხიარული · მარადიული", "A little getaway car, a loose ink frame, and a joyful new chapter.", "Ink · playful · timeless"],

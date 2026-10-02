@@ -6,6 +6,7 @@ import Icon from "../../components/ui/Icon.jsx";
 import PhotoInvitationPoster from "./PhotoInvitationPoster.jsx";
 import ReferenceSocialPoster from "./ReferenceSocialPoster.jsx";
 import WeddingDayPoster from "./WeddingDayPoster.jsx";
+import WeddingHeartPoster from "./WeddingHeartPoster.jsx";
 import WeddingInkPoster from "./WeddingInkPoster.jsx";
 import FullImageInvitationPoster from "./FullImageInvitationPoster.jsx";
 import { photoCardStyle } from "../data/assetPresentation.js";
@@ -38,7 +39,7 @@ export function InvitationArtwork({ template, large = false, sample: sampleOverr
       aria-hidden={ariaLabel ? undefined : true}
       aria-label={ariaLabel}
     >
-      {coverImage && ["wedding-day-notes", "date-and-dinner"].includes(template.visual) ? <WeddingDayPoster variant={template.visual} {...sample} /> : coverImage && ["ink-and-ivy", "garden-dance", "blue-pour", "heart-hideaway", "tipsy-together", "blue-clink", "wedding-day-notes", "celebration-table", "little-vows", "date-and-dinner", "our-people", "happily-away", "first-dance", "rose-letter"].includes(template.visual) ? <WeddingInkPoster {...sample} /> : coverImage && ["cobalt-cheers", "ribbon-social"].includes(template.visual) ? <ReferenceSocialPoster variant={template.visual} {...sample} /> : coverImage && template.slug === "birthday-pastel-dream" ? <div className="pastel-image-cover-copy">
+      {coverImage && template.visual === "heartmarked" ? <WeddingHeartPoster {...sample} /> : coverImage && ["wedding-day-notes", "date-and-dinner", "colorful-company"].includes(template.visual) ? <WeddingDayPoster variant={template.visual} {...sample} /> : coverImage && ["ink-and-ivy", "garden-dance", "blue-pour", "heart-hideaway", "tipsy-together", "blue-clink", "wedding-day-notes", "celebration-table", "little-vows", "date-and-dinner", "our-people", "happily-away", "first-dance", "rose-letter", "side-by-side", "come-rain-or-shine", "ribbon-revel", "ivory-vows", "garden-table", "linked-steps", "colorful-company", "heartmarked", "portrait-promise", "sweet-snapshot", "happy-table"].includes(template.visual) ? <WeddingInkPoster {...sample} /> : coverImage && ["cobalt-cheers", "ribbon-social"].includes(template.visual) ? <ReferenceSocialPoster variant={template.visual} {...sample} /> : coverImage && template.slug === "birthday-pastel-dream" ? <div className="pastel-image-cover-copy">
         <span className="pastel-image-opening">{t("invitations.invited")}</span>
         <strong className="pastel-image-name">{sample.posterName}</strong>
         <span className="pastel-image-sweet">Sweet</span>
