@@ -1,0 +1,15 @@
+{
+  "slug": "christening-olive-full-frame",
+  "visual": "christening-olive-full-frame",
+  "palette": [
+    "#f4f0e6",
+    "#596043",
+    "#9aab81",
+    "#fffcf4"
+  ],
+  "cover": "/images/christening/olive-full-frame/invitation-cover-square.webp",
+  "source": "/Users/mac/.codex/generated_images/01a0fc57-305e-7b33-ab00-593618dba7a4/exec-a0f535ae-e977-4257-aefb-e8900261f732.png",
+  "destination": "public/images/recipient/christening-olive-full-frame/invitation-portrait.webp",
+  "prompt": "Use case: precise-object-edit. Edit the referenced christening-olive-full-frame invitation background into a TALL PORTRAIT 9:16 mobile invitation, actual output canvas 1080 wide by 1920 high, NOT square and NOT 2:3. Preserve this exact theme's original color palette, paper or material texture, illustration technique, motifs, and level of detail. Preserve the artwork's visual identity. Recompose rather than stretch or squash: give the same elements elegant spacing on the taller page, preserve natural proportions, avoid adding new objects. Preserve existing blank regions for editable website text at the same proportional positions, leaving ample clean negative space, especially x15%-85%. If the reference has a central illustration, keep it centered around y58%, proportional to page width, with the upper text area and lower date area clean. If it has a border, recreate the complete FOUR SIDES and all corners within the portrait, with smaller proportional ornaments and a spacious blank center. If it is a scrapbook, preserve the surrounding scrapbook and keep its writing paper spacious and vertically oriented. Existing edge motifs remain near the corresponding edges; tall side borders extend naturally, never stretch individual flowers, glasses, bows, people or icons. No cropping important details. Flat edge-to-edge design, no added exterior scene or photographed mockup. No text, letters, words, numbers, logos or watermarks. Absolutely NO crosses or crucifixes; only the existing delicate watercolor ornaments.",
+  "tool": "built-in image generation"
+}

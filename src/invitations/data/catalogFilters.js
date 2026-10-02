@@ -1,3 +1,4 @@
+import { getCelebrationSubcategory } from "../../data/projects.js";
 import { invitationStyleOptions } from "./invitationStyles.js";
 
 const legacyStyleKeys = ["birthdayStyle", "weddingStyle", "corporateStyle", "otherStyle"];
@@ -17,8 +18,13 @@ export function updateCatalogFilters(searchParams, changes) {
   for (const key of legacyStyleKeys) next.delete(key);
   for (const [key, value] of Object.entries(changes)) {
     const normalized = value.trim();
-    if (!normalized || (key === "style" && normalized === "all")) next.delete(key);
+    if (!normalized || (["style", "occasion"].includes(key) && normalized === "all")) next.delete(key);
     else next.set(key, normalized);
   }
   return next;
+}
+
+export function readCatalogOccasion(searchParams) {
+  const requested = searchParams.get("occasion");
+  return getCelebrationSubcategory(requested) ? requested : "all";
 }

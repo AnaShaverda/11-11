@@ -1,0 +1,8 @@
+{
+  "slug": "wedding-little-yes",
+  "cover": "/images/wedding/little-yes/ring-hand-lines.webp",
+  "source": "/Users/mac/.codex/generated_images/01a0fc57-305e-7b33-ab00-593618dba7a4/exec-3bd9353f-1eb2-4792-9aac-aaf618a0cf02.png",
+  "destination": "public/images/recipient/wedding-little-yes/invitation-portrait.webp",
+  "prompt": "Edit this reference into a TALL PORTRAIT 9:16 invitation background, 1080 pixels wide by 1920 pixels high. Actual output canvas must be 9:16, not square, not 2:3. Same exact flat ivory paper, same black hand-drawn engagement-ring hand with sage cuff and small yellow sparkles, preserving original simple imperfect line art. Recompose the whole card with this illustration centered at x50%, y58%, illustration occupies 48% of page width and 28% of page height, leaving upper x15%-85%, y8%-36% clean ivory for live text and bottom x15%-85%, y84%-94% clean for date. Preserve hand and ring proportions, never stretch or squash. All artwork comfortably in frame. No text or letters, no new elements, no photo or 3D mockup. This is the portrait mobile version of the original square design.",
+  "tool": "built-in image generation"
+}

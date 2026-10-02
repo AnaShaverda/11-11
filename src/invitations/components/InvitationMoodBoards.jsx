@@ -1,3 +1,4 @@
+import { getCategoryCaptionKey } from "../../data/projects.js";
 import BirthdayIllustrations from "./BirthdayIllustrations.jsx";
 import { useLanguage } from "../../localization/LanguageContext.jsx";
 
@@ -14,7 +15,7 @@ function TypographyBoard({ template, sample }) {
     <section className="design-board-section" aria-labelledby="design-type-heading">
       <BoardHeading number="01" id="design-type-heading" title={t("moodboard.type.title")} description={t("moodboard.type.description")} />
       <div className="design-type-board design-board-surface">
-        <span className="design-board-kicker">11:11 / {t(template.subcategory === "gender-reveal" ? "project.genderReveal" : `common.${template.category.toLowerCase()}`)}</span>
+        <span className="design-board-kicker">11:11 / {t(getCategoryCaptionKey(template.category, template.subcategory))}</span>
         {showGeneratedDecor && sample.mark && <strong className="design-type-mark" aria-hidden="true">{sample.mark}</strong>}
         <BirthdayIllustrations assets={template.visualAssets?.typography} slot="typography" />
         <div className="design-type-words"><span>{t("invitations.invited")}</span><h3>{design.specimen}</h3><p>{design.phrase}</p></div>

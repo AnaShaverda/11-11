@@ -1,0 +1,8 @@
+{
+  "mode": "built-in edit",
+  "use_case": "precise-object-edit",
+  "source": "/Users/mac/Desktop/11-11/public/images/recipient/wedding-garden-table/invitation-portrait.webp",
+  "destination": "/Users/mac/Desktop/11-11/public/images/recipient/wedding-garden-table/invitation-table-lower.webp",
+  "generated": "/Users/mac/.codex/generated_images/01a0fc57-305e-7b33-ab00-593618dba7a4/exec-9e050762-901d-4a3e-90a0-9f5855da381c.png",
+  "prompt": "Use case: precise-object-edit. Edit this existing 9:16 portrait invitation background, keeping the SAME 9:16 canvas. Move the complete lower garden dining scene, plants and its string-light garland down about 8% of the canvas height, so its lowest leaves and chair legs end around 92% height. Keep the green full border and top ribbon EXACTLY where they are. Preserve every table, chair, plate, glass, candle, flower, napkin, drawing stroke, original colors and watercolor or pen medium. Preserve any top bow unchanged. Replace the vacated illustration area with seamless matching original cream paper texture. Upper 60% should be quiet blank paper for live invitation lettering and dates. Keep all illustration details fully visible with a little bottom paper margin. Do NOT scale, elongate, stretch, redraw stylistically or add objects. No text, lettering, logos or watermark. Only reposition the existing illustration lower on the page."
+}

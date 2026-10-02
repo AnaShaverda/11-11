@@ -19,7 +19,7 @@ function Invitation({ theme, event, story, template }) {
     day: "numeric", month: "short", year: "numeric", timeZone: "Asia/Tbilisi",
   }).format(new Date(event.dateISO));
   const birthday = theme.category === "birthday";
-  if ((theme.subcategory === "gender-reveal" || birthday || ["ink-and-ivy", "garden-dance", "blue-pour", "heart-hideaway", "tipsy-together", "blue-clink", "wedding-day-notes", "celebration-table", "little-vows", "date-and-dinner", "our-people", "happily-away", "first-dance", "rose-letter", "sage-letter", "side-by-side", "come-rain-or-shine", "ribbon-revel", "ivory-vows", "garden-table", "linked-steps", "colorful-company", "heartmarked", "portrait-promise", "sweet-snapshot", "happy-table", "watercolor-banquet", "ring-and-spark", "golden-promise"].includes(theme.visual)) && template) return (
+  if ((theme.subcategory === "gender-reveal" || theme.subcategory === "bridal-party" || birthday || ["ink-and-ivy", "garden-dance", "blue-pour", "heart-hideaway", "tipsy-together", "blue-clink", "wedding-day-notes", "celebration-table", "little-vows", "date-and-dinner", "our-people", "happily-away", "first-dance", "rose-letter", "sage-letter", "side-by-side", "come-rain-or-shine", "ribbon-revel", "ivory-vows", "garden-table", "linked-steps", "colorful-company", "heartmarked", "portrait-promise", "sweet-snapshot", "happy-table", "watercolor-banquet", "ring-and-spark", "golden-promise", "cherry-toast", "little-yes", "blush-lift"].includes(theme.visual)) && template) return (
     <InvitationArtwork
       template={template}
       large
@@ -56,7 +56,7 @@ function Invitation({ theme, event, story, template }) {
 
 function Gallery({ theme, story }) {
   const { t } = useLanguage();
-  const names = [0, 1, 2, 3].map((index) => t(`themeCanvas.gallery.${theme.category}.${index}`));
+  const names = [0, 1, 2, 3].map((index) => t(theme.subcategory === "bridal-party" ? `themeCanvas.gallery.bridal.${index}` : `themeCanvas.gallery.${theme.category}.${index}`));
   return (
     <section id="gallery" className="theme-world-gallery theme-world-section">
       <div className="theme-world-section-heading"><span>{t("themeCanvas.gallery.label")}</span><h3>{story.galleryTitle}</h3><p>{story.galleryText}</p></div>
@@ -89,9 +89,10 @@ export default function ThemeCanvas({ theme, event, compact = false, moduleId })
   const assets = template?.visualAssets ?? birthdayThemeAssets[theme.id];
   const decoration = normalizeBirthdayAsset(assets?.invitation?.[0])?.image;
   const photoCard = assets?.photoCard;
+  const bridal = theme.subcategory === "bridal-party";
   return (
-    <article className={`theme-canvas theme-${theme.visual} theme-experience composition-${theme.layout} theme-${theme.category}${photoCard ? " photo-theme-experience" : ""}`} style={{ ...(decoration ? { "--world-decoration": `url("${decoration}")` } : {}), ...(birthday && assets?.coverImage ? { "--world-photo": `url("${assets.coverImage}")` } : {}), ...photoCardStyle(photoCard) }}>
-      <div className="theme-world-nav"><span>11:11  {t(`themes.${theme.id}.name`)}</span><nav aria-label={t("themeCanvas.nav")}><a href="#invitation">{t("themeCanvas.nav.invitation")}</a><a href="#details">{t("themeCanvas.nav.details")}</a><a href="#gallery">{t("themeCanvas.nav.moments")}</a>{birthday && <a className="theme-world-nav-rsvp" href="#rsvp">{t("themeCanvas.nav.rsvp")}</a>}</nav></div>
+    <article className={`theme-canvas theme-${theme.visual} theme-experience composition-${theme.layout} theme-${theme.category}${photoCard ? " photo-theme-experience" : ""}`} style={{ ...(decoration ? { "--world-decoration": `url("${decoration}")` } : {}), ...((birthday || theme.subcategory === "bridal-party") && assets?.coverImage ? { "--world-photo": `url("${assets.coverImage}")` } : {}), ...photoCardStyle(photoCard) }}>
+      <div className="theme-world-nav"><span>11:11  {t(`themes.${theme.id}.name`)}</span><nav aria-label={t("themeCanvas.nav")}><a href="#invitation">{t("themeCanvas.nav.invitation")}</a><a href="#details">{t("themeCanvas.nav.details")}</a><a href="#gallery">{t("themeCanvas.nav.moments")}</a>{(birthday || bridal) && <a className="theme-world-nav-rsvp" href="#rsvp">{t("themeCanvas.nav.rsvp")}</a>}</nav></div>
       <section className="theme-world-hero">
         {theme.decor && <span className="theme-world-hero-watermark" aria-hidden="true">{theme.decor}</span>}
         <div className="theme-world-hero-copy"><span className="theme-world-eyebrow">{story.eyebrow}</span><h2>{event.title}</h2><p>{story.heroLine}</p><div className="theme-world-hero-date"><span>{event.date}</span><span>{event.location}</span></div><a className="theme-world-button" href="#invitation">{t("themeCanvas.open")} <Icon name="arrow-down-right" size={18} /></a></div>
@@ -101,7 +102,7 @@ export default function ThemeCanvas({ theme, event, compact = false, moduleId })
       <div className="theme-world-ticker" aria-hidden="true"><span>{story.ticker}</span>{theme.decor && <span>{theme.decor}</span>}<span>{story.ticker}</span>{theme.decor && <span>{theme.decor}</span>}</div>
       <section className="theme-world-story theme-world-section"><div className="theme-world-story-lead"><span>{t("themeCanvas.story")}</span><h3>{story.storyTitle}</h3></div><div className="theme-world-story-body"><p>{story.storyText}</p><span>{story.storySignoff}</span></div></section>
       <section id="invitation" className="theme-world-invitation theme-world-section"><div className="theme-world-section-heading"><span>{t("themeCanvas.invitation.label")}</span><h3>{t("themeCanvas.invitation.title")}</h3><p>{t("themeCanvas.invitation.description")}</p></div><Invitation theme={theme} event={event} story={story} template={template} /></section>
-      <section id="details" className="theme-world-details theme-world-section"><div className="theme-world-section-heading"><span>{t("themeCanvas.celebration")}</span><h3>{t(birthday ? "themeCanvas.celebrateBirthday" : "themeCanvas.celebrateWedding")}</h3></div><div className="theme-world-detail-grid"><div><span>{t("themeCanvas.when")}</span><strong>{event.date}</strong><small>{t("themeCanvas.at", { time: event.time })}</small></div><div><span>{t("themeCanvas.where")}</span><strong>{event.location}</strong><small>{t(birthday ? "themeCanvas.birthdayShoes" : "themeCanvas.weddingSeeYou")}</small></div><div><span>{t("themeCanvas.countdown")}</span><strong>{t("themeCanvas.days", { count: daysUntil(event.dateISO) })}</strong><small>{t("themeCanvas.until")}</small></div></div></section>
+      <section id="details" className="theme-world-details theme-world-section"><div className="theme-world-section-heading"><span>{t("themeCanvas.celebration")}</span><h3>{t(bridal ? "project.bridal-party" : birthday ? "themeCanvas.celebrateBirthday" : "themeCanvas.celebrateWedding")}</h3></div><div className="theme-world-detail-grid"><div><span>{t("themeCanvas.when")}</span><strong>{event.date}</strong><small>{t("themeCanvas.at", { time: event.time })}</small></div><div><span>{t("themeCanvas.where")}</span><strong>{event.location}</strong><small>{t(birthday ? "themeCanvas.birthdayShoes" : "themeCanvas.weddingSeeYou")}</small></div><div><span>{t("themeCanvas.countdown")}</span><strong>{t("themeCanvas.days", { count: daysUntil(event.dateISO) })}</strong><small>{t("themeCanvas.until")}</small></div></div></section>
       <Gallery theme={theme} story={story} />
       <section className="theme-world-community theme-world-section"><div className="theme-world-community-intro"><span>{t("themeCanvas.community")}</span><h3>{story.communityTitle}</h3><p>{story.communityText}</p></div><div className="theme-world-module"><ThemeModulePreview moduleId={moduleId} event={event} /></div></section>
       <section id="rsvp" className="theme-world-rsvp theme-world-section"><span>{t("themeCanvas.rsvp")}</span><h3>{story.rsvpTitle}</h3><p>{story.rsvpText}</p><RSVPPreview guest={demoGuest} /></section>

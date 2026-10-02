@@ -1,0 +1,15 @@
+{
+  "slug": "birthday-cobalt-cheers",
+  "visual": "cobalt-cheers",
+  "palette": [
+    "#f7f5ed",
+    "#0752ae",
+    "#bed0e4",
+    "#224a80"
+  ],
+  "cover": "/images/birthday/cobalt-cheers/blue-ink-toast.webp",
+  "source": "/Users/mac/.codex/generated_images/01a0fc57-305e-7b33-ab00-593618dba7a4/exec-1da17425-f44e-4970-8e4a-7ce7ec0f33b8.png",
+  "destination": "public/images/recipient/birthday-cobalt-cheers/invitation-portrait.webp",
+  "prompt": "Use case: precise-object-edit. Edit the referenced birthday-cobalt-cheers invitation background into a TALL PORTRAIT 9:16 mobile invitation, actual output canvas 1080 wide by 1920 high, NOT square and NOT 2:3. Preserve this exact theme's original color palette, paper or material texture, illustration technique, motifs, and level of detail. Preserve the artwork's visual identity. Recompose rather than stretch or squash: give the same elements elegant spacing on the taller page, preserve natural proportions, avoid adding new objects. Preserve existing blank regions for editable website text at the same proportional positions, leaving ample clean negative space, especially x15%-85%. If the reference has a central illustration, keep it centered around y58%, proportional to page width, with the upper text area and lower date area clean. If it has a border, recreate the complete FOUR SIDES and all corners within the portrait, with smaller proportional ornaments and a spacious blank center. If it is a scrapbook, preserve the surrounding scrapbook and keep its writing paper spacious and vertically oriented. Existing edge motifs remain near the corresponding edges; tall side borders extend naturally, never stretch individual flowers, glasses, bows, people or icons. No cropping important details. Flat edge-to-edge design, no added exterior scene or photographed mockup. No text, letters, words, numbers, logos or watermarks. ",
+  "tool": "built-in image generation"
+}

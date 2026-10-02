@@ -1,4 +1,6 @@
 :root {
+  /* Local serif pairing: Heritage for Latin, Noto Serif for Georgian. */
+  --font-main: "Heritage Legacy", "Noto Serif Georgian", Sylfaen, Georgia, serif;
   color-scheme: dark;
   --color-bg-start: #070f50;
   --color-bg-middle: #241346;

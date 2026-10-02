@@ -9,7 +9,7 @@ export default function HomePage() {
   return (
     <div className="home-page">
       <section className="home-hero" aria-label="11:11">
-        <h1 className="hero-brand">11:11</h1>
+        <h1 className="hero-brand"><img className="hero-brand-logo" src="/logos/logo-pink-star.svg" alt="11:11" width="1330" height="1112" /></h1>
         <p className="home-hero-message">{t("home.hero.message")}</p>
         <IntroControl />
       </section>

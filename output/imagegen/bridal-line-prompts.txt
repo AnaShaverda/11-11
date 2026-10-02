@@ -1,0 +1,20 @@
+Mode: built-in image_gen
+Final covers and component motifs use simple line art with small colored accents.
+
+Cherry Toast cover:
+Use case: illustration-story. Asset type: square invitation background, NO TEXT. Style MUST be extremely simple loose pen LINE ART with a few flat muted color accents. Thin slightly wobbly black outlines, empty white interiors, tiny dot eyes if any. No watercolor texture, no shaded fabric, no rendering, no gradients, no glossy surfaces, no decorative detail. Off-white background. Looks like a quick confident doodle with 30–50 lines, not polished AI illustration. Original bridal cocktail scene: one little bride in a plain triangular white dress with straight hair and tiny veil, standing beside a small round pedestal table with three coupe glasses stacked. Sparse cherry-red fill in glass drinks and two yellow starbursts. Original pose and character, never inside glass. Thin loose red scalloped border. Reserve top 42% and bottom 12% completely EMPTY; scene only x25–75%, y45–82%. No flowers, no bow, no extra decorations, no lettering.
+
+Little Yes cover:
+Use case: illustration-story. Asset type: square invitation background, NO TEXT. Style MUST be extremely simple loose pen LINE ART with a few flat muted color accents. Thin slightly wobbly black outlines, empty white interiors, tiny dot eyes if any. No watercolor texture, no shaded fabric, no rendering, no gradients, no glossy surfaces, no decorative detail. Off-white background. Looks like a quick confident doodle with 30–50 lines, not polished AI illustration. Original engagement-hand drawing in lower middle: one gracefully relaxed hand with FIVE clearly readable fingers in a new diagonal pose, little gold ring and simple blue diamond, plain sage-green cuff with one line only. Three yellow line starbursts. No bow or polka dots. Hand size x25–75%, y48–80%. Reserve top 44% and bottom 15% completely EMPTY. No frame no other decoration. Basic contour drawing with at most two interior hand lines. No colored skin fill. No lettering.
+
+Blush Lift cover:
+Use case: illustration-story. Asset type: square invitation background, NO TEXT. Style MUST be extremely simple loose pen LINE ART with a few flat muted color accents. Thin slightly wobbly black outlines, empty white interiors, tiny dot eyes if any. No watercolor texture, no shaded fabric, no rendering, no gradients, no glossy surfaces, no decorative detail. Off-white background. Looks like a quick confident doodle with 30–50 lines, not polished AI illustration. Original bridal party balloon invitation. Four loosely outlined heart/oval balloons at edges ONLY, sparse blush or terracotta flat strokes inside them, thin black curling strings. Tiny sage-green leaf sprig at each bottom corner, leaves simple flat shapes. Blank central space x22–78%, y10–88% for live editable typography. Simple pen doodles, NO letter-shaped balloons, no flowers or decorative detail, no frame. No wording.
+
+Cocktail component:
+Use case: illustration-story. Transparent spot illustration. Extremely simple loose black pen outline of three coupe glasses stacked two under one, small flat cherry-red fill in the drinks and a single yellow line starburst. Only 15–20 imperfect strokes, white empty glass interiors, no gradients no shadows no watercolor no realism. No table no lettering. Actual transparent background.
+
+Ring component:
+Transparent spot illustration: one simple hand-drawn black outline of a gold engagement ring with a tiny icy blue diamond and two yellow line starbursts. Barely 12–18 slightly wobbly pen strokes, small flat gold and blue color accents only. No shading no gradients no watercolor no 3D no text, true transparent background.
+
+Balloon component:
+Transparent spot illustration: one simple black pen outline of a blush-pink heart balloon with thin curling black string and two tiny sage leaves. A few flat blush and sage accents only, 12 imperfect strokes, airy doodle. No shading no gradients no watercolor no gloss no 3D no lettering, actual transparent alpha background.

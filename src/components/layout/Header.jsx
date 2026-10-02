@@ -68,13 +68,7 @@ export default function Header() {
   return (
     <header className="site-header" ref={headerRef}>
       <NavLink className="brand" to="/" aria-label={t("nav.brand")} onClick={closeMenu}>
-        <span className="brand-time">
-          11:11{" "}
-          <span aria-hidden="true" className="brand-plus">
-            +
-          </span>
-        </span>
-        <span className="brand-name">ELEVEN</span>
+        <img className="brand-logo" src="/logos/logo-white.svg" alt="" width="1330" height="1112" />
       </NavLink>
       <button ref={toggleRef} type="button" className="mobile-menu-toggle" aria-controls="header-menu" aria-expanded={menuOpen} aria-label={t(menuOpen ? "nav.closeMenu" : "nav.openMenu")} onClick={() => setOpenLocationKey(menuOpen ? null : location.key)}>
         <Icon name={menuOpen ? "close" : "menu"} size={22} />

@@ -1,0 +1,8 @@
+{
+  "mode": "built-in edit",
+  "use_case": "precise-object-edit",
+  "source": "/Users/mac/Desktop/11-11/public/images/recipient/wedding-celebration-table/invitation-portrait.webp",
+  "destination": "/Users/mac/Desktop/11-11/public/images/recipient/wedding-celebration-table/invitation-table-lower.webp",
+  "generated": "/Users/mac/.codex/generated_images/01a0fc57-305e-7b33-ab00-593618dba7a4/exec-dff62b3d-f280-42ab-b7c5-f8e3aca49f0c.png",
+  "prompt": "Use case: precise-object-edit. Edit this existing 9:16 portrait invitation background, keeping the SAME 9:16 canvas. Move the complete dining-table illustration group down about 16% of the canvas height: top of candles, flowers or chair backs around 61–64% height and lowest chair legs/tablecloth around 90–93%. Its visual center should be in the lower quarter, never canvas center. Maintain the illustration's original size and proportions. Preserve every table, chair, plate, glass, candle, flower, napkin, drawing stroke, original colors and watercolor or pen medium. Preserve any top bow unchanged. Replace the vacated illustration area with seamless matching original cream paper texture. Upper 60% should be quiet blank paper for live invitation lettering and dates. Keep all illustration details fully visible with a little bottom paper margin. Do NOT scale, elongate, stretch, redraw stylistically or add objects. No text, lettering, logos or watermark. Only reposition the existing illustration lower on the page."
+}

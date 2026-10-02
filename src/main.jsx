@@ -43,6 +43,8 @@ import "./styles/reference-theme.css";
 import "./styles/home-invitations.css";
 import "./styles/design-preview.css";
 import "./styles/navigation.css";
+import "./styles/pink-disco-bride.css";
+import "./styles/typography.css";
 
 createRoot(document.getElementById("root")).render(
   <React.StrictMode>
@@ -51,3 +53,12 @@ createRoot(document.getElementById("root")).render(
     </BrowserRouter>
   </React.StrictMode>,
 );
+
+import "./styles/retro-bridal.css";
+
+
+import "./styles/christening-cards.css";
+
+import "./styles/card-image-sizing.css";
+import "./styles/invitation-opening.css";
+import "./styles/card-typography.css";

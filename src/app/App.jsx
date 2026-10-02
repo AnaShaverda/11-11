@@ -15,6 +15,7 @@ import SurpriseDemoPage from "../surprises/pages/SurpriseDemoPage.jsx";
 import ThemePreviewPage from "../themes/pages/ThemePreviewPage.jsx";
 import LoginPage from "../auth/pages/LoginPage.jsx";
 import RegisterPage from "../auth/pages/RegisterPage.jsx";
+import InvitationOpeningPage from "../invitations/pages/InvitationOpeningPage.jsx";
 
 function InvitationCatalogRedirect() {
   const { search, hash, state } = useLocation();
@@ -30,6 +31,7 @@ function InvitationCatalogRedirect() {
 export default function App() {
   return (
     <Routes>
+      <Route path="invitations/:slug/open" element={<InvitationOpeningPage />} />
       <Route element={<WebsiteLayout />}>
         <Route path="login" element={<LoginPage />} />
         <Route path="register" element={<RegisterPage />} />

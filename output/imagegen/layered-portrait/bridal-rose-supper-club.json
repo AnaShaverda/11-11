@@ -1,0 +1,21 @@
+{
+  "slug": "bridal-rose-supper-club",
+  "visual": "bridal-rose-supper-club",
+  "palette": [
+    "#e9c4bd",
+    "#64272d",
+    "#b47d83",
+    "#f5ebdd"
+  ],
+  "cover": "/images/bridal/rose-supper-club/invitation-cover.webp",
+  "source": "/Users/mac/.codex/generated_images/01a0fc57-305e-7b33-ab00-593618dba7a4/exec-db4eebae-849a-4d24-92ed-106c12aa05cf.png",
+  "destination": "public/images/recipient/bridal-rose-supper-club/invitation-scene-portrait.webp",
+  "prompt": "Use case: precise-object-edit. OUTPAINT ONLY the supplied original square bridal-rose-supper-club invitation scene into a tall 9:16 background, actual 1080x1920 portrait canvas. The original square composition must stay unchanged in the middle: same width as output canvas, square height equal to its width, vertically centered (original square region x0%-100%, y21.875%-78.125%). Lock the foreground invitation paper/card, its exact original width-to-height ratio, border, ornament positions, shadows and surrounding original props. Do not make the inner card tall. Do not redraw, scale, stretch, crop, move or lengthen the inner card. Preserve the exact original scene within that central square. Add canvas only above and below it, naturally extending ONLY the surrounding background cloth, paper textures, gingham, stripes, collage fragments or backdrop. The inner card must look regular sized, surrounded by more background above and below. Seamless continuation at the two central-square boundaries. No additional invitation cards, no duplicate foreground figures or props, no added text, letters, logos or watermarks. Preserve the exact original colors, texture, photographic or illustration style.",
+  "tool": "built-in image generation",
+  "centralOriginalRegion": {
+    "left": 0,
+    "top": 0.21875,
+    "width": 1,
+    "height": 0.5625
+  }
+}

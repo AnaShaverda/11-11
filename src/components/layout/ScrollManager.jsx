@@ -77,6 +77,7 @@ export default function ScrollManager() {
       const heading = document.querySelector(".site-main h1");
       if (heading) {
         heading.setAttribute("tabindex", "-1");
+        heading.setAttribute("data-route-focus", "true");
         heading.focus({ preventScroll: true });
       }
     }

@@ -1,0 +1,59 @@
+/* Quiet watercolor card artwork with independent, editable typography. */
+.invitation-preview-art[class*="preview-christening-"] { width:100%; min-height:0; height:auto; aspect-ratio:1; padding:0; background:var(--cover-image) center / cover no-repeat; color:var(--showcase-ink); }
+.christening-card-copy { position:absolute; z-index:3; left:17%; width:66%; top:30%; display:flex; flex-direction:column; align-items:center; text-align:center; color:var(--showcase-ink); }
+.christening-card-opening { font-size:3.1cqw; font-style:italic; }
+.christening-card-copy strong { display:flex; flex-direction:column; margin-top:4cqw; }
+:root body .christening-card-copy strong span { font-family:Georgia,'Noto Serif Georgian',serif !important; font-size:9.1cqw; font-weight:400; line-height:1.18; letter-spacing:-.045em; }
+.christening-card-copy em { max-width:94%; margin-top:5cqw; font-size:2.7cqw; line-height:1.65; }
+.christening-card-details { margin-top:5cqw; padding-top:3cqw; border-top:1px solid color-mix(in srgb,var(--showcase-ink) 40%,transparent); font-size:2.45cqw; letter-spacing:.09em; line-height:1.9; }
+.christening-card-closing { margin-top:5cqw; max-width:90%; font-size:2.05cqw; line-height:1.6; }
+:root body .preview-christening-blush-grace .christening-card-copy strong span { font-family:'Great Vibes Bridal',cursive !important; font-size:12cqw; line-height:1.08; letter-spacing:0; }
+:root body .christening-card-copy:lang(ka) strong span { font-family:'Noto Serif Georgian',serif !important; font-size:8.6cqw; line-height:1.4; letter-spacing:-.03em; }
+.christening-card-copy:lang(ka) em { font-size:2.4cqw; }
+.design-type-christening-card .design-hero-art { max-width:500px; width:100%; margin-inline:auto; }
+.design-type-christening-card .design-hero { align-items:center; }
+
+:root body .preview-christening-blush-petals .christening-card-copy strong span { font-family:"Great Vibes Bridal",cursive !important; font-size:12cqw; line-height:1.08; letter-spacing:0; }
+:root body .preview-christening-blush-petals .christening-card-copy:lang(ka) strong span { font-family:"Noto Serif Georgian",serif !important; font-size:8.6cqw; line-height:1.4; letter-spacing:-.03em; }
+/* Use the existing square invitation format and original detail-card height. */
+.invitation-preview-art.full-image-cover { aspect-ratio:1; }
+.invitation-preview-art[class*="preview-christening-"],
+.invitation-preview-art[class*="preview-bridal-"][class*="-card"] { aspect-ratio:1; }
+.christening-card-copy { top:25%; }
+.christening-card-opening { font-size:2.8cqw; }
+.christening-card-copy strong { margin-top:3cqw; }
+:root body .christening-card-copy strong span { font-size:8.2cqw; line-height:1.15; }
+.christening-card-copy em { margin-top:3cqw; font-size:2.4cqw; line-height:1.4; }
+.christening-card-details { margin-top:3cqw; padding-top:2cqw; font-size:2.1cqw; line-height:1.8; }
+.christening-card-closing { margin-top:3cqw; font-size:1.8cqw; }
+:root body :is(.preview-christening-blush-grace,.preview-christening-blush-petals) .christening-card-copy strong span { font-size:11cqw; line-height:1; }
+:root body .christening-card-copy:lang(ka) strong span { font-size:7.6cqw; line-height:1.3; }
+:root body .preview-christening-blush-petals .christening-card-copy:lang(ka) strong span { font-size:7.6cqw; line-height:1.3; }
+.invitation-preview-art[class*="preview-bridal-"][class*="-card"] .retro-bridal-copy { top:25%; }
+.invitation-preview-art[class*="preview-bridal-"][class*="-card"] .retro-bridal-host { font-size:3.5cqw; margin:2cqw 0; }
+.invitation-preview-art[class*="preview-bridal-"][class*="-card"] .retro-bridal-copy strong { font-size:10cqw; line-height:1; }
+.invitation-preview-art:is(.preview-bridal-doll-pink-card,.preview-bridal-pink-cocktail-card) .retro-bridal-copy strong { font-size:13cqw; }
+.invitation-preview-art[class*="preview-bridal-"][class*="-card"] .retro-bridal-copy:lang(ka) strong { font-size:6.8cqw; line-height:1.3; }
+.invitation-preview-art[class*="preview-bridal-"][class*="-card"] .retro-bridal-copy em { margin-top:3cqw; font-size:2.4cqw; }
+.invitation-preview-art[class*="preview-bridal-"][class*="-card"] .retro-bridal-details { margin-top:3cqw; padding-top:1.5cqw; font-size:2cqw; }
+/* Shared typography and original moodboard structure across all card formats. */
+:root body .retro-bridal-copy strong,
+:root body .retro-bridal-copy strong span,
+:root body .retro-bridal-copy:lang(ka) strong span,
+:root body .christening-card-copy strong span,
+:root body .christening-card-copy:lang(ka) strong span,
+:root body [class*="design-theme-bridal-"] .design-type-words h3,
+:root body [class*="design-theme-christening-"] .design-type-words h3 {
+  font-family:var(--font-main) !important; font-weight:400; font-style:normal;
+}
+.design-type-christening-card .design-type-words { max-width:100%; }
+:root body [class*="design-theme-bridal-"] .design-type-words h3 { font-size:clamp(3rem,5.2vw,6.5rem); }
+[class*="design-theme-bridal-"] .design-type-words { max-width:100%; }
+/* Native div moodboards use the existing palette blocks; artwork is only in the invitation. */
+.design-type-retro-bridal .design-type-board { background-color:var(--showcase-paper); color:var(--showcase-ink); }
+.design-type-retro-bridal .design-support-1 { background:var(--showcase-accent); color:var(--showcase-paper); }
+.design-type-retro-bridal .design-support-2 { background:var(--showcase-secondary); color:var(--showcase-ink); }
+.design-type-retro-bridal .design-support-3 { background:var(--showcase-ink); color:var(--showcase-paper); }
+.design-type-retro-bridal .design-support-4 { background:var(--showcase-paper); color:var(--showcase-ink); }
+
+:is([class*="design-theme-bridal-"],[class*="design-theme-christening-"]) .birthday-illustration--configured { object-fit:contain; }

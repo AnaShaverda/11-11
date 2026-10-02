@@ -7,7 +7,7 @@ import { useLanguage } from "../../localization/LanguageContext.jsx";
 
 let lastCategoryLine = null;
 
-export default function CatalogControls({ project, style, options, resultCount, showStyle, onChange, categoryLink }) {
+export default function CatalogControls({ project, style, options, resultCount, showStyle, onChange, categoryLink, children }) {
   const { t, language } = useLanguage();
   const navigate = useNavigate();
   const location = useLocation();
@@ -62,6 +62,7 @@ export default function CatalogControls({ project, style, options, resultCount, 
           {options.map((option) => <option key={option.id} value={option.id} disabled={option.count === 0 && style !== option.id}>{option.id === "all" ? t("invitations.allStyles") : `${t(`invitations.styles.${option.id}`)} (${option.count})`}</option>)}
         </SelectField>
       </div>
+      {children}
       <div className="catalog-results-bar">
         <p className="catalog-result-count" role="status">{showStyle ? t(resultCount === 1 ? "catalog.result.one" : "catalog.result.many", { count: resultCount }) : t("common.preview")}</p>
         {hasFilter ? <div className="catalog-applied-filters" role="group" aria-label={t("catalog.filters.applied")}>

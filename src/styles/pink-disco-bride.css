@@ -1,0 +1,108 @@
+.theme-pink-disco-bride {
+  --theme-bg: #ffe5ef;
+  --theme-ink: #681b46;
+  --theme-accent: #d93283;
+  --theme-panel: #fff5f9;
+  --theme-stroke: #681b4630;
+  --theme-display: Georgia, serif;
+  --world-paper: #ffe5ef;
+  --world-photo: url('/images/bridal/pink-disco/pink-disco-bride-cover.webp');
+  background: var(--theme-bg);
+  color: var(--theme-ink);
+}
+.preview-pink-disco-bride .full-image-cover-copy {
+  left: 18%; top: 21%; width: 58%; color: #681b46;
+  align-items: center; text-align: center;
+}
+.preview-pink-disco-bride .full-image-cover-copy strong { font-size: 7.2cqw; font-style: italic; line-height: 1.12; }
+.preview-pink-disco-bride .full-image-cover-copy em { max-width: 100%; font-size: 2.4cqw; }
+.preview-pink-disco-bride .full-image-cover-opening { font-size: 1.8cqw; margin-bottom: 2cqw; }
+.preview-pink-disco-bride .full-image-cover-details { margin-top: 3cqw; font-size: 1.7cqw; border-color: #681b4640; }
+.theme-pink-disco-bride .theme-invitation-card.full-image-cover { width: 100%; padding: 0; border: 0; box-shadow: none; }
+.theme-pink-disco-bride .theme-world-hero { background: linear-gradient(140deg, #fff5f9, #ffc9df); }
+.theme-pink-disco-bride .theme-world-hero h2 { font-family: Georgia, serif; font-style: italic; }
+.theme-pink-disco-bride .theme-world-hero-photo,
+.theme-pink-disco-bride .theme-world-image > div { background-image: var(--world-photo); background-size: cover; }
+.theme-pink-disco-bride .theme-world-image:nth-child(even) > div { background: #fff5f9 url('/images/bridal/pink-disco/veiled-disco-ball.webp') center / 70% auto no-repeat; }
+.theme-pink-disco-bride .theme-world-image:nth-child(3) > div { background: #f9c6db url('/images/bridal/pink-disco/pink-coupe-bow.webp') center / 65% auto no-repeat; }
+.design-theme-pink-disco-bride .design-type-board { background: #ffe5ef; color: #681b46; }
+.design-theme-pink-disco-bride .design-type-words { position: relative; z-index: 3; max-width: 70%; }
+.design-theme-pink-disco-bride .design-type-words h3 { font-family: Georgia, serif; font-style: italic; }
+.design-theme-pink-disco-bride .design-support-card { overflow: hidden; }
+.design-theme-pink-disco-bride .design-support-card > strong,
+.design-theme-pink-disco-bride .design-support-card > small { position: relative; z-index: 3; max-width: 70%; }
+
+.theme-pink-disco-lines {
+  --theme-bg: #f9dce7;
+  --theme-ink: #8b2850;
+  --theme-accent: #b43e6a;
+  --theme-panel: #fff5f9;
+  --theme-stroke: #8b285030;
+  --theme-display: Georgia, serif;
+  --world-paper: #f9dce7;
+  --world-photo: url('/images/bridal/pink-line/pink-bridal-scrapbook-cover.webp');
+  background: var(--theme-bg);
+  color: var(--theme-ink);
+}
+.preview-pink-disco-lines .full-image-cover-copy {
+  left: 18%; top: 21%; width: 58%; color: #8b2850;
+  align-items: center; text-align: center;
+}
+.preview-pink-disco-lines .full-image-cover-copy strong { font-size: 7.2cqw; font-style: italic; line-height: 1.12; }
+.preview-pink-disco-lines .full-image-cover-copy em { max-width: 100%; font-size: 2.4cqw; }
+.preview-pink-disco-lines .full-image-cover-opening { font-size: 1.8cqw; margin-bottom: 2cqw; }
+.preview-pink-disco-lines .full-image-cover-details { margin-top: 3cqw; font-size: 1.7cqw; border-color: #8b285040; }
+.theme-pink-disco-lines .theme-invitation-card.full-image-cover { width: 100%; padding: 0; border: 0; box-shadow: none; }
+.theme-pink-disco-lines .theme-world-hero { background: linear-gradient(140deg, #fff5f9, #ffc9df); }
+.theme-pink-disco-lines .theme-world-hero h2 { font-family: Georgia, serif; font-style: italic; }
+.theme-pink-disco-lines .theme-world-hero-photo,
+.theme-pink-disco-lines .theme-world-image > div { background-image: var(--world-photo); background-size: cover; }
+.theme-pink-disco-lines .theme-world-image:nth-child(even) > div { background: #fff5f9 url('/images/bridal/pink-line/disco-bow-lines.webp') center / 70% auto no-repeat; }
+.theme-pink-disco-lines .theme-world-image:nth-child(3) > div { background: #f9c6db url('/images/bridal/pink-line/coupe-lines.webp') center / 65% auto no-repeat; }
+.design-theme-pink-disco-lines .design-type-board { background: #f9dce7; color: #8b2850; }
+.design-theme-pink-disco-lines .design-type-words { position: relative; z-index: 3; max-width: 70%; }
+.design-theme-pink-disco-lines .design-type-words h3 { font-family: Georgia, serif; font-style: italic; }
+.design-theme-pink-disco-lines .design-support-card { overflow: hidden; }
+.design-theme-pink-disco-lines .design-support-card > strong,
+.design-theme-pink-disco-lines .design-support-card > small { position: relative; z-index: 3; max-width: 70%; }
+/* Fine raspberry ink needs pale paper on every supporting surface. */
+.design-theme-pink-disco-lines .design-support-card,
+.design-theme-pink-disco-lines .design-pattern-panel {
+  background: #f9dce7;
+  color: #8b2850;
+}
+.design-theme-pink-disco-lines .design-support-2,
+.design-theme-pink-disco-lines .design-support-4 { background: #fcebf1; }
+.theme-pink-disco-lines .theme-world-hero { background: #f9dce7; }
+
+/* Pink analog scrapbook direction, matching the supplied birthday reference. */
+.full-image-cover.preview-pink-disco-lines .full-image-cover-copy {
+  left: 14%; top: 21%; width: 65%; align-items: flex-start; text-align: left;
+}
+.full-image-cover.preview-pink-disco-lines .full-image-cover-opening {
+  background: #ed9cbc; color: #7b2548; padding: .6cqw 1cqw;
+  transform: rotate(-3deg); font: 400 2.8cqw/1.2 Georgia, serif;
+  margin-bottom: 3cqw;
+}
+.full-image-cover.preview-pink-disco-lines .full-image-cover-copy strong {
+  font: italic 700 7.6cqw/1.13 Georgia, serif; letter-spacing: -.055em;
+}
+.preview-pink-disco-lines .scrapbook-word {
+  display: inline-block; padding: .1em .09em; margin: .03em 0;
+  color: #952c57; background: #f1afc9; transform: rotate(-2deg);
+}
+.preview-pink-disco-lines .scrapbook-word:nth-child(2n) {
+  color: #721e44; background: #e891b3; transform: rotate(2deg);
+}
+.preview-pink-disco-lines .scrapbook-word:nth-child(3n) { background: #f7bfd4; }
+.full-image-cover.preview-pink-disco-lines .full-image-cover-copy em {
+  margin-top: 3cqw; font-size: 2.5cqw; color: #442a36;
+}
+.full-image-cover.preview-pink-disco-lines .full-image-cover-details {
+  color: #442a36; margin-top: 3cqw; font: 400 2.5cqw/1.8 Georgia, serif;
+  letter-spacing: .1em; border-top-color: #442a3660;
+}
+.design-theme-pink-disco-lines .design-pattern-panel {
+  background-image: linear-gradient(#8b285030 1px, transparent 1px), linear-gradient(90deg,#8b285030 1px,transparent 1px);
+  background-size: 36px 36px;
+}

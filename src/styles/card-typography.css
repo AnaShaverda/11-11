@@ -1,0 +1,122 @@
+/* The supplied fonts contain Latin glyphs only. Explicit coverage keeps Georgian,
+   missing demo punctuation, and numbers in complete, locally bundled families. */
+@font-face {
+  font-family: "Card Casmera";
+  src: url('/fonts/cards/casmera-demo.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+0041-005A, U+0061-007A;
+}
+@font-face {
+  font-family: "Card Magnola";
+  src: url('/fonts/cards/magnola-demo.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+0041-005A, U+0061-007A;
+}
+@font-face {
+  font-family: "Card Zalino";
+  src: url('/fonts/cards/zalino.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+0020-007E, U+00A0-024F, U+2000-206F;
+}
+@font-face {
+  font-family: "Card Elegance";
+  src: url('/fonts/cards/elegance-natural-valentine.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+0020-007E, U+00A0-024F, U+2000-206F;
+}
+@font-face {
+  font-family: "Card Birthday";
+  src: url('/fonts/cards/birthday.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+0020-007E, U+00A0-024F, U+2000-206F;
+}
+
+.invitation-art[data-card-font="casmera"] { --card-display: "Card Casmera"; }
+.invitation-art[data-card-font="magnola"] { --card-display: "Card Magnola"; }
+.invitation-art[data-card-font="zalino"] { --card-display: "Card Zalino"; }
+.invitation-art[data-card-font="elegance"] { --card-display: "Card Elegance"; }
+.invitation-art[data-card-accent="birthday"] { --card-accent: "Card Birthday"; }
+
+/* Only live display text inside the artwork receives a decorative font.
+   Descendant spans need the same exception to the site's shared font rule. */
+:root body .invitation-art[data-card-font] :is(
+  .invitation-preview-copy > strong,
+  .full-image-cover-copy > strong,
+  .wedding-ink-copy > strong,
+  .day-poster-names,
+  .bridal-line-copy > strong,
+  .retro-bridal-copy > strong,
+  .christening-card-copy > strong,
+  .ribbon-poster-name,
+  .modern-toast-name,
+  .pastel-image-name
+),
+:root body .invitation-art[data-card-font] :is(
+  .invitation-preview-copy > strong,
+  .full-image-cover-copy > strong,
+  .wedding-ink-copy > strong,
+  .day-poster-names,
+  .bridal-line-copy > strong,
+  .retro-bridal-copy > strong,
+  .christening-card-copy > strong,
+  .ribbon-poster-name,
+  .modern-toast-name
+) span {
+  font-family: var(--card-display), "Noto Serif Georgian", Georgia, serif !important;
+  font-weight: 400;
+  font-style: normal;
+  font-synthesis: none;
+  letter-spacing: -.025em;
+}
+
+:root body .invitation-art[data-card-accent] :is(
+  .retro-bridal-host,
+  .pastel-image-sweet,
+  .christening-card-copy > strong > span:first-child
+) {
+  font-family: var(--card-accent), "Noto Serif Georgian", Georgia, serif !important;
+  font-weight: 400;
+  font-style: normal;
+  font-synthesis: none;
+  letter-spacing: 0;
+  line-height: 1.3;
+}
+
+/* Short handwritten accents complement, rather than compete with, the title. */
+:root body .invitation-art[data-card-accent] .retro-bridal-host { font-size: 4.5cqw; }
+:root body .invitation-art[data-card-accent] .christening-card-copy > strong > span:first-child {
+  font-size: 10cqw;
+}
+
+/* Georgian needs an upright face, looser tracking and room above/below letters.
+   Existing per-design Georgian sizes remain in force. Latin in mixed text still
+   uses the selected display face through glyph-level fallback. */
+:root body .invitation-art[data-card-font]:lang(ka) :is(
+  .invitation-preview-copy > strong,
+  .full-image-cover-copy > strong,
+  .wedding-ink-copy > strong,
+  .day-poster-names,
+  .bridal-line-copy > strong,
+  .retro-bridal-copy > strong,
+  .christening-card-copy > strong,
+  .ribbon-poster-name,
+  .modern-toast-name,
+  .pastel-image-name
+) {
+  line-height: 1.3;
+  letter-spacing: 0;
+  text-transform: none;
+}
+:root body .invitation-art[data-card-accent]:lang(ka) .christening-card-copy > strong > span:first-child {
+  font-size: 7.6cqw;
+}
