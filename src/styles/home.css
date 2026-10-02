@@ -71,6 +71,48 @@
 .home-page .folder-front svg { width: 34px; height: 34px; }
 .home-page .folder-spark { top: 10px; right: 8px; font-size: 1.05rem; }
 .home-page .project-title { font-size: .9rem; }
+
+/* Preserve the original shapes and palette; use quiet depth instead of shine. */
+:root[data-theme] .home-page .hero-brand {
+  border-color: transparent;
+  box-shadow: 0 8px 24px rgba(20, 12, 61, .12);
+  text-shadow: none;
+}
+:root[data-theme] .home-page .intro-control {
+  border-color: transparent;
+  box-shadow: 0 4px 12px rgba(20, 12, 61, .14);
+  letter-spacing: .08em;
+  font-weight: 700;
+  transition: transform var(--transition-fast), background-color var(--transition-fast), box-shadow var(--transition-fast);
+}
+:root[data-theme] .home-page .intro-control:hover {
+  transform: translateY(-2px);
+  background-color: rgba(255, 255, 255, .08);
+  box-shadow: 0 7px 18px rgba(20, 12, 61, .18);
+}
+:root[data-theme] .home-page .intro-control:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 6px rgba(20, 12, 61, .12);
+}
+:root[data-theme] .home-page .intro-control-arrow {
+  border-color: transparent;
+  background: rgba(255, 255, 255, .13);
+}
+:root[data-theme="light"] .home-page .intro-control-arrow {
+  background: rgba(99, 78, 159, .09);
+}
+.home-page .folder { filter: none; }
+.home-page .folder-tab { border-color: transparent; }
+.home-page .folder-front {
+  border-color: transparent;
+  box-shadow: 0 4px 10px rgba(20, 12, 61, .15);
+}
+.home-page .folder-front::before { content: none; }
+.home-page .folder-front svg { filter: none; }
+.home-page .project-title { font-weight: 700; }
+.home-page .project-card:hover { transform: translateY(-3px); }
+.home-page .project-card:hover .project-title { text-decoration: underline; text-underline-offset: 4px; }
+
 @media (max-width: 900px) {
   .home-page .home-projects { max-width: 460px; }
 }
