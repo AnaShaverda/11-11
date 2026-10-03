@@ -1,3 +1,7 @@
+import { selectedBridalStyles } from "./selectedBridalDesigns.js";
+import { pinkChampagneStyles } from "./pinkChampagneDesigns.js";
+import { cocktailBirthdayStyles } from "./cocktailBirthdayDesigns.js";
+import { pizzaBirthdayStyles } from "./pizzaBirthdayDesigns.js";
 import { comicBirthdayStyles } from "./comicBirthdayDesigns.js";
 import { poolBirthdayStyles } from "./poolBirthdayDesigns.js";
 import { girlyBirthdayStyles } from "./girlyBirthdayDesigns.js";
@@ -25,6 +29,10 @@ export const invitationStyleTags = {
   ...girlyBirthdayStyles,
   ...comicBirthdayStyles,
   ...poolBirthdayStyles,
+  ...pizzaBirthdayStyles,
+  ...cocktailBirthdayStyles,
+  ...pinkChampagneStyles,
+  ...selectedBridalStyles,
   "christening-olive-full-frame": ["minimal", "floral"],
   "christening-blue-full-frame": ["minimal", "floral"],
   "christening-little-dreamer": ["minimal", "floral"],

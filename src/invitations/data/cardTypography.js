@@ -103,9 +103,12 @@ export function formatCardOpening(text, language, font) {
 
 export function getCardTypography(template) {
   const visual = template.previewArt;
-  const display = ["city-after-dark", "comic-cutout", "retro-sport", "upside-down"].includes(visual)
+  const display = template.visualAssets?.selectedBridal?.font
+    ?? (["midnight-martini", "peach-fizz", "pink-pop", "cherry-tower", "bridal-pink-pop", "bridal-cherry-tower"].includes(visual)
+    ? "cocktail"
+    : ["city-after-dark", "comic-cutout", "retro-sport", "upside-down"].includes(visual)
     ? "comic"
-    : ["pink-lido", "blue-splash"].includes(visual)
+    : ["pink-lido", "blue-splash", "little-pizza-chef", "slice-club"].includes(visual)
     ? "pool"
     : visual.startsWith("christening-")
     ? "magnola"
@@ -113,7 +116,7 @@ export function getCardTypography(template) {
       ?? ({ "ribbon-sketch": "zalino", "party-doodles": "birthday", "white-and-blue": "magnola", "pink-minimal": "casmera" }[visual])
       ?? (modernOpenings.has(visual) ? "zalino"
         : retroOpenings.has(visual) ? "casmera"
-        : formalWeddings.has(visual) ? "zalino" : "casmera");
+        : formalWeddings.has(visual) ? "zalino" : "casmera"));
 
   return {
     display: threeDHeadings.has(visual) ? `${display}-3d` : display,
@@ -129,6 +132,8 @@ export function getCardTypography(template) {
 
 // These are the five supplied families, with downloaded Georgian companions.
 export const cardFontRegistry = {
+  "painted-party": { name: "Comic Lilita", georgian: "BPG Gorda", family: '"Comic Lilita", "BPG Gorda", sans-serif', weight: 400 },
+  cocktail: { name: "Comic Anton", georgian: "BPG Gorda", family: '"Comic Anton", "BPG Gorda", sans-serif', weight: 400 },
   comic: { name: "Comic Anton", georgian: "BPG Gorda", family: '"Comic Anton", "BPG Gorda", sans-serif', weight: 400 },
   pool: { name: "Pool Kalam", georgian: "BPG Irubaqidze", family: '"Pool Kalam", "BPG Irubaqidze", "Noto Serif Georgian"', weight: 700 },
   casmera: { name: "Casmera Demo", georgian: "BPG Gorda", family: '"Casmera Demo", "BPG Gorda", "Noto Serif Georgian"', weight: 400 },

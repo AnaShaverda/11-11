@@ -1,0 +1,33 @@
+{
+  "mode": "built-in image_gen",
+  "reference": "/Users/mac/.codex/generated_images/01a0fded-c5d5-70f0-9061-b505b5e7c2c3/exec-77639d19-1504-4424-b419-3715f3c337ce.png",
+  "assets": [
+    {
+      "group": "pink-pop",
+      "name": "champagne-artwork",
+      "transparent": true,
+      "prompt": "Use case: stylized-concept. Generate an isolated transparent PNG illustration for birthday and bridal invitations. Supplied moodboard is the approved visual reference. Match ONLY panel 01 Pink Pop at top left: one large navy champagne bottle with raspberry-pink speckled foil, ivory collar and ivory label with abstract pink petal stamps, flanked by TWO slender champagne flutes of different heights with raspberry outlines and stems, ivory rims and mustard bubbly drink with ivory dots. Sparse navy confetti dots above flutes. Re-create the approved arrangement, simple chunky retro gouache and textured painted-paper collage, flat opaque shapes, natural dry-brush pigment grain, imperfect hand-printed edges. Square-ish isolated composition; bottle and full stems fully visible, narrow comfortable margins. Entire background outside objects is genuinely transparent, NO pink field, no text, no brand, no labels with lettering, no shadow, no 3D, no photorealistic glass, no gloss, no detailed watercolor. Preserve ivory and mustard opaque shapes inside the illustrated glasses.",
+      "source": "/Users/mac/.codex/generated_images/01a0fded-c5d5-70f0-9061-b505b5e7c2c3/exec-cf9fdae9-a73e-4110-87b3-eca2043929c0.png",
+      "original": "src/assets/party/pink-pop/champagne-artwork.png",
+      "web": "public/images/party/pink-pop/champagne-artwork.webp"
+    },
+    {
+      "group": "cherry-tower",
+      "name": "champagne-artwork",
+      "transparent": true,
+      "prompt": "Use case: stylized-concept. Generate a genuinely transparent PNG illustration asset. Match ONLY panel 04 Cherry Tower at bottom left of supplied approved moodboard: SIX cherry red champagne coupes forming a clear 1-2-3 tower, long raspberry stems, opaque cream rims and drink, alternating irregular cream dots and vertical printed hatch patterns. A small dark cherry red champagne bottle standing slightly tilted to the RIGHT of the tower, pink speckled foil and pink label with two simple red cherries; a small mustard cork popping above it, sparse navy dots and ivory bubble confetti. Exactly six coupes, all bowls and stems fully visible. Match the approved retro gouache / textured painted-paper collage with intentionally naive shapes, tactile coarse pigment grain, flat colors and rough charming edges. Compact square-ish composition with small comfortable margin; all background outside objects genuinely transparent. NO pink background, no text or lettering anywhere, no logos, no shadows, no 3D, no shiny glass or realistic watercolor. Preserve cream dots, drinks and bubbles opaque.",
+      "source": "/Users/mac/.codex/generated_images/01a0fded-c5d5-70f0-9061-b505b5e7c2c3/exec-49fe9222-e21e-4856-b5ea-144be9f63757.png",
+      "original": "src/assets/party/cherry-tower/champagne-artwork.png",
+      "web": "public/images/party/cherry-tower/champagne-artwork.webp"
+    },
+    {
+      "group": "champagne-shared",
+      "name": "blush-paper",
+      "transparent": false,
+      "prompt": "Use case: stylized-concept. Square background texture asset only. Match the soft blush pink gouache painted paper in panels 01 Pink Pop and 04 Cherry Tower of supplied approved moodboard, approximate overall color #f5c5c7. Full-bleed uniform pale warm pink with subtle real paper fibers and gentle matte dry-brush pigment grain. Low contrast, quietly handmade, no vignette, no directional lighting, no empty border, no dark patches. NO text, objects, bottle, glasses, illustrations, dots, confetti, labels, watermark, gradients, photographed paper edges, shadows or perspective.",
+      "source": "/Users/mac/.codex/generated_images/01a0fded-c5d5-70f0-9061-b505b5e7c2c3/exec-28a75022-ca0b-41b8-b771-c99fdef06ac0.png",
+      "original": "src/assets/party/champagne-shared/blush-paper.png",
+      "web": "public/images/party/champagne-shared/blush-paper.webp"
+    }
+  ]
+}

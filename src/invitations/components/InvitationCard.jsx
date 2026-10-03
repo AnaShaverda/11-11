@@ -1,5 +1,8 @@
+import SelectedBridalPoster from "./SelectedBridalPoster.jsx";
+import CocktailBirthdayPoster from "./CocktailBirthdayPoster.jsx";
 import ComicBirthdayPoster from "./ComicBirthdayPoster.jsx";
 import PoolBirthdayPoster from "./PoolBirthdayPoster.jsx";
+import PizzaBirthdayPoster from "./PizzaBirthdayPoster.jsx";
 import LineBirthdayPoster from "./LineBirthdayPoster.jsx";
 import ChristeningCardPoster from "./ChristeningCardPoster.jsx";
 import RetroBridalPoster from "./RetroBridalPoster.jsx";
@@ -101,8 +104,14 @@ export function InvitationArtwork({
         <div className="invitation-layered-copy">
           <InvitationArtwork template={template} large={large} sample={sample} presentation="square" ariaLabel={ariaLabel} />
         </div>
+      ) : template.visualAssets?.selectedBridal ? (
+        <SelectedBridalPoster sample={sample} slug={template.slug} large={large} assets={template.visualAssets.selectedBridal} />
       ) : template.visualAssets?.comicBirthday ? (
         <ComicBirthdayPoster sample={sample} variant={template.visual} />
+      ) : template.visualAssets?.paintedCocktail ? (
+        <CocktailBirthdayPoster sample={sample} large={large} variant={template.visual} slug={template.slug} isBridal={template.subcategory === "bridal-party"} artwork={template.visualAssets.cocktailIllustration} />
+      ) : template.visualAssets?.pizzaChef ? (
+        <PizzaBirthdayPoster sample={sample} large={large} variant={template.visual} />
       ) : template.visualAssets?.paintedPool ? (
         <PoolBirthdayPoster sample={sample} variant={template.visual} />
       ) : template.visualAssets?.lineArt ? (

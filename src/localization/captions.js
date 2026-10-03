@@ -1,3 +1,7 @@
+import { selectedBridalCaptions } from "../invitations/data/selectedBridalDesigns.js";
+import { pinkChampagneCaptions } from "../invitations/data/pinkChampagneDesigns.js";
+import { cocktailBirthdayCaptions } from "../invitations/data/cocktailBirthdayDesigns.js";
+import { pizzaBirthdayCaptions } from "../invitations/data/pizzaBirthdayDesigns.js";
 import { comicBirthdayCaptions } from "../invitations/data/comicBirthdayDesigns.js";
 import { poolBirthdayCaptions } from "../invitations/data/poolBirthdayDesigns.js";
 import { girlyBirthdayCaptions } from "../invitations/data/girlyBirthdayDesigns.js";
@@ -2939,3 +2943,15 @@ Object.assign(captions.ka, girlyBirthdayCaptions.ka);
 
 Object.assign(captions.en, comicBirthdayCaptions.en, poolBirthdayCaptions.en);
 Object.assign(captions.ka, comicBirthdayCaptions.ka, poolBirthdayCaptions.ka);
+
+Object.assign(captions.en, pizzaBirthdayCaptions.en);
+Object.assign(captions.ka, pizzaBirthdayCaptions.ka);
+
+Object.assign(captions.en, cocktailBirthdayCaptions.en);
+Object.assign(captions.ka, cocktailBirthdayCaptions.ka);
+
+Object.assign(captions.en, pinkChampagneCaptions.en);
+Object.assign(captions.ka, pinkChampagneCaptions.ka);
+
+Object.assign(captions.en, selectedBridalCaptions.en);
+Object.assign(captions.ka, selectedBridalCaptions.ka);

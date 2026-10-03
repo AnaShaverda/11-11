@@ -70,3 +70,9 @@ import "./styles/ivory-vows-watercolor.css";
 
 import "./styles/comic-birthday.css";
 import "./styles/pool-birthday.css";
+
+import "./styles/pizza-birthday.css";
+
+import "./styles/cocktail-birthday.css";
+
+import "./styles/selected-bridal.css";

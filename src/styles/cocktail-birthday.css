@@ -1,0 +1,25 @@
+.invitation-art:has(.cocktail-birthday-poster) { background: var(--cover-image) center / 100% 100% no-repeat !important; color: var(--showcase-ink); }
+.invitation-art:has(.cocktail-birthday-poster)::before,
+.invitation-art:has(.cocktail-birthday-poster)::after { content: none !important; }
+.cocktail-birthday-poster { position: absolute; inset: 0; }
+.cocktail-birthday-copy { position: absolute; inset: 0; z-index: 3; color: var(--showcase-ink); text-align: center; }
+.cocktail-birthday-copy > * { position: absolute; left: 9%; width: 82%; margin: 0; text-transform: uppercase; font-weight: 400; }
+:root body .cocktail-birthday-copy * { font-family: var(--design-font-family) !important; }
+.cocktail-title { top: 4%; font-size: 8cqw; line-height: 1.15; letter-spacing: .055em; white-space: pre-line; transform: rotate(-2deg); }
+.cocktail-host { top: 25%; font-size: 2.8cqw; letter-spacing: .12em; line-height: 1.4; }
+.cocktail-details { bottom: 3%; font-size: 2.4cqw; letter-spacing: .08em; line-height: 1.5; }
+.cocktail-birthday-illustration { position: absolute; left: 7%; top: 31%; width: 86%; height: 59%; object-fit: contain; pointer-events: none; z-index: 2; }
+.invitation-art--portrait .cocktail-title { top: 6%; font-size: 12.5cqw; line-height: 1.18; }
+.invitation-art--portrait .cocktail-host { top: 24%; font-size: 4.8cqw; }
+.invitation-art--portrait .cocktail-birthday-illustration { left: 4%; top: 31%; width: 92%; height: 57%; }
+.invitation-art--portrait .cocktail-details { bottom: 4%; font-size: 3.5cqw; }
+.invitation-art:lang(ka) .cocktail-title { font-size: 7cqw; letter-spacing: 0; line-height: 1.2; }
+.invitation-art:lang(ka) .cocktail-host { font-size: 2.7cqw; letter-spacing: 0; }
+.invitation-art:lang(ka) .cocktail-details { font-size: 2.1cqw; letter-spacing: 0; }
+.invitation-art--portrait:lang(ka) .cocktail-title { font-size: 11cqw; }
+.invitation-art--portrait:lang(ka) .cocktail-host { font-size: 4.3cqw; }
+.invitation-art--portrait:lang(ka) .cocktail-details { font-size: 3.3cqw; }
+.cocktail-bridal .cocktail-host { top: 23%; font-size: 2.5cqw; }
+.invitation-art--portrait .cocktail-bridal .cocktail-host { top: 23%; font-size: 4.3cqw; }
+.invitation-art:lang(ka) .cocktail-bridal .cocktail-host { font-size: 2.5cqw; }
+.invitation-art--portrait:lang(ka) .cocktail-bridal .cocktail-host { font-size: 4cqw; }

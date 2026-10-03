@@ -1,0 +1,55 @@
+.invitation-art:has(.selected-bridal-poster) { background: var(--cover-image) center / 100% 100% no-repeat !important; color: var(--showcase-ink); }
+.invitation-art:has(.selected-bridal-poster)::before,
+.invitation-art:has(.selected-bridal-poster)::after { content: none !important; }
+.selected-bridal-poster { position: absolute; inset: 0; }
+.selected-bridal-copy { position: absolute; inset: 0; z-index: 3; text-align: center; color: var(--showcase-ink); }
+:root body .selected-bridal-copy * { font-family: var(--design-font-family) !important; font-weight: 400; }
+.selected-bridal-copy > * { position: absolute; left: 8%; width: 84%; margin: 0; }
+.selected-bride-title { top: 3%; white-space: pre-line; font-size: 8cqw; line-height: 1.08; }
+.selected-bride-host { top: 23%; font-size: 2.5cqw; line-height: 1.4; letter-spacing: .04em; }
+.selected-bride-details { bottom: 2.5%; font-size: 2.3cqw; line-height: 1.5; }
+.selected-bride-foreground { position: absolute; left: 5%; top: 32%; width: 90%; height: 58%; object-fit: contain; pointer-events: none; z-index: 2; }
+.selected-bride-stripes { position: absolute; left: 8%; top: 33%; width: 84%; height: 56%; object-fit: fill; pointer-events: none; z-index: 1; }
+.invitation-art--portrait .selected-bride-title { top: 5%; font-size: 12.5cqw; line-height: 1.12; }
+.invitation-art--portrait .selected-bride-host { top: 22%; font-size: 4cqw; }
+.invitation-art--portrait .selected-bride-foreground { left: 3%; top: 32%; width: 94%; height: 55%; }
+.invitation-art--portrait .selected-bride-stripes { left: 6%; top: 33%; width: 88%; height: 53%; }
+.invitation-art--portrait .selected-bride-details { bottom: 4%; font-size: 3.2cqw; }
+.invitation-art:lang(ka) .selected-bride-title { font-size: 6.2cqw; line-height: 1.2; }
+.invitation-art:lang(ka) .selected-bride-host { font-size: 2.2cqw; letter-spacing: 0; }
+.invitation-art:lang(ka) .selected-bride-details { font-size: 2cqw; }
+.invitation-art--portrait:lang(ka) .selected-bride-title { font-size: 9.5cqw; }
+.invitation-art--portrait:lang(ka) .selected-bride-host { font-size: 3.6cqw; }
+.invitation-art--portrait:lang(ka) .selected-bride-details { font-size: 2.8cqw; }
+/* The text and its blank bottle label share a stage, so both resize together. */
+.selected-bride-stage { position: absolute; left: -2.5%; top: -4%; width: 105%; aspect-ratio: 1; }
+.selected-bride-stage .selected-bride-foreground { inset: 0; width: 100%; height: 100%; }
+.selected-bride-label { inset: auto; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 1.6cqw; padding: .8cqw; box-sizing: border-box; }
+.selected-bride-label > * { position: static; width: 100%; }
+.selected-bride-label .selected-bride-title { font-size: 6.1cqw; line-height: 1.05; }
+.selected-bride-label .selected-bride-host { font-size: 1.9cqw; letter-spacing: 0; }
+.selected-bride-label .selected-bride-details { font-size: 1.6cqw; }
+.selected-blush-label .selected-bride-stage { width: 175%; left: -37.5%; top: -55%; }
+.selected-lilac-pop .selected-bride-stage { width: 170%; left: -35%; top: -58%; }
+.invitation-art--portrait .selected-bride-stage { width: 140%; left: -21%; top: 14%; }
+.invitation-art--portrait .selected-bride-label { gap: 2.4cqw; padding: 1.2cqw; }
+.invitation-art--portrait .selected-bride-label .selected-bride-title { font-size: 8cqw; }
+.invitation-art--portrait .selected-bride-label .selected-bride-host { font-size: 2.7cqw; }
+.invitation-art--portrait .selected-bride-label .selected-bride-details { font-size: 2.2cqw; }
+.invitation-art--portrait .selected-blush-label .selected-bride-stage { width: 190%; left: -45%; top: 3%; }
+.invitation-art--portrait .selected-lilac-pop .selected-bride-stage { width: 185%; left: -42.5%; top: 2%; }
+.invitation-art:lang(ka) .selected-bride-label .selected-bride-title { font-size: 3.8cqw; }
+.invitation-art:lang(ka) .selected-bride-label .selected-bride-host { font-size: 1.8cqw; }
+.invitation-art:lang(ka) .selected-bride-label .selected-bride-details { font-size: 1.45cqw; }
+.invitation-art--portrait:lang(ka) .selected-bride-label .selected-bride-title { font-size: 5.1cqw; }
+.invitation-art--portrait:lang(ka) .selected-bride-label .selected-bride-host { font-size: 2.5cqw; }
+.invitation-art--portrait:lang(ka) .selected-bride-label .selected-bride-details { font-size: 2cqw; }
+/* A tall boot and a compact title keep the approved asymmetric arrangement. */
+.selected-mode-boot .selected-bride-title { left: 49%; top: 9%; width: 47%; font-size: 6.5cqw; }
+.selected-mode-boot .selected-bride-host { left: 58%; top: 42%; width: 36%; font-size: 2.4cqw; }
+.selected-mode-boot .selected-bride-foreground { left: -7%; top: 6%; width: 80%; height: 83%; }
+.invitation-art--portrait .selected-mode-boot .selected-bride-title { left: 42%; top: 7%; width: 54%; font-size: 10cqw; }
+.invitation-art--portrait .selected-mode-boot .selected-bride-host { left: 49%; top: 25%; width: 46%; font-size: 3.7cqw; }
+.invitation-art--portrait .selected-mode-boot .selected-bride-foreground { left: 0; top: 31%; width: 94%; height: 56%; }
+.invitation-art:lang(ka) .selected-mode-boot .selected-bride-title { font-size: 4.3cqw; }
+.invitation-art--portrait:lang(ka) .selected-mode-boot .selected-bride-title { font-size: 6.5cqw; }

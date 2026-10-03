@@ -1,0 +1,51 @@
+.invitation-art:has(.pizza-birthday-poster) { background: var(--cover-image) center / 100% 100% no-repeat !important; color: var(--showcase-ink); }
+.invitation-art:has(.pizza-birthday-poster)::before,
+.invitation-art:has(.pizza-birthday-poster)::after { content: none !important; }
+.pizza-birthday-poster { position: absolute; inset: 0; }
+.pizza-birthday-copy { position: absolute; inset: 0; z-index: 3; color: var(--showcase-ink); text-align: center; }
+.pizza-birthday-copy > * { position: absolute; margin: 0; left: 8%; width: 84%; font-weight: 700; text-transform: uppercase; }
+:root body .pizza-birthday-copy * { font-family: var(--design-font-family) !important; font-synthesis: weight; }
+.pizza-make { top: 4%; font-size: 7cqw; line-height: 1.2; transform: rotate(-4deg); }
+.pizza-headline { top: 13%; font-size: 15cqw; line-height: 1.05; transform: rotate(-4deg); }
+.pizza-headline::after { content: ""; position: absolute; left: 36%; top: 100%; width: 28%; height: .45cqw; background: currentColor; border-radius: 90%; transform: rotate(-3deg); }
+.pizza-host { top: 32%; font-size: 3.8cqw; line-height: 1.3; transform: rotate(-4deg); }
+.pizza-details { bottom: 2.5%; font-size: 2.3cqw; line-height: 1.4; }
+.pizza-chef-illustration { position: absolute; z-index: 2; left: 4%; top: 39%; width: 92%; height: 54%; object-fit: contain; pointer-events: none; }
+.invitation-art--portrait .pizza-make { top: 7%; font-size: 11cqw; }
+.invitation-art--portrait .pizza-headline { top: 16%; font-size: 23cqw; }
+.invitation-art--portrait .pizza-host { top: 35%; font-size: 5.5cqw; }
+.invitation-art--portrait .pizza-chef-illustration { top: 44%; height: 44%; width: 96%; left: 2%; }
+.invitation-art--portrait .pizza-details { bottom: 4%; font-size: 3.5cqw; }
+.invitation-art:lang(ka) .pizza-make { font-size: 5.3cqw; }
+.invitation-art:lang(ka) .pizza-headline { font-size: 14cqw; }
+.invitation-art:lang(ka) .pizza-host { font-size: 3.6cqw; }
+.invitation-art:lang(ka) .pizza-details { font-size: 2.1cqw; }
+.invitation-art--portrait:lang(ka) .pizza-make { font-size: 7cqw; }
+.invitation-art--portrait:lang(ka) .pizza-headline { font-size: 21cqw; }
+.invitation-art--portrait:lang(ka) .pizza-host { font-size: 5cqw; }
+.invitation-art--portrait:lang(ka) .pizza-details { font-size: 3.2cqw; }
+
+/* Slice Club shares the artwork renderer while preserving its own composition. */
+:root body .slice-club-copy :is(.slice-the, .slice-pizza, .slice-club) { font-family: "Comic Lilita", "BPG Gorda", "Noto Serif Georgian" !important; font-weight: 400; }
+.slice-the { top: 21%; font-size: 7.5cqw; line-height: 1; transform: rotate(-4deg); }
+.slice-pizza { top: 31%; font-size: 16cqw; line-height: 1; transform: rotate(-4deg); }
+.slice-club { top: 48%; font-size: 16cqw; line-height: 1; transform: rotate(-4deg); }
+.slice-club::after { content: ""; position: absolute; left: 36%; top: 105%; width: 28%; height: .4cqw; background: currentColor; border-radius: 90%; }
+.slice-host { top: 68%; left: 13%; width: 74%; font-size: 2.5cqw; line-height: 1.35; transform: rotate(-4deg); }
+.slice-details { bottom: 10%; left: 10%; width: 44%; font-size: 2.3cqw; line-height: 1.4; }
+.pizza-slice-illustration { position: absolute; z-index: 2; object-fit: contain; pointer-events: none; }
+.slice-illustration-top { left: 10%; top: 7%; width: 25%; height: 24%; transform: rotate(-12deg); }
+.slice-illustration-bottom { left: 64%; top: 76%; width: 27%; height: 17%; transform: rotate(6deg); }
+.invitation-art--portrait .slice-the { top: 24%; font-size: 9cqw; }
+.invitation-art--portrait .slice-pizza { top: 33%; font-size: 23cqw; }
+.invitation-art--portrait .slice-club { top: 48%; font-size: 23cqw; }
+.invitation-art--portrait .slice-host { top: 66%; font-size: 3.5cqw; }
+.invitation-art--portrait .slice-details { bottom: 11%; font-size: 3cqw; }
+.invitation-art--portrait .slice-illustration-top { left: 10%; top: 7%; width: 33%; height: 22%; }
+.invitation-art--portrait .slice-illustration-bottom { left: 58%; top: 73%; width: 34%; height: 22%; }
+.invitation-art:lang(ka) :is(.slice-pizza, .slice-club) { font-size: 11.5cqw; line-height: 1.15; }
+.invitation-art:lang(ka) .slice-host { font-size: 2.2cqw; }
+.invitation-art:lang(ka) .slice-details { font-size: 2.1cqw; }
+.invitation-art--portrait:lang(ka) :is(.slice-pizza, .slice-club) { font-size: 16.5cqw; }
+.invitation-art--portrait:lang(ka) .slice-host { font-size: 3cqw; }
+.invitation-art--portrait:lang(ka) .slice-details { font-size: 2.7cqw; }

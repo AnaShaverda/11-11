@@ -1,4 +1,8 @@
+import { selectedBridalAssets } from "./selectedBridalDesigns.js";
+import { pinkChampagneBridalAssets } from "./pinkChampagneDesigns.js";
 export const celebrationThemeAssets = {
+  ...pinkChampagneBridalAssets,
+  ...selectedBridalAssets,
   "gender-reveal-tiny-footprints": {"coverImage": "/images/celebrations/tiny-footprints/watercolor-footprints.webp", "invitation": [], "typography": {"image": "/images/celebrations/tiny-footprints/baby-footprints.webp", "right": "0%", "bottom": "9%", "width": "23%", "height": "32%"}, "pattern": null, "supportCards": [null, null, {"image": "/images/celebrations/tiny-footprints/baby-footprints.webp", "right": "0%", "bottom": "0%", "width": "38%", "height": "55%"}]},
   "gender-reveal-little-wonder": {"coverImage": "/images/celebrations/little-wonder/painted-booties.webp", "invitation": [], "typography": {"image": "/images/celebrations/little-wonder/pastel-booties.webp", "right": "0%", "bottom": "9%", "width": "23%", "height": "32%"}, "pattern": null, "supportCards": [null, null, {"image": "/images/celebrations/little-wonder/pastel-booties.webp", "right": "0%", "bottom": "0%", "width": "38%", "height": "55%"}]},
   "gender-reveal-bear-hug": {"coverImage": "/images/celebrations/bear-hug/pink-blue-teddies.webp", "invitation": [], "typography": {"image": "/images/celebrations/bear-hug/teddy-pair.webp", "right": "0%", "bottom": "9%", "width": "23%", "height": "32%"}, "pattern": null, "supportCards": [null, null, {"image": "/images/celebrations/bear-hug/teddy-pair.webp", "right": "0%", "bottom": "0%", "width": "38%", "height": "55%"}]},

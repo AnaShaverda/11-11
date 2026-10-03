@@ -1,0 +1,42 @@
+{
+  "mode": "built-in image_gen",
+  "reference": "/Users/mac/.codex/generated_images/01a0fded-c5d5-70f0-9061-b505b5e7c2c3/exec-5e1cb426-22cf-4eb4-84e0-a5bcbdfba47a.png",
+  "assets": [
+    {
+      "theme": "midnight-martini",
+      "name": "martini-artwork",
+      "transparent": true,
+      "prompt": "Use case: stylized-concept. Create a genuinely transparent PNG illustration asset for an invitation. Use ONLY panel 03, Midnight Martini, bottom left of the supplied approved moodboard as the exact visual direction. Extract/re-create its central flat ivory angular martini glass, pale blush long stem and oval base, green olive with coral pimento and diagonal coral cocktail pick with round coral end. Alongside it retain one small mustard starburst to the lower right, three short blush dry-brush marks to the lower left and four small ivory dots. ALL background outside these painted objects is completely transparent; NO navy background, no text, no labels, no border. Compose the objects as one isolated square-ish illustration, full glass visible with comfortable small margins, glass large. Match the intentionally naive dry gouache / cut-paper collage forms, speckled ink, rough print imperfections from approved panel, not realistic transparent glass. Flat colors and pigment grain, no volumetric lighting, shading, bevel, gloss, 3D or photorealism. This is an illustration to place on navy paper. Preserve the ivory opaque glass bowl and pink opaque stem; only surroundings transparent.",
+      "source": "/Users/mac/.codex/generated_images/01a0fded-c5d5-70f0-9061-b505b5e7c2c3/exec-196185ed-5a24-4f45-aee7-e88b828ec7de.png",
+      "original": "src/assets/birthday/midnight-martini/martini-artwork.png",
+      "web": "public/images/birthday/midnight-martini/martini-artwork.webp"
+    },
+    {
+      "theme": "peach-fizz",
+      "name": "coupe-artwork",
+      "transparent": true,
+      "prompt": "Use case: stylized-concept. Create a genuinely transparent PNG illustration asset for an invitation. Use ONLY panel 04, Peach Fizz, bottom right of the supplied approved moodboard as the visual direction. Re-create its two jaunty flat painted coupe glasses with long navy stems and oval navy bases: left tilted glass lavender bowl with small ivory irregular bubbles and a simple dark red cherry on an olive stalk; right tilted glass mustard-gold bowl with ivory dots and a small simple lemon wedge. Three small coral celebration brush rays between the bowls. Illustrated glasses lean toward each other, lightly touch bowls, one a bit higher. All objects fully visible with small comfortable margins, occupying most of a square-ish isolated composition. Match the approved flat retro gouache and painted-paper collage style with dry brush pigment grain and rough, charming edges. NO background, NO peach stripes, no text, no labels, no border, no other objects. Actual fully transparent background outside the illustrations, opaque painted bowls and stems. No realistic glass, gloss, complex detail, gradients, 3D, drop shadows or realistic lighting.",
+      "source": "/Users/mac/.codex/generated_images/01a0fded-c5d5-70f0-9061-b505b5e7c2c3/exec-45ee6b0b-2302-40d9-9f70-0efdb89dc6b5.png",
+      "original": "src/assets/birthday/peach-fizz/coupe-artwork.png",
+      "web": "public/images/birthday/peach-fizz/coupe-artwork.webp"
+    },
+    {
+      "theme": "midnight-martini",
+      "name": "navy-paper",
+      "transparent": false,
+      "prompt": "Use case: stylized-concept. Background paper texture only for an invitation, square. Match panel 03 Midnight Martini bottom left of the approved moodboard: deep inky blue navy (#153d58 approximate) gouache dry brush painted paper, restrained tactile pigment grain, softly visible ink unevenness. Uniform overall tone, low contrast texture, no big blank lighter areas. Entire square edge to edge. NO glass, objects, accents, stars, text, lettering, dots, illustration, border or watermark. Flat scanned handmade navy painted paper, no photographed paper edges, shadows or perspective.",
+      "source": "/Users/mac/.codex/generated_images/01a0fded-c5d5-70f0-9061-b505b5e7c2c3/exec-ece1f7c4-5821-4fbd-8c92-1eb3586aa87b.png",
+      "original": "src/assets/birthday/midnight-martini/navy-paper.png",
+      "web": "public/images/birthday/midnight-martini/navy-paper.webp"
+    },
+    {
+      "theme": "peach-fizz",
+      "name": "peach-paper",
+      "transparent": false,
+      "prompt": "Use case: stylized-concept. Background paper only for an invitation, square. Match panel 04 Peach Fizz bottom right of approved moodboard: pale peach blush and warm ivory broad alternating irregular painted vertical stripes, slightly wonky hand-brushed edges, dry gouache / screenprint pigment grain, limited flat colors, gentle contrast. Approximately seven broad stripes across full width. Entire square edge to edge. NO glasses, objects, cherries, lemon, accents, rays, lettering, labels, borders, watermark or shadow. Flat scanned handmade painted paper, no realism, paper edge or perspective.",
+      "source": "/Users/mac/.codex/generated_images/01a0fded-c5d5-70f0-9061-b505b5e7c2c3/exec-01d8b7e2-5239-4a87-b30f-6d3b8a1106a7.png",
+      "original": "src/assets/birthday/peach-fizz/peach-paper.png",
+      "web": "public/images/birthday/peach-fizz/peach-paper.webp"
+    }
+  ]
+}

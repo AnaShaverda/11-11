@@ -1,3 +1,7 @@
+import { selectedBridalCardCopy } from "../invitations/data/selectedBridalDesigns.js";
+import { pinkChampagneCardCopy } from "../invitations/data/pinkChampagneDesigns.js";
+import { cocktailBirthdayCardCopy } from "../invitations/data/cocktailBirthdayDesigns.js";
+import { pizzaBirthdayCardCopy } from "../invitations/data/pizzaBirthdayDesigns.js";
 import { comicBirthdayCardCopy } from "../invitations/data/comicBirthdayDesigns.js";
 import { poolBirthdayCardCopy } from "../invitations/data/poolBirthdayDesigns.js";
 import { girlyBirthdayCardCopy } from "../invitations/data/girlyBirthdayDesigns.js";
@@ -2146,7 +2150,7 @@ Object.assign(ka, {
   "cards.stories.modern-botanical.inviteFooter": "ახალი თავი · 11:11"
 });
 
-Object.assign(ka, girlyBirthdayCardCopy, comicBirthdayCardCopy, poolBirthdayCardCopy);
+Object.assign(ka, girlyBirthdayCardCopy, comicBirthdayCardCopy, poolBirthdayCardCopy, pizzaBirthdayCardCopy, cocktailBirthdayCardCopy, pinkChampagneCardCopy, selectedBridalCardCopy);
 
 const en = {};
 const sources = { samples: invitationSamples, designs: showcaseDesigns, events: themeDemoEvents, templates: demoEvents, stories: themeStories };

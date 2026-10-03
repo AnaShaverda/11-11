@@ -1,0 +1,225 @@
+{
+  "mode": "built-in image_gen",
+  "separateLayers": true,
+  "assets": [
+    {
+      "key": "blue-spritz",
+      "ref": "/Users/mac/.codex/generated_images/01a0fded-c5d5-70f0-9061-b505b5e7c2c3/exec-c64be76b-ce2a-4aa4-b2de-5b1cc51b8812.png",
+      "prompt": "Use case: stylized-concept. A production transparent PNG foreground illustration from ONE named panel of supplied approved moodboard. Re-create its exact simple gouache and painted-paper look, opaque matte colors and pigment grain, not realistic. Square canvas, entire subject fully visible with narrow margins. Genuine fully transparent background outside objects. NO BACKGROUND PAPER, NO STRIPES, NO RECTANGLE PATCH, NO TEXT OR LETTERING ANYWHERE, no shadows or 3D. Preserve opaque ivory details inside objects. Panel S1: ONLY two clinking IVORY coupe glasses with cobalt-blue drinks, long ivory stems and bases, left lemon wheel, two red cherries on right rim, three small blue celebration marks. Transparent surroundings, absolutely no yellow/aqua striped patch.",
+      "type": "foreground",
+      "source": "/Users/mac/.codex/generated_images/01a0fded-c5d5-70f0-9061-b505b5e7c2c3/exec-a43fe083-e6bd-4111-80a9-aaa4be69520b.png",
+      "original": "src/assets/bridal/selected/blue-spritz/foreground.png",
+      "web": "public/images/bridal/selected/blue-spritz/foreground.webp"
+    },
+    {
+      "key": "pink-stripe-social",
+      "ref": "/Users/mac/.codex/generated_images/01a0fded-c5d5-70f0-9061-b505b5e7c2c3/exec-c64be76b-ce2a-4aa4-b2de-5b1cc51b8812.png",
+      "prompt": "Use case: stylized-concept. A production transparent PNG foreground illustration from ONE named panel of supplied approved moodboard. Re-create its exact simple gouache and painted-paper look, opaque matte colors and pigment grain, not realistic. Square canvas, entire subject fully visible with narrow margins. Genuine fully transparent background outside objects. NO BACKGROUND PAPER, NO STRIPES, NO RECTANGLE PATCH, NO TEXT OR LETTERING ANYWHERE, no shadows or 3D. Preserve opaque ivory details inside objects. Panel S2: ONLY two clinking IVORY coupe bowls with coral-pink drinks, long navy stems and bases, red cherries on right rim, three navy celebration marks. No pink striped patch, all surroundings transparent.",
+      "type": "foreground",
+      "source": "/Users/mac/.codex/generated_images/01a0fded-c5d5-70f0-9061-b505b5e7c2c3/exec-270b3743-2284-41ab-9066-37a2fb92b61e.png",
+      "original": "src/assets/bridal/selected/pink-stripe-social/foreground.png",
+      "web": "public/images/bridal/selected/pink-stripe-social/foreground.webp"
+    },
+    {
+      "key": "mint-cheers",
+      "ref": "/Users/mac/.codex/generated_images/01a0fded-c5d5-70f0-9061-b505b5e7c2c3/exec-c64be76b-ce2a-4aa4-b2de-5b1cc51b8812.png",
+      "prompt": "Use case: stylized-concept. A production transparent PNG foreground illustration from ONE named panel of supplied approved moodboard. Re-create its exact simple gouache and painted-paper look, opaque matte colors and pigment grain, not realistic. Square canvas, entire subject fully visible with narrow margins. Genuine fully transparent background outside objects. NO BACKGROUND PAPER, NO STRIPES, NO RECTANGLE PATCH, NO TEXT OR LETTERING ANYWHERE, no shadows or 3D. Preserve opaque ivory details inside objects. Panel S3: ONLY two blush coupe bowls with mustard-yellow drinks, dark forest-green stems and oval bases, left lemon-wheel garnish. No mint stripes. All surroundings transparent.",
+      "type": "foreground",
+      "source": "/Users/mac/.codex/generated_images/01a0fded-c5d5-70f0-9061-b505b5e7c2c3/exec-603b8b02-490c-42eb-86ab-bb1c65ac30f5.png",
+      "original": "src/assets/bridal/selected/mint-cheers/foreground.png",
+      "web": "public/images/bridal/selected/mint-cheers/foreground.webp"
+    },
+    {
+      "key": "lilac-happy-hour",
+      "ref": "/Users/mac/.codex/generated_images/01a0fded-c5d5-70f0-9061-b505b5e7c2c3/exec-c64be76b-ce2a-4aa4-b2de-5b1cc51b8812.png",
+      "prompt": "Use case: stylized-concept. A production transparent PNG foreground illustration from ONE named panel of supplied approved moodboard. Re-create its exact simple gouache and painted-paper look, opaque matte colors and pigment grain, not realistic. Square canvas, entire subject fully visible with narrow margins. Genuine fully transparent background outside objects. NO BACKGROUND PAPER, NO STRIPES, NO RECTANGLE PATCH, NO TEXT OR LETTERING ANYWHERE, no shadows or 3D. Preserve opaque ivory details inside objects. Panel S4: ONLY two ivory coupe bowls with deep plum drinks, long coral stems and bases, left orange-wheel and right little plum cherry garnish, three coral celebration marks. No lilac-yellow stripes. All surroundings transparent.",
+      "type": "foreground",
+      "source": "/Users/mac/.codex/generated_images/01a0fded-c5d5-70f0-9061-b505b5e7c2c3/exec-1a383b77-9a7f-451b-aeed-1d9614b603eb.png",
+      "original": "src/assets/bridal/selected/lilac-happy-hour/foreground.png",
+      "web": "public/images/bridal/selected/lilac-happy-hour/foreground.webp"
+    },
+    {
+      "key": "pink-country-club",
+      "ref": "/Users/mac/.codex/generated_images/01a0fded-c5d5-70f0-9061-b505b5e7c2c3/exec-696dacd9-a6bc-406e-a6b2-00f4a26c6766.png",
+      "prompt": "Use case: stylized-concept. A production transparent PNG foreground illustration from ONE named panel of supplied approved moodboard. Re-create its exact simple gouache and painted-paper look, opaque matte colors and pigment grain, not realistic. Square canvas, entire subject fully visible with narrow margins. Genuine fully transparent background outside objects. NO BACKGROUND PAPER, NO STRIPES, NO RECTANGLE PATCH, NO TEXT OR LETTERING ANYWHERE, no shadows or 3D. Preserve opaque ivory details inside objects. Panel D1: ONLY the big blush-pink iced tumbler with ochre rim/base, three chunky ivory ice cubes, simple red cherry, lemon wheel and two olive-green leaves. No stars or title. Keep naive broad drybrush painted shapes.",
+      "type": "foreground",
+      "source": "/Users/mac/.codex/generated_images/01a0fded-c5d5-70f0-9061-b505b5e7c2c3/exec-ef3f8245-b592-46ba-b049-abde30e4256c.png",
+      "original": "src/assets/bridal/selected/pink-country-club/foreground.png",
+      "web": "public/images/bridal/selected/pink-country-club/foreground.webp"
+    },
+    {
+      "key": "citrus-cool",
+      "ref": "/Users/mac/.codex/generated_images/01a0fded-c5d5-70f0-9061-b505b5e7c2c3/exec-696dacd9-a6bc-406e-a6b2-00f4a26c6766.png",
+      "prompt": "Use case: stylized-concept. A production transparent PNG foreground illustration from ONE named panel of supplied approved moodboard. Re-create its exact simple gouache and painted-paper look, opaque matte colors and pigment grain, not realistic. Square canvas, entire subject fully visible with narrow margins. Genuine fully transparent background outside objects. NO BACKGROUND PAPER, NO STRIPES, NO RECTANGLE PATCH, NO TEXT OR LETTERING ANYWHERE, no shadows or 3D. Preserve opaque ivory details inside objects. Panel D2: ONLY the rounded mint-green iced tumbler with chunky ivory ice cubes, grapefruit wedge on rim, one simple olive-green leaf and raspberry-and-ivory striped straw. No printed title or confetti. Broad flat painted brush shapes.",
+      "type": "foreground",
+      "source": "/Users/mac/.codex/generated_images/01a0fded-c5d5-70f0-9061-b505b5e7c2c3/exec-46a7ebb5-4344-423a-afc7-3a1883bca661.png",
+      "original": "src/assets/bridal/selected/citrus-cool/foreground.png",
+      "web": "public/images/bridal/selected/citrus-cool/foreground.webp"
+    },
+    {
+      "key": "cherry-soda",
+      "ref": "/Users/mac/.codex/generated_images/01a0fded-c5d5-70f0-9061-b505b5e7c2c3/exec-696dacd9-a6bc-406e-a6b2-00f4a26c6766.png",
+      "prompt": "Use case: stylized-concept. A production transparent PNG foreground illustration from ONE named panel of supplied approved moodboard. Re-create its exact simple gouache and painted-paper look, opaque matte colors and pigment grain, not realistic. Square canvas, entire subject fully visible with narrow margins. Genuine fully transparent background outside objects. NO BACKGROUND PAPER, NO STRIPES, NO RECTANGLE PATCH, NO TEXT OR LETTERING ANYWHERE, no shadows or 3D. Preserve opaque ivory details inside objects. Panel D3: ONLY the raspberry iced soda tumbler with three chunky ivory ice cubes, opaque ivory bubble dots, dark navy painted base and two red cherries on green stalks on rim. No cream striped patch, no text.",
+      "type": "foreground",
+      "source": "/Users/mac/.codex/generated_images/01a0fded-c5d5-70f0-9061-b505b5e7c2c3/exec-42dcb7f0-28a1-44fb-b332-8bd79a883a80.png",
+      "original": "src/assets/bridal/selected/cherry-soda/foreground.png",
+      "web": "public/images/bridal/selected/cherry-soda/foreground.webp"
+    },
+    {
+      "key": "lilac-lemonade",
+      "ref": "/Users/mac/.codex/generated_images/01a0fded-c5d5-70f0-9061-b505b5e7c2c3/exec-696dacd9-a6bc-406e-a6b2-00f4a26c6766.png",
+      "prompt": "Use case: stylized-concept. A production transparent PNG foreground illustration from ONE named panel of supplied approved moodboard. Re-create its exact simple gouache and painted-paper look, opaque matte colors and pigment grain, not realistic. Square canvas, entire subject fully visible with narrow margins. Genuine fully transparent background outside objects. NO BACKGROUND PAPER, NO STRIPES, NO RECTANGLE PATCH, NO TEXT OR LETTERING ANYWHERE, no shadows or 3D. Preserve opaque ivory details inside objects. Panel D4: ONLY lavender iced lemonade tumbler with three chunky ivory ice cubes, butter-yellow lemon wheel and little plum cherry garnish, soft ochre printed base. No background brush marks and no text.",
+      "type": "foreground",
+      "source": "/Users/mac/.codex/generated_images/01a0fded-c5d5-70f0-9061-b505b5e7c2c3/exec-d9736ce0-a0df-4ec8-a529-261ef29c217f.png",
+      "original": "src/assets/bridal/selected/lilac-lemonade/foreground.png",
+      "web": "public/images/bridal/selected/lilac-lemonade/foreground.webp"
+    },
+    {
+      "key": "blush-boot-club",
+      "ref": "/Users/mac/.codex/generated_images/01a0fded-c5d5-70f0-9061-b505b5e7c2c3/exec-591aec26-81c1-4818-876b-1deed5a7f25d.png",
+      "prompt": "Use case: stylized-concept. A production transparent PNG foreground illustration from ONE named panel of supplied approved moodboard. Re-create its exact simple gouache and painted-paper look, opaque matte colors and pigment grain, not realistic. Square canvas, entire subject fully visible with narrow margins. Genuine fully transparent background outside objects. NO BACKGROUND PAPER, NO STRIPES, NO RECTANGLE PATCH, NO TEXT OR LETTERING ANYWHERE, no shadows or 3D. Preserve opaque ivory details inside objects. Panel B1: ONLY the large pink Western cowboy boot with pale cream star patches, small raspberry side bow, ochre low heel and toe cap. Preserve exact naive boot shape with simple stitched painted piping. No surrounding floating stars, no text, no ivory paper.",
+      "type": "foreground",
+      "source": "/Users/mac/.codex/generated_images/01a0fded-c5d5-70f0-9061-b505b5e7c2c3/exec-eb4f30fb-2f60-4719-ae9a-09e872550c99.png",
+      "original": "src/assets/bridal/selected/blush-boot-club/foreground.png",
+      "web": "public/images/bridal/selected/blush-boot-club/foreground.webp"
+    },
+    {
+      "key": "mint-bash",
+      "ref": "/Users/mac/.codex/generated_images/01a0fded-c5d5-70f0-9061-b505b5e7c2c3/exec-cc14a684-54ea-47c9-aa9f-928a04841422.png",
+      "prompt": "Use case: stylized-concept. A production transparent PNG foreground illustration from ONE named panel of supplied approved moodboard. Re-create its exact simple gouache and painted-paper look, opaque matte colors and pigment grain, not realistic. Square canvas, entire subject fully visible with narrow margins. Genuine fully transparent background outside objects. NO BACKGROUND PAPER, NO STRIPES, NO RECTANGLE PATCH, NO TEXT OR LETTERING ANYWHERE, no shadows or 3D. Preserve opaque ivory details inside objects. Panel F2: ONLY the large upright pink champagne bottle with coral neck wrap and ivory star, deep teal big OVAL blank label, and one opaque ivory coupe with coral drink to the right. No paper, streamers or text. IMPORTANT label is completely blank solid deep teal; no hearts, stars, dashes, writing or motifs inside label. Composition upright bottle centered around x43%, label occupies x20%-66% and y45%-80% of square; entire bottle including neck and base visible. Coupe lower right. Avoid tilt, so separately editable lettering can be placed on label.",
+      "type": "foreground",
+      "source": "/Users/mac/.codex/generated_images/01a0fded-c5d5-70f0-9061-b505b5e7c2c3/exec-c8ed706a-6171-4bbc-9a9e-09efe7cb07c2.png",
+      "original": "src/assets/bridal/selected/mint-bash/foreground.png",
+      "web": "public/images/bridal/selected/mint-bash/foreground.webp"
+    },
+    {
+      "key": "sunny-pop",
+      "ref": "/Users/mac/.codex/generated_images/01a0fded-c5d5-70f0-9061-b505b5e7c2c3/exec-cc14a684-54ea-47c9-aa9f-928a04841422.png",
+      "prompt": "Use case: stylized-concept. A production transparent PNG foreground illustration from ONE named panel of supplied approved moodboard. Re-create its exact simple gouache and painted-paper look, opaque matte colors and pigment grain, not realistic. Square canvas, entire subject fully visible with narrow margins. Genuine fully transparent background outside objects. NO BACKGROUND PAPER, NO STRIPES, NO RECTANGLE PATCH, NO TEXT OR LETTERING ANYWHERE, no shadows or 3D. Preserve opaque ivory details inside objects. Panel F4: ONLY a large upright coral-pink bottle with ivory neckwrap carrying navy sun, NAVY big blank shield-shaped label, and one mint coupe with butter-yellow drink at lower right. No yellow paper or streamers. Label must be plain navy, absolutely no letters, stars, dashes, writing or hearts inside it. Upright bottle center x43%, blank label x20%-66%, y45%-80% of square; neck and base fully visible. Coupe lower right. Square isolated foreground.",
+      "type": "foreground",
+      "source": "/Users/mac/.codex/generated_images/01a0fded-c5d5-70f0-9061-b505b5e7c2c3/exec-90583550-3503-49a5-941f-f299639e974c.png",
+      "original": "src/assets/bridal/selected/sunny-pop/foreground.png",
+      "web": "public/images/bridal/selected/sunny-pop/foreground.webp"
+    },
+    {
+      "key": "ivory-paper",
+      "transparent": false,
+      "prompt": "Use case: stylized-concept. Production background asset ONLY, square edge to edge, gouache painted paper with subtle low-contrast matte pigment and fiber texture. Flat print, no perspective, lighting, shadows, border, blank margins, lettering, confetti, objects, glass, bottles or other illustration. Color: uniform warm pale ivory #faf4e8. Quiet texture, no strong patches or gradients.",
+      "type": "background",
+      "source": "/Users/mac/.codex/generated_images/01a0fded-c5d5-70f0-9061-b505b5e7c2c3/exec-c4fa32bf-7473-4409-ade4-86353d09ba60.png",
+      "original": "src/assets/bridal/selected/backgrounds/ivory-paper.png",
+      "web": "public/images/bridal/selected/backgrounds/ivory-paper.webp"
+    },
+    {
+      "key": "blush-paper",
+      "transparent": false,
+      "prompt": "Use case: stylized-concept. Production background asset ONLY, square edge to edge, gouache painted paper with subtle low-contrast matte pigment and fiber texture. Flat print, no perspective, lighting, shadows, border, blank margins, lettering, confetti, objects, glass, bottles or other illustration. Color: uniform soft blush pink #f5c4cd. Quiet texture, no strong patches or gradients.",
+      "type": "background",
+      "source": "/Users/mac/.codex/generated_images/01a0fded-c5d5-70f0-9061-b505b5e7c2c3/exec-4bf3c537-b239-4159-b8b1-7c149d66e42a.png",
+      "original": "src/assets/bridal/selected/backgrounds/blush-paper.png",
+      "web": "public/images/bridal/selected/backgrounds/blush-paper.webp"
+    },
+    {
+      "key": "butter-paper",
+      "transparent": false,
+      "prompt": "Use case: stylized-concept. Production background asset ONLY, square edge to edge, gouache painted paper with subtle low-contrast matte pigment and fiber texture. Flat print, no perspective, lighting, shadows, border, blank margins, lettering, confetti, objects, glass, bottles or other illustration. Color: uniform pale butter yellow #fff0b7. Quiet texture, no strong patches or gradients.",
+      "type": "background",
+      "source": "/Users/mac/.codex/generated_images/01a0fded-c5d5-70f0-9061-b505b5e7c2c3/exec-9f746218-40e7-4ca1-99f2-ab8f1734baca.png",
+      "original": "src/assets/bridal/selected/backgrounds/butter-paper.png",
+      "web": "public/images/bridal/selected/backgrounds/butter-paper.webp"
+    },
+    {
+      "key": "lilac-paper",
+      "transparent": false,
+      "prompt": "Use case: stylized-concept. Production background asset ONLY, square edge to edge, gouache painted paper with subtle low-contrast matte pigment and fiber texture. Flat print, no perspective, lighting, shadows, border, blank margins, lettering, confetti, objects, glass, bottles or other illustration. Color: uniform pale lilac #e7d4ed. Quiet texture, no strong patches or gradients.",
+      "type": "background",
+      "source": "/Users/mac/.codex/generated_images/01a0fded-c5d5-70f0-9061-b505b5e7c2c3/exec-b35eb4f8-b296-438b-b1c6-d3896a881e6a.png",
+      "original": "src/assets/bridal/selected/backgrounds/lilac-paper.png",
+      "web": "public/images/bridal/selected/backgrounds/lilac-paper.webp"
+    },
+    {
+      "key": "mint-paper",
+      "transparent": false,
+      "prompt": "Use case: stylized-concept. Production background asset ONLY, square edge to edge, gouache painted paper with subtle low-contrast matte pigment and fiber texture. Flat print, no perspective, lighting, shadows, border, blank margins, lettering, confetti, objects, glass, bottles or other illustration. Color: uniform soft mint #b7e0d2. Quiet texture, no strong patches or gradients.",
+      "type": "background",
+      "source": "/Users/mac/.codex/generated_images/01a0fded-c5d5-70f0-9061-b505b5e7c2c3/exec-7431f29e-6392-408c-b520-ae781d20ffe2.png",
+      "original": "src/assets/bridal/selected/backgrounds/mint-paper.png",
+      "web": "public/images/bridal/selected/backgrounds/mint-paper.webp"
+    },
+    {
+      "key": "burgundy-paper",
+      "transparent": false,
+      "prompt": "Use case: stylized-concept. Production background asset ONLY, square edge to edge, gouache painted paper with subtle low-contrast matte pigment and fiber texture. Flat print, no perspective, lighting, shadows, border, blank margins, lettering, confetti, objects, glass, bottles or other illustration. Color: uniform deep dark burgundy #501d2b. Quiet texture, no strong patches or gradients.",
+      "type": "background",
+      "source": "/Users/mac/.codex/generated_images/01a0fded-c5d5-70f0-9061-b505b5e7c2c3/exec-161f5265-5a6a-4019-b767-2ca694412077.png",
+      "original": "src/assets/bridal/selected/backgrounds/burgundy-paper.png",
+      "web": "public/images/bridal/selected/backgrounds/burgundy-paper.webp"
+    },
+    {
+      "key": "blue-spritz-stripes",
+      "transparent": false,
+      "prompt": "Use case: stylized-concept. Production background asset ONLY, square edge to edge, gouache painted paper with subtle low-contrast matte pigment and fiber texture. Flat print, no perspective, lighting, shadows, border, blank margins, lettering, confetti, objects, glass, bottles or other illustration. ONLY aqua #a3dad8 and butter-yellow #f8d044 broad vertical alternating painted stripes, about eight stripes across. Handmade subtly uneven edges. No glasses, garnishes, items or title. Entire background filled by stripes.",
+      "type": "background",
+      "source": "/Users/mac/.codex/generated_images/01a0fded-c5d5-70f0-9061-b505b5e7c2c3/exec-b858844a-3379-4fd8-898f-caa50ff8320d.png",
+      "original": "src/assets/bridal/selected/backgrounds/blue-spritz-stripes.png",
+      "web": "public/images/bridal/selected/backgrounds/blue-spritz-stripes.webp"
+    },
+    {
+      "key": "pink-stripe-social-stripes",
+      "transparent": false,
+      "prompt": "Use case: stylized-concept. Production background asset ONLY, square edge to edge, gouache painted paper with subtle low-contrast matte pigment and fiber texture. Flat print, no perspective, lighting, shadows, border, blank margins, lettering, confetti, objects, glass, bottles or other illustration. ONLY blush pink #f3bbca and raspberry #de517b broad horizontal alternating painted stripes, about seven bands. Handmade subtly uneven edges. No glasses, garnishes, items or title. Entire background filled by stripes.",
+      "type": "background",
+      "source": "/Users/mac/.codex/generated_images/01a0fded-c5d5-70f0-9061-b505b5e7c2c3/exec-1ce01c81-9889-4ac4-8f6e-09d7121956ea.png",
+      "original": "src/assets/bridal/selected/backgrounds/pink-stripe-social-stripes.png",
+      "web": "public/images/bridal/selected/backgrounds/pink-stripe-social-stripes.webp"
+    },
+    {
+      "key": "mint-cheers-stripes",
+      "transparent": false,
+      "prompt": "Use case: stylized-concept. Production background asset ONLY, square edge to edge, gouache painted paper with subtle low-contrast matte pigment and fiber texture. Flat print, no perspective, lighting, shadows, border, blank margins, lettering, confetti, objects, glass, bottles or other illustration. ONLY soft mint #a7d6c1 and warm ivory #faf4e8 broad diagonal alternating brush stripes. Handmade subtly uneven edges. No glasses, garnishes, items or title. Entire background filled by stripes.",
+      "type": "background",
+      "source": "/Users/mac/.codex/generated_images/01a0fded-c5d5-70f0-9061-b505b5e7c2c3/exec-ca5c7429-e584-49aa-a566-47e855501901.png",
+      "original": "src/assets/bridal/selected/backgrounds/mint-cheers-stripes.png",
+      "web": "public/images/bridal/selected/backgrounds/mint-cheers-stripes.webp"
+    },
+    {
+      "key": "lilac-happy-hour-stripes",
+      "transparent": false,
+      "prompt": "Use case: stylized-concept. Production background asset ONLY, square edge to edge, gouache painted paper with subtle low-contrast matte pigment and fiber texture. Flat print, no perspective, lighting, shadows, border, blank margins, lettering, confetti, objects, glass, bottles or other illustration. ONLY pale lilac #d3bce1 and butter yellow #fae5a5 broad vertical alternating painted stripes, about eight stripes. Handmade subtly uneven edges. No glasses, garnishes, items or title. Entire background filled by stripes.",
+      "type": "background",
+      "source": "/Users/mac/.codex/generated_images/01a0fded-c5d5-70f0-9061-b505b5e7c2c3/exec-77571e6b-3c06-48a1-b1ce-080ee32af802.png",
+      "original": "src/assets/bridal/selected/backgrounds/lilac-happy-hour-stripes.png",
+      "web": "public/images/bridal/selected/backgrounds/lilac-happy-hour-stripes.webp"
+    },
+    {
+      "key": "blush-label",
+      "transparent": true,
+      "ref": "/Users/mac/.codex/generated_images/01a0fded-c5d5-70f0-9061-b505b5e7c2c3/exec-d0b72c93-6993-44fb-ae2c-e80f79debd46.png",
+      "prompt": "Use case: stylized-concept. Isolated transparent PNG FOREGROUND only. Re-create ONLY panel 01 Blush Label's elegant large forest-green champagne bottle, soft pink foil, tiny ochre neck seal, delicate pink/ochre neck lines, big BLANK pink label with ochre rim. Make bottle UPRIGHT to place editable text on label, no leaning, no crop: bottle neck, shoulders, label and base all fully visible, square canvas with small margins. Label center at x50%, y65%, occupying x25%-75%, y45%-85%, blank plain pink with no writing, motifs, hearts, lines or leaves inside label. Match retro drybrush painted-paper gouache texture and tall simple shape. No background, confetti, glasses, text, logo or shadows; all outside bottle fully transparent.",
+      "type": "foreground",
+      "source": "/Users/mac/.codex/generated_images/01a0fded-c5d5-70f0-9061-b505b5e7c2c3/exec-e3e2d8d9-98f4-4c26-93ca-d9cdad5e8a3f.png",
+      "original": "src/assets/bridal/selected/blush-label/foreground.png",
+      "web": "public/images/bridal/selected/blush-label/foreground.webp"
+    },
+    {
+      "key": "lilac-pop",
+      "transparent": true,
+      "ref": "/Users/mac/.codex/generated_images/01a0fded-c5d5-70f0-9061-b505b5e7c2c3/exec-d0b72c93-6993-44fb-ae2c-e80f79debd46.png",
+      "prompt": "Use case: stylized-concept. Isolated transparent PNG FOREGROUND only. Re-create ONLY panel 03 Lilac Pop's large deep plum champagne bottle with ochre neckwrap carrying simple pink printed lines, and big pink arched BLANK label; little popped cork above right with three small plum marks. Upright un-tilted bottle, fully visible including neck and base, square canvas small margins. Label center x50%, y65%, occupying x25%-75%, y45%-85%, pure BLANK pale pink with no text, leaves, decoration or motifs inside label. Match its simple retro painted-paper gouache and dry pigment grain. No lilac background, no streamers, no text, logos, shading or shadows. Entire outside bottle/cork truly transparent.",
+      "type": "foreground",
+      "source": "/Users/mac/.codex/generated_images/01a0fded-c5d5-70f0-9061-b505b5e7c2c3/exec-4cd2ed35-00ab-4fc6-9055-981d571808bb.png",
+      "original": "src/assets/bridal/selected/lilac-pop/foreground.png",
+      "web": "public/images/bridal/selected/lilac-pop/foreground.webp"
+    },
+    {
+      "key": "cherry-clink",
+      "transparent": true,
+      "ref": "/Users/mac/.codex/generated_images/01a0fded-c5d5-70f0-9061-b505b5e7c2c3/exec-d0b72c93-6993-44fb-ae2c-e80f79debd46.png",
+      "prompt": "Use case: stylized-concept. Isolated transparent PNG FOREGROUND only. Match panel 06 Cherry Clink: TWO pale pink and ivory clinking tall flutes with opaque ochre bubbly contents arranged on upper left and center, and one upright rose-pink champagne bottle with ivory neckwrap and plain blank ivory label to lower right. Square compact composition, all stems and bottle base visible small margins. Simplified sophisticated retro gouache and dry pigment texture, no realistic glass, 3D or shadows. No burgundy background, stars, text, logos or lettering anywhere on labels; all surroundings genuinely transparent.",
+      "type": "foreground",
+      "source": "/Users/mac/.codex/generated_images/01a0fded-c5d5-70f0-9061-b505b5e7c2c3/exec-f7d7f482-8bd3-4308-9856-d0eace4f285f.png",
+      "original": "src/assets/bridal/selected/cherry-clink/foreground.png",
+      "web": "public/images/bridal/selected/cherry-clink/foreground.webp"
+    }
+  ]
+}

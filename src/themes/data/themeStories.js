@@ -1,3 +1,7 @@
+import { selectedBridalStories } from "../../invitations/data/selectedBridalDesigns.js";
+import { pinkChampagneStories } from "../../invitations/data/pinkChampagneDesigns.js";
+import { cocktailBirthdayStories } from "../../invitations/data/cocktailBirthdayDesigns.js";
+import { pizzaBirthdayStories } from "../../invitations/data/pizzaBirthdayDesigns.js";
 import { comicBirthdayStories } from "../../invitations/data/comicBirthdayDesigns.js";
 import { poolBirthdayStories } from "../../invitations/data/poolBirthdayDesigns.js";
 const birthday = (eyebrow, heroLine, ticker, storyTitle, storyText, inviteMessage, galleryTitle, galleryText) => ({
@@ -23,6 +27,10 @@ const wedding = (eyebrow, heroLine, ticker, storyTitle, storyText, inviteMessage
 export const themeStories = {
   ...comicBirthdayStories,
   ...poolBirthdayStories,
+  ...pizzaBirthdayStories,
+  ...cocktailBirthdayStories,
+  ...pinkChampagneStories,
+  ...selectedBridalStories,
   "bridal-retro-pink-card": {"eyebrow": "RETRO PINK SOCIAL", "heroLine": "Good girls. Great times.", "ticker": "PRETTY PLANS · FAVORITE GIRLS", "storyTitle": "Pretty plans with our favorite girls.", "storyText": "Join Ana and her favorite girls for pink outfits, champagne toasts, and beautiful memories.", "inviteMessage": "Good girls. Great times.", "galleryTitle": "Our girls. Our favorite memories.", "galleryText": "Little moments from a beautiful celebration.", "storySignoff": "With love, Ana", "photoTag": "THE BRIDAL PARTY", "inviteOpening": "A toast to the bride-to-be", "inviteFooter": "PRETTY PLANS · FAVORITE GIRLS · 11:11", "communityTitle": "A little love for the bride.", "communityText": "Share a wish, a memory, or your favorite song.", "rsvpTitle": "Will you join us?", "rsvpText": "Save your place beside the bride.", "footer": "FAVORITE GIRLS · BEAUTIFUL MEMORIES"},
   "bridal-doll-pink-card": {"eyebrow": "DOLL PINK BRIDE", "heroLine": "Pretty in pink. Ready to party.", "ticker": "PRETTY PLANS · FAVORITE GIRLS", "storyTitle": "Pretty plans with our favorite girls.", "storyText": "Join Ana and her favorite girls for pink outfits, champagne toasts, and beautiful memories.", "inviteMessage": "Pretty in pink. Ready to party.", "galleryTitle": "Our girls. Our favorite memories.", "galleryText": "Little moments from a beautiful celebration.", "storySignoff": "With love, Ana", "photoTag": "THE BRIDAL PARTY", "inviteOpening": "A toast to the bride-to-be", "inviteFooter": "PRETTY PLANS · FAVORITE GIRLS · 11:11", "communityTitle": "A little love for the bride.", "communityText": "Share a wish, a memory, or your favorite song.", "rsvpTitle": "Will you join us?", "rsvpText": "Save your place beside the bride.", "footer": "FAVORITE GIRLS · BEAUTIFUL MEMORIES"},
   "bridal-cool-girl-card": {"eyebrow": "COOL GIRL CLUB", "heroLine": "Best girls. Biggest energy.", "ticker": "PRETTY PLANS · FAVORITE GIRLS", "storyTitle": "Pretty plans with our favorite girls.", "storyText": "Join Ana and her favorite girls for pink outfits, champagne toasts, and beautiful memories.", "inviteMessage": "Best girls. Biggest energy.", "galleryTitle": "Our girls. Our favorite memories.", "galleryText": "Little moments from a beautiful celebration.", "storySignoff": "With love, Ana", "photoTag": "THE BRIDAL PARTY", "inviteOpening": "A toast to the bride-to-be", "inviteFooter": "PRETTY PLANS · FAVORITE GIRLS · 11:11", "communityTitle": "A little love for the bride.", "communityText": "Share a wish, a memory, or your favorite song.", "rsvpTitle": "Will you join us?", "rsvpText": "Save your place beside the bride.", "footer": "FAVORITE GIRLS · BEAUTIFUL MEMORIES"},

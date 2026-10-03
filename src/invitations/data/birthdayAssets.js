@@ -1,3 +1,6 @@
+import { pinkChampagneBirthdayAssets } from "./pinkChampagneDesigns.js";
+import { cocktailBirthdayAssets } from "./cocktailBirthdayDesigns.js";
+import { pizzaBirthdayAssets } from "./pizzaBirthdayDesigns.js";
 import { comicBirthdayAssets } from "./comicBirthdayDesigns.js";
 import { poolBirthdayAssets } from "./poolBirthdayDesigns.js";
 import { girlyBirthdayAssets } from "./girlyBirthdayDesigns.js";
@@ -128,6 +131,9 @@ export const birthdayThemeAssets = {
   ...girlyBirthdayAssets,
   ...comicBirthdayAssets,
   ...poolBirthdayAssets,
+  ...pizzaBirthdayAssets,
+  ...cocktailBirthdayAssets,
+  ...pinkChampagneBirthdayAssets,
   "birthday-pink-post": {"coverImage": "/images/birthday/pink-post/watercolor-birthday-post.webp", "invitation": [], "typography": {"image": "/images/birthday/pink-post/sealed-blush-envelope.webp", "right": "0%", "bottom": "9%", "width": "24%", "height": "36%"}, "pattern": null, "supportCards": [null, null, {"image": "/images/birthday/pink-post/sealed-blush-envelope.webp", "right": "-3%", "bottom": "0%", "width": "42%", "height": "55%"}]},
   "birthday-disco-scrapbook": {"coverImage": "/images/birthday/disco-scrapbook/analog-disco-party.webp", "invitation": [], "typography": {"image": "/images/birthday/disco-scrapbook/sketched-olive-martini.webp", "right": "0%", "bottom": "9%", "width": "24%", "height": "36%"}, "pattern": null, "supportCards": [null, null, {"image": "/images/birthday/disco-scrapbook/sketched-olive-martini.webp", "right": "-3%", "bottom": "0%", "width": "42%", "height": "55%"}]},
   "birthday-velvet-post": {"coverImage": "/images/birthday/velvet-post/blush-wine-stationery.webp", "invitation": [], "typography": {"image": "/images/birthday/velvet-post/bow-birthday-cake.webp", "right": "0%", "bottom": "9%", "width": "24%", "height": "36%"}, "pattern": null, "supportCards": [null, null, {"image": "/images/birthday/velvet-post/bow-martini.webp", "right": "-3%", "bottom": "0%", "width": "42%", "height": "55%"}]},

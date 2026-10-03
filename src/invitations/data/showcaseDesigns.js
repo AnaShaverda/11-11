@@ -1,3 +1,7 @@
+import { selectedBridalShowcases } from "./selectedBridalDesigns.js";
+import { pinkChampagneShowcases } from "./pinkChampagneDesigns.js";
+import { cocktailBirthdayShowcases } from "./cocktailBirthdayDesigns.js";
+import { pizzaBirthdayShowcases } from "./pizzaBirthdayDesigns.js";
 import { comicBirthdayShowcases } from "./comicBirthdayDesigns.js";
 import { poolBirthdayShowcases } from "./poolBirthdayDesigns.js";
 import { girlyBirthdayShowcases } from "./girlyBirthdayDesigns.js";
@@ -6,6 +10,10 @@ export const showcaseDesigns = {
   ...girlyBirthdayShowcases,
   ...comicBirthdayShowcases,
   ...poolBirthdayShowcases,
+  ...pizzaBirthdayShowcases,
+  ...cocktailBirthdayShowcases,
+  ...pinkChampagneShowcases,
+  ...selectedBridalShowcases,
   "christening-olive-full-frame": {"palette": ["#f4f0e6", "#596043", "#9aab81", "#fffcf4"], "pattern": "botanical", "type": "christening-card", "motif": "", "specimen": "A little blessing", "phrase": "A day of love & light.", "accentCard": "WITH LOVE", "accentCopy": "Little moments. Beautiful memories.", "finish": "Together with our favorite people."},
   "christening-blue-full-frame": {"palette": ["#f7f3eb", "#415c73", "#afc9df", "#fffaf0"], "pattern": "ribbon", "type": "christening-card", "motif": "", "specimen": "A little blessing", "phrase": "A day of love & light.", "accentCard": "WITH LOVE", "accentCopy": "Little moments. Beautiful memories.", "finish": "Together with our favorite people."},
   "christening-little-dreamer": {"palette": ["#fbf4e9", "#806754", "#dec6a3", "#fffaf3"], "pattern": "sparkle", "type": "christening-card", "motif": "", "specimen": "A little blessing", "phrase": "A day of love & light.", "accentCard": "WITH LOVE", "accentCopy": "Little moments. Beautiful memories.", "finish": "Together with our favorite people."},

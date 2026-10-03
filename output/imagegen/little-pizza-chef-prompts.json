@@ -1,0 +1,18 @@
+[
+  {
+    "asset": "pizza-peel",
+    "generator": "built-in image_gen",
+    "source": "/Users/mac/.codex/generated_images/01a0fded-c5d5-70f0-9061-b505b5e7c2c3/exec-ec18f4bd-33a9-4dc0-95ac-3dd557edc60a.png",
+    "original": "src/assets/birthday/little-pizza-chef/pizza-peel.png",
+    "destination": "public/images/birthday/little-pizza-chef/pizza-peel.webp",
+    "prompt": "Use case: stylized-concept. Create the single pizza-on-peel illustration from APPROVED option 03 / LITTLE PIZZA CHEF (bottom LEFT of attached moodboard), with the same charming red hand-drawn vintage pizzeria print style. This is a separate website illustration asset on a TRUE TRANSPARENT background. ONE round pizza on an oval wooden peel, viewed overhead at a very slight diagonal, peel handle points upper-right. Irregular loose tomato-red pen contours, light little hatching on rim and wooden peel, warm ivory pizza cheese and peel fill, red round pepperoni disks, a few simple soft sage green basil leaves. Flat ink illustration, simple and charming, not realistic or detailed, bold enough to read at card size. Preserve the main visual personality and proportions of option03. One small red flour-star scribble to left of pizza, matching reference. Entire illustration fully inside canvas with small safe transparent margin. LANDSCAPE wide composition about 4:3. Absolutely NO background stripes, no text, no numerals, no watermark, no shadows, no extra objects or people."
+  },
+  {
+    "asset": "sage-paper",
+    "generator": "built-in image_gen",
+    "source": "/Users/mac/.codex/generated_images/01a0fded-c5d5-70f0-9061-b505b5e7c2c3/exec-79f78708-2d8d-4cdf-af40-0677c70899a2.png",
+    "original": "src/assets/birthday/little-pizza-chef/sage-paper.png",
+    "destination": "public/images/birthday/little-pizza-chef/sage-paper.webp",
+    "prompt": "Use case: stylized-concept. Create ONE square flat full-bleed handprinted stationery paper pattern matching the background of approved option03 / LITTLE PIZZA CHEF in bottom left of attached moodboard: warm ivory (#faf2dc) alternating with very pale sage green (#d3d8ae) BROAD VERTICAL stripes. About eight stripes across canvas total, with charming subtly wobbly painted edges, slightly uneven opacity and fine matte paper grain. Quiet low contrast for typography readability. No gradients or shadows, no border, no pizza or objects, ABSOLUTELY NO text, letters, numbers, labels, watermark, swatches. Entire canvas only the simple sage/ivory painted stripe pattern."
+  }
+]

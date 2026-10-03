@@ -1,3 +1,7 @@
+import { selectedBridalPortraits } from "./selectedBridalDesigns.js";
+import { pinkChampagnePortraits } from "./pinkChampagneDesigns.js";
+import { cocktailBirthdayPortraits } from "./cocktailBirthdayDesigns.js";
+import { pizzaBirthdayPortraits } from "./pizzaBirthdayDesigns.js";
 import { comicBirthdayPortraits } from "./comicBirthdayDesigns.js";
 import { poolBirthdayPortraits } from "./poolBirthdayDesigns.js";
 import { girlyBirthdayPortraits } from "./girlyBirthdayDesigns.js";
@@ -6,6 +10,10 @@ export const recipientArtwork = {
   ...girlyBirthdayPortraits,
   ...comicBirthdayPortraits,
   ...poolBirthdayPortraits,
+  ...pizzaBirthdayPortraits,
+  ...cocktailBirthdayPortraits,
+  ...pinkChampagnePortraits,
+  ...selectedBridalPortraits,
   "birthday-ballerina": "/images/recipient/birthday-ballerina/invitation-portrait.webp",
   "birthday-beer-party": "/images/recipient/birthday-beer-party/invitation-portrait.webp",
   "birthday-checkerboard-cheers": "/images/recipient/birthday-checkerboard-cheers/invitation-portrait.webp",

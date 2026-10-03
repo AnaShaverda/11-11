@@ -1,3 +1,7 @@
+import { selectedBridalStorefront } from "./selectedBridalDesigns.js";
+import { pinkChampagneStorefront } from "./pinkChampagneDesigns.js";
+import { cocktailBirthdayStorefront } from "./cocktailBirthdayDesigns.js";
+import { pizzaBirthdayStorefront } from "./pizzaBirthdayDesigns.js";
 import { comicBirthdayStorefront } from "./comicBirthdayDesigns.js";
 import { poolBirthdayStorefront } from "./poolBirthdayDesigns.js";
 import { girlyBirthdayStorefront } from "./girlyBirthdayDesigns.js";
@@ -13,6 +17,10 @@ const storefront = {
   ...girlyBirthdayStorefront,
   ...comicBirthdayStorefront,
   ...poolBirthdayStorefront,
+  ...pizzaBirthdayStorefront,
+  ...cocktailBirthdayStorefront,
+  ...pinkChampagneStorefront,
+  ...selectedBridalStorefront,
   "christening-olive-full-frame": {"slug": "christening-olive-full-frame", "title": "Olive Watercolor Frame", "style": "A complete watercolor frame of soft olive leaves."},
   "christening-blue-full-frame": {"slug": "christening-blue-full-frame", "title": "Blue Watercolor Frame", "style": "A complete frame of little blue flowers, ribbons, and a soft dove."},
   "christening-little-dreamer": {"slug": "christening-little-dreamer", "title": "Little Dreamer", "style": "A tiny sleeping baby, a simple watercolor frame, and soft painted sparkles."},

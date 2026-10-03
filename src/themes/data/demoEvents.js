@@ -1,8 +1,16 @@
+import { selectedBridalEvents } from "../../invitations/data/selectedBridalDesigns.js";
+import { pinkChampagneEvents } from "../../invitations/data/pinkChampagneDesigns.js";
+import { cocktailBirthdayEvents } from "../../invitations/data/cocktailBirthdayDesigns.js";
+import { pizzaBirthdayEvents } from "../../invitations/data/pizzaBirthdayDesigns.js";
 import { comicBirthdayEvents } from "../../invitations/data/comicBirthdayDesigns.js";
 import { poolBirthdayEvents } from "../../invitations/data/poolBirthdayDesigns.js";
 export const themeDemoEvents = {
   ...comicBirthdayEvents,
   ...poolBirthdayEvents,
+  ...pizzaBirthdayEvents,
+  ...cocktailBirthdayEvents,
+  ...pinkChampagneEvents,
+  ...selectedBridalEvents,
   "christening-olive-full-frame": {"title": "Sofia’s Christening", "hostName": "Sofia", "celebrationName": "Christening", "date": "18 May 2027", "dateISO": "2027-05-18T13:00:00+04:00", "time": "13:00", "location": "Tbilisi, Georgia", "description": "A day of love & light.", "enabledModules": ["invitation", "rsvp"]},
   "christening-blue-full-frame": {"title": "Sofia’s Christening", "hostName": "Sofia", "celebrationName": "Christening", "date": "18 May 2027", "dateISO": "2027-05-18T13:00:00+04:00", "time": "13:00", "location": "Tbilisi, Georgia", "description": "A day of love & light.", "enabledModules": ["invitation", "rsvp"]},
   "christening-little-dreamer": {"title": "Sofia’s Christening", "hostName": "Sofia", "celebrationName": "Christening", "date": "18 May 2027", "dateISO": "2027-05-18T13:00:00+04:00", "time": "13:00", "location": "Tbilisi, Georgia", "description": "A day of love & light.", "enabledModules": ["invitation", "rsvp"]},

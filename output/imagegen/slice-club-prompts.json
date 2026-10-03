@@ -1,0 +1,18 @@
+[
+  {
+    "asset": "pizza-slice",
+    "generator": "built-in image_gen",
+    "source": "/Users/mac/.codex/generated_images/01a0fded-c5d5-70f0-9061-b505b5e7c2c3/exec-0531341d-5a23-4a79-b9d0-1b883dd4f6ce.png",
+    "original": "src/assets/birthday/slice-club/pizza-slice.png",
+    "destination": "public/images/birthday/slice-club/pizza-slice.webp",
+    "prompt": "Use case: stylized-concept. Generate ONE original playful hand-drawn pizza slice illustration matching approved OPTION04 SLICE CLUB (bottom-right invitation on attached sheet). Separate illustration asset with TRUE TRANSPARENT background. A single triangle pizza slice with thick curved crust at upper/right side, gently gooey melted cheese at its pointed lower-left end, four simple tomato-red pepperoni circles and a couple of tiny loose topping squiggles. Tomato-red (#c71f2b) pen contours, chunky informal handprinted linework with restrained little hatching; warm ivory cheese fill (#faf2dc). Flat 2D nostalgic pizzeria stationery style, subtle matte ink imperfections, simple charming shape, not realistic or detailed. Slice angled diagonally, whole object within canvas, a few tiny red radiating celebration strokes beside it. NO lettering, NO numerals, NO background, no paper panel, no shadow, no watermark, no other objects. SQUARE asset canvas, small transparent safe margin."
+  },
+  {
+    "asset": "scalloped-paper",
+    "generator": "built-in image_gen",
+    "source": "/Users/mac/.codex/generated_images/01a0fded-c5d5-70f0-9061-b505b5e7c2c3/exec-d267283d-f5db-4c89-b2a8-5d72febece30.png",
+    "original": "src/assets/birthday/slice-club/scalloped-paper.png",
+    "destination": "public/images/birthday/slice-club/scalloped-paper.webp",
+    "prompt": "Use case: stylized-concept. Generate ONE square full-bleed stationary paper background matching APPROVED OPTION04 SLICE CLUB at bottom-right of attached moodboard: dusty cornflower-blue outer paper (#8caed0), centered warm ivory inner panel (#faf2dc) with a charming evenly spaced SCALLOPED wobbly edge, about 8% blue border visible on each side. Flat matte handprinted illustration with subtle paper texture and gently irregular painted scallops. Keep inner panel totally empty and quiet. NO text, letters, numbers, pizza, objects, swatches, labels, gradients, photographs, mockup, shadow or watermark. Only the blue ground and ivory scalloped blank panel."
+  }
+]
