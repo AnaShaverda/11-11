@@ -1,0 +1,164 @@
+[
+  [
+    "birthday-paper-garland",
+    [
+      [
+        "cake",
+        "ONLY the small pink watercolor birthday cake with candles and pedestal near the bottom"
+      ],
+      [
+        "garland",
+        "ONLY the multicolored watercolor triangular bunting across the top, without sparkles or cake"
+      ],
+      [
+        "spark",
+        "ONLY one little yellow watercolor sparkle, remove everything else"
+      ]
+    ]
+  ],
+  [
+    "birthday-beer-party",
+    [
+      [
+        "left-beer",
+        "ONLY the left tilted amber beer mug with foam and handle; remove other mug, hops and wheat"
+      ],
+      [
+        "right-beer",
+        "ONLY the right tilted amber beer mug with foam and handle; remove other mug, hops and wheat"
+      ]
+    ]
+  ],
+  [
+    "birthday-city-after-dark",
+    [
+      [
+        "spider",
+        "ONLY the little white outlined hanging spider near the upper right with its thin silk line"
+      ],
+      [
+        "background",
+        "Remove the spider and its silk line. Keep original midnight paper texture, skyline, moon and composition unchanged",
+        true
+      ]
+    ]
+  ],
+  [
+    "birthday-comic-cutout",
+    [
+      [
+        "spider",
+        "ONLY the black outlined spider at lower right, WITHOUT red rays, web, skyline or other marks"
+      ],
+      [
+        "background",
+        "Remove the black spider and its adjacent small red rays. Keep original paper texture, city silhouette, red comic shapes, pencil web and composition unchanged",
+        true
+      ]
+    ]
+  ],
+  [
+    "birthday-retro-sport",
+    [
+      [
+        "spider",
+        "ONLY the red outlined spider at lower right, without red stripes or background"
+      ],
+      [
+        "background",
+        "Remove the red spider. Keep original cream and red paper panels, horizontal stripes, web corner and stars unchanged",
+        true
+      ]
+    ]
+  ],
+  [
+    "birthday-upside-down",
+    [
+      [
+        "spider",
+        "ONLY the red outlined spider near upper center, without the cream rays or background"
+      ],
+      [
+        "background",
+        "Remove the red spider and its short cream rays. Keep original blue paper texture, dark city skyline and red horizontal stroke unchanged",
+        true
+      ]
+    ]
+  ],
+  [
+    "birthday-pink-lido",
+    [
+      [
+        "umbrella",
+        "ONLY the yellow and cream parasol at the upper right, remove pool water, palms, ring and paper"
+      ],
+      [
+        "ring",
+        "ONLY the pink and red striped inflatable swim ring in the lower left"
+      ],
+      [
+        "palm",
+        "ONLY the green palm frond cluster in the upper left corner, remove every other object"
+      ],
+      [
+        "background",
+        "Remove umbrella, swim ring, and all palm leaves. Keep original pink-and-ivory striped paper, circular aqua pool with its painted water ripples and white rim unchanged",
+        true
+      ]
+    ]
+  ],
+  [
+    "birthday-blue-splash",
+    [
+      [
+        "ladder",
+        "ONLY the blue and pink metal pool ladder at upper right"
+      ],
+      [
+        "ring",
+        "ONLY the yellow and pale blue inflatable ring in the lower right"
+      ],
+      [
+        "background",
+        "Remove pool ladder and inflatable ring. Keep original blue-and-ivory checked border and square pool with aqua water ripples unchanged",
+        true
+      ]
+    ]
+  ],
+  [
+    "bridal-cool-girl-card",
+    [
+      [
+        "background",
+        "Remove sunglasses, lipstick, cherries, hearts and sparkles. Keep original pink textured paper and red-and-pink checkerboard edge border unchanged",
+        true
+      ]
+    ]
+  ],
+  [
+    "bridal-peach-cherry",
+    [
+      [
+        "bow",
+        "ONLY the red ribbon bow at upper center; remove scalloped orange border and every other object"
+      ],
+      [
+        "left-coupe",
+        "ONLY the left red coupe glass at bottom center, remove right glass, cherries and background"
+      ],
+      [
+        "right-coupe",
+        "ONLY the right red coupe glass at bottom center, remove left glass, cherries and background"
+      ],
+      [
+        "cherries",
+        "ONLY one pair of dark red cherries with green leaves near lower left; remove glasses, other cherries and paper"
+      ],
+      [
+        "background",
+        "Remove bow, both coupe glasses and both cherry pairs. Keep original ivory textured paper, orange scalloped border and lower gingham corners unchanged",
+        true
+      ]
+    ]
+  ]
+]

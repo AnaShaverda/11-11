@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
 import Icon from "./Icon.jsx";
-import DocumentFolder from "./DocumentFolder.jsx";
 import { getInvitationCatalogLink } from "../../invitations/data/catalogFilters.js";
 import { useLanguage } from "../../localization/LanguageContext.jsx";
 
@@ -14,7 +13,7 @@ export default function ProjectCard({ project, showDetails = false }) {
       to={getInvitationCatalogLink(project)}
     >
       <span className="folder" aria-hidden="true">
-        <DocumentFolder />
+        <img className="document-folder" src={project.folderAsset} alt="" width="160" height="172" />
       </span>
       <span className="project-title">{t(`common.${project.id}`)}</span>
       {showDetails ? (

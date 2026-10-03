@@ -31,3 +31,114 @@
   .celebration-subcategory-tabs { display: none; }
   .celebration-subcategory-select { display: block; }
 }
+
+/* Eight collections share the existing folder grid and compact category navigation. */
+.home-page .project-grid { align-items: start; }
+.home-page .project-title { min-height: 2.7em; display: flex; align-items: center; justify-content: center; }
+.gift-collection-heading { margin: 32px 0 18px; font-size: 1.35rem; }
+.gift-catalog-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
+.gift-catalog-card { display: flex; flex-direction: column; align-items: flex-start; padding: 24px; border: 1px solid var(--border-soft); border-radius: 18px; background: var(--surface-glass); }
+.gift-catalog-card > img { width: 88px; height: auto; margin-bottom: 18px; }
+.gift-catalog-card h3 { margin: 10px 0; font-size: 1.25rem; }
+.event-catalog .gift-catalog-card p { font-size: .95rem; color: var(--color-text-secondary); line-height: 1.5; }
+.gift-catalog-action { display: inline-flex; gap: 8px; align-items: center; margin-top: 10px; color: var(--text-link); }
+.gift-catalog-card:hover { border-color: var(--ui-field-focus); }
+.gift-catalog-card:focus-visible { outline: 2px solid var(--ui-field-focus); outline-offset: 4px; }
+.category-curated-note, .invitation-collection-heading p { color: var(--color-text-secondary); line-height: 1.5; max-width: 650px; }
+@media (max-width: 900px) { .gift-catalog-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 550px) { .gift-catalog-grid { grid-template-columns: 1fr; } .gift-catalog-card { flex-direction: row; gap: 20px; padding: 20px; } .gift-catalog-card > img { width: 60px; flex: none; } }
+
+
+/* Filters live beside the results; mobile uses the same fields in a modal drawer. */
+.catalog-layout { position: relative; display: grid; grid-template-columns: 225px minmax(0, 1fr); align-items: start; gap: 32px; }
+.catalog-filter-shell, .catalog-results-column { min-width: 0; }
+.catalog-sidebar { padding-right: 18px; }
+.sidebar-filter-fields { display: flex; flex-direction: column; gap: 22px; }
+.sidebar-filter-group { min-width: 0; margin: 0; padding: 0; border: 0; }
+.sidebar-filter-group legend { margin-bottom: 8px; padding: 0; font-size: .85rem; font-weight: 600; color: var(--color-text-secondary); }
+.sidebar-filter-choice { display: flex; align-items: center; gap: 10px; min-height: 40px; padding: 7px 8px; border-radius: 8px; font-size: .9rem; line-height: 1.4; cursor: pointer; }
+.sidebar-filter-choice input { width: 16px; height: 16px; flex: none; margin: 0; accent-color: var(--text-accent); cursor: pointer; }
+.sidebar-filter-choice:has(input:checked) { background: var(--surface-hover); color: var(--text-accent); }
+.sidebar-filter-choice:hover { background: var(--surface-glass); }
+.sidebar-filter-choice:has(input:focus-visible) { outline: 2px solid var(--ui-field-focus); outline-offset: 2px; }
+.sidebar-style-select label { font-size: .85rem; color: var(--color-text-secondary); }
+:root[data-theme] .sidebar-style-select select { height: 44px; min-height: 44px; padding: 0 30px 0 10px; border: 1px solid var(--ui-field-border); border-radius: 8px; background: var(--surface-glass); font-size: .9rem; }
+.sidebar-style-select .ui-select-arrow { right: 8px; }
+.collection-clear-filters { align-self: flex-start; min-height: 44px; padding: 8px 0; border: 0; background: transparent; color: var(--text-link); font: inherit; font-size: .85rem; text-decoration: underline; text-underline-offset: 4px; cursor: pointer; }
+.collection-clear-filters:focus-visible { outline: 2px solid var(--ui-field-focus); outline-offset: 4px; border-radius: 4px; }
+.event-catalog .catalog-results-column .invitation-collection { margin-top: 0; }
+.event-catalog .catalog-results-column .invitation-collection-heading { grid-template-columns: minmax(0, 1fr); }
+.event-catalog .catalog-results-column .invitation-collection .invitation-gallery, .event-catalog .catalog-results-column #collection-birthday .invitation-gallery { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+.catalog-results-column .gift-catalog-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.catalog-mobile-filter-trigger { display: none; }
+.catalog-filter-dialog { position: fixed; inset: 0 auto 0 0; width: min(90vw, 360px); max-width: none; height: 100dvh; max-height: none; margin: 0; padding: 0; border: 0; background: var(--ui-field-background); color: var(--color-text); overflow: hidden; box-shadow: 12px 0 48px rgba(0,0,0,.25); }
+.catalog-filter-dialog::backdrop { background: rgba(5, 9, 32, .6); }
+.catalog-filter-dialog-panel { display: flex; flex-direction: column; height: 100%; }
+.catalog-dialog-heading { display: flex; align-items: center; justify-content: flex-end; flex: none; padding: 16px 20px; border-bottom: 1px solid var(--border-soft); }
+.catalog-dialog-close { display: grid; place-items: center; width: 44px; height: 44px; padding: 0; background: transparent; color: inherit; border: 1px solid var(--border-soft); border-radius: 10px; cursor: pointer; }
+.catalog-dialog-body { flex: 1; min-height: 0; overflow-y: auto; overscroll-behavior: contain; padding: 20px; }
+.catalog-dialog-body .sidebar-filter-choice { min-height: 44px; font-size: 1rem; }
+.catalog-dialog-footer { flex: none; padding: 16px 20px max(16px, env(safe-area-inset-bottom)); border-top: 1px solid var(--border-soft); }
+.catalog-show-results { width: 100%; min-height: 48px; padding: 12px 16px; border: 0; border-radius: 10px; background: #ffa4c1; color: #111a4f; font: inherit; font-weight: 600; cursor: pointer; }
+:is(.catalog-mobile-filter-trigger, .catalog-dialog-close, .catalog-show-results):focus-visible { outline: 2px solid var(--ui-field-focus); outline-offset: 3px; }
+@media (max-width: 900px) {
+  .catalog-layout { grid-template-columns: minmax(0, 1fr); gap: 0; }
+  .catalog-filter-shell { display: contents; }
+  .catalog-sidebar { display: none; }
+  .catalog-mobile-filter-trigger { position: absolute; top: 0; right: 0; z-index: 1; display: grid; place-items: center; width: 44px; height: 44px; border: 1px solid var(--ui-field-border); border-radius: 10px; background: var(--surface-glass); color: var(--color-text); cursor: pointer; }
+  .filter-active-badge { position: absolute; top: -6px; right: -6px; display: grid; place-items: center; min-width: 18px; height: 18px; padding: 0 4px; border-radius: 12px; background: #ffa4c1; color: #111a4f; font-size: .7rem; }
+  .catalog-results-column .collection-heading-copy h2 { padding-right: 58px; }
+  .event-catalog .catalog-results-column .invitation-collection .invitation-gallery, .event-catalog .catalog-results-column #collection-birthday .invitation-gallery { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 520px) {
+  .event-catalog .catalog-results-column .invitation-collection .invitation-gallery, .event-catalog .catalog-results-column #collection-birthday .invitation-gallery, .catalog-results-column .gift-catalog-grid { grid-template-columns: minmax(0, 1fr); }
+}
+
+/* Subcategories stay directly beneath their selected parent. */
+.sidebar-category-choice > span { flex: 1; min-width: 0; }
+.sidebar-category-choice > .ui-icon { flex: none; color: var(--color-text-secondary); }
+.sidebar-subcategories { min-width: 0; margin: 4px 0 10px 16px; padding: 0; border: 0; }
+.sidebar-subcategories > legend { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }
+.sidebar-subcategories .sidebar-filter-choice { font-size: .85rem; padding-inline: 10px; }
+
+/* The catalog shares the header's content edges. Controls begin at their legends. */
+.invitations-page.event-catalog { width: 100%; margin: 0; padding-inline: clamp(24px, 4.2vw, 66px); }
+.sidebar-category-choice { padding-inline: 10px; }
+.catalog-theme-options { display: flex; flex-wrap: wrap; gap: 8px; }
+.catalog-theme-chip { min-height: 44px; max-width: 100%; padding: 8px 12px; border: 1px solid var(--ui-field-border); border-radius: 999px; background: transparent; color: var(--color-text); font: inherit; font-size: .85rem; line-height: 1.4; cursor: pointer; overflow-wrap: anywhere; }
+.catalog-theme-chip:hover { background: var(--surface-glass); border-color: var(--ui-field-focus); }
+.catalog-theme-chip[aria-pressed="true"] { border-color: var(--text-accent); background: var(--surface-hover); color: var(--text-accent); box-shadow: inset 0 0 0 1px var(--text-accent); }
+.catalog-color-options { display: grid; grid-template-columns: repeat(4, 44px); gap: 6px; }
+.catalog-color-choice { position: relative; display: grid; place-items: center; width: 44px; height: 44px; padding: 5px; border: 1px solid transparent; border-radius: 50%; background: transparent; cursor: pointer; }
+.catalog-color-swatch { width: 32px; height: 32px; border: 1px solid rgba(128,128,128,.4); border-radius: 50%; }
+.catalog-color-choice[aria-pressed="true"] { border-color: var(--text-accent); box-shadow: inset 0 0 0 1px var(--text-accent); }
+.catalog-color-check { position: absolute; right: -1px; bottom: -1px; display: grid; place-items: center; width: 17px; height: 17px; border-radius: 50%; background: var(--text-accent); color: var(--ui-field-background); font-size: 12px; font-weight: 700; }
+.catalog-color-check:empty { display: none; }
+.catalog-color-choice:disabled { opacity: .3; cursor: default; }
+.catalog-color-choice:not(:disabled):hover { border-color: var(--ui-field-focus); }
+:is(.catalog-theme-chip, .catalog-color-choice):focus-visible { outline: 2px solid var(--ui-field-focus); outline-offset: 3px; }
+.catalog-dialog-body .catalog-color-options { grid-template-columns: repeat(auto-fit, 44px); }
+@media (max-width: 1100px) {
+  .invitations-page.event-catalog { padding-inline: 18px; }
+}
+
+/* Animate the nested group into the page flow without a separate scroll area. */
+.sidebar-subcategories-panel { display: grid; grid-template-rows: 0fr; opacity: 0; transform: translateY(-6px); transition: grid-template-rows 320ms cubic-bezier(.22,1,.36,1), opacity 240ms ease, transform 320ms ease; }
+.sidebar-subcategories-panel.is-open { grid-template-rows: 1fr; opacity: 1; transform: translateY(0); }
+.sidebar-subcategories-content { min-height: 0; overflow: clip; }
+.sidebar-categories-list, .sidebar-subcategory-list { position: relative; isolation: isolate; }
+.sidebar-selection-highlight { position: absolute; top: 0; left: 0; z-index: -1; pointer-events: none; border-radius: 8px; background: var(--surface-hover); transition: transform 420ms cubic-bezier(.4,0,.2,1), height 320ms ease, width 200ms ease; }
+.sidebar-category-choice, .sidebar-subcategory-choice { transition: color 240ms ease; }
+.sidebar-category-choice:has(input:checked), .sidebar-subcategory-choice:has(input:checked) { background: transparent; }
+@media (prefers-reduced-motion: reduce) {
+  .sidebar-subcategories-panel, .sidebar-selection-highlight, .sidebar-category-choice, .sidebar-subcategory-choice { transition: none; }
+}
+
+.event-catalog .catalog-results-column :is(.invitation-card, .gift-catalog-card) { animation: catalog-card-enter 460ms cubic-bezier(.16,1,.3,1) var(--catalog-card-delay, 0ms) backwards; }
+@keyframes catalog-card-enter {
+  from { opacity: 0; transform: translateY(14px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .event-catalog .catalog-results-column :is(.invitation-card, .gift-catalog-card) { animation: none; }
+}

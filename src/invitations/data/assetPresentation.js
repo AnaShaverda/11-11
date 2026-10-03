@@ -1,9 +1,17 @@
 // Strings retain legacy slot CSS. Objects opt into configuration-driven placement.
 export function normalizeBirthdayAsset(asset) {
   const normalized = typeof asset === "string" ? { image: asset } : asset;
-  return normalized && typeof normalized.image === "string" && normalized.image.length
+  return normalized && ((typeof normalized.image === "string" && normalized.image.length) || normalized.components?.length)
     ? normalized
     : null;
+}
+
+export function getBirthdayImageAssets(assets) {
+  return assets.flatMap(asset => {
+    const normalized = normalizeBirthdayAsset(asset);
+    if (!normalized) return [];
+    return normalized.components ? getBirthdayImageAssets(normalized.components) : [normalized];
+  });
 }
 
 export function birthdayAssetStyle(asset) {
@@ -18,7 +26,7 @@ export function birthdayAssetStyle(asset) {
     height: asset.height ?? "auto",
     maxWidth: "none",
     maxHeight: "none",
-    transform: `rotate(${asset.rotation ?? 0}deg)`,
+    transform: `rotate(${asset.rotation ?? 0}deg)${asset.flipX ? " scaleX(-1)" : ""}`,
     opacity: asset.opacity ?? 1,
     // Reserve layer 3 for text and controls, even if a theme requests a higher layer.
     zIndex: Math.min(2, Math.max(0, asset.zIndex ?? 0)),

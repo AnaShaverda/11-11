@@ -76,3 +76,4 @@ import "./styles/pizza-birthday.css";
 import "./styles/cocktail-birthday.css";
 
 import "./styles/selected-bridal.css";
+import "./styles/separated-theme-art.css";

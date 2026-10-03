@@ -7,8 +7,8 @@ import Icon from "../ui/Icon.jsx";
 
 const navItems = [
   { to: "/", key: "nav.home", end: true },
-  { to: "/surprises", key: "nav.surprises" },
-  { to: "/invitations", key: "nav.invitations" },
+  { to: "/surprises", key: "common.gifts" },
+  { to: "/invitations", key: "nav.collections" },
   { to: "/about", key: "nav.about" },
   { to: "/contact", key: "nav.contact" },
 ];

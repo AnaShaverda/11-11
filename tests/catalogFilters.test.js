@@ -16,12 +16,12 @@ test("the shared catalog validates category URLs and accepts legacy type links",
   }
 });
 
-test("category switching uses one route, keeps style, and scopes occasions to Other", () => {
+test("category switching uses one route, keeps style, and scopes occasions to compatible categories", () => {
   const original = new URLSearchParams("category=other&style=pastel&occasion=christening&ref=home");
   const all = getInvitationCatalogLink(null, original);
   assert.equal(all.pathname, "/invitations");
-  assert.equal(all.search, "style=pastel&occasion=christening&ref=home");
-  const birthday = getInvitationCatalogLink(projects[0], original);
+  assert.equal(all.search, "style=pastel&ref=home");
+  const birthday = getInvitationCatalogLink(projects.find((project) => project.id === "birthday"), original);
   assert.equal(birthday.pathname, "/invitations");
   assert.equal(birthday.search, "category=birthday&style=pastel&ref=home");
   assert.equal(original.get("category"), "other");
@@ -35,8 +35,8 @@ test("old project and type links migrate to category URLs with their style", () 
   const params = new URLSearchParams("type=other-celebrations&otherStyle=pastel&occasion=bridal-party");
   const migrated = getInvitationCatalogLink(readCatalogCategory(params), params);
   assert.equal(migrated.pathname, "/invitations");
-  assert.equal(readCatalogCategory(new URLSearchParams(migrated.search))?.id, "other");
-  assert.equal(new URLSearchParams(migrated.search).get("occasion"), "bridal-party");
+  assert.equal(readCatalogCategory(new URLSearchParams(migrated.search))?.id, "pre-wedding");
+  assert.equal(new URLSearchParams(migrated.search).get("occasion"), "bachelorette");
   assert.equal(new URLSearchParams(migrated.search).get("style"), "pastel");
   assert.equal(new URLSearchParams(migrated.search).has("type"), false);
   assert.equal(new URLSearchParams(migrated.search).has("otherStyle"), false);
@@ -49,7 +49,7 @@ test("current filters take precedence over older category-specific links", () =>
 });
 
 test("celebration subcategories validate old links and clear independently of style", () => {
-  assert.equal(readCatalogOccasion(new URLSearchParams("occasion=bridal-party")), "bridal-party");
+  assert.equal(readCatalogOccasion(new URLSearchParams("occasion=bridal-party")), "bachelorette");
   assert.equal(readCatalogOccasion(new URLSearchParams("occasion=gender-reveal")), "gender-reveal");
   assert.equal(readCatalogOccasion(new URLSearchParams("occasion=bachelorette")), "bachelorette");
   assert.equal(readCatalogOccasion(new URLSearchParams("occasion=unknown")), "all");
@@ -58,7 +58,7 @@ test("celebration subcategories validate old links and clear independently of st
   assert.equal(cleared.get("style"), "pastel");
 });
 
-test("bridal designs belong to Other Celebrations and keep their existing preview URLs", () => {
+test("bridal designs retain their rendering metadata and existing preview URLs", () => {
   assert.equal(weddingThemes.some((theme) => theme.subcategory === "bridal-party"), false);
   assert.ok(celebrationThemes.some((theme) => theme.subcategory === "bridal-party"));
   for (const slug of ["wedding-blush-lift", "wedding-cherry-toast"]) {

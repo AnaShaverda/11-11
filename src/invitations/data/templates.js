@@ -1,3 +1,4 @@
+import { getDesignMembership } from "../../data/catalogMembership.js";
 import { selectedBridalStorefront } from "./selectedBridalDesigns.js";
 import { pinkChampagneStorefront } from "./pinkChampagneDesigns.js";
 import { cocktailBirthdayStorefront } from "./cocktailBirthdayDesigns.js";
@@ -122,6 +123,7 @@ export const invitationTemplates = [...birthdayThemes, ...weddingThemes, ...cele
   const preview = storefront[theme.id];
   return {
     id: theme.id,
+    ...getDesignMembership(theme),
     status: theme.status,
     slug: preview.slug,
     title: preview.title,

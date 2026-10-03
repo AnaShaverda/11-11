@@ -1,8 +1,9 @@
 import { useLanguage } from "../../localization/LanguageContext.jsx";
 import { getInvitationSample } from "../../localization/cardCopy.js";
 import { getDesignFont } from "../data/cardTypography.js";
+import SeparatedForeground from "./SeparatedForeground.jsx";
 
-export default function CocktailBirthdayPoster({ sample, large, variant, artwork, slug = `birthday-${variant}`, isBridal = false }) {
+export default function CocktailBirthdayPoster({ sample, large, variant, artwork, components, slug = `birthday-${variant}`, isBridal = false }) {
   const { t, language } = useLanguage();
   const defaults = getInvitationSample(slug, t);
   const name = sample.posterName ?? sample.name ?? defaults.posterName;
@@ -13,6 +14,6 @@ export default function CocktailBirthdayPoster({ sample, large, variant, artwork
       <span className="cocktail-host">{isBridal ? <>{sample.opening ?? defaults.opening}<br />{name}</> : <>{name} {t("modernToast.turns", { age })}</>}</span>
       <span className="cocktail-details">{sample.date}<br />{sample.time ?? defaults.time} · {sample.location}</span>
     </div>
-    <img className="cocktail-birthday-illustration" src={artwork} alt="" aria-hidden="true" loading={large ? "eager" : "lazy"} decoding="async" draggable="false" />
+    {components ? <SeparatedForeground className="cocktail-birthday-illustration" assets={components} eager={large} /> : <img className="cocktail-birthday-illustration" src={artwork} alt="" aria-hidden="true" loading={large ? "eager" : "lazy"} decoding="async" draggable="false" />}
   </div>;
 }

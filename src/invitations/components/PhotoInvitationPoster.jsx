@@ -1,8 +1,10 @@
 import BirthdayIllustrations from "./BirthdayIllustrations.jsx";
 import { useLanguage } from "../../localization/LanguageContext.jsx";
+import SeparatedForeground from "./SeparatedForeground.jsx";
+import { birthdayAssetStyle } from "../data/assetPresentation.js";
 
 // Shared paper card on a generated scene; all event text remains live HTML.
-export default function PhotoInvitationPoster({ name, age, turns, opening, closing, details, photoCard }) {
+export default function PhotoInvitationPoster({ name, age, turns, opening, closing, details, photoCard, components }) {
   const illustrated = ["illustrated", "tavern"].includes(photoCard.variant);
   const playful = ["playful", "space", "dino"].includes(photoCard.variant);
   const framed = ["space", "dino"].includes(photoCard.variant);
@@ -17,7 +19,7 @@ export default function PhotoInvitationPoster({ name, age, turns, opening, closi
       {details ? <span className="modern-toast-details">{details}</span> : null}
       {photoCard.noteKey ? <span className="photo-paper-note">{t(photoCard.noteKey)}</span> : null}
       {photoCard.captionKey ? <span className="photo-paper-caption">{t(photoCard.captionKey)}</span> : null}
-      <BirthdayIllustrations assets={photoCard.artwork} slot="paper" eager />
+      {components ? <SeparatedForeground className="photo-paper-separated-foreground" assets={components} style={birthdayAssetStyle(photoCard.artwork[0])} aspectRatio={2 / 3} eager /> : <BirthdayIllustrations assets={photoCard.artwork} slot="paper" eager />}
     </div>
   );
 }

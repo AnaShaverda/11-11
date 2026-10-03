@@ -1,0 +1,188 @@
+[
+  [
+    "birthday-little-pizza-chef",
+    [
+      [
+        "pizza",
+        "ONLY the red outlined pizza in its handled pan, remove all starbursts and stray marks"
+      ]
+    ]
+  ],
+  [
+    "birthday-slice-club",
+    [
+      [
+        "pizza",
+        "ONLY the red outlined pizza slice, remove all surrounding rays and stray marks"
+      ]
+    ]
+  ],
+  [
+    "birthday-midnight-martini",
+    [
+      [
+        "martini",
+        "ONLY the central cream and pale pink martini glass with olive skewer, remove all bars, dots, rays and stars"
+      ],
+      [
+        "gold-star",
+        "ONLY the single gold painted starburst, remove the glass and every other mark"
+      ],
+      [
+        "stroke",
+        "ONLY ONE pink short painted horizontal bar at lower left, remove all other marks"
+      ]
+    ]
+  ],
+  [
+    "birthday-peach-fizz",
+    [
+      [
+        "left-coupe",
+        "ONLY the purple left coupe glass with its cherry garnish, remove yellow glass, rays and all other marks"
+      ],
+      [
+        "right-coupe",
+        "ONLY the yellow right coupe glass with its citrus slice, remove purple glass, rays and all other marks"
+      ]
+    ]
+  ],
+  [
+    "birthday-pink-pop",
+    [
+      [
+        "bottle",
+        "ONLY the central dark blue champagne bottle with pink neck and cherry label, remove both flutes and dots"
+      ],
+      [
+        "left-flute",
+        "ONLY the pink left champagne flute with yellow champagne and bubbles inside the glass, remove bottle, right flute and dots"
+      ],
+      [
+        "right-flute",
+        "ONLY the pink right champagne flute with yellow champagne and bubbles inside the glass, remove bottle, left flute and dots"
+      ]
+    ]
+  ],
+  [
+    "birthday-cherry-tower",
+    [
+      [
+        "bottle",
+        "ONLY the tipped pink cherry champagne bottle at right, remove all coupes, cork and dots"
+      ],
+      [
+        "red-coupe",
+        "ONLY the top red shallow coupe with its cream rim and small gold bubbles, remove all other coupes and bottle"
+      ],
+      [
+        "striped-coupe",
+        "ONLY the red striped shallow coupe with cream rim from middle right, remove all other coupes and bottle"
+      ]
+    ]
+  ],
+  [
+    "bridal-lilac-pop",
+    [
+      [
+        "cork",
+        "ONLY the small floating tan champagne cork at upper right, remove the bottle and all other marks"
+      ]
+    ]
+  ],
+  [
+    "bridal-cherry-clink",
+    [
+      [
+        "bottle",
+        "ONLY the gold-necked pink champagne bottle on the right, remove both flutes"
+      ],
+      [
+        "left-flute",
+        "ONLY the left pale pink champagne flute, remove right flute and bottle"
+      ],
+      [
+        "right-flute",
+        "ONLY the right pale pink champagne flute, remove left flute and bottle"
+      ]
+    ]
+  ],
+  [
+    "bridal-blue-spritz",
+    [
+      [
+        "left-coupe",
+        "ONLY the left blue coupe with the lemon slice, remove right glass and all accent marks"
+      ],
+      [
+        "right-coupe",
+        "ONLY the right blue coupe with cherry garnish, remove left glass and all accent marks"
+      ]
+    ]
+  ],
+  [
+    "bridal-pink-stripe-social",
+    [
+      [
+        "left-coupe",
+        "ONLY the left pale pink coupe, remove right glass and all accent marks"
+      ],
+      [
+        "right-coupe",
+        "ONLY the right pale pink coupe with cherry garnish, remove left glass and all accent marks"
+      ]
+    ]
+  ],
+  [
+    "bridal-mint-cheers",
+    [
+      [
+        "left-coupe",
+        "ONLY the left yellow coupe with green stem and lemon slice, remove right glass and all accent marks"
+      ],
+      [
+        "right-coupe",
+        "ONLY the right yellow coupe with green stem, remove left glass and all accent marks"
+      ]
+    ]
+  ],
+  [
+    "bridal-lilac-happy-hour",
+    [
+      [
+        "left-coupe",
+        "ONLY the left burgundy coupe with pale coral stem and orange slice, remove right glass and all accent marks"
+      ],
+      [
+        "right-coupe",
+        "ONLY the right burgundy coupe with pale coral stem and cherry, remove left glass and all accent marks"
+      ]
+    ]
+  ],
+  [
+    "bridal-mint-bash",
+    [
+      [
+        "bottle",
+        "ONLY the tall coral pink champagne bottle with dark teal oval blank label, remove coupe"
+      ],
+      [
+        "coupe",
+        "ONLY the small pale pink coupe at bottom right, remove bottle"
+      ]
+    ]
+  ],
+  [
+    "bridal-sunny-pop",
+    [
+      [
+        "bottle",
+        "ONLY the tall coral pink champagne bottle with dark blue blank label, remove coupe"
+      ],
+      [
+        "coupe",
+        "ONLY the small pale mint coupe at bottom right, remove bottle"
+      ]
+    ]
+  ]
+]

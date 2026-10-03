@@ -1,0 +1,351 @@
+[
+  [
+    "wedding-little-yes",
+    [
+      [
+        "ring-hand",
+        "the single outlined hand with engagement ring and sage cuff, without surrounding gold sparkles"
+      ]
+    ]
+  ],
+  [
+    "wedding-happy-table",
+    [
+      [
+        "table",
+        "the colorful illustrated dining table, chairs, flowers, cake and place settings as the single connected dinner illustration"
+      ]
+    ]
+  ],
+  [
+    "wedding-watercolor-banquet",
+    [
+      [
+        "table",
+        "the complete connected watercolor banquet table, chairs and place settings"
+      ]
+    ]
+  ],
+  [
+    "wedding-ring-and-spark",
+    [
+      [
+        "rings",
+        "the two linked ink wedding rings ONLY, without any surrounding sparkles"
+      ]
+    ]
+  ],
+  [
+    "wedding-golden-promise",
+    [
+      [
+        "rings",
+        "the two linked gold watercolor wedding rings ONLY, without any surrounding sparkles"
+      ]
+    ]
+  ],
+  [
+    "wedding-sweet-snapshot",
+    [
+      [
+        "envelope",
+        "ONLY the pink envelope, without bow, photograph, tulips, stripes or paper backdrop"
+      ],
+      [
+        "portrait",
+        "ONLY the cream-bordered square picture of the illustrated wedding couple; remove envelope and bow"
+      ]
+    ]
+  ],
+  [
+    "wedding-portrait-promise",
+    [
+      [
+        "portrait",
+        "ONLY the small central oval framed watercolor portrait of the couple"
+      ],
+      [
+        "floral-frame",
+        "ONLY the thin cobalt rectangular border with corner leaves and flowers; remove central portrait"
+      ]
+    ]
+  ],
+  [
+    "wedding-heartmarked",
+    [
+      [
+        "left-toast",
+        "ONLY the left burgundy outlined hand and wine glass, without notes, right hand, or right glass"
+      ],
+      [
+        "right-toast",
+        "ONLY the right burgundy outlined hand and wine glass, without notes, left hand, or left glass"
+      ]
+    ]
+  ],
+  [
+    "wedding-colorful-company",
+    [
+      [
+        "table",
+        "ONLY the colorful illustrated table with place settings, flowers and candle at the bottom; remove the upper pink bow"
+      ]
+    ]
+  ],
+  [
+    "wedding-linked-steps",
+    [
+      [
+        "couple",
+        "ONLY the connected burgundy outlined couple holding hands, their walking legs, clothing and tiny flowers"
+      ]
+    ]
+  ],
+  [
+    "wedding-garden-table",
+    [
+      [
+        "table",
+        "ONLY the wooden garden dining table with chairs, place settings and flowers below the frame"
+      ],
+      [
+        "garden-frame",
+        "ONLY the thin green curving rectangular frame; remove bow, table and plants"
+      ]
+    ]
+  ],
+  [
+    "wedding-ribbon-revel",
+    [
+      [
+        "dancers",
+        "ONLY the row of five watercolor dancers at the bottom, with no garland or floral border"
+      ],
+      [
+        "floral-frame",
+        "ONLY the flowers and leaves framing the edges; remove the dancers and top ribbon garland"
+      ],
+      [
+        "ribbon-garland",
+        "ONLY the pink-and-blue swags with center bow along the top; remove flowers and dancers"
+      ]
+    ]
+  ],
+  [
+    "wedding-come-rain-or-shine",
+    [
+      [
+        "couple",
+        "ONLY the illustrated bride and groom walking together holding an umbrella; remove the outer rectangular frame"
+      ]
+    ]
+  ],
+  [
+    "wedding-side-by-side",
+    [
+      [
+        "couple",
+        "ONLY the small ink wedding couple walking together"
+      ]
+    ]
+  ],
+  [
+    "wedding-rose-letter",
+    [
+      [
+        "envelope",
+        "ONLY the pink open envelope covering the lower corners, without bow, seal, or cream paper letter"
+      ]
+    ]
+  ],
+  [
+    "wedding-sage-letter",
+    [
+      [
+        "envelope",
+        "ONLY the sage green open envelope covering the lower corners, without seal or cream paper letter"
+      ]
+    ]
+  ],
+  [
+    "wedding-first-dance",
+    [
+      [
+        "couple",
+        "ONLY the dancing outlined wedding couple near the bottom, without surrounding hearts, stars, frame or bow"
+      ],
+      [
+        "frame",
+        "ONLY the thin double wavy ink rectangular outer border; remove the center bow and all people and marks"
+      ]
+    ]
+  ],
+  [
+    "wedding-happily-away",
+    [
+      [
+        "car",
+        "ONLY the ink drawing of the wedding getaway car, passengers and trailing tin cans; remove outer frame"
+      ],
+      [
+        "frame",
+        "ONLY the thin ink rectangular outer border with small ribbon bow knots at corners; remove car, people and tin cans"
+      ]
+    ]
+  ],
+  [
+    "wedding-our-people",
+    [
+      [
+        "dinner",
+        "ONLY the complete connected drawing of guests seated at the circular dining table"
+      ]
+    ]
+  ],
+  [
+    "wedding-date-and-dinner",
+    [
+      [
+        "table",
+        "ONLY the connected thin blue ink dinner-table illustration at the bottom with candles, flowers and place settings; remove upper bow"
+      ]
+    ]
+  ],
+  [
+    "wedding-little-vows",
+    [
+      [
+        "couple",
+        "ONLY the small central outlined wedding couple holding hands; remove cake, bottle, hearts and all unrelated marks"
+      ],
+      [
+        "cake",
+        "ONLY the small outlined cake in the lower left; remove flowers, couple and bottle"
+      ],
+      [
+        "bottle",
+        "ONLY the small dark bottle in the lower right; remove flowers, couple and cake"
+      ]
+    ]
+  ],
+  [
+    "wedding-celebration-table",
+    [
+      [
+        "table",
+        "ONLY the complete connected ink drawing of the celebration table with its chairs and place settings"
+      ]
+    ]
+  ],
+  [
+    "wedding-day-notes",
+    [
+      [
+        "bottle",
+        "ONLY the little green tilted bottle at the top right, without pouring liquid"
+      ],
+      [
+        "camera",
+        "ONLY the small camera on the left edge"
+      ],
+      [
+        "disco",
+        "ONLY the little yellow and blue disco ball near the top left"
+      ],
+      [
+        "cake",
+        "ONLY the small outlined cake at the bottom left, without stars"
+      ]
+    ]
+  ],
+  [
+    "wedding-blue-clink",
+    [
+      [
+        "left-toast",
+        "ONLY the left cobalt hand holding a coupe, remove right hand, right glass, outer frame and all extra marks"
+      ],
+      [
+        "right-toast",
+        "ONLY the right cobalt hand holding a coupe with ribbon at wrist, remove left hand, left glass, outer frame and all extra marks"
+      ],
+      [
+        "frame",
+        "ONLY the thin blue rectangular outer frame, remove hands and glasses"
+      ]
+    ]
+  ],
+  [
+    "wedding-tipsy-together",
+    [
+      [
+        "bride",
+        "ONLY the outlined bride carrying the large coupe, remove groom, bottle and side squiggles"
+      ],
+      [
+        "groom",
+        "ONLY the outlined groom carrying the large bottle, remove bride, coupe and side squiggles"
+      ],
+      [
+        "squiggle",
+        "ONLY the left vertical black wavy line from top to bottom, remove all people and props"
+      ]
+    ]
+  ],
+  [
+    "wedding-heart-hideaway",
+    [
+      [
+        "couple",
+        "ONLY the black outlined couple holding the large heart in front of their faces; remove all little corner hearts and leaves"
+      ]
+    ]
+  ],
+  [
+    "wedding-blue-pour",
+    [
+      [
+        "bottle-hand",
+        "ONLY the blue ink upper-right hand holding a tilted bottle with ribbon, WITHOUT liquid or frame"
+      ],
+      [
+        "coupe-hand",
+        "ONLY the blue ink lower-left hand holding the coupe glass, WITHOUT liquid or frame"
+      ],
+      [
+        "pour",
+        "ONLY the sweeping pale blue poured liquid forming the right and bottom curve. Remove hands, glasses and bottle"
+      ]
+    ]
+  ],
+  [
+    "wedding-garden-dance",
+    [
+      [
+        "dancers",
+        "ONLY the watercolor row of five dancing guests at the bottom; remove plants, disco balls and garland"
+      ],
+      [
+        "lemon-branch",
+        "ONLY one leafy lemon branch from the upper left corner, remove all other decoration"
+      ],
+      [
+        "garland",
+        "ONLY the gold string of tiny lights across the top, WITHOUT disco balls, leaves or dancers"
+      ]
+    ]
+  ],
+  [
+    "wedding-ink-and-ivy",
+    [
+      [
+        "couple",
+        "ONLY the central blue ink wedding couple, WITHOUT flower vines or background"
+      ],
+      [
+        "vine",
+        "ONLY the blue ink floral vine along the left edge, remove couple and right vine"
+      ]
+    ]
+  ]
+]

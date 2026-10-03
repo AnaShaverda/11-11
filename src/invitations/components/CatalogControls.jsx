@@ -1,74 +1,49 @@
-import { useLayoutEffect, useRef } from "react";
-import { Link, useLocation, useNavigate } from "react-router-dom";
+import { useEffect, useRef, useState } from "react";
 import Icon from "../../components/ui/Icon.jsx";
-import SelectField from "../../components/ui/SelectField.jsx";
-import { projects } from "../../data/projects.js";
+import CollectionFilters from "./CollectionFilters.jsx";
 import { useLanguage } from "../../localization/LanguageContext.jsx";
 
-let lastCategoryLine = null;
+export default function CatalogControls({ resultCount, ...filterProps }) {
+  const { t } = useLanguage();
+  const dialogRef = useRef(null);
+  const [open, setOpen] = useState(false);
+  const activeCount = Number(Boolean(filterProps.project)) + Number(filterProps.occasion !== "all") + filterProps.appearance.themes.length + filterProps.appearance.colors.length;
 
-export default function CatalogControls({ project, style, options, resultCount, showStyle, onChange, categoryLink, children }) {
-  const { t, language } = useLanguage();
-  const navigate = useNavigate();
-  const location = useLocation();
-  const categoryRef = useRef(null);
-  const lineMounted = useRef(false);
-  const hasFilter = showStyle && style !== "all";
+  useEffect(() => {
+    if (!open) return;
+    const previousOverflow = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    return () => { document.body.style.overflow = previousOverflow; };
+  }, [open]);
 
-  useLayoutEffect(() => {
-    const nav = categoryRef.current;
-    let mounted = true;
-    function positionLine() {
-      if (!mounted) return;
-      const active = nav.querySelector('[aria-current="page"]');
-      if (!active) return;
-      if (!lineMounted.current && lastCategoryLine) {
-        nav.style.setProperty("--category-active-left", `${lastCategoryLine.left}px`);
-        nav.style.setProperty("--category-active-width", `${lastCategoryLine.width}px`);
-        nav.querySelector(".category-active-line").getBoundingClientRect();
-      }
-      lineMounted.current = true;
-      nav.style.setProperty("--category-active-left", `${active.offsetLeft}px`);
-      nav.style.setProperty("--category-active-width", `${active.offsetWidth}px`);
-      lastCategoryLine = { left: active.offsetLeft, width: active.offsetWidth };
-      nav.scrollTo({ left: Math.max(0, active.offsetLeft + active.offsetWidth - nav.clientWidth), behavior: "auto" });
+  useEffect(() => {
+    const desktop = window.matchMedia("(min-width: 901px)");
+    function closeOnDesktop(event) {
+      if (event.matches) dialogRef.current?.close();
     }
-    positionLine();
-    const resize = new ResizeObserver(positionLine);
-    resize.observe(nav);
-    document.fonts.ready.then(positionLine);
-    return () => { mounted = false; resize.disconnect(); };
-  }, [project?.id, language]);
+    desktop.addEventListener("change", closeOnDesktop);
+    return () => desktop.removeEventListener("change", closeOnDesktop);
+  }, []);
 
-  function changeCategory(event) {
-    navigate(categoryLink(projects.find((category) => category.id === event.target.value) ?? null), { replace: true, state: { ...location.state, preserveScroll: true } });
+  function openFilters() {
+    dialogRef.current.showModal();
+    setOpen(true);
   }
 
-  return (
-    <div className="catalog-controls">
-      <div className="catalog-toolbar">
-        <div className="catalog-desktop-categories">
-          <nav ref={categoryRef} className="invitation-filters category-navigation" aria-label={t("common.exploreEvents")}>
-            <Link replace state={{ ...location.state, preserveScroll: true }} className={`filter-button${!project ? " is-active" : ""}`} to={categoryLink(null)} aria-current={!project ? "page" : undefined}>{t("invitations.all")}</Link>
-            {projects.map((category) => <Link replace state={{ ...location.state, preserveScroll: true }} className={`filter-button${project?.id === category.id ? " is-active" : ""}`} key={category.id} to={categoryLink(category)} aria-current={project?.id === category.id ? "page" : undefined}>{t(`common.${category.id}`)}</Link>)}
-            <span className="category-active-line" aria-hidden="true" />
-          </nav>
-        </div>
-        <SelectField className="catalog-mobile-category" id="catalog-category" label={t("catalog.category")} hideLabel value={project?.id ?? "all"} onChange={changeCategory}>
-          <option value="all">{t("invitations.all")}</option>
-          {projects.map((category) => <option key={category.id} value={category.id}>{t(`common.${category.id}`)}</option>)}
-        </SelectField>
-        <SelectField className="catalog-style" id="catalog-style" label={t("catalog.filter")} hideLabel value={showStyle ? style : "all"} disabled={!showStyle} onChange={(event) => onChange({ style: event.target.value })}>
-          {options.map((option) => <option key={option.id} value={option.id} disabled={option.count === 0 && style !== option.id}>{option.id === "all" ? t("invitations.allStyles") : `${t(`invitations.styles.${option.id}`)} (${option.count})`}</option>)}
-        </SelectField>
+  return <div className="catalog-filter-shell">
+    <aside className="catalog-sidebar" aria-label={t("catalog.filtersTitle")}>
+      <CollectionFilters prefix="desktop-filter" {...filterProps} />
+    </aside>
+    <button type="button" className="catalog-mobile-filter-trigger" onClick={openFilters} aria-label={t("catalog.openFilters")} title={t("catalog.openFilters")} aria-haspopup="dialog" aria-controls="catalog-filter-dialog" aria-expanded={open}>
+      <Icon name="filter" size={22} />
+      {activeCount ? <span className="filter-active-badge" aria-hidden="true">{activeCount}</span> : null}
+    </button>
+    <dialog ref={dialogRef} id="catalog-filter-dialog" className="catalog-filter-dialog" aria-label={t("catalog.filtersTitle")} onClose={() => setOpen(false)} onClick={(event) => { if (event.target === event.currentTarget) dialogRef.current.close(); }}>
+      <div className="catalog-filter-dialog-panel">
+        <div className="catalog-dialog-heading"><button type="button" className="catalog-dialog-close" aria-label={t("catalog.closeFilters")} onClick={() => dialogRef.current.close()}><Icon name="close" size={22} /></button></div>
+        <div className="catalog-dialog-body"><CollectionFilters prefix="mobile-filter" {...filterProps} /></div>
+        <div className="catalog-dialog-footer"><button type="button" className="catalog-show-results" onClick={() => dialogRef.current.close()}>{t("catalog.showResults", { count: resultCount })}</button></div>
       </div>
-      {children}
-      <div className="catalog-results-bar">
-        <p className="catalog-result-count" role="status">{showStyle ? t(resultCount === 1 ? "catalog.result.one" : "catalog.result.many", { count: resultCount }) : t("common.preview")}</p>
-        {hasFilter ? <div className="catalog-applied-filters" role="group" aria-label={t("catalog.filters.applied")}>
-          <button className="catalog-filter-chip" type="button" onClick={() => onChange({ style: "all" })} aria-label={t("catalog.style.remove", { style: t(`invitations.styles.${style}`) })}><span>{t(`invitations.styles.${style}`)}</span><Icon name="close" size={16} /></button>
-        </div> : null}
-      </div>
-    </div>
-  );
+    </dialog>
+  </div>;
 }

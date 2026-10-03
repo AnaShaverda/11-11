@@ -1,0 +1,3261 @@
+{
+  "birthday-pink-post": {
+    "background": {
+      "color": "#f7f1e5",
+      "image": "/images/bridal/selected/backgrounds/ivory-paper.webp"
+    },
+    "components": [
+      {
+        "id": "pink-post-envelope-1",
+        "image": "/images/components/separated/pink-post-envelope.webp",
+        "left": "0%",
+        "top": "24%",
+        "width": "100%",
+        "height": "76%"
+      },
+      {
+        "id": "pink-post-seal-2",
+        "image": "/images/components/separated/pink-post-seal.webp",
+        "left": "84%",
+        "top": "77%",
+        "width": "13%",
+        "height": "15%"
+      },
+      {
+        "id": "pink-post-heart-3",
+        "image": "/images/components/separated/pink-post-heart.webp",
+        "left": "86%",
+        "top": "6%",
+        "width": "10%",
+        "height": "13%"
+      }
+    ]
+  },
+  "birthday-disco-scrapbook": {
+    "background": {
+      "color": "#faf3e3",
+      "image": "/images/backgrounds/separated/disco-scrapbook-paper.webp"
+    },
+    "components": [
+      {
+        "id": "disco-1",
+        "image": "/images/birthday/disco/disco-ball-silver.webp",
+        "left": "72%",
+        "top": "-8%",
+        "width": "35%",
+        "height": "35%"
+      },
+      {
+        "id": "martini-2",
+        "image": "/images/birthday/disco-scrapbook/sketched-olive-martini.webp",
+        "left": "76%",
+        "top": "56%",
+        "width": "25%",
+        "height": "41%"
+      },
+      {
+        "id": "red-starburst-3",
+        "image": "/images/components/separated/red-starburst.webp",
+        "left": "65%",
+        "top": "3%",
+        "width": "5%",
+        "height": "7%",
+        "opacity": 0.7
+      },
+      {
+        "id": "birthday-disco-scrapbook-tape-4",
+        "image": "/images/components/separated/birthday-disco-scrapbook-tape.webp",
+        "left": "-2%",
+        "top": "2%",
+        "width": "12%",
+        "height": "8%"
+      },
+      {
+        "id": "birthday-disco-scrapbook-tape-5",
+        "image": "/images/components/separated/birthday-disco-scrapbook-tape.webp",
+        "left": "-2%",
+        "top": "12%",
+        "width": "12%",
+        "height": "7%",
+        "rotation": 3
+      }
+    ]
+  },
+  "birthday-velvet-post": {
+    "background": {
+      "color": "#f5d8dd",
+      "image": "/images/backgrounds/separated/velvet-post-paper.webp"
+    },
+    "components": [
+      {
+        "id": "martini-1",
+        "image": "/images/birthday/velvet-post/bow-martini.webp",
+        "left": "2%",
+        "top": "57%",
+        "width": "24%",
+        "height": "39%"
+      },
+      {
+        "id": "cake-2",
+        "image": "/images/birthday/velvet-post/bow-birthday-cake.webp",
+        "left": "70%",
+        "top": "55%",
+        "width": "28%",
+        "height": "43%"
+      },
+      {
+        "id": "velvet-ribbon-3",
+        "image": "/images/components/separated/velvet-ribbon.webp",
+        "left": "79%",
+        "top": "-2%",
+        "width": "19%",
+        "height": "49%"
+      }
+    ]
+  },
+  "birthday-checkerboard-cheers": {
+    "background": {
+      "color": "#fff1df",
+      "image": "/images/backgrounds/separated/checkerboard-paper.webp"
+    },
+    "components": [
+      {
+        "id": "martini-1",
+        "image": "/images/birthday/checkerboard-cheers/painted-olive-martini.webp",
+        "left": "55%",
+        "top": "53%",
+        "width": "31%",
+        "height": "45%"
+      },
+      {
+        "id": "checkerboard-spritz-2",
+        "image": "/images/components/separated/checkerboard-spritz.webp",
+        "left": "80%",
+        "top": "31%",
+        "width": "21%",
+        "height": "60%"
+      }
+    ]
+  },
+  "birthday-cobalt-cheers": {
+    "background": {
+      "color": "#f7f5ed",
+      "image": "/images/bridal/selected/backgrounds/ivory-paper.webp"
+    },
+    "components": [
+      {
+        "id": "cobalt-left-toast-1",
+        "image": "/images/components/separated/cobalt-left-toast.webp",
+        "left": "-1%",
+        "top": "33%",
+        "width": "53%",
+        "height": "44%"
+      },
+      {
+        "id": "cobalt-right-toast-2",
+        "image": "/images/components/separated/cobalt-right-toast.webp",
+        "left": "49%",
+        "top": "34%",
+        "width": "53%",
+        "height": "44%"
+      }
+    ]
+  },
+  "birthday-ribbon-social": {
+    "background": {
+      "color": "#f5efe6",
+      "image": "/images/bridal/selected/backgrounds/ivory-paper.webp"
+    },
+    "components": [
+      {
+        "id": "ribbon-social-frame-1",
+        "image": "/images/components/separated/ribbon-social-frame.webp",
+        "left": "0%",
+        "top": "0%",
+        "width": "100%",
+        "height": "100%",
+        "objectFit": "fill"
+      },
+      {
+        "id": "ribbon-social-lips-2",
+        "image": "/images/components/separated/ribbon-social-lips.webp",
+        "left": "5%",
+        "top": "4%",
+        "width": "17%",
+        "height": "14%"
+      },
+      {
+        "id": "ribbon-social-cake-3",
+        "image": "/images/components/separated/ribbon-social-cake.webp",
+        "left": "83%",
+        "top": "4%",
+        "width": "16%",
+        "height": "24%"
+      },
+      {
+        "id": "citrus-coupe-4",
+        "image": "/images/birthday/ribbon-social/etched-citrus-coupe.webp",
+        "left": "3%",
+        "top": "59%",
+        "width": "26%",
+        "height": "37%"
+      },
+      {
+        "id": "martini-5",
+        "image": "/images/birthday/velvet-post/bow-martini.webp",
+        "left": "80%",
+        "top": "63%",
+        "width": "18%",
+        "height": "30%"
+      }
+    ]
+  },
+  "birthday-paper-garland": {
+    "background": {
+      "color": "#fffcf7"
+    },
+    "components": [
+      {
+        "id": "birthday-paper-garland-garland-1",
+        "image": "/images/components/separated/birthday-paper-garland-garland.webp",
+        "left": "0%",
+        "top": "0%",
+        "width": "100%",
+        "height": "20%"
+      },
+      {
+        "id": "birthday-paper-garland-cake-2",
+        "image": "/images/components/separated/birthday-paper-garland-cake.webp",
+        "left": "33%",
+        "top": "70%",
+        "width": "34%",
+        "height": "25%"
+      },
+      {
+        "id": "spark-0-3",
+        "image": "/images/components/separated/birthday-paper-garland-spark.webp",
+        "left": "7%",
+        "top": "31%",
+        "width": "3%",
+        "height": "4%"
+      },
+      {
+        "id": "spark-1-4",
+        "image": "/images/components/separated/birthday-paper-garland-spark.webp",
+        "left": "90%",
+        "top": "42%",
+        "width": "3%",
+        "height": "4%"
+      },
+      {
+        "id": "spark-2-5",
+        "image": "/images/components/separated/birthday-paper-garland-spark.webp",
+        "left": "18%",
+        "top": "65%",
+        "width": "3%",
+        "height": "4%"
+      },
+      {
+        "id": "spark-3-6",
+        "image": "/images/components/separated/birthday-paper-garland-spark.webp",
+        "left": "79%",
+        "top": "74%",
+        "width": "3%",
+        "height": "4%"
+      }
+    ]
+  },
+  "birthday-strawberry-social": {
+    "background": {
+      "color": "#fff7eb",
+      "image": "/images/backgrounds/separated/birthday-strawberry-social-background.webp"
+    },
+    "components": [
+      {
+        "id": "cake-1",
+        "image": "/images/birthday/strawberry-social/shortcake-pedestal.webp",
+        "left": "57%",
+        "top": "40%",
+        "width": "40%",
+        "height": "56%"
+      },
+      {
+        "id": "berries-2",
+        "image": "/images/birthday/strawberry-social/berries-and-daisy.webp",
+        "left": "1%",
+        "top": "80%",
+        "width": "25%",
+        "height": "18%"
+      }
+    ]
+  },
+  "birthday-classic-celebration": {
+    "background": {
+      "color": "#fff4df",
+      "image": "/images/backgrounds/separated/birthday-classic-celebration-background.webp"
+    },
+    "components": [
+      {
+        "id": "birthday-classic-celebration-frame-1",
+        "image": "/images/components/separated/birthday-classic-celebration-frame.webp",
+        "left": "0%",
+        "top": "0%",
+        "width": "100%",
+        "height": "100%",
+        "objectFit": "fill"
+      },
+      {
+        "id": "birthday-classic-celebration-cake-2",
+        "image": "/images/components/separated/birthday-classic-celebration-cake.webp",
+        "left": "46%",
+        "top": "16%",
+        "width": "54%",
+        "height": "79%"
+      },
+      {
+        "id": "birthday-classic-celebration-bow-3",
+        "image": "/images/components/separated/birthday-classic-celebration-bow.webp",
+        "left": "1%",
+        "top": "0%",
+        "width": "13%",
+        "height": "13%"
+      }
+    ]
+  },
+  "birthday-floral-affair": {
+    "background": {
+      "color": "#fff7f1",
+      "image": "/images/bridal/selected/backgrounds/ivory-paper.webp"
+    },
+    "components": [
+      {
+        "id": "birthday-floral-affair-vase-1",
+        "image": "/images/components/separated/birthday-floral-affair-vase.webp",
+        "left": "66%",
+        "top": "65%",
+        "width": "26%",
+        "height": "30%"
+      },
+      {
+        "id": "birthday-floral-affair-lily-2",
+        "image": "/images/components/separated/birthday-floral-affair-lily.webp",
+        "left": "67%",
+        "top": "-5%",
+        "width": "35%",
+        "height": "44%"
+      },
+      {
+        "id": "birthday-floral-affair-lily-3",
+        "image": "/images/components/separated/birthday-floral-affair-lily.webp",
+        "left": "46%",
+        "top": "27%",
+        "width": "52%",
+        "height": "44%"
+      },
+      {
+        "id": "birthday-floral-affair-magnolia-4",
+        "image": "/images/components/separated/birthday-floral-affair-magnolia.webp",
+        "left": "68%",
+        "top": "44%",
+        "width": "32%",
+        "height": "34%"
+      }
+    ]
+  },
+  "birthday-pastel-disco": {
+    "background": {
+      "color": "#fff9ef",
+      "image": "/images/backgrounds/separated/birthday-pastel-disco-background.webp"
+    },
+    "components": [
+      {
+        "id": "birthday-pastel-disco-disco-1",
+        "image": "/images/components/separated/birthday-pastel-disco-disco.webp",
+        "left": "59%",
+        "top": "0%",
+        "width": "40%",
+        "height": "46%"
+      },
+      {
+        "id": "birthday-pastel-disco-ribbon-2",
+        "image": "/images/components/separated/birthday-pastel-disco-ribbon.webp",
+        "left": "0%",
+        "top": "34%",
+        "width": "100%",
+        "height": "66%"
+      },
+      {
+        "id": "birthday-paper-garland-spark-3",
+        "image": "/images/components/separated/birthday-paper-garland-spark.webp",
+        "left": "2%",
+        "top": "2%",
+        "width": "4%",
+        "height": "7%"
+      },
+      {
+        "id": "birthday-paper-garland-spark-4",
+        "image": "/images/components/separated/birthday-paper-garland-spark.webp",
+        "left": "86%",
+        "top": "9%",
+        "width": "4%",
+        "height": "7%"
+      },
+      {
+        "id": "birthday-paper-garland-spark-5",
+        "image": "/images/components/separated/birthday-paper-garland-spark.webp",
+        "left": "2%",
+        "top": "17%",
+        "width": "4%",
+        "height": "7%"
+      },
+      {
+        "id": "birthday-paper-garland-spark-6",
+        "image": "/images/components/separated/birthday-paper-garland-spark.webp",
+        "left": "86%",
+        "top": "59%",
+        "width": "4%",
+        "height": "7%"
+      }
+    ]
+  },
+  "birthday-coquette": {
+    "background": {
+      "color": "#fff5ef",
+      "image": "/images/bridal/selected/backgrounds/blush-paper.webp"
+    },
+    "components": [
+      {
+        "id": "birthday-coquette-frame-1",
+        "image": "/images/components/separated/birthday-coquette-frame.webp",
+        "left": "0%",
+        "top": "0%",
+        "width": "100%",
+        "height": "100%",
+        "objectFit": "fill"
+      },
+      {
+        "id": "birthday-coquette-bow-2",
+        "image": "/images/components/separated/birthday-coquette-bow.webp",
+        "left": "4%",
+        "top": "0%",
+        "width": "92%",
+        "height": "95%"
+      }
+    ]
+  },
+  "birthday-beer-party": {
+    "background": {
+      "color": "#f6e7c8"
+    },
+    "components": [
+      {
+        "id": "birthday-beer-party-left-beer-1",
+        "image": "/images/components/separated/birthday-beer-party-left-beer.webp",
+        "left": "18%",
+        "top": "57%",
+        "width": "38%",
+        "height": "39%"
+      },
+      {
+        "id": "birthday-beer-party-right-beer-2",
+        "image": "/images/components/separated/birthday-beer-party-right-beer.webp",
+        "left": "49%",
+        "top": "57%",
+        "width": "38%",
+        "height": "39%"
+      }
+    ]
+  },
+  "birthday-city-after-dark": {
+    "background": {
+      "color": "#101e32",
+      "image": "/images/backgrounds/separated/birthday-city-after-dark-background.webp"
+    },
+    "components": [
+      {
+        "id": "birthday-city-after-dark-spider-1",
+        "image": "/images/components/separated/birthday-city-after-dark-spider.webp",
+        "left": "77%",
+        "top": "6%",
+        "width": "17%",
+        "height": "55%"
+      }
+    ]
+  },
+  "birthday-comic-cutout": {
+    "background": {
+      "color": "#f6eedf",
+      "image": "/images/backgrounds/separated/birthday-comic-cutout-background.webp"
+    },
+    "components": [
+      {
+        "id": "birthday-comic-cutout-spider-1",
+        "image": "/images/components/separated/birthday-comic-cutout-spider.webp",
+        "left": "68%",
+        "top": "64%",
+        "width": "20%",
+        "height": "25%"
+      }
+    ]
+  },
+  "birthday-retro-sport": {
+    "background": {
+      "color": "#f6eedf",
+      "image": "/images/backgrounds/separated/birthday-retro-sport-background.webp"
+    },
+    "components": [
+      {
+        "id": "birthday-retro-sport-spider-1",
+        "image": "/images/components/separated/birthday-retro-sport-spider.webp",
+        "left": "80%",
+        "top": "52%",
+        "width": "14%",
+        "height": "30%"
+      }
+    ]
+  },
+  "birthday-upside-down": {
+    "background": {
+      "color": "#0b58ad",
+      "image": "/images/backgrounds/separated/birthday-upside-down-background.webp"
+    },
+    "components": [
+      {
+        "id": "birthday-upside-down-spider-1",
+        "image": "/images/components/separated/birthday-upside-down-spider.webp",
+        "left": "33%",
+        "top": "6%",
+        "width": "16%",
+        "height": "23%"
+      }
+    ]
+  },
+  "birthday-pink-lido": {
+    "background": {
+      "color": "#fbe1dc",
+      "image": "/images/backgrounds/separated/birthday-pink-lido-background.webp"
+    },
+    "components": [
+      {
+        "id": "birthday-pink-lido-umbrella-1",
+        "image": "/images/components/separated/birthday-pink-lido-umbrella.webp",
+        "left": "69%",
+        "top": "-3%",
+        "width": "36%",
+        "height": "34%"
+      },
+      {
+        "id": "birthday-pink-lido-ring-2",
+        "image": "/images/components/separated/birthday-pink-lido-ring.webp",
+        "left": "-4%",
+        "top": "65%",
+        "width": "33%",
+        "height": "32%"
+      },
+      {
+        "id": "birthday-pink-lido-palm-3",
+        "image": "/images/components/separated/birthday-pink-lido-palm.webp",
+        "left": "0%",
+        "top": "0%",
+        "width": "27%",
+        "height": "31%"
+      },
+      {
+        "id": "birthday-pink-lido-palm-4",
+        "image": "/images/components/separated/birthday-pink-lido-palm.webp",
+        "left": "76%",
+        "top": "73%",
+        "width": "27%",
+        "height": "29%",
+        "rotation": 180
+      }
+    ]
+  },
+  "birthday-blue-splash": {
+    "background": {
+      "color": "#f8f2e6",
+      "image": "/images/backgrounds/separated/birthday-blue-splash-background.webp"
+    },
+    "components": [
+      {
+        "id": "birthday-blue-splash-ladder-1",
+        "image": "/images/components/separated/birthday-blue-splash-ladder.webp",
+        "left": "72%",
+        "top": "15%",
+        "width": "23%",
+        "height": "45%"
+      },
+      {
+        "id": "birthday-blue-splash-ring-2",
+        "image": "/images/components/separated/birthday-blue-splash-ring.webp",
+        "left": "72%",
+        "top": "60%",
+        "width": "33%",
+        "height": "35%"
+      }
+    ]
+  },
+  "wedding-happy-table": {
+    "background": {
+      "color": "#fffaf0",
+      "image": "/images/bridal/selected/backgrounds/ivory-paper.webp"
+    },
+    "components": [
+      {
+        "id": "wedding-happy-table-table-1",
+        "image": "/images/components/separated/wedding-happy-table-table.webp",
+        "left": "0%",
+        "top": "59%",
+        "width": "100%",
+        "height": "38%"
+      }
+    ]
+  },
+  "wedding-watercolor-banquet": {
+    "background": {
+      "color": "#faf6ee",
+      "image": "/images/bridal/selected/backgrounds/ivory-paper.webp"
+    },
+    "components": [
+      {
+        "id": "wedding-watercolor-banquet-table-1",
+        "image": "/images/components/separated/wedding-watercolor-banquet-table.webp",
+        "left": "0%",
+        "top": "38%",
+        "width": "100%",
+        "height": "59%"
+      }
+    ]
+  },
+  "wedding-colorful-company": {
+    "background": {
+      "color": "#fbf6e9",
+      "image": "/images/bridal/selected/backgrounds/ivory-paper.webp"
+    },
+    "components": [
+      {
+        "id": "wedding-colorful-company-table-1",
+        "image": "/images/components/separated/wedding-colorful-company-table.webp",
+        "left": "0%",
+        "top": "64%",
+        "width": "100%",
+        "height": "36%"
+      },
+      {
+        "id": "pink-bow-2",
+        "image": "/images/components/watercolor/pink-bow.webp",
+        "left": "80%",
+        "top": "0%",
+        "width": "17%",
+        "height": "21%"
+      }
+    ]
+  },
+  "wedding-date-and-dinner": {
+    "background": {
+      "color": "#faf5e8",
+      "image": "/images/bridal/selected/backgrounds/ivory-paper.webp"
+    },
+    "components": [
+      {
+        "id": "wedding-date-and-dinner-table-1",
+        "image": "/images/components/separated/wedding-date-and-dinner-table.webp",
+        "left": "0%",
+        "top": "59%",
+        "width": "100%",
+        "height": "38%"
+      },
+      {
+        "id": "blue-bow-2",
+        "image": "/images/components/watercolor/blue-bow.webp",
+        "left": "79%",
+        "top": "0%",
+        "width": "19%",
+        "height": "20%"
+      }
+    ]
+  },
+  "wedding-celebration-table": {
+    "background": {
+      "color": "#faf6ed",
+      "image": "/images/bridal/selected/backgrounds/ivory-paper.webp"
+    },
+    "components": [
+      {
+        "id": "wedding-celebration-table-table-1",
+        "image": "/images/components/separated/wedding-celebration-table-table.webp",
+        "left": "0%",
+        "top": "59%",
+        "width": "100%",
+        "height": "38%"
+      }
+    ]
+  },
+  "wedding-garden-table": {
+    "background": {
+      "color": "#fffaf0",
+      "image": "/images/bridal/selected/backgrounds/ivory-paper.webp"
+    },
+    "components": [
+      {
+        "id": "wedding-garden-table-table-1",
+        "image": "/images/components/separated/wedding-garden-table-table.webp",
+        "left": "4%",
+        "top": "58%",
+        "width": "92%",
+        "height": "38%"
+      },
+      {
+        "id": "wedding-garden-table-garden-frame-2",
+        "image": "/images/components/separated/wedding-garden-table-garden-frame.webp",
+        "left": "0%",
+        "top": "0%",
+        "width": "100%",
+        "height": "100%",
+        "objectFit": "fill"
+      },
+      {
+        "id": "bow-3",
+        "image": "/images/wedding/garden-table/olive-ribbon-bow.webp",
+        "left": "36%",
+        "top": "0%",
+        "width": "28%",
+        "height": "17%"
+      }
+    ]
+  },
+  "wedding-ring-and-spark": {
+    "background": {
+      "color": "#f7f7ee",
+      "image": "/images/bridal/selected/backgrounds/ivory-paper.webp"
+    },
+    "components": [
+      {
+        "id": "wedding-ring-and-spark-rings-1",
+        "image": "/images/components/separated/wedding-ring-and-spark-rings.webp",
+        "left": "24%",
+        "top": "28%",
+        "width": "52%",
+        "height": "36%"
+      },
+      {
+        "id": "birthday-midnight-martini-gold-star-2",
+        "image": "/images/components/separated/birthday-midnight-martini-gold-star.webp",
+        "left": "24%",
+        "top": "35%",
+        "width": "4%",
+        "height": "6%"
+      },
+      {
+        "id": "birthday-midnight-martini-gold-star-3",
+        "image": "/images/components/separated/birthday-midnight-martini-gold-star.webp",
+        "left": "72%",
+        "top": "35%",
+        "width": "4%",
+        "height": "6%"
+      },
+      {
+        "id": "birthday-midnight-martini-gold-star-4",
+        "image": "/images/components/separated/birthday-midnight-martini-gold-star.webp",
+        "left": "65%",
+        "top": "24%",
+        "width": "4%",
+        "height": "6%"
+      },
+      {
+        "id": "birthday-midnight-martini-gold-star-5",
+        "image": "/images/components/separated/birthday-midnight-martini-gold-star.webp",
+        "left": "38%",
+        "top": "23%",
+        "width": "4%",
+        "height": "6%"
+      },
+      {
+        "id": "birthday-midnight-martini-gold-star-6",
+        "image": "/images/components/separated/birthday-midnight-martini-gold-star.webp",
+        "left": "70%",
+        "top": "59%",
+        "width": "4%",
+        "height": "6%"
+      }
+    ]
+  },
+  "wedding-golden-promise": {
+    "background": {
+      "color": "#f7f7ee",
+      "image": "/images/bridal/selected/backgrounds/ivory-paper.webp"
+    },
+    "components": [
+      {
+        "id": "wedding-golden-promise-rings-1",
+        "image": "/images/components/separated/wedding-golden-promise-rings.webp",
+        "left": "24%",
+        "top": "28%",
+        "width": "52%",
+        "height": "36%"
+      },
+      {
+        "id": "birthday-midnight-martini-gold-star-2",
+        "image": "/images/components/separated/birthday-midnight-martini-gold-star.webp",
+        "left": "24%",
+        "top": "35%",
+        "width": "4%",
+        "height": "6%"
+      },
+      {
+        "id": "birthday-midnight-martini-gold-star-3",
+        "image": "/images/components/separated/birthday-midnight-martini-gold-star.webp",
+        "left": "72%",
+        "top": "35%",
+        "width": "4%",
+        "height": "6%"
+      },
+      {
+        "id": "birthday-midnight-martini-gold-star-4",
+        "image": "/images/components/separated/birthday-midnight-martini-gold-star.webp",
+        "left": "65%",
+        "top": "24%",
+        "width": "4%",
+        "height": "6%"
+      },
+      {
+        "id": "birthday-midnight-martini-gold-star-5",
+        "image": "/images/components/separated/birthday-midnight-martini-gold-star.webp",
+        "left": "38%",
+        "top": "23%",
+        "width": "4%",
+        "height": "6%"
+      },
+      {
+        "id": "birthday-midnight-martini-gold-star-6",
+        "image": "/images/components/separated/birthday-midnight-martini-gold-star.webp",
+        "left": "70%",
+        "top": "59%",
+        "width": "4%",
+        "height": "6%"
+      }
+    ]
+  },
+  "wedding-little-yes": {
+    "background": {
+      "color": "#fffdf7",
+      "image": "/images/bridal/selected/backgrounds/ivory-paper.webp"
+    },
+    "components": [
+      {
+        "id": "wedding-little-yes-ring-hand-1",
+        "image": "/images/components/separated/wedding-little-yes-ring-hand.webp",
+        "left": "32%",
+        "top": "27%",
+        "width": "42%",
+        "height": "48%"
+      },
+      {
+        "id": "birthday-midnight-martini-gold-star-2",
+        "image": "/images/components/separated/birthday-midnight-martini-gold-star.webp",
+        "left": "65%",
+        "top": "29%",
+        "width": "4%",
+        "height": "6%"
+      }
+    ]
+  },
+  "wedding-sweet-snapshot": {
+    "background": {
+      "color": "#faf5e8",
+      "image": "/images/backgrounds/separated/wedding-sweet-snapshot-background.webp"
+    },
+    "components": [
+      {
+        "id": "wedding-sweet-snapshot-envelope-1",
+        "image": "/images/components/separated/wedding-sweet-snapshot-envelope.webp",
+        "left": "9%",
+        "top": "47%",
+        "width": "82%",
+        "height": "50%"
+      },
+      {
+        "id": "wedding-sweet-snapshot-portrait-2",
+        "image": "/images/components/separated/wedding-sweet-snapshot-portrait.webp",
+        "left": "29%",
+        "top": "28%",
+        "width": "42%",
+        "height": "33%"
+      },
+      {
+        "id": "burgundy-bow-3",
+        "image": "/images/components/separated/burgundy-bow.webp",
+        "left": "36%",
+        "top": "77%",
+        "width": "28%",
+        "height": "18%"
+      },
+      {
+        "id": "tulip-4",
+        "image": "/images/wedding/sweet-snapshot/pastel-tulip-doodle.webp",
+        "left": "1%",
+        "top": "0%",
+        "width": "15%",
+        "height": "24%"
+      },
+      {
+        "id": "tulip-5",
+        "image": "/images/wedding/sweet-snapshot/pastel-tulip-doodle.webp",
+        "left": "84%",
+        "top": "75%",
+        "width": "15%",
+        "height": "24%",
+        "flipX": true
+      }
+    ]
+  },
+  "wedding-portrait-promise": {
+    "background": {
+      "color": "#fcfaf3",
+      "image": "/images/bridal/selected/backgrounds/ivory-paper.webp"
+    },
+    "components": [
+      {
+        "id": "wedding-portrait-promise-floral-frame-1",
+        "image": "/images/components/separated/wedding-portrait-promise-floral-frame.webp",
+        "left": "0%",
+        "top": "0%",
+        "width": "100%",
+        "height": "100%",
+        "objectFit": "fill"
+      },
+      {
+        "id": "wedding-portrait-promise-portrait-2",
+        "image": "/images/components/separated/wedding-portrait-promise-portrait.webp",
+        "left": "31%",
+        "top": "30%",
+        "width": "38%",
+        "height": "44%"
+      }
+    ]
+  },
+  "wedding-heartmarked": {
+    "background": {
+      "color": "#faf6ef",
+      "image": "/images/bridal/selected/backgrounds/ivory-paper.webp"
+    },
+    "components": [
+      {
+        "id": "wedding-heartmarked-left-toast-1",
+        "image": "/images/components/separated/wedding-heartmarked-left-toast.webp",
+        "left": "12%",
+        "top": "55%",
+        "width": "39%",
+        "height": "39%"
+      },
+      {
+        "id": "wedding-heartmarked-right-toast-2",
+        "image": "/images/components/separated/wedding-heartmarked-right-toast.webp",
+        "left": "49%",
+        "top": "55%",
+        "width": "39%",
+        "height": "39%"
+      }
+    ]
+  },
+  "wedding-linked-steps": {
+    "background": {
+      "color": "#faf6ef",
+      "image": "/images/bridal/selected/backgrounds/ivory-paper.webp"
+    },
+    "components": [
+      {
+        "id": "wedding-linked-steps-couple-1",
+        "image": "/images/components/separated/wedding-linked-steps-couple.webp",
+        "left": "11%",
+        "top": "30%",
+        "width": "79%",
+        "height": "65%"
+      }
+    ]
+  },
+  "wedding-ribbon-revel": {
+    "background": {
+      "color": "#fffaf0",
+      "image": "/images/bridal/selected/backgrounds/ivory-paper.webp"
+    },
+    "components": [
+      {
+        "id": "wedding-ribbon-revel-dancer-1-1",
+        "image": "/images/components/separated/wedding-ribbon-revel-dancer-1.webp",
+        "left": "0%",
+        "top": "60%",
+        "width": "24%",
+        "height": "34%"
+      },
+      {
+        "id": "wedding-ribbon-revel-dancer-2-2",
+        "image": "/images/components/separated/wedding-ribbon-revel-dancer-2.webp",
+        "left": "19%",
+        "top": "60%",
+        "width": "24%",
+        "height": "34%"
+      },
+      {
+        "id": "wedding-ribbon-revel-dancer-3-3",
+        "image": "/images/components/separated/wedding-ribbon-revel-dancer-3.webp",
+        "left": "38%",
+        "top": "60%",
+        "width": "24%",
+        "height": "34%"
+      },
+      {
+        "id": "wedding-ribbon-revel-dancer-4-4",
+        "image": "/images/components/separated/wedding-ribbon-revel-dancer-4.webp",
+        "left": "57%",
+        "top": "60%",
+        "width": "24%",
+        "height": "34%"
+      },
+      {
+        "id": "wedding-ribbon-revel-dancer-5-5",
+        "image": "/images/components/separated/wedding-ribbon-revel-dancer-5.webp",
+        "left": "76%",
+        "top": "60%",
+        "width": "24%",
+        "height": "34%"
+      },
+      {
+        "id": "wedding-ribbon-revel-floral-frame-6",
+        "image": "/images/components/separated/wedding-ribbon-revel-floral-frame.webp",
+        "left": "0%",
+        "top": "0%",
+        "width": "100%",
+        "height": "100%",
+        "objectFit": "fill"
+      },
+      {
+        "id": "wedding-ribbon-revel-ribbon-garland-7",
+        "image": "/images/components/separated/wedding-ribbon-revel-ribbon-garland.webp",
+        "left": "0%",
+        "top": "0%",
+        "width": "100%",
+        "height": "19%"
+      }
+    ]
+  },
+  "wedding-garden-dance": {
+    "background": {
+      "color": "#fffaf0",
+      "image": "/images/bridal/selected/backgrounds/ivory-paper.webp"
+    },
+    "components": [
+      {
+        "id": "wedding-garden-dance-dancer-1-1",
+        "image": "/images/components/separated/wedding-garden-dance-dancer-1.webp",
+        "left": "0%",
+        "top": "60%",
+        "width": "24%",
+        "height": "34%"
+      },
+      {
+        "id": "wedding-garden-dance-dancer-2-2",
+        "image": "/images/components/separated/wedding-garden-dance-dancer-2.webp",
+        "left": "19%",
+        "top": "60%",
+        "width": "24%",
+        "height": "34%"
+      },
+      {
+        "id": "wedding-garden-dance-dancer-3-3",
+        "image": "/images/components/separated/wedding-garden-dance-dancer-3.webp",
+        "left": "38%",
+        "top": "60%",
+        "width": "24%",
+        "height": "34%"
+      },
+      {
+        "id": "wedding-garden-dance-dancer-4-4",
+        "image": "/images/components/separated/wedding-garden-dance-dancer-4.webp",
+        "left": "57%",
+        "top": "60%",
+        "width": "24%",
+        "height": "34%"
+      },
+      {
+        "id": "wedding-garden-dance-dancer-5-5",
+        "image": "/images/components/separated/wedding-garden-dance-dancer-5.webp",
+        "left": "76%",
+        "top": "60%",
+        "width": "24%",
+        "height": "34%"
+      },
+      {
+        "id": "wedding-garden-dance-lemon-branch-6",
+        "image": "/images/components/separated/wedding-garden-dance-lemon-branch.webp",
+        "left": "0%",
+        "top": "0%",
+        "width": "20%",
+        "height": "39%"
+      },
+      {
+        "id": "wedding-garden-dance-lemon-branch-7",
+        "image": "/images/components/separated/wedding-garden-dance-lemon-branch.webp",
+        "left": "80%",
+        "top": "0%",
+        "width": "20%",
+        "height": "39%",
+        "flipX": true
+      },
+      {
+        "id": "wedding-garden-dance-garland-8",
+        "image": "/images/components/separated/wedding-garden-dance-garland.webp",
+        "left": "0%",
+        "top": "0%",
+        "width": "100%",
+        "height": "14%"
+      },
+      {
+        "id": "disco-left-9",
+        "image": "/images/wedding/garden-dance/pink-disco-lantern.webp",
+        "left": "5%",
+        "top": "6%",
+        "width": "12%",
+        "height": "16%"
+      },
+      {
+        "id": "disco-right-10",
+        "image": "/images/wedding/garden-dance/pink-disco-lantern.webp",
+        "left": "82%",
+        "top": "9%",
+        "width": "12%",
+        "height": "16%"
+      }
+    ]
+  },
+  "wedding-ivory-vows": {
+    "background": {
+      "color": "#fcfaf3"
+    },
+    "components": [
+      {
+        "id": "wedding-ivory-vows-jacket-1",
+        "image": "/images/components/separated/wedding-ivory-vows-jacket.webp",
+        "left": "9%",
+        "top": "33%",
+        "width": "36%",
+        "height": "52%"
+      },
+      {
+        "id": "wedding-ivory-vows-dress-2",
+        "image": "/images/components/separated/wedding-ivory-vows-dress.webp",
+        "left": "51%",
+        "top": "32%",
+        "width": "39%",
+        "height": "55%"
+      }
+    ]
+  },
+  "wedding-come-rain-or-shine": {
+    "background": {
+      "color": "#faf8f2",
+      "image": "/images/bridal/selected/backgrounds/ivory-paper.webp"
+    },
+    "components": [
+      {
+        "id": "wedding-come-rain-or-shine-couple-1",
+        "image": "/images/components/separated/wedding-come-rain-or-shine-couple.webp",
+        "left": "24%",
+        "top": "52%",
+        "width": "52%",
+        "height": "36%"
+      },
+      {
+        "id": "wedding-come-rain-or-shine-frame-2",
+        "image": "/images/components/separated/wedding-come-rain-or-shine-frame.webp",
+        "left": "0%",
+        "top": "0%",
+        "width": "100%",
+        "height": "100%",
+        "objectFit": "fill"
+      }
+    ]
+  },
+  "wedding-side-by-side": {
+    "background": {
+      "color": "#faf8f2",
+      "image": "/images/bridal/selected/backgrounds/ivory-paper.webp"
+    },
+    "components": [
+      {
+        "id": "wedding-side-by-side-couple-1",
+        "image": "/images/components/separated/wedding-side-by-side-couple.webp",
+        "left": "24%",
+        "top": "52%",
+        "width": "52%",
+        "height": "36%"
+      }
+    ]
+  },
+  "wedding-first-dance": {
+    "background": {
+      "color": "#faf6ed",
+      "image": "/images/bridal/selected/backgrounds/ivory-paper.webp"
+    },
+    "components": [
+      {
+        "id": "wedding-first-dance-couple-1",
+        "image": "/images/components/separated/wedding-first-dance-couple.webp",
+        "left": "24%",
+        "top": "52%",
+        "width": "52%",
+        "height": "36%"
+      },
+      {
+        "id": "wedding-first-dance-frame-2",
+        "image": "/images/components/separated/wedding-first-dance-frame.webp",
+        "left": "0%",
+        "top": "0%",
+        "width": "100%",
+        "height": "100%",
+        "objectFit": "fill"
+      },
+      {
+        "id": "burgundy-bow-3",
+        "image": "/images/components/separated/burgundy-bow.webp",
+        "left": "39%",
+        "top": "0%",
+        "width": "22%",
+        "height": "10%"
+      }
+    ]
+  },
+  "wedding-heart-hideaway": {
+    "background": {
+      "color": "#faf5ec",
+      "image": "/images/bridal/selected/backgrounds/ivory-paper.webp"
+    },
+    "components": [
+      {
+        "id": "wedding-heart-hideaway-couple-1",
+        "image": "/images/components/separated/wedding-heart-hideaway-couple.webp",
+        "left": "24%",
+        "top": "52%",
+        "width": "52%",
+        "height": "36%"
+      }
+    ]
+  },
+  "wedding-little-vows": {
+    "background": {
+      "color": "#faf6ee",
+      "image": "/images/bridal/selected/backgrounds/ivory-paper.webp"
+    },
+    "components": [
+      {
+        "id": "wedding-little-vows-couple-1",
+        "image": "/images/components/separated/wedding-little-vows-couple.webp",
+        "left": "24%",
+        "top": "52%",
+        "width": "52%",
+        "height": "36%"
+      },
+      {
+        "id": "wedding-little-vows-cake-2",
+        "image": "/images/components/separated/wedding-little-vows-cake.webp",
+        "left": "6%",
+        "top": "83%",
+        "width": "13%",
+        "height": "13%"
+      },
+      {
+        "id": "wedding-little-vows-bottle-3",
+        "image": "/images/components/separated/wedding-little-vows-bottle.webp",
+        "left": "85%",
+        "top": "82%",
+        "width": "8%",
+        "height": "15%"
+      },
+      {
+        "id": "red-heart-4",
+        "image": "/images/components/separated/red-heart.webp",
+        "left": "52%",
+        "top": "50%",
+        "width": "3%",
+        "height": "4%"
+      }
+    ]
+  },
+  "wedding-ink-and-ivy": {
+    "background": {
+      "color": "#f2ead7",
+      "image": "/images/bridal/selected/backgrounds/ivory-paper.webp"
+    },
+    "components": [
+      {
+        "id": "wedding-ink-and-ivy-couple-1",
+        "image": "/images/components/separated/wedding-ink-and-ivy-couple.webp",
+        "left": "24%",
+        "top": "52%",
+        "width": "52%",
+        "height": "36%"
+      },
+      {
+        "id": "wedding-ink-and-ivy-vine-2",
+        "image": "/images/components/separated/wedding-ink-and-ivy-vine.webp",
+        "left": "0%",
+        "top": "0%",
+        "width": "29%",
+        "height": "100%"
+      },
+      {
+        "id": "wedding-ink-and-ivy-vine-3",
+        "image": "/images/components/separated/wedding-ink-and-ivy-vine.webp",
+        "left": "71%",
+        "top": "0%",
+        "width": "29%",
+        "height": "100%",
+        "flipX": true
+      }
+    ]
+  },
+  "wedding-happily-away": {
+    "background": {
+      "color": "#faf6ed",
+      "image": "/images/bridal/selected/backgrounds/ivory-paper.webp"
+    },
+    "components": [
+      {
+        "id": "wedding-happily-away-frame-1",
+        "image": "/images/components/separated/wedding-happily-away-frame.webp",
+        "left": "0%",
+        "top": "0%",
+        "width": "100%",
+        "height": "100%",
+        "objectFit": "fill"
+      },
+      {
+        "id": "wedding-happily-away-car-2",
+        "image": "/images/components/separated/wedding-happily-away-car.webp",
+        "left": "8%",
+        "top": "64%",
+        "width": "86%",
+        "height": "32%"
+      }
+    ]
+  },
+  "wedding-our-people": {
+    "background": {
+      "color": "#f7eeea",
+      "image": "/images/bridal/selected/backgrounds/ivory-paper.webp"
+    },
+    "components": [
+      {
+        "id": "wedding-our-people-dinner-1",
+        "image": "/images/components/separated/wedding-our-people-dinner.webp",
+        "left": "1%",
+        "top": "1%",
+        "width": "98%",
+        "height": "98%"
+      }
+    ]
+  },
+  "wedding-rose-letter": {
+    "background": {
+      "color": "#f7f1e5",
+      "image": "/images/bridal/selected/backgrounds/ivory-paper.webp"
+    },
+    "components": [
+      {
+        "id": "wedding-rose-letter-envelope-1",
+        "image": "/images/components/separated/wedding-rose-letter-envelope.webp",
+        "left": "0%",
+        "top": "25%",
+        "width": "100%",
+        "height": "75%"
+      },
+      {
+        "id": "seal-2",
+        "image": "/images/wedding/sage-letter/sage-wax-seal.webp",
+        "left": "80%",
+        "top": "78%",
+        "width": "17%",
+        "height": "17%"
+      },
+      {
+        "id": "bow-3",
+        "image": "/images/wedding/rose-letter/blush-ribbon-bow.webp",
+        "left": "81%",
+        "top": "0%",
+        "width": "17%",
+        "height": "17%"
+      }
+    ]
+  },
+  "wedding-sage-letter": {
+    "background": {
+      "color": "#f7f1e5",
+      "image": "/images/bridal/selected/backgrounds/ivory-paper.webp"
+    },
+    "components": [
+      {
+        "id": "wedding-sage-letter-envelope-1",
+        "image": "/images/components/separated/wedding-sage-letter-envelope.webp",
+        "left": "0%",
+        "top": "25%",
+        "width": "100%",
+        "height": "75%"
+      },
+      {
+        "id": "seal-2",
+        "image": "/images/wedding/sage-letter/sage-wax-seal.webp",
+        "left": "80%",
+        "top": "78%",
+        "width": "17%",
+        "height": "17%"
+      }
+    ]
+  },
+  "wedding-day-notes": {
+    "background": {
+      "color": "#faf5e8",
+      "image": "/images/bridal/selected/backgrounds/ivory-paper.webp"
+    },
+    "components": [
+      {
+        "id": "wedding-day-notes-bottle-1",
+        "image": "/images/components/separated/wedding-day-notes-bottle.webp",
+        "left": "73%",
+        "top": "0%",
+        "width": "22%",
+        "height": "22%"
+      },
+      {
+        "id": "wedding-day-notes-camera-2",
+        "image": "/images/components/separated/wedding-day-notes-camera.webp",
+        "left": "1%",
+        "top": "33%",
+        "width": "12%",
+        "height": "12%"
+      },
+      {
+        "id": "wedding-day-notes-disco-3",
+        "image": "/images/components/separated/wedding-day-notes-disco.webp",
+        "left": "1%",
+        "top": "0%",
+        "width": "19%",
+        "height": "19%"
+      },
+      {
+        "id": "wedding-day-notes-cake-4",
+        "image": "/images/components/separated/wedding-day-notes-cake.webp",
+        "left": "3%",
+        "top": "79%",
+        "width": "20%",
+        "height": "19%"
+      },
+      {
+        "id": "coupe-5",
+        "image": "/images/wedding/blue-pour/ribbon-coupe.webp",
+        "left": "83%",
+        "top": "67%",
+        "width": "15%",
+        "height": "29%"
+      },
+      {
+        "id": "wedding-day-notes-pour-6",
+        "image": "/images/components/separated/wedding-day-notes-pour.webp",
+        "left": "82%",
+        "top": "15%",
+        "width": "10%",
+        "height": "61%",
+        "objectFit": "fill"
+      }
+    ]
+  },
+  "wedding-blue-clink": {
+    "background": {
+      "color": "#faf5e6",
+      "image": "/images/bridal/selected/backgrounds/ivory-paper.webp"
+    },
+    "components": [
+      {
+        "id": "wedding-blue-clink-frame-1",
+        "image": "/images/components/separated/wedding-blue-clink-frame.webp",
+        "left": "0%",
+        "top": "0%",
+        "width": "100%",
+        "height": "100%",
+        "objectFit": "fill"
+      },
+      {
+        "id": "wedding-blue-clink-left-toast-2",
+        "image": "/images/components/separated/wedding-blue-clink-left-toast.webp",
+        "left": "0%",
+        "top": "52%",
+        "width": "51%",
+        "height": "34%"
+      },
+      {
+        "id": "wedding-blue-clink-right-toast-3",
+        "image": "/images/components/separated/wedding-blue-clink-right-toast.webp",
+        "left": "49%",
+        "top": "52%",
+        "width": "51%",
+        "height": "34%"
+      }
+    ]
+  },
+  "wedding-tipsy-together": {
+    "background": {
+      "color": "#faf7f0",
+      "image": "/images/bridal/selected/backgrounds/ivory-paper.webp"
+    },
+    "components": [
+      {
+        "id": "wedding-tipsy-together-squiggle-1",
+        "image": "/images/components/separated/wedding-tipsy-together-squiggle.webp",
+        "left": "1%",
+        "top": "0%",
+        "width": "10%",
+        "height": "100%",
+        "objectFit": "fill"
+      },
+      {
+        "id": "wedding-tipsy-together-squiggle-2",
+        "image": "/images/components/separated/wedding-tipsy-together-squiggle.webp",
+        "left": "89%",
+        "top": "0%",
+        "width": "10%",
+        "height": "100%",
+        "objectFit": "fill",
+        "flipX": true
+      },
+      {
+        "id": "wedding-tipsy-together-bride-3",
+        "image": "/images/components/separated/wedding-tipsy-together-bride.webp",
+        "left": "25%",
+        "top": "59%",
+        "width": "28%",
+        "height": "36%"
+      },
+      {
+        "id": "wedding-tipsy-together-groom-4",
+        "image": "/images/components/separated/wedding-tipsy-together-groom.webp",
+        "left": "54%",
+        "top": "59%",
+        "width": "28%",
+        "height": "36%"
+      }
+    ]
+  },
+  "wedding-blue-pour": {
+    "background": {
+      "color": "#f6edcd",
+      "image": "/images/bridal/selected/backgrounds/ivory-paper.webp"
+    },
+    "components": [
+      {
+        "id": "wedding-blue-pour-pour-1",
+        "image": "/images/components/separated/wedding-blue-pour-pour.webp",
+        "left": "0%",
+        "top": "0%",
+        "width": "100%",
+        "height": "100%",
+        "objectFit": "fill"
+      },
+      {
+        "id": "wedding-blue-pour-bottle-hand-2",
+        "image": "/images/components/separated/wedding-blue-pour-bottle-hand.webp",
+        "left": "71%",
+        "top": "-1%",
+        "width": "31%",
+        "height": "26%"
+      },
+      {
+        "id": "wedding-blue-pour-coupe-hand-3",
+        "image": "/images/components/separated/wedding-blue-pour-coupe-hand.webp",
+        "left": "-1%",
+        "top": "61%",
+        "width": "29%",
+        "height": "38%"
+      }
+    ]
+  },
+  "christening-olive-full-frame": {
+    "background": {
+      "color": "#f4f0e6",
+      "image": "/images/bridal/selected/backgrounds/ivory-paper.webp"
+    },
+    "components": [
+      {
+        "id": "christening-olive-full-frame-olive-frame-1",
+        "image": "/images/components/separated/christening-olive-full-frame-olive-frame.webp",
+        "left": "0%",
+        "top": "0%",
+        "width": "100%",
+        "height": "100%",
+        "objectFit": "fill"
+      }
+    ]
+  },
+  "christening-blue-full-frame": {
+    "background": {
+      "color": "#f7f3eb",
+      "image": "/images/bridal/selected/backgrounds/ivory-paper.webp"
+    },
+    "components": [
+      {
+        "id": "christening-blue-full-frame-blue-floral-frame-1",
+        "image": "/images/components/separated/christening-blue-full-frame-blue-floral-frame.webp",
+        "left": "0%",
+        "top": "0%",
+        "width": "100%",
+        "height": "100%",
+        "objectFit": "fill"
+      },
+      {
+        "id": "blue-bow-2",
+        "image": "/images/components/watercolor/blue-bow.webp",
+        "left": "38%",
+        "top": "0%",
+        "width": "24%",
+        "height": "15%"
+      },
+      {
+        "id": "blue-bow-3",
+        "image": "/images/components/watercolor/blue-bow.webp",
+        "left": "38%",
+        "top": "86%",
+        "width": "24%",
+        "height": "14%"
+      },
+      {
+        "id": "little-dove-4",
+        "image": "/images/components/watercolor/little-dove.webp",
+        "left": "38%",
+        "top": "8%",
+        "width": "24%",
+        "height": "15%"
+      }
+    ]
+  },
+  "christening-little-dreamer": {
+    "background": {
+      "color": "#fbf4e9",
+      "image": "/images/bridal/selected/backgrounds/ivory-paper.webp"
+    },
+    "components": [
+      {
+        "id": "christening-little-dreamer-gold-frame-1",
+        "image": "/images/components/separated/christening-little-dreamer-gold-frame.webp",
+        "left": "0%",
+        "top": "0%",
+        "width": "100%",
+        "height": "100%",
+        "objectFit": "fill"
+      },
+      {
+        "id": "baby-sparkles-2",
+        "image": "/images/components/watercolor/baby-sparkles.webp",
+        "left": "37%",
+        "top": "5%",
+        "width": "26%",
+        "height": "16%"
+      }
+    ]
+  },
+  "christening-blue-dove": {
+    "background": {
+      "color": "#f7f3eb",
+      "image": "/images/bridal/selected/backgrounds/ivory-paper.webp"
+    },
+    "components": [
+      {
+        "id": "little-dove-1",
+        "image": "/images/components/watercolor/little-dove.webp",
+        "left": "38%",
+        "top": "0%",
+        "width": "31%",
+        "height": "24%"
+      },
+      {
+        "id": "blue-bow-2",
+        "image": "/images/components/watercolor/blue-bow.webp",
+        "left": "-2%",
+        "top": "65%",
+        "width": "27%",
+        "height": "35%"
+      }
+    ]
+  },
+  "christening-olive-dove": {
+    "background": {
+      "color": "#f4f0e6",
+      "image": "/images/bridal/selected/backgrounds/ivory-paper.webp"
+    },
+    "components": [
+      {
+        "id": "little-dove-1",
+        "image": "/images/components/watercolor/little-dove.webp",
+        "left": "39%",
+        "top": "0%",
+        "width": "28%",
+        "height": "24%"
+      },
+      {
+        "id": "olive-sprig-2",
+        "image": "/images/components/watercolor/olive-sprig.webp",
+        "left": "-2%",
+        "top": "-2%",
+        "width": "32%",
+        "height": "26%"
+      },
+      {
+        "id": "olive-sprig-3",
+        "image": "/images/components/watercolor/olive-sprig.webp",
+        "left": "73%",
+        "top": "70%",
+        "width": "29%",
+        "height": "30%",
+        "rotation": 180
+      }
+    ]
+  },
+  "christening-blush-petals": {
+    "background": {
+      "color": "#f8eee9",
+      "image": "/images/bridal/selected/backgrounds/ivory-paper.webp"
+    },
+    "components": [
+      {
+        "id": "christening-blush-petals-petal-frame-1",
+        "image": "/images/components/separated/christening-blush-petals-petal-frame.webp",
+        "left": "0%",
+        "top": "0%",
+        "width": "100%",
+        "height": "100%",
+        "objectFit": "fill"
+      },
+      {
+        "id": "pink-bow-2",
+        "image": "/images/components/watercolor/pink-bow.webp",
+        "left": "3%",
+        "top": "0%",
+        "width": "21%",
+        "height": "16%"
+      },
+      {
+        "id": "little-dove-3",
+        "image": "/images/components/watercolor/little-dove.webp",
+        "left": "36%",
+        "top": "0%",
+        "width": "25%",
+        "height": "19%"
+      }
+    ]
+  },
+  "christening-olive-ribbon": {
+    "background": {
+      "color": "#f4f0e6",
+      "image": "/images/bridal/selected/backgrounds/ivory-paper.webp"
+    },
+    "components": [
+      {
+        "id": "christening-olive-ribbon-olive-frame-1",
+        "image": "/images/components/separated/christening-olive-ribbon-olive-frame.webp",
+        "left": "0%",
+        "top": "0%",
+        "width": "100%",
+        "height": "100%",
+        "objectFit": "fill"
+      },
+      {
+        "id": "champagne-bow-2",
+        "image": "/images/components/watercolor/champagne-bow.webp",
+        "left": "79%",
+        "top": "-2%",
+        "width": "23%",
+        "height": "21%"
+      }
+    ]
+  },
+  "christening-ivory-blessing": {
+    "background": {
+      "color": "#f7f0e3",
+      "image": "/images/bridal/selected/backgrounds/ivory-paper.webp"
+    },
+    "components": [
+      {
+        "id": "champagne-bow-1",
+        "image": "/images/components/watercolor/champagne-bow.webp",
+        "left": "24%",
+        "top": "4%",
+        "width": "52%",
+        "height": "27%"
+      }
+    ]
+  },
+  "christening-little-blue-heaven": {
+    "background": {
+      "color": "#edf3f8",
+      "image": "/images/bridal/selected/backgrounds/ivory-paper.webp"
+    },
+    "components": [
+      {
+        "id": "blue-bow-1",
+        "image": "/images/components/watercolor/blue-bow.webp",
+        "left": "23%",
+        "top": "1%",
+        "width": "54%",
+        "height": "26%"
+      },
+      {
+        "id": "christening-little-blue-heaven-petal-2",
+        "image": "/images/components/separated/christening-little-blue-heaven-petal.webp",
+        "left": "81%",
+        "top": "77%",
+        "width": "9%",
+        "height": "9%"
+      },
+      {
+        "id": "christening-little-blue-heaven-petal-3",
+        "image": "/images/components/separated/christening-little-blue-heaven-petal.webp",
+        "left": "89%",
+        "top": "83%",
+        "width": "9%",
+        "height": "9%"
+      },
+      {
+        "id": "christening-little-blue-heaven-petal-4",
+        "image": "/images/components/separated/christening-little-blue-heaven-petal.webp",
+        "left": "83%",
+        "top": "88%",
+        "width": "8%",
+        "height": "8%"
+      }
+    ]
+  },
+  "christening-blush-grace": {
+    "background": {
+      "color": "#f8eee9",
+      "image": "/images/bridal/selected/backgrounds/ivory-paper.webp"
+    },
+    "components": [
+      {
+        "id": "pink-bow-1",
+        "image": "/images/components/watercolor/pink-bow.webp",
+        "left": "23%",
+        "top": "1%",
+        "width": "54%",
+        "height": "27%"
+      },
+      {
+        "id": "christening-blush-grace-petal-2",
+        "image": "/images/components/separated/christening-blush-grace-petal.webp",
+        "left": "1%",
+        "top": "78%",
+        "width": "11%",
+        "height": "15%"
+      },
+      {
+        "id": "christening-blush-grace-petal-3",
+        "image": "/images/components/separated/christening-blush-grace-petal.webp",
+        "left": "9%",
+        "top": "88%",
+        "width": "9%",
+        "height": "10%"
+      }
+    ]
+  },
+  "christening-olive-light": {
+    "background": {
+      "color": "#f4f0e6",
+      "image": "/images/bridal/selected/backgrounds/ivory-paper.webp"
+    },
+    "components": [
+      {
+        "id": "olive-sprig-1",
+        "image": "/images/components/watercolor/olive-sprig.webp",
+        "left": "-5%",
+        "top": "-3%",
+        "width": "36%",
+        "height": "39%"
+      },
+      {
+        "id": "olive-sprig-2",
+        "image": "/images/components/watercolor/olive-sprig.webp",
+        "left": "81%",
+        "top": "78%",
+        "width": "21%",
+        "height": "23%",
+        "rotation": 180
+      }
+    ]
+  },
+  "bridal-retro-pink-card": {
+    "background": {
+      "color": "#f8dbc9"
+    },
+    "components": [
+      {
+        "id": "bridal-retro-pink-card-frame-1",
+        "image": "/images/components/separated/bridal-retro-pink-card-frame.webp",
+        "left": "0%",
+        "top": "0%",
+        "width": "100%",
+        "height": "100%",
+        "objectFit": "fill"
+      },
+      {
+        "id": "bridal-retro-pink-card-cherries-2",
+        "image": "/images/components/separated/bridal-retro-pink-card-cherries.webp",
+        "left": "43%",
+        "top": "2%",
+        "width": "16%",
+        "height": "14%"
+      },
+      {
+        "id": "bridal-retro-pink-card-bow-3",
+        "image": "/images/components/separated/bridal-retro-pink-card-bow.webp",
+        "left": "36%",
+        "top": "82%",
+        "width": "28%",
+        "height": "16%"
+      },
+      {
+        "id": "bridal-retro-pink-card-daisy-4",
+        "image": "/images/components/separated/bridal-retro-pink-card-daisy.webp",
+        "left": "4%",
+        "top": "5%",
+        "width": "13%",
+        "height": "15%"
+      },
+      {
+        "id": "bridal-retro-pink-card-daisy-5",
+        "image": "/images/components/separated/bridal-retro-pink-card-daisy.webp",
+        "left": "83%",
+        "top": "5%",
+        "width": "13%",
+        "height": "15%"
+      },
+      {
+        "id": "bridal-retro-pink-card-daisy-6",
+        "image": "/images/components/separated/bridal-retro-pink-card-daisy.webp",
+        "left": "4%",
+        "top": "79%",
+        "width": "13%",
+        "height": "15%"
+      },
+      {
+        "id": "bridal-retro-pink-card-daisy-7",
+        "image": "/images/components/separated/bridal-retro-pink-card-daisy.webp",
+        "left": "83%",
+        "top": "79%",
+        "width": "13%",
+        "height": "15%"
+      }
+    ]
+  },
+  "bridal-doll-pink-card": {
+    "background": {
+      "color": "#f9d8e6"
+    },
+    "components": [
+      {
+        "id": "bridal-doll-pink-card-frame-1",
+        "image": "/images/components/separated/bridal-doll-pink-card-frame.webp",
+        "left": "0%",
+        "top": "0%",
+        "width": "100%",
+        "height": "100%",
+        "objectFit": "fill"
+      },
+      {
+        "id": "bridal-doll-pink-card-heels-2",
+        "image": "/images/components/separated/bridal-doll-pink-card-heels.webp",
+        "left": "5%",
+        "top": "75%",
+        "width": "23%",
+        "height": "22%"
+      },
+      {
+        "id": "bridal-doll-pink-card-heart-3",
+        "image": "/images/components/separated/bridal-doll-pink-card-heart.webp",
+        "left": "72%",
+        "top": "74%",
+        "width": "22%",
+        "height": "23%"
+      },
+      {
+        "id": "bridal-doll-pink-card-sprig-4",
+        "image": "/images/components/separated/bridal-doll-pink-card-sprig.webp",
+        "left": "3%",
+        "top": "0%",
+        "width": "15%",
+        "height": "28%"
+      },
+      {
+        "id": "bridal-doll-pink-card-sprig-5",
+        "image": "/images/components/separated/bridal-doll-pink-card-sprig.webp",
+        "left": "82%",
+        "top": "0%",
+        "width": "15%",
+        "height": "28%",
+        "flipX": true
+      }
+    ]
+  },
+  "bridal-cool-girl-card": {
+    "background": {
+      "color": "#f5bdd2",
+      "image": "/images/backgrounds/separated/bridal-cool-girl-card-background.webp"
+    },
+    "components": [
+      {
+        "id": "bridal-cool-girl-card-sunglasses-1",
+        "image": "/images/components/separated/bridal-cool-girl-card-sunglasses.webp",
+        "left": "34%",
+        "top": "4%",
+        "width": "33%",
+        "height": "13%"
+      },
+      {
+        "id": "bridal-cool-girl-card-lipstick-2",
+        "image": "/images/components/separated/bridal-cool-girl-card-lipstick.webp",
+        "left": "8%",
+        "top": "69%",
+        "width": "15%",
+        "height": "25%",
+        "rotation": -20
+      },
+      {
+        "id": "bridal-cool-girl-card-cherries-3",
+        "image": "/images/components/separated/bridal-cool-girl-card-cherries.webp",
+        "left": "76%",
+        "top": "77%",
+        "width": "16%",
+        "height": "17%"
+      }
+    ]
+  },
+  "bridal-pink-cocktail-card": {
+    "background": {
+      "color": "#f5d6dd"
+    },
+    "components": [
+      {
+        "id": "bridal-pink-cocktail-card-frame-1",
+        "image": "/images/components/separated/bridal-pink-cocktail-card-frame.webp",
+        "left": "0%",
+        "top": "0%",
+        "width": "100%",
+        "height": "100%",
+        "objectFit": "fill"
+      },
+      {
+        "id": "bridal-pink-cocktail-card-left-coupe-2",
+        "image": "/images/components/separated/bridal-pink-cocktail-card-left-coupe.webp",
+        "left": "30%",
+        "top": "1%",
+        "width": "19%",
+        "height": "18%"
+      },
+      {
+        "id": "bridal-pink-cocktail-card-right-coupe-3",
+        "image": "/images/components/separated/bridal-pink-cocktail-card-right-coupe.webp",
+        "left": "51%",
+        "top": "1%",
+        "width": "19%",
+        "height": "18%"
+      },
+      {
+        "id": "bridal-pink-cocktail-card-citrus-4",
+        "image": "/images/components/separated/bridal-pink-cocktail-card-citrus.webp",
+        "left": "78%",
+        "top": "82%",
+        "width": "14%",
+        "height": "14%"
+      }
+    ]
+  },
+  "bridal-modern-pink-line-card": {
+    "background": {
+      "color": "#fde4ed"
+    },
+    "components": [
+      {
+        "id": "bridal-modern-pink-line-card-ribbon-frame-1",
+        "image": "/images/components/separated/bridal-modern-pink-line-card-ribbon-frame.webp",
+        "left": "0%",
+        "top": "0%",
+        "width": "100%",
+        "height": "100%",
+        "objectFit": "fill"
+      },
+      {
+        "id": "bridal-modern-pink-line-card-left-coupe-2",
+        "image": "/images/components/separated/bridal-modern-pink-line-card-left-coupe.webp",
+        "left": "33%",
+        "top": "5%",
+        "width": "16%",
+        "height": "17%"
+      },
+      {
+        "id": "bridal-modern-pink-line-card-right-coupe-3",
+        "image": "/images/components/separated/bridal-modern-pink-line-card-right-coupe.webp",
+        "left": "51%",
+        "top": "5%",
+        "width": "16%",
+        "height": "17%"
+      },
+      {
+        "id": "bridal-modern-pink-line-card-flower-4",
+        "image": "/images/components/separated/bridal-modern-pink-line-card-flower.webp",
+        "left": "3%",
+        "top": "76%",
+        "width": "20%",
+        "height": "23%"
+      }
+    ]
+  },
+  "bridal-pink-disco-dream-card": {
+    "background": {
+      "color": "#f1c2d1"
+    },
+    "components": [
+      {
+        "id": "bridal-pink-disco-dream-card-disco-1",
+        "image": "/images/components/separated/bridal-pink-disco-dream-card-disco.webp",
+        "left": "39%",
+        "top": "3%",
+        "width": "22%",
+        "height": "20%"
+      },
+      {
+        "id": "bridal-pink-disco-dream-card-bow-2",
+        "image": "/images/components/separated/bridal-pink-disco-dream-card-bow.webp",
+        "left": "35%",
+        "top": "86%",
+        "width": "30%",
+        "height": "9%"
+      },
+      {
+        "id": "red-starburst-3",
+        "image": "/images/components/separated/red-starburst.webp",
+        "left": "9%",
+        "top": "5%",
+        "width": "4%",
+        "height": "8%"
+      },
+      {
+        "id": "red-starburst-4",
+        "image": "/images/components/separated/red-starburst.webp",
+        "left": "23%",
+        "top": "2%",
+        "width": "4%",
+        "height": "8%"
+      },
+      {
+        "id": "red-starburst-5",
+        "image": "/images/components/separated/red-starburst.webp",
+        "left": "85%",
+        "top": "5%",
+        "width": "4%",
+        "height": "8%"
+      },
+      {
+        "id": "red-starburst-6",
+        "image": "/images/components/separated/red-starburst.webp",
+        "left": "9%",
+        "top": "85%",
+        "width": "4%",
+        "height": "8%"
+      },
+      {
+        "id": "red-starburst-7",
+        "image": "/images/components/separated/red-starburst.webp",
+        "left": "85%",
+        "top": "85%",
+        "width": "4%",
+        "height": "8%"
+      },
+      {
+        "id": "bridal-pink-disco-dream-card-frame-8",
+        "image": "/images/components/separated/bridal-pink-disco-dream-card-frame.webp",
+        "left": "0%",
+        "top": "0%",
+        "width": "100%",
+        "height": "100%",
+        "objectFit": "fill"
+      }
+    ]
+  },
+  "bridal-peach-cherry": {
+    "background": {
+      "color": "#f7ebd4",
+      "image": "/images/backgrounds/separated/bridal-peach-cherry-background.webp"
+    },
+    "components": [
+      {
+        "id": "bridal-peach-cherry-bow-1",
+        "image": "/images/components/separated/bridal-peach-cherry-bow.webp",
+        "left": "32%",
+        "top": "0%",
+        "width": "36%",
+        "height": "19%"
+      },
+      {
+        "id": "bridal-peach-cherry-left-coupe-2",
+        "image": "/images/components/separated/bridal-peach-cherry-left-coupe.webp",
+        "left": "34%",
+        "top": "75%",
+        "width": "16%",
+        "height": "23%"
+      },
+      {
+        "id": "bridal-peach-cherry-right-coupe-3",
+        "image": "/images/components/separated/bridal-peach-cherry-right-coupe.webp",
+        "left": "50%",
+        "top": "75%",
+        "width": "16%",
+        "height": "23%"
+      },
+      {
+        "id": "bridal-peach-cherry-cherries-4",
+        "image": "/images/components/separated/bridal-peach-cherry-cherries.webp",
+        "left": "17%",
+        "top": "78%",
+        "width": "18%",
+        "height": "18%"
+      },
+      {
+        "id": "bridal-peach-cherry-cherries-5",
+        "image": "/images/components/separated/bridal-peach-cherry-cherries.webp",
+        "left": "65%",
+        "top": "78%",
+        "width": "18%",
+        "height": "18%",
+        "flipX": true
+      }
+    ]
+  },
+  "wedding-blush-lift": {
+    "background": {
+      "color": "#fffdf7",
+      "image": "/images/bridal/selected/backgrounds/ivory-paper.webp"
+    },
+    "components": [
+      {
+        "id": "wedding-blush-lift-pink-heart-balloon-1",
+        "image": "/images/components/separated/wedding-blush-lift-pink-heart-balloon.webp",
+        "left": "2%",
+        "top": "0%",
+        "width": "23%",
+        "height": "61%"
+      },
+      {
+        "id": "wedding-blush-lift-peach-balloon-2",
+        "image": "/images/components/separated/wedding-blush-lift-peach-balloon.webp",
+        "left": "81%",
+        "top": "0%",
+        "width": "18%",
+        "height": "64%"
+      },
+      {
+        "id": "wedding-blush-lift-pink-heart-balloon-3",
+        "image": "/images/components/separated/wedding-blush-lift-pink-heart-balloon.webp",
+        "left": "1%",
+        "top": "62%",
+        "width": "19%",
+        "height": "34%"
+      },
+      {
+        "id": "wedding-blush-lift-pink-heart-balloon-4",
+        "image": "/images/components/separated/wedding-blush-lift-pink-heart-balloon.webp",
+        "left": "81%",
+        "top": "60%",
+        "width": "19%",
+        "height": "36%",
+        "flipX": true
+      }
+    ]
+  },
+  "wedding-cherry-toast": {
+    "background": {
+      "color": "#fffdf7",
+      "image": "/images/bridal/selected/backgrounds/ivory-paper.webp"
+    },
+    "components": [
+      {
+        "id": "wedding-cherry-toast-bride-1",
+        "image": "/images/components/separated/wedding-cherry-toast-bride.webp",
+        "left": "26%",
+        "top": "59%",
+        "width": "24%",
+        "height": "36%"
+      },
+      {
+        "id": "tower-2",
+        "image": "/images/wedding/cherry-toast/coupe-tower.webp",
+        "left": "49%",
+        "top": "67%",
+        "width": "28%",
+        "height": "25%"
+      }
+    ]
+  },
+  "gender-reveal-tiny-footprints": {
+    "background": {
+      "color": "#faf6ee",
+      "image": "/images/bridal/selected/backgrounds/ivory-paper.webp"
+    },
+    "components": [
+      {
+        "id": "gender-reveal-tiny-footprints-blue-foot-1",
+        "image": "/images/components/separated/gender-reveal-tiny-footprints-blue-foot.webp",
+        "left": "29%",
+        "top": "26%",
+        "width": "12%",
+        "height": "18%",
+        "rotation": -15
+      },
+      {
+        "id": "gender-reveal-tiny-footprints-blue-foot-2",
+        "image": "/images/components/separated/gender-reveal-tiny-footprints-blue-foot.webp",
+        "left": "40%",
+        "top": "30%",
+        "width": "12%",
+        "height": "18%",
+        "rotation": 14,
+        "flipX": true
+      },
+      {
+        "id": "gender-reveal-tiny-footprints-pink-foot-3",
+        "image": "/images/components/separated/gender-reveal-tiny-footprints-pink-foot.webp",
+        "left": "54%",
+        "top": "26%",
+        "width": "12%",
+        "height": "18%",
+        "rotation": -15
+      },
+      {
+        "id": "gender-reveal-tiny-footprints-pink-foot-4",
+        "image": "/images/components/separated/gender-reveal-tiny-footprints-pink-foot.webp",
+        "left": "65%",
+        "top": "30%",
+        "width": "12%",
+        "height": "18%",
+        "rotation": 14,
+        "flipX": true
+      }
+    ]
+  },
+  "gender-reveal-little-wonder": {
+    "background": {
+      "color": "#faf6ee",
+      "image": "/images/bridal/selected/backgrounds/ivory-paper.webp"
+    },
+    "components": [
+      {
+        "id": "gender-reveal-little-wonder-pink-bootie-1",
+        "image": "/images/components/separated/gender-reveal-little-wonder-pink-bootie.webp",
+        "left": "27%",
+        "top": "66%",
+        "width": "26%",
+        "height": "28%"
+      },
+      {
+        "id": "gender-reveal-little-wonder-blue-bootie-2",
+        "image": "/images/components/separated/gender-reveal-little-wonder-blue-bootie.webp",
+        "left": "49%",
+        "top": "66%",
+        "width": "26%",
+        "height": "28%"
+      },
+      {
+        "id": "gender-reveal-little-wonder-frame-3",
+        "image": "/images/components/separated/gender-reveal-little-wonder-frame.webp",
+        "left": "0%",
+        "top": "0%",
+        "width": "100%",
+        "height": "100%",
+        "objectFit": "fill"
+      }
+    ]
+  },
+  "gender-reveal-bear-hug": {
+    "background": {
+      "color": "#faf6ee",
+      "image": "/images/bridal/selected/backgrounds/ivory-paper.webp"
+    },
+    "components": [
+      {
+        "id": "gender-reveal-bear-hug-pink-bear-1",
+        "image": "/images/components/separated/gender-reveal-bear-hug-pink-bear.webp",
+        "left": "27%",
+        "top": "66%",
+        "width": "26%",
+        "height": "28%"
+      },
+      {
+        "id": "gender-reveal-bear-hug-blue-bear-2",
+        "image": "/images/components/separated/gender-reveal-bear-hug-blue-bear.webp",
+        "left": "49%",
+        "top": "66%",
+        "width": "26%",
+        "height": "28%"
+      },
+      {
+        "id": "gender-reveal-bear-hug-frame-3",
+        "image": "/images/components/separated/gender-reveal-bear-hug-frame.webp",
+        "left": "0%",
+        "top": "0%",
+        "width": "100%",
+        "height": "100%",
+        "objectFit": "fill"
+      }
+    ]
+  },
+  "gender-reveal-special-delivery": {
+    "background": {
+      "color": "#faf6ee",
+      "image": "/images/bridal/selected/backgrounds/ivory-paper.webp"
+    },
+    "components": [
+      {
+        "id": "gender-reveal-special-delivery-frame-1",
+        "image": "/images/components/separated/gender-reveal-special-delivery-frame.webp",
+        "left": "0%",
+        "top": "0%",
+        "width": "100%",
+        "height": "100%",
+        "objectFit": "fill"
+      },
+      {
+        "id": "gender-reveal-special-delivery-stork-2",
+        "image": "/images/components/separated/gender-reveal-special-delivery-stork.webp",
+        "left": "11%",
+        "top": "65%",
+        "width": "55%",
+        "height": "27%"
+      },
+      {
+        "id": "gender-reveal-special-delivery-baby-bundle-3",
+        "image": "/images/components/separated/gender-reveal-special-delivery-baby-bundle.webp",
+        "left": "64%",
+        "top": "70%",
+        "width": "18%",
+        "height": "24%"
+      }
+    ]
+  },
+  "gender-reveal-up-in-the-air": {
+    "background": {
+      "color": "#faf6ee",
+      "image": "/images/bridal/selected/backgrounds/ivory-paper.webp"
+    },
+    "components": [
+      {
+        "id": "gender-reveal-up-in-the-air-pink-balloon-1",
+        "image": "/images/components/separated/gender-reveal-up-in-the-air-pink-balloon.webp",
+        "left": "4%",
+        "top": "57%",
+        "width": "22%",
+        "height": "39%"
+      },
+      {
+        "id": "gender-reveal-up-in-the-air-blue-balloon-2",
+        "image": "/images/components/separated/gender-reveal-up-in-the-air-blue-balloon.webp",
+        "left": "73%",
+        "top": "62%",
+        "width": "22%",
+        "height": "34%"
+      },
+      {
+        "id": "gender-reveal-up-in-the-air-sun-3",
+        "image": "/images/components/separated/gender-reveal-up-in-the-air-sun.webp",
+        "left": "4%",
+        "top": "4%",
+        "width": "14%",
+        "height": "15%"
+      }
+    ]
+  },
+  "gender-reveal-little-surprise": {
+    "background": {
+      "color": "#faf6ee",
+      "image": "/images/bridal/selected/backgrounds/ivory-paper.webp"
+    },
+    "components": [
+      {
+        "id": "gender-reveal-little-surprise-blue-balloon-1",
+        "image": "/images/components/separated/gender-reveal-little-surprise-blue-balloon.webp",
+        "left": "5%",
+        "top": "1%",
+        "width": "16%",
+        "height": "59%"
+      },
+      {
+        "id": "gender-reveal-little-surprise-pink-balloon-2",
+        "image": "/images/components/separated/gender-reveal-little-surprise-pink-balloon.webp",
+        "left": "20%",
+        "top": "9%",
+        "width": "17%",
+        "height": "54%"
+      },
+      {
+        "id": "olive-sprig-3",
+        "image": "/images/components/watercolor/olive-sprig.webp",
+        "left": "0%",
+        "top": "74%",
+        "width": "16%",
+        "height": "24%"
+      }
+    ]
+  },
+  "gender-reveal-ribbon-surprise": {
+    "background": {
+      "color": "#faf6ee",
+      "image": "/images/bridal/selected/backgrounds/ivory-paper.webp"
+    },
+    "components": [
+      {
+        "id": "gender-reveal-ribbon-surprise-pink-ribbon-1",
+        "image": "/images/components/separated/gender-reveal-ribbon-surprise-pink-ribbon.webp",
+        "left": "0%",
+        "top": "0%",
+        "width": "52%",
+        "height": "100%",
+        "objectFit": "fill"
+      },
+      {
+        "id": "gender-reveal-ribbon-surprise-blue-ribbon-2",
+        "image": "/images/components/separated/gender-reveal-ribbon-surprise-blue-ribbon.webp",
+        "left": "48%",
+        "top": "0%",
+        "width": "52%",
+        "height": "100%",
+        "objectFit": "fill"
+      }
+    ]
+  },
+  "gender-reveal-pink-or-blue": {
+    "background": {
+      "color": "#faf6ee",
+      "image": "/images/backgrounds/separated/gender-reveal-pink-or-blue-background.webp"
+    },
+    "components": [
+      {
+        "id": "gender-reveal-pink-or-blue-frame-1",
+        "image": "/images/components/separated/gender-reveal-pink-or-blue-frame.webp",
+        "left": "0%",
+        "top": "0%",
+        "width": "100%",
+        "height": "100%",
+        "objectFit": "fill"
+      },
+      {
+        "id": "pink-bow-2",
+        "image": "/images/components/watercolor/pink-bow.webp",
+        "left": "41%",
+        "top": "4%",
+        "width": "18%",
+        "height": "13%"
+      }
+    ]
+  },
+  "birthday-midnight-martini": {
+    "background": {
+      "color": "#153d58",
+      "image": "/images/birthday/midnight-martini/navy-paper.webp"
+    },
+    "components": [
+      {
+        "id": "birthday-midnight-martini-martini-1",
+        "image": "/images/components/separated/birthday-midnight-martini-martini.webp",
+        "left": "15%",
+        "top": "0%",
+        "width": "72%",
+        "height": "100%"
+      },
+      {
+        "id": "birthday-midnight-martini-gold-star-2",
+        "image": "/images/components/separated/birthday-midnight-martini-gold-star.webp",
+        "left": "60%",
+        "top": "46%",
+        "width": "30%",
+        "height": "34%"
+      },
+      {
+        "id": "birthday-midnight-martini-stroke-3",
+        "image": "/images/components/separated/birthday-midnight-martini-stroke.webp",
+        "left": "4%",
+        "top": "70%",
+        "width": "37%",
+        "height": "7%"
+      },
+      {
+        "id": "birthday-midnight-martini-stroke-4",
+        "image": "/images/components/separated/birthday-midnight-martini-stroke.webp",
+        "left": "4%",
+        "top": "77%",
+        "width": "37%",
+        "height": "7%"
+      }
+    ],
+    "container": "foreground"
+  },
+  "birthday-peach-fizz": {
+    "background": {
+      "color": "#f7c0ae",
+      "image": "/images/birthday/peach-fizz/peach-paper.webp"
+    },
+    "components": [
+      {
+        "id": "birthday-peach-fizz-left-coupe-1",
+        "image": "/images/components/separated/birthday-peach-fizz-left-coupe.webp",
+        "left": "0%",
+        "top": "0%",
+        "width": "51%",
+        "height": "96%"
+      },
+      {
+        "id": "birthday-peach-fizz-right-coupe-2",
+        "image": "/images/components/separated/birthday-peach-fizz-right-coupe.webp",
+        "left": "49%",
+        "top": "7%",
+        "width": "51%",
+        "height": "93%"
+      }
+    ],
+    "container": "foreground"
+  },
+  "birthday-pink-pop": {
+    "background": {
+      "color": "#f5c5c7",
+      "image": "/images/party/champagne-shared/blush-paper.webp"
+    },
+    "components": [
+      {
+        "id": "birthday-pink-pop-bottle-1",
+        "image": "/images/components/separated/birthday-pink-pop-bottle.webp",
+        "left": "35%",
+        "top": "0%",
+        "width": "38%",
+        "height": "100%"
+      },
+      {
+        "id": "birthday-pink-pop-left-flute-2",
+        "image": "/images/components/separated/birthday-pink-pop-left-flute.webp",
+        "left": "1%",
+        "top": "17%",
+        "width": "26%",
+        "height": "79%"
+      },
+      {
+        "id": "birthday-pink-pop-right-flute-3",
+        "image": "/images/components/separated/birthday-pink-pop-right-flute.webp",
+        "left": "73%",
+        "top": "32%",
+        "width": "25%",
+        "height": "68%"
+      }
+    ],
+    "container": "foreground"
+  },
+  "bridal-pink-pop": {
+    "background": {
+      "color": "#f5c5c7",
+      "image": "/images/party/champagne-shared/blush-paper.webp"
+    },
+    "components": [
+      {
+        "id": "birthday-pink-pop-bottle-1",
+        "image": "/images/components/separated/birthday-pink-pop-bottle.webp",
+        "left": "35%",
+        "top": "0%",
+        "width": "38%",
+        "height": "100%"
+      },
+      {
+        "id": "birthday-pink-pop-left-flute-2",
+        "image": "/images/components/separated/birthday-pink-pop-left-flute.webp",
+        "left": "1%",
+        "top": "17%",
+        "width": "26%",
+        "height": "79%"
+      },
+      {
+        "id": "birthday-pink-pop-right-flute-3",
+        "image": "/images/components/separated/birthday-pink-pop-right-flute.webp",
+        "left": "73%",
+        "top": "32%",
+        "width": "25%",
+        "height": "68%"
+      }
+    ],
+    "container": "foreground"
+  },
+  "birthday-cherry-tower": {
+    "background": {
+      "color": "#f5c5c7",
+      "image": "/images/party/champagne-shared/blush-paper.webp"
+    },
+    "components": [
+      {
+        "id": "birthday-cherry-tower-bottle-1",
+        "image": "/images/components/separated/birthday-cherry-tower-bottle.webp",
+        "left": "68%",
+        "top": "25%",
+        "width": "31%",
+        "height": "75%"
+      },
+      {
+        "id": "birthday-cherry-tower-red-coupe-2",
+        "image": "/images/components/separated/birthday-cherry-tower-red-coupe.webp",
+        "left": "25%",
+        "top": "12%",
+        "width": "29%",
+        "height": "31%"
+      },
+      {
+        "id": "birthday-cherry-tower-red-coupe-3",
+        "image": "/images/components/separated/birthday-cherry-tower-red-coupe.webp",
+        "left": "10%",
+        "top": "41%",
+        "width": "29%",
+        "height": "31%"
+      },
+      {
+        "id": "birthday-cherry-tower-striped-coupe-4",
+        "image": "/images/components/separated/birthday-cherry-tower-striped-coupe.webp",
+        "left": "41%",
+        "top": "41%",
+        "width": "29%",
+        "height": "31%"
+      },
+      {
+        "id": "birthday-cherry-tower-red-coupe-5",
+        "image": "/images/components/separated/birthday-cherry-tower-red-coupe.webp",
+        "left": "0%",
+        "top": "69%",
+        "width": "29%",
+        "height": "31%"
+      },
+      {
+        "id": "birthday-cherry-tower-striped-coupe-6",
+        "image": "/images/components/separated/birthday-cherry-tower-striped-coupe.webp",
+        "left": "28%",
+        "top": "69%",
+        "width": "29%",
+        "height": "31%"
+      },
+      {
+        "id": "birthday-cherry-tower-red-coupe-7",
+        "image": "/images/components/separated/birthday-cherry-tower-red-coupe.webp",
+        "left": "56%",
+        "top": "69%",
+        "width": "29%",
+        "height": "31%"
+      },
+      {
+        "id": "bridal-lilac-pop-cork-8",
+        "image": "/images/components/separated/bridal-lilac-pop-cork.webp",
+        "left": "73%",
+        "top": "6%",
+        "width": "10%",
+        "height": "13%"
+      }
+    ],
+    "container": "foreground"
+  },
+  "bridal-cherry-tower": {
+    "background": {
+      "color": "#f5c5c7",
+      "image": "/images/party/champagne-shared/blush-paper.webp"
+    },
+    "components": [
+      {
+        "id": "birthday-cherry-tower-bottle-1",
+        "image": "/images/components/separated/birthday-cherry-tower-bottle.webp",
+        "left": "68%",
+        "top": "25%",
+        "width": "31%",
+        "height": "75%"
+      },
+      {
+        "id": "birthday-cherry-tower-red-coupe-2",
+        "image": "/images/components/separated/birthday-cherry-tower-red-coupe.webp",
+        "left": "25%",
+        "top": "12%",
+        "width": "29%",
+        "height": "31%"
+      },
+      {
+        "id": "birthday-cherry-tower-red-coupe-3",
+        "image": "/images/components/separated/birthday-cherry-tower-red-coupe.webp",
+        "left": "10%",
+        "top": "41%",
+        "width": "29%",
+        "height": "31%"
+      },
+      {
+        "id": "birthday-cherry-tower-striped-coupe-4",
+        "image": "/images/components/separated/birthday-cherry-tower-striped-coupe.webp",
+        "left": "41%",
+        "top": "41%",
+        "width": "29%",
+        "height": "31%"
+      },
+      {
+        "id": "birthday-cherry-tower-red-coupe-5",
+        "image": "/images/components/separated/birthday-cherry-tower-red-coupe.webp",
+        "left": "0%",
+        "top": "69%",
+        "width": "29%",
+        "height": "31%"
+      },
+      {
+        "id": "birthday-cherry-tower-striped-coupe-6",
+        "image": "/images/components/separated/birthday-cherry-tower-striped-coupe.webp",
+        "left": "28%",
+        "top": "69%",
+        "width": "29%",
+        "height": "31%"
+      },
+      {
+        "id": "birthday-cherry-tower-red-coupe-7",
+        "image": "/images/components/separated/birthday-cherry-tower-red-coupe.webp",
+        "left": "56%",
+        "top": "69%",
+        "width": "29%",
+        "height": "31%"
+      },
+      {
+        "id": "bridal-lilac-pop-cork-8",
+        "image": "/images/components/separated/bridal-lilac-pop-cork.webp",
+        "left": "73%",
+        "top": "6%",
+        "width": "10%",
+        "height": "13%"
+      }
+    ],
+    "container": "foreground"
+  },
+  "bridal-lilac-pop": {
+    "background": {
+      "color": "#e7d4ed",
+      "image": "/images/bridal/selected/backgrounds/lilac-paper.webp"
+    },
+    "components": [
+      {
+        "id": "bridal-lilac-pop-bottle-1",
+        "image": "/images/components/separated/bridal-lilac-pop-bottle.webp",
+        "left": "32.3%",
+        "top": "3.8%",
+        "width": "35.4%",
+        "height": "94.6%"
+      },
+      {
+        "id": "bridal-lilac-pop-cork-2",
+        "image": "/images/components/separated/bridal-lilac-pop-cork.webp",
+        "left": "62%",
+        "top": "1.8%",
+        "width": "13%",
+        "height": "14%"
+      }
+    ],
+    "container": "foreground"
+  },
+  "bridal-cherry-clink": {
+    "background": {
+      "color": "#501d2b",
+      "image": "/images/bridal/selected/backgrounds/burgundy-paper.webp"
+    },
+    "components": [
+      {
+        "id": "bridal-cherry-clink-left-flute-1",
+        "image": "/images/components/separated/bridal-cherry-clink-left-flute.webp",
+        "left": "0%",
+        "top": "0%",
+        "width": "40%",
+        "height": "99%"
+      },
+      {
+        "id": "bridal-cherry-clink-right-flute-2",
+        "image": "/images/components/separated/bridal-cherry-clink-right-flute.webp",
+        "left": "20%",
+        "top": "4%",
+        "width": "37%",
+        "height": "89%"
+      },
+      {
+        "id": "bridal-cherry-clink-bottle-3",
+        "image": "/images/components/separated/bridal-cherry-clink-bottle.webp",
+        "left": "57%",
+        "top": "2%",
+        "width": "37%",
+        "height": "96%"
+      }
+    ],
+    "container": "foreground"
+  },
+  "bridal-blue-spritz": {
+    "background": {
+      "color": "#faf4e8",
+      "image": "/images/bridal/selected/backgrounds/ivory-paper.webp"
+    },
+    "components": [
+      {
+        "id": "bridal-blue-spritz-left-coupe-1",
+        "image": "/images/components/separated/bridal-blue-spritz-left-coupe.webp",
+        "left": "0%",
+        "top": "1%",
+        "width": "53%",
+        "height": "98%"
+      },
+      {
+        "id": "bridal-blue-spritz-right-coupe-2",
+        "image": "/images/components/separated/bridal-blue-spritz-right-coupe.webp",
+        "left": "48%",
+        "top": "7%",
+        "width": "52%",
+        "height": "93%"
+      }
+    ],
+    "container": "foreground"
+  },
+  "bridal-pink-stripe-social": {
+    "background": {
+      "color": "#faf4e8",
+      "image": "/images/bridal/selected/backgrounds/ivory-paper.webp"
+    },
+    "components": [
+      {
+        "id": "bridal-pink-stripe-social-left-coupe-1",
+        "image": "/images/components/separated/bridal-pink-stripe-social-left-coupe.webp",
+        "left": "0%",
+        "top": "1%",
+        "width": "53%",
+        "height": "98%"
+      },
+      {
+        "id": "bridal-pink-stripe-social-right-coupe-2",
+        "image": "/images/components/separated/bridal-pink-stripe-social-right-coupe.webp",
+        "left": "48%",
+        "top": "7%",
+        "width": "52%",
+        "height": "93%"
+      }
+    ],
+    "container": "foreground"
+  },
+  "bridal-mint-cheers": {
+    "background": {
+      "color": "#faf4e8",
+      "image": "/images/bridal/selected/backgrounds/ivory-paper.webp"
+    },
+    "components": [
+      {
+        "id": "bridal-mint-cheers-left-coupe-1",
+        "image": "/images/components/separated/bridal-mint-cheers-left-coupe.webp",
+        "left": "0%",
+        "top": "1%",
+        "width": "53%",
+        "height": "98%"
+      },
+      {
+        "id": "bridal-mint-cheers-right-coupe-2",
+        "image": "/images/components/separated/bridal-mint-cheers-right-coupe.webp",
+        "left": "48%",
+        "top": "7%",
+        "width": "52%",
+        "height": "93%"
+      }
+    ],
+    "container": "foreground"
+  },
+  "bridal-lilac-happy-hour": {
+    "background": {
+      "color": "#faf4e8",
+      "image": "/images/bridal/selected/backgrounds/ivory-paper.webp"
+    },
+    "components": [
+      {
+        "id": "bridal-lilac-happy-hour-left-coupe-1",
+        "image": "/images/components/separated/bridal-lilac-happy-hour-left-coupe.webp",
+        "left": "0%",
+        "top": "1%",
+        "width": "53%",
+        "height": "98%"
+      },
+      {
+        "id": "bridal-lilac-happy-hour-right-coupe-2",
+        "image": "/images/components/separated/bridal-lilac-happy-hour-right-coupe.webp",
+        "left": "48%",
+        "top": "7%",
+        "width": "52%",
+        "height": "93%"
+      }
+    ],
+    "container": "foreground"
+  },
+  "bridal-mint-bash": {
+    "background": {
+      "color": "#b7e0d2",
+      "image": "/images/bridal/selected/backgrounds/mint-paper.webp"
+    },
+    "components": [
+      {
+        "id": "bridal-mint-bash-bottle-1",
+        "image": "/images/components/separated/bridal-mint-bash-bottle.webp",
+        "left": "23.5%",
+        "top": "1%",
+        "width": "40%",
+        "height": "98%"
+      },
+      {
+        "id": "bridal-mint-bash-coupe-2",
+        "image": "/images/components/separated/bridal-mint-bash-coupe.webp",
+        "left": "63%",
+        "top": "65%",
+        "width": "24%",
+        "height": "33%"
+      }
+    ],
+    "container": "foreground"
+  },
+  "bridal-sunny-pop": {
+    "background": {
+      "color": "#fff0b7",
+      "image": "/images/bridal/selected/backgrounds/butter-paper.webp"
+    },
+    "components": [
+      {
+        "id": "bridal-sunny-pop-bottle-1",
+        "image": "/images/components/separated/bridal-sunny-pop-bottle.webp",
+        "left": "22.5%",
+        "top": "1%",
+        "width": "42%",
+        "height": "98%"
+      },
+      {
+        "id": "bridal-sunny-pop-coupe-2",
+        "image": "/images/components/separated/bridal-sunny-pop-coupe.webp",
+        "left": "63%",
+        "top": "65%",
+        "width": "24%",
+        "height": "33%"
+      }
+    ],
+    "container": "foreground"
+  },
+  "bridal-blush-label": {
+    "background": {
+      "color": "#faf4e8",
+      "image": "/images/bridal/selected/backgrounds/ivory-paper.webp"
+    },
+    "components": [
+      {
+        "id": "artwork-1",
+        "image": "/images/bridal/selected/blush-label/foreground.webp",
+        "left": "0%",
+        "top": "0%",
+        "width": "100%",
+        "height": "100%"
+      }
+    ],
+    "container": "foreground"
+  },
+  "bridal-pink-country-club": {
+    "background": {
+      "color": "#faf4e8",
+      "image": "/images/bridal/selected/backgrounds/ivory-paper.webp"
+    },
+    "components": [
+      {
+        "id": "artwork-1",
+        "image": "/images/bridal/selected/pink-country-club/foreground.webp",
+        "left": "0%",
+        "top": "0%",
+        "width": "100%",
+        "height": "100%"
+      }
+    ],
+    "container": "foreground"
+  },
+  "bridal-citrus-cool": {
+    "background": {
+      "color": "#fff0b7",
+      "image": "/images/bridal/selected/backgrounds/butter-paper.webp"
+    },
+    "components": [
+      {
+        "id": "artwork-1",
+        "image": "/images/bridal/selected/citrus-cool/foreground.webp",
+        "left": "0%",
+        "top": "0%",
+        "width": "100%",
+        "height": "100%"
+      }
+    ],
+    "container": "foreground"
+  },
+  "bridal-cherry-soda": {
+    "background": {
+      "color": "#f5c4cd",
+      "image": "/images/bridal/selected/backgrounds/blush-paper.webp"
+    },
+    "components": [
+      {
+        "id": "artwork-1",
+        "image": "/images/bridal/selected/cherry-soda/foreground.webp",
+        "left": "0%",
+        "top": "0%",
+        "width": "100%",
+        "height": "100%"
+      }
+    ],
+    "container": "foreground"
+  },
+  "bridal-lilac-lemonade": {
+    "background": {
+      "color": "#e7d4ed",
+      "image": "/images/bridal/selected/backgrounds/lilac-paper.webp"
+    },
+    "components": [
+      {
+        "id": "artwork-1",
+        "image": "/images/bridal/selected/lilac-lemonade/foreground.webp",
+        "left": "0%",
+        "top": "0%",
+        "width": "100%",
+        "height": "100%"
+      }
+    ],
+    "container": "foreground"
+  },
+  "bridal-blush-boot-club": {
+    "background": {
+      "color": "#faf4e8",
+      "image": "/images/bridal/selected/backgrounds/ivory-paper.webp"
+    },
+    "components": [
+      {
+        "id": "artwork-1",
+        "image": "/images/bridal/selected/blush-boot-club/foreground.webp",
+        "left": "0%",
+        "top": "0%",
+        "width": "100%",
+        "height": "100%"
+      }
+    ],
+    "container": "foreground"
+  },
+  "birthday-little-pizza-chef": {
+    "background": {
+      "color": "#faf2dc",
+      "image": "/images/birthday/little-pizza-chef/sage-paper.webp"
+    },
+    "components": [
+      {
+        "id": "birthday-little-pizza-chef-pizza-1",
+        "image": "/images/components/separated/birthday-little-pizza-chef-pizza.webp",
+        "left": "4%",
+        "top": "39%",
+        "width": "92%",
+        "height": "54%",
+        "portrait": {
+          "left": "2%",
+          "top": "44%",
+          "width": "96%",
+          "height": "44%"
+        }
+      },
+      {
+        "id": "red-starburst-2",
+        "image": "/images/components/separated/red-starburst.webp",
+        "left": "5%",
+        "top": "48%",
+        "width": "7%",
+        "height": "9%"
+      }
+    ]
+  },
+  "birthday-slice-club": {
+    "background": {
+      "color": "#faf2dc",
+      "image": "/images/birthday/slice-club/scalloped-paper.webp"
+    },
+    "components": [
+      {
+        "id": "birthday-slice-club-pizza-1",
+        "image": "/images/components/separated/birthday-slice-club-pizza.webp",
+        "left": "10%",
+        "top": "7%",
+        "width": "25%",
+        "height": "24%",
+        "rotation": -12,
+        "portrait": {
+          "left": "10%",
+          "top": "7%",
+          "width": "33%",
+          "height": "22%"
+        }
+      },
+      {
+        "id": "birthday-slice-club-pizza-2",
+        "image": "/images/components/separated/birthday-slice-club-pizza.webp",
+        "left": "64%",
+        "top": "76%",
+        "width": "27%",
+        "height": "17%",
+        "rotation": 6,
+        "portrait": {
+          "left": "58%",
+          "top": "73%",
+          "width": "34%",
+          "height": "22%"
+        }
+      }
+    ]
+  },
+  "birthday-supper-club": {
+    "background": {
+      "color": "#f3e7d2",
+      "image": "/images/birthday/supper-club/candlelit-dinner.webp",
+      "size": "cover"
+    },
+    "components": [
+      {
+        "id": "birthday-supper-club-napkin-1",
+        "image": "/images/components/separated/birthday-supper-club-napkin.webp",
+        "left": "39%",
+        "top": "83%",
+        "width": "51%",
+        "height": "17%"
+      },
+      {
+        "id": "birthday-supper-club-candle-2",
+        "image": "/images/components/separated/birthday-supper-club-candle.webp",
+        "left": "62%",
+        "top": "0%",
+        "width": "32%",
+        "height": "84%"
+      },
+      {
+        "id": "birthday-supper-club-coupe-3",
+        "image": "/images/components/separated/birthday-supper-club-coupe.webp",
+        "left": "20%",
+        "top": "45%",
+        "width": "46%",
+        "height": "42%"
+      },
+      {
+        "id": "birthday-supper-club-olive-bowl-4",
+        "image": "/images/components/separated/birthday-supper-club-olive-bowl.webp",
+        "left": "50%",
+        "top": "76%",
+        "width": "32%",
+        "height": "16%"
+      }
+    ],
+    "container": "paper"
+  }
+}

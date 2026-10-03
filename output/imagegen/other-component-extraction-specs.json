@@ -1,0 +1,313 @@
+[
+  [
+    "christening-olive-full-frame",
+    [
+      [
+        "olive-frame",
+        "ONLY the continuous olive leaf border around all four edges"
+      ]
+    ]
+  ],
+  [
+    "christening-blue-full-frame",
+    [
+      [
+        "blue-floral-frame",
+        "ONLY the pale blue flowers, leaves and flowing border along the edges; remove all bows and the dove"
+      ]
+    ]
+  ],
+  [
+    "christening-little-dreamer",
+    [
+      [
+        "gold-frame",
+        "ONLY the thin pale gold square outer frame with delicate golden corner leaves; remove sleeping baby and sparkles"
+      ]
+    ]
+  ],
+  [
+    "christening-blush-petals",
+    [
+      [
+        "petal-frame",
+        "ONLY the small watercolor leaves and pink petals along the sides; remove bows and the dove"
+      ]
+    ]
+  ],
+  [
+    "christening-olive-ribbon",
+    [
+      [
+        "olive-frame",
+        "ONLY the little olive leaves arranged around all four edges; remove the bow"
+      ]
+    ]
+  ],
+  [
+    "christening-little-blue-heaven",
+    [
+      [
+        "petal",
+        "ONLY one small pale blue painted petal in the lower right, without the bow"
+      ]
+    ]
+  ],
+  [
+    "christening-blush-grace",
+    [
+      [
+        "petal",
+        "ONLY the large loose pink watercolor petal in the lower left; remove bow and all other petals"
+      ]
+    ]
+  ],
+  [
+    "bridal-retro-pink-card",
+    [
+      [
+        "frame",
+        "ONLY the red thin scalloped outer frame; remove all cherries, bows, stars and daisies"
+      ],
+      [
+        "cherries",
+        "ONLY the red two-cherry ornament at the upper center; remove frame and daisies"
+      ],
+      [
+        "daisy",
+        "ONLY one simple red daisy at the upper left corner; remove every other mark"
+      ],
+      [
+        "bow",
+        "ONLY the red ribbon bow in the bottom center; remove every other mark"
+      ]
+    ]
+  ],
+  [
+    "bridal-doll-pink-card",
+    [
+      [
+        "frame",
+        "ONLY the pink flowing ribbon and thin scalloped border framing the four edges; remove floral sprigs, shoes, hearts and pearls"
+      ],
+      [
+        "heels",
+        "ONLY the pair of little pale pink heeled shoes at bottom left"
+      ],
+      [
+        "heart",
+        "ONLY the pink outlined heart ornament at bottom right, without the leaves or beads"
+      ],
+      [
+        "sprig",
+        "ONLY the small leafy flowering sprig at upper left, without ribbons or border"
+      ]
+    ]
+  ],
+  [
+    "bridal-cool-girl-card",
+    [
+      [
+        "sunglasses",
+        "ONLY the raspberry heart-shaped sunglasses at upper center"
+      ],
+      [
+        "lipstick",
+        "ONLY the lipstick near lower left, remove hearts and every other object"
+      ],
+      [
+        "cherries",
+        "ONLY the red cherries in the lower right, WITHOUT the tied bow"
+      ]
+    ]
+  ],
+  [
+    "bridal-pink-cocktail-card",
+    [
+      [
+        "frame",
+        "ONLY the burgundy ornamental edge lines and little leaf flourishes, without glasses, citrus slices, bows or stars"
+      ],
+      [
+        "left-coupe",
+        "ONLY the upper-left pink coupe glass, remove right glass and every other item"
+      ],
+      [
+        "right-coupe",
+        "ONLY the upper-right pink coupe glass, remove left glass and every other item"
+      ],
+      [
+        "citrus",
+        "ONLY one small citrus slice in the bottom right; remove all other items"
+      ]
+    ]
+  ],
+  [
+    "bridal-modern-pink-line-card",
+    [
+      [
+        "ribbon-frame",
+        "ONLY the thin pink ribbon forming the outer frame, including its central top bow but WITHOUT glasses, hearts or flowers"
+      ],
+      [
+        "left-coupe",
+        "ONLY the left outlined pink coupe glass near upper center, without ribbon frame, right glass, flowers or hearts"
+      ],
+      [
+        "right-coupe",
+        "ONLY the right outlined pink coupe glass near upper center, without ribbon frame, left glass, flowers or hearts"
+      ],
+      [
+        "flower",
+        "ONLY the outlined small flower in the lower left; remove everything else"
+      ]
+    ]
+  ],
+  [
+    "bridal-pink-disco-dream-card",
+    [
+      [
+        "disco",
+        "ONLY the pink disco ball at the upper center, without other marks"
+      ],
+      [
+        "bow",
+        "ONLY the thin pink ribbon bow at the bottom center"
+      ]
+    ]
+  ],
+  [
+    "wedding-blush-lift",
+    [
+      [
+        "pink-heart-balloon",
+        "ONLY the upper-left pink heart-shaped balloon with its thin hanging string"
+      ],
+      [
+        "peach-balloon",
+        "ONLY the upper-right peach oval balloon with its thin hanging string"
+      ]
+    ]
+  ],
+  [
+    "wedding-cherry-toast",
+    [
+      [
+        "bride",
+        "ONLY the simple outlined woman at the bottom, without coupe tower, frame or sparkles"
+      ]
+    ]
+  ],
+  [
+    "gender-reveal-tiny-footprints",
+    [
+      [
+        "blue-foot",
+        "ONLY ONE blue watercolor baby footprint, without pink footprints or another blue foot"
+      ],
+      [
+        "pink-foot",
+        "ONLY ONE pink watercolor baby footprint, without blue footprints or another pink foot"
+      ]
+    ]
+  ],
+  [
+    "gender-reveal-little-wonder",
+    [
+      [
+        "pink-bootie",
+        "ONLY the small pink knitted baby bootie at the bottom, remove blue bootie and frame"
+      ],
+      [
+        "blue-bootie",
+        "ONLY the small blue knitted baby bootie at the bottom, remove pink bootie and frame"
+      ]
+    ]
+  ],
+  [
+    "gender-reveal-bear-hug",
+    [
+      [
+        "pink-bear",
+        "ONLY the pink teddy bear at the bottom, remove blue teddy and frame"
+      ],
+      [
+        "blue-bear",
+        "ONLY the blue teddy bear at the bottom, remove pink teddy and frame"
+      ],
+      [
+        "frame",
+        "ONLY the thin rounded pale pink-and-blue square border, remove teddy bears and top heart"
+      ]
+    ]
+  ],
+  [
+    "gender-reveal-special-delivery",
+    [
+      [
+        "stork",
+        "ONLY the white watercolor flying stork with its green twig. Remove the baby bundle suspended from its beak, all clouds, and border."
+      ],
+      [
+        "baby-bundle",
+        "ONLY the cream sling containing the sleeping baby, suspended from the stork's beak. Remove the stork, clouds and frame."
+      ],
+      [
+        "frame",
+        "ONLY the thin double pale blue rounded rectangular frame; remove stork, baby, clouds, heart"
+      ]
+    ]
+  ],
+  [
+    "gender-reveal-up-in-the-air",
+    [
+      [
+        "pink-balloon",
+        "ONLY the pink watercolor hot-air balloon on the left"
+      ],
+      [
+        "blue-balloon",
+        "ONLY the blue watercolor hot-air balloon on the right"
+      ],
+      [
+        "sun",
+        "ONLY the little yellow sun at upper left, without balloons, clouds or other marks"
+      ]
+    ]
+  ],
+  [
+    "gender-reveal-little-surprise",
+    [
+      [
+        "pink-balloon",
+        "ONLY the pink tied balloon with hanging string; remove blue balloon, leaves, flowers and every other object"
+      ],
+      [
+        "blue-balloon",
+        "ONLY the blue tied balloon with hanging string; remove pink balloon, leaves, flowers and every other object"
+      ]
+    ]
+  ],
+  [
+    "gender-reveal-ribbon-surprise",
+    [
+      [
+        "pink-ribbon",
+        "ONLY the pink flowing ribbon down the left edge, including its pink half of the top and bottom bows. Remove the blue ribbon and paper."
+      ],
+      [
+        "blue-ribbon",
+        "ONLY the blue flowing ribbon down the right edge, including its blue half of the top and bottom bows. Remove the pink ribbon and paper."
+      ]
+    ]
+  ],
+  [
+    "gender-reveal-pink-or-blue",
+    [
+      [
+        "frame",
+        "ONLY the thin wavy pale blue rectangular border in the center; remove the small pink bow and all striped paper"
+      ]
+    ]
+  ]
+]

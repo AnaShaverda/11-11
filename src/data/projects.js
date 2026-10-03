@@ -1,14 +1,15 @@
+const subcategory = (id, title) => ({ id, title, captionKey: `category.occasion.${id}` });
+
 export const projects = [
-  { id: "birthday", slug: "birthday", title: "Birthday", category: "Event category", shortDescription: "Celebrate their story, their people, and another trip around the sun.", accent: "blue", icon: "cake", status: "ready" },
-  { id: "wedding", slug: "wedding", title: "Wedding", category: "Event category", shortDescription: "A beautiful digital home for one day and a lifetime of stories.", accent: "orange", icon: "rings", status: "ready" },
-  { id: "other", slug: "other-celebrations", title: "Other Celebrations", category: "Event category", shortDescription: "Make room for every meaningful milestone and all your own ideas.", accent: "pink", icon: "spark", status: "ready", subcategories: [
-    { id: "gender-reveal", captionKey: "project.genderReveal", title: "Gender Reveal", description: "A joyful surprise with a modern, playful feel.", visual: "reveal" },
-    { id: "bridal-party", captionKey: "project.bridal-party", title: "Bridal Parties", description: "A celebration for the bride and her favorite people.", visual: "bachelorette" },
-    { id: "bachelorette", captionKey: "project.bachelorette", title: "Bachelorette Party", description: "A stylish night for your favorite people.", visual: "bachelorette" },
-    { id: "christening", captionKey: "project.christening", title: "Christening / ნათლობა", description: "A peaceful celebration for a cherished day.", visual: "christening" },
-  ] },
-  { id: "corporate", slug: "corporate", title: "Corporate", category: "Event category", shortDescription: "Make team gatherings, launches, and private dinners memorable.", accent: "violet", icon: "briefcase", status: "preview" },
-];
+  { id: "wedding", slug: "wedding", title: "Weddings", accent: "orange", icon: "rings", status: "ready" },
+  { id: "birthday", slug: "birthday", title: "Birthdays", accent: "blue", icon: "cake", status: "ready", subcategories: [subcategory("adult-birthday", "Adult Birthdays"), subcategory("kids-birthday", "Kids’ Birthdays"), subcategory("birthday-gift", "Birthday Gifts")] },
+  { id: "baby-kids", slug: "baby-kids", title: "Baby & Kids", accent: "pink", icon: "spark", status: "ready", subcategories: [subcategory("gender-reveal", "Gender Reveal"), subcategory("kids-birthday", "Kids’ Birthdays"), subcategory("christening", "Christenings")] },
+  { id: "pre-wedding", slug: "pre-wedding", title: "Pre-Wedding", accent: "rose", icon: "rings", status: "ready", subcategories: [subcategory("bachelorette", "Bachelorette & Bridal"), subcategory("bachelor", "Bachelor")] },
+  { id: "parties", slug: "parties", title: "Parties", accent: "cyan", icon: "spark", status: "ready", subcategories: [subcategory("dinner", "Dinner"), subcategory("housewarming", "Housewarming"), subcategory("pool", "Pool"), subcategory("themed", "Themed")] },
+  { id: "gifts", slug: "gifts-surprises", title: "Gifts & Surprises", accent: "lilac", icon: "spark", status: "ready", subcategories: [subcategory("birthday-gift", "Birthday"), subcategory("friendship", "Friendship"), subcategory("romantic", "Love"), subcategory("anniversary", "Anniversary"), subcategory("graduation", "Graduation"), subcategory("just-because", "Just Because")] },
+  { id: "trending", slug: "trending", title: "Trending", accent: "mint", icon: "spark", status: "ready" },
+  { id: "corporate", slug: "corporate", title: "Corporate", accent: "violet", icon: "briefcase", status: "preview" },
+].map((project) => ({ ...project, category: "Event category", folderAsset: `/images/categories/${project.id}.svg` }));
 
 const legacySlugs = {
   "birthday-wishes": "birthday",
@@ -18,25 +19,32 @@ const legacySlugs = {
   "memories-in-notes": "birthday",
   "photo-memories": "birthday",
   "photo-album-of-memories": "birthday",
-  party: "other-celebrations",
-  "love-at-first-sight": "other-celebrations",
-  "custom-event": "other-celebrations",
-  custom: "other-celebrations",
+  party: "parties",
+  "love-at-first-sight": "parties",
+  "custom-event": "parties",
+  custom: "parties",
 };
 
 export function getProjectBySlug(slug) {
   const currentSlug = legacySlugs[slug] ?? slug;
-  return projects.find((project) => project.slug === currentSlug);
+  if (["other", "other-celebrations"].includes(currentSlug)) return projects.find((project) => project.id === "pre-wedding");
+  return projects.find((project) => project.slug === currentSlug || project.id === currentSlug);
 }
 
 export function getCanonicalProjectSlug(slug) {
-  return legacySlugs[slug] ?? slug;
+  return getProjectBySlug(slug)?.slug ?? slug;
+}
+
+export function normalizeOccasion(id) {
+  return id === "bridal-party" ? "bachelorette" : id;
 }
 
 export function getCelebrationSubcategory(id) {
-  return projects.find((project) => project.id === "other").subcategories.find((subcategory) => subcategory.id === id);
+  return projects.flatMap((project) => project.subcategories ?? []).find((subcategory) => subcategory.id === normalizeOccasion(id));
 }
 
+// Design rendering retains its original event type; browsing uses many-to-many category tags.
 export function getCategoryCaptionKey(category, subcategory) {
-  return (category.toLowerCase() === "other" && getCelebrationSubcategory(subcategory)?.captionKey) || `common.${category.toLowerCase()}`;
+  if (category.toLowerCase() === "other") return getCelebrationSubcategory(subcategory)?.captionKey ?? "common.parties";
+  return `common.${category.toLowerCase()}`;
 }

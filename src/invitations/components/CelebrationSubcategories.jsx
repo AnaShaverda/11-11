@@ -3,7 +3,7 @@ import { useLanguage } from "../../localization/LanguageContext.jsx";
 
 export default function CelebrationSubcategories({ project, value, onChange }) {
   const { t } = useLanguage();
-  const choices = [{ id: "all", captionKey: "catalog.allCelebrations" }, ...project.subcategories];
+  const choices = [{ id: "all", captionKey: "invitations.all" }, ...project.subcategories];
 
   return (
     <div className="celebration-subcategories">

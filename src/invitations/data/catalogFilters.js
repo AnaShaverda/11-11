@@ -1,10 +1,14 @@
-import { getCelebrationSubcategory, projects } from "../../data/projects.js";
+import { getCelebrationSubcategory, normalizeOccasion, projects } from "../../data/projects.js";
 import { invitationStyleOptions } from "./invitationStyles.js";
 
 const legacyStyleKeys = ["birthdayStyle", "weddingStyle", "corporateStyle", "otherStyle"];
 
 export function readCatalogCategory(searchParams) {
   const requested = (searchParams.get("category") ?? searchParams.get("type"))?.toLowerCase();
+  if (["other", "other-celebrations"].includes(requested)) {
+    const id = ["gender-reveal", "christening"].includes(searchParams.get("occasion")) ? "baby-kids" : "pre-wedding";
+    return projects.find((project) => project.id === id);
+  }
   return projects.find((project) => project.id === requested || project.slug === requested) ?? null;
 }
 
@@ -13,14 +17,15 @@ export function getInvitationCatalogLink(category = null, searchParams = new URL
   const { style } = readCatalogFilters(searchParams, currentCategory?.id);
   const next = updateCatalogFilters(searchParams, { category: category?.id ?? "all", style });
   next.delete("type");
-  // Occasion refines Other Celebrations only; All can retain that refinement.
-  if (category && category.id !== "other") next.delete("occasion");
+  const occasion = normalizeOccasion(searchParams.get("occasion"));
+  if (occasion && category?.subcategories?.some((item) => item.id === occasion)) next.set("occasion", occasion);
+  else next.delete("occasion");
   return { pathname: "/invitations", search: next.toString() };
 }
 
 export function readCatalogFilters(searchParams, category) {
   const requestedStyle = searchParams.get("style") ?? (category
-    ? searchParams.get(`${category}Style`)
+    ? (searchParams.get(`${category}Style`) ?? (["baby-kids", "pre-wedding"].includes(category) ? searchParams.get("otherStyle") : null))
     : legacyStyleKeys.map((key) => searchParams.get(key)).find(Boolean));
   return {
     style: invitationStyleOptions.some((option) => option.id === requestedStyle) ? requestedStyle : "all",
@@ -41,5 +46,7 @@ export function updateCatalogFilters(searchParams, changes) {
 
 export function readCatalogOccasion(searchParams) {
   const requested = searchParams.get("occasion");
-  return getCelebrationSubcategory(requested) ? requested : "all";
+  const normalized = normalizeOccasion(requested);
+  const category = readCatalogCategory(searchParams);
+  return getCelebrationSubcategory(normalized) && (!category || category.subcategories?.some((item) => item.id === normalized)) ? normalized : "all";
 }

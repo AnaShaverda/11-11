@@ -1,0 +1,130 @@
+/* Component positions come from data; the original cover only selects the copy layout. */
+:root body .invitation-art.invitation-preview-art.invitation-art--separated {
+  background: var(--separated-background) center / var(--separated-size, 100% 100%) no-repeat var(--separated-paper) !important;
+  isolation: isolate;
+}
+:root body .invitation-art.invitation-preview-art.invitation-art--separated::before,
+:root body .invitation-art.invitation-preview-art.invitation-art--separated::after {
+  display: none !important;
+}
+.invitation-art--separated > .birthday-illustration {
+  pointer-events: none;
+}
+.birthday-component-group {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  container-type: size;
+  pointer-events: none;
+}
+.birthday-component-group-canvas {
+  position: relative;
+  flex: none;
+}
+.separated-foreground {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  container-type: size;
+}
+.separated-foreground-canvas {
+  position: relative;
+  flex: none;
+  width: 100cqmin;
+  height: 100cqmin;
+}
+.invitation-art--separated.preview-happy-table .wedding-ink-details {
+  top: 47%;
+}
+
+/* Flowing copy reserves the upper text area; illustrations and dates get their own zones. */
+.invitation-art--separated:not(.preview-portrait-promise):not(.preview-our-people) .wedding-ink-copy {
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  padding: 8% 19% 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3cqw;
+  text-align: center;
+}
+.invitation-art--separated:not(.preview-portrait-promise):not(.preview-our-people) .wedding-ink-copy > :not(.wedding-ink-details) {
+  position: static;
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+  transform: none;
+}
+.invitation-art--separated:not(.preview-portrait-promise):not(.preview-our-people) .wedding-ink-opening { font-size: 3.2cqw; line-height: 1.4; }
+.invitation-art--separated:not(.preview-portrait-promise):not(.preview-our-people) .wedding-ink-copy > strong { font-size: 7cqw; line-height: 1.2; }
+.invitation-art--separated:not(.preview-portrait-promise):not(.preview-our-people) .wedding-ink-copy > em { font-size: 3cqw; line-height: 1.4; }
+.invitation-art--separated:not(.preview-portrait-promise):not(.preview-our-people) .wedding-ink-details {
+  top: auto;
+  bottom: 8%;
+  left: 20%;
+  width: 60%;
+  margin: 0;
+  transform: none;
+  font-size: 2.5cqw;
+  line-height: 1.5;
+}
+:root body .invitation-art--separated:is(.preview-happy-table,.preview-watercolor-banquet,.preview-celebration-table,.preview-garden-table,.preview-rose-letter,.preview-sage-letter,.preview-ribbon-revel,.preview-garden-dance) .wedding-ink-details {
+  position: static;
+  width: 100%;
+  margin: 0;
+}
+:root body .invitation-art--separated:is(.preview-rose-letter,.preview-sage-letter) .wedding-ink-copy { padding-top: 10%; }
+:root body .invitation-art--separated:is(.preview-rose-letter,.preview-sage-letter) .wedding-ink-copy > strong { font-size: 6.5cqw; }
+:root body .invitation-art--separated.preview-sweet-snapshot .wedding-ink-copy { padding: 5% 19% 0; gap: 1.5cqw; }
+:root body .invitation-art--separated.preview-sweet-snapshot .wedding-ink-copy > strong { font-size: 6cqw; }
+:root body .invitation-art--separated.preview-sweet-snapshot .wedding-ink-copy > em { display: none; }
+.invitation-art--separated.invitation-art--portrait.preview-our-people .wedding-ink-opening { top: 8%; }
+.invitation-art--separated.invitation-art--portrait.preview-our-people .wedding-ink-copy > strong { top: 15%; font-size: 7cqw; line-height: 1.2; }
+.invitation-art--separated.invitation-art--portrait.preview-our-people .wedding-ink-copy > em { top: 28%; }
+.invitation-art--separated:not(.invitation-art--portrait).preview-our-people .wedding-ink-copy > strong { top: 43%; font-size: 6cqw; line-height: 1.2; }
+.invitation-art--separated:not(.invitation-art--portrait).preview-our-people .wedding-ink-copy > em { top: 63%; }
+.invitation-art--separated:not(.invitation-art--portrait).preview-our-people .wedding-ink-details { top: 73%; }
+.invitation-art--separated.preview-cobalt-cheers .cobalt-poster-heading > strong { font-size: 9cqw; line-height: 1.12; letter-spacing: 0; }
+.invitation-art--separated.preview-cobalt-cheers .cobalt-poster-heading > span { font-size: 4cqw; line-height: 1.25; letter-spacing: 0; }
+.invitation-art--separated.preview-cherry-toast .bridal-line-copy > strong { font-size: 6.5cqw; line-height: 1.2; }
+.invitation-art--separated.preview-cherry-toast .bridal-line-copy > em { top: 34%; }
+.invitation-art--separated.preview-cherry-toast .bridal-line-details { top: auto; bottom: 4%; }
+.invitation-art--separated.invitation-art--portrait :is(.reveal-poster-bear-hug,.reveal-poster-special-delivery) .reveal-details { top: 58%; }
+:root body .invitation-art--separated.preview-ink-and-ivy .wedding-ink-copy { padding-left: 24%; padding-right: 24%; }
+
+/* Inner illustrated cards retain their frame, with the age below the child's name. */
+.invitation-preview-art :is(.photo-paper-space,.photo-paper-dino) .modern-toast-name { top: 31%; font-size: 7cqw; line-height: 1.25; }
+.invitation-preview-art :is(.photo-paper-space,.photo-paper-dino) .modern-toast-age { top: 43%; font-size: 27cqw; line-height: 1; }
+.invitation-preview-art :is(.photo-paper-space,.photo-paper-dino) .modern-toast-closing { top: 63%; font-size: 4cqw; }
+.invitation-preview-art.preview-retro-pop .retro-image-name { font-size: 5.8cqw; line-height: 1.3; }
+.invitation-preview-art.preview-retro-pop .retro-image-age { top: 38%; }
+.invitation-preview-art.preview-bridal-electric-pink .retro-bridal-copy > strong { line-height: 1.35; margin-top: 3cqw; }
+.invitation-preview-art.preview-bridal-electric-pink .retro-bridal-host { line-height: 1.3; }
+.invitation-preview-art.preview-bridal-electric-pink .retro-bridal-copy > em { margin-top: 4cqw; }
+:root body .invitation-preview-art.preview-modern-toast .modern-toast-age { font-size: 52cqw !important; }
+:root body .invitation-preview-art.invitation-art--portrait.preview-modern-toast .modern-toast-paper:not(.photo-paper-playful,.photo-paper-illustrated) .modern-toast-age { font-size: 52cqw !important; }
+:root body .invitation-art.preview-birthday.preview-race-day .modern-toast-age { top: 32%; font-size: 46cqw; }
+:root body .invitation-art.preview-birthday.preview-race-day .modern-toast-closing { top: 57%; left: 10%; width: 80%; font-size: 4cqw; }
+.invitation-preview-art .photo-paper-dino .modern-toast-name { top: 32%; }
+.invitation-preview-art.preview-race-day .photo-invitation-paper > .birthday-illustration { height: 30% !important; }
+.invitation-preview-art .pizza-birthday-copy > :is(.pizza-make,.pizza-headline,.pizza-host,.slice-the,.slice-pizza,.slice-club) { transform: none; }
+.invitation-preview-art .pizza-headline { top: 16%; }
+.invitation-preview-art:not(.invitation-art--portrait) .pizza-make { top: 5%; }
+.invitation-art--separated.preview-cherry-toast .bridal-line-copy > em { top: 38%; }
+:root body .invitation-art--separated.preview-heartmarked .wedding-ink-copy { padding-top: 24cqh; gap: 2cqw; }
+:root body .invitation-art--separated.preview-heartmarked .wedding-ink-opening { position: absolute !important; top: 8%; width: 62% !important; }
+:root body .invitation-art--separated:is(.preview-garden-table,.preview-ribbon-revel,.preview-first-dance) .wedding-ink-copy { padding-top: 20cqh; }
+:root body .invitation-art--separated.preview-ribbon-revel .wedding-ink-copy { padding-top: 23cqh; }
+:root body .invitation-art--separated.preview-first-dance .wedding-ink-copy { padding-top: 14cqh; }
+.invitation-art--separated.invitation-art--portrait:not(.preview-portrait-promise):not(.preview-our-people):not(.preview-heartmarked):not(.preview-sweet-snapshot):not(.preview-ribbon-revel):not(.preview-garden-table):not(.preview-first-dance) .wedding-ink-copy { padding-top: 14cqh; }
+:root body .invitation-art--separated.preview-blue-pour .wedding-ink-details { position: static; width: 100%; }
+:root body .invitation-art--separated.preview-sweet-snapshot .wedding-ink-details { bottom: 3%; }
+:root body .invitation-opening:has(.line-birthday-copy) .invitation-opening-frame:not(.is-original) { aspect-ratio: 9 / 16; width: min(100%, calc((100svh - 32px) * 9 / 16)); }
+:root body .invitation-opening .invitation-art--portrait:has(.line-birthday-copy) { aspect-ratio: 9 / 16 !important; }
+:root body .invitation-art--portrait.preview-party-doodles .line-birthday-phrase { top: 68%; left: 35%; width: 60%; font-size: 4cqw; line-height: 1.4; }
+:root body .invitation-art--portrait.preview-white-and-blue .line-birthday-phrase { top: 81%; font-size: 6cqw; line-height: 1.4; }
+.invitation-art--portrait .cocktail-bridal .cocktail-host { top: 26%; }
+.invitation-art:not(.invitation-art--portrait) .cocktail-bridal .cocktail-host { top: 27%; }
+:root body .invitation-art--portrait.preview-retro-sport .comic-title { font-size: 11cqw; line-height: 1.15; }
+:root body .invitation-art--portrait.preview-retro-sport .comic-age { top: 54%; font-size: 32cqw; }
