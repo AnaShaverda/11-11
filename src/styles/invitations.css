@@ -136,3 +136,13 @@ a.invitation-card:hover { transform: translateY(-5px); box-shadow: 0 21px 38px r
   .event-catalog .invitation-style-options { gap: 6px; }
   .event-catalog .style-filter-button { min-height: 44px; }
 }
+
+.collection-load-more { display: flex; justify-content: center; padding: 32px 0; }
+.collection-load-more button, .collection-back-to-top { display: inline-flex; align-items: center; justify-content: center; gap: 10px; min-height: 44px; padding: 12px 18px; border: 1px solid var(--color-border); border-radius: 999px; background: var(--color-surface-elevated); color: var(--color-text); font: inherit; font-size: .875rem; cursor: pointer; box-shadow: var(--shadow-frame); }
+.collection-load-more button:hover, .collection-back-to-top:hover { border-color: var(--color-accent-pink); }
+.collection-load-more button:focus-visible, .collection-back-to-top:focus-visible { outline: 2px solid var(--color-accent-pink); outline-offset: 4px; }
+.collection-loader { width: 16px; height: 16px; border: 2px solid var(--color-border); border-top-color: var(--color-accent-pink); border-radius: 50%; animation: collection-loader-spin 1s linear infinite; }
+.collection-back-to-top { position: fixed; right: max(24px, env(safe-area-inset-right)); bottom: max(24px, env(safe-area-inset-bottom)); z-index: 50; }
+@keyframes collection-loader-spin { to { transform: rotate(360deg); } }
+@media (max-width: 550px) { .collection-back-to-top { right: 16px; bottom: max(16px, env(safe-area-inset-bottom)); } }
+@media (prefers-reduced-motion: reduce) { .collection-loader { animation: none; } }

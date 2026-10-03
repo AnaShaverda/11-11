@@ -5,6 +5,9 @@ import { cardCopy, formatCardDate, getInvitationSample, getThemeDemoEvent, local
 import { invitationSamples } from "../src/invitations/data/invitationSamples.js";
 import { showcaseDesigns } from "../src/invitations/data/showcaseDesigns.js";
 import { themeDemoEvents } from "../src/themes/data/demoEvents.js";
+import { guestCardCopy } from "../src/localization/guestCardCopy.js";
+import { guestCanvasCopy } from "../src/localization/guestCanvasCopy.js";
+import { entranceStyles, motionStyles } from "../src/invitations/data/guestCardDesign.js";
 
 function translator(language) {
   return (key) => {
@@ -12,6 +15,15 @@ function translator(language) {
     return captions[language][key];
   };
 }
+
+test("canvas editing and modal controls have complete English and Georgian copy", () => {
+  assert.deepEqual(Object.keys(guestCanvasCopy.en).sort(), Object.keys(guestCanvasCopy.ka).sort());
+  for (const key of Object.keys(guestCanvasCopy.en)) {
+    assert.ok(guestCardCopy.en[key]?.trim(), key);
+    assert.ok(guestCardCopy.ka[key]?.trim(), key);
+    assert.equal(/[a-z]/i.test(guestCardCopy.ka[key].replace(/\{\w+\}/g, "")), false, key);
+  }
+});
 
 test("every card resource has Georgian and English copy, with no Latin text in Georgian", () => {
   assert.deepEqual(Object.keys(cardCopy.ka).sort(), Object.keys(cardCopy.en).sort());
@@ -67,4 +79,15 @@ test("Georgian dates do not rely on browser support for the Georgian Intl locale
   const t = (key, values = {}) => translator("ka")(key).replace(/\{(\w+)\}/g, (_, name) => String(values[name]));
   assert.equal(formatCardDate("2027-10-23T17:00:00+04:00", "ka", t), "23 ოქტომბერი 2027");
   assert.equal(formatCardDate("2027-01-01T00:30:00+04:00", "ka", t), "1 იანვარი 2027");
+});
+
+test("guest entrances, continuation controls and every motion option have English and Georgian labels", () => {
+  const keys = [...entranceStyles.map(value => `guestCards.entrance.${value}`),
+    ...motionStyles.map(value => `guestCards.motion.${value}`),
+    "guestCards.doors.open", "guestCards.doors.view", "guestCards.doors.opening"];
+  for (const key of keys) {
+    assert.ok(guestCardCopy.en[key]?.trim(), key);
+    assert.ok(guestCardCopy.ka[key]?.trim(), key);
+    assert.equal(/[a-z]/i.test(guestCardCopy.ka[key]), false, key);
+  }
 });

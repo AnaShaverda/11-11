@@ -7,6 +7,7 @@ import { useLanguage } from "../../localization/LanguageContext.jsx";
 function SelectionList({ className, selection, choiceSelector, highlightClassName, children }) {
   const listRef = useRef(null);
   const [highlight, setHighlight] = useState(null);
+
   useLayoutEffect(() => {
     const list = listRef.current;
     function measureSelection() {
@@ -22,6 +23,7 @@ function SelectionList({ className, selection, choiceSelector, highlightClassNam
     observer.observe(list);
     return () => observer.disconnect();
   }, [selection, choiceSelector]);
+
   return <div className={className} ref={listRef}>
     {highlight ? <div className={`sidebar-selection-highlight ${highlightClassName}`} aria-hidden="true" style={{ transform: `translateY(${highlight.y}px)`, height: highlight.height, width: highlight.width }} /> : null}
     {children}

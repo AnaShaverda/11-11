@@ -77,3 +77,4 @@ import "./styles/cocktail-birthday.css";
 
 import "./styles/selected-bridal.css";
 import "./styles/separated-theme-art.css";
+import "./styles/guest-cards.css";

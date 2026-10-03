@@ -6,6 +6,7 @@ import { comicBirthdayCaptions } from "../invitations/data/comicBirthdayDesigns.
 import { poolBirthdayCaptions } from "../invitations/data/poolBirthdayDesigns.js";
 import { girlyBirthdayCaptions } from "../invitations/data/girlyBirthdayDesigns.js";
 import { cardCopy } from "./cardCopy.js";
+import { guestCardCopy } from "./guestCardCopy.js";
 
 export const defaultLanguage = "ka";
 export const languages = ["ka", "en"];
@@ -3120,3 +3121,15 @@ Object.assign(captions.ka, {
 });
 Object.assign(captions.en, { "catalog.empty.description": "Try another theme or color, or clear the filters to see more designs." });
 Object.assign(captions.ka, { "catalog.empty.description": "სცადეთ სხვა თემა ან ფერი, ან გაასუფთავეთ ფილტრები მეტი დიზაინის სანახავად." });
+
+Object.assign(captions.en, {
+  "catalog.loadMore": "Load more designs",
+  "catalog.backToTop": "Back to top",
+});
+Object.assign(captions.ka, {
+  "catalog.loadMore": "მეტი დიზაინის ჩატვირთვა",
+  "catalog.backToTop": "თავში დაბრუნება",
+});
+
+Object.assign(captions.en, guestCardCopy.en);
+Object.assign(captions.ka, guestCardCopy.ka);

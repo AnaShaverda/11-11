@@ -42,3 +42,13 @@ export function useLanguage() {
   if (!context) throw new Error("useLanguage must be used inside LanguageProvider");
   return context;
 }
+
+// Scope creator-written wording to the invitation artwork, leaving the app UI localized.
+export function CardCopyProvider({ overrides, children }) {
+  const parent = useLanguage();
+  const value = useMemo(() => ({ ...parent, t: (key, values = {}) => {
+    const text = overrides?.[key];
+    return typeof text === "string" ? text.replace(/\{(\w+)\}/g, (match, name) => String(values[name] ?? match)) : parent.t(key, values);
+  } }), [parent, overrides]);
+  return <LanguageContext.Provider value={value}>{children}</LanguageContext.Provider>;
+}

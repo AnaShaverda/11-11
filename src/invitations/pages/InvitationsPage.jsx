@@ -1,5 +1,6 @@
 import { useSearchParams, useNavigate, useLocation } from "react-router-dom";
 import InvitationGallery from "../components/InvitationGallery.jsx";
+import BackToTop from "../components/BackToTop.jsx";
 import CatalogControls from "../components/CatalogControls.jsx";
 import { activeInvitationTemplates } from "../data/templates.js";
 import { catalogThemeOptions, getCatalogAppearance, matchesCatalogAppearance, readCatalogAppearance } from "../data/catalogAppearance.js";
@@ -67,6 +68,7 @@ export default function InvitationsPage() {
       </div>
       </div>
       <div className="invitation-storefront-note"><p>{t("invitations.note")}</p></div>
+      <BackToTop />
     </section>
   );
 }

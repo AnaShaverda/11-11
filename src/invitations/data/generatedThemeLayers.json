@@ -84,9 +84,18 @@
   "birthday-velvet-post": {
     "background": {
       "color": "#f5d8dd",
-      "image": "/images/backgrounds/separated/velvet-post-paper.webp"
+      "image": "/images/backgrounds/separated/velvet-post-plain-paper.png"
     },
     "components": [
+      {
+        "id": "velvet-post-painted-border",
+        "image": "/images/components/separated/velvet-post-painted-border.png",
+        "left": "0%",
+        "top": "0%",
+        "width": "100%",
+        "height": "100%",
+        "objectFit": "fill"
+      },
       {
         "id": "martini-1",
         "image": "/images/birthday/velvet-post/bow-martini.webp",
@@ -533,9 +542,26 @@
   "birthday-pink-lido": {
     "background": {
       "color": "#fbe1dc",
-      "image": "/images/backgrounds/separated/birthday-pink-lido-background.webp"
+      "image": "/images/backgrounds/separated/birthday-pink-lido-paper.png",
+      "portrait": {
+        "image": "/images/backgrounds/separated/birthday-pink-lido-paper-portrait.png",
+        "size": "100% 100%"
+      }
     },
     "components": [
+      {
+        "id": "birthday-pink-lido-pool",
+        "image": "/images/components/separated/birthday-pink-lido-pool.png",
+        "left": "0%",
+        "top": "0%",
+        "width": "100%",
+        "height": "100%",
+        "objectFit": "fill",
+        "portrait": {
+          "image": "/images/components/separated/birthday-pink-lido-pool-portrait.png",
+          "objectFit": "fill"
+        }
+      },
       {
         "id": "birthday-pink-lido-umbrella-1",
         "image": "/images/components/separated/birthday-pink-lido-umbrella.webp",
@@ -574,9 +600,26 @@
   "birthday-blue-splash": {
     "background": {
       "color": "#f8f2e6",
-      "image": "/images/backgrounds/separated/birthday-blue-splash-background.webp"
+      "image": "/images/backgrounds/separated/birthday-blue-splash-paper.png",
+      "portrait": {
+        "image": "/images/backgrounds/separated/birthday-blue-splash-paper-portrait.png",
+        "size": "100% 100%"
+      }
     },
     "components": [
+      {
+        "id": "birthday-blue-splash-pool",
+        "image": "/images/components/separated/birthday-blue-splash-pool.png",
+        "left": "0%",
+        "top": "0%",
+        "width": "100%",
+        "height": "100%",
+        "objectFit": "fill",
+        "portrait": {
+          "image": "/images/components/separated/birthday-blue-splash-pool-portrait.png",
+          "objectFit": "fill"
+        }
+      },
       {
         "id": "birthday-blue-splash-ladder-1",
         "image": "/images/components/separated/birthday-blue-splash-ladder.webp",
@@ -640,14 +683,6 @@
         "top": "64%",
         "width": "100%",
         "height": "36%"
-      },
-      {
-        "id": "pink-bow-2",
-        "image": "/images/components/watercolor/pink-bow.webp",
-        "left": "80%",
-        "top": "0%",
-        "width": "17%",
-        "height": "21%"
       }
     ]
   },
@@ -664,14 +699,6 @@
         "top": "59%",
         "width": "100%",
         "height": "38%"
-      },
-      {
-        "id": "blue-bow-2",
-        "image": "/images/components/watercolor/blue-bow.webp",
-        "left": "79%",
-        "top": "0%",
-        "width": "19%",
-        "height": "20%"
       }
     ]
   },
@@ -1374,14 +1401,6 @@
         "image": "/images/wedding/sage-letter/sage-wax-seal.webp",
         "left": "80%",
         "top": "78%",
-        "width": "17%",
-        "height": "17%"
-      },
-      {
-        "id": "bow-3",
-        "image": "/images/wedding/rose-letter/blush-ribbon-bow.webp",
-        "left": "81%",
-        "top": "0%",
         "width": "17%",
         "height": "17%"
       }
@@ -2189,9 +2208,26 @@
   "bridal-peach-cherry": {
     "background": {
       "color": "#f7ebd4",
-      "image": "/images/backgrounds/separated/bridal-peach-cherry-background.webp"
+      "image": "/images/backgrounds/separated/bridal-peach-cherry-paper.png",
+      "portrait": {
+        "image": "/images/backgrounds/separated/bridal-peach-cherry-paper-portrait.png",
+        "size": "100% 100%"
+      }
     },
     "components": [
+      {
+        "id": "bridal-peach-cherry-scalloped-frame",
+        "image": "/images/components/separated/bridal-peach-cherry-scalloped-frame.png",
+        "left": "0%",
+        "top": "0%",
+        "width": "100%",
+        "height": "100%",
+        "objectFit": "fill",
+        "portrait": {
+          "image": "/images/components/separated/bridal-peach-cherry-scalloped-frame-portrait.png",
+          "objectFit": "fill"
+        }
+      },
       {
         "id": "bridal-peach-cherry-bow-1",
         "image": "/images/components/separated/bridal-peach-cherry-bow.webp",

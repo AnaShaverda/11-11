@@ -13,10 +13,10 @@ export default function ComicBirthdayPoster({ sample, variant }) {
     <div className={`comic-birthday-copy comic-copy-${variant}`}>
       <span className="comic-opening">{sample.opening ?? defaults.opening}</span>
       <strong className="comic-title">{headline.split("\n").map((line, index) => <span key={index}>{line}</span>)}</strong>
-      <span className="comic-host">{name}<span>{ageInHost ? t("modernToast.turns", { age }) : t("comicBirthday.turns")}</span></span>
+      <span className="comic-host"><span className="comic-host-name">{name}</span><span>{ageInHost ? t("modernToast.turns", { age }) : t("comicBirthday.turns")}</span></span>
       {!ageInHost && <strong className="comic-age">{age}</strong>}
       <span className="comic-details"><span>{sample.date}</span><span>{sample.time ?? defaults.time}</span><span>{sample.location}</span></span>
-      {variant === "retro-sport" && <span className="comic-footer">{defaults.line}</span>}
+      {variant === "retro-sport" && <span className="comic-footer">{sample.line ?? defaults.line}</span>}
     </div>
   );
 }
