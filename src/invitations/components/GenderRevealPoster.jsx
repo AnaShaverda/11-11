@@ -10,7 +10,7 @@ export default function GenderRevealPoster({ title, line, date, time, location, 
     <span className="reveal-message">{line}</span>
     <span className="reveal-invited">{t("cards.reveal.invited")}</span>
     <strong className="reveal-name">{title}</strong>
-    <span className="reveal-details">{date}{time && <> · {time}</>}<br />{location}</span>
+    <span className="reveal-details"><span className="card-text-value">{date}</span>{time && <> · <span className="card-text-value">{time}</span></>}<br /><span className="card-text-value">{location}</span></span>
     <span className="reveal-closing">{t("cards.reveal.closing")}</span>
   </div>;
 }

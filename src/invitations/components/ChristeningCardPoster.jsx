@@ -7,7 +7,7 @@ export default function ChristeningCardPoster({ name, namePossessive, title, lin
     <span className="christening-card-opening">{t("cards.christening.opening")}</span>
     <strong><span>{namePossessive ?? t("cards.possessive", { name: host })}</span><span>{t("cards.christening.title")}</span></strong>
     <em>{line}</em>
-    <span className="christening-card-details">{date}<br />{location}</span>
+    <span className="christening-card-details"><span className="card-text-value">{date}</span><br /><span className="card-text-value">{location}</span></span>
     <span className="christening-card-closing">{t("cards.christening.closing")}</span>
   </div>;
 }

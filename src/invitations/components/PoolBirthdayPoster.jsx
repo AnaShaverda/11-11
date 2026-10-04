@@ -10,9 +10,9 @@ export default function PoolBirthdayPoster({ sample, variant }) {
   return (
     <div className="pool-birthday-copy" style={getDesignFont("pool", language).style}>
       <strong className="pool-title">{sample.headline ?? defaults.headline}</strong>
-      <span className="pool-host">{name} {t("modernToast.turns", { age })}</span>
+      <span className="pool-host"><span className="card-text-value">{name}</span> {t("modernToast.turns", { age })}</span>
       <span className="pool-opening">{sample.opening ?? defaults.opening}</span>
-      <span className="pool-details">{sample.date}<br />{sample.time ?? defaults.time} · {sample.location}</span>
+      <span className="pool-details"><span className="card-text-value">{sample.date}</span><br /><span className="card-text-value">{sample.time ?? defaults.time}</span> · <span className="card-text-value">{sample.location}</span></span>
     </div>
   );
 }

@@ -1,3 +1,5 @@
+import { useRef } from "react";
+import useInvitationTextLayout from "../hooks/useInvitationTextLayout.js";
 import SelectedBridalPoster from "./SelectedBridalPoster.jsx";
 import CocktailBirthdayPoster from "./CocktailBirthdayPoster.jsx";
 import ComicBirthdayPoster from "./ComicBirthdayPoster.jsx";
@@ -41,7 +43,7 @@ function RetroPoster({ sample, invitedLabel }) {
       <span className="retro-poster-stripes" />
       <span className="retro-poster-details">
         <span>
-          {sample.date} · {sample.location}
+          {sample.date} · <span className="card-text-value">{sample.location}</span>
         </span>
         <span>{sample.line}</span>
       </span>
@@ -61,6 +63,11 @@ export function InvitationArtwork({
   const sample = sampleOverride ?? getInvitationSample(template.slug, t);
   const typography = getCardTypography(template);
   const invitedLabel = formatCardOpening(t("invitations.invited"), language, typography.opening);
+  const artworkRoot = useRef(null);
+  const defaults = getInvitationSample(template.slug, t);
+  useInvitationTextLayout(artworkRoot, JSON.stringify([sample, language]), Object.entries(sample)
+    .filter(([key, value]) => value !== defaults[key] && ["string", "number"].includes(typeof value))
+    .map(([, value]) => String(value)));
   const { design } = template;
   const photoCard = template.visualAssets?.photoCard;
   const layeredScene = presentation === "portrait" && !separatedThemeAssets[template.slug] && recipientLayeredScenes[template.slug];
@@ -76,6 +83,7 @@ export function InvitationArtwork({
   ].includes(template.slug);
   return (
     <div
+      ref={artworkRoot}
       lang={language}
       data-card-font={typography.display}
       data-card-accent={typography.accent}
@@ -188,7 +196,7 @@ export function InvitationArtwork({
           <strong className="pastel-image-age">{sample.posterAge}</strong>
           <em>{sample.line}</em>
           <span className="pastel-image-details">
-            {sample.date} · {sample.location}
+            {sample.date} · <span className="card-text-value">{sample.location}</span>
           </span>
         </div>
       ) : coverImage && template.slug === "birthday-y2k-party" ? (
@@ -199,7 +207,7 @@ export function InvitationArtwork({
           <strong className="y2k-image-party">{t("cards.party")}</strong>
           <em>{sample.line}</em>
           <span className="y2k-image-details">
-            {sample.date} · {sample.location}
+            {sample.date} · <span className="card-text-value">{sample.location}</span>
           </span>
         </div>
       ) : coverImage && template.slug === "birthday-retro-pop" ? (
@@ -214,7 +222,7 @@ export function InvitationArtwork({
           <strong className="retro-image-age">{sample.posterAge}</strong>
           <em>{sample.line}</em>
           <span className="retro-image-details">
-            {sample.date} · {sample.location}
+            {sample.date} · <span className="card-text-value">{sample.location}</span>
           </span>
         </div>
       ) : coverImage ? (
@@ -235,6 +243,8 @@ export function InvitationArtwork({
           turns={t("modernToast.turns", { age: sample.age })}
           opening={t("modernToast.celebration")}
           closing={invitedLabel}
+          detailDate={sample.date}
+          detailLocation={sample.location}
           details={sample.details ?? (presentation === "portrait" ? `${sample.date} · ${sample.location}` : undefined)}
         />
       ) : template.slug === "birthday-retro-pop" ? (
@@ -275,7 +285,7 @@ export function InvitationArtwork({
           </span>
           <span className="invitation-preview-foot">
             <span>
-              {sample.date} · {sample.location}
+              {sample.date} · <span className="card-text-value">{sample.location}</span>
             </span>
             <span>{t("invitations.invites")}</span>
           </span>

@@ -13,8 +13,8 @@ export default function PizzaBirthdayPoster({ sample, large, separated = false, 
       {headline.length === 3 && <strong className="slice-the">{headline[0]}</strong>}
       <strong className="slice-pizza">{headline.at(-2)}</strong>
       <strong className="slice-club">{headline.at(-1)}</strong>
-      <span className="slice-host">{sample.opening ?? defaults.opening}<br />{name} {t("modernToast.turns", { age })}</span>
-      <span className="slice-details">{sample.date}<br />{sample.time ?? defaults.time} · {sample.location}</span>
+      <span className="slice-host">{sample.opening ?? defaults.opening}<br /><span className="card-text-value">{name}</span> {t("modernToast.turns", { age })}</span>
+      <span className="slice-details"><span className="card-text-value">{sample.date}</span><br /><span className="card-text-value">{sample.time ?? defaults.time}</span> · <span className="card-text-value">{sample.location}</span></span>
     </div>
     {!separated && ["top", "bottom"].map((position) => <img key={position} className={`pizza-slice-illustration slice-illustration-${position}`} src="/images/birthday/slice-club/pizza-slice.webp" alt="" aria-hidden="true" loading={large ? "eager" : "lazy"} decoding="async" draggable="false" />)}
   </div>;
@@ -22,8 +22,8 @@ export default function PizzaBirthdayPoster({ sample, large, separated = false, 
     <div className="pizza-birthday-copy">
       <strong className="pizza-make">{headline[0]}</strong>
       <strong className="pizza-headline">{headline.slice(1).join(" ")}</strong>
-      <span className="pizza-host">{name} {t("modernToast.turns", { age })}</span>
-      <span className="pizza-details">{sample.date} · {sample.time ?? defaults.time}<br />{sample.location}</span>
+      <span className="pizza-host"><span className="card-text-value">{name}</span> {t("modernToast.turns", { age })}</span>
+      <span className="pizza-details"><span className="card-text-value">{sample.date}</span> · <span className="card-text-value">{sample.time ?? defaults.time}</span><br /><span className="card-text-value">{sample.location}</span></span>
     </div>
     {!separated && <img className="pizza-chef-illustration" src="/images/birthday/little-pizza-chef/pizza-peel.webp" alt="" aria-hidden="true" loading={large ? "eager" : "lazy"} decoding="async" draggable="false" />}
   </div>;

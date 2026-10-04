@@ -9,6 +9,6 @@ export default function RetroBridalPoster({ title, name, namePossessive, line, d
     <span className="retro-bridal-host">{namePossessive ?? t("cards.possessive", { name: host })}</span>
     <strong><span>{t("cards.bridal.title")}</span><span>{t("cards.party")}</span></strong>
     <em>{line}</em>
-    <span className="retro-bridal-details">{date}<br />{location}</span>
+    <span className="retro-bridal-details"><span className="card-text-value">{date}</span><br /><span className="card-text-value">{location}</span></span>
   </div>;
 }

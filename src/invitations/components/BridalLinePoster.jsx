@@ -6,6 +6,6 @@ export default function BridalLinePoster({ variant, title, date, location, line 
     <span className="bridal-line-opening">{t(variant === "little-yes" ? "cards.engagement.opening" : "cards.bridal.toast")}</span>
     <strong>{title}</strong>
     <em>{line}</em>
-    <span className="bridal-line-details">{date}<br />{location}</span>
+    <span className="bridal-line-details"><span className="card-text-value">{date}</span><br /><span className="card-text-value">{location}</span></span>
   </div>;
 }

@@ -11,8 +11,8 @@ export default function CocktailBirthdayPoster({ sample, large, variant, artwork
   return <div className={`cocktail-birthday-poster cocktail-${variant}${isBridal ? " cocktail-bridal" : ""}`} style={getDesignFont("cocktail", language).style}>
     <div className="cocktail-birthday-copy">
       <strong className="cocktail-title">{sample.headline ?? defaults.headline}</strong>
-      <span className="cocktail-host">{isBridal ? <>{sample.opening ?? defaults.opening}<br />{name}</> : <>{name} {t("modernToast.turns", { age })}</>}</span>
-      <span className="cocktail-details">{sample.date}<br />{sample.time ?? defaults.time} · {sample.location}</span>
+      <span className="cocktail-host">{isBridal ? <>{sample.opening ?? defaults.opening}<br /><span className="card-text-value">{name}</span></> : <><span className="card-text-value">{name}</span> {t("modernToast.turns", { age })}</>}</span>
+      <span className="cocktail-details"><span className="card-text-value">{sample.date}</span><br /><span className="card-text-value">{sample.time ?? defaults.time}</span> · <span className="card-text-value">{sample.location}</span></span>
     </div>
     {components ? <SeparatedForeground className="cocktail-birthday-illustration" assets={components} eager={large} /> : <img className="cocktail-birthday-illustration" src={artwork} alt="" aria-hidden="true" loading={large ? "eager" : "lazy"} decoding="async" draggable="false" />}
   </div>;

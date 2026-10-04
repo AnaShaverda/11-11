@@ -10,6 +10,6 @@ export default function FullImageInvitationPoster({ title, line, date, location,
     <span className="full-image-cover-opening">{opening}</span>
     <strong>{["disco-scrapbook", "pink-disco-lines"].includes(variant) ? title.split(" ").map((word, index) => <span className="scrapbook-word" key={`${word}-${index}`}>{word} </span>) : title}</strong>
     <em>{line}</em>
-    <span className="full-image-cover-details">{date}<br />{location}</span>
+    <span className="full-image-cover-details"><span className="card-text-value">{date}</span><br /><span className="card-text-value">{location}</span></span>
   </div>;
 }

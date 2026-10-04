@@ -8,8 +8,8 @@ export default function SelectedBridalPoster({ sample, slug, large, assets, comp
   const defaults = getInvitationSample(slug, t);
   const { key, mode, font, artwork, stripeImage, labelBox, labelInk } = assets;
   const title = <strong className="selected-bride-title">{sample.headline ?? defaults.headline}</strong>;
-  const host = <span className="selected-bride-host">{sample.opening ?? defaults.opening}<br />{sample.posterName ?? sample.name ?? defaults.posterName}</span>;
-  const details = <span className="selected-bride-details">{sample.date}<br />{sample.time ?? defaults.time} · {sample.location}</span>;
+  const host = <span className="selected-bride-host">{sample.opening ?? defaults.opening}<br /><span className="card-text-value">{sample.posterName ?? sample.name ?? defaults.posterName}</span></span>;
+  const details = <span className="selected-bride-details"><span className="card-text-value">{sample.date}</span><br /><span className="card-text-value">{sample.time ?? defaults.time}</span> · <span className="card-text-value">{sample.location}</span></span>;
   const foreground = components
     ? <SeparatedForeground className="selected-bride-foreground" assets={components} eager={large} />
     : <img className="selected-bride-foreground" src={artwork} alt="" aria-hidden="true" loading={large ? "eager" : "lazy"} decoding="async" draggable="false" />;
