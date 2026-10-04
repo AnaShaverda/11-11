@@ -34,6 +34,12 @@ test("name and age aliases update together and an edited time reaches the invita
   assert.equal(result.date, "12 SEP 2027 · 18:30");
 });
 
+test("the invitation title follows a changed name until explicitly customized", () => {
+  const sample = { title: "Mia’s Pizza Party", posterName: "Mia", date: "18 JULY 2027" };
+  assert.equal(applyCardText(sample, { fields: { posterName: "Lily" } }, () => "").title, "Lily’s Pizza Party");
+  assert.equal(applyCardText(sample, { fields: { posterName: "Lily", title: "A slice of summer" } }, () => "").title, "A slice of summer");
+});
+
 test("saved text rejects unsupported keys, malformed values and oversized wording", () => {
   const template = invitationTemplates[0];
   const sample = invitationSamples[template.slug];

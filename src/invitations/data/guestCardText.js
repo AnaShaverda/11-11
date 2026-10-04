@@ -61,6 +61,9 @@ export function applyCardText(sample, edits, t) {
     if (sample.name !== undefined) result.name = edits.fields[nameKey];
     if (sample.posterName !== undefined) result.posterName = edits.fields[nameKey];
     if (sample.namePossessive !== undefined && !Object.hasOwn(edits.fields, "namePossessive")) result.namePossessive = t("cards.possessive", { name: edits.fields[nameKey] });
+    if (sample.title && sample[nameKey] && !Object.hasOwn(edits.fields, "title")) {
+      result.title = sample.title.split(String(sample[nameKey])).join(edits.fields[nameKey]);
+    }
   }
   const ageKey = sample.posterAge !== undefined ? "posterAge" : "age";
   if (Object.hasOwn(edits.fields, ageKey)) {
@@ -85,6 +88,11 @@ export function getEditableCardFields(template, sample, translations, t) {
     || (assets.photoCard && !assets.coverImage);
   const title = fields.find(field => field.key === "title");
   if (titleIsMetadata && title) title.aliases = [];
+  // These poster families do not render the sample's generic message.
+  if (assets.pizzaChef || assets.paintedPool || assets.paintedCocktail || assets.comicBirthday && template.visual !== "retro-sport") {
+    const message = fields.find(field => field.key === "line");
+    if (message) message.aliases = [];
+  }
   const name = fields.find(field => field.key === "posterName" || field.key === "name");
   if (name && (sample.namePossessive === undefined || sample.namePossessive === t("cards.possessive", { name: name.value }))) name.aliases.push(t("cards.possessive", { name: name.value }));
   for (const field of getCardExtraCopyFields(template, sample)) {

@@ -1,6 +1,7 @@
 import { useLayoutEffect, useRef, useState } from "react";
 import Icon from "../../components/ui/Icon.jsx";
 import { useLanguage } from "../../localization/LanguageContext.jsx";
+import { InvitationEditorField } from "./InvitationDetailsForm.jsx";
 
 export default function CardTextPopover({ target, onSave, onClose }) {
   const { t } = useLanguage();
@@ -49,16 +50,8 @@ export default function CardTextPopover({ target, onSave, onClose }) {
       onSave(target.fields.map((field, index) => ({ ...field, value: draft[index] }))); onClose();
     }}>
       <header><h2 id="guest-inline-title">{t("guestCards.text.inlineTitle")}</h2><button className="guest-text-close" type="button" aria-label={t("guestCards.text.close")} onClick={onClose}><Icon name="close" size={18} /></button></header>
-      {target.fields.map((field, index) => {
-        const props = { id: `guest-inline-${index}`, value: draft[index], maxLength: field.maxLength,
-          required: field.required, type: field.type ?? "text",
-          onInput: event => { event.target.setCustomValidity(""); setDraft(values => values.map((value, position) => position === index ? event.target.value : value)); } };
-        return <label className="guest-creator-field" key={`${field.group}:${field.key}`} htmlFor={props.id}>
-          {field.labelText ?? t(`guestCards.text.${field.label}`)}
-          {field.multiline ? <textarea {...props} rows={3} /> : <input {...props} />}
-          {field.group === "translations" && /\{\w+\}/.test(field.value) && <small>{t("guestCards.text.variableHint", { token: field.value.match(/\{\w+\}/)[0] })}</small>}
-        </label>;
-      })}
+      {target.fields.map((field, index) => <InvitationEditorField field={field} key={`${field.group}:${field.key}`} id={`guest-inline-${index}`} value={draft[index]} required={field.required}
+        onChange={value => setDraft(values => values.map((current, position) => position === index ? value : current))} />)}
       <footer><button className="guest-plan-clear" type="button" onClick={onClose}>{t("guestCards.text.cancel")}</button><button className="guest-plan-save" type="submit">{t("guestCards.text.inlineSave")}</button></footer>
     </form>
   </dialog>;

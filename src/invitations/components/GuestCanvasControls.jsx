@@ -1,7 +1,7 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useId, useRef } from "react";
 import Icon from "../../components/ui/Icon.jsx";
 import { useLanguage } from "../../localization/LanguageContext.jsx";
-import { entranceStyles, motionStyles, openingEffects, openingSpeeds, photoTypes, MAX_GALLERY_PHOTOS } from "../data/guestCardDesign.js";
+import { photoTypes, MAX_GALLERY_PHOTOS } from "../data/guestCardDesign.js";
 import { guestNotePresets, MAX_NOTE_PROMPT_LENGTH } from "../data/guestNotes.js";
 
 function CanvasPopover({ label, children, className = "", id, centered = false }) {
@@ -36,41 +36,15 @@ function CanvasPopover({ label, children, className = "", id, centered = false }
   </details>;
 }
 
-function Choices({ label, values, value, onChange, getLabel, visual = false }) {
+export function Choices({ label, values, value, onChange, getLabel, getDescription, visual = false }) {
   return <fieldset className={`guest-canvas-choices${visual ? " has-previews" : ""}`}>
     <legend>{label}</legend>
     <div>{values.map(choice => <button type="button" key={choice} aria-pressed={choice === value} onClick={() => onChange(choice)}>
       {visual && <span className={`guest-choice-preview is-${choice}`} aria-hidden="true"><i /><i /><i /><i /><i /></span>}
       <span>{getLabel(choice)}</span>
+      {getDescription && <small>{getDescription(choice)}</small>}
     </button>)}</div>
   </fieldset>;
-}
-
-export function CanvasMainTools({ settings, onChange, onPreview, fields, onEdit, mobile }) {
-  const { t } = useLanguage();
-  return <div className="guest-canvas-main-tools">
-    <CanvasPopover label={t("guestCards.canvas.wording")} className="guest-canvas-wording">
-      <p className="guest-canvas-hint">{t("guestCards.canvas.tap")}</p>
-      <div className="guest-canvas-text-list">{fields.map(field => <button type="button" key={`${field.group}:${field.key}`} onClick={event => {
-        event.currentTarget.closest("details").open = false;
-        onEdit([field], event.currentTarget);
-      }}><span>{field.labelText ?? t(`guestCards.text.${field.label}`)}</span><small>{field.value || t("guestCards.canvas.emptyText")}</small><Icon name="pen" size={14} /></button>)}</div>
-    </CanvasPopover>
-    <CanvasPopover label={t("guestCards.canvas.animations")} className="guest-canvas-animation" centered={mobile}>
-      <header><strong>{t("guestCards.canvas.animations")}</strong><p>{t("guestCards.canvas.animationHint")}</p></header>
-      <Choices label={t("guestCards.envelope.entrance")} values={entranceStyles} value={settings.entrance} onChange={entrance => onChange({ entrance })} getLabel={value => t(`guestCards.entrance.${value}`)} visual />
-      <Choices label={t("guestCards.opening.title")} values={openingEffects} value={settings.openingEffect} onChange={openingEffect => onChange({ openingEffect })} getLabel={value => t(`guestCards.opening.${value}`)} visual />
-      <Choices label={t("guestCards.motionStyle")} values={motionStyles} value={settings.motion} onChange={motion => onChange({ motion })} getLabel={value => t(`guestCards.motion.${value}`)} />
-      {settings.openingEffect !== "none" && <details className="guest-canvas-fine-tune"><summary>{t("guestCards.canvas.fineTune")}<Icon name="chevron-down" size={14} /></summary>
-        <Choices label={t("guestCards.opening.density")} values={["subtle", "celebration"]} value={settings.openingIntensity} onChange={openingIntensity => onChange({ openingIntensity })} getLabel={v => t(`guestCards.opening.${v}`)} />
-        <Choices label={t("guestCards.opening.speed")} values={openingSpeeds} value={settings.openingSpeed} onChange={openingSpeed => onChange({ openingSpeed })} getLabel={v => t(`guestCards.opening.speed.${v}`)} />
-        <Choices label={t("guestCards.opening.duration")} values={[3, 5, 8, 12]} value={settings.openingDuration} onChange={openingDuration => onChange({ openingDuration })} getLabel={count => t("guestCards.opening.seconds", { count })} />
-        <Choices label={t("guestCards.opening.colors")} values={["theme", "gold", "pastel"]} value={settings.openingPalette} onChange={openingPalette => onChange({ openingPalette })} getLabel={v => t(`guestCards.opening.palette.${v}`)} />
-      </details>}
-      <button className="guest-canvas-primary" type="button" onClick={onPreview}>{t("guestCards.canvas.tryAnimation")}<Icon name="arrow-up-right" size={16} /></button>
-    </CanvasPopover>
-    <span className="guest-canvas-tap-hint">{t("guestCards.canvas.tap")}</span>
-  </div>;
 }
 
 export function CanvasSectionTools({ title, onRemove, children, recommended = false }) {
@@ -91,13 +65,27 @@ export function CanvasAddSection({ section, onAdd }) {
   </button>;
 }
 
-export function CanvasReplyTools({ settings, notes, onChange, onNotesChange }) {
+export function CanvasReplyTools({ settings, onChange }) {
   const { t } = useLanguage();
-  return <CanvasPopover label={t("guestCards.canvas.replySettings")} className="guest-canvas-reply-tools">
-    <Choices label={t("guestCards.companionsAllowed")} values={[0, 1, 2, 3, 4, 5]} value={settings.companions} onChange={companions => onChange({ companions })} getLabel={count => count === 0 ? t("guestCards.noCompanions") : `+${count}`} />
-    <button className="guest-canvas-note-toggle" type="button" role="switch" aria-checked={notes.enabled} onClick={() => onNotesChange({ ...notes, enabled: !notes.enabled })}>
-      {t("guestCards.notes.allow")}<span className="guest-toggle-track"><span /></span>
-    </button>
+  const id = useId();
+  return <section className="guest-reply-settings" aria-labelledby={`${id}-title`}>
+    <h3 id={`${id}-title`}>{t("guestCards.canvas.replySettings")}</h3>
+    <p>{t("editor.replySettingsHint")}</p>
+    <fieldset>
+      <legend>{t("editor.extraGuests")}</legend>
+      <div className="guest-reply-limit-options">{[0, 1, 2, 3, 4, 5].map(count => <label key={count} className={settings.companions === count ? "is-selected" : ""}>
+        <input type="radio" name={`${id}-companions`} value={count} checked={settings.companions === count} onChange={() => onChange({ companions: count })} />
+        <span>{t(count === 0 ? "editor.justGuest" : count === 1 ? "editor.oneExtraGuest" : "editor.extraGuestCount", { count })}</span>
+      </label>)}</div>
+    </fieldset>
+    <p className="guest-reply-settings-result" role="status">{t(settings.companions === 0 ? "editor.replySingleSummary" : "editor.replyGroupSummary", { count: settings.companions + 1 })}</p>
+    <small>{t("editor.settingsAutoSave")}</small>
+  </section>;
+}
+
+export function CanvasNotesTools({ notes, onNotesChange }) {
+  const { t } = useLanguage();
+  return <CanvasPopover label={t("guestCards.notes.choose")} className="guest-canvas-note-tools">
     {notes.enabled && <>
       <Choices label={t("guestCards.notes.choose")} values={guestNotePresets} value={notes.preset} onChange={preset => onNotesChange({ ...notes, preset })} getLabel={v => t(`guestCards.notes.preset.${v}`)} />
       {notes.preset === "custom" && <label className="guest-creator-field">{t("guestCards.notes.question")}<input value={notes.prompt} maxLength={MAX_NOTE_PROMPT_LENGTH} onChange={event => onNotesChange({ ...notes, prompt: event.target.value })} /></label>}

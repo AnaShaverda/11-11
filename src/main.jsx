@@ -80,3 +80,5 @@ import "./styles/separated-theme-art.css";
 import "./styles/guest-cards.css";
 
 import "./styles/card-content-fit.css";
+import "./styles/glass-catalog-cards.css";
+import "./styles/invitation-editor.css";

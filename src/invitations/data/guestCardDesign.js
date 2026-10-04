@@ -1,10 +1,11 @@
+import { eventTimeZones } from "./guestCalendar.js";
 import { getBirthdayImageAssets } from "./assetPresentation.js";
 import { separatedThemeAssets, getSeparatedBackground } from "./separatedThemeAssets.js";
 import { themeDemoEvents } from "../../themes/data/demoEvents.js";
 import { invitationSamples } from "./invitationSamples.js";
 import { MAX_GUEST_NOTE_LENGTH } from "./guestNotes.js";
 
-export const guestPreviewDefaults = { details: true, rsvp: true, gallery: false, motion: "none", format: "square", companions: 1, entrance: "envelope", envelope: true, openingEffect: "none", openingIntensity: "subtle", openingSpeed: "slow", openingDuration: 8, openingPalette: "theme" };
+export const guestPreviewDefaults = { timeZone: "Asia/Tbilisi", details: true, rsvp: true, gallery: false, motion: "none", format: "square", companions: 1, entrance: "envelope", envelope: true, openingEffect: "none", openingIntensity: "subtle", openingSpeed: "slow", openingDuration: 8, openingPalette: "theme" };
 export const entranceStyles = ["envelope", "doors", "immediate"];
 export const motionStyles = ["none", "gentle", "float", "sparkle", "elegant"];
 export const openingEffects = ["none", "confetti", "streamers", "hearts", "sparkles", "petals"];
@@ -44,6 +45,7 @@ export function normalizeGuestSettings(value = {}) {
   if (!value || typeof value !== "object") value = {};
   const entrance = entranceStyles.includes(value.entrance) ? value.entrance : value.envelope === false ? "immediate" : "envelope";
   return {
+    timeZone: eventTimeZones.includes(value.timeZone) ? value.timeZone : "Asia/Tbilisi",
     details: value.details !== false,
     rsvp: value.rsvp !== false,
     gallery: value.gallery === true,
@@ -104,13 +106,24 @@ export function getGuestCardDesign(template) {
   const frame = images.find(asset => supportFrames.has(asset.image.split("/").at(-1)));
   const ornaments = images.filter(asset => asset !== frame && !/frame|border|background|envelope|tape|ribbon|bow|-pool\./.test(asset.image)).slice(0, 3);
   const paper = background.color ?? template.design.palette[0];
+  const colors = [paper, ...template.design.palette];
+  const lightest = colors.reduce((a, b) => luminance(a) > luminance(b) ? a : b);
+  const darkest = colors.reduce((a, b) => luminance(a) < luminance(b) ? a : b);
+  // Keep only a hint of the lightest theme color on supporting surfaces.
+  const supportPaper = `#${lightest.slice(1).match(/.{2}/g)
+    .map(hex => Math.round(parseInt(hex, 16) * .15 + 255 * .85).toString(16).padStart(2, "0")).join("")}`;
   return {
     paper,
+    supportPaper,
+    supportInk: readableInk(supportPaper, darkest),
+    supportErrorInk: readableInk(supportPaper, "#a72b36"),
     ink: readableInk(paper, template.design.palette[1]),
     errorInk: readableInk(paper, "#a72b36"),
     accent: template.design.palette[2],
     secondary: template.design.palette[3],
     background: background.image,
+    softScreen: Boolean(background.image && luminance(paper) > .55
+      && /stripe|gingham|check|painted-pool/.test(template.design.pattern)),
     pattern: patternFamily(template.design.pattern),
     frame: frame?.image,
     ornaments: ornaments.map(asset => asset.image),

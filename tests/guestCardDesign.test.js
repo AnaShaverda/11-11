@@ -12,6 +12,9 @@ test("all invitation designs supply readable guest cards and saved artwork witho
     const design = getGuestCardDesign(template);
     assert.ok(colorContrast(design.paper, design.ink) >= 4.5, template.slug);
     assert.ok(colorContrast(design.paper, design.errorInk) >= 4.5, `${template.slug}: validation text`);
+    assert.ok(colorContrast(design.supportPaper, "#000000") >= 17, `${template.slug}: pale supporting paper`);
+    assert.ok(colorContrast(design.supportPaper, design.supportInk) >= 4.5, `${template.slug}: dark supporting text`);
+    assert.ok(colorContrast(design.supportPaper, design.supportErrorInk) >= 4.5, `${template.slug}: supporting validation text`);
     for (const image of [design.background, design.frame, ...design.ornaments].filter(Boolean)) {
       assert.ok(fs.existsSync(new URL(`../public${image}`, import.meta.url)), `${template.slug}: ${image}`);
     }

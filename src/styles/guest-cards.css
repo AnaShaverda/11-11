@@ -316,6 +316,31 @@ html:has(.guest-preview-page), body:has(.guest-preview-page) { min-width: 0; }
 .design-guest-preview-link h2 { font-size: 26px; margin: 0 0 10px; }
 .design-guest-preview-link p { max-width: 58ch; color: var(--color-text-secondary); font-size: 15px; line-height: 1.6; margin: 0; }
 .design-guest-preview-link .invitation-open-action { margin: 0; flex-shrink: 0; }
+/* Soft screen treatments apply on desktop and mobile; artwork stays vivid. */
+.guest-preview-page[data-template="birthday-slice-club"],
+.guest-card-suite[data-template="birthday-slice-club"] {
+  background-color: #fff7e8;
+  background-image: url("/images/bridal/selected/backgrounds/ivory-paper.webp");
+  background-size: 900px 900px;
+  background-repeat: repeat;
+}
+.guest-card-suite[data-soft-screen="true"] {
+  --guest-screen-wash: color-mix(in srgb, var(--guest-paper) 35%, white);
+  background-image: linear-gradient(
+    color-mix(in srgb, var(--guest-screen-wash) 85%, transparent),
+    color-mix(in srgb, var(--guest-screen-wash) 85%, transparent)
+  ), var(--guest-background);
+}
+.guest-card-suite[data-template="birthday-peach-fizz"] {
+  background-color: #fff7e8;
+  background-image: none;
+}
+.guest-card-suite[data-template="birthday-peach-fizz"]::before {
+  display: block;
+  opacity: .2;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='paper'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Cpath fill='%23877759' filter='url(%23paper)' opacity='.18' d='M0 0h180v180H0z'/%3E%3C/svg%3E");
+  background-size: 180px 180px;
+}
 @container guest-preview (min-width: 721px) {
   .guest-card-suite { padding-inline: 0; }
   .guest-nav { max-width: 1008px; margin-inline: auto; padding-inline: 24px; }
@@ -324,6 +349,8 @@ html:has(.guest-preview-page), body:has(.guest-preview-page) { min-width: 0; }
   .guest-main-card, .guest-main-card.is-portrait { width: 100%; height: min(640px, calc(100svh - 218px)); aspect-ratio: auto; box-shadow: none; }
   .guest-main-content { width: min(360px, 100%, 100cqh); height: min(360px, 100%); margin: auto; }
   .guest-main-card.is-portrait .guest-main-content { width: min(360px, 100%, calc(100cqh * .5625)); height: 100%; }
+  .guest-main-card:not(.is-portrait) { width: min(760px, 100%); height: auto; aspect-ratio: 1; }
+  .guest-main-card:not(.is-portrait) .guest-main-content { width: 100%; height: 100%; margin: 0; }
   .guest-details { width: min(760px, calc(100% - 48px)); margin-inline: auto; }
   .guest-day-plan, .guest-rsvp, .guest-gallery { width: min(760px, calc(100% - 48px)); margin-inline: auto; }
 }
@@ -334,8 +361,8 @@ html:has(.guest-preview-page), body:has(.guest-preview-page) { min-width: 0; }
   .guest-nav > div { gap: 13px; }
   .guest-nav a { font-size: 12px; }
   .guest-nav a:first-child { display: none; }
-  .guest-card-layout { grid-template-columns: 1fr; grid-template-areas: "invitation" "gallery" "details" "rsvp"; gap: 0; }
-  .guest-card-layout:has(.guest-day-plan) { grid-template-areas: "invitation" "gallery" "details" "plan" "rsvp"; }
+  .guest-card-layout { grid-template-columns: 1fr; grid-template-areas: "invitation" "gallery" "event" "rsvp" "notes"; gap: 0; }
+  .guest-card-layout:has(.guest-day-plan) { grid-template-areas: "invitation" "gallery" "event" "plan" "rsvp" "notes"; }
   .guest-invitation-column, .guest-support-cards { display: contents; }
   .guest-main-card, .guest-main-card.is-portrait { grid-area: invitation; width: 100%; height: var(--guest-screen-height); aspect-ratio: auto; box-shadow: none; }
   .guest-main-card.is-square-mobile .guest-editable-artwork > .invitation-art { top: 50%; bottom: auto; height: auto !important; aspect-ratio: 1; transform: translateY(-50%); }
@@ -621,7 +648,7 @@ html:has(.guest-preview-page), body:has(.guest-preview-page) { min-width: 0; }
 .guest-section-add.is-gallery { margin-top: 28px; }
 .guest-section-add.is-notes { width: 100%; margin: 24px 0; padding: 18px; }
 @container guest-preview (max-width: 720px) {
-  .is-canvas-editing .guest-card-layout { grid-template-areas: "invitation" "gallery" "details" "plan" "rsvp"; }
+  .is-canvas-editing .guest-card-layout { grid-template-areas: "invitation" "gallery" "event" "plan" "rsvp" "notes"; }
   .guest-section-add { width: calc(100% - 32px); margin: 18px 16px 0; padding: 20px 16px; gap: 12px; }
   .guest-section-add.is-details { grid-area: details; }
   .guest-section-add.is-plan { grid-area: plan; }
@@ -633,7 +660,125 @@ html:has(.guest-preview-page), body:has(.guest-preview-page) { min-width: 0; }
 .guest-section-add-copy strong { display: flex; align-items: center; flex-wrap: wrap; gap: 8px; }
 .guest-section-add-copy .guest-recommended-badge { margin-inline-start: 0; }
 
+/* Every invitation uses pale theme paper and dark ink for its supporting cards. */
+.guest-card-suite :is(.guest-note, .guest-gallery, .guest-section-add) {
+  --guest-paper: var(--guest-support-paper);
+  --guest-ink: var(--guest-support-ink);
+  --guest-error-ink: var(--guest-support-error-ink);
+  color: var(--guest-ink);
+}
+
 .guest-card-layout > :is(.guest-gallery, .guest-section-add.is-gallery) { margin-top: 0; }
 @container guest-preview (max-width: 720px) {
   .guest-card-layout > :is(.guest-gallery, .guest-section-add.is-gallery) { grid-area: gallery; margin-top: 18px; }
+}
+
+@container guest-preview (max-width: 720px) {
+  .guest-notes { grid-area: notes; }
+}
+
+.guest-event-tools { padding: 32px 24px; text-align: center; width: min(760px, calc(100% - 48px)); margin-inline: auto; }
+.guest-countdown { display: flex; justify-content: center; gap: clamp(16px, 4vw, 36px); margin: 24px 0; }
+.guest-countdown > div { display: grid; gap: 8px; }
+.guest-countdown strong { font-size: clamp(26px, 5vw, 42px); font-variant-numeric: tabular-nums; }
+.guest-countdown span, .guest-event-date { font-size: 13px; }
+.guest-event-zone { display: grid; gap: 8px; max-width: 340px; margin: 20px auto; text-align: left; font-size: 14px; }
+.guest-event-zone select { width: 100%; min-width: 0; min-height: 44px; background: var(--guest-paper); color: var(--guest-ink); border: 1px solid currentColor; border-radius: 5px; padding: 8px; font: inherit; }
+.guest-event-zone small { line-height: 1.5; }
+.guest-calendar-menu { margin: 20px auto 0; max-width: 340px; }
+.guest-calendar-menu summary { padding: 12px; border: 1px solid currentColor; border-radius: 5px; min-height: 44px; }
+.guest-calendar-menu > div { display: grid; gap: 12px; margin-top: 10px; text-align: left; }
+.guest-calendar-menu :is(a, button) { display: block; min-height: 44px; padding: 12px; color: inherit; background: var(--guest-paper); border: 1px solid currentColor; border-radius: 5px; font: inherit; font-size: 14px; text-align: left; }
+.guest-calendar-menu small { font-size: 12px; line-height: 1.5; }
+@container guest-preview (max-width: 720px) { .guest-event-tools { grid-area: countdown; width: auto; margin: 16px 16px 0; } }
+
+/* Scroll reveals advance once; cards then remain opaque in their natural layout. */
+@media (prefers-reduced-motion: no-preference) {
+  html:has(.guest-preview-page) { scroll-behavior: smooth; }
+  .guest-scroll-screen { position: relative; z-index: var(--screen-layer, 1); }
+  .guest-scroll-screen > :is(.guest-main-card, .guest-event-tools, .guest-details, .guest-gallery, .guest-day-plan, .guest-rsvp),
+  .guest-main-card.guest-scroll-screen > .guest-main-content {
+    opacity: var(--screen-opacity, 1);
+    transform: translate(var(--screen-x, 0px), var(--screen-y, 0px)) scale(var(--screen-scale, 1));
+    transform-origin: center;
+    animation: none;
+  }
+  .guest-scroll-screen > .guest-details {
+    opacity: var(--screen-detail-opacity, 1);
+    transform: translate(var(--screen-x, 0px), var(--screen-detail-y, 0px)) scale(var(--screen-scale, 1));
+  }
+  .guest-scroll-screen .guest-card-decoration {
+    translate: 0 var(--screen-parallax, 0px);
+  }
+}
+.guest-card-suite :is(.guest-gallery, .guest-details, .guest-day-plan, .guest-rsvp, .guest-event-tools) { scroll-margin-top: 90px; }
+/* Related event information shares a screen; other sections have their own stage. */
+.guest-event-screen, .guest-section-screen {
+  min-height: var(--guest-screen-height, calc(100svh - 66px));
+  width: 100%; min-width: 0; padding-block: 32px;
+  display: flex; flex-direction: column; justify-content: center; gap: 24px;
+  scroll-margin-top: 66px;
+}
+.guest-event-screen > .guest-details { margin-block: 0; }
+.guest-section-screen > :is(.guest-gallery, .guest-day-plan, .guest-rsvp) { margin-block: 0; }
+.guest-section-screen > .guest-gallery { padding-block: 32px; }
+@container guest-preview (max-width: 720px) {
+  .guest-event-screen { grid-area: event; padding-block: 24px; gap: 16px; }
+  .guest-section-screen[data-section="gallery"] { grid-area: gallery; }
+  .guest-section-screen[data-section="plan"] { grid-area: plan; }
+  .guest-section-screen[data-section="rsvp"] { grid-area: rsvp; }
+  .guest-section-screen[data-section="notes"] { grid-area: notes; }
+  .guest-section-screen > :is(.guest-gallery, .guest-day-plan, .guest-rsvp),
+  .guest-event-screen > :is(.guest-event-tools, .guest-details) { width: calc(100% - 32px); margin: 0 auto; }
+  .guest-event-screen .guest-event-tools { padding: 24px 16px; }
+  .guest-event-screen .guest-details { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .guest-event-screen .guest-details .guest-note { min-height: 170px; }
+  .guest-event-screen .guest-details .guest-note-content { padding: 22px 12px; }
+  .guest-event-screen .guest-details h2 { font-size: 20px; }
+  .guest-event-screen .guest-detail-value { font-size: 15px; }
+  .guest-event-screen .guest-detail-time { font-size: 15px; }
+}
+
+/* Center short stages after scrolling; long forms keep their natural scroll. */
+html:has(.guest-preview-page) { scroll-padding-top: 66px; }
+.guest-event-screen, .guest-section-screen, .guest-invitation-column { scroll-snap-align: center; scroll-margin: 0; }
+html:has(.guest-inline-editor[open], .guest-photo-lightbox[open]) { scroll-snap-type: none; }
+@media (prefers-reduced-motion: reduce) { html:has(.guest-preview-page) { scroll-snap-type: none; } }
+@container guest-preview (min-width: 721px) {
+  .guest-main-card:not(.is-portrait) { width: min(960px, 100%); }
+  .guest-card-suite :is(.guest-event-tools, .guest-details, .guest-gallery, .guest-day-plan, .guest-rsvp, .guest-section-add) { width: min(960px, calc(100% - 48px)); margin-inline: auto; }
+  .guest-event-tools { padding: 40px 32px; }
+  .guest-event-tools h2 { font-size: 36px; }
+  .guest-countdown strong { font-size: 52px; }
+  .guest-event-screen .guest-details .guest-note { min-height: 220px; }
+  .guest-section-screen > :is(.guest-gallery, .guest-day-plan, .guest-rsvp) { min-height: min(680px, calc(var(--guest-screen-height) - 64px)); }
+  .guest-section-screen > .guest-rsvp { display: flex; flex-direction: column; }
+  .guest-rsvp .guest-note-content { max-width: 720px; margin-block: auto; }
+  .guest-rsvp h2 { font-size: 34px; }
+}
+@container guest-preview (max-width: 720px) {
+  .guest-main-card { scroll-snap-align: center; scroll-margin: 0; }
+  .guest-section-screen > :is(.guest-gallery, .guest-day-plan, .guest-rsvp),
+  .guest-event-screen > :is(.guest-event-tools, .guest-details) { width: calc(100% - 24px); }
+  .guest-section-screen > :is(.guest-gallery, .guest-day-plan, .guest-rsvp) { min-height: calc(var(--guest-screen-height) - 64px); }
+  .guest-section-screen > .guest-rsvp { display: flex; flex-direction: column; }
+  .guest-rsvp .guest-note-content { margin-block: auto; }
+  .guest-event-screen .guest-details .guest-note { min-height: 190px; }
+  .guest-event-screen .guest-event-tools { padding: 28px 20px; }
+}
+
+/* A short, staggered reveal gives each card's contents a gentle entrance. */
+@media (prefers-reduced-motion: no-preference) {
+  .guest-component-reveal:not(.is-component-visible) { opacity: 0; }
+  .guest-component-reveal.is-component-visible {
+    animation: guest-component-appear .7s var(--component-delay, 0ms) cubic-bezier(.22, 1, .36, 1) backwards;
+  }
+  .guest-component-reveal.is-component-focused { animation: none; opacity: 1; }
+}
+@keyframes guest-component-appear {
+  from { opacity: 0; translate: 0 10px; }
+  to { opacity: 1; translate: 0 0; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .guest-component-reveal { animation: none !important; opacity: 1; }
 }

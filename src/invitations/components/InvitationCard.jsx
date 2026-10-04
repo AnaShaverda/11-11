@@ -15,7 +15,6 @@ import { Link } from "react-router-dom";
 import { getInvitationSample } from "../../localization/cardCopy.js";
 import BirthdayIllustrations from "./BirthdayIllustrations.jsx";
 import { useLanguage } from "../../localization/LanguageContext.jsx";
-import Icon from "../../components/ui/Icon.jsx";
 import PhotoInvitationPoster from "./PhotoInvitationPoster.jsx";
 import ReferenceSocialPoster from "./ReferenceSocialPoster.jsx";
 import WeddingDayPoster from "./WeddingDayPoster.jsx";
@@ -329,7 +328,7 @@ export default function InvitationCard({ template, animationIndex = 0 }) {
   return (
     <Link
       id={`design-${template.slug}`}
-      className="invitation-card invitation-showcase-card"
+      className="invitation-card invitation-showcase-card invitation-card--glass"
       style={{ "--catalog-card-delay": `${Math.min(animationIndex, 6) * 40}ms` }}
       to={`/invitations/${template.slug}`}
       aria-label={`${t("common.exploreDesign")}: ${t(
@@ -349,12 +348,6 @@ export default function InvitationCard({ template, animationIndex = 0 }) {
       <span className="invitation-card-bottom">
         <span>
           <strong>{t(`themes.${template.id}.name`)}</strong>
-        </span>
-        <span className="invitation-card-action">
-          <span className="invitation-card-action-label">
-            {t("common.exploreDesign")}
-          </span>{" "}
-          <Icon name="arrow-up-right" size={16} />
         </span>
       </span>
     </Link>

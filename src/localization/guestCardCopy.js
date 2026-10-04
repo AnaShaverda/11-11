@@ -1,7 +1,9 @@
 import { guestCanvasCopy } from "./guestCanvasCopy.js";
+import { invitationEditorCopy } from "./invitationEditorCopy.js";
 
 export const guestCardCopy = {
   en: {
+    ...invitationEditorCopy.en,
     ...guestCanvasCopy.en,
     "guestCards.preview": "Guest preview", "guestCards.back": "Back to design",
     "guestCards.desktop": "Desktop", "guestCards.mobile": "Mobile", "guestCards.device": "Preview size",
@@ -42,7 +44,7 @@ export const guestCardCopy = {
     "guestCards.plan.error": "Enter a time and an activity, or remove this moment.",
     "guestCards.plan.saved": "Saved. Your guests can now see the plan.", "guestCards.plan.hidden": "No plan saved. The card is hidden.",
     "guestCards.notes.title": "Guest notes", "guestCards.notes.allow": "Let guests leave a note", "guestCards.notes.choose": "Choose a prompt",
-    "guestCards.notes.question": "Your question (optional)", "guestCards.notes.hint": "Your prompt appears with the RSVP. Leave the custom question blank to use the suggested wish prompt.",
+    "guestCards.notes.question": "Your question (optional)", "guestCards.notes.hint": "Your prompt appears in the separate Guest notes section. Leave the custom question blank to use the suggested wish prompt.",
     "guestCards.notes.preset.wish": "A wish for the hosts", "guestCards.notes.preset.memory": "A favorite memory", "guestCards.notes.preset.advice": "A little advice", "guestCards.notes.preset.custom": "Write your own question",
     "guestCards.notes.prompt.wish": "Leave us a wish", "guestCards.notes.prompt.memory": "Share a favorite memory", "guestCards.notes.prompt.advice": "Any advice for our next chapter?",
     "guestCards.notes.help.wish": "A few kind words or a wish for the day.", "guestCards.notes.help.memory": "A moment together that still makes you smile.",
@@ -70,6 +72,7 @@ export const guestCardCopy = {
     "guestCards.photos.family.0": "Little beginnings", "guestCards.photos.family.1": "Together with love", "guestCards.photos.family.2": "A beautiful day",
   },
   ka: {
+    ...invitationEditorCopy.ka,
     ...guestCanvasCopy.ka,
     "guestCards.preview": "სტუმრის ხედი", "guestCards.back": "დიზაინზე დაბრუნება",
     "guestCards.desktop": "კომპიუტერი", "guestCards.mobile": "მობილური", "guestCards.device": "ხედის ზომა",
@@ -110,7 +113,7 @@ export const guestCardCopy = {
     "guestCards.plan.error": "შეიყვანე დრო და აქტივობა, ან წაშალე ეს ეტაპი.",
     "guestCards.plan.saved": "შენახულია. სტუმრები დღის გეგმას ნახავენ.", "guestCards.plan.hidden": "გეგმა არ არის შენახული. ბარათი დამალულია.",
     "guestCards.notes.title": "სტუმრების ჩანაწერები", "guestCards.notes.allow": "სტუმრებს ჩანაწერის დატოვება შეეძლოთ", "guestCards.notes.choose": "აირჩიე შეკითხვა",
-    "guestCards.notes.question": "შენი შეკითხვა (არასავალდებულო)", "guestCards.notes.hint": "შეკითხვა პასუხის ბარათში გამოჩნდება. თუ შენს შეკითხვას არ შეიყვან, სურვილის დატოვების შეთავაზება გამოჩნდება.",
+    "guestCards.notes.question": "შენი შეკითხვა (არასავალდებულო)", "guestCards.notes.hint": "შეკითხვა სტუმრების ჩანაწერების ცალკე სექციაში გამოჩნდება. თუ შენს შეკითხვას არ შეიყვან, სურვილის დატოვების შეთავაზება გამოჩნდება.",
     "guestCards.notes.preset.wish": "სურვილი მასპინძლებს", "guestCards.notes.preset.memory": "საყვარელი მოგონება", "guestCards.notes.preset.advice": "პატარა რჩევა", "guestCards.notes.preset.custom": "დაწერე შენი შეკითხვა",
     "guestCards.notes.prompt.wish": "დაგვიტოვე სურვილი", "guestCards.notes.prompt.memory": "გაგვიზიარე საყვარელი მოგონება", "guestCards.notes.prompt.advice": "რას გვირჩევ ჩვენი ახალი ეტაპისთვის?",
     "guestCards.notes.help.wish": "რამდენიმე თბილი სიტყვა ან სურვილი ამ დღისთვის.", "guestCards.notes.help.memory": "ერთად გატარებული მომენტი, რომელიც დღესაც გაღიმებს.",

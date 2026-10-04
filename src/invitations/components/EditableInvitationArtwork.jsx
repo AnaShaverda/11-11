@@ -40,13 +40,16 @@ export default function EditableInvitationArtwork({ fields, onEdit, children }) 
       if (matches.length !== 1 || !isExactCardText(element.textContent, matches[0])) continue;
       for (const child of found.keys()) if (child !== element && element.contains(child)) found.delete(child);
     }
-    // Prefer individual lines over broad containers with several different fields.
+    // Keep a compound row when it contains its own text (e.g. "Birthday edition"
+    // and "turns 7" around a nested editable name). Removing that row leaves
+    // those words without a target.
     for (const element of found.keys()) {
-      if ([...found.keys()].some(child => child !== element && element.contains(child))) found.delete(element);
+      const hasOwnText = [...element.childNodes].some(node => node.nodeType === Node.TEXT_NODE && node.textContent.trim());
+      if (!hasOwnText && [...found.keys()].some(child => child !== element && element.contains(child))) found.delete(element);
     }
     const previous = new Map();
     for (const [element, matches] of found) {
-      const label = matches.map(field => t(`guestCards.text.${field.label}`)).join(", ");
+      const label = matches.map(field => field.labelText ?? t(`guestCards.text.${field.label}`)).join(", ");
       const attributes = { "data-card-edit": matches.map(field => `${field.group}:${field.key}`).join(" "), role: "button", tabindex: "0", "aria-label": t("guestCards.text.tapLabel", { label }), title: t("guestCards.text.tapLabel", { label }) };
       previous.set(element, Object.fromEntries(Object.keys(attributes).map(key => [key, element.getAttribute(key)])));
       for (const [key, value] of Object.entries(attributes)) element.setAttribute(key, value);
