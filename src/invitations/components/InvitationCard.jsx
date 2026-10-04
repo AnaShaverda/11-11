@@ -25,8 +25,15 @@ import { photoCardStyle } from "../data/assetPresentation.js";
 import { recipientArtwork } from "../data/recipientArtwork.js";
 import { recipientLayeredScenes } from "../data/recipientLayeredScenes.js";
 import { recipientTableArtwork } from "../data/recipientTableArtwork.js";
-import { separatedThemeAssets, getSeparatedComponents, getSeparatedBackground } from "../data/separatedThemeAssets.js";
-import { formatCardOpening, getCardTypography } from "../data/cardTypography.js";
+import {
+  separatedThemeAssets,
+  getSeparatedComponents,
+  getSeparatedBackground,
+} from "../data/separatedThemeAssets.js";
+import {
+  formatCardOpening,
+  getCardTypography,
+} from "../data/cardTypography.js";
 
 function RetroPoster({ sample, invitedLabel }) {
   return (
@@ -42,7 +49,8 @@ function RetroPoster({ sample, invitedLabel }) {
       <span className="retro-poster-stripes" />
       <span className="retro-poster-details">
         <span>
-          {sample.date} · <span className="card-text-value">{sample.location}</span>
+          {sample.date} ·{" "}
+          <span className="card-text-value">{sample.location}</span>
         </span>
         <span>{sample.line}</span>
       </span>
@@ -61,20 +69,41 @@ export function InvitationArtwork({
   const { t, language } = useLanguage();
   const sample = sampleOverride ?? getInvitationSample(template.slug, t);
   const typography = getCardTypography(template);
-  const invitedLabel = formatCardOpening(t("invitations.invited"), language, typography.opening);
+  const invitedLabel = formatCardOpening(
+    t("invitations.invited"),
+    language,
+    typography.opening
+  );
   const artworkRoot = useRef(null);
   const defaults = getInvitationSample(template.slug, t);
-  useInvitationTextLayout(artworkRoot, JSON.stringify([sample, language]), Object.entries(sample)
-    .filter(([key, value]) => value !== defaults[key] && ["string", "number"].includes(typeof value))
-    .map(([, value]) => String(value)));
+  useInvitationTextLayout(
+    artworkRoot,
+    JSON.stringify([sample, language]),
+    Object.entries(sample)
+      .filter(
+        ([key, value]) =>
+          value !== defaults[key] && ["string", "number"].includes(typeof value)
+      )
+      .map(([, value]) => String(value))
+  );
   const { design } = template;
   const photoCard = template.visualAssets?.photoCard;
-  const layeredScene = presentation === "portrait" && !separatedThemeAssets[template.slug] && recipientLayeredScenes[template.slug];
-  const separated = layeredScene ? undefined : separatedThemeAssets[template.slug];
-  const separatedBackground = separated && getSeparatedBackground(separated, presentation);
-  const coverImage = presentation === "portrait"
-    ? layeredScene || recipientTableArtwork[template.slug] || recipientArtwork[template.slug] || template.visualAssets?.coverImage
-    : template.visualAssets?.coverImage;
+  const layeredScene =
+    presentation === "portrait" &&
+    !separatedThemeAssets[template.slug] &&
+    recipientLayeredScenes[template.slug];
+  const separated = layeredScene
+    ? undefined
+    : separatedThemeAssets[template.slug];
+  const separatedBackground =
+    separated && getSeparatedBackground(separated, presentation);
+  const coverImage =
+    presentation === "portrait"
+      ? layeredScene ||
+        recipientTableArtwork[template.slug] ||
+        recipientArtwork[template.slug] ||
+        template.visualAssets?.coverImage
+      : template.visualAssets?.coverImage;
   const showGeneratedDecor = ![
     "birthday-coquette",
     "birthday-floral-affair",
@@ -99,7 +128,11 @@ export function InvitationArtwork({
           : ""
       }${photoCard ? " photo-invitation-art" : ""}${
         coverImage ? " full-image-cover" : ""
-      }${separated ? " invitation-art--separated" : ""}${large ? " is-large" : ""}${presentation === "portrait" ? " invitation-art--portrait" : ""}${layeredScene ? " invitation-art--layered" : ""} ${className}`}
+      }${separated ? " invitation-art--separated" : ""}${
+        large ? " is-large" : ""
+      }${presentation === "portrait" ? " invitation-art--portrait" : ""}${
+        layeredScene ? " invitation-art--layered" : ""
+      } ${className}`}
       style={{
         "--showcase-paper": design.palette[0],
         "--showcase-ink": design.palette[1],
@@ -107,26 +140,64 @@ export function InvitationArtwork({
         "--showcase-secondary": design.palette[3],
         ...(coverImage ? { "--cover-image": `url("${coverImage}")` } : {}),
         ...photoCardStyle(photoCard),
-        ...(separated ? {
-          "--separated-paper": separatedBackground.color ?? design.palette[0],
-          "--separated-background": separatedBackground.image ? `url("${separatedBackground.image}")` : "none",
-          "--separated-size": separatedBackground.size ?? "100% 100%",
-        } : {}),
+        ...(separated
+          ? {
+              "--separated-paper":
+                separatedBackground.color ?? design.palette[0],
+              "--separated-background": separatedBackground.image
+                ? `url("${separatedBackground.image}")`
+                : "none",
+              "--separated-size": separatedBackground.size ?? "100% 100%",
+            }
+          : {}),
       }}
       aria-hidden={ariaLabel ? undefined : true}
       aria-label={ariaLabel}>
       {layeredScene ? (
         <div className="invitation-layered-copy">
-          <InvitationArtwork template={template} large={large} sample={sample} presentation="square" ariaLabel={ariaLabel} />
+          <InvitationArtwork
+            template={template}
+            large={large}
+            sample={sample}
+            presentation="square"
+            ariaLabel={ariaLabel}
+          />
         </div>
       ) : template.visualAssets?.selectedBridal ? (
-        <SelectedBridalPoster sample={sample} slug={template.slug} large={large} assets={template.visualAssets.selectedBridal} components={separated?.container === "foreground" ? getSeparatedComponents(separated, presentation) : undefined} />
+        <SelectedBridalPoster
+          sample={sample}
+          slug={template.slug}
+          large={large}
+          assets={template.visualAssets.selectedBridal}
+          components={
+            separated?.container === "foreground"
+              ? getSeparatedComponents(separated, presentation)
+              : undefined
+          }
+        />
       ) : template.visualAssets?.comicBirthday ? (
         <ComicBirthdayPoster sample={sample} variant={template.visual} />
       ) : template.visualAssets?.paintedCocktail ? (
-        <CocktailBirthdayPoster sample={sample} large={large} variant={template.visual} slug={template.slug} isBridal={template.subcategory === "bridal-party"} artwork={template.visualAssets.cocktailIllustration} components={separated?.container === "foreground" ? getSeparatedComponents(separated, presentation) : undefined} />
+        <CocktailBirthdayPoster
+          sample={sample}
+          large={large}
+          variant={template.visual}
+          slug={template.slug}
+          isBridal={template.subcategory === "bridal-party"}
+          artwork={template.visualAssets.cocktailIllustration}
+          components={
+            separated?.container === "foreground"
+              ? getSeparatedComponents(separated, presentation)
+              : undefined
+          }
+        />
       ) : template.visualAssets?.pizzaChef ? (
-        <PizzaBirthdayPoster sample={sample} large={large} separated={Boolean(separated)} variant={template.visual} />
+        <PizzaBirthdayPoster
+          sample={sample}
+          large={large}
+          separated={Boolean(separated)}
+          variant={template.visual}
+        />
       ) : template.visualAssets?.paintedPool ? (
         <PoolBirthdayPoster sample={sample} variant={template.visual} />
       ) : template.visualAssets?.lineArt ? (
@@ -134,7 +205,11 @@ export function InvitationArtwork({
       ) : template.visualAssets?.christeningCard ? (
         <ChristeningCardPoster {...sample} variant={template.visual} />
       ) : template.visualAssets?.retroBridal ? (
-        <RetroBridalPoster {...sample} variant={template.visual} openingFont={typography.opening} />
+        <RetroBridalPoster
+          {...sample}
+          variant={template.visual}
+          openingFont={typography.opening}
+        />
       ) : coverImage &&
         ["cherry-toast", "little-yes", "blush-lift"].includes(
           template.visual
@@ -184,18 +259,21 @@ export function InvitationArtwork({
         <WeddingInkPoster {...sample} />
       ) : coverImage &&
         ["cobalt-cheers", "ribbon-social"].includes(template.visual) ? (
-        <ReferenceSocialPoster variant={template.visual} {...sample} openingFont={typography.opening} />
+        <ReferenceSocialPoster
+          variant={template.visual}
+          {...sample}
+          openingFont={typography.opening}
+        />
       ) : coverImage && template.slug === "birthday-pastel-dream" ? (
         <div className="pastel-image-cover-copy">
-          <span className="pastel-image-opening">
-            {invitedLabel}
-          </span>
+          <span className="pastel-image-opening">{invitedLabel}</span>
           <strong className="pastel-image-name">{sample.posterName}</strong>
           <span className="pastel-image-sweet">{t("cards.sweet")}</span>
           <strong className="pastel-image-age">{sample.posterAge}</strong>
           <em>{sample.line}</em>
           <span className="pastel-image-details">
-            {sample.date} · <span className="card-text-value">{sample.location}</span>
+            {sample.date} ·{" "}
+            <span className="card-text-value">{sample.location}</span>
           </span>
         </div>
       ) : coverImage && template.slug === "birthday-y2k-party" ? (
@@ -206,14 +284,13 @@ export function InvitationArtwork({
           <strong className="y2k-image-party">{t("cards.party")}</strong>
           <em>{sample.line}</em>
           <span className="y2k-image-details">
-            {sample.date} · <span className="card-text-value">{sample.location}</span>
+            {sample.date} ·{" "}
+            <span className="card-text-value">{sample.location}</span>
           </span>
         </div>
       ) : coverImage && template.slug === "birthday-retro-pop" ? (
         <div className="retro-image-cover-copy">
-          <span className="retro-image-opening">
-            {invitedLabel}
-          </span>
+          <span className="retro-image-opening">{invitedLabel}</span>
           <strong className="retro-image-title">
             <span>{sample.posterName}</span>
             <span>{sample.posterOccasion}</span>
@@ -221,7 +298,8 @@ export function InvitationArtwork({
           <strong className="retro-image-age">{sample.posterAge}</strong>
           <em>{sample.line}</em>
           <span className="retro-image-details">
-            {sample.date} · <span className="card-text-value">{sample.location}</span>
+            {sample.date} ·{" "}
+            <span className="card-text-value">{sample.location}</span>
           </span>
         </div>
       ) : coverImage ? (
@@ -236,7 +314,11 @@ export function InvitationArtwork({
       ) : photoCard ? (
         <PhotoInvitationPoster
           photoCard={photoCard}
-          components={separated?.container === "paper" ? getSeparatedComponents(separated, presentation) : undefined}
+          components={
+            separated?.container === "paper"
+              ? getSeparatedComponents(separated, presentation)
+              : undefined
+          }
           name={sample.name}
           age={sample.age}
           turns={t("modernToast.turns", { age: sample.age })}
@@ -244,7 +326,12 @@ export function InvitationArtwork({
           closing={invitedLabel}
           detailDate={sample.date}
           detailLocation={sample.location}
-          details={sample.details ?? (presentation === "portrait" ? `${sample.date} · ${sample.location}` : undefined)}
+          details={
+            sample.details ??
+            (presentation === "portrait"
+              ? `${sample.date} · ${sample.location}`
+              : undefined)
+          }
         />
       ) : template.slug === "birthday-retro-pop" ? (
         <RetroPoster sample={sample} invitedLabel={invitedLabel} />
@@ -284,7 +371,8 @@ export function InvitationArtwork({
           </span>
           <span className="invitation-preview-foot">
             <span>
-              {sample.date} · <span className="card-text-value">{sample.location}</span>
+              {sample.date} ·{" "}
+              <span className="card-text-value">{sample.location}</span>
             </span>
             <span>{t("invitations.invites")}</span>
           </span>
@@ -301,16 +389,32 @@ export function InvitationArtwork({
           draggable="false"
         />
       )}
-      {!separated && (template.visualAssets?.comicBirthday || template.visualAssets?.paintedPool) && (
-        <img className={template.visualAssets.comicBirthday ? "comic-birthday-art" : "pool-birthday-art"} src={coverImage} alt="" aria-hidden="true" loading={large ? "eager" : "lazy"} decoding="async" draggable="false" />
-      )}
-      {separated && !["foreground", "paper"].includes(separated.container) && !layeredScene && (
-        <BirthdayIllustrations
-          assets={getSeparatedComponents(separated, presentation)}
-          slot="component"
-          eager={large}
-        />
-      )}
+      {!separated &&
+        (template.visualAssets?.comicBirthday ||
+          template.visualAssets?.paintedPool) && (
+          <img
+            className={
+              template.visualAssets.comicBirthday
+                ? "comic-birthday-art"
+                : "pool-birthday-art"
+            }
+            src={coverImage}
+            alt=""
+            aria-hidden="true"
+            loading={large ? "eager" : "lazy"}
+            decoding="async"
+            draggable="false"
+          />
+        )}
+      {separated &&
+        !["foreground", "paper"].includes(separated.container) &&
+        !layeredScene && (
+          <BirthdayIllustrations
+            assets={getSeparatedComponents(separated, presentation)}
+            slot="component"
+            eager={large}
+          />
+        )}
       {!coverImage && (
         <BirthdayIllustrations
           assets={template.visualAssets?.invitation}
@@ -329,7 +433,9 @@ export default function InvitationCard({ template, animationIndex = 0 }) {
     <Link
       id={`design-${template.slug}`}
       className="invitation-card invitation-showcase-card invitation-card--glass"
-      style={{ "--catalog-card-delay": `${Math.min(animationIndex, 6) * 40}ms` }}
+      style={{
+        "--catalog-card-delay": `${Math.min(animationIndex, 6) * 40}ms`,
+      }}
       to={`/invitations/${template.slug}`}
       aria-label={`${t("common.exploreDesign")}: ${t(
         `themes.${template.id}.name`

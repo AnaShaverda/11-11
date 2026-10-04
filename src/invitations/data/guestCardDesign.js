@@ -1,6 +1,6 @@
 import { eventTimeZones } from "./guestCalendar.js";
 import { getBirthdayImageAssets } from "./assetPresentation.js";
-import { separatedThemeAssets, getSeparatedBackground } from "./separatedThemeAssets.js";
+import { separatedThemeAssets, getSeparatedBackground, getSeparatedComponents } from "./separatedThemeAssets.js";
 import { themeDemoEvents } from "../../themes/data/demoEvents.js";
 import { invitationSamples } from "./invitationSamples.js";
 import { MAX_GUEST_NOTE_LENGTH } from "./guestNotes.js";
@@ -93,6 +93,12 @@ function patternFamily(pattern = "") {
   return "paper";
 }
 
+const classicWeddingVisuals = new Set([
+  "editorial", "ivory-vows", "garden-table", "little-vows", "rose-letter", "sage-letter",
+  "portrait-promise", "golden-promise", "ring-and-spark", "watercolor-banquet",
+  "wedding-day-notes", "date-and-dinner", "first-dance", "ink-and-ivy",
+]);
+
 export function getGuestCardDesign(template) {
   const layers = separatedThemeAssets[template.slug];
   const assets = template.visualAssets ?? {};
@@ -106,6 +112,12 @@ export function getGuestCardDesign(template) {
   const frame = images.find(asset => supportFrames.has(asset.image.split("/").at(-1)));
   const ornaments = images.filter(asset => asset !== frame && !/frame|border|background|envelope|tape|ribbon|bow|-pool\./.test(asset.image)).slice(0, 3);
   const paper = background.color ?? template.design.palette[0];
+  const mobileBackground = layers ? getSeparatedBackground(layers, "portrait") : background;
+  const mobilePaper = mobileBackground.color ?? paper;
+  const mobileFrame = layers ? getSeparatedComponents(layers, "portrait")
+    .find(asset => /frame|border/.test(asset.id) && asset.width === "100%" && asset.height === "100%")?.image : undefined;
+  const classicMobilePaper = ["christening", "gender-reveal"].includes(template.subcategory)
+    || template.category === "Wedding" && classicWeddingVisuals.has(template.visual);
   const colors = [paper, ...template.design.palette];
   const lightest = colors.reduce((a, b) => luminance(a) > luminance(b) ? a : b);
   const darkest = colors.reduce((a, b) => luminance(a) < luminance(b) ? a : b);
@@ -114,6 +126,14 @@ export function getGuestCardDesign(template) {
     .map(hex => Math.round(parseInt(hex, 16) * .15 + 255 * .85).toString(16).padStart(2, "0")).join("")}`;
   return {
     paper,
+    classicMobilePaper,
+    mobilePaper,
+    mobileFrame,
+    mobileFrameInset: mobileFrame && /full-frame|petal-frame|floral-frame|olive-frame|garden-frame/.test(mobileFrame) ? "16%"
+      : template.subcategory === "gender-reveal" && mobileFrame ? "12%" : "8%",
+    mobileBackground: mobileBackground.image,
+    mobileInk: readableInk(mobilePaper, template.design.palette[1]),
+    mobileErrorInk: readableInk(mobilePaper, "#a72b36"),
     supportPaper,
     supportInk: readableInk(supportPaper, darkest),
     supportErrorInk: readableInk(supportPaper, "#a72b36"),

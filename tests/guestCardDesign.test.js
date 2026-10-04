@@ -136,3 +136,26 @@ test("malformed saved names or seat counts cannot restore a confirmed reply", ()
     assert.equal(normalizeGuestReply(value, 1), null);
   }
 });
+
+test("classic wedding and christening mobile screens reuse their portrait paper", () => {
+  for (const template of invitationTemplates.filter(item => item.subcategory === "christening" || ["wedding-ivory-vows", "wedding-garden-table", "wedding-rose-letter"].includes(item.slug))) {
+    const design = getGuestCardDesign(template);
+    assert.equal(design.classicMobilePaper, true, template.slug);
+    assert.ok(colorContrast(design.mobilePaper, design.mobileInk) >= 4.5, template.slug);
+  }
+  for (const slug of ["birthday-slice-club", "birthday-pink-lido", "wedding-blue-clink"]) {
+    assert.equal(getGuestCardDesign(invitationTemplates.find(item => item.slug === slug)).classicMobilePaper, false, slug);
+  }
+});
+
+test("classical gender reveal sections reuse paper and their original ribbon border", () => {
+  for (const template of invitationTemplates.filter(item => item.subcategory === "gender-reveal")) {
+    assert.equal(getGuestCardDesign(template).classicMobilePaper, true, template.slug);
+  }
+  const ribbon = getGuestCardDesign(invitationTemplates.find(item => item.slug === "gender-reveal-ribbon-surprise"));
+  assert.equal(ribbon.classicMobilePaper, true);
+  assert.equal(ribbon.mobileFrame, "/images/components/separated/gender-reveal-ribbon-surprise-frame-portrait.webp");
+  const framed = getGuestCardDesign(invitationTemplates.find(item => item.slug === "gender-reveal-pink-or-blue"));
+  assert.equal(framed.classicMobilePaper, true);
+  assert.ok(framed.mobileFrame.includes("pink-or-blue-frame"));
+});

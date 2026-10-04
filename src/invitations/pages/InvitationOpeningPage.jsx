@@ -14,7 +14,7 @@ import InvitationSectionsEditor from "../components/InvitationSectionsEditor.jsx
 import { applyCardText, normalizeCardText, getEditableCardFields, getCardTextFields } from "../data/guestCardText.js";
 import { normalizeGuestDayPlan } from "../data/guestDayPlan.js";
 import { normalizeGuestNoteSettings } from "../data/guestNotes.js";
-import { getGuestGallery, guestPreviewDefaults, normalizeGuestSettings, motionStyles, MAX_GALLERY_PHOTOS, MAX_PHOTO_BYTES, photoTypes } from "../data/guestCardDesign.js";
+import { getGuestCardDesign, getGuestGallery, guestPreviewDefaults, normalizeGuestSettings, motionStyles, MAX_GALLERY_PHOTOS, MAX_PHOTO_BYTES, photoTypes } from "../data/guestCardDesign.js";
 
 function readSettings(slug, params, hasPortrait) {
   let saved = guestPreviewDefaults;
@@ -209,7 +209,10 @@ function GuestPreview({ template }) {
     setPhotoError(false);
   }
 
-  return <main className={`guest-preview-page${creator ? " is-creating" : ""}`} data-template={template.slug} data-preview-mode={view === "mobile" || smallViewport ? "mobile" : "desktop"}>
+  const screenDesign = getGuestCardDesign(template);
+  const classicMobilePaper = (view === "mobile" || smallViewport) && screenDesign.classicMobilePaper;
+
+  return <main className={`guest-preview-page${creator ? " is-creating" : ""}`} data-template={template.slug} data-classic-mobile-paper={classicMobilePaper} style={classicMobilePaper ? { "--classic-paper": screenDesign.mobilePaper, "--classic-background": screenDesign.mobileBackground ? `url("${screenDesign.mobileBackground}")` : "none" } : undefined} data-preview-mode={view === "mobile" || smallViewport ? "mobile" : "desktop"}>
     <ScrollManager />
     <header className="guest-preview-toolbar">
       <Link className="guest-preview-back" to={`/invitations/${template.slug}`}><Icon name="arrow-left" size={18} /><span>{t("guestCards.back")}</span></Link>

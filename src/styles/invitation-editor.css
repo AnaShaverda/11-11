@@ -77,12 +77,21 @@
 }
 
 /* Use the existing reading face for forms, with artwork typography scoped separately. */
-.guest-support-cards, .invitation-editor-sidebar, .invitation-editor-guide, .guest-inline-editor {
-  --font-main: "Noto Serif Georgian", Georgia, serif;
+.guest-support-cards, .guest-section-screen, .guest-event-screen, .invitation-editor-sidebar, .invitation-editor-guide, .guest-inline-editor {
+  --font-main: "Noto Serif Georgian";
 }
+.guest-section-screen, .guest-event-screen { line-height: 1.65; letter-spacing: normal; }
+.guest-section-screen :is(h2, h3), .guest-event-screen :is(h2, h3) {
+  --font-main: "Noto Serif Georgian";
+  font-weight: 500;
+  line-height: 1.35;
+  letter-spacing: normal;
+}
+.guest-section-screen :is(input, textarea, label, legend, button),
+.guest-event-screen :is(input, select, label, button, summary) { letter-spacing: normal; }
 .guest-rsvp :is(label, legend, input, textarea, .guest-button), .guest-attendance-choices label { font-size: 16px; line-height: 1.6; }
 .guest-rsvp :is(.guest-party-size p, .guest-note-field small, .guest-canvas-response-hint) { font-size: 14px; line-height: 1.7; }
-.guest-rsvp h2 { --font-main: "Noto Serif Georgian", Georgia, serif; font-size: 28px; line-height: 1.4; }
+.guest-rsvp h2 { --font-main: "Noto Serif Georgian"; font-size: 28px; line-height: 1.4; font-weight: 500; }
 .guest-rsvp .guest-note-content { padding-inline: clamp(20px, 6vw, 54px); }
 .guest-rsvp.has-frame .guest-note-content { padding-inline: max(15%, 32px); }
 .guest-reply-settings { text-align: left; margin: 0 0 32px; padding: 20px; border: 1px solid #ddc8d1; border-radius: 10px; background: #fff8f3; color: #40313b; }

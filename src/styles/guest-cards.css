@@ -745,13 +745,16 @@ html:has(.guest-preview-page) { scroll-padding-top: 66px; }
 html:has(.guest-inline-editor[open], .guest-photo-lightbox[open]) { scroll-snap-type: none; }
 @media (prefers-reduced-motion: reduce) { html:has(.guest-preview-page) { scroll-snap-type: none; } }
 @container guest-preview (min-width: 721px) {
-  .guest-main-card:not(.is-portrait) { width: min(960px, 100%); }
-  .guest-card-suite :is(.guest-event-tools, .guest-details, .guest-gallery, .guest-day-plan, .guest-rsvp, .guest-section-add) { width: min(960px, calc(100% - 48px)); margin-inline: auto; }
-  .guest-event-tools { padding: 40px 32px; }
-  .guest-event-tools h2 { font-size: 36px; }
-  .guest-countdown strong { font-size: 52px; }
-  .guest-event-screen .guest-details .guest-note { min-height: 220px; }
-  .guest-section-screen > :is(.guest-gallery, .guest-day-plan, .guest-rsvp) { min-height: min(680px, calc(var(--guest-screen-height) - 64px)); }
+  .guest-invitation-column { min-height: calc(100svh - 154px); padding: 24px; }
+  .guest-main-card:not(.is-portrait) { width: min(680px, 100%, calc(100svh - 202px)); }
+  .is-canvas-editing .guest-invitation-column { min-height: 0; padding-block: 16px 32px; }
+  .is-canvas-editing .guest-main-card:not(.is-portrait) { width: min(680px, 100%, calc(100svh - 340px)); }
+  .guest-card-suite :is(.guest-event-tools, .guest-details, .guest-gallery, .guest-day-plan, .guest-rsvp, .guest-section-add) { width: min(760px, calc(100% - 64px)); margin-inline: auto; }
+  .guest-event-tools { padding: 24px 28px; }
+  .guest-event-tools h2 { font-size: 30px; }
+  .guest-countdown strong { font-size: 38px; }
+  .guest-event-screen .guest-details .guest-note { min-height: 170px; }
+  .guest-section-screen > :is(.guest-gallery, .guest-day-plan, .guest-rsvp) { min-height: min(560px, calc(var(--guest-screen-height) - 96px)); }
   .guest-section-screen > .guest-rsvp { display: flex; flex-direction: column; }
   .guest-rsvp .guest-note-content { max-width: 720px; margin-block: auto; }
   .guest-rsvp h2 { font-size: 34px; }
@@ -781,4 +784,172 @@ html:has(.guest-inline-editor[open], .guest-photo-lightbox[open]) { scroll-snap-
 }
 @media (prefers-reduced-motion: reduce) {
   .guest-component-reveal { animation: none !important; opacity: 1; }
+}
+
+/* Classic mobile invitations carry their own paper across every section. */
+.guest-preview-page[data-classic-mobile-paper="true"] {
+  background-color: var(--classic-paper);
+  background-image: var(--classic-background);
+  background-size: 100% auto;
+}
+.guest-card-suite[data-classic-mobile-paper="true"] {
+  background-color: var(--guest-mobile-paper);
+  background-image: var(--guest-mobile-background);
+  background-size: 100% auto;
+}
+.guest-card-suite[data-classic-mobile-paper="true"]::before { display: none; }
+.guest-card-suite[data-classic-paper="true"] :is(.guest-note, .guest-gallery, .guest-section-add) {
+  --guest-paper: var(--guest-mobile-paper);
+  --guest-ink: var(--guest-mobile-ink);
+  --guest-error-ink: var(--guest-mobile-error-ink);
+  color: var(--guest-ink);
+  background: transparent;
+  border: 0;
+  box-shadow: none;
+}
+.guest-card-suite[data-classic-mobile-paper="true"] .guest-note::after,
+.guest-card-suite[data-classic-mobile-paper="true"] .guest-note .guest-card-decoration,
+.guest-card-suite[data-classic-mobile-paper="true"] .guest-gallery-heading > img { display: none; }
+.guest-card-suite[data-classic-mobile-paper="true"] .guest-note.has-frame .guest-note-content { padding: 32px 24px 52px; }
+.guest-card-suite[data-classic-mobile-paper="true"] .guest-details .guest-note-content { padding: 22px 12px; }
+.guest-card-suite[data-classic-mobile-paper="true"] .guest-note.has-frame .guest-note-content { max-width: 100%; }
+.guest-card-suite[data-classic-paper="true"] :is(.guest-canvas-section-tools, .guest-reply-settings, .guest-plan-settings.is-embedded, .guest-name-field input, .guest-note-field textarea, .guest-plan-settings.is-embedded input, .guest-plan-settings.is-embedded textarea, .guest-plan-add) {
+  background: transparent;
+  box-shadow: none;
+}
+.guest-card-suite[data-classic-paper="true"] .guest-reply-limit-options label:not(:has(input:checked)) { background: transparent; }
+.guest-card-suite[data-classic-mobile-paper="true"] .guest-event-screen::before,
+.guest-card-suite[data-classic-mobile-paper="true"] .guest-section-screen::before {
+  content: ""; position: absolute; inset: 0 22px auto; height: 66px; pointer-events: none;
+  background: none;
+}
+.guest-card-suite[data-classic-mobile-paper="true"][data-template="wedding-ivory-vows"] :is(.guest-event-screen,.guest-section-screen)::before {
+  background: repeating-linear-gradient(90deg, transparent 0 21px, color-mix(in srgb, var(--guest-mobile-ink) 9%, transparent) 21px 22px, transparent 22px 23px);
+}
+
+/* Repeat the original portrait frame once per screen, around its full contents. */
+.guest-card-suite[data-mobile-frame="true"] :is(.guest-event-screen, .guest-section-screen) {
+  position: relative; isolation: isolate;
+  padding: 100px max(var(--guest-mobile-frame-inset), 48px);
+}
+.guest-card-suite[data-mobile-frame="true"] :is(.guest-event-screen, .guest-section-screen)::after {
+  content: ""; position: absolute; inset: 0; z-index: -1; pointer-events: none;
+  border: clamp(32px, 16cqw, 72px) solid transparent;
+  border-image-source: var(--guest-mobile-frame);
+  border-image-slice: var(--guest-frame-slice, 160);
+  border-image-repeat: stretch round;
+  opacity: var(--screen-opacity, 1);
+}
+.guest-card-suite[data-mobile-frame="true"] .guest-event-screen > :is(.guest-event-tools, .guest-details),
+.guest-card-suite[data-mobile-frame="true"] .guest-section-screen > :is(.guest-rsvp, .guest-day-plan, .guest-gallery) { width: 100%; }
+.guest-card-suite[data-mobile-frame="true"] .guest-event-tools { padding-inline: 0; }
+.guest-card-suite[data-mobile-frame="true"] .guest-countdown { gap: 12px; }
+.guest-card-suite[data-mobile-frame="true"] .guest-countdown strong { font-size: 26px; }
+.guest-card-suite[data-mobile-frame="true"] .guest-countdown span { font-size: 11px; }
+.guest-card-suite[data-mobile-frame="true"] .guest-rsvp .guest-note-content,
+.guest-card-suite[data-mobile-frame="true"] .guest-day-plan .guest-note-content { padding-inline: 0; }
+.guest-card-suite[data-mobile-frame="true"] .guest-section-screen > :is(.guest-rsvp, .guest-day-plan, .guest-gallery) { min-height: 0; }
+.guest-card-suite[data-mobile-frame="true"] .guest-reply-settings { padding: 12px; }
+@media (prefers-reduced-motion: reduce) {
+  .guest-card-suite[data-mobile-frame="true"] :is(.guest-event-screen,.guest-section-screen)::after { opacity: 1; }
+}
+
+/* Quiet stationery borders keep the original paper visible. */
+.guest-card-suite[data-classic-paper="true"] :is(.guest-note, .guest-gallery) {
+  border: 0;
+  border-radius: 0;
+}
+.guest-card-suite[data-classic-paper="true"] .guest-note::after { display: none; }
+@container guest-preview (min-width: 721px) {
+  .guest-card-suite[data-classic-frame="true"] :is(.guest-note, .guest-gallery) {
+    position: relative;
+    isolation: isolate;
+    padding: 80px;
+  }
+  .guest-card-suite[data-classic-frame="true"] :is(.guest-note, .guest-gallery)::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+    border: 56px solid transparent;
+    border-image-source: var(--guest-mobile-frame);
+    border-image-slice: var(--guest-frame-slice, 160);
+    border-image-repeat: stretch round;
+  }
+  .guest-card-suite[data-classic-frame="true"] .guest-note .guest-card-decoration { display: none; }
+  .guest-card-suite[data-classic-frame="true"] .guest-note .guest-note-content {
+    padding: 0;
+    width: 100%; max-width: 100%; min-width: 0;
+  }
+  .guest-card-suite[data-classic-frame="true"] .guest-note > .guest-canvas-section-tools { margin: 0 0 24px; }
+  .guest-card-suite[data-classic-frame="true"] .guest-gallery { padding: 80px; }
+}
+.guest-note-content :is(h2, h3, p, label, legend, small), .guest-gallery :is(h2, p, figcaption) {
+  max-width: 100%;
+  overflow-wrap: anywhere;
+}
+.guest-note-content :is(form, fieldset, input, textarea, .guest-plan-settings, .guest-plan-draft, .guest-plan-draft > li) { min-width: 0; max-width: 100%; }
+.guest-card-suite[data-classic-paper="true"] :is(.guest-section-add, .guest-canvas-section-tools, .guest-reply-settings, .guest-reply-limit-options label, .guest-attendance-choices label, .guest-button, .guest-calendar-menu summary, .guest-calendar-menu a, .guest-calendar-menu button, .guest-event-zone select, .guest-plan-add) {
+  border-radius: 0;
+  border-color: color-mix(in srgb, var(--guest-mobile-ink) 45%, transparent);
+  border-style: solid;
+}
+.guest-card-suite[data-classic-paper="true"] :is(.guest-section-add, .guest-reply-settings) {
+  border-width: 3px;
+  border-style: double;
+}
+.guest-card-suite[data-classic-paper="true"] :is(.guest-name-field input, .guest-note-field textarea) {
+  border: 1px solid color-mix(in srgb, var(--guest-mobile-ink) 45%, transparent);
+  border-radius: 0;
+  padding: 10px 12px;
+}
+.guest-card-suite[data-classic-paper="true"] :is(.guest-name-field input, .guest-note-field textarea):focus {
+  outline: 2px solid var(--guest-mobile-ink);
+  outline-offset: 2px;
+}
+.guest-card-suite[data-classic-paper="true"] .guest-reply-limit-options .is-selected {
+  border-color: var(--guest-mobile-ink);
+  background: color-mix(in srgb, var(--guest-mobile-ink) 8%, transparent);
+  box-shadow: inset 0 0 0 1px var(--guest-mobile-ink);
+}
+
+/* Note prompts expand within the form rather than covering or clipping it. */
+.guest-notes .guest-canvas-note-tools { width: 100%; margin-bottom: 28px; color: var(--guest-ink); }
+.guest-notes .guest-canvas-note-tools > summary {
+  justify-content: space-between;
+  min-height: 48px;
+  padding: 12px 0;
+  border: 0;
+  border-bottom: 1px solid color-mix(in srgb, var(--guest-ink) 35%, transparent);
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+  font-size: 15px;
+}
+.guest-notes .guest-canvas-note-tools .guest-canvas-panel {
+  position: static;
+  width: 100%; max-width: none; max-height: none;
+  overflow: visible;
+  margin-top: 16px; padding: 0;
+  border: 0; border-radius: 0; box-shadow: none;
+  background: transparent; color: var(--guest-ink);
+}
+.guest-notes .guest-canvas-note-tools .guest-canvas-choices > div { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+.guest-notes .guest-canvas-note-tools .guest-canvas-choices legend { display: none; }
+.guest-notes .guest-canvas-note-tools .guest-canvas-choices button {
+  min-width: 0; min-height: 48px; padding: 12px;
+  background: transparent; color: var(--guest-ink);
+  border: 1px solid color-mix(in srgb, var(--guest-ink) 35%, transparent);
+  border-radius: 0; font-size: 14px; text-align: left; justify-items: start;
+}
+.guest-notes .guest-canvas-note-tools .guest-canvas-choices button[aria-pressed="true"] {
+  background: color-mix(in srgb, var(--guest-ink) 7%, transparent);
+  border-color: var(--guest-ink); box-shadow: inset 0 0 0 1px var(--guest-ink);
+  color: var(--guest-ink);
+}
+.guest-notes .guest-canvas-note-tools .guest-canvas-hint { color: inherit; opacity: .8; font-size: 13px; }
+.guest-notes .guest-canvas-note-tools .guest-creator-field input { background: transparent; color: inherit; }
+@container guest-preview (max-width: 420px) {
+  .guest-notes .guest-canvas-note-tools .guest-canvas-choices > div { grid-template-columns: 1fr; }
 }
