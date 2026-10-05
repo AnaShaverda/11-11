@@ -1,4 +1,6 @@
 import { useEffect, useRef, useState } from "react";
+import { createPortal } from "react-dom";
+import { weddingThemeStyle } from "./WeddingThemeDecoration.jsx";
 import { useLanguage } from "../../localization/LanguageContext.jsx";
 import Icon from "../../components/ui/Icon.jsx";
 import OpeningCelebration from "./OpeningCelebration.jsx";
@@ -7,7 +9,7 @@ import { getEntranceTransition } from "../data/guestEntranceMotion.js";
 
 export default function InvitationEntrance({ settings, design, title, reducedMotion, onComplete, children }) {
   const { t } = useLanguage();
-  const entrance = settings.entrance;
+  const entrance = settings.entrance === "doorsBrown" ? "doors" : settings.entrance;
   const [phase, setPhase] = useState(entrance === "immediate" ? "opened" : "sealed");
   const [celebrating, setCelebrating] = useState(entrance === "immediate");
   const artwork = useRef(null);
@@ -42,7 +44,7 @@ export default function InvitationEntrance({ settings, design, title, reducedMot
     setPhase(reducedMotion ? entrance === "doors" ? "preview" : "opened" : "opening");
   }
 
-  return <div className={`guest-invitation-entrance entrance-${entrance} is-${phase}`} data-entrance-state={phase} data-entrance={entrance}>
+  return <div className={`guest-invitation-entrance entrance-${entrance} is-${phase}`} data-entrance-state={phase} data-entrance={entrance} style={design.weddingTheme && (entrance === "envelope" || entrance === "doors") ? { "--guest-paper": design.paper, "--guest-ink": design.ink, "--guest-accent": design.accent } : undefined}>
     <div className="guest-letter-window">
       <div className="guest-invitation-artwork" ref={artwork} tabIndex={-1} aria-label={t("guestCards.invitation")}
         aria-hidden={phase === "sealed" || phase === "opening" ? "true" : undefined} inert={phase !== "opened"}>
@@ -71,7 +73,18 @@ export default function InvitationEntrance({ settings, design, title, reducedMot
         <span>{t("guestCards.envelope.open")} <Icon name="arrow-up-right" size={17} /></span>
       </button>}
     </div>}
-    {entrance === "doors" && phase !== "opened" && <DecorativeDoors phase={phase} title={title} onOpen={openInvitation}
+    {entrance === "portraitEnvelope" && phase !== "opened" && createPortal(<div className={`guest-portrait-envelope-scene is-${phase}`} style={design.weddingTheme ? weddingThemeStyle(design.weddingTheme) : undefined} role="dialog" aria-modal="true" aria-label={t("guestCards.envelope.open")}>
+      <div className="portrait-envelope-letter" aria-hidden="true" inert>{children}</div>
+      <div className="portrait-envelope-fold portrait-envelope-top" aria-hidden="true" />
+      <div className="portrait-envelope-fold portrait-envelope-bottom" aria-hidden="true" />
+      <div className="portrait-envelope-fold portrait-envelope-left" aria-hidden="true" />
+      <div className="portrait-envelope-fold portrait-envelope-right" aria-hidden="true" />
+      <img className="portrait-envelope-seal" src="/images/wedding/sage-letter/sage-wax-seal.webp" alt="" />
+      <p className="portrait-envelope-greeting">{t("guestCards.envelope.forYou")}</p>
+      <p className="portrait-envelope-title">{title}</p>
+      {phase === "sealed" && <button type="button" className="portrait-envelope-open" autoFocus onKeyDown={event => { if (event.key === "Tab") event.preventDefault(); }} onClick={openInvitation}><span>{t("guestCards.envelope.open")} <Icon name="arrow-up-right" size={17} /></span></button>}
+    </div>, document.body)}
+    {entrance === "doors" && phase !== "opened" && <DecorativeDoors variant={settings.entrance === "doorsBrown" ? "brown" : "white"} phase={phase} title={title} onOpen={openInvitation}
       onView={() => setPhase(reducedMotion ? "opened" : "finishing")} viewButton={viewButton} />}
     {celebrating && <OpeningCelebration key={`${settings.openingEffect}:${settings.openingIntensity}:${settings.openingSpeed}:${settings.openingDuration}:${settings.openingPalette}`} settings={settings} design={design} />}
     {phase === "opened" && openedByGuest.current && <span className="guest-screen-reader" role="status">{t("guestCards.envelope.opened")}</span>}

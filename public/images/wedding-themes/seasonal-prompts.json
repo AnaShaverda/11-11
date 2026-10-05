@@ -1,0 +1,15 @@
+{
+  "mode": "built-in image_gen",
+  "assets": [
+    {
+      "theme": "autumn",
+      "source": "exec-35774c71-052e-405c-ae99-7ebd449489bb.png",
+      "prompt": "Transparent airy botanical corner composition, central two thirds empty, delicate realistic watercolor; autumn oak/maple leaves in muted honey/rust/taupe with ivory blossoms. No frame, background, paper, text or emojis."
+    },
+    {
+      "theme": "rtveli",
+      "source": "exec-aff9a0c0-c260-41af-a4a3-8c0ba9285285.png",
+      "prompt": "Transparent airy botanical corner composition, central two thirds empty, delicate realistic watercolor; Georgian Rtveli grapevine leaves and tendrils, muted wine-purple and golden green grape bunches, sage and antique gold. No frame, background, paper, text or emojis."
+    }
+  ]
+}

@@ -1,3 +1,4 @@
+import { normalizeRsvpDeadline } from "./invitationDate.js";
 import { eventTimeZones } from "./guestCalendar.js";
 import { getBirthdayImageAssets } from "./assetPresentation.js";
 import { separatedThemeAssets, getSeparatedBackground, getSeparatedComponents } from "./separatedThemeAssets.js";
@@ -5,8 +6,8 @@ import { themeDemoEvents } from "../../themes/data/demoEvents.js";
 import { invitationSamples } from "./invitationSamples.js";
 import { MAX_GUEST_NOTE_LENGTH } from "./guestNotes.js";
 
-export const guestPreviewDefaults = { timeZone: "Asia/Tbilisi", details: true, rsvp: true, gallery: false, motion: "none", format: "square", companions: 1, entrance: "envelope", envelope: true, openingEffect: "none", openingIntensity: "subtle", openingSpeed: "slow", openingDuration: 8, openingPalette: "theme" };
-export const entranceStyles = ["envelope", "doors", "immediate"];
+export const guestPreviewDefaults = { timeZone: "Asia/Tbilisi", details: true, rsvp: true, rsvpDeadline: "", music: false, gallery: false, motion: "none", format: "square", companions: 1, entrance: "envelope", envelope: true, openingEffect: "none", openingIntensity: "subtle", openingSpeed: "slow", openingDuration: 8, openingPalette: "theme" };
+export const entranceStyles = ["envelope", "portraitEnvelope", "doors", "doorsBrown", "immediate"];
 export const motionStyles = ["none", "gentle", "float", "sparkle", "elegant"];
 export const openingEffects = ["none", "confetti", "streamers", "hearts", "sparkles", "petals"];
 export const openingSpeeds = ["dreamy", "slow", "lively"];
@@ -48,12 +49,14 @@ export function normalizeGuestSettings(value = {}) {
     timeZone: eventTimeZones.includes(value.timeZone) ? value.timeZone : "Asia/Tbilisi",
     details: value.details !== false,
     rsvp: value.rsvp !== false,
+    rsvpDeadline: normalizeRsvpDeadline(value.rsvpDeadline),
     gallery: value.gallery === true,
+    music: value.music === true,
     motion: motionStyles.includes(value.motion) ? value.motion : "none",
     format: value.format === "portrait" ? "portrait" : "square",
     companions: Number.isInteger(value.companions) ? Math.min(5, Math.max(0, value.companions)) : 1,
     entrance,
-    envelope: entrance === "envelope",
+    envelope: entrance === "envelope" || entrance === "portraitEnvelope",
     openingEffect: openingEffects.includes(value.openingEffect) ? value.openingEffect : "none",
     openingIntensity: value.openingIntensity === "celebration" ? "celebration" : "subtle",
     openingSpeed: openingSpeeds.includes(value.openingSpeed) ? value.openingSpeed : "slow",

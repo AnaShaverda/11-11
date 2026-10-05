@@ -1,3 +1,6 @@
+import GuestMusicControl from "./GuestMusicControl.jsx";
+import { formatRsvpDeadline } from "../data/invitationDate.js";
+import { weddingPartyRoleLabel } from "../data/weddingParty.js";
 import { useCallback, useEffect, useRef, useState } from "react";
 import Icon from "../../components/ui/Icon.jsx";
 import { CardCopyProvider, useLanguage } from "../../localization/LanguageContext.jsx";
@@ -8,8 +11,9 @@ import { getGuestNotePrompt, normalizeGuestNoteSettings, MAX_GUEST_NOTE_LENGTH, 
 import GuestEventTools from "./GuestEventTools.jsx";
 import InvitationEntrance from "./InvitationEntrance.jsx";
 import EditableInvitationArtwork from "./EditableInvitationArtwork.jsx";
-import CustomInvitationCover from "./CustomInvitationCover.jsx";
-import { footerScenes, getClassicalOrnament, getClassicalPaper, ornamentTones } from "../data/customClassicalThemes.js";
+import CustomInvitationCover, { lightCoverColors } from "./CustomInvitationCover.jsx";
+import WeddingThemeDecoration, { weddingThemeStyle } from "./WeddingThemeDecoration.jsx";
+import { getClassicalTheme, footerScenes, getClassicalOrnament, getClassicalPaper, ornamentTones } from "../data/customClassicalThemes.js";
 import { MAX_DAY_PLAN_TITLE, MAX_DAY_PLAN_DETAILS } from "../data/guestDayPlan.js";
 import { momentMapUrl } from "../data/customMoments.js";
 import { useReducedGuestMotion, useElegantGuestMotion, useGuestComponentReveals } from "../hooks/useGuestMotion.js";
@@ -33,9 +37,9 @@ function CardDecoration({ design, ornament = 0 }) {
 }
 
 function NoteCard({ design, className = "", ornament, children, tools, ...props }) {
-  return <section className={`guest-note${design.frame ? " has-frame" : ""} ${className}`} {...props}>
+  return <section className={`guest-note${design.weddingTheme ? " wedding-stationery-note" : ""}${design.frame ? " has-frame" : ""} ${className}`} {...props}>
     {tools}
-    <CardDecoration design={design} ornament={ornament} />
+    {design.weddingTheme ? <WeddingThemeDecoration theme={design.weddingTheme} adaptive /> : <CardDecoration design={design} ornament={ornament} />}
     <div className="guest-note-content">{children}</div>
   </section>;
 }
@@ -47,8 +51,9 @@ function readReply(slug, limit) {
   return null;
 }
 
-function AttendanceCard({ template, design, maxCompanions, onEditText, tools, creator, editableFields, onSettingsChange, fullName, onFullNameChange }) {
-  const { t } = useLanguage();
+function AttendanceCard({ template, design, rsvpDeadline, maxCompanions, onEditText, tools, creator, showCreatorTools, editableFields, onSettingsChange, fullName, onFullNameChange }) {
+  const { t, language } = useLanguage();
+  const deadlineLine = formatRsvpDeadline(rsvpDeadline, language);
   const [reply, setReply] = useState(() => readReply(template.slug, maxCompanions));
   const [attendance, setAttendance] = useState(() => reply?.attendance ?? "going");
   const [companions, setCompanions] = useState(() => reply?.companions ?? 0);
@@ -81,7 +86,7 @@ function AttendanceCard({ template, design, maxCompanions, onEditText, tools, cr
   }
 
   return <NoteCard design={design} className="guest-rsvp" id="guest-rsvp" aria-labelledby="guest-rsvp-title" ornament={2} tabIndex={-1} tools={tools}>
-    {creator && <CanvasReplyTools settings={{ companions: maxCompanions }} onChange={onSettingsChange} />}
+    {showCreatorTools && <CanvasReplyTools settings={{ companions: maxCompanions }} onChange={onSettingsChange} />}
     {reply ? <div className="guest-reply-confirmation" role="status">
       <span className="guest-reply-mark"><Icon name={reply.attendance === "going" ? "check" : "heart"} size={26} /></span>
       <h2 id="guest-rsvp-title">{t(reply.attendance === "going" ? "guestCards.confirmed" : "guestCards.declineConfirmed")}</h2>
@@ -91,7 +96,8 @@ function AttendanceCard({ template, design, maxCompanions, onEditText, tools, cr
       <button className="guest-button" type="button" onClick={editReply}>{t("guestCards.edit")} <Icon name="pen" size={16} /></button>
     </div> : <form onSubmit={submit} noValidate>
       <h2 id="guest-rsvp-title"><EditableValue field={editableFields.find(field => field.key === "guestCards.rsvp.title")} onEdit={onEditText}>{t("guestCards.rsvp.title")}</EditableValue></h2>
-      {creator && <p className="guest-canvas-response-hint">{t("guestCards.canvas.replyHint")}</p>}
+      {deadlineLine && <p className="guest-rsvp-deadline">{deadlineLine}</p>}
+      {showCreatorTools && <p className="guest-canvas-response-hint">{t("guestCards.canvas.replyHint")}</p>}
       <div className="guest-name-field">
         <label htmlFor="guest-full-name"><EditableValue field={editableFields.find(field => field.key === "guestCards.fullName")} onEdit={onEditText}>{t("guestCards.fullName")}</EditableValue></label>
         <input id="guest-full-name" name="fullName" autoComplete="name" autoCapitalize="words" spellCheck={false} required maxLength={MAX_GUEST_NAME_LENGTH} readOnly={creator} placeholder={creator ? t("guestCards.canvas.guestName") : undefined}
@@ -110,9 +116,9 @@ function AttendanceCard({ template, design, maxCompanions, onEditText, tools, cr
         {maxCompanions > 0 && <>
           <p id="guest-companions-label">{t("guestCards.comingWith")}</p>
           <div className="guest-companion-stepper" role="group" aria-labelledby="guest-companions-label">
-            <button type="button" aria-label={t("guestCards.fewer")} disabled={creator || companions === 0} onClick={() => setCompanions(count => Math.max(0, count - 1))}>−</button>
+            <button type="button" aria-label={t("guestCards.fewer")} disabled={creator || companions === 0} onClick={() => setCompanions(count => Math.max(0, count - 1))}><Icon name="minus" size={18} /></button>
             <output aria-label={t("guestCards.companionCount")} aria-live="polite">{companions}</output>
-            <button type="button" aria-label={t("guestCards.more")} disabled={creator || companions >= maxCompanions} onClick={() => setCompanions(count => Math.min(maxCompanions, count + 1))}>+</button>
+            <button type="button" aria-label={t("guestCards.more")} disabled={creator || companions >= maxCompanions} onClick={() => setCompanions(count => Math.min(maxCompanions, count + 1))}><Icon name="plus" size={18} /></button>
           </div>
         </>}
         <span className="guest-total-seats" aria-live="polite">{t(seats === 1 ? "guestCards.seat" : "guestCards.seats", { count: seats })}</span>
@@ -122,7 +128,7 @@ function AttendanceCard({ template, design, maxCompanions, onEditText, tools, cr
   </NoteCard>;
 }
 
-function GuestNotesCard({ template, design, noteSettings, onNoteSettingsChange, onEditText, creator, tools, fullName }) {
+function GuestNotesCard({ template, design, noteSettings, onNoteSettingsChange, onEditText, creator, showCreatorTools, tools, fullName }) {
   const { t } = useLanguage();
   const [saved, setSaved] = useState(() => {
     try { return JSON.parse(localStorage.getItem(`1111-guest-message-v1:${template.slug}`)) ?? null; } catch { return null; }
@@ -136,7 +142,7 @@ function GuestNotesCard({ template, design, noteSettings, onNoteSettingsChange, 
     try { localStorage.setItem(`1111-guest-message-v1:${template.slug}`, JSON.stringify(message)); } catch { /* Keep the in-memory note. */ }
   }
   return <NoteCard design={design} className="guest-rsvp guest-notes" id="guest-notes" aria-labelledby="guest-notes-title" ornament={1} tabIndex={-1} tools={tools}>
-    {creator && <CanvasNotesTools notes={noteSettings} onNotesChange={onNoteSettingsChange} />}
+    {showCreatorTools && <CanvasNotesTools notes={noteSettings} onNotesChange={onNoteSettingsChange} />}
     <h2 id="guest-notes-title">{t("guestCards.notes.title")}</h2>
     {saved && !creator ? <div className="guest-reply-confirmation" role="status">
       <p>{t("editor.noteSaved")}</p>{saved.fullName && <p className="guest-reply-name">{saved.fullName}</p>}<blockquote className="guest-reply-note">{saved.note}</blockquote>
@@ -169,7 +175,7 @@ function PhotoLightbox({ photos, index, onIndexChange, onClose }) {
   const { t } = useLanguage();
   const dialog = useRef(null);
   const photo = photos[index];
-  const caption = photo.captionKey ? t(photo.captionKey) : photo.name;
+  const caption = photo.captionKey ? t(photo.captionKey) : t("guestCards.photoNumber", { number: index + 1 });
   useEffect(() => {
     const element = dialog.current;
     if (!element.open) element.showModal();
@@ -185,7 +191,7 @@ function PhotoLightbox({ photos, index, onIndexChange, onClose }) {
       <GalleryPhoto key={photo.id} photo={photo} caption={caption} eager />
       <div className="guest-lightbox-caption">
         <button type="button" onClick={() => step(-1)} aria-label={t("guestCards.previousPhoto")} disabled={photos.length === 1}><Icon name="arrow-left" /></button>
-        <div><strong>{caption}</strong><small>{t("guestCards.photoPosition", { current: index + 1, count: photos.length })}</small></div>
+        <div>{photo.captionKey && <strong>{caption}</strong>}<small>{t("guestCards.photoPosition", { current: index + 1, count: photos.length })}</small></div>
         <button type="button" onClick={() => step(1)} aria-label={t("guestCards.nextPhoto")} disabled={photos.length === 1}><Icon name="arrow-right" /></button>
       </div>
     </div>
@@ -204,11 +210,11 @@ function PhotoGallery({ photos, design, creator, tools, galleryTools, headingFie
     {creator && <CanvasGalleryTools {...galleryTools} />}
     {photos.length === 0 && <div className="guest-canvas-empty-gallery"><Icon name="image" size={32} /><p>{t("guestCards.canvas.galleryEmpty")}</p></div>}
     <div className="guest-photo-strip">{photos.map((photo, index) => {
-      const caption = photo.captionKey ? t(photo.captionKey) : photo.name;
+      const caption = photo.captionKey ? t(photo.captionKey) : t("guestCards.photoNumber", { number: index + 1 });
       return <figure className="guest-polaroid" key={photo.id}>
         {creator && !photo.sample && <button className="guest-canvas-remove-photo" type="button" onClick={() => galleryTools.onRemove(photo.id)} aria-label={t("guestCards.removePhoto", { name: caption })}><Icon name="close" size={16} /></button>}
         <button type="button" onClick={() => setActivePhoto(index)} aria-label={t("guestCards.openPhoto", { name: caption })}><GalleryPhoto photo={photo} caption={caption} /></button>
-        <figcaption>{caption}</figcaption>
+        {photo.captionKey && <figcaption>{caption}</figcaption>}
       </figure>;
     })}</div>
     {activePhoto !== null && <PhotoLightbox photos={photos} index={activePhoto} onIndexChange={setActivePhoto} onClose={() => setActivePhoto(null)} />}
@@ -226,15 +232,16 @@ function DayPlanCard({ dayPlan, design, onEditText, tools, editor, headingField 
   </NoteCard>;
 }
 
-function CustomMomentsCard({ moments, city, date, design, images = [] }) {
+function CustomMomentsCard({ moments, city, date, design, images = {} }) {
   const { language } = useLanguage();
   return <NoteCard design={design} className="guest-custom-moments" id="guest-custom-moments" aria-labelledby="guest-custom-moments-title" ornament={1} tabIndex={-1}>
     <h2 id="guest-custom-moments-title">{language === "ka" ? "ღონისძიების დეტალები" : "Event details"}</h2>
     {date && <p className="guest-custom-moments-date">{date}</p>}
-    <ol>{moments.map((moment, index) => <li key={moment.id}>
-      {images[index] && <img className="guest-custom-moment-image" src={images[index]} alt="" loading="lazy" />}
+    {design.weddingTheme?.illustration && <img className="wedding-details-illustration" src={design.weddingTheme.illustration} alt="" loading="lazy" decoding="async" />}
+    <ol>{moments.map((moment, index) => <li key={moment.id} data-moment-id={moment.id}>
+      {images[moment.id]?.src && <img className="guest-custom-moment-image" src={images[moment.id].src} alt="" loading="lazy" decoding="async" />}
       <span className="guest-custom-moment-number">{String(index + 1).padStart(2, "0")}</span>
-      <div><time>{moment.unknownTime || !moment.time ? (language === "ka" ? "დრო მალე" : "Time to follow") : moment.time}</time>
+      <div><time>{moment.unknownTime || !moment.time ? (language === "ka" ? "დრო დაზუსტდება" : "Time to follow") : moment.time}</time>
         <h3>{(language === "ka" ? moment.ka : moment.en) || moment.en || moment.ka}</h3>
         {moment.venue && <p>{moment.venue}</p>}
         {moment.venue && <a href={momentMapUrl(moment, city)} target="_blank" rel="noreferrer">{language === "ka" ? "რუკა" : "Map"} <Icon name="arrow-up-right" size={15} /></a>}
@@ -244,7 +251,7 @@ function CustomMomentsCard({ moments, city, date, design, images = [] }) {
 }
 
 export default function GuestCardSuite({ template, sample, copyTranslations, editableFields, onEditText, settings, photos, dayPlan = [], noteSettings = normalizeGuestNoteSettings(null), openingReplay = 0, mobile, hasPortrait,
-  creator, onSettingsChange, onAddSection, planDraft, onSavePlan, onNoteSettingsChange, galleryTools, customDesign, moments = [], city = "" }) {
+  creator, showCreatorTools = creator, onSettingsChange, onAddSection, planDraft, onSavePlan, onNoteSettingsChange, galleryTools, customDesign, moments = [], momentImages = {}, city = "", weddingParty = [] }) {
   const { t, language } = useLanguage();
   const root = useRef(null);
   const [guestIdentity, setGuestIdentity] = useState(() => {
@@ -265,7 +272,9 @@ export default function GuestCardSuite({ template, sample, copyTranslations, edi
   const entranceComplete = creator || settings.entrance === "immediate" || completedEntrance === entranceKey;
   const completeEntrance = useCallback(() => setCompletedEntrance(entranceKey), [entranceKey]);
   useElegantGuestMotion(root, !creator && settings.motion === "elegant", entranceComplete, reducedMotion, entranceKey);
-  const design = getGuestCardDesign(template);
+  const weddingTheme = template.isCustom ? getClassicalTheme(customDesign.theme) : null;
+  const baseDesign = getGuestCardDesign(template);
+  const design = weddingTheme ? { ...baseDesign, weddingTheme } : baseDesign;
   useEffect(() => {
     if (!design.mobileFrame || !root.current) return;
     const frame = new Image();
@@ -294,6 +303,7 @@ export default function GuestCardSuite({ template, sample, copyTranslations, edi
     "--guest-secondary": design.secondary, "--guest-background": design.background ? `url("${design.background}")` : "none",
     "--guest-display-font": font.style["--design-font-family"],
     "--guest-frame-image": design.frame ? `url("${design.frame}")` : "none",
+    ...(weddingTheme ? weddingThemeStyle(weddingTheme) : {}),
     ...(template.isCustom ? { "--custom-cover-color": customDesign.color, "--custom-paper-image": getClassicalPaper(customDesign.paper) ? `url("${getClassicalPaper(customDesign.paper)}")` : "none", "--custom-ornament-image": getClassicalOrnament(customDesign.ornament) ? `url("${getClassicalOrnament(customDesign.ornament)}")` : "none", "--custom-ornament-color": ornamentTones[customDesign.ornamentTone] ?? ornamentTones.ivory } : {}),
   };
   const [removedSection, setRemovedSection] = useState(null);
@@ -303,22 +313,23 @@ export default function GuestCardSuite({ template, sample, copyTranslations, edi
     setRemovedSection(null);
   }, [removedSection]);
   const removeSection = patch => { onSettingsChange(patch); setRemovedSection(Object.keys(patch)[0]); };
-  const dayPlanCard = (dayPlan.length > 0 || creator && planDraft) && <DayPlanCard dayPlan={dayPlan} design={design} onEditText={onEditText} headingField={editableFields.find(field => field.key === "guestCards.plan.title")}
-    tools={creator && <CanvasSectionTools title={t("guestCards.plan.title")} onRemove={() => { onSavePlan([]); setEditingPlan(false); setRemovedSection("plan"); }}>
+  const dayPlanCard = (dayPlan.length > 0 || showCreatorTools && planDraft) && <DayPlanCard dayPlan={dayPlan} design={design} onEditText={onEditText} headingField={editableFields.find(field => field.key === "guestCards.plan.title")}
+    tools={showCreatorTools && <CanvasSectionTools title={t("guestCards.plan.title")} onRemove={() => { onSavePlan([]); setEditingPlan(false); setRemovedSection("plan"); }}>
       {!planDraft && <button type="button" onClick={() => setEditingPlan(value => !value)}>{t(editingPlan ? "guestCards.canvas.done" : "guestCards.canvas.editPlan")}</button>}
     </CanvasSectionTools>}
-    editor={creator && (editingPlan || planDraft) && <GuestDayPlanEditor embedded dayPlan={dayPlan} onSave={items => { onSavePlan(items); setEditingPlan(false); }} />} />;
+    editor={showCreatorTools && (editingPlan || planDraft) && <GuestDayPlanEditor embedded dayPlan={dayPlan} onSave={items => { onSavePlan(items); setEditingPlan(false); }} />} />;
   const editField = key => editableFields.find(field => field.group === "fields" && field.key === key);
 
-  return <article ref={root} data-classic-frame={design.classicMobilePaper && Boolean(design.mobileFrame)} data-template={template.slug} data-classic-paper={design.classicMobilePaper} data-classic-mobile-paper={mobile && design.classicMobilePaper} data-mobile-frame={mobile && design.classicMobilePaper && Boolean(design.mobileFrame)} data-soft-screen={design.softScreen} data-entrance-complete={entranceComplete} className={`guest-card-suite${creator ? " is-canvas-editing" : ""}${template.isCustom ? ` guest-custom-theme${pastelCustomColors.has(customDesign.color) ? " custom-pastel-color" : ""} custom-frame-${customDesign.frame} custom-pattern-${customDesign.pattern} custom-font-${customDesign.font} custom-paper-${customDesign.paper || "none"} custom-ornament-${customDesign.ornament || "none"}` : ""} guest-pattern-${design.pattern} guest-motion-${creator ? "none" : settings.motion}${design.background ? " has-paper-image" : ""}`} style={style} aria-label={sample.title}>
+  return <article ref={root} data-classic-frame={design.classicMobilePaper && Boolean(design.mobileFrame)} data-template={template.slug} data-classic-paper={design.classicMobilePaper} data-classic-mobile-paper={mobile && design.classicMobilePaper} data-mobile-frame={mobile && design.classicMobilePaper && Boolean(design.mobileFrame)} data-soft-screen={design.softScreen} data-entrance-complete={entranceComplete} className={`guest-card-suite${showCreatorTools ? " is-canvas-editing" : ""}${template.isCustom ? ` guest-custom-theme wedding-stationery theme-${weddingTheme.id}${lightCoverColors.has(customDesign.color) ? " custom-light-color" : ""}${pastelCustomColors.has(customDesign.color) ? " custom-pastel-color" : ""} custom-frame-${customDesign.frame} custom-pattern-${customDesign.pattern} custom-font-${customDesign.font} custom-paper-${customDesign.paper || "none"} custom-ornament-${customDesign.ornament || "none"}` : ""} guest-pattern-${design.pattern} guest-motion-${creator ? "none" : settings.motion}${design.background ? " has-paper-image" : ""}`} style={style} aria-label={sample.title}>
     {!creator && settings.motion === "elegant" && entranceComplete && !reducedMotion && <div className="guest-elegant-atmosphere" aria-hidden="true">
       {[0, 1, 2, 3, 4, 5].map(index => <i key={index} style={{ "--particle-left": `${8 + index * 17}%`, "--particle-top": `${6 + index * 15}%`, "--particle-delay": `${-index * 3}s` }} />)}
       <span className="guest-elegant-shimmer" />
     </div>}
     <nav className="guest-nav" aria-label={sample.title}>
       <span className="guest-wordmark">11:11</span>
-      <div><a href="#guest-invitation">{t("guestCards.invitation")}</a>{settings.gallery && (creator || photos.length > 0) && <a href="#guest-photos">{t("guestCards.photos")}</a>}{settings.details && <a href="#guest-event-details">{t("guestCards.details")}</a>}{moments.length > 0 && <a href="#guest-custom-moments">{language === "ka" ? "განრიგი" : "Schedule"}</a>}{dayPlanCard && <a href="#guest-day-plan">{t("guestCards.plan.title")}</a>}{settings.rsvp && <a href="#guest-rsvp">{t("guestCards.rsvp")}</a>}{noteSettings.enabled && <a href="#guest-notes">{t("guestCards.notes.title")}</a>}</div>
+      <div><a href="#guest-invitation">{t("guestCards.invitation")}</a>{settings.gallery && (showCreatorTools || photos.length > 0) && <a href="#guest-photos">{t("guestCards.photos")}</a>}{settings.details && <a href="#guest-event-details">{t("guestCards.details")}</a>}{moments.length > 0 && <a href="#guest-custom-moments">{language === "ka" ? "განრიგი" : "Schedule"}</a>}{dayPlanCard && <a href="#guest-day-plan">{t("guestCards.plan.title")}</a>}{settings.rsvp && <a href="#guest-rsvp">{t("guestCards.rsvp")}</a>}{noteSettings.enabled && <a href="#guest-notes">{t("guestCards.notes.title")}</a>}</div>
     </nav>
+    {settings.music && <GuestMusicControl />}
     <div className="guest-card-layout">
       <div className="guest-invitation-column">
         <section className={`guest-main-card${presentation === "portrait" ? " is-portrait" : " is-square-mobile"}`} id="guest-invitation" aria-label={t("guestCards.invitation")}>
@@ -330,41 +341,50 @@ export default function GuestCardSuite({ template, sample, copyTranslations, edi
           </div>
         </section>
       </div>
-    {template.isCustom && sample.line && <div className="guest-section-screen" data-section="message"><NoteCard design={design} className="guest-custom-message" ornament={0}><small>{sample.opening || (language === "ka" ? "გეპატიჟებით" : "You're invited")}</small><p>{sample.line}</p></NoteCard></div>}
-    {settings.gallery && (creator || photos.length > 0) && <div className="guest-section-screen" data-section="gallery"><PhotoGallery key={photos.map(photo => photo.id).join(":")} photos={photos} design={design} creator={creator} galleryTools={galleryTools} headingField={editableFields.find(field => field.key === "guestCards.gallery.title")} onEditText={onEditText}
-      tools={creator && <CanvasSectionTools title={t("guestCards.gallery")} onRemove={() => removeSection({ gallery: false })} />} /></div>}
-    {creator && !settings.gallery && <CanvasAddSection section="gallery" onAdd={onAddSection} />}
+    {template.isCustom && (sample.line || creator) && <div className="guest-section-screen" data-section="message"><NoteCard design={design} className="guest-custom-message" ornament={0}><small>{sample.opening || (language === "ka" ? "გეპატიჟებით" : "You're invited")}</small><p className={!sample.line ? "is-message-placeholder" : undefined}>{sample.line || (language === "ka" ? "მოსაწვევის ტექსტი აქ გამოჩნდება." : "Your invitation text will appear here.")}</p></NoteCard></div>}
+    {settings.gallery && (showCreatorTools || photos.length > 0) && <div className="guest-section-screen" data-section="gallery"><PhotoGallery key={photos.map(photo => photo.id).join(":")} photos={photos} design={design} creator={showCreatorTools} galleryTools={galleryTools} headingField={editableFields.find(field => field.key === "guestCards.gallery.title")} onEditText={onEditText}
+      tools={showCreatorTools && <CanvasSectionTools title={t("guestCards.gallery")} onRemove={() => removeSection({ gallery: false })} />} /></div>}
+    {showCreatorTools && !settings.gallery && <CanvasAddSection section="gallery" onAdd={onAddSection} />}
       <div className="guest-support-cards">
         <div className="guest-event-screen" id="guest-event-details" tabIndex={-1}>
-        {(!template.isCustom || Boolean(sample.displayDate)) && <GuestEventTools details={details} sample={sample} template={template} settings={settings} onSettingsChange={onSettingsChange} creator={creator} />}
+        {!template.isCustom && <GuestEventTools details={details} sample={sample} template={template} settings={settings} onSettingsChange={onSettingsChange} creator={showCreatorTools} />}
+        {template.isCustom && sample.displayDate && <NoteCard design={design} className="guest-when guest-countdown-card" aria-labelledby="guest-when-title">
+          <h2 id="guest-when-title">{t("guestCards.when")}</h2><span className="guest-note-rule" aria-hidden="true" />
+          <GuestEventTools details={details} sample={sample} template={template} settings={settings} onSettingsChange={onSettingsChange} creator={showCreatorTools} embedded />
+        </NoteCard>}
         {settings.details && (!template.isCustom || moments.length === 0) && <div className="guest-details" id="guest-details" tabIndex={-1}>
-          {creator && <CanvasSectionTools title={t("guestCards.details")} recommended onRemove={() => removeSection({ details: false })} />}
-          <NoteCard design={design} className="guest-when" aria-labelledby="guest-when-title">
+          {showCreatorTools && <CanvasSectionTools title={t("guestCards.details")} recommended onRemove={() => removeSection({ details: false })} />}
+          {(!template.isCustom || !sample.displayDate) && <NoteCard design={design} className="guest-when" aria-labelledby="guest-when-title">
             <h2 id="guest-when-title"><EditableValue field={editableFields.find(field => field.key === "guestCards.when")} onEdit={onEditText}>{t("guestCards.when")}</EditableValue></h2><span className="guest-note-rule" aria-hidden="true" />
-            <p className="guest-detail-value"><EditableValue field={editField("date")} onEdit={onEditText}>{details.date}</EditableValue></p>{details.time && <p className="guest-detail-time"><EditableValue field={editField("time")} onEdit={onEditText}>{details.time}</EditableValue></p>}
-          </NoteCard>
+            <p className="guest-detail-value"><EditableValue field={editField("date")} onEdit={onEditText}>{sample.displayDate || details.date}</EditableValue></p>{details.time && <p className="guest-detail-time"><EditableValue field={editField("time")} onEdit={onEditText}>{details.time}</EditableValue></p>}
+          </NoteCard>}
           <NoteCard design={design} className="guest-where" ornament={1} aria-labelledby="guest-where-title">
+            {weddingTheme && <img className="wedding-details-illustration" src={weddingTheme.illustration} alt="" loading="lazy" decoding="async" />}
             <h2 id="guest-where-title"><EditableValue field={editableFields.find(field => field.key === "guestCards.where")} onEdit={onEditText}>{t("guestCards.where")}</EditableValue></h2><span className="guest-note-rule" aria-hidden="true" />
             <p className="guest-detail-value"><EditableValue field={editField("location")} onEdit={onEditText}>{details.location}</EditableValue></p>
             <a className="guest-map-link" href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(details.location)}`} target="_blank" rel="noreferrer">{t("guestCards.map")} <Icon name="arrow-up-right" size={15} /></a>
           </NoteCard>
         </div>}
-        {creator && !settings.details && <CanvasAddSection section="details" onAdd={onAddSection} />}
+        {showCreatorTools && !settings.details && <CanvasAddSection section="details" onAdd={onAddSection} />}
         </div>
-        {settings.details && moments.length > 0 && <div className="guest-section-screen" data-section="moments"><CustomMomentsCard moments={moments} city={city} date={sample.displayDate} design={design} images={photos.map(photo => photo.src)} /></div>}
+        {settings.details && moments.length > 0 && <div className="guest-section-screen" data-section="moments"><CustomMomentsCard moments={moments} city={city} date={sample.displayDate} design={design} images={momentImages} /></div>}
+        {template.isCustom && weddingParty.some(person => person.name.trim() || creator) && <div className="guest-section-screen" data-section="wedding-party"><NoteCard design={design} className="guest-wedding-party" id="guest-wedding-party" aria-labelledby="guest-wedding-party-title" tabIndex={-1}>
+          <h2 id="guest-wedding-party-title">{language === "ka" ? "ჩვენი მეჯვარეები" : "Our wedding party"}</h2>
+          <ul>{weddingParty.filter(person => creator || person.name.trim()).map(person => <li key={person.id}><small>{weddingPartyRoleLabel(person.role,language)}</small><p>{person.name.trim() || (language === "ka" ? "სახელი და გვარი" : "Full name")}</p></li>)}</ul>
+        </NoteCard></div>}
         {dayPlanCard && <div className="guest-section-screen" data-section="plan">{dayPlanCard}</div>}
-        {creator && !dayPlanCard && <CanvasAddSection section="plan" onAdd={onAddSection} />}
-        {settings.rsvp && <div className="guest-section-screen" data-section="rsvp"><AttendanceCard key={template.slug} template={template} design={design} maxCompanions={settings.companions} onEditText={onEditText} creator={creator} editableFields={editableFields} onSettingsChange={onSettingsChange} fullName={guestIdentity.name} onFullNameChange={changeGuestName}
-          tools={creator && <CanvasSectionTools title={t("guestCards.rsvp")} recommended onRemove={() => removeSection({ rsvp: false })}>
+        {showCreatorTools && !dayPlanCard && <CanvasAddSection section="plan" onAdd={onAddSection} />}
+        {settings.rsvp && <div className="guest-section-screen" data-section="rsvp"><AttendanceCard key={template.slug} rsvpDeadline={settings.rsvpDeadline} template={template} design={design} maxCompanions={settings.companions} onEditText={onEditText} creator={creator} showCreatorTools={showCreatorTools} editableFields={editableFields} onSettingsChange={onSettingsChange} fullName={guestIdentity.name} onFullNameChange={changeGuestName}
+          tools={showCreatorTools && <CanvasSectionTools title={t("guestCards.rsvp")} recommended onRemove={() => removeSection({ rsvp: false })}>
           </CanvasSectionTools>} /></div>}
-        {creator && !settings.rsvp && <CanvasAddSection section="rsvp" onAdd={onAddSection} />}
-        {noteSettings.enabled && <div className="guest-section-screen" data-section="notes"><GuestNotesCard key={`notes-${template.slug}`} template={template} design={design} noteSettings={noteSettings} onNoteSettingsChange={onNoteSettingsChange} onEditText={onEditText} creator={creator} fullName={guestIdentity.name}
-          tools={creator && <CanvasSectionTools title={t("guestCards.notes.title")} onRemove={() => { onNoteSettingsChange({ ...noteSettings, enabled: false }); setRemovedSection("notes"); }} />} /></div>}
-        {creator && !noteSettings.enabled && <CanvasAddSection section="notes" onAdd={onAddSection} />}
+        {showCreatorTools && !settings.rsvp && <CanvasAddSection section="rsvp" onAdd={onAddSection} />}
+        {noteSettings.enabled && <div className="guest-section-screen" data-section="notes"><GuestNotesCard key={`notes-${template.slug}`} template={template} design={design} noteSettings={noteSettings} onNoteSettingsChange={onNoteSettingsChange} onEditText={onEditText} creator={creator} showCreatorTools={showCreatorTools} fullName={guestIdentity.name}
+          tools={showCreatorTools && <CanvasSectionTools title={t("guestCards.notes.title")} onRemove={() => { onNoteSettingsChange({ ...noteSettings, enabled: false }); setRemovedSection("notes"); }} />} /></div>}
+        {showCreatorTools && !noteSettings.enabled && <CanvasAddSection section="notes" onAdd={onAddSection} />}
       </div>
     </div>
-    <footer className={`guest-footer${template.isCustom && footerScenes[customDesign.footerScene] ? " has-footer-art" : ""}`}>
-      {template.isCustom && footerScenes[customDesign.footerScene] && <img className="guest-footer-art" src={footerScenes[customDesign.footerScene]} alt="" aria-hidden="true" />}
+    <footer className={`guest-footer${template.isCustom && customDesign.showFooter !== false && footerScenes[customDesign.footerScene] ? " has-footer-art" : ""}`}>
+      {template.isCustom && customDesign.showFooter !== false && footerScenes[customDesign.footerScene] && <img className="guest-footer-art" src={footerScenes[customDesign.footerScene]} alt="" aria-hidden="true" />}
       <span>{t("guestCards.made")}</span>
     </footer>
   </article>;
