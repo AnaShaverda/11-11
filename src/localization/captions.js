@@ -1802,6 +1802,7 @@ Object.assign(captions.ka, {
   "meta.title": "11:11 — აქციე მომენტი განსაკუთრებულად",
   "meta.description": "11:11 — სივრცე მომენტებისთვის, რომლებიც მნიშვნელოვანია.",
   "moodboard.language": "დიზაინის ენა",
+  "moodboard.typography": "ტიპოგრაფია",
   "moodboard.type.title": "შრიფტი თავისი ხასიათით",
   "moodboard.type.description": "ასოები განწყობას დღესასწაულამდე ქმნიან.",
   "moodboard.shared": "კარგი დღეები ერთად ვიზეიმოთ",
@@ -2073,6 +2074,7 @@ Object.assign(captions.en, {
   "meta.title": "11:11 — Make it count",
   "meta.description": "11:11 — make room for the moments that count.",
   "moodboard.language": "THE DESIGN LANGUAGE",
+  "moodboard.typography": "TYPOGRAPHY",
   "moodboard.type.title": "Type with a point of view",
   "moodboard.type.description":
     "The lettering sets the mood before the celebration begins.",

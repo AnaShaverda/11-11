@@ -1,0 +1,22 @@
+/* The main region and header bar share the same centered outer edges. */
+.site-frame > .site-main {
+  width: min(100%, 1600px);
+  margin-inline: auto;
+}
+
+.site-main > :is(
+  .home-page,
+  .inner-page,
+  .invitations-page,
+  .invitation-preview-page,
+  .experience-page,
+  .surprise-showcase,
+  .surprise-demo-page,
+  .theme-preview-page,
+  .auth-page
+) {
+  width: 100%;
+  max-width: none;
+  margin-inline: 0;
+  padding-inline: 0;
+}

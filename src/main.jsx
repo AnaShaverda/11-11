@@ -84,3 +84,4 @@ import "./styles/glass-catalog-cards.css";
 import "./styles/invitation-editor.css";
 
 import "./styles/light-mode.css";
+import "./styles/page-gutters.css";

@@ -99,9 +99,9 @@
   --grid-color: rgba(101, 80, 161, .055);
   --text-link: #57408b;
   --text-accent: #8b3c69;
-  --shadow-frame: 0 12px 36px rgba(42, 31, 67, .05);
-  --shadow-glow: 0 8px 24px rgba(42, 31, 67, .1);
-  --shadow-card: 0 4px 16px rgba(42, 31, 67, .06);
+  --shadow-frame: none;
+  --shadow-glow: none;
+  --shadow-card: none;
   --header-background: linear-gradient(110deg, #ffffff, #fbf9fd);
   --ornament-star: #a89abb;
   --ornament-cube-top: #e6daef;

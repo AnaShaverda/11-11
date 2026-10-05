@@ -25,10 +25,28 @@
 .invitation-design-page .design-page-end p { color: var(--color-text-secondary); font-size: .875rem; line-height: 1.5; }
 .invitation-design-page .design-page-end span { color: var(--text-accent); }
 
+@media (min-width: 801px) {
+  .invitation-design-page .design-hero {
+    width: 100%;
+    grid-template-columns: minmax(0, min(48%, 760px)) minmax(0, min(44%, 700px));
+    justify-content: space-between;
+  }
+}
+
 @media (max-width: 800px) {
   .invitation-design-page .design-hero { display: grid; grid-template-columns: 1fr; gap: 24px; }
   .design-hero-copy { display: contents; }
   .design-hero-summary { order: -1; }
   .design-elements-compact { margin-top: 0; }
   .design-elements-compact .design-pattern-panel, .design-elements-compact .design-ticket-panel { padding: 12px; }
+}
+
+.design-elements-compact { margin-top: 18px; }
+.design-elements-compact .design-pattern-panel { min-height: 185px; }
+.design-pattern-typography { position: absolute; z-index: 3; top: 42px; left: 16px; width: 52%; }
+.design-pattern-typography > span { display: block; margin-bottom: 6px; font-size: .6rem; font-weight: 800; letter-spacing: .08em; }
+.design-pattern-typography em { display: block; font-size: clamp(1rem, 1.5vw, 1.35rem); line-height: 1.08; overflow-wrap: anywhere; }
+
+@media (max-width: 800px) {
+  .design-elements-compact { margin-top: 0; }
 }
