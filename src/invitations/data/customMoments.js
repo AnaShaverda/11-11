@@ -1,9 +1,11 @@
 const presets = {
   wedding: [
-    ["ceremony", "Ceremony", "ჯვრისწერა"], ["photos", "Photo session", "ფოტოსესია"],
-    ["civil", "Civil ceremony", "ხელმოწერა"], ["reception", "Guest reception", "სტუმრების მიღება"],
-    ["dinner", "Celebration dinner", "საზეიმო ვახშამი"], ["cake", "Cake cutting", "ტორტის გაჭრა"],
+    ["church", "Church wedding", "ჯვრისწერა"], ["civil", "Civil marriage registration", "ხელმოწერა"],
+    ["ceremony", "Wedding ceremony", "ცერემონია"], ["reception", "Wedding reception", "დარბაზი"],
+    ["photos", "Photo session", "ფოტოსესია"], ["dinner", "Wedding dinner", "საზეიმო ვახშამი"],
+    ["cake", "Cake cutting", "ტორტის გაჭრა"], ["dance", "First dance", "პირველი ცეკვა"],
   ],
+  christening: [["baptism", "Baptism ceremony", "ნათლობის ცერემონია"], ["photos", "Family photos", "ოჯახური ფოტოსესია"], ["reception", "Christening reception", "ნათლობის სუფრა"]],
   birthday: [["welcome", "Welcome", "სტუმრების მიღება"], ["party", "Birthday party", "დაბადების დღის წვეულება"], ["cake", "Cake", "ტორტი"], ["dance", "Dancing", "ცეკვა"]],
   "baby-kids": [["welcome", "Welcome", "სტუმრების მიღება"], ["activity", "Activities", "აქტივობები"], ["cake", "Cake", "ტორტი"]],
   "pre-wedding": [["welcome", "Welcome", "სტუმრების მიღება"], ["dinner", "Dinner", "ვახშამი"], ["party", "Party", "წვეულება"]],
@@ -16,7 +18,7 @@ export function getMomentPresets(category) { return presets[category] ?? presets
 
 export function defaultMoments(category) {
   const list = getMomentPresets(category);
-  const selected = category === "wedding" ? [list[0], list[4]] : [list[0]];
+  const selected = category === "wedding" ? [list[2], list[3]] : [list[0]];
   return selected.map(([id, en, ka]) => ({ id, en, ka, time: "", unknownTime: false, venue: "", mapUrl: "" }));
 }
 
@@ -34,4 +36,14 @@ export function momentMapUrl(moment, city = "") {
   if (/^https?:\/\//i.test(moment.mapUrl)) return moment.mapUrl;
   const query = [moment.venue, city].filter(Boolean).join(", ");
   return query ? `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(query)}` : "";
+}
+
+// Unknown times follow the scheduled events; equal times retain their creation order.
+export function sortMomentsByTime(moments) {
+  const minutes = moment => !moment.unknownTime && /^([01]\d|2[0-3]):[0-5]\d$/.test(moment.time)
+    ? Number(moment.time.slice(0, 2)) * 60 + Number(moment.time.slice(3)) : Infinity;
+  return [...moments].sort((a, b) => {
+    const first = minutes(a), second = minutes(b);
+    return first === second ? 0 : first < second ? -1 : 1;
+  });
 }

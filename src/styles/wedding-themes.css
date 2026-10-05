@@ -525,3 +525,68 @@
 .custom-builder-stepper button[aria-current="step"] { background: #f4e7ec; border-color: #a85f77; color: #73253e; font-weight: 700; }
 .custom-builder-stepper button:focus-visible { outline: 2px solid #a85f77; outline-offset: 2px; }
 @media (max-width: 420px) { .custom-builder-stepper { grid-template-columns: repeat(2,minmax(0,1fr)); } }
+
+/* Portrait photographs and their contrast choice belong only to the cover. */
+.wedding-cover.wedding-portrait-cover { min-height: 0; aspect-ratio: auto; border-radius: 10px; overflow: hidden; background-image: none; }
+.wedding-portrait-photo { display: block; width: 100%; height: auto; }
+.wedding-portrait-sample { display: block; width: 100%; aspect-ratio: 2 / 3; background-size: auto 200%; background-position: 15% top; background-repeat: no-repeat; }
+.wedding-portrait-frame { position: absolute; inset: 4%; z-index: 3; border: 3px double var(--portrait-ink, #fffaf0); border-radius: 5px; pointer-events: none; }
+.wedding-cover.wedding-portrait-cover { --portrait-ink: #fffaf0; --portrait-shadow: 0 1px 6px #0008; --portrait-wash: #15110de0; }
+.wedding-cover.wedding-portrait-cover.tone-dark { --portrait-ink: #25221f; --portrait-shadow: none; --portrait-wash: #fffaf0eb; }
+.wedding-cover.wedding-portrait-cover .custom-cover-copy { position: absolute; inset: auto 0 0; width: 100%; min-height: 0; padding: 20cqw 10% 12cqw; gap: 3cqw; background: linear-gradient(transparent, var(--portrait-wash)); color: var(--portrait-ink); text-shadow: var(--portrait-shadow); }
+.wedding-cover.wedding-portrait-cover .custom-cover-copy :is(strong,small,.wedding-cover-date) { color: var(--portrait-ink); }
+.wedding-cover.wedding-portrait-cover .custom-cover-copy strong { font-size: clamp(26px, 8cqw, 44px); }
+.wedding-theme-mini.is-photo-theme { overflow: hidden; }
+.wedding-theme-mini.is-photo-theme .wedding-portrait-sample { position: absolute; inset: 0; }
+.wedding-theme-mini.is-photo-theme .wedding-theme-mini-copy { position: absolute; inset: auto 0 0; min-height: 0; padding: 18% 10% 14%; color: #fffaf0; background: linear-gradient(transparent,#15110ddd); }
+
+.wedding-theme-mini.is-photo-theme.tone-dark .wedding-portrait-frame { --portrait-ink: #25221f; }
+.wedding-theme-mini.is-photo-theme.tone-dark .wedding-theme-mini-copy { color: #25221f; background: linear-gradient(transparent,#fffaf0eb); }
+
+.wedding-stationery:is(.theme-couplePortrait,.theme-couplePortraitDark) .wedding-details-illustration { width: min(28%, 140px); max-height: 100px; object-fit: contain; margin: 16px auto 24px; display: block; }
+
+/* Faded roses keep the portrait themes' supporting cards quiet and readable. */
+.wedding-stationery:is(.theme-couplePortrait, .theme-couplePortraitDark) .wedding-section-ornament {
+  opacity: .12;
+}
+
+/* Every desktop cover follows its content height, including uploaded photographs. */
+.guest-custom-theme.wedding-stationery :is(.guest-main-card, .guest-main-card.is-portrait) {
+  container-type: inline-size;
+  aspect-ratio: auto;
+  height: auto;
+}
+
+/* Share a grid cell so long names and dates cannot fall outside the photograph. */
+.custom-invitation-cover.wedding-cover.has-photo:not(.is-framed-photo),
+.custom-invitation-cover.wedding-cover.wedding-portrait-cover {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  align-items: end;
+}
+.wedding-cover.has-photo:not(.is-framed-photo) > .wedding-full-cover-photo,
+.wedding-portrait-cover > :is(.wedding-portrait-photo, .wedding-portrait-sample) {
+  grid-area: 1 / 1;
+  min-width: 0;
+}
+.custom-invitation-cover.wedding-cover.has-photo:not(.is-framed-photo) .custom-cover-copy,
+.custom-invitation-cover.wedding-cover.wedding-portrait-cover .custom-cover-copy {
+  grid-area: 1 / 1;
+  position: relative;
+  inset: auto;
+  align-self: end;
+  width: 100%;
+  min-width: 0;
+  min-height: 0;
+  padding: clamp(32px, 14cqw, 80px) 8% clamp(42px, 14cqw, 84px);
+  gap: clamp(12px, 3cqw, 20px);
+}
+
+.custom-invitation-cover.wedding-cover.has-photo .custom-cover-copy small {
+  display: block;
+  color: #fff;
+  font-size: clamp(13px, 3cqw, 18px);
+}
+.custom-invitation-cover.wedding-cover.has-photo.is-framed-photo .custom-cover-copy small {
+  color: var(--wedding-ink);
+}

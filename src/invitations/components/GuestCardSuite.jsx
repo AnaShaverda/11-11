@@ -15,7 +15,7 @@ import CustomInvitationCover, { lightCoverColors } from "./CustomInvitationCover
 import WeddingThemeDecoration, { weddingThemeStyle } from "./WeddingThemeDecoration.jsx";
 import { getClassicalTheme, footerScenes, getClassicalOrnament, getClassicalPaper, ornamentTones } from "../data/customClassicalThemes.js";
 import { MAX_DAY_PLAN_TITLE, MAX_DAY_PLAN_DETAILS } from "../data/guestDayPlan.js";
-import { momentMapUrl } from "../data/customMoments.js";
+import { momentMapUrl, sortMomentsByTime } from "../data/customMoments.js";
 import { useReducedGuestMotion, useElegantGuestMotion, useGuestComponentReveals } from "../hooks/useGuestMotion.js";
 import GuestDayPlanEditor from "./GuestDayPlanEditor.jsx";
 import { CanvasSectionTools, CanvasAddSection, CanvasReplyTools, CanvasNotesTools, CanvasGalleryTools } from "./GuestCanvasControls.jsx";
@@ -238,7 +238,7 @@ function CustomMomentsCard({ moments, city, date, design, images = {} }) {
     <h2 id="guest-custom-moments-title">{language === "ka" ? "ღონისძიების დეტალები" : "Event details"}</h2>
     {date && <p className="guest-custom-moments-date">{date}</p>}
     {design.weddingTheme?.illustration && <img className="wedding-details-illustration" src={design.weddingTheme.illustration} alt="" loading="lazy" decoding="async" />}
-    <ol>{moments.map((moment, index) => <li key={moment.id} data-moment-id={moment.id}>
+    <ol>{sortMomentsByTime(moments).map((moment, index) => <li key={moment.id} data-moment-id={moment.id}>
       {images[moment.id]?.src && <img className="guest-custom-moment-image" src={images[moment.id].src} alt="" loading="lazy" decoding="async" />}
       <span className="guest-custom-moment-number">{String(index + 1).padStart(2, "0")}</span>
       <div><time>{moment.unknownTime || !moment.time ? (language === "ka" ? "დრო დაზუსტდება" : "Time to follow") : moment.time}</time>
@@ -335,13 +335,13 @@ export default function GuestCardSuite({ template, sample, copyTranslations, edi
         <section className={`guest-main-card${presentation === "portrait" ? " is-portrait" : " is-square-mobile"}`} id="guest-invitation" aria-label={t("guestCards.invitation")}>
           <div className="guest-main-content">
             <InvitationEntrance key={entranceKey} settings={creator ? { ...settings, entrance: "immediate", openingEffect: "none" } : settings} design={design} title={sample.name ?? sample.posterName ?? sample.title} reducedMotion={reducedMotion} onComplete={completeEntrance}>
-              {template.isCustom ? <CustomInvitationCover design={customDesign} sample={sample} invitationLabel={t("guestCards.invitation")} />
+              {template.isCustom ? <CustomInvitationCover design={customDesign} sample={sample} invitationLabel={t("guestCards.invitation")} invitationGreeting={language === "ka" ? "გეპატიჟებით" : "You’re invited"} />
                 : <EditableInvitationArtwork fields={editableFields} onEdit={onEditText}><CardCopyProvider overrides={copyTranslations}><InvitationArtwork template={template} large presentation={presentation} sample={sample} ariaLabel={sample.title} /></CardCopyProvider></EditableInvitationArtwork>}
             </InvitationEntrance>
           </div>
         </section>
       </div>
-    {template.isCustom && (sample.line || creator) && <div className="guest-section-screen" data-section="message"><NoteCard design={design} className="guest-custom-message" ornament={0}><small>{sample.opening || (language === "ka" ? "გეპატიჟებით" : "You're invited")}</small><p className={!sample.line ? "is-message-placeholder" : undefined}>{sample.line || (language === "ka" ? "მოსაწვევის ტექსტი აქ გამოჩნდება." : "Your invitation text will appear here.")}</p></NoteCard></div>}
+    {template.isCustom && (sample.line || creator) && <div className="guest-section-screen" data-section="message"><NoteCard design={design} className="guest-custom-message" ornament={0}><p className={!sample.line ? "is-message-placeholder" : undefined}>{sample.line || (language === "ka" ? "მოსაწვევის ტექსტი აქ გამოჩნდება." : "Your invitation text will appear here.")}</p></NoteCard></div>}
     {settings.gallery && (showCreatorTools || photos.length > 0) && <div className="guest-section-screen" data-section="gallery"><PhotoGallery key={photos.map(photo => photo.id).join(":")} photos={photos} design={design} creator={showCreatorTools} galleryTools={galleryTools} headingField={editableFields.find(field => field.key === "guestCards.gallery.title")} onEditText={onEditText}
       tools={showCreatorTools && <CanvasSectionTools title={t("guestCards.gallery")} onRemove={() => removeSection({ gallery: false })} />} /></div>}
     {showCreatorTools && !settings.gallery && <CanvasAddSection section="gallery" onAdd={onAddSection} />}

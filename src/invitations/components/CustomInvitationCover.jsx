@@ -14,6 +14,7 @@ export function normalizeCustomDesign(value, defaults = {}) {
   return {
     coverImage: typeof value?.coverImage === "string" ? value.coverImage : "",
     theme: theme.id,
+    coverTextTone: theme.coverTextTone === "dark" ? "dark" : "light",
     photoLayout: value?.photoLayout === "framed" ? "framed" : "full",
     scene: "",
     paper: theme.paper,
@@ -32,16 +33,23 @@ export function normalizeCustomDesign(value, defaults = {}) {
   };
 }
 
-export default function CustomInvitationCover({ design, sample, invitationLabel }) {
+export default function CustomInvitationCover({ design, sample, invitationLabel, invitationGreeting }) {
   const theme = getClassicalTheme(design.theme);
   const image = design.coverImage;
   const framedPhoto = image && design.photoLayout === "framed";
+  const coverHeading = sample.opening || invitationGreeting || invitationLabel;
+  if (theme.photoTheme) return <div className={`custom-invitation-cover wedding-cover wedding-portrait-cover tone-${design.coverTextTone}`} style={weddingThemeStyle(theme)}>
+    {image ? <img className="wedding-portrait-photo" src={image} alt={sample.title} /> : <div className="wedding-portrait-sample" style={{ backgroundImage: `url("${theme.coverSample}")` }} aria-hidden="true" />}
+    <div className="wedding-portrait-frame" aria-hidden="true" />
+    <div className="custom-cover-copy"><small>{coverHeading}</small><strong>{sample.title}</strong><span className="wedding-cover-date">{sample.displayDate || sample.date}</span></div>
+  </div>;
+
   return <div className={`custom-invitation-cover wedding-cover theme-${theme.id}${image ? ' has-photo' : ''}${framedPhoto ? ' is-framed-photo' : ''}`} style={weddingThemeStyle(theme)}>
     {image && !framedPhoto && <img className="wedding-full-cover-photo" src={image} alt={sample.title} style={{ objectPosition: `50% ${design.position}%`, transform: `scale(${design.zoom / 100}) rotate(${design.rotation}deg)` }} />}
     {(!image || framedPhoto) && <WeddingThemeDecoration theme={theme} />}
     <div className="custom-cover-copy">
       {framedPhoto && <div className="wedding-cover-photo"><img src={image} alt={sample.title} style={{ transform: `scale(${design.zoom / 100}) rotate(${design.rotation}deg)` }} /></div>}
-      <small>{invitationLabel}</small>
+      <small>{coverHeading}</small>
       <strong>{sample.title}</strong>
       <span className="wedding-cover-date">{sample.displayDate || sample.date}</span>
     </div>

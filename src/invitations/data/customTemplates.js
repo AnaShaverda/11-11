@@ -3,6 +3,7 @@ export const customCategories = ["wedding", "birthday", "baby-kids", "pre-weddin
 const themes = {
   all: { category: "Other", color: "#7b5874", pattern: "contours", title: "Your celebration" },
   wedding: { category: "Wedding", color: "#76554b", pattern: "contours", title: "Our wedding" },
+  christening: { category: "Other", color: "#637e80", pattern: "grid", title: "Christening celebration" },
   birthday: { category: "Birthday", color: "#7b5874", pattern: "deco", title: "Birthday celebration" },
   "baby-kids": { category: "Other", color: "#637e80", pattern: "grid", title: "A little celebration" },
   "pre-wedding": { category: "Other", color: "#986579", pattern: "contours", title: "The celebration begins" },

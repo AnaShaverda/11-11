@@ -343,6 +343,24 @@ export const classicalThemes = [
 }
 ];
 
+// Photo cover stays confined to the first invitation card.
+classicalThemes.push({
+  ...classicalThemes.find(theme => theme.id === "quietParchment"),
+  id: "couplePortrait", number: "13",
+  name: { en: "Our Portrait — Light", ka: "ჩვენი პორტრეტი — ღია" },
+  coverTextTone: "light",
+  photoTheme: true,
+  ornamentAsset: "/images/wedding-themes/pressedRose-ornaments.webp",
+  illustration: "/images/components/separated/wedding-golden-promise-rings.webp",
+  coverSample: "/images/wedding-editorial.webp",
+});
+
+classicalThemes.push({
+  ...classicalThemes.find(theme => theme.id === "couplePortrait"),
+  id: "couplePortraitDark", number: "14", coverTextTone: "dark",
+  name: { en: "Our Portrait — Dark", ka: "ჩვენი პორტრეტი — მუქი" },
+});
+
 // Existing local drafts keep their content and footer while moving to the new collection.
 const legacyThemeIds = {
   ivoryClassic: 'silkIvory', blueClassic: 'somethingBlue', forestClassic: 'gardenVeil',

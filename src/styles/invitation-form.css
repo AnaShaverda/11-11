@@ -193,7 +193,7 @@
 }
 
 .custom-builder-section-title { display: flex; align-items: baseline; flex-wrap: wrap; gap: 8px 14px; min-width: 0; }
-.custom-builder-section-title h2 { margin: 0; color: var(--color-text); font: 650 24px/1.45 var(--form-font); outline: none; overflow-wrap: anywhere; }
+.custom-builder-section-title h2 { margin: 0; color: var(--color-text); font: 500 16px/1.5 var(--form-font); outline: none; overflow-wrap: anywhere; }
 .custom-builder-section-title > span[role="status"] { color: var(--color-text-secondary); font-size: 14px; white-space: nowrap; }
 .custom-builder-section-title .custom-builder-optional-label { width: 100%; margin: 0; }
 .custom-builder-navigation-summary { align-items: flex-start; }
@@ -201,7 +201,7 @@
 .custom-builder-navigation { padding-bottom: 0; margin-bottom: 24px; border-bottom: 0; }
 .custom-builder-completion { margin-bottom: 0; }
 .custom-builder-stepper:not([hidden]) { margin-top: 16px; }
-@media (max-width: 720px) { .custom-builder-section-title h2 { font-size: 21px; } .custom-builder-navigation-summary > button { font-size: 12px; } }
+@media (max-width: 720px) { .custom-builder-section-title h2 { font-size: 16px; } .custom-builder-navigation-summary > button { font-size: 12px; } }
 
 .custom-builder-fields > label:not(.custom-builder-toggle), .custom-builder-time label { gap: 6px; }
 .custom-builder-fields .custom-builder-field-hint { line-height: 1.5; margin-top: 0; }
@@ -236,3 +236,35 @@
 
 .custom-builder-sidebar .custom-builder-fields:has(.custom-builder-moments) > label { margin-top: 8px; }
 .custom-builder-sidebar .custom-builder-fields:has(.custom-builder-moments) > .custom-builder-add { margin-top: 8px; margin-bottom: 8px; }
+
+@media (min-width: 721px) {
+  .custom-builder-page[data-preview-mode="desktop"] .custom-builder-workspace:not(.is-preview) { grid-template-columns: clamp(340px, 33vw, 480px) minmax(0, 1fr); }
+  .custom-builder-page[data-preview-mode="desktop"] .custom-builder-sidebar { padding-inline: 24px; }
+  .custom-builder-preview-pane .guest-preview-stage.is-desktop { width: 100%; }
+}
+.creator-date-input { position: relative; display: flex; align-items: center; justify-content: space-between; gap: 12px; width: 100%; min-width: 0; min-height: 52px; padding: 12px 16px; border: 1px solid var(--ui-field-border); border-radius: 14px; background: var(--ui-field-background); color: var(--color-text); font-size: 17px; font-weight: 400; line-height: 1.65; cursor: pointer; }
+.creator-date-input > span { min-width: 0; overflow-wrap: anywhere; }
+.creator-date-input .is-placeholder { color: var(--color-text-secondary); }
+.creator-date-input > .ui-icon { flex-shrink: 0; }
+.custom-builder-sidebar .custom-builder-fields .creator-date-input input[type="date"] { position: absolute; inset: 0; width: 100%; height: 100%; min-width: 0; max-width: 100%; margin: 0; padding: 0; opacity: 0; cursor: pointer; }
+.creator-date-input:focus-within { border-color: var(--ui-field-focus); box-shadow: 0 0 0 3px var(--form-focus-ring); }
+.creator-date-input:hover { border-color: var(--ui-field-focus); }
+@media (forced-colors: active) { .creator-date-input:focus-within { outline: 2px solid Highlight; } }
+
+.custom-builder-sidebar .custom-builder-fields { grid-template-columns: minmax(0, 1fr); min-width: 0; }
+.custom-builder-sidebar .custom-builder-fields > label { min-width: 0; max-width: 100%; }
+.custom-builder-sidebar .creator-date-input { box-sizing: border-box; max-width: 100%; }
+
+.custom-builder-sidebar .custom-builder-photo-layout button { background: var(--ui-field-background); border-color: var(--border-soft); color: var(--color-text); }
+.custom-builder-sidebar .custom-builder-photo-layout button[aria-pressed="true"] { background: var(--surface-hover); border-color: var(--ui-field-focus); box-shadow: inset 0 0 0 1px var(--ui-field-focus); }
+
+.custom-builder-occasion-choice { margin: 0; padding: 0; border: 0; min-width: 0; }
+.custom-builder-occasion-choice legend { padding-bottom: 8px; font-weight: 600; }
+
+.custom-builder-sidebar .custom-builder-moment-order {
+  display: inline-flex; align-items: center; justify-content: center;
+  min-width: 22px; height: 22px; padding: 0 4px; border-radius: 50%;
+  background: color-mix(in srgb, var(--ui-field-focus) 16%, transparent);
+  color: var(--color-text); font-size: 11px; line-height: 1;
+  font-variant-numeric: tabular-nums; flex-shrink: 0;
+}
