@@ -8,10 +8,15 @@ import { getGuestNotePrompt, normalizeGuestNoteSettings, MAX_GUEST_NOTE_LENGTH, 
 import GuestEventTools from "./GuestEventTools.jsx";
 import InvitationEntrance from "./InvitationEntrance.jsx";
 import EditableInvitationArtwork from "./EditableInvitationArtwork.jsx";
+import CustomInvitationCover from "./CustomInvitationCover.jsx";
+import { footerScenes, getClassicalOrnament, getClassicalPaper, ornamentTones } from "../data/customClassicalThemes.js";
 import { MAX_DAY_PLAN_TITLE, MAX_DAY_PLAN_DETAILS } from "../data/guestDayPlan.js";
-import { useReducedGuestMotion, useElegantGuestMotion, useGuestSectionFlow, useGuestCenteredScroll, useGuestComponentReveals } from "../hooks/useGuestMotion.js";
+import { momentMapUrl } from "../data/customMoments.js";
+import { useReducedGuestMotion, useElegantGuestMotion, useGuestComponentReveals } from "../hooks/useGuestMotion.js";
 import GuestDayPlanEditor from "./GuestDayPlanEditor.jsx";
 import { CanvasSectionTools, CanvasAddSection, CanvasReplyTools, CanvasNotesTools, CanvasGalleryTools } from "./GuestCanvasControls.jsx";
+
+const pastelCustomColors = new Set(["#ad8290", "#839d87", "#9283a8", "#829db6"]);
 
 function EditableValue({ field, onEdit, children }) {
   const { t } = useLanguage();
@@ -221,8 +226,25 @@ function DayPlanCard({ dayPlan, design, onEditText, tools, editor, headingField 
   </NoteCard>;
 }
 
+function CustomMomentsCard({ moments, city, date, design, images = [] }) {
+  const { language } = useLanguage();
+  return <NoteCard design={design} className="guest-custom-moments" id="guest-custom-moments" aria-labelledby="guest-custom-moments-title" ornament={1} tabIndex={-1}>
+    <h2 id="guest-custom-moments-title">{language === "ka" ? "ღონისძიების დეტალები" : "Event details"}</h2>
+    {date && <p className="guest-custom-moments-date">{date}</p>}
+    <ol>{moments.map((moment, index) => <li key={moment.id}>
+      {images[index] && <img className="guest-custom-moment-image" src={images[index]} alt="" loading="lazy" />}
+      <span className="guest-custom-moment-number">{String(index + 1).padStart(2, "0")}</span>
+      <div><time>{moment.unknownTime || !moment.time ? (language === "ka" ? "დრო მალე" : "Time to follow") : moment.time}</time>
+        <h3>{(language === "ka" ? moment.ka : moment.en) || moment.en || moment.ka}</h3>
+        {moment.venue && <p>{moment.venue}</p>}
+        {moment.venue && <a href={momentMapUrl(moment, city)} target="_blank" rel="noreferrer">{language === "ka" ? "რუკა" : "Map"} <Icon name="arrow-up-right" size={15} /></a>}
+      </div>
+    </li>)}</ol>
+  </NoteCard>;
+}
+
 export default function GuestCardSuite({ template, sample, copyTranslations, editableFields, onEditText, settings, photos, dayPlan = [], noteSettings = normalizeGuestNoteSettings(null), openingReplay = 0, mobile, hasPortrait,
-  creator, onSettingsChange, onAddSection, planDraft, onSavePlan, onNoteSettingsChange, galleryTools }) {
+  creator, onSettingsChange, onAddSection, planDraft, onSavePlan, onNoteSettingsChange, galleryTools, customDesign, moments = [], city = "" }) {
   const { t, language } = useLanguage();
   const root = useRef(null);
   const [guestIdentity, setGuestIdentity] = useState(() => {
@@ -236,7 +258,6 @@ export default function GuestCardSuite({ template, sample, copyTranslations, edi
   });
   const changeGuestName = (name, source) => setGuestIdentity({ name, source });
   const reducedMotion = useReducedGuestMotion();
-  useGuestCenteredScroll(root, reducedMotion);
   useGuestComponentReveals(root, reducedMotion);
   const [editingPlan, setEditingPlan] = useState(false);
   const entranceKey = `${template.slug}:${creator ? "edit" : settings.entrance}:${openingReplay}`;
@@ -244,7 +265,6 @@ export default function GuestCardSuite({ template, sample, copyTranslations, edi
   const entranceComplete = creator || settings.entrance === "immediate" || completedEntrance === entranceKey;
   const completeEntrance = useCallback(() => setCompletedEntrance(entranceKey), [entranceKey]);
   useElegantGuestMotion(root, !creator && settings.motion === "elegant", entranceComplete, reducedMotion, entranceKey);
-  useGuestSectionFlow(root, entranceComplete && (creator || settings.motion !== "elegant"), reducedMotion);
   const design = getGuestCardDesign(template);
   useEffect(() => {
     if (!design.mobileFrame || !root.current) return;
@@ -267,13 +287,14 @@ export default function GuestCardSuite({ template, sample, copyTranslations, edi
     "--guest-mobile-paper": design.mobilePaper, "--guest-mobile-ink": design.mobileInk,
     "--guest-mobile-error-ink": design.mobileErrorInk,
     "--guest-mobile-background": design.mobileBackground ? `url("${design.mobileBackground}")` : "none",
-    "--guest-paper": design.paper, "--guest-ink": design.ink, "--guest-accent": design.accent,
+    "--guest-paper": design.paper, "--guest-ink": design.ink, "--guest-accent": template.isCustom ? customDesign.color : design.accent,
     "--guest-support-paper": design.supportPaper, "--guest-support-ink": design.supportInk,
     "--guest-support-error-ink": design.supportErrorInk,
     "--guest-error-ink": design.errorInk,
     "--guest-secondary": design.secondary, "--guest-background": design.background ? `url("${design.background}")` : "none",
     "--guest-display-font": font.style["--design-font-family"],
     "--guest-frame-image": design.frame ? `url("${design.frame}")` : "none",
+    ...(template.isCustom ? { "--custom-cover-color": customDesign.color, "--custom-paper-image": getClassicalPaper(customDesign.paper) ? `url("${getClassicalPaper(customDesign.paper)}")` : "none", "--custom-ornament-image": getClassicalOrnament(customDesign.ornament) ? `url("${getClassicalOrnament(customDesign.ornament)}")` : "none", "--custom-ornament-color": ornamentTones[customDesign.ornamentTone] ?? ornamentTones.ivory } : {}),
   };
   const [removedSection, setRemovedSection] = useState(null);
   useEffect(() => {
@@ -289,32 +310,34 @@ export default function GuestCardSuite({ template, sample, copyTranslations, edi
     editor={creator && (editingPlan || planDraft) && <GuestDayPlanEditor embedded dayPlan={dayPlan} onSave={items => { onSavePlan(items); setEditingPlan(false); }} />} />;
   const editField = key => editableFields.find(field => field.group === "fields" && field.key === key);
 
-  return <article ref={root} data-classic-frame={design.classicMobilePaper && Boolean(design.mobileFrame)} data-template={template.slug} data-classic-paper={design.classicMobilePaper} data-classic-mobile-paper={mobile && design.classicMobilePaper} data-mobile-frame={mobile && design.classicMobilePaper && Boolean(design.mobileFrame)} data-soft-screen={design.softScreen} data-entrance-complete={entranceComplete} className={`guest-card-suite${creator ? " is-canvas-editing" : ""} guest-pattern-${design.pattern} guest-motion-${creator ? "none" : settings.motion}${design.background ? " has-paper-image" : ""}`} style={style} aria-label={sample.title}>
+  return <article ref={root} data-classic-frame={design.classicMobilePaper && Boolean(design.mobileFrame)} data-template={template.slug} data-classic-paper={design.classicMobilePaper} data-classic-mobile-paper={mobile && design.classicMobilePaper} data-mobile-frame={mobile && design.classicMobilePaper && Boolean(design.mobileFrame)} data-soft-screen={design.softScreen} data-entrance-complete={entranceComplete} className={`guest-card-suite${creator ? " is-canvas-editing" : ""}${template.isCustom ? ` guest-custom-theme${pastelCustomColors.has(customDesign.color) ? " custom-pastel-color" : ""} custom-frame-${customDesign.frame} custom-pattern-${customDesign.pattern} custom-font-${customDesign.font} custom-paper-${customDesign.paper || "none"} custom-ornament-${customDesign.ornament || "none"}` : ""} guest-pattern-${design.pattern} guest-motion-${creator ? "none" : settings.motion}${design.background ? " has-paper-image" : ""}`} style={style} aria-label={sample.title}>
     {!creator && settings.motion === "elegant" && entranceComplete && !reducedMotion && <div className="guest-elegant-atmosphere" aria-hidden="true">
       {[0, 1, 2, 3, 4, 5].map(index => <i key={index} style={{ "--particle-left": `${8 + index * 17}%`, "--particle-top": `${6 + index * 15}%`, "--particle-delay": `${-index * 3}s` }} />)}
       <span className="guest-elegant-shimmer" />
     </div>}
     <nav className="guest-nav" aria-label={sample.title}>
       <span className="guest-wordmark">11:11</span>
-      <div><a href="#guest-invitation">{t("guestCards.invitation")}</a>{settings.gallery && (creator || photos.length > 0) && <a href="#guest-photos">{t("guestCards.photos")}</a>}{settings.details && <a href="#guest-event-details">{t("guestCards.details")}</a>}{dayPlanCard && <a href="#guest-day-plan">{t("guestCards.plan.title")}</a>}{settings.rsvp && <a href="#guest-rsvp">{t("guestCards.rsvp")}</a>}{noteSettings.enabled && <a href="#guest-notes">{t("guestCards.notes.title")}</a>}</div>
+      <div><a href="#guest-invitation">{t("guestCards.invitation")}</a>{settings.gallery && (creator || photos.length > 0) && <a href="#guest-photos">{t("guestCards.photos")}</a>}{settings.details && <a href="#guest-event-details">{t("guestCards.details")}</a>}{moments.length > 0 && <a href="#guest-custom-moments">{language === "ka" ? "განრიგი" : "Schedule"}</a>}{dayPlanCard && <a href="#guest-day-plan">{t("guestCards.plan.title")}</a>}{settings.rsvp && <a href="#guest-rsvp">{t("guestCards.rsvp")}</a>}{noteSettings.enabled && <a href="#guest-notes">{t("guestCards.notes.title")}</a>}</div>
     </nav>
     <div className="guest-card-layout">
       <div className="guest-invitation-column">
         <section className={`guest-main-card${presentation === "portrait" ? " is-portrait" : " is-square-mobile"}`} id="guest-invitation" aria-label={t("guestCards.invitation")}>
           <div className="guest-main-content">
             <InvitationEntrance key={entranceKey} settings={creator ? { ...settings, entrance: "immediate", openingEffect: "none" } : settings} design={design} title={sample.name ?? sample.posterName ?? sample.title} reducedMotion={reducedMotion} onComplete={completeEntrance}>
-              <EditableInvitationArtwork fields={editableFields} onEdit={onEditText}><CardCopyProvider overrides={copyTranslations}><InvitationArtwork template={template} large presentation={presentation} sample={sample} ariaLabel={sample.title} /></CardCopyProvider></EditableInvitationArtwork>
+              {template.isCustom ? <CustomInvitationCover design={customDesign} sample={sample} invitationLabel={t("guestCards.invitation")} />
+                : <EditableInvitationArtwork fields={editableFields} onEdit={onEditText}><CardCopyProvider overrides={copyTranslations}><InvitationArtwork template={template} large presentation={presentation} sample={sample} ariaLabel={sample.title} /></CardCopyProvider></EditableInvitationArtwork>}
             </InvitationEntrance>
           </div>
         </section>
       </div>
+    {template.isCustom && sample.line && <div className="guest-section-screen" data-section="message"><NoteCard design={design} className="guest-custom-message" ornament={0}><small>{sample.opening || (language === "ka" ? "გეპატიჟებით" : "You're invited")}</small><p>{sample.line}</p></NoteCard></div>}
     {settings.gallery && (creator || photos.length > 0) && <div className="guest-section-screen" data-section="gallery"><PhotoGallery key={photos.map(photo => photo.id).join(":")} photos={photos} design={design} creator={creator} galleryTools={galleryTools} headingField={editableFields.find(field => field.key === "guestCards.gallery.title")} onEditText={onEditText}
       tools={creator && <CanvasSectionTools title={t("guestCards.gallery")} onRemove={() => removeSection({ gallery: false })} />} /></div>}
     {creator && !settings.gallery && <CanvasAddSection section="gallery" onAdd={onAddSection} />}
       <div className="guest-support-cards">
         <div className="guest-event-screen" id="guest-event-details" tabIndex={-1}>
-        <GuestEventTools details={details} sample={sample} template={template} settings={settings} onSettingsChange={onSettingsChange} creator={creator} />
-        {settings.details && <div className="guest-details" id="guest-details" tabIndex={-1}>
+        {(!template.isCustom || Boolean(sample.displayDate)) && <GuestEventTools details={details} sample={sample} template={template} settings={settings} onSettingsChange={onSettingsChange} creator={creator} />}
+        {settings.details && (!template.isCustom || moments.length === 0) && <div className="guest-details" id="guest-details" tabIndex={-1}>
           {creator && <CanvasSectionTools title={t("guestCards.details")} recommended onRemove={() => removeSection({ details: false })} />}
           <NoteCard design={design} className="guest-when" aria-labelledby="guest-when-title">
             <h2 id="guest-when-title"><EditableValue field={editableFields.find(field => field.key === "guestCards.when")} onEdit={onEditText}>{t("guestCards.when")}</EditableValue></h2><span className="guest-note-rule" aria-hidden="true" />
@@ -328,6 +351,7 @@ export default function GuestCardSuite({ template, sample, copyTranslations, edi
         </div>}
         {creator && !settings.details && <CanvasAddSection section="details" onAdd={onAddSection} />}
         </div>
+        {settings.details && moments.length > 0 && <div className="guest-section-screen" data-section="moments"><CustomMomentsCard moments={moments} city={city} date={sample.displayDate} design={design} images={photos.map(photo => photo.src)} /></div>}
         {dayPlanCard && <div className="guest-section-screen" data-section="plan">{dayPlanCard}</div>}
         {creator && !dayPlanCard && <CanvasAddSection section="plan" onAdd={onAddSection} />}
         {settings.rsvp && <div className="guest-section-screen" data-section="rsvp"><AttendanceCard key={template.slug} template={template} design={design} maxCompanions={settings.companions} onEditText={onEditText} creator={creator} editableFields={editableFields} onSettingsChange={onSettingsChange} fullName={guestIdentity.name} onFullNameChange={changeGuestName}
@@ -339,6 +363,9 @@ export default function GuestCardSuite({ template, sample, copyTranslations, edi
         {creator && !noteSettings.enabled && <CanvasAddSection section="notes" onAdd={onAddSection} />}
       </div>
     </div>
-    <footer className="guest-footer"><span>{t("guestCards.made")}</span></footer>
+    <footer className={`guest-footer${template.isCustom && footerScenes[customDesign.footerScene] ? " has-footer-art" : ""}`}>
+      {template.isCustom && footerScenes[customDesign.footerScene] && <img className="guest-footer-art" src={footerScenes[customDesign.footerScene]} alt="" aria-hidden="true" />}
+      <span>{t("guestCards.made")}</span>
+    </footer>
   </article>;
 }

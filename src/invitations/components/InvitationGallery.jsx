@@ -1,10 +1,11 @@
-import { useEffect, useRef, useState } from "react";
+import { Fragment, useEffect, useRef, useState } from "react";
 import InvitationCard from "./InvitationCard.jsx";
+import CustomInvitationCard from "./CustomInvitationCard.jsx";
 import { useLanguage } from "../../localization/LanguageContext.jsx";
 
 const batchSize = 12;
 
-export default function InvitationGallery({ templates, className = "" }) {
+export default function InvitationGallery({ templates, className = "", customCategory = null }) {
   const { t } = useLanguage();
   const sentinel = useRef(null);
   const storageKey = `1111-gallery:${templates.map((template) => template.id).join(",")}`;
@@ -33,7 +34,13 @@ export default function InvitationGallery({ templates, className = "" }) {
   }, [hasMore, visibleCount, templates.length]);
 
   return <>
-    <div className={`invitation-gallery ${className}`}>{templates.slice(0, visibleCount).map((template, index) => <InvitationCard key={template.id} template={template} animationIndex={index % batchSize} />)}</div>
+    <div className={`invitation-gallery ${className}`}>
+      {templates.slice(0, visibleCount).map((template, index) => <Fragment key={template.id}>
+        <InvitationCard template={template} animationIndex={index % batchSize} />
+        {index === 0 && customCategory && <CustomInvitationCard category={customCategory} animationIndex={1} />}
+      </Fragment>)}
+      {!templates.length && customCategory && <CustomInvitationCard category={customCategory} />}
+    </div>
     {hasMore ? <div ref={sentinel} className="collection-load-more"><button type="button" onClick={() => setVisibleCount((count) => Math.min(count + batchSize, templates.length))}><span className="collection-loader" aria-hidden="true" />{t("catalog.loadMore")}</button></div> : null}
   </>;
 }

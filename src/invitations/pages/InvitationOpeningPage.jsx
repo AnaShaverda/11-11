@@ -11,6 +11,8 @@ import CardTextPopover from "../components/CardTextPopover.jsx";
 import InvitationDetailsForm from "../components/InvitationDetailsForm.jsx";
 import InvitationAnimationEditor from "../components/InvitationAnimationEditor.jsx";
 import InvitationSectionsEditor from "../components/InvitationSectionsEditor.jsx";
+import InvitationQuestionnaire from "../components/InvitationQuestionnaire.jsx";
+import { getDraftMedia, saveDraftMedia, removeDraftMedia } from "../data/draftMedia.js";
 import { applyCardText, normalizeCardText, getEditableCardFields, getCardTextFields } from "../data/guestCardText.js";
 import { normalizeGuestDayPlan } from "../data/guestDayPlan.js";
 import { normalizeGuestNoteSettings } from "../data/guestNotes.js";
@@ -59,7 +61,9 @@ function GuestPreview({ template }) {
   const [noteSettings, setNoteSettings] = useState(() => readNoteSettings(template.slug));
   const [inlineEdit, setInlineEdit] = useState(null);
   const creator = true;
-  const [editorMode, setEditorMode] = useState("card");
+  const [editorMode, setEditorMode] = useState("guide");
+  const [guestPreview, setGuestPreview] = useState(false);
+  const [previewCycle, setPreviewCycle] = useState(0);
   const [animationTab, setAnimationTab] = useState("opening");
   const [planDraft, setPlanDraft] = useState(false);
   const [samplePhotos, setSamplePhotos] = useState(true);
@@ -77,7 +81,7 @@ function GuestPreview({ template }) {
     if (!pendingSection) return;
     const section = document.getElementById(pendingSection);
     if (section) {
-      section.scrollIntoView({ behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth", block: "center" });
+      section.scrollIntoView({ behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth", block: "start" });
       section.focus({ preventScroll: true });
       setPendingSection(null);
     }
@@ -97,7 +101,14 @@ function GuestPreview({ template }) {
   }
 
   function chooseEditorMode(mode) {
+    setGuestPreview(false);
     setEditorMode(mode);
+    window.scrollTo({ top: 0, behavior: "instant" });
+  }
+
+  function showGuestPreview() {
+    setPreviewCycle(current => current + 1);
+    setGuestPreview(true);
     window.scrollTo({ top: 0, behavior: "instant" });
   }
 
@@ -118,6 +129,20 @@ function GuestPreview({ template }) {
     const urls = photoUrls.current;
     return () => { mounted.current = false; urls.forEach(url => URL.revokeObjectURL(url)); urls.clear(); };
   }, []);
+
+  useEffect(() => {
+    let active = true;
+    getDraftMedia(`gallery:${template.slug}`).then(files => {
+      if (!active || !Array.isArray(files)) return;
+      const next = files.filter(file => file instanceof File).map(file => {
+        const src = URL.createObjectURL(file);
+        photoUrls.current.add(src);
+        return { id: globalThis.crypto?.randomUUID?.() ?? `photo-${Date.now()}-${Math.random().toString(36).slice(2)}`, src, name: file.name, file };
+      });
+      if (next.length) { setUploadedPhotos(next); setSamplePhotos(false); }
+    }).catch(() => {});
+    return () => { active = false; };
+  }, [template.slug]);
 
   function updateSettings(patch) { customized.current = true; setSettings(current => normalizeGuestSettings({ ...current, ...patch })); }
 
@@ -183,14 +208,16 @@ function GuestPreview({ template }) {
       const src = URL.createObjectURL(file);
       photoUrls.current.add(src);
       const image = new Image();
-      image.onload = () => resolve({ id: crypto.randomUUID(), src, name: file.name });
+      image.onload = () => resolve({ id: globalThis.crypto?.randomUUID?.() ?? `photo-${Date.now()}-${Math.random().toString(36).slice(2)}`, src, name: file.name, file });
       image.onerror = () => { URL.revokeObjectURL(src); photoUrls.current.delete(src); resolve(null); };
       image.src = src;
     })));
     if (!mounted.current) return;
     const valid = decoded.filter(Boolean);
     setPhotoError(valid.length !== files.length);
-    setUploadedPhotos(current => [...current, ...valid].slice(0, MAX_GALLERY_PHOTOS));
+    const next = [...uploadedPhotos, ...valid].slice(0, MAX_GALLERY_PHOTOS);
+    setUploadedPhotos(next);
+    saveDraftMedia(`gallery:${template.slug}`, next.flatMap(item => item.file ? [item.file] : [])).catch(() => {});
     if (valid.length) { setSamplePhotos(false); updateSettings({ gallery: true }); }
     setUploading(false);
   }
@@ -198,7 +225,9 @@ function GuestPreview({ template }) {
   function removePhoto(id) {
     const photo = uploadedPhotos.find(item => item.id === id);
     if (photo) { URL.revokeObjectURL(photo.src); photoUrls.current.delete(photo.src); }
-    setUploadedPhotos(current => current.filter(item => item.id !== id));
+    const next = uploadedPhotos.filter(item => item.id !== id);
+    setUploadedPhotos(next);
+    saveDraftMedia(`gallery:${template.slug}`, next.flatMap(item => item.file ? [item.file] : [])).catch(() => {});
     setPhotoError(false);
   }
 
@@ -206,6 +235,7 @@ function GuestPreview({ template }) {
     setSamplePhotos(true);
     uploadedPhotos.forEach(photo => { URL.revokeObjectURL(photo.src); photoUrls.current.delete(photo.src); });
     setUploadedPhotos([]);
+    removeDraftMedia(`gallery:${template.slug}`).catch(() => {});
     setPhotoError(false);
   }
 
@@ -218,23 +248,25 @@ function GuestPreview({ template }) {
       <Link className="guest-preview-back" to={`/invitations/${template.slug}`}><Icon name="arrow-left" size={18} /><span>{t("guestCards.back")}</span></Link>
       <div className="guest-preview-device"><span>{t("guestCards.preview")}</span><div className="guest-device-buttons" role="group" aria-label={t("guestCards.device")}>{["desktop", "mobile"].map(device => <button key={device} type="button" aria-pressed={view === device} onClick={() => setView(device)}>{t(`guestCards.${device}`)}</button>)}</div></div>
       <span className="guest-canvas-save-status">{t("editor.saved")}</span>
+      {guestPreview && <div className="invitation-guest-preview-actions"><button type="button" onClick={() => setGuestPreview(false)}>{t("editor.backEditing")}</button><button type="button" onClick={() => setPreviewCycle(current => current + 1)}>{t("guide.replay")}</button></div>}
       <button className="guest-preview-language" type="button" onClick={() => setLanguage(language === "ka" ? "en" : "ka")} aria-label={language === "ka" ? "English" : "ქართული"}>{language === "ka" ? "EN" : "KA"}</button>
     </header>
-    <section className="invitation-editor-guide" aria-labelledby="invitation-editor-title">
+    {!guestPreview && <section className="invitation-editor-guide" aria-labelledby="invitation-editor-title">
       <div><h1 id="invitation-editor-title">{t("editor.title")}</h1><p>{t("editor.intro")}</p></div>
       <div className="invitation-editor-modes" role="group" aria-label={t("editor.title")}>
-        {["card", "form", "animations", "sections"].map(mode => <button type="button" key={mode} aria-pressed={editorMode === mode} onClick={() => chooseEditorMode(mode)}>{t(`editor.${mode}`)}</button>)}
+        {["guide", "card", "form", "animations", "sections"].map(mode => <button type="button" key={mode} aria-pressed={editorMode === mode} onClick={() => chooseEditorMode(mode)}>{t(`editor.${mode}`)}</button>)}
       </div>
       {editorMode === "card" && <p className="invitation-editor-card-hint">{t("editor.cardHint")}</p>}
-    </section>
-    <div className={`invitation-editor-workspace${creator && editorMode !== "card" ? " has-editor" : ""}`} data-editor-mode={editorMode}>
-      {creator && editorMode !== "card" && <aside className="invitation-editor-sidebar">
+    </section>}
+    <div className={`invitation-editor-workspace${creator && !guestPreview && editorMode !== "card" ? " has-editor" : ""}${editorMode === "guide" && !guestPreview ? " has-guide" : ""}`} data-editor-mode={guestPreview ? "preview" : editorMode}>
+      {creator && !guestPreview && editorMode !== "card" && <aside className="invitation-editor-sidebar">
+        {editorMode === "guide" && <InvitationQuestionnaire template={template} fields={editableFields} settings={settings} onFieldsChange={saveFromCard} onSettingsChange={updateSettings} dayPlan={dayPlan} onSaveDayPlan={saveDayPlan} noteSettings={noteSettings} onNoteSettingsChange={updateNoteSettings} onChoosePhotos={choosePhotos} uploadedCount={uploadedPhotos.length} uploading={uploading} photoError={photoError} onPreviewGuest={showGuestPreview} onViewCard={() => chooseEditorMode("card")} onAdvancedAnimations={() => chooseEditorMode("animations")} />}
         {editorMode === "form" && <InvitationDetailsForm fields={editableFields} onChange={saveFromCard} onViewCard={() => chooseEditorMode("card")} />}
         {editorMode === "animations" && <InvitationAnimationEditor settings={settings} onChange={updateSettings} tab={animationTab} onTabChange={setAnimationTab} />}
         {editorMode === "sections" && <InvitationSectionsEditor onSettingsChange={updateSettings} noteSettings={noteSettings} settings={settings} dayPlan={dayPlan} planDraft={planDraft} onAdd={addSection} onGo={goToSection} />}
       </aside>}
       <div className={`guest-preview-stage is-${view}`}>
-      <CardCopyProvider overrides={cardText.translations}><GuestCardSuite template={template} sample={sample} copyTranslations={cardText.translations} editableFields={editableFields} onEditText={creator ? editFromCard : undefined} creator={creator} onSettingsChange={updateSettings} onAddSection={addSection} planDraft={planDraft} onSavePlan={items => { saveDayPlan(items); setPlanDraft(false); }} onNoteSettingsChange={updateNoteSettings} galleryTools={{ onChoose: choosePhotos, onRemove: removePhoto, onReset: resetPhotos, uploading, count: uploadedPhotos.length, photoError, samplePhotos }} settings={settings} photos={photos} dayPlan={dayPlan} noteSettings={noteSettings} mobile={view === "mobile" || smallViewport} hasPortrait={hasPortrait} /></CardCopyProvider>
+      <CardCopyProvider overrides={cardText.translations}><GuestCardSuite key={`${template.slug}:${guestPreview ? `guest-${previewCycle}` : "edit"}`} template={template} sample={sample} copyTranslations={cardText.translations} editableFields={editableFields} onEditText={creator && !guestPreview ? editFromCard : undefined} creator={!guestPreview} onSettingsChange={updateSettings} onAddSection={addSection} planDraft={planDraft} onSavePlan={items => { saveDayPlan(items); setPlanDraft(false); }} onNoteSettingsChange={updateNoteSettings} galleryTools={{ onChoose: choosePhotos, onRemove: removePhoto, onReset: resetPhotos, uploading, count: uploadedPhotos.length, photoError, samplePhotos }} settings={settings} photos={photos} dayPlan={dayPlan} noteSettings={noteSettings} mobile={view === "mobile" || smallViewport} hasPortrait={hasPortrait} /></CardCopyProvider>
       </div>
     </div>
     {inlineEdit && <CardTextPopover target={inlineEdit} onSave={saveFromCard} onClose={() => setInlineEdit(null)} />}

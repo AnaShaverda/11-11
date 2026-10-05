@@ -1,0 +1,22 @@
+export const customCategories = ["wedding", "birthday", "baby-kids", "pre-wedding", "parties", "gifts", "corporate"];
+
+const themes = {
+  all: { category: "Other", color: "#7b5874", pattern: "floral", title: "Your celebration" },
+  wedding: { category: "Wedding", color: "#76554b", pattern: "floral", title: "Our wedding" },
+  birthday: { category: "Birthday", color: "#7b5874", pattern: "confetti", title: "Birthday celebration" },
+  "baby-kids": { category: "Other", color: "#637e80", pattern: "stars", title: "A little celebration" },
+  "pre-wedding": { category: "Other", color: "#986579", pattern: "floral", title: "The celebration begins" },
+  parties: { category: "Other", color: "#253c56", pattern: "confetti", title: "Let's celebrate" },
+  gifts: { category: "Other", color: "#7b5874", pattern: "stars", title: "A special surprise" },
+  corporate: { category: "Other", color: "#46594c", pattern: "plain", title: "You're invited" },
+};
+
+export function getCustomTemplate(category) {
+  const theme = themes[category];
+  if (!theme) return null;
+  return {
+    slug: `custom-${category}`, isCustom: true, category: theme.category, subcategory: category,
+    previewArt: "custom", visual: "custom", design: { palette: ["#fffaf4", "#302b30", theme.color, "#d9bca5"], pattern: "paper" },
+    visualAssets: {}, defaultDesign: { color: theme.color, pattern: theme.pattern }, defaultTitle: theme.title,
+  };
+}

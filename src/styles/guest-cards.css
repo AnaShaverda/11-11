@@ -692,32 +692,13 @@ html:has(.guest-preview-page), body:has(.guest-preview-page) { min-width: 0; }
 .guest-calendar-menu small { font-size: 12px; line-height: 1.5; }
 @container guest-preview (max-width: 720px) { .guest-event-tools { grid-area: countdown; width: auto; margin: 16px 16px 0; } }
 
-/* Scroll reveals advance once; cards then remain opaque in their natural layout. */
-@media (prefers-reduced-motion: no-preference) {
-  html:has(.guest-preview-page) { scroll-behavior: smooth; }
-  .guest-scroll-screen { position: relative; z-index: var(--screen-layer, 1); }
-  .guest-scroll-screen > :is(.guest-main-card, .guest-event-tools, .guest-details, .guest-gallery, .guest-day-plan, .guest-rsvp),
-  .guest-main-card.guest-scroll-screen > .guest-main-content {
-    opacity: var(--screen-opacity, 1);
-    transform: translate(var(--screen-x, 0px), var(--screen-y, 0px)) scale(var(--screen-scale, 1));
-    transform-origin: center;
-    animation: none;
-  }
-  .guest-scroll-screen > .guest-details {
-    opacity: var(--screen-detail-opacity, 1);
-    transform: translate(var(--screen-x, 0px), var(--screen-detail-y, 0px)) scale(var(--screen-scale, 1));
-  }
-  .guest-scroll-screen .guest-card-decoration {
-    translate: 0 var(--screen-parallax, 0px);
-  }
-}
+@media (prefers-reduced-motion: no-preference) { html:has(.guest-preview-page) { scroll-behavior: smooth; } }
 .guest-card-suite :is(.guest-gallery, .guest-details, .guest-day-plan, .guest-rsvp, .guest-event-tools) { scroll-margin-top: 90px; }
-/* Related event information shares a screen; other sections have their own stage. */
+/* Invitation sections follow the natural document flow. */
 .guest-event-screen, .guest-section-screen {
-  min-height: var(--guest-screen-height, calc(100svh - 66px));
-  width: 100%; min-width: 0; padding-block: 32px;
-  display: flex; flex-direction: column; justify-content: center; gap: 24px;
-  scroll-margin-top: 66px;
+  width: 100%; min-width: 0; padding-block: 24px;
+  display: grid; gap: 24px;
+  scroll-margin-top: 90px;
 }
 .guest-event-screen > .guest-details { margin-block: 0; }
 .guest-section-screen > :is(.guest-gallery, .guest-day-plan, .guest-rsvp) { margin-block: 0; }
@@ -739,13 +720,9 @@ html:has(.guest-preview-page), body:has(.guest-preview-page) { min-width: 0; }
   .guest-event-screen .guest-detail-time { font-size: 15px; }
 }
 
-/* Center short stages after scrolling; long forms keep their natural scroll. */
 html:has(.guest-preview-page) { scroll-padding-top: 66px; }
-.guest-event-screen, .guest-section-screen, .guest-invitation-column { scroll-snap-align: center; scroll-margin: 0; }
-html:has(.guest-inline-editor[open], .guest-photo-lightbox[open]) { scroll-snap-type: none; }
-@media (prefers-reduced-motion: reduce) { html:has(.guest-preview-page) { scroll-snap-type: none; } }
 @container guest-preview (min-width: 721px) {
-  .guest-invitation-column { min-height: calc(100svh - 154px); padding: 24px; }
+  .guest-invitation-column { padding: 24px; }
   .guest-main-card:not(.is-portrait) { width: min(680px, 100%, calc(100svh - 202px)); }
   .is-canvas-editing .guest-invitation-column { min-height: 0; padding-block: 16px 32px; }
   .is-canvas-editing .guest-main-card:not(.is-portrait) { width: min(680px, 100%, calc(100svh - 340px)); }
@@ -754,18 +731,12 @@ html:has(.guest-inline-editor[open], .guest-photo-lightbox[open]) { scroll-snap-
   .guest-event-tools h2 { font-size: 30px; }
   .guest-countdown strong { font-size: 38px; }
   .guest-event-screen .guest-details .guest-note { min-height: 170px; }
-  .guest-section-screen > :is(.guest-gallery, .guest-day-plan, .guest-rsvp) { min-height: min(560px, calc(var(--guest-screen-height) - 96px)); }
-  .guest-section-screen > .guest-rsvp { display: flex; flex-direction: column; }
-  .guest-rsvp .guest-note-content { max-width: 720px; margin-block: auto; }
+  .guest-rsvp .guest-note-content { max-width: 720px; }
   .guest-rsvp h2 { font-size: 34px; }
 }
 @container guest-preview (max-width: 720px) {
-  .guest-main-card { scroll-snap-align: center; scroll-margin: 0; }
   .guest-section-screen > :is(.guest-gallery, .guest-day-plan, .guest-rsvp),
   .guest-event-screen > :is(.guest-event-tools, .guest-details) { width: calc(100% - 24px); }
-  .guest-section-screen > :is(.guest-gallery, .guest-day-plan, .guest-rsvp) { min-height: calc(var(--guest-screen-height) - 64px); }
-  .guest-section-screen > .guest-rsvp { display: flex; flex-direction: column; }
-  .guest-rsvp .guest-note-content { margin-block: auto; }
   .guest-event-screen .guest-details .guest-note { min-height: 190px; }
   .guest-event-screen .guest-event-tools { padding: 28px 20px; }
 }
@@ -827,7 +798,7 @@ html:has(.guest-inline-editor[open], .guest-photo-lightbox[open]) { scroll-snap-
   background: repeating-linear-gradient(90deg, transparent 0 21px, color-mix(in srgb, var(--guest-mobile-ink) 9%, transparent) 21px 22px, transparent 22px 23px);
 }
 
-/* Repeat the original portrait frame once per screen, around its full contents. */
+/* Repeat the original portrait frame around each section's contents. */
 .guest-card-suite[data-mobile-frame="true"] :is(.guest-event-screen, .guest-section-screen) {
   position: relative; isolation: isolate;
   padding: 100px max(var(--guest-mobile-frame-inset), 48px);
@@ -838,7 +809,7 @@ html:has(.guest-inline-editor[open], .guest-photo-lightbox[open]) { scroll-snap-
   border-image-source: var(--guest-mobile-frame);
   border-image-slice: var(--guest-frame-slice, 160);
   border-image-repeat: stretch round;
-  opacity: var(--screen-opacity, 1);
+  opacity: 1;
 }
 .guest-card-suite[data-mobile-frame="true"] .guest-event-screen > :is(.guest-event-tools, .guest-details),
 .guest-card-suite[data-mobile-frame="true"] .guest-section-screen > :is(.guest-rsvp, .guest-day-plan, .guest-gallery) { width: 100%; }

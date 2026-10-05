@@ -28,6 +28,10 @@ Use `npm run build` to create a production bundle.
 
 Old project links, including `/projects/friendship-diary`, redirect to their current category or module route.
 
+### Custom invitation drafts
+
+Each event collection has a separate **Create your own design** card. `/invitations/create/:category` opens a four-step local creator for event wording, an optional cover photo, colors, patterns, frames, typography, guest sections, and opening effects. Its guest preview reuses the existing envelope, decorative doors, confetti, and motion system. Premade card artwork is separate. Text and settings are saved per category in browser storage; cover and gallery files are saved in IndexedDB. This is a frontend visual draft only: links cannot be shared as a live invitation and guest responses are only local previews.
+
 ## Frontend structure
 
 - `src/app` owns routes and scopes the intro animation to the marketing pages.

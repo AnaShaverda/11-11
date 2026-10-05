@@ -3,7 +3,8 @@ import Icon from "../../components/ui/Icon.jsx";
 import { useLanguage } from "../../localization/LanguageContext.jsx";
 import { getDayPlanErrors, normalizeGuestDayPlan, MAX_DAY_PLAN_ITEMS, MAX_DAY_PLAN_TITLE, MAX_DAY_PLAN_DETAILS } from "../data/guestDayPlan.js";
 
-const draftItem = (item = {}) => ({ time: "", title: "", details: "", ...item, id: crypto.randomUUID() });
+const draftItem = (item = {}) => ({ time: "", title: "", details: "", ...item,
+  id: globalThis.crypto?.randomUUID?.() ?? `plan-${Date.now()}-${Math.random().toString(36).slice(2)}` });
 const makeDraft = items => items.length ? items.map(draftItem) : [draftItem()];
 
 export default function GuestDayPlanEditor({ dayPlan, onSave, embedded = false }) {

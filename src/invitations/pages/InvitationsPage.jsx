@@ -13,6 +13,7 @@ import BirthdayExperience from "../../projects/BirthdayExperience.jsx";
 import WeddingExperience from "../../projects/WeddingExperience.jsx";
 import CorporateExperience from "../../projects/CorporateExperience.jsx";
 import { useLanguage } from "../../localization/LanguageContext.jsx";
+import { customCategories } from "../data/customTemplates.js";
 
 const experiences = { birthday: BirthdayExperience, wedding: WeddingExperience };
 
@@ -31,7 +32,8 @@ export default function InvitationsPage() {
   const showAppearance = availableTemplates.length > 0 || hasAppearance;
   const visibleTemplates = availableTemplates.filter((item) => matchesCatalogAppearance(item, appearance));
   const visibleGifts = giftCatalogItems.filter((item) => itemMatchesCategory(item, project?.id, occasion) && matchesCatalogAppearance(item, appearance));
-  const resultCount = visibleTemplates.length + visibleGifts.length;
+  const customCategory = project?.id && customCategories.includes(project.id) ? project.id : !project || project.id === "trending" ? "all" : null;
+  const resultCount = visibleTemplates.length + visibleGifts.length + Number(Boolean(customCategory));
   const resultKey = [project?.id ?? "all", occasion, appearance.themes.join(","), appearance.colors.join(",")].join("|");
   const availableAppearance = availableTemplates.map(getCatalogAppearance);
   const themeOptions = catalogThemeOptions.filter((option) => appearance.themes.includes(option.id) || availableAppearance.some((item) => item.themes.includes(option.id)));
@@ -59,7 +61,7 @@ export default function InvitationsPage() {
       <section className="invitation-collection" id={`collection-${project?.id ?? "all"}`} aria-label={title}>
         <div className="invitation-collection-heading"><div className="collection-heading-copy"><h2>{title} <span className="category-heading-count" aria-live="polite" aria-atomic="true">({resultCount})</span></h2>{project ? <p>{t(`project.${project.id}.description`)}</p> : null}</div></div>
         {project?.id === "trending" ? <p className="category-curated-note">{t("category.trending.note")}</p> : null}
-        {visibleTemplates.length ? <InvitationGallery key={resultKey} templates={visibleTemplates} /> : null}
+        {(visibleTemplates.length || customCategory) ? <InvitationGallery key={resultKey} templates={visibleTemplates} customCategory={customCategory} /> : null}
         {visibleGifts.length ? <>{visibleTemplates.length ? <h3 className="gift-collection-heading">{t("common.gifts")}</h3> : null}<GiftCatalog key={resultKey} items={visibleGifts} /></> : null}
         {!resultCount && project?.id !== "corporate" ? <div className="invitation-empty-state"><h2>{t(selectedOccasion && !hasAppearance ? "catalog.occasion.empty.title" : "catalog.empty.title", { occasion: selectedOccasion ? t(selectedOccasion.captionKey) : title })}</h2><p>{t(selectedOccasion && !hasAppearance ? "catalog.occasion.empty.description" : "catalog.empty.description")}</p>{hasAppearance ? <button type="button" className="collection-clear-filters" onClick={() => updateFilters({ themes: "", colors: "" })}>{t("catalog.clearAppearance")}</button> : null}</div> : null}
         {project?.id === "corporate" ? <CorporateExperience embedded /> : null}
