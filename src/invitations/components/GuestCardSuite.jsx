@@ -290,6 +290,10 @@ export default function GuestCardSuite({ template, sample, copyTranslations, edi
   const typography = getCardTypography(template);
   const font = getDesignFont(typography.display, language);
   const presentation = mobile && hasPortrait ? "portrait" : "square";
+  const supportPaperKey = weddingTheme?.embossedPaper
+    ? (weddingTheme.id === "embossedSage" ? "sagePaper" : "ivory")
+    : customDesign.paper;
+  const supportPaper = getClassicalPaper(supportPaperKey);
   const style = {
     "--guest-mobile-frame": design.mobileFrame ? `url("${design.mobileFrame}")` : "none",
     "--guest-mobile-frame-inset": design.mobileFrameInset,
@@ -304,7 +308,7 @@ export default function GuestCardSuite({ template, sample, copyTranslations, edi
     "--guest-display-font": font.style["--design-font-family"],
     "--guest-frame-image": design.frame ? `url("${design.frame}")` : "none",
     ...(weddingTheme ? weddingThemeStyle(weddingTheme) : {}),
-    ...(template.isCustom ? { "--custom-cover-color": customDesign.color, "--custom-paper-image": getClassicalPaper(customDesign.paper) ? `url("${getClassicalPaper(customDesign.paper)}")` : "none", "--custom-ornament-image": getClassicalOrnament(customDesign.ornament) ? `url("${getClassicalOrnament(customDesign.ornament)}")` : "none", "--custom-ornament-color": ornamentTones[customDesign.ornamentTone] ?? ornamentTones.ivory } : {}),
+    ...(template.isCustom ? { "--custom-cover-color": customDesign.color, "--custom-paper-image": supportPaper ? `url("${supportPaper}")` : "none", "--custom-ornament-image": getClassicalOrnament(customDesign.ornament) ? `url("${getClassicalOrnament(customDesign.ornament)}")` : "none", "--custom-ornament-color": ornamentTones[customDesign.ornamentTone] ?? ornamentTones.ivory } : {}),
   };
   const [removedSection, setRemovedSection] = useState(null);
   useEffect(() => {
@@ -334,14 +338,14 @@ export default function GuestCardSuite({ template, sample, copyTranslations, edi
       <div className="guest-invitation-column">
         <section className={`guest-main-card${presentation === "portrait" ? " is-portrait" : " is-square-mobile"}`} id="guest-invitation" aria-label={t("guestCards.invitation")}>
           <div className="guest-main-content">
-            <InvitationEntrance key={entranceKey} settings={creator ? { ...settings, entrance: "immediate", openingEffect: "none" } : settings} design={design} title={sample.name ?? sample.posterName ?? sample.title} reducedMotion={reducedMotion} onComplete={completeEntrance}>
+            <InvitationEntrance key={entranceKey} settings={creator ? { ...settings, entrance: "immediate", openingEffect: "none" } : settings} design={design} title={sample.name ?? sample.posterName ?? sample.title} initials={sample.initials} reducedMotion={reducedMotion} onComplete={completeEntrance}>
               {template.isCustom ? <CustomInvitationCover design={customDesign} sample={sample} invitationLabel={t("guestCards.invitation")} invitationGreeting={language === "ka" ? "გეპატიჟებით" : "You’re invited"} />
                 : <EditableInvitationArtwork fields={editableFields} onEdit={onEditText}><CardCopyProvider overrides={copyTranslations}><InvitationArtwork template={template} large presentation={presentation} sample={sample} ariaLabel={sample.title} /></CardCopyProvider></EditableInvitationArtwork>}
             </InvitationEntrance>
           </div>
         </section>
       </div>
-    {template.isCustom && (sample.line || creator) && <div className="guest-section-screen" data-section="message"><NoteCard design={design} className="guest-custom-message" ornament={0}><p className={!sample.line ? "is-message-placeholder" : undefined}>{sample.line || (language === "ka" ? "მოსაწვევის ტექსტი აქ გამოჩნდება." : "Your invitation text will appear here.")}</p></NoteCard></div>}
+    {template.isCustom && sample.line?.trim() && <div className="guest-section-screen" data-section="message"><NoteCard design={design} className="guest-custom-message" ornament={0}><p>{sample.line}</p></NoteCard></div>}
     {settings.gallery && (showCreatorTools || photos.length > 0) && <div className="guest-section-screen" data-section="gallery"><PhotoGallery key={photos.map(photo => photo.id).join(":")} photos={photos} design={design} creator={showCreatorTools} galleryTools={galleryTools} headingField={editableFields.find(field => field.key === "guestCards.gallery.title")} onEditText={onEditText}
       tools={showCreatorTools && <CanvasSectionTools title={t("guestCards.gallery")} onRemove={() => removeSection({ gallery: false })} />} /></div>}
     {showCreatorTools && !settings.gallery && <CanvasAddSection section="gallery" onAdd={onAddSection} />}
@@ -359,7 +363,7 @@ export default function GuestCardSuite({ template, sample, copyTranslations, edi
             <p className="guest-detail-value"><EditableValue field={editField("date")} onEdit={onEditText}>{sample.displayDate || details.date}</EditableValue></p>{details.time && <p className="guest-detail-time"><EditableValue field={editField("time")} onEdit={onEditText}>{details.time}</EditableValue></p>}
           </NoteCard>}
           <NoteCard design={design} className="guest-where" ornament={1} aria-labelledby="guest-where-title">
-            {weddingTheme && <img className="wedding-details-illustration" src={weddingTheme.illustration} alt="" loading="lazy" decoding="async" />}
+            {weddingTheme?.illustration && <img className="wedding-details-illustration" src={weddingTheme.illustration} alt="" loading="lazy" decoding="async" />}
             <h2 id="guest-where-title"><EditableValue field={editableFields.find(field => field.key === "guestCards.where")} onEdit={onEditText}>{t("guestCards.where")}</EditableValue></h2><span className="guest-note-rule" aria-hidden="true" />
             <p className="guest-detail-value"><EditableValue field={editField("location")} onEdit={onEditText}>{details.location}</EditableValue></p>
             <a className="guest-map-link" href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(details.location)}`} target="_blank" rel="noreferrer">{t("guestCards.map")} <Icon name="arrow-up-right" size={15} /></a>

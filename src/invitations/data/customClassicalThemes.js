@@ -18,6 +18,8 @@ export const classicalPapers = {
   sagePaper: asset("sage-paper"),
   lavenderPaper: asset("lavender-paper"),
   bluePaper: asset("blue-paper"),
+  embossedIvory: asset("embossed-ivory"),
+  embossedSage: asset("embossed-sage"),
 };
 
 export const footerScenes = {
@@ -367,6 +369,7 @@ const legacyThemeIds = {
   sepia: 'quietParchment', heritage: 'silkIvory', romance: 'pressedRose',
   midnight: 'pearlLetter', gilded: 'champagneVows', silver: 'pearlLetter',
   sageMeadow: 'meadowMorning', pastelBloom: 'pressedRose', lavenderHour: 'lilacWhisper', bluePorcelain: 'somethingBlue',
+  embossedIvory: 'vellumPromise', embossedSage: 'vellumPromise',
 };
 export function getClassicalTheme(id) {
   return classicalThemes.find(theme => theme.id === (legacyThemeIds[id] ?? id)) ?? classicalThemes[0];

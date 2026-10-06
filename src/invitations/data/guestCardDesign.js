@@ -7,7 +7,7 @@ import { invitationSamples } from "./invitationSamples.js";
 import { MAX_GUEST_NOTE_LENGTH } from "./guestNotes.js";
 
 export const guestPreviewDefaults = { timeZone: "Asia/Tbilisi", details: true, rsvp: true, rsvpDeadline: "", music: false, gallery: false, motion: "none", format: "square", companions: 1, entrance: "envelope", envelope: true, openingEffect: "none", openingIntensity: "subtle", openingSpeed: "slow", openingDuration: 8, openingPalette: "theme" };
-export const entranceStyles = ["envelope", "portraitEnvelope", "doors", "doorsBrown", "immediate"];
+export const entranceStyles = ["envelope", "embossedIvoryEnvelope", "embossedSageEnvelope", "doors", "doorsBrown", "immediate"];
 export const motionStyles = ["none", "gentle", "float", "sparkle", "elegant"];
 export const openingEffects = ["none", "confetti", "streamers", "hearts", "sparkles", "petals"];
 export const openingSpeeds = ["dreamy", "slow", "lively"];
@@ -44,7 +44,7 @@ const supportFrames = new Set([
 
 export function normalizeGuestSettings(value = {}) {
   if (!value || typeof value !== "object") value = {};
-  const entrance = entranceStyles.includes(value.entrance) ? value.entrance : value.envelope === false ? "immediate" : "envelope";
+  const entrance = value.entrance === "portraitEnvelope" ? "envelope" : entranceStyles.includes(value.entrance) ? value.entrance : value.envelope === false ? "immediate" : "envelope";
   return {
     timeZone: eventTimeZones.includes(value.timeZone) ? value.timeZone : "Asia/Tbilisi",
     details: value.details !== false,
@@ -56,7 +56,7 @@ export function normalizeGuestSettings(value = {}) {
     format: value.format === "portrait" ? "portrait" : "square",
     companions: Number.isInteger(value.companions) ? Math.min(5, Math.max(0, value.companions)) : 1,
     entrance,
-    envelope: entrance === "envelope" || entrance === "portraitEnvelope",
+    envelope: entrance === "envelope" || entrance === "embossedIvoryEnvelope" || entrance === "embossedSageEnvelope",
     openingEffect: openingEffects.includes(value.openingEffect) ? value.openingEffect : "none",
     openingIntensity: value.openingIntensity === "celebration" ? "celebration" : "subtle",
     openingSpeed: openingSpeeds.includes(value.openingSpeed) ? value.openingSpeed : "slow",

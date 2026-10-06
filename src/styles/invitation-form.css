@@ -212,8 +212,8 @@
 .custom-builder-themes > div { grid-template-columns: repeat(auto-fill, minmax(124px, 1fr)); gap: 10px; padding: 4px; }
 .custom-builder-themes .custom-theme-mini.wedding-theme-mini { width: 100%; max-width: none; margin: 0; }
 .custom-builder-themes button { width: 100%; padding: 4px; }
-.custom-builder-footer-scenes > div { grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 10px; }
-.custom-builder-sidebar .custom-builder-footer-scenes button { min-width: 0; background: var(--ui-field-background); border-color: var(--border-soft); color: var(--color-text); font-size: 13px; line-height: 1.5; padding: 6px; }
+.custom-builder-footer-scenes > div { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+.custom-builder-sidebar .custom-builder-footer-scenes button { min-width: 0; height: 100%; background: var(--ui-field-background); border-color: var(--border-soft); color: var(--color-text); font-size: 13px; line-height: 1.5; padding: 6px; text-align: center; overflow-wrap: anywhere; }
 .custom-builder-footer-scenes img, .custom-footer-none { aspect-ratio: 2.4 / 1; }
 
 .guest-rsvp-deadline { color: var(--guest-ink); font-size: 15px; line-height: 1.7; text-align: center; margin: 12px 0 24px; }
@@ -268,3 +268,34 @@
   color: var(--color-text); font-size: 11px; line-height: 1;
   font-variant-numeric: tabular-nums; flex-shrink: 0;
 }
+
+.custom-builder-initials { min-width: 0; margin: 0; padding: 16px; border: 1px solid var(--border-soft); border-radius: 16px; }
+.custom-builder-initials legend { padding: 0 6px; font-weight: 600; }
+.custom-builder-initials > p { margin: 0 0 14px; }
+.custom-builder-initials-row { display: grid; grid-template-columns: minmax(0,1fr) auto minmax(0,1fr) 58px; align-items: end; gap: 8px; }
+.custom-builder-initials-row label { display: grid; gap: 6px; min-width: 0; color: var(--color-text); font-size: 13px; font-weight: 600; }
+.custom-builder-initials-row input { text-align: center; text-transform: uppercase; }
+.custom-builder-initials-row > span { align-self: end; padding-bottom: 12px; color: var(--color-text-secondary); font: 400 23px/1 Georgia,serif; }
+.custom-builder-initials-row output { display: grid; place-items: center; width: 58px; height: 58px; border: 4px double #a77f38; border-radius: 50%; background: radial-gradient(circle at 32% 26%,#efd293,#b78231 73%); color: #4a3113; font: 400 15px/1 Georgia,"Noto Serif Georgian",serif; box-shadow: 0 3px 8px #3427183d; }
+.custom-builder-initials-reset { margin-top: 12px; padding: 4px 0; border: 0; background: none; color: var(--color-text); font: inherit; font-size: 13px; text-decoration: underline; cursor: pointer; }
+
+.custom-builder-sidebar .custom-builder-opening-choice button { display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 170px; gap: 8px; }
+.custom-builder-opening-choice .opening-mini {
+  display: block; flex: none; width: 100%; height: 112px; margin: 0; border: 0; border-radius: 8px;
+  background-color: #f4f0e9; background-size: contain; background-repeat: no-repeat; background-position: center;
+  box-shadow: none; clip-path: none;
+}
+.custom-builder-opening-choice .opening-mini::after { display: none; }
+.custom-builder-opening-choice .opening-mini-envelope { background-image: url('/images/opening/preview-envelope.png'); }
+.custom-builder-opening-choice .opening-mini-embossedIvoryEnvelope { background-image: url('/images/opening/preview-embossed-ivory.png'); }
+.custom-builder-opening-choice .opening-mini-embossedSageEnvelope { background-image: url('/images/opening/preview-embossed-sage.png'); }
+.custom-builder-opening-choice .opening-mini-doors { background-image: url('/images/opening/preview-doors-white.png'); }
+.custom-builder-opening-choice .opening-mini-doorsBrown { background-image: url('/images/opening/preview-doors-brown.png'); }
+.custom-builder-opening-choice .opening-mini-immediate { display: grid; place-items: center; background: #f4f0e9; }
+.custom-builder-opening-choice .opening-mini-immediate .wedding-theme-mini { display: block; width: 68px; height: 102px; min-height: 0; max-height: none; margin: 0; overflow: hidden; }
+
+.custom-builder-time label { position: relative; min-width: 0; }
+.custom-builder-sidebar .custom-builder-fields .custom-builder-time select { appearance: none; padding-right: 46px !important; }
+.custom-builder-time label::after { content: ""; position: absolute; right: 18px; bottom: 22px; width: 8px; height: 8px; border-right: 2px solid currentColor; border-bottom: 2px solid currentColor; transform: rotate(45deg); pointer-events: none; }
+
+.custom-builder-actions button:not(.custom-builder-skip) { flex: 1 1 0; min-width: 0 !important; }

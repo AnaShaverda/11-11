@@ -90,8 +90,13 @@
 .wedding-stationery .guest-custom-message p { font-size: clamp(20px,6cqw,30px); line-height: 1.65; }
 .wedding-details-illustration { display: block; width: min(100%,330px); height: auto; max-height: 190px; object-fit: contain; margin: 28px auto; }
 .wedding-stationery .guest-custom-moments ol { display: grid; grid-template-columns: 1fr; border: 0; gap: 0; margin-top: 24px; }
-.wedding-stationery .guest-custom-moments li { grid-template-columns: 24px 1fr; padding: 20px 0; border: 0; border-top: 1px solid var(--custom-rule); }
+.wedding-stationery .guest-custom-moments li { grid-template-columns: 14px 1fr; gap: 15px; padding: 20px 0; border: 0 !important; }
 .wedding-stationery .guest-custom-moments li:nth-child(odd) { border-right: 0; }
+.wedding-stationery .guest-custom-moment-number {
+  display: block; width: 12px; height: 12px; margin-top: 8px; border-radius: 50%;
+  background: var(--wedding-accent); color: transparent; font-size: 0; opacity: .75;
+  box-shadow: 0 0 0 4px color-mix(in srgb,var(--wedding-accent) 13%,transparent);
+}
 .wedding-stationery .guest-custom-moments li :is(h3,p,time) { font-size: 16px; line-height: 1.6; }
 .wedding-stationery .guest-details { display: grid; grid-template-columns: 1fr; gap: 24px; padding: 24px 0; }
 .wedding-stationery .guest-event-tools { max-width: 500px; margin: 0 auto 12px; padding: 30px 0; border: 0; }
@@ -590,3 +595,223 @@
 .custom-invitation-cover.wedding-cover.has-photo.is-framed-photo .custom-cover-copy small {
   color: var(--wedding-ink);
 }
+
+/* The embossed themes echo the folded, sealed stationery in the reference. */
+.wedding-cover:is(.theme-embossedIvory,.theme-embossedSage),
+.wedding-theme-mini:is(.theme-embossedIvory,.theme-embossedSage) {
+  background-image: var(--wedding-paper-texture);
+}
+.theme-embossedIvory { --ornate-wax: url('/images/custom-classical/ornate-wax-gold.png'); --embossed-seal-ink: #634715; --embossed-shadow: #74552b52; }
+.theme-embossedSage { --ornate-wax: url('/images/custom-classical/ornate-wax-ivory.png'); --embossed-seal-ink: #876327; --embossed-shadow: #414b3c4d; --embossed-heading: #49351b; }
+.wedding-embossed-flap {
+  position: absolute; inset: 0 0 auto; height: 34%;
+  background-image: linear-gradient(125deg,#fffaf0ac 3%,#ffffff12 57%,#4d433127),var(--wedding-paper-texture);
+  background-size: cover, 100% 294%; background-position: center top;
+  clip-path: polygon(0 0,100% 0,50% 100%);
+  filter: drop-shadow(0 5px 3px var(--embossed-shadow)) drop-shadow(0 11px 8px #3d35231f);
+}
+.wedding-embossed-crease { position: absolute; inset: 0; width: 100%; height: 100%; fill: none; stroke: var(--embossed-shadow); stroke-width: .32; filter: drop-shadow(0 4px 2px #45382670); }
+.wedding-embossed-seal {
+  position: absolute; z-index: 1; left: 50%; top: 34%; transform: translate(-50%,-50%);
+  display: grid; place-items: center; width: clamp(36px,24cqw,120px); aspect-ratio: 1;
+  background: var(--ornate-wax) center / contain no-repeat;
+  filter: drop-shadow(0 4px 3px #352b1d5c) drop-shadow(0 10px 9px var(--embossed-shadow));
+}
+.wedding-embossed-seal .wax-monogram { color: var(--embossed-seal-ink); }
+.wedding-cover:is(.theme-embossedIvory,.theme-embossedSage) .custom-cover-copy { padding: 52cqw 0 14cqw; gap: 5cqw; }
+.wedding-cover:is(.theme-embossedIvory,.theme-embossedSage) {
+  border: 1px solid color-mix(in srgb,var(--wedding-paper) 68%,#fff);
+  box-shadow: 0 2px 1px #fff9 inset,0 4px 7px #29251d26,0 18px 32px #29251d24;
+}
+.wedding-theme-mini:is(.theme-embossedIvory,.theme-embossedSage) .wedding-theme-mini-copy { inset: 49% 18% 17%; gap: 4cqw; }
+.wedding-cover.is-framed-photo .wedding-embossed-details { display: none; }
+.wedding-cover.theme-embossedSage:not(.has-photo) .custom-cover-copy strong,
+.wedding-theme-mini.theme-embossedSage .wedding-theme-mini-copy i,
+.wedding-stationery.theme-embossedSage :is(.guest-note h2,.guest-gallery h2) {
+  color: var(--embossed-heading);
+}
+
+/* The two embossed themes color their supporting paper without changing older themes. */
+.guest-custom-theme.wedding-stationery:is(.theme-embossedIvory,.theme-embossedSage) {
+  --wedding-colored-paper: linear-gradient(var(--wedding-paper),var(--wedding-paper));
+  background-color: var(--wedding-paper);
+  background-image: var(--wedding-colored-paper),var(--custom-paper-image);
+  background-blend-mode: color,normal;
+  background-size: cover,760px auto;
+  background-repeat: no-repeat,repeat;
+}
+.guest-custom-theme.wedding-stationery:is(.theme-embossedIvory,.theme-embossedSage)
+  :is(.guest-invitation-column,.guest-event-screen,.guest-section-screen[data-section],.guest-footer) {
+  background-color: var(--wedding-paper);
+  background-image: var(--wedding-colored-paper),var(--custom-paper-image);
+  background-blend-mode: color,normal;
+  background-size: cover,760px auto;
+  background-repeat: no-repeat,repeat;
+}
+.guest-custom-theme.wedding-stationery:is(.theme-embossedIvory,.theme-embossedSage) :is(.guest-main-card,.guest-main-card.is-portrait) {
+  background-color: var(--wedding-paper);
+  background-image: var(--wedding-colored-paper),var(--custom-paper-image);
+  background-blend-mode: color,normal;
+  background-size: cover;
+}
+.guest-custom-theme.wedding-stationery:is(.theme-embossedIvory,.theme-embossedSage) .guest-note.wedding-stationery-note {
+  background-color: var(--wedding-paper);
+  background-image: var(--wedding-colored-paper),var(--custom-paper-image);
+  background-blend-mode: color,normal;
+  background-size: cover;
+}
+
+/* Keep the paper surrounding every older card the same color as its cover section. */
+.guest-custom-theme.wedding-stationery:not(:is(.theme-embossedIvory,.theme-embossedSage)) {
+  --wedding-surround-paper: linear-gradient(
+    color-mix(in srgb,var(--wedding-paper) 83%,transparent),
+    color-mix(in srgb,var(--wedding-paper) 83%,transparent)
+  ),var(--custom-paper-image);
+}
+.guest-custom-theme.wedding-stationery:not(:is(.theme-embossedIvory,.theme-embossedSage))
+  :is(.guest-invitation-column,.guest-event-screen,.guest-section-screen[data-section],.guest-footer) {
+  background-color: var(--wedding-paper);
+  background-image: var(--wedding-surround-paper);
+  background-blend-mode: normal;
+  background-size: cover;
+}
+
+.guest-custom-theme.wedding-stationery .guest-event-screen:empty { display: none; }
+
+@container guest-preview (max-width: 720px) {
+  .guest-custom-theme.wedding-stationery .guest-invitation-column,
+  .guest-custom-theme.wedding-stationery .guest-section-screen,
+  .guest-custom-theme.wedding-stationery .guest-event-screen:not(:empty) {
+    padding-block: 8px;
+  }
+}
+
+/* Embossed paper is a real opening choice, with the matching wax seal. */
+.opening-mini-embossedIvoryEnvelope,
+.opening-mini-embossedSageEnvelope {
+  position: relative; width: 45px; height: 68px; border: 0; background-size: cover; background-position: center;
+  clip-path: polygon(0 0,100% 0,100% 100%,0 100%);
+}
+.opening-mini-embossedIvoryEnvelope { background-image: url('/images/custom-classical/embossed-ivory.webp'); }
+.opening-mini-embossedSageEnvelope { background-image: url('/images/custom-classical/embossed-sage.webp'); }
+.opening-mini-embossedIvoryEnvelope::after,
+.opening-mini-embossedSageEnvelope::after {
+  content: ""; position: absolute; left: 40%; top: 30%; width: 20%; aspect-ratio: 1; border-radius: 50%;
+  background: #c79431; box-shadow: 0 1px 3px #463b2b70;
+}
+.opening-mini-embossedSageEnvelope::after { background: #f1eee5; }
+
+.guest-embossed-envelope-scene {
+  position: fixed; inset: 0; z-index: 200; display: grid; place-items: center; overflow: hidden;
+  background: color-mix(in srgb,var(--embossed-paper) 42%,#fff);
+}
+.guest-embossed-envelope-scene.variant-ivory {
+  --embossed-paper: #e4dbcf; --embossed-ink: #493722; --embossed-texture: url('/images/custom-classical/embossed-ivory.webp');
+  --ornate-wax: url('/images/custom-classical/ornate-wax-gold.png'); --embossed-wax-ink: #634719;
+}
+.guest-embossed-envelope-scene.variant-sage {
+  --embossed-paper: #a7ad8f; --embossed-ink: #352914; --embossed-texture: url('/images/custom-classical/embossed-sage.webp');
+  --ornate-wax: url('/images/custom-classical/ornate-wax-ivory.png'); --embossed-wax-ink: #876327;
+}
+.guest-embossed-envelope {
+  position: relative; width: min(460px,calc((100svh - 48px) * 2 / 3),calc(100vw - 32px)); aspect-ratio: 2 / 3;
+  perspective: 1300px; isolation: isolate;
+  box-shadow: 0 3px 3px #29261d2b,0 18px 30px #29261d2d,0 38px 65px #29261d26;
+}
+.embossed-envelope-base,
+.embossed-envelope-panel {
+  position: absolute; inset: 0; background-color: var(--embossed-paper);
+  background-image: linear-gradient(125deg,#ffffff30,#0000000b),var(--embossed-texture);
+  background-size: 100% 100%; backface-visibility: hidden;
+}
+.embossed-envelope-base { z-index: 0; }
+.embossed-envelope-letter {
+  position: absolute; inset: 5%; z-index: 1; opacity: 0; overflow: hidden; box-shadow: 0 6px 24px #38302035; pointer-events: none;
+  container-type: inline-size;
+}
+.embossed-envelope-letter > * { width: 100%; height: 100%; min-height: 0; box-sizing: border-box; }
+.embossed-envelope-bottom { z-index: 3; clip-path: polygon(0 100%,50% 34%,100% 100%); filter: brightness(.97) drop-shadow(0 -4px 4px #29251d35); }
+.embossed-envelope-left { z-index: 4; clip-path: polygon(0 0,50% 34%,0 100%); filter: brightness(1.02) drop-shadow(4px 2px 4px #29251d36); }
+.embossed-envelope-right { z-index: 4; clip-path: polygon(100% 0,100% 100%,50% 34%); filter: brightness(.94) drop-shadow(-4px 2px 4px #29251d45); }
+.embossed-envelope-top { z-index: 5; clip-path: polygon(0 0,100% 0,50% 34%); transform-origin: center top; filter: drop-shadow(0 6px 5px #29251d52) drop-shadow(0 12px 9px #29251d24); }
+.embossed-envelope-creases {
+  position: absolute; inset: 0; z-index: 5; width: 100%; height: 100%; fill: none;
+  stroke: color-mix(in srgb,var(--embossed-ink) 30%,transparent); stroke-width: .18; filter: drop-shadow(1px 4px 3px #29251d68); pointer-events: none;
+}
+.embossed-envelope-seal {
+  position: absolute; z-index: 6; left: 50%; top: 34%; transform: translate(-50%,-50%);
+  display: grid; place-items: center; width: clamp(86px,27%,128px); aspect-ratio: 1;
+  background: var(--ornate-wax) center / contain no-repeat;
+  filter: drop-shadow(0 4px 3px #29251d70) drop-shadow(0 12px 10px #29251d4d);
+}
+.embossed-envelope-seal .wax-monogram { color: var(--embossed-wax-ink); }
+.embossed-envelope-seal { color: var(--embossed-wax-ink); }
+.wedding-embossed-seal { color: var(--embossed-seal-ink); }
+.wax-monogram {
+  position: relative; z-index: 1; display: block; transform: rotate(-4deg);
+  font: 400 clamp(18px,6cqw,34px)/1 "Elegance Natural Valentine",Georgia,serif;
+  letter-spacing: -.13em; padding-right: .13em;
+  text-shadow: 0 1px 1px #fff9,0 -1px 1px #37261280;
+  filter: drop-shadow(0 1px 1px #241a1240);
+}
+.wax-monogram.is-georgian {
+  font-family: "BPG Nateli","Noto Serif Georgian",serif;
+  font-size: clamp(18px,5.3cqw,30px); letter-spacing: -.08em; padding-right: .08em;
+}
+.wax-monogram.is-pair { font-size: clamp(12px,4.4cqw,25px); letter-spacing: -.1em; }
+.wax-monogram.is-georgian.is-pair { font-size: clamp(12px,4.2cqw,24px); letter-spacing: -.08em; }
+.embossed-envelope-open {
+  position: absolute; z-index: 7; inset: 0; width: 100%; border: 0; padding: 0; background: transparent; cursor: pointer;
+}
+.embossed-envelope-open > span {
+  position: absolute; bottom: 6%; left: 50%; transform: translateX(-50%); display: flex; align-items: center; gap: 7px;
+  width: max-content; max-width: 88%; padding: 9px 14px; border: 1px solid currentColor; border-radius: 30px;
+  color: var(--embossed-ink); background: color-mix(in srgb,var(--embossed-paper) 80%,white);
+  font: 500 clamp(13px,3vw,16px)/1.3 "Times New Roman","Noto Serif Georgian",serif;
+}
+.embossed-envelope-open:focus-visible { outline: 3px solid var(--embossed-ink); outline-offset: 5px; }
+.guest-embossed-envelope-scene.is-opening .embossed-envelope-seal { animation: embossed-seal-release .45s ease both; }
+.guest-embossed-envelope-scene.is-opening .embossed-envelope-top { animation: embossed-flap-open 2.6s cubic-bezier(.22,.61,.36,1) both; }
+.guest-embossed-envelope-scene.is-opening .embossed-envelope-letter { animation: embossed-letter-rise 2.6s cubic-bezier(.22,.61,.36,1) both; }
+.guest-embossed-envelope-scene.is-opening :is(.embossed-envelope-left,.embossed-envelope-right,.embossed-envelope-bottom,.embossed-envelope-creases) { animation: embossed-pocket-clear 2.6s ease both; }
+.guest-embossed-envelope-scene.is-finishing { animation: embossed-scene-dissolve .7s ease-in-out both; pointer-events: none; }
+.guest-embossed-envelope-scene.is-finishing .embossed-envelope-letter { animation: embossed-letter-handoff .28s ease-in both; }
+.guest-embossed-envelope-scene.is-finishing :is(.embossed-envelope-panel,.embossed-envelope-creases,.embossed-envelope-seal) { opacity: 0; }
+.guest-invitation-entrance:is(.entrance-embossedIvoryEnvelope,.entrance-embossedSageEnvelope).is-finishing .guest-invitation-artwork {
+  animation: embossed-card-settle .7s ease-out both;
+}
+@keyframes embossed-seal-release { to { opacity: 0; transform: translate(-50%,-30%) scale(.72); } }
+@keyframes embossed-flap-open { 0%,12% { transform: rotateX(0); } 46%,100% { transform: rotateX(150deg); opacity: 0; } }
+@keyframes embossed-letter-rise { 0%,18% { opacity: 0; transform: translateY(12%) scale(.88); } 52% { opacity: 1; transform: translateY(-5%) scale(.97); } 68%,100% { opacity: 1; transform: none; } }
+@keyframes embossed-pocket-clear { 0%,35% { opacity: 1; } 55%,100% { opacity: 0; } }
+@keyframes embossed-scene-dissolve { to { opacity: 0; } }
+@keyframes embossed-letter-handoff { from { opacity: 1; } to { opacity: 0; } }
+@keyframes embossed-card-settle { 0%,25% { opacity: 0; transform: translateY(12px) scale(.98); } 100% { opacity: 1; transform: none; } }
+@media (prefers-reduced-motion: reduce) {
+  .guest-embossed-envelope-scene * { animation: none !important; }
+}
+
+/* Keep the guest view focused on the opening until the invitation is revealed. */
+html:has(.guest-card-suite[data-entrance-complete="false"]),
+body:has(.guest-card-suite[data-entrance-complete="false"]) { overflow: hidden; overscroll-behavior: none; }
+.guest-card-suite[data-entrance-complete="false"] :is(.guest-nav,.guest-music-control,.guest-footer),
+.guest-card-suite[data-entrance-complete="false"] .guest-card-layout > :not(.guest-invitation-column) { display: none !important; }
+.guest-card-suite[data-entrance-complete="false"] .guest-invitation-column {
+  position: fixed; z-index: 50; inset: 66px 0 0; display: grid !important; place-items: center;
+  width: 100%; height: auto; min-height: 0; padding: 16px; box-sizing: border-box;
+}
+.guest-card-suite[data-entrance-complete="false"].wedding-stationery .guest-main-card {
+  width: min(460px,calc(100vw - 32px),calc((100svh - 98px) * 2 / 3));
+  height: auto; max-height: calc(100svh - 98px); aspect-ratio: 2 / 3;
+}
+
+/* Uploaded images always fill the cover card, whatever their source dimensions. */
+.custom-invitation-cover.wedding-cover.has-photo:not(.is-framed-photo),
+.custom-invitation-cover.wedding-cover.wedding-portrait-cover {
+  min-height: 150cqw; aspect-ratio: 2 / 3; grid-template-rows: minmax(0,1fr); align-items: stretch;
+}
+.wedding-cover.has-photo:not(.is-framed-photo) > .wedding-full-cover-photo,
+.wedding-portrait-cover > .wedding-portrait-photo {
+  display: block; width: 100%; height: 100%; min-height: 0; object-fit: cover;
+}
+.wedding-portrait-cover > .wedding-portrait-sample { width: 100%; height: 100%; background-size: cover; }

@@ -7,7 +7,7 @@ function DoorLeaf({ side, variant }) {
   </div>;
 }
 
-export default function DecorativeDoors({ phase, title, onOpen, onView, viewButton, variant = "white" }) {
+export default function DecorativeDoors({ phase, title, onOpen, variant = "white" }) {
   const { t } = useLanguage();
   return <div className="guest-door-scene">
     <div className="guest-door-scrim" aria-hidden="true" />
@@ -18,9 +18,6 @@ export default function DecorativeDoors({ phase, title, onOpen, onView, viewButt
     </div>
     {phase === "sealed" && <button type="button" className="guest-door-open" onClick={onOpen} aria-label={t("guestCards.doors.open")}>
       <span>{title}</span><small>{t("guestCards.doors.open")} <Icon name="arrow-up-right" size={16} /></small>
-    </button>}
-    {(phase === "preview" || phase === "finishing") && <button className="guest-door-view" ref={viewButton} type="button" onClick={onView} disabled={phase === "finishing"}>
-      {t("guestCards.doors.view")} <Icon name="arrow-down" size={16} />
     </button>}
   </div>;
 }

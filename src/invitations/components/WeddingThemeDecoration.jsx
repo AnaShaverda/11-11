@@ -1,7 +1,8 @@
 import { cardFontRegistry } from '../data/cardTypography.js';
 import { getClassicalPaper } from '../data/customClassicalThemes.js';
+import EmbossedWaxSeal from './EmbossedWaxSeal.jsx';
 
-const themeFonts = { silkIvory: 'elegance', somethingBlue: 'magnola', pressedRose: 'elegance', gardenVeil: 'zalino', pearlLetter: 'casmera', lilacWhisper: 'magnola', champagneVows: 'casmera', vellumPromise: 'elegance', quietParchment: 'zalino', meadowMorning: 'magnola', autumn: 'casmera', rtveli: 'zalino' };
+const themeFonts = { silkIvory: 'elegance', somethingBlue: 'magnola', pressedRose: 'elegance', gardenVeil: 'zalino', pearlLetter: 'casmera', lilacWhisper: 'magnola', champagneVows: 'casmera', vellumPromise: 'elegance', quietParchment: 'zalino', meadowMorning: 'magnola', autumn: 'casmera', rtveli: 'zalino', embossedIvory: 'elegance', embossedSage: 'magnola' };
 
 export function weddingThemeStyle(theme) {
   return {
@@ -10,8 +11,8 @@ export function weddingThemeStyle(theme) {
     '--wedding-reading-font': cardFontRegistry.zalino.family,
     '--wedding-ink': theme.ink,
     '--wedding-accent': theme.accent,
-    '--wedding-paper-texture': `url("${getClassicalPaper('ivory')}")`,
-    '--wedding-frame-image': `url("${theme.frameAsset}")`,
+    '--wedding-paper-texture': `url("${getClassicalPaper(theme.embossedPaper ? theme.paper : 'ivory')}")`,
+    '--wedding-frame-image': theme.frameAsset ? `url("${theme.frameAsset}")` : 'none',
     '--wedding-font-style': theme.italic ? 'italic' : 'normal',
   };
 }
@@ -23,7 +24,12 @@ function WeddingOrnamentPiece({ theme }) {
 }
 
 // Full decorative frames belong on the cover; supporting cards use a quiet border.
-export default function WeddingThemeDecoration({ theme, adaptive = false }) {
+export default function WeddingThemeDecoration({ theme, adaptive = false, title, initials }) {
+  if (theme.embossedPaper) return adaptive ? null : <div className="wedding-artwork wedding-embossed-details" aria-hidden="true">
+    <span className="wedding-embossed-flap" />
+    <svg className="wedding-embossed-crease" viewBox="0 0 100 150" preserveAspectRatio="none" focusable="false"><path d="M0 0 50 51 100 0" /></svg>
+    <EmbossedWaxSeal className="wedding-embossed-seal" title={title} initials={initials} />
+  </div>;
   return <div className={`wedding-artwork frame-shape-${theme.frameShape}${adaptive ? ' is-adaptive' : ''}`} aria-hidden="true">
     {adaptive ? <div className="wedding-adaptive-frame" /> : <img className="wedding-frame-full" src={theme.frameAsset} alt="" decoding="async" />}
     {adaptive ? theme.ornamentAsset && <>

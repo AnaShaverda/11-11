@@ -34,7 +34,9 @@ export function normalizeCustomDesign(value, defaults = {}) {
 }
 
 export default function CustomInvitationCover({ design, sample, invitationLabel, invitationGreeting }) {
-  const theme = getClassicalTheme(design.theme);
+  const selectedTheme = getClassicalTheme(design.theme);
+  // The embossed themes are the envelope; their invitation is the floral paper card inside.
+  const theme = selectedTheme.embossedPaper ? getClassicalTheme("vellumPromise") : selectedTheme;
   const image = design.coverImage;
   const framedPhoto = image && design.photoLayout === "framed";
   const coverHeading = sample.opening || invitationGreeting || invitationLabel;
@@ -46,7 +48,7 @@ export default function CustomInvitationCover({ design, sample, invitationLabel,
 
   return <div className={`custom-invitation-cover wedding-cover theme-${theme.id}${image ? ' has-photo' : ''}${framedPhoto ? ' is-framed-photo' : ''}`} style={weddingThemeStyle(theme)}>
     {image && !framedPhoto && <img className="wedding-full-cover-photo" src={image} alt={sample.title} style={{ objectPosition: `50% ${design.position}%`, transform: `scale(${design.zoom / 100}) rotate(${design.rotation}deg)` }} />}
-    {(!image || framedPhoto) && <WeddingThemeDecoration theme={theme} />}
+    {(!image || framedPhoto) && <WeddingThemeDecoration theme={theme} title={sample.title} initials={sample.initials} />}
     <div className="custom-cover-copy">
       {framedPhoto && <div className="wedding-cover-photo"><img src={image} alt={sample.title} style={{ transform: `scale(${design.zoom / 100}) rotate(${design.rotation}deg)` }} /></div>}
       <small>{coverHeading}</small>

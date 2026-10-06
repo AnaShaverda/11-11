@@ -5,15 +5,16 @@ import { useLanguage } from "../../localization/LanguageContext.jsx";
 import Icon from "../../components/ui/Icon.jsx";
 import OpeningCelebration from "./OpeningCelebration.jsx";
 import DecorativeDoors from "./DecorativeDoors.jsx";
+import EmbossedEnvelope from "./EmbossedEnvelope.jsx";
 import { getEntranceTransition } from "../data/guestEntranceMotion.js";
 
-export default function InvitationEntrance({ settings, design, title, reducedMotion, onComplete, children }) {
+export default function InvitationEntrance({ settings, design, title, initials, reducedMotion, onComplete, children }) {
   const { t } = useLanguage();
   const entrance = settings.entrance === "doorsBrown" ? "doors" : settings.entrance;
+  const embossedVariant = entrance === "embossedIvoryEnvelope" ? "ivory" : entrance === "embossedSageEnvelope" ? "sage" : null;
   const [phase, setPhase] = useState(entrance === "immediate" ? "opened" : "sealed");
   const [celebrating, setCelebrating] = useState(entrance === "immediate");
   const artwork = useRef(null);
-  const viewButton = useRef(null);
   const openedByGuest = useRef(false);
 
   useEffect(() => {
@@ -26,7 +27,6 @@ export default function InvitationEntrance({ settings, design, title, reducedMot
   }, [entrance, phase, reducedMotion]);
 
   useEffect(() => {
-    if (phase === "preview" && openedByGuest.current) viewButton.current?.focus({ preventScroll: true });
     if (phase === "opened") {
       onComplete();
       if (openedByGuest.current) artwork.current?.focus({ preventScroll: true });
@@ -41,7 +41,7 @@ export default function InvitationEntrance({ settings, design, title, reducedMot
       const toolbarHeight = page.querySelector(".guest-preview-toolbar").getBoundingClientRect().height;
       window.scrollTo({ top: Math.max(0, cardTop - toolbarHeight), behavior: "instant" });
     }
-    setPhase(reducedMotion ? entrance === "doors" ? "preview" : "opened" : "opening");
+    setPhase(reducedMotion ? "opened" : "opening");
   }
 
   return <div className={`guest-invitation-entrance entrance-${entrance} is-${phase}`} data-entrance-state={phase} data-entrance={entrance} style={design.weddingTheme && (entrance === "envelope" || entrance === "doors") ? { "--guest-paper": design.paper, "--guest-ink": design.ink, "--guest-accent": design.accent } : undefined}>
@@ -73,19 +73,9 @@ export default function InvitationEntrance({ settings, design, title, reducedMot
         <span>{t("guestCards.envelope.open")} <Icon name="arrow-up-right" size={17} /></span>
       </button>}
     </div>}
-    {entrance === "portraitEnvelope" && phase !== "opened" && createPortal(<div className={`guest-portrait-envelope-scene is-${phase}`} style={design.weddingTheme ? weddingThemeStyle(design.weddingTheme) : undefined} role="dialog" aria-modal="true" aria-label={t("guestCards.envelope.open")}>
-      <div className="portrait-envelope-letter" aria-hidden="true" inert>{children}</div>
-      <div className="portrait-envelope-fold portrait-envelope-top" aria-hidden="true" />
-      <div className="portrait-envelope-fold portrait-envelope-bottom" aria-hidden="true" />
-      <div className="portrait-envelope-fold portrait-envelope-left" aria-hidden="true" />
-      <div className="portrait-envelope-fold portrait-envelope-right" aria-hidden="true" />
-      <img className="portrait-envelope-seal" src="/images/wedding/sage-letter/sage-wax-seal.webp" alt="" />
-      <p className="portrait-envelope-greeting">{t("guestCards.envelope.forYou")}</p>
-      <p className="portrait-envelope-title">{title}</p>
-      {phase === "sealed" && <button type="button" className="portrait-envelope-open" autoFocus onKeyDown={event => { if (event.key === "Tab") event.preventDefault(); }} onClick={openInvitation}><span>{t("guestCards.envelope.open")} <Icon name="arrow-up-right" size={17} /></span></button>}
-    </div>, document.body)}
-    {entrance === "doors" && phase !== "opened" && <DecorativeDoors variant={settings.entrance === "doorsBrown" ? "brown" : "white"} phase={phase} title={title} onOpen={openInvitation}
-      onView={() => setPhase(reducedMotion ? "opened" : "finishing")} viewButton={viewButton} />}
+    {embossedVariant && phase !== "opened" && createPortal(<EmbossedEnvelope variant={embossedVariant} phase={phase} title={title} initials={initials} style={design.weddingTheme ? weddingThemeStyle(design.weddingTheme) : undefined}
+      openLabel={t("guestCards.envelope.open")} onOpen={openInvitation}>{children}</EmbossedEnvelope>, document.body)}
+    {entrance === "doors" && phase !== "opened" && <DecorativeDoors variant={settings.entrance === "doorsBrown" ? "brown" : "white"} phase={phase} title={title} onOpen={openInvitation} />}
     {celebrating && <OpeningCelebration key={`${settings.openingEffect}:${settings.openingIntensity}:${settings.openingSpeed}:${settings.openingDuration}:${settings.openingPalette}`} settings={settings} design={design} />}
     {phase === "opened" && openedByGuest.current && <span className="guest-screen-reader" role="status">{t("guestCards.envelope.opened")}</span>}
     {phase === "opening" && <span className="guest-screen-reader" role="status">{t("guestCards.doors.opening")}</span>}

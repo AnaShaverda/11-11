@@ -23,7 +23,7 @@ export const occasionProfiles = {
     },
     "momentsQuestion": {
       "en": "Which parts of your wedding day will guests attend?",
-      "ka": "ქორწილის დღის რომელ მოვლენებზე ელოდებით სტუმრებს?"
+      "ka": "ქორწილის დღის რომელ ღონისძიებებზე ელოდებით სტუმრებს?"
     },
     "defaultTitle": {
       "en": "Our wedding",
@@ -85,7 +85,7 @@ export const occasionProfiles = {
     },
     "momentsQuestion": {
       "en": "Which parts of the christening will guests attend?",
-      "ka": "ნათლობის რომელ მოვლენებზე ელოდებით სტუმრებს?"
+      "ka": "ნათლობის რომელ ღონისძიებებზე ელოდებით სტუმრებს?"
     },
     "defaultTitle": {
       "en": "Christening celebration",
