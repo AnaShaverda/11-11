@@ -20,10 +20,14 @@ export function useGuestComponentReveals(root, reduced) {
     const counts = new Map();
     const reveal = element => {
       element.classList.add("is-component-visible");
-      observer.unobserve(element);
     };
     const observer = new IntersectionObserver(entries => {
-      for (const entry of entries) if (entry.isIntersecting) reveal(entry.target);
+      for (const entry of entries) {
+        if (entry.isIntersecting) reveal(entry.target);
+        else if (!entry.target.matches(":focus-within")) {
+          entry.target.classList.remove("is-component-visible", "is-component-focused");
+        }
+      }
     }, { threshold: .04, rootMargin: "0px 0px -24px 0px" });
     const discover = () => {
       const candidates = container.querySelectorAll([
@@ -44,10 +48,17 @@ export function useGuestComponentReveals(root, reduced) {
         element.classList.add("guest-component-reveal");
         observer.observe(element);
       }
+      for (const list of container.querySelectorAll(".wedding-stationery .guest-custom-moments ol")) {
+        list.querySelectorAll(":scope > li").forEach((item, index) => item.style.setProperty("--moment-delay", `${150 + index * 190}ms`));
+        if (tracked.has(list)) continue;
+        tracked.add(list);
+        list.classList.add("guest-moments-reveal");
+        observer.observe(list);
+      }
       for (const element of tracked) if (!container.contains(element)) { observer.unobserve(element); tracked.delete(element); }
     };
     const onFocus = event => {
-      const element = event.target.closest(".guest-component-reveal");
+      const element = event.target.closest(".guest-component-reveal, .guest-moments-reveal");
       if (element) { element.classList.add("is-component-focused"); reveal(element); }
     };
     discover();
@@ -57,8 +68,9 @@ export function useGuestComponentReveals(root, reduced) {
     return () => {
       observer.disconnect(); changes.disconnect(); container.removeEventListener("focusin", onFocus);
       for (const element of tracked) {
-        element.classList.remove("guest-component-reveal", "is-component-visible", "is-component-focused");
+        element.classList.remove("guest-component-reveal", "guest-moments-reveal", "is-component-visible", "is-component-focused");
         element.style.removeProperty("--component-delay");
+        if (element.matches("ol")) element.querySelectorAll(":scope > li").forEach(item => item.style.removeProperty("--moment-delay"));
       }
     };
   }, [root, reduced]);
@@ -71,10 +83,14 @@ export function useElegantGuestMotion(root, enabled, complete, reduced, replayKe
     const tracked = new Set();
     const reveal = element => {
       element.classList.add("is-revealed");
-      observer.unobserve(element);
     };
     const observer = new IntersectionObserver(entries => {
-      for (const entry of entries) if (entry.isIntersecting) reveal(entry.target);
+      for (const entry of entries) {
+        if (entry.isIntersecting) reveal(entry.target);
+        else if (!entry.target.matches(":focus-within")) {
+          entry.target.classList.remove("is-revealed", "is-focus-revealed");
+        }
+      }
     }, { threshold: .08, rootMargin: "0px 0px -24px 0px" });
     function discover() {
       const cards = container.querySelectorAll(".guest-note, .guest-gallery");

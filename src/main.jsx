@@ -50,13 +50,16 @@ import "./styles/typography.css";
 createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <BrowserRouter>
-      <LanguageProvider><AppearanceProvider><App /></AppearanceProvider></LanguageProvider>
+      <LanguageProvider>
+        <AppearanceProvider>
+          <App />
+        </AppearanceProvider>
+      </LanguageProvider>
     </BrowserRouter>
   </React.StrictMode>,
 );
 
 import "./styles/retro-bridal.css";
-
 
 import "./styles/christening-cards.css";
 

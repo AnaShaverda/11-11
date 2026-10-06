@@ -1,4 +1,6 @@
 import WeddingThemeDecoration, { weddingThemeStyle } from "./WeddingThemeDecoration.jsx";
+import Icon from "../../components/ui/Icon.jsx";
+import { useLanguage } from "../../localization/LanguageContext.jsx";
 import { classicalThemes, getClassicalTheme, footerScenes } from "../data/customClassicalThemes.js";
 
 export const coverFrames = ["arch", "engraved", "botanical", "oval", "classic", "minimal", "film", "laurelCorners", "scrollwork", "regal"];
@@ -34,6 +36,7 @@ export function normalizeCustomDesign(value, defaults = {}) {
 }
 
 export default function CustomInvitationCover({ design, sample, invitationLabel, invitationGreeting }) {
+  const { language } = useLanguage();
   const selectedTheme = getClassicalTheme(design.theme);
   // The embossed themes are the envelope; their invitation is the floral paper card inside.
   const theme = selectedTheme.embossedPaper ? getClassicalTheme("vellumPromise") : selectedTheme;
@@ -41,7 +44,7 @@ export default function CustomInvitationCover({ design, sample, invitationLabel,
   const framedPhoto = image && design.photoLayout === "framed";
   const coverHeading = sample.opening || invitationGreeting || invitationLabel;
   if (theme.photoTheme) return <div className={`custom-invitation-cover wedding-cover wedding-portrait-cover tone-${design.coverTextTone}`} style={weddingThemeStyle(theme)}>
-    {image ? <img className="wedding-portrait-photo" src={image} alt={sample.title} /> : <div className="wedding-portrait-sample" style={{ backgroundImage: `url("${theme.coverSample}")` }} aria-hidden="true" />}
+    {image ? <img className="wedding-portrait-photo" src={image} alt={sample.title} /> : <div className="wedding-portrait-sample"><span className="wedding-photo-prompt"><Icon name="image" size={32} /><span>{language === "ka" ? "აირჩიე შენი ფოტო" : "Choose your photo"}</span></span></div>}
     <div className="wedding-portrait-frame" aria-hidden="true" />
     <div className="custom-cover-copy"><small>{coverHeading}</small><strong>{sample.title}</strong><span className="wedding-cover-date">{sample.displayDate || sample.date}</span></div>
   </div>;

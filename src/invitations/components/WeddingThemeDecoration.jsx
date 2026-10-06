@@ -1,6 +1,8 @@
 import { cardFontRegistry } from '../data/cardTypography.js';
 import { getClassicalPaper } from '../data/customClassicalThemes.js';
 import EmbossedWaxSeal from './EmbossedWaxSeal.jsx';
+import Icon from '../../components/ui/Icon.jsx';
+import { useLanguage } from '../../localization/LanguageContext.jsx';
 
 const themeFonts = { silkIvory: 'elegance', somethingBlue: 'magnola', pressedRose: 'elegance', gardenVeil: 'zalino', pearlLetter: 'casmera', lilacWhisper: 'magnola', champagneVows: 'casmera', vellumPromise: 'elegance', quietParchment: 'zalino', meadowMorning: 'magnola', autumn: 'casmera', rtveli: 'zalino', embossedIvory: 'elegance', embossedSage: 'magnola' };
 
@@ -40,8 +42,9 @@ export default function WeddingThemeDecoration({ theme, adaptive = false, title,
 }
 
 export function WeddingThemePreview({ theme, label }) {
+  const { language } = useLanguage();
   return <span className={`custom-theme-mini wedding-theme-mini theme-${theme.id}${theme.photoTheme ? ` is-photo-theme tone-${theme.coverTextTone}` : ''}`} style={weddingThemeStyle(theme)} aria-hidden="true">
-    {theme.photoTheme ? <><span className="wedding-portrait-sample" style={{ backgroundImage: `url("${theme.coverSample}")` }} /><span className="wedding-portrait-frame" /></> : <WeddingThemeDecoration theme={theme} />}
+    {theme.photoTheme ? <><span className="wedding-portrait-sample"><span className="wedding-photo-prompt"><Icon name="image" size={22} /><span>{language === 'ka' ? 'აირჩიე შენი ფოტო' : 'Choose your photo'}</span></span></span><span className="wedding-portrait-frame" /></> : <WeddingThemeDecoration theme={theme} />}
     <span className="wedding-theme-mini-copy"><i>{label}</i><b /><small>18 · 06 · 2027</small></span>
   </span>;
 }

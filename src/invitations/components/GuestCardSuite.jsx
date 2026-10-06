@@ -13,7 +13,7 @@ import InvitationEntrance from "./InvitationEntrance.jsx";
 import EditableInvitationArtwork from "./EditableInvitationArtwork.jsx";
 import CustomInvitationCover, { lightCoverColors } from "./CustomInvitationCover.jsx";
 import WeddingThemeDecoration, { weddingThemeStyle } from "./WeddingThemeDecoration.jsx";
-import { getClassicalTheme, footerScenes, getClassicalOrnament, getClassicalPaper, ornamentTones } from "../data/customClassicalThemes.js";
+import { getClassicalTheme, getDetailsArtwork, footerScenes, getClassicalOrnament, getClassicalPaper, ornamentTones } from "../data/customClassicalThemes.js";
 import { MAX_DAY_PLAN_TITLE, MAX_DAY_PLAN_DETAILS } from "../data/guestDayPlan.js";
 import { momentMapUrl, sortMomentsByTime } from "../data/customMoments.js";
 import { useReducedGuestMotion, useElegantGuestMotion, useGuestComponentReveals } from "../hooks/useGuestMotion.js";
@@ -237,7 +237,7 @@ function CustomMomentsCard({ moments, city, date, design, images = {} }) {
   return <NoteCard design={design} className="guest-custom-moments" id="guest-custom-moments" aria-labelledby="guest-custom-moments-title" ornament={1} tabIndex={-1}>
     <h2 id="guest-custom-moments-title">{language === "ka" ? "ღონისძიების დეტალები" : "Event details"}</h2>
     {date && <p className="guest-custom-moments-date">{date}</p>}
-    {design.weddingTheme?.illustration && <img className="wedding-details-illustration" src={design.weddingTheme.illustration} alt="" loading="lazy" decoding="async" />}
+    {design.detailsArtwork && <img className="wedding-details-illustration" src={design.detailsArtwork} alt="" loading="lazy" decoding="async" />}
     <ol>{sortMomentsByTime(moments).map((moment, index) => <li key={moment.id} data-moment-id={moment.id}>
       {images[moment.id]?.src && <img className="guest-custom-moment-image" src={images[moment.id].src} alt="" loading="lazy" decoding="async" />}
       <span className="guest-custom-moment-number">{String(index + 1).padStart(2, "0")}</span>
@@ -274,7 +274,7 @@ export default function GuestCardSuite({ template, sample, copyTranslations, edi
   useElegantGuestMotion(root, !creator && settings.motion === "elegant", entranceComplete, reducedMotion, entranceKey);
   const weddingTheme = template.isCustom ? getClassicalTheme(customDesign.theme) : null;
   const baseDesign = getGuestCardDesign(template);
-  const design = weddingTheme ? { ...baseDesign, weddingTheme } : baseDesign;
+  const design = weddingTheme ? { ...baseDesign, weddingTheme, detailsArtwork: getDetailsArtwork(weddingTheme.id) } : baseDesign;
   useEffect(() => {
     if (!design.mobileFrame || !root.current) return;
     const frame = new Image();
@@ -363,7 +363,7 @@ export default function GuestCardSuite({ template, sample, copyTranslations, edi
             <p className="guest-detail-value"><EditableValue field={editField("date")} onEdit={onEditText}>{sample.displayDate || details.date}</EditableValue></p>{details.time && <p className="guest-detail-time"><EditableValue field={editField("time")} onEdit={onEditText}>{details.time}</EditableValue></p>}
           </NoteCard>}
           <NoteCard design={design} className="guest-where" ornament={1} aria-labelledby="guest-where-title">
-            {weddingTheme?.illustration && <img className="wedding-details-illustration" src={weddingTheme.illustration} alt="" loading="lazy" decoding="async" />}
+            {design.detailsArtwork && <img className="wedding-details-illustration" src={design.detailsArtwork} alt="" loading="lazy" decoding="async" />}
             <h2 id="guest-where-title"><EditableValue field={editableFields.find(field => field.key === "guestCards.where")} onEdit={onEditText}>{t("guestCards.where")}</EditableValue></h2><span className="guest-note-rule" aria-hidden="true" />
             <p className="guest-detail-value"><EditableValue field={editField("location")} onEdit={onEditText}>{details.location}</EditableValue></p>
             <a className="guest-map-link" href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(details.location)}`} target="_blank" rel="noreferrer">{t("guestCards.map")} <Icon name="arrow-up-right" size={15} /></a>
