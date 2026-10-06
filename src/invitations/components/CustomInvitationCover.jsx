@@ -1,10 +1,10 @@
 import WeddingThemeDecoration, { weddingThemeStyle } from "./WeddingThemeDecoration.jsx";
 import Icon from "../../components/ui/Icon.jsx";
 import { useLanguage } from "../../localization/LanguageContext.jsx";
-import { classicalThemes, getClassicalTheme, footerScenes } from "../data/customClassicalThemes.js";
+import { classicalThemes, christeningCustomThemes, getClassicalTheme, canUploadCustomCover, footerScenes } from "../data/customClassicalThemes.js";
 
 export const coverFrames = ["arch", "engraved", "botanical", "oval", "classic", "minimal", "film", "laurelCorners", "scrollwork", "regal"];
-export const lightCoverColors = new Set([...classicalThemes.map(theme => theme.color), "#f6f1e7", "#eee6d8", "#e4e9df", "#e8e4ef", "#e2eaf0", "#e9dddd"]);
+export const lightCoverColors = new Set([...[...classicalThemes, ...christeningCustomThemes].map(theme => theme.color), "#f6f1e7", "#eee6d8", "#e4e9df", "#e8e4ef", "#e2eaf0", "#e9dddd"]);
 export const coverPatterns = ["plain", "stripes", "contours", "grid", "deco"];
 
 const legacyPatterns = { floral: "contours", confetti: "deco", stars: "grid" };
@@ -40,9 +40,19 @@ export default function CustomInvitationCover({ design, sample, invitationLabel,
   const selectedTheme = getClassicalTheme(design.theme);
   // The embossed themes are the envelope; their invitation is the floral paper card inside.
   const theme = selectedTheme.embossedPaper ? getClassicalTheme("vellumPromise") : selectedTheme;
-  const image = design.coverImage;
+  const image = canUploadCustomCover(theme) ? design.coverImage : "";
   const framedPhoto = image && design.photoLayout === "framed";
-  const coverHeading = sample.opening || invitationGreeting || invitationLabel;
+  const isBlushChristening = theme.id === "christeningBlushGrace";
+  const defaultChristeningTitle = language === "ka" ? "ნათლობა" : "Christening";
+  const coverHeading = isBlushChristening && sample.title !== defaultChristeningTitle ? defaultChristeningTitle : sample.opening || invitationGreeting || invitationLabel;
+  if (theme.squarePhoto) return <div className={`custom-invitation-cover wedding-cover theme-${theme.id} baby-photo-cover`} style={weddingThemeStyle(theme)}>
+    <WeddingThemeDecoration theme={theme} />
+    <div className="baby-photo-content">
+      <div className="baby-square-photo">{image ? <img src={image} alt={sample.title} style={{ objectPosition: `50% ${design.position}%` }} /> : <span className="baby-photo-placeholder"><Icon name="image" size={40} /><span>{language === "ka" ? "დაამატე ბავშვის ფოტო" : "Add your child’s photo"}</span></span>}</div>
+      <div className="baby-photo-titles"><small>{coverHeading}</small><strong>{sample.title}</strong><span>{sample.displayDate || sample.date}</span></div>
+    </div>
+  </div>;
+
   if (theme.photoTheme) return <div className={`custom-invitation-cover wedding-cover wedding-portrait-cover tone-${design.coverTextTone}`} style={weddingThemeStyle(theme)}>
     {image ? <img className="wedding-portrait-photo" src={image} alt={sample.title} /> : <div className="wedding-portrait-sample"><span className="wedding-photo-prompt"><Icon name="image" size={32} /><span>{language === "ka" ? "აირჩიე შენი ფოტო" : "Choose your photo"}</span></span></div>}
     <div className="wedding-portrait-frame" aria-hidden="true" />

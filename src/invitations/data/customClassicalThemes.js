@@ -40,6 +40,7 @@ const themeDetailsDrawings = {
 };
 
 export function getDetailsArtwork(themeId) {
+  if (themeId?.startsWith("christening")) return getClassicalTheme(themeId).illustration;
   return `/images/wedding-themes/${themeDetailsDrawings[themeId] ?? "silkIvory"}-illustration.webp`;
 }
 
@@ -388,6 +389,23 @@ classicalThemes.push({
 });
 
 // Existing local drafts keep their content and footer while moving to the new collection.
+export const weddingCustomThemes = classicalThemes.map(theme => ({ ...theme, occasion: "wedding" }));
+export const christeningCustomThemes = [
+  { id: "christeningBlueDove", name: { en: "Blue Dove", ka: "ცისფერი მტრედი" }, color: "#fffaf2", ink: "#49677c", accent: "#9bb7c9", frameAsset: null, ornamentAsset: "/images/christening/blue-dove.png", christeningLayout: "sky" },
+  { id: "christeningOliveBlessing", name: { en: "Olive Blessing", ka: "ზეთისხილის კურთხევა" }, color: "#faf8ef", ink: "#54674f", accent: "#a3b392", frameAsset: null, ornamentAsset: "/images/christening/olive-wreath.png", christeningLayout: "wreath" },
+  { id: "christeningBlushGrace", name: { en: "Blush Grace", ka: "ვარდისფერი სინაზე" }, color: "#fffaf5", ink: "#855b68", accent: "#d6a6b4", frameAsset: null, ornamentAsset: "/images/christening/blush-cascade.png", christeningLayout: "cascade" },
+  { id: "christeningBabyBoy", name: { en: "Baby Boy · Blue", ka: "ბიჭუნა · ცისფერი" }, color: "#edf5fb", ink: "#49677c", accent: "#9bb7c9", frameAsset: "/images/wedding-themes/somethingBlue-frame.webp", ornamentAsset: "/images/components/watercolor/little-dove.webp", squarePhoto: true, artworkTone: "blue" },
+  { id: "christeningBabyGirl", name: { en: "Baby Girl · Pink", ka: "გოგონა · ვარდისფერი" }, color: "#fff1f4", ink: "#855b68", accent: "#d6a6b4", frameAsset: "/images/wedding-themes/pressedRose-frame.webp", ornamentAsset: "/images/components/watercolor/little-dove.webp", squarePhoto: true, artworkTone: "pink" },
+].map((theme, index) => ({ ...classicalThemes[0], ...theme, number: String(index + 1).padStart(2, "0"), occasion: "christening", frameShape: "classic", footerScene: "none", illustration: theme.ornamentAsset }));
+export const customizableOccasions = ["wedding", "christening"];
+export function getCustomThemes(occasion) {
+  return occasion === "christening" ? christeningCustomThemes : weddingCustomThemes;
+}
+export function getCustomThemeForOccasion(id, occasion) {
+  const themes = getCustomThemes(occasion);
+  return themes.find(theme => theme.id === id) ?? themes[0];
+}
+
 const legacyThemeIds = {
   ivoryClassic: "silkIvory",
   blueClassic: "somethingBlue",
@@ -407,7 +425,7 @@ const legacyThemeIds = {
 };
 export function getClassicalTheme(id) {
   return (
-    classicalThemes.find((theme) => theme.id === (legacyThemeIds[id] ?? id)) ??
+    [...weddingCustomThemes, ...christeningCustomThemes].find((theme) => theme.id === (legacyThemeIds[id] ?? id)) ??
     classicalThemes[0]
   );
 }
@@ -415,3 +433,7 @@ export function getClassicalTheme(id) {
 export const getClassicalScene = (id) => classicalScenes[id] ?? "";
 export const getClassicalPaper = (id) => classicalPapers[id] ?? "";
 export const getClassicalOrnament = (id) => classicalOrnaments[id] ?? "";
+
+export function canUploadCustomCover(theme) {
+  return theme?.occasion !== "christening" || theme.squarePhoto === true;
+}

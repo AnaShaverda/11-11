@@ -695,7 +695,8 @@
   display: block;
   width: 100%;
   height: 100%;
-  object-fit: contain;
+  object-fit: cover;
+  object-position: center;
 }
 .wedding-cover.has-photo .wedding-cover-brand {
   position: static;
@@ -2825,3 +2826,9 @@ body:has(.guest-card-suite[data-entrance-complete="false"]) {
   position: relative;
   z-index: 1;
 }
+
+/* Opening overlays must center against the viewport, not a preview container. */
+.guest-preview-stage:has(.guest-card-suite[data-entrance-complete="false"]),
+.guest-card-suite[data-entrance-complete="false"] { container-type: normal; }
+.guest-card-suite[data-entrance-complete="false"] .guest-invitation-column { grid-template-columns: minmax(0,1fr); justify-items: center; align-items: center; margin: 0; }
+.guest-card-suite[data-entrance-complete="false"] .guest-main-card { justify-self: center; margin-inline: auto; }

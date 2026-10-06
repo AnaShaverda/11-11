@@ -32,7 +32,7 @@ export default function InvitationsPage() {
   const showAppearance = availableTemplates.length > 0 || hasAppearance;
   const visibleTemplates = availableTemplates.filter((item) => matchesCatalogAppearance(item, appearance));
   const visibleGifts = giftCatalogItems.filter((item) => itemMatchesCategory(item, project?.id, occasion) && matchesCatalogAppearance(item, appearance));
-  const customCategory = project?.id && customCategories.includes(project.id) ? project.id : !project || project.id === "trending" ? "all" : null;
+  const customCategory = project?.id === "baby-kids" ? (["all", "christening"].includes(occasion) ? "christening" : null) : project?.id && customCategories.includes(project.id) ? project.id : !project || project.id === "trending" ? "all" : null;
   const resultCount = visibleTemplates.length + visibleGifts.length + Number(Boolean(customCategory));
   const resultKey = [project?.id ?? "all", occasion, appearance.themes.join(","), appearance.colors.join(",")].join("|");
   const availableAppearance = availableTemplates.map(getCatalogAppearance);

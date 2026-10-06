@@ -1,4 +1,4 @@
-export const customCategories = ["wedding", "birthday", "baby-kids", "pre-wedding", "parties", "gifts", "corporate"];
+export const customCategories = ["wedding", "baby-kids", "christening"];
 
 const themes = {
   all: { category: "Other", color: "#7b5874", pattern: "contours", title: "Your celebration" },
@@ -13,6 +13,7 @@ const themes = {
 };
 
 export function getCustomTemplate(category) {
+  if (category === "baby-kids") category = "christening";
   const theme = themes[category];
   if (!theme) return null;
   return {

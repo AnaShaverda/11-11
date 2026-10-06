@@ -28,10 +28,10 @@
 .custom-builder-navigation-summary > span { color: var(--color-text-secondary); font-size: 13px; font-weight: 500; font-variant-numeric: tabular-nums; }
 .custom-builder-navigation-summary button { display: inline-flex; align-items: center; gap: 7px; min-height: 44px; padding: 8px 0 8px 10px; border: 0; background: transparent; color: var(--form-action); font-size: 13px; cursor: pointer; }
 .custom-builder-navigation-summary button[aria-expanded="true"] .ui-icon { transform: rotate(180deg); }
-.custom-builder-stepper { grid-template-columns: repeat(3,minmax(0,1fr)); gap: 8px; margin: 0; }
+.custom-builder-stepper { grid-template-columns: repeat(3,minmax(0,1fr)); gap: 6px; margin: 0; }
 .custom-builder-stepper[hidden] { display: none; }
-.custom-builder-stepper button { flex-direction: column; align-items: flex-start; justify-content: flex-start; gap: 2px; min-height: 58px; padding: 8px 10px; border-color: var(--border-soft); border-radius: 8px; color: var(--color-text-secondary); font-size: 13px; line-height: 1.5; cursor: pointer; }
-.custom-builder-stepper button > span:first-child { opacity: 1; color: var(--color-text-secondary); font-size: 11px; }
+.custom-builder-stepper button { flex-direction: row; align-items: center; justify-content: flex-start; gap: 7px; min-height: 44px; padding: 6px 8px; border-color: var(--border-soft); border-radius: 6px; color: var(--color-text-secondary); font-size: 12px; line-height: 1.35; text-align: left; cursor: pointer; }
+.custom-builder-stepper button > span:first-child { flex-shrink: 0; margin: 0; font-variant-numeric: tabular-nums; opacity: 1; color: var(--color-text-secondary); font-size: 11px; }
 .custom-builder-stepper button[aria-current="step"] { background: var(--surface-hover); border-color: var(--ui-field-focus); color: var(--color-text); font-weight: 600; }
 .custom-builder-current-step { width: 100%; display: flex; align-items: center; gap: 10px; padding: 12px 14px; min-height: 48px; border: 1px solid var(--ui-field-focus); border-radius: 8px; background: var(--surface-hover); color: var(--color-text); text-align: left; font-size: 14px; cursor: pointer; }
 .custom-builder-current-step > .ui-icon { margin-left: auto; flex-shrink: 0; }
@@ -200,7 +200,7 @@
 .custom-builder-navigation-summary > button { flex-shrink: 0; }
 .custom-builder-navigation { padding-bottom: 0; margin-bottom: 24px; border-bottom: 0; }
 .custom-builder-completion { margin-bottom: 0; }
-.custom-builder-stepper:not([hidden]) { margin-top: 16px; }
+.custom-builder-stepper:not([hidden]) { margin-top: 10px; }
 @media (max-width: 720px) { .custom-builder-section-title h2 { font-size: 16px; } .custom-builder-navigation-summary > button { font-size: 12px; } }
 
 .custom-builder-fields > label:not(.custom-builder-toggle), .custom-builder-time label { gap: 6px; }
@@ -212,7 +212,7 @@
 .custom-builder-themes > div { grid-template-columns: repeat(auto-fill, minmax(124px, 1fr)); gap: 10px; padding: 4px; }
 .custom-builder-themes .custom-theme-mini.wedding-theme-mini { width: 100%; max-width: none; margin: 0; }
 .custom-builder-themes button { width: 100%; padding: 4px; }
-.custom-builder-footer-scenes > div { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+.custom-builder-footer-scenes > div { grid-template-columns: repeat(auto-fill, minmax(min(100%, 124px), 1fr)); gap: 10px; }
 .custom-builder-sidebar .custom-builder-footer-scenes button { min-width: 0; height: 100%; background: var(--ui-field-background); border-color: var(--border-soft); color: var(--color-text); font-size: 13px; line-height: 1.5; padding: 6px; text-align: center; overflow-wrap: anywhere; }
 .custom-builder-footer-scenes img, .custom-footer-none { aspect-ratio: 2.4 / 1; }
 
@@ -299,3 +299,133 @@
 .custom-builder-time label::after { content: ""; position: absolute; right: 18px; bottom: 22px; width: 8px; height: 8px; border-right: 2px solid currentColor; border-bottom: 2px solid currentColor; transform: rotate(45deg); pointer-events: none; }
 
 .custom-builder-actions button:not(.custom-builder-skip) { flex: 1 1 0; min-width: 0 !important; }
+
+:is(.wedding-cover, .wedding-theme-mini)[class*="theme-christening"] .wedding-ornament-composition { inset: auto 35% 8%; width: 30%; height: 22%; object-fit: contain; }
+
+.custom-builder-sidebar .custom-builder-themes .custom-theme-name { color: var(--color-text); display: block; padding: 7px 3px 3px; font-size: 12px; line-height: 1.5; overflow-wrap: anywhere; }
+
+/* Baby photo cards always separate their square image from the invitation text. */
+.custom-invitation-cover.wedding-cover.baby-photo-cover { min-height: 150cqw; height: auto; aspect-ratio: 2 / 3; background: var(--wedding-paper); }
+.baby-photo-content { position: relative; z-index: 3; width: 72%; margin: auto; padding: 19cqw 0 30cqw; display: grid; gap: 7cqw; }
+.baby-square-photo { position: relative; width: 100%; aspect-ratio: 1 / 1; overflow: hidden; border: 1px solid var(--wedding-accent); border-radius: 8px; background: #ffffffaa; box-shadow: 0 4px 15px #35455312; }
+.baby-square-photo > img { display: block; width: 100%; height: 100%; object-fit: cover; }
+.baby-photo-placeholder { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 12px; color: var(--wedding-ink); font: 400 4cqw/1.5 "Creator Noto Sans Georgian", sans-serif; }
+.baby-photo-titles { display: grid; gap: 3cqw; text-align: center; color: var(--wedding-ink); }
+.baby-photo-titles small { font-size: 3cqw; }
+.baby-photo-titles strong { font: 400 7cqw/1.3 var(--wedding-display-font); overflow-wrap: anywhere; }
+.baby-photo-titles > span { font: 400 3.5cqw/1.5 "Creator Noto Sans Georgian", sans-serif; }
+.baby-theme-preview-photo { position: absolute; top: 17%; left: 16%; width: 68%; aspect-ratio: 1; display: grid; place-items: center; border: 1px dashed var(--wedding-accent); border-radius: 4px; background: #ffffff99; color: var(--wedding-ink); }
+.custom-theme-mini:is(.theme-christeningBabyBoy,.theme-christeningBabyGirl) .wedding-theme-mini-copy { padding-top: 50%; }
+.baby-photo-cover .wedding-artwork .wedding-ornament-composition { inset: auto 35% 3%; width: 30%; height: 15%; }
+
+
+/* Independently positioned watercolor artwork, shared by previews and live cards. */
+.christening-artwork { overflow: hidden; }
+.christening-artwork .christening-watercolor-wash { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: fill; opacity: .75; pointer-events: none; }
+.christening-artwork .christening-piece { position: absolute; object-fit: contain; pointer-events: none; }
+.christening-dove { width: 34%; height: 24%; top: 1%; left: -2%; }
+.christening-candle { width: 30%; height: 39%; bottom: 1%; right: -5%; }
+.baby-photo-cover .christening-candle { bottom: 1%; width: 44%; height: 49%; right: -11%; object-fit: contain; }
+.christening-flowers { width: 32%; height: 23%; bottom: -1%; left: -3%; }
+.baby-photo-cover .baby-photo-content { width: 58%; padding: 37cqw 0 30cqw; }
+.baby-photo-cover .baby-square-photo { border-radius: 2px; }
+.baby-theme-preview-photo { top: 25%; left: 21%; width: 58%; }
+.custom-theme-mini:is(.theme-christeningBabyBoy,.theme-christeningBabyGirl) .wedding-theme-mini-copy { padding-top: 58%; }
+.christening-artwork.is-adaptive .christening-dove { width: 18%; height: 18%; }
+.christening-artwork.is-adaptive .christening-candle { width: 14%; height: 27%; }
+.christening-artwork.is-adaptive .christening-flowers { width: 20%; height: 18%; }
+
+.custom-invitation-cover.baby-photo-cover { background-color: #fffaf2; }
+.custom-theme-mini:is(.theme-christeningBabyBoy,.theme-christeningBabyGirl) { background-color: #fffaf2; }
+
+/* Three distinct christening cover compositions; artwork never contains text. */
+.christening-classic-layer { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain; }
+.christening-layout-sky .christening-dove { top: 2%; left: 0; width: 49%; height: 35%; }
+.christening-layout-sky .christening-flowers { width: 43%; height: 31%; bottom: -3%; left: -6%; }
+.wedding-cover.theme-christeningBlueDove:not(.has-photo) .custom-cover-copy { padding-top: 53cqw; padding-bottom: 28cqw; width: 70%; gap: 5cqw; }
+.wedding-cover.theme-christeningOliveBlessing:not(.has-photo) .custom-cover-copy { width: 55%; gap: 5cqw; }
+.wedding-cover.theme-christeningBlushGrace:not(.has-photo) .custom-cover-copy { width: 61%; margin-left: 33%; margin-right: 6%; gap: 5cqw; }
+.theme-christeningBlueDove .wedding-theme-mini-copy { inset: 39% 15% 20%; }
+.theme-christeningOliveBlessing .wedding-theme-mini-copy { inset: 32% 24% 30%; }
+.theme-christeningBlushGrace .wedding-theme-mini-copy { inset: 32% 6% 30% 33%; }
+.christening-inner-border { position: absolute; inset: 3%; border: 1px solid color-mix(in srgb, var(--wedding-accent) 48%, transparent); border-radius: 6px; }
+.guest-custom-theme.wedding-stationery.christening-stationery .christening-artwork.is-adaptive .christening-watercolor-wash { opacity: .24; }
+.guest-custom-theme.wedding-stationery.christening-stationery .guest-note.wedding-stationery-note { background-color: #fffaf5; background-image: linear-gradient(#fffaf5f2, #fffaf5f2), var(--wedding-paper-texture); }
+.guest-custom-theme.wedding-stationery.christening-stationery .guest-note.wedding-stationery-note .guest-note-content { width: 78%; padding: 19cqw 0 21cqw; min-height: 140cqw; }
+.guest-custom-theme.wedding-stationery.christening-stationery .guest-note h2 { color: var(--wedding-ink); font-size: clamp(23px, 6.5cqw, 34px); line-height: 1.4; margin-bottom: 7cqw; overflow-wrap: anywhere; }
+.guest-custom-theme.wedding-stationery.christening-stationery .guest-note h2::after { content: ''; display: block; width: 42px; height: 1px; margin: 20px auto 0; background: var(--wedding-accent); }
+.guest-custom-theme.wedding-stationery.christening-stationery .guest-custom-message .guest-note-content { display: grid; align-content: center; }
+.guest-custom-theme.wedding-stationery.christening-stationery .guest-custom-message p { font-size: clamp(18px, 4.8cqw, 25px); line-height: 1.8; color: var(--wedding-ink); overflow-wrap: anywhere; }
+.guest-custom-theme.wedding-stationery.christening-stationery .guest-custom-message p::before,
+.guest-custom-theme.wedding-stationery.christening-stationery .guest-custom-message p::after { content: ''; display: block; width: 70px; height: 1px; background: var(--wedding-accent); margin: 28px auto; }
+.guest-custom-theme.wedding-stationery.christening-stationery .guest-custom-moments ol { margin-top: 9cqw; }
+.guest-custom-theme.wedding-stationery.christening-stationery .guest-custom-moments li { padding: 0 0 30px 52px; }
+.guest-custom-theme.wedding-stationery.christening-stationery .guest-custom-moments li::before { left: 17px; top: 30px; bottom: 0; }
+.guest-custom-theme.wedding-stationery.christening-stationery .guest-custom-moments li:last-child::before { display: none; }
+.guest-custom-theme.wedding-stationery.christening-stationery .guest-custom-moment-number { top: 0; left: 0; width: 34px; height: 34px; display: grid; place-items: center; border-radius: 50%; background: color-mix(in srgb, var(--wedding-accent) 65%, #fffaf5); color: var(--wedding-ink); font-size: 12px; opacity: 1; box-shadow: none; }
+.guest-custom-theme.wedding-stationery.christening-stationery .guest-custom-moments li time { display: block; font-size: 13px; letter-spacing: .04em; color: var(--wedding-ink); margin-bottom: 6px; }
+.guest-custom-theme.wedding-stationery.christening-stationery .guest-custom-moments li h3 { font-size: clamp(18px, 4.8cqw, 24px); line-height: 1.45; font-weight: 500; margin: 0 0 7px; overflow-wrap: anywhere; }
+.guest-custom-theme.wedding-stationery.christening-stationery .guest-custom-moments li p { font-size: 15px; line-height: 1.6; margin: 0 0 10px; overflow-wrap: anywhere; }
+.guest-custom-theme.wedding-stationery.christening-stationery .guest-custom-moments li a { color: var(--wedding-ink); display: inline-flex; align-items: center; gap: 6px; padding: 7px 0; font-size: 13px; text-underline-offset: 4px; }
+.guest-custom-theme.wedding-stationery.christening-stationery .guest-custom-moments-date { font-size: 14px; line-height: 1.6; }
+.guest-custom-theme.wedding-stationery.christening-stationery .guest-rsvp .guest-name-field input,
+.guest-custom-theme.wedding-stationery.christening-stationery .guest-notes textarea { min-height: 48px; border: 1px solid var(--wedding-accent); border-radius: 6px; padding: 12px; background: #ffffff80; color: var(--wedding-ink); font-size: 16px; box-shadow: none; }
+.guest-custom-theme.wedding-stationery.christening-stationery .guest-rsvp .guest-name-field input:focus-visible,
+.guest-custom-theme.wedding-stationery.christening-stationery .guest-notes textarea:focus-visible { outline: 2px solid var(--wedding-ink); outline-offset: 3px; }
+.guest-custom-theme.wedding-stationery.christening-stationery .guest-attendance-choices label { min-height: 50px; padding: 12px 9px; border-color: var(--wedding-accent); border-radius: 6px; font-size: 14px; line-height: 1.5; }
+.guest-custom-theme.wedding-stationery.christening-stationery .guest-attendance-choices label.is-selected { background: color-mix(in srgb, var(--wedding-accent) 20%, #fffaf5); color: var(--wedding-ink); border-color: var(--wedding-ink); box-shadow: inset 0 0 0 1px var(--wedding-ink); }
+.guest-custom-theme.wedding-stationery.christening-stationery .guest-companion-stepper { border: 1px solid var(--wedding-accent); border-radius: 6px; gap: 0; }
+.guest-custom-theme.wedding-stationery.christening-stationery .guest-companion-stepper button { border: 0; border-radius: 0; width: 50px; min-height: 48px; }
+.guest-custom-theme.wedding-stationery.christening-stationery .guest-companion-stepper output { flex: 1; padding: 9px; border-inline: 1px solid var(--wedding-accent); }
+.guest-custom-theme.wedding-stationery.christening-stationery .guest-rsvp .guest-button { min-height: 50px; border-radius: 6px; background: var(--wedding-ink); border-color: var(--wedding-ink); color: #fffaf5; font-size: 15px; }
+.guest-custom-theme.wedding-stationery.christening-stationery .guest-rsvp :is(label, legend, .guest-party-size p) { font-size: 14px; line-height: 1.6; }
+.guest-custom-theme.wedding-stationery.christening-stationery .guest-note-rule { display: none; }
+
+.christening-layout-sky .christening-sky { height: 65%; object-fit: fill; }
+
+.guest-custom-theme.wedding-stationery.christening-stationery .guest-note :is(h2, h3) { font-family: Georgia, "Creator Noto Sans Georgian", serif; text-shadow: none; }
+.guest-custom-theme.wedding-stationery.christening-stationery .guest-attendance-choices { grid-template-columns: 1fr 1fr; }
+.guest-custom-theme.wedding-stationery.christening-stationery .guest-section-screen[data-section="rsvp"] .guest-attendance-choices label.is-selected { background: color-mix(in srgb, var(--wedding-accent) 20%, #fffaf5); color: var(--wedding-ink); border-color: var(--wedding-ink); }
+.guest-custom-theme.wedding-stationery.christening-stationery .guest-rsvp .guest-note-content { min-height: 140cqw; }
+.guest-custom-theme.wedding-stationery.christening-stationery .guest-note {
+  --wedding-display-font: Georgia, "Noto Serif Georgian", serif;
+  --wedding-reading-font: "Creator Noto Sans Georgian", "Noto Serif Georgian", sans-serif;
+}
+
+.christening-message-olive { position: absolute; top: 8%; left: 35%; width: 30%; height: 22%; object-fit: contain; pointer-events: none; z-index: 1; }
+
+.christening-layout-cascade .christening-dove { top: 3%; left: auto; right: 2%; width: 36%; height: 23%; }
+.christening-layout-cascade .christening-candle { bottom: 1%; right: -7%; width: 34%; height: 32%; }
+
+.christening-message-dove { position: absolute; top: 7%; left: 32%; width: 36%; height: 23%; object-fit: contain; pointer-events: none; z-index: 1; }
+
+.custom-builder-opening-choice > div { grid-template-columns: repeat(auto-fit,minmax(120px,1fr)); gap: 10px; }
+.custom-builder-sidebar .custom-builder-opening-choice button { min-height: 140px; padding: 10px 7px; font-size: 12px; line-height: 1.35; }
+.custom-builder-opening-choice .opening-mini { height: 88px; position: relative; overflow: hidden; }
+@media(max-width:380px) { .custom-builder-opening-choice > div { grid-template-columns: repeat(2,minmax(0,1fr)); } }
+
+.custom-builder-opening-choice .opening-mini-embossedIvoryEnvelope { background-image: url('/images/opening/vertical-embossed-ivory.png') !important; background-size: contain !important; background-repeat: no-repeat; background-position: center; }
+.custom-builder-opening-choice .opening-mini-embossedIvoryEnvelope::after { display: none; }
+
+.custom-builder-opening-choice .opening-mini-embossedSageEnvelope { background-image: url('/images/opening/vertical-embossed-sage.png') !important; background-size: contain !important; background-repeat: no-repeat; background-position: center; }
+.custom-builder-opening-choice .opening-mini-embossedSageEnvelope::after { display: none; }
+
+.custom-builder-opening-choice .opening-mini-embossedBurgundyEnvelope { background-image: url('/images/opening/vertical-embossed-burgundy.png') !important; background-size: contain !important; background-repeat: no-repeat; background-position: center; }
+.custom-builder-opening-choice .opening-mini-embossedBurgundyEnvelope::after { display: none; }
+
+.custom-builder-opening-choice .opening-mini-bordeauxLaceEnvelope { background: #faf5e9 url('/images/opening/bordeaux-bridal-lace.png') center / contain no-repeat; overflow: hidden; }
+.custom-builder-opening-choice .opening-mini-bordeauxLaceEnvelope::after { display: block; inset: 0 48% 0 0; width: auto; height: auto; border: 0; border-radius: 0; transform: none; background: #702430; clip-path: polygon(0 0,40% 0,100% 50%,40% 100%,0 100%); }
+
+.custom-builder-opening-choice .opening-mini-bordeauxLaceEnvelope::after {
+  background: #702b38 url('/images/opening/burgundy-cotton-paper.png') center / cover;
+}
+
+.custom-builder-opening-choice .opening-mini-greenLaceEnvelope { background: #faf5e9 url('/images/opening/bordeaux-bridal-lace.png') center / contain no-repeat; overflow: hidden; }
+.custom-builder-opening-choice .opening-mini-greenLaceEnvelope::after { display: block; inset: 0 48% 0 0; width: auto; height: auto; border: 0; border-radius: 0; transform: none; background: #adb59b url('/images/opening/sage-cotton-paper.png') center / cover; clip-path: polygon(0 0,40% 0,100% 50%,40% 100%,0 100%); }
+
+.custom-builder-opening-choice .opening-mini-bordeauxLaceEnvelope::after {
+  background: #702b38 url('/images/opening/burgundy-rough-rag-paper.png') center / cover;
+}
+.custom-builder-opening-choice .opening-mini-greenLaceEnvelope::after {
+  background: #183d2d url('/images/opening/forest-green-rough-rag-paper.png') center / cover;
+}

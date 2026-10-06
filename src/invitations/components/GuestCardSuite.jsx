@@ -40,6 +40,8 @@ function NoteCard({ design, className = "", ornament, children, tools, ...props 
   return <section className={`guest-note${design.weddingTheme ? " wedding-stationery-note" : ""}${design.frame ? " has-frame" : ""} ${className}`} {...props}>
     {tools}
     {design.weddingTheme ? <WeddingThemeDecoration theme={design.weddingTheme} adaptive /> : <CardDecoration design={design} ornament={ornament} />}
+    {design.weddingTheme?.id === "christeningOliveBlessing" && className === "guest-custom-message" && <img className="christening-message-olive" src="/images/components/watercolor/olive-sprig.webp" alt="" aria-hidden="true" decoding="async" />}
+    {design.weddingTheme?.id === "christeningBlushGrace" && className === "guest-custom-message" && <img className="christening-message-dove" src="/images/christening/pink-dove.png" alt="" aria-hidden="true" decoding="async" />}
     <div className="guest-note-content">{children}</div>
   </section>;
 }
@@ -274,7 +276,7 @@ export default function GuestCardSuite({ template, sample, copyTranslations, edi
   useElegantGuestMotion(root, !creator && settings.motion === "elegant", entranceComplete, reducedMotion, entranceKey);
   const weddingTheme = template.isCustom ? getClassicalTheme(customDesign.theme) : null;
   const baseDesign = getGuestCardDesign(template);
-  const design = weddingTheme ? { ...baseDesign, weddingTheme, detailsArtwork: getDetailsArtwork(weddingTheme.id) } : baseDesign;
+  const design = weddingTheme ? { ...baseDesign, weddingTheme, detailsArtwork: weddingTheme.occasion === "christening" ? null : getDetailsArtwork(weddingTheme.id) } : baseDesign;
   useEffect(() => {
     if (!design.mobileFrame || !root.current) return;
     const frame = new Image();
@@ -324,7 +326,7 @@ export default function GuestCardSuite({ template, sample, copyTranslations, edi
     editor={showCreatorTools && (editingPlan || planDraft) && <GuestDayPlanEditor embedded dayPlan={dayPlan} onSave={items => { onSavePlan(items); setEditingPlan(false); }} />} />;
   const editField = key => editableFields.find(field => field.group === "fields" && field.key === key);
 
-  return <article ref={root} data-classic-frame={design.classicMobilePaper && Boolean(design.mobileFrame)} data-template={template.slug} data-classic-paper={design.classicMobilePaper} data-classic-mobile-paper={mobile && design.classicMobilePaper} data-mobile-frame={mobile && design.classicMobilePaper && Boolean(design.mobileFrame)} data-soft-screen={design.softScreen} data-entrance-complete={entranceComplete} className={`guest-card-suite${showCreatorTools ? " is-canvas-editing" : ""}${template.isCustom ? ` guest-custom-theme wedding-stationery theme-${weddingTheme.id}${lightCoverColors.has(customDesign.color) ? " custom-light-color" : ""}${pastelCustomColors.has(customDesign.color) ? " custom-pastel-color" : ""} custom-frame-${customDesign.frame} custom-pattern-${customDesign.pattern} custom-font-${customDesign.font} custom-paper-${customDesign.paper || "none"} custom-ornament-${customDesign.ornament || "none"}` : ""} guest-pattern-${design.pattern} guest-motion-${creator ? "none" : settings.motion}${design.background ? " has-paper-image" : ""}`} style={style} aria-label={sample.title}>
+  return <article ref={root} data-classic-frame={design.classicMobilePaper && Boolean(design.mobileFrame)} data-template={template.slug} data-classic-paper={design.classicMobilePaper} data-classic-mobile-paper={mobile && design.classicMobilePaper} data-mobile-frame={mobile && design.classicMobilePaper && Boolean(design.mobileFrame)} data-soft-screen={design.softScreen} data-entrance-complete={entranceComplete} className={`guest-card-suite${showCreatorTools ? " is-canvas-editing" : ""}${template.isCustom ? ` guest-custom-theme wedding-stationery${weddingTheme.occasion === "christening" ? " christening-stationery" : ""} theme-${weddingTheme.id}${lightCoverColors.has(customDesign.color) ? " custom-light-color" : ""}${pastelCustomColors.has(customDesign.color) ? " custom-pastel-color" : ""} custom-frame-${customDesign.frame} custom-pattern-${customDesign.pattern} custom-font-${customDesign.font} custom-paper-${customDesign.paper || "none"} custom-ornament-${customDesign.ornament || "none"}` : ""} guest-pattern-${design.pattern} guest-motion-${creator ? "none" : settings.motion}${design.background ? " has-paper-image" : ""}`} style={style} aria-label={sample.title}>
     {!creator && settings.motion === "elegant" && entranceComplete && !reducedMotion && <div className="guest-elegant-atmosphere" aria-hidden="true">
       {[0, 1, 2, 3, 4, 5].map(index => <i key={index} style={{ "--particle-left": `${8 + index * 17}%`, "--particle-top": `${6 + index * 15}%`, "--particle-delay": `${-index * 3}s` }} />)}
       <span className="guest-elegant-shimmer" />

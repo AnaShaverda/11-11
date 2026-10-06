@@ -1,5 +1,6 @@
 import { cardFontRegistry } from '../data/cardTypography.js';
 import { getClassicalPaper } from '../data/customClassicalThemes.js';
+import ChristeningArtwork, { ChristeningClassicArtwork } from './ChristeningArtwork.jsx';
 import EmbossedWaxSeal from './EmbossedWaxSeal.jsx';
 import Icon from '../../components/ui/Icon.jsx';
 import { useLanguage } from '../../localization/LanguageContext.jsx';
@@ -27,6 +28,8 @@ function WeddingOrnamentPiece({ theme }) {
 
 // Full decorative frames belong on the cover; supporting cards use a quiet border.
 export default function WeddingThemeDecoration({ theme, adaptive = false, title, initials }) {
+  if (theme.christeningLayout) return <ChristeningClassicArtwork layout={theme.christeningLayout} adaptive={adaptive} />;
+  if (theme.artworkTone) return <ChristeningArtwork tone={theme.artworkTone} adaptive={adaptive} />;
   if (theme.embossedPaper) return adaptive ? null : <div className="wedding-artwork wedding-embossed-details" aria-hidden="true">
     <span className="wedding-embossed-flap" />
     <svg className="wedding-embossed-crease" viewBox="0 0 100 150" preserveAspectRatio="none" focusable="false"><path d="M0 0 50 51 100 0" /></svg>
@@ -44,7 +47,7 @@ export default function WeddingThemeDecoration({ theme, adaptive = false, title,
 export function WeddingThemePreview({ theme, label }) {
   const { language } = useLanguage();
   return <span className={`custom-theme-mini wedding-theme-mini theme-${theme.id}${theme.photoTheme ? ` is-photo-theme tone-${theme.coverTextTone}` : ''}`} style={weddingThemeStyle(theme)} aria-hidden="true">
-    {theme.photoTheme ? <><span className="wedding-portrait-sample"><span className="wedding-photo-prompt"><Icon name="image" size={22} /><span>{language === 'ka' ? 'აირჩიე შენი ფოტო' : 'Choose your photo'}</span></span></span><span className="wedding-portrait-frame" /></> : <WeddingThemeDecoration theme={theme} />}
+    {theme.squarePhoto ? <><WeddingThemeDecoration theme={theme} /><span className="baby-theme-preview-photo"><Icon name="image" size={28} /></span></> : theme.photoTheme ? <><span className="wedding-portrait-sample"><span className="wedding-photo-prompt"><Icon name="image" size={22} /><span>{language === 'ka' ? 'აირჩიე შენი ფოტო' : 'Choose your photo'}</span></span></span><span className="wedding-portrait-frame" /></> : <WeddingThemeDecoration theme={theme} />}
     <span className="wedding-theme-mini-copy"><i>{label}</i><b /><small>18 · 06 · 2027</small></span>
   </span>;
 }
