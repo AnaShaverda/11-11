@@ -7,7 +7,7 @@ import { invitationSamples } from "./invitationSamples.js";
 import { MAX_GUEST_NOTE_LENGTH } from "./guestNotes.js";
 
 export const guestPreviewDefaults = { timeZone: "Asia/Tbilisi", details: true, rsvp: true, rsvpDeadline: "", music: false, gallery: false, motion: "none", format: "square", companions: 1, entrance: "envelope", envelope: true, openingEffect: "none", openingIntensity: "subtle", openingSpeed: "slow", openingDuration: 8, openingPalette: "theme" };
-export const entranceStyles = ["ivoryPaperEnvelope", "pinkPaperEnvelope", "bluePaperEnvelope", "redFloralEnvelope", "redPortraitEnvelope", "pastelGreenEnvelope", "redGoldEnvelope", "greenPineEnvelope", "greenMoonEnvelope", "embossedIvoryEnvelope", "embossedSageEnvelope", "embossedBurgundyEnvelope", "bordeauxLaceEnvelope", "greenLaceEnvelope", "doors", "doorsBrown", "immediate"];
+export const entranceStyles = ["ivoryPaperEnvelope", "pinkPaperEnvelope", "bluePaperEnvelope", "classicBurgundyEnvelope", "redPortraitEnvelope", "pastelGreenEnvelope", "bordeauxLaceEnvelope", "greenLaceEnvelope", "doors", "doorsBrown", "doorsBlueFloral", "stampedPaper", "immediate"];
 export const motionStyles = ["none", "gentle", "float", "sparkle", "elegant"];
 export const openingEffects = ["none", "confetti", "streamers", "hearts", "sparkles", "petals"];
 export const openingSpeeds = ["dreamy", "slow", "lively"];
@@ -57,7 +57,7 @@ export function normalizeGuestSettings(value = {}) {
     companions: Number.isInteger(value.companions) ? Math.min(5, Math.max(0, value.companions)) : 1,
     entrance,
     envelopeStamp: value.envelopeStamp === true,
-    envelope: entrance === "greenLaceEnvelope" || entrance === "bordeauxLaceEnvelope" || entrance === "embossedBurgundyEnvelope" || entrance === "pastelGreenEnvelope" || entrance === "redPortraitEnvelope" || entrance === "ivoryPaperEnvelope" || entrance === "greenPineEnvelope" || entrance === "greenMoonEnvelope" || entrance === "redFloralEnvelope" || entrance === "redGoldEnvelope" || entrance === "redVelvetEnvelope" || entrance === "pinkPaperEnvelope" || entrance === "bluePaperEnvelope" || entrance === "envelope" || entrance === "embossedIvoryEnvelope" || entrance === "embossedSageEnvelope",
+    envelope: entrance === "classicBurgundyEnvelope" || entrance === "greenLaceEnvelope" || entrance === "bordeauxLaceEnvelope" || entrance === "roseFiberEnvelope" || entrance === "embossedBurgundyEnvelope" || entrance === "pastelGreenEnvelope" || entrance === "redPortraitEnvelope" || entrance === "ivoryPaperEnvelope" || entrance === "redVelvetEnvelope" || entrance === "pinkPaperEnvelope" || entrance === "bluePaperEnvelope" || entrance === "envelope" || entrance === "embossedIvoryEnvelope" || entrance === "embossedSageEnvelope",
     openingEffect: openingEffects.includes(value.openingEffect) ? value.openingEffect : "none",
     openingIntensity: value.openingIntensity === "celebration" ? "celebration" : "subtle",
     openingSpeed: openingSpeeds.includes(value.openingSpeed) ? value.openingSpeed : "slow",

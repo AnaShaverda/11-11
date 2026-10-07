@@ -2,8 +2,9 @@ import { useLanguage } from "../../localization/LanguageContext.jsx";
 import Icon from "../../components/ui/Icon.jsx";
 
 function DoorLeaf({ side, variant }) {
+  const image = variant === "blueFloral" ? "/images/opening/blue-floral-door-leaf.png" : `/images/opening/classical-${variant}-door-leaf.webp`;
   return <div className={`guest-door-leaf is-${side}`} aria-hidden="true">
-    <img src={`/images/opening/classical-${variant}-door-leaf.webp`} alt="" decoding="async" draggable="false" />
+    <img src={image} alt="" decoding="async" draggable="false" />
   </div>;
 }
 

@@ -242,7 +242,7 @@ function GuestPreview({ template }) {
   const screenDesign = getGuestCardDesign(template);
   const classicMobilePaper = (view === "mobile" || smallViewport) && screenDesign.classicMobilePaper;
 
-  return <main className={`guest-preview-page${creator ? " is-creating" : ""}`} data-template={template.slug} data-classic-mobile-paper={classicMobilePaper} style={classicMobilePaper ? { "--classic-paper": screenDesign.mobilePaper, "--classic-background": screenDesign.mobileBackground ? `url("${screenDesign.mobileBackground}")` : "none" } : undefined} data-preview-mode={view === "mobile" || smallViewport ? "mobile" : "desktop"}>
+  return <main className={`guest-preview-page${creator ? " is-creating" : ""}${guestPreview ? " is-guest-preview" : ""}`} data-template={template.slug} data-classic-mobile-paper={classicMobilePaper} style={classicMobilePaper ? { "--classic-paper": screenDesign.mobilePaper, "--classic-background": screenDesign.mobileBackground ? `url("${screenDesign.mobileBackground}")` : "none" } : undefined} data-preview-mode={view === "mobile" || smallViewport ? "mobile" : "desktop"}>
     <ScrollManager />
     <header className="guest-preview-toolbar">
       <Link className="guest-preview-back" to={`/invitations/${template.slug}`}><Icon name="arrow-left" size={18} /><span>{t("guestCards.back")}</span></Link>

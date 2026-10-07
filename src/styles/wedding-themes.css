@@ -1364,6 +1364,9 @@
   right: -14.83%;
   transform: scaleX(-1);
 }
+.guest-image-door-stage[data-door-variant="blueFloral"] { aspect-ratio: 61 / 100; height: 60%; }
+.guest-image-door-stage[data-door-variant="blueFloral"] .guest-door-leaf img { width: 200%; height: 100%; left: -37%; top: 0; }
+.guest-image-door-stage[data-door-variant="blueFloral"] .guest-door-leaf.is-right img { left: auto; right: -37%; }
 .guest-image-door-stage {
   filter: drop-shadow(0 10px 14px #463c2914);
 }

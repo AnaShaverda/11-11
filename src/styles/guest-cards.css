@@ -459,6 +459,24 @@ html:has(.guest-preview-page), body:has(.guest-preview-page) { min-width: 0; }
 .comic-host > .comic-host-name { display: inline; margin: 0; }
 
 /* Original arched door stationery, tinted by the current invitation palette. */
+.entrance-stampedPaper .guest-letter-window { animation: none !important; clip-path: none; }
+.entrance-stampedPaper:is(.is-sealed,.is-opening) .guest-invitation-artwork { opacity: 1; transform: none; animation: none; filter: none; }
+.stamped-paper-opening { position: fixed; z-index: 9999; inset: 0; overflow: hidden; isolation: isolate; }
+.stamped-paper-half { position: absolute; top: 0; bottom: 0; width: 50%; background-color: #f5f0e4; background-image: radial-gradient(circle at 22% 30%, #fffaf0 0, transparent 52%), repeating-linear-gradient(92deg, #fff8ed12 0 2px, #b8a98d10 3px 4px); box-shadow: inset 0 0 60px #baaa8d20; }
+.stamped-paper-half.is-left { left: 0; border-right: 1px solid #d8cbb6; }
+.stamped-paper-half.is-right { right: 0; border-left: 1px solid #fffaf1; }
+.stamped-paper-stamp { position: absolute; top: 50%; width: clamp(108px, 16vmin, 160px); height: clamp(108px, 16vmin, 160px); transform: translateY(-50%); }
+.stamped-paper-stamp img { display: block; width: 100%; height: 100%; object-fit: contain; }
+.stamped-paper-half.is-left .stamped-paper-stamp { right: calc(clamp(108px, 16vmin, 160px) / -2); clip-path: inset(0 50% 0 0); }
+.stamped-paper-half.is-right .stamped-paper-stamp { left: calc(clamp(108px, 16vmin, 160px) / -2); clip-path: inset(0 0 0 50%); }
+.stamped-paper-open { position: absolute; inset: 0; width: 100%; border: 0; background: transparent; color: #526577; cursor: pointer; font: 500 clamp(14px, 2.4vmin, 19px)/1.4 Georgia, serif; }
+.stamped-paper-caption { position: absolute; top: calc(50% + clamp(76px, 11vmin, 102px)); left: 0; width: 100%; text-align: center; }
+.stamped-paper-open:focus-visible { outline: 3px solid #627b91; outline-offset: -12px; }
+.stamped-paper-opening.is-opening .stamped-paper-half.is-left { animation: stamped-paper-left 2.2s cubic-bezier(.62,.02,.17,1) forwards; }
+.stamped-paper-opening.is-opening .stamped-paper-half.is-right { animation: stamped-paper-right 2.2s cubic-bezier(.62,.02,.17,1) forwards; }
+@keyframes stamped-paper-left { 0%, 12% { transform: translateX(0); } 100% { transform: translateX(-102%); } }
+@keyframes stamped-paper-right { 0%, 12% { transform: translateX(0); } 100% { transform: translateX(102%); } }
+@media (prefers-reduced-motion: reduce) { .stamped-paper-opening.is-opening .stamped-paper-half { animation-duration: .01ms; } }
 .entrance-doors .guest-letter-window { animation: none !important; clip-path: none; }
 .entrance-doors.is-sealed .guest-invitation-artwork { opacity: 0; transform: scale(.94); }
 .entrance-doors.is-opening .guest-invitation-artwork { animation: guest-door-art 2.8s cubic-bezier(.22,.61,.36,1) both; }
@@ -1120,6 +1138,29 @@ html:has(.guest-preview-page) { scroll-padding-top: 66px; }
 .paper-envelope .guest-envelope-back { background-image: none; background-color: var(--guest-paper); }
 .paper-envelope.is-opening .guest-envelope-front-layer::before { clip-path: polygon(0 0,50% 67%,100% 0,100% 100%,0 100%) !important; }
 
+/* Three soft papers share the same rounded pocket and hinged flap construction. */
+.paper-envelope .paper-envelope-folded-front { display: none; }
+.paper-envelope-ivory { --soft-paper-image: url('/images/opening/ivory-open-pocket.png'); --soft-paper-base: #eee6d8; --soft-paper-seam: #9c8d755c; --soft-paper-shadow: #6b5744; }
+.paper-envelope-pink { --soft-paper-image: url('/images/opening/paper-envelope-pink.png'); --soft-paper-base: #f3ced7; --soft-paper-seam: #a776805c; --soft-paper-shadow: #82535d; }
+.paper-envelope-blue { --soft-paper-image: url('/images/opening/paper-envelope-blue.png'); --soft-paper-base: #cfdfeb; --soft-paper-seam: #6c8ca65c; --soft-paper-shadow: #4e6980; }
+.paper-envelope-pastel-green { --soft-paper-image: url('/images/opening/pastel-green-plain-envelope.png'); --soft-paper-base: #d3d7bd; --soft-paper-seam: #78846b5c; --soft-paper-shadow: #59654c; }
+.paper-envelope-floral { --soft-paper-image: url('/images/opening/red-floral-envelope.png'); --soft-paper-base: #a71920; --soft-paper-seam: #600e165c; --soft-paper-shadow: #460b10; }
+.paper-envelope-gold { --soft-paper-image: url('/images/opening/red-gold-envelope.png'); --soft-paper-base: #681722; --soft-paper-seam: #a453525c; --soft-paper-shadow: #33090f; }
+.paper-envelope-pine { --soft-paper-image: url('/images/opening/green-pine-envelope.png'); --soft-paper-base: #183b2c; --soft-paper-seam: #5c826b5c; --soft-paper-shadow: #091e15; }
+.paper-envelope-moon { --soft-paper-image: url('/images/opening/green-moon-envelope.png'); --soft-paper-base: #535a37; --soft-paper-seam: #8b95665c; --soft-paper-shadow: #252b16; }
+.paper-envelope-soft .paper-envelope-folded-front { display: block; position: absolute; inset: 0; z-index: 4; width: 100%; height: 100%; border-radius: 10px; overflow: hidden; filter: drop-shadow(0 -1px 1px #76695524); }
+.paper-envelope-soft :is(.paper-envelope-fold-side-left,.paper-envelope-fold-side-right,.paper-envelope-fold-bottom) { fill: url(#soft-envelope-paper); }
+.paper-envelope-soft .paper-envelope-fold-side-left { filter: brightness(.99); }
+.paper-envelope-soft .paper-envelope-fold-side-right { filter: brightness(.975); }
+.paper-envelope-soft .paper-envelope-fold-bottom { filter: brightness(.96); }
+.paper-envelope-soft .paper-envelope-fold-seam { fill: none; stroke: var(--soft-paper-seam); stroke-width: 1.1; }
+.paper-envelope-soft .guest-envelope-front-layer::before { display: none; }
+.paper-envelope-soft .guest-envelope-back { border-radius: 10px; background: var(--soft-paper-base) var(--soft-paper-image) center top / 300% 300% no-repeat; }
+.paper-envelope-soft .paper-photo-flap { height: 68%; clip-path: url(#paper-flap-outline); background: var(--soft-paper-base) var(--soft-paper-image) center top / 300% 300% no-repeat; }
+.paper-envelope-soft .guest-envelope-flap-layer { filter: drop-shadow(0 4px 3px color-mix(in srgb,var(--soft-paper-shadow) 48%,transparent)) drop-shadow(0 10px 7px color-mix(in srgb,var(--soft-paper-shadow) 22%,transparent)); transition: filter .85s ease-out .18s; }
+.paper-envelope-soft:is(.paper-envelope-pink,.paper-envelope-blue,.paper-envelope-pastel-green) :is(.guest-envelope-back,.paper-photo-flap) { background-image: linear-gradient(color-mix(in srgb,var(--soft-paper-base) 52%,transparent),color-mix(in srgb,var(--soft-paper-base) 52%,transparent)),var(--soft-paper-image); background-position: center,center top; background-size: cover,300% 300%; }
+.paper-envelope-soft:is(.paper-envelope-floral,.paper-envelope-gold,.paper-envelope-pine,.paper-envelope-moon) .paper-photo-flap { background: var(--soft-paper-base) var(--paper-envelope-image) center top / 100% 149.25% no-repeat; }
+
 .paper-envelope-velvet { --paper-envelope-image: url('/images/opening/velvet-envelope-red-v2.png'); --guest-paper: #671723 !important; --guest-ink: #efd1aa !important; --guest-accent: #bd9370 !important; }
 .paper-envelope-velvet .guest-envelope-title { color: #f3d7b5; text-shadow: 0 1px 2px #28061188; }
 .paper-envelope-velvet .guest-envelope-greeting, .paper-envelope-velvet .guest-envelope-open { color: #6b2632; }
@@ -1154,6 +1195,50 @@ html:has(.guest-preview-page) { scroll-padding-top: 66px; }
 .paper-envelope-ivory { --paper-envelope-image: url('/images/opening/ivory-paper-envelope.png'); --guest-paper: #eee6d8 !important; --guest-ink: #796851 !important; --guest-accent: #b49c79 !important; }
 .opening-mini-ivoryPaperEnvelope { background-image: url('/images/opening/ivory-paper-envelope.png') !important; }
 
+/* Classic burgundy: a separate paper construction based on the closed and open references. */
+.classic-burgundy-entrance.is-sealed .guest-invitation-artwork { opacity: 0; }
+.classic-burgundy-entrance.is-sealed .guest-letter-window { pointer-events: none; }
+.classic-burgundy-entrance.is-opening .guest-invitation-artwork { animation: classic-burgundy-card-reveal 4.6s cubic-bezier(.4,0,.2,1) both; }
+.classic-burgundy-entrance.is-opening .guest-letter-window { animation: classic-burgundy-card-window 4.6s linear both; }
+.classic-burgundy-scene { position: absolute; z-index: 3; inset: 0; background: #fffdfa; }
+.classic-burgundy-entrance.is-opening .classic-burgundy-scene { animation: paper-background-reveal 4.6s linear both; }
+.classic-burgundy-envelope { position: absolute; left: 50%; top: 50%; width: min(72cqw,420px); aspect-ratio: 500 / 356; transform: translate(-50%,-50%); perspective: 1000px; filter: drop-shadow(2px 14px 13px #210c143b) drop-shadow(0 3px 2px #210c1429); }
+.classic-burgundy-pocket-overlay { position: absolute; z-index: 7; left: 50%; top: 50%; width: min(72cqw,420px); aspect-ratio: 500 / 356; height: auto; transform: translate(-50%,-50%); opacity: 0; pointer-events: none; filter: drop-shadow(0 4px 3px #26071035); }
+.classic-burgundy-body { position: absolute; inset: 0; z-index: 7; width: 100%; height: 100%; }
+.classic-burgundy-flap { position: absolute; inset: 0 0 auto; z-index: 8; height: 76%; transform-origin: 50% 0; transform-style: preserve-3d; }
+.classic-burgundy-flap svg { position: absolute; inset: 0; width: 100%; height: 100%; backface-visibility: hidden; }
+.classic-burgundy-flap-face { filter: drop-shadow(0 5px 4px #28071070); }
+.classic-burgundy-flap-lining { opacity: 0; backface-visibility: visible !important; }
+.classic-burgundy-seal { position: absolute; z-index: 9; left: 50%; top: 70%; width: 13%; height: auto; overflow: visible; transform: translate(-50%,-50%); filter: drop-shadow(0 3px 3px #240a0b8c); }
+.classic-burgundy-open { position: absolute; z-index: 10; left: 50%; top: 50%; width: min(72cqw,420px); aspect-ratio: 500 / 356; transform: translate(-50%,-50%); border: 0; background: transparent; cursor: pointer; }
+.classic-burgundy-open:focus-visible { outline: 3px solid #c79234; outline-offset: 5px; }
+.classic-burgundy-entrance.is-opening .classic-burgundy-flap { animation: classic-burgundy-flap-open 1.4s .2s cubic-bezier(.4,0,.2,1) both, paper-flap-depth 1.4s .2s linear both; }
+.classic-burgundy-entrance.is-opening .classic-burgundy-flap-lining { animation: classic-burgundy-lining-show 1.4s .2s steps(1,end) both; }
+.classic-burgundy-entrance.is-opening .classic-burgundy-seal { animation: paper-seal-release .5s ease-in both; }
+.classic-burgundy-entrance.is-opening .classic-burgundy-envelope { animation: paper-envelope-settle 4.6s cubic-bezier(.4,0,.2,1) both; }
+.classic-burgundy-entrance.is-opening .classic-burgundy-pocket-overlay { animation: classic-burgundy-pocket-away 4.6s linear both; }
+@keyframes classic-burgundy-flap-open { from { transform: rotateX(0); } to { transform: rotateX(180deg); } }
+@keyframes classic-burgundy-lining-show { 0%,49% { opacity: 0; } 50%,100% { opacity: 1; } }
+@keyframes classic-burgundy-pocket-away { 0%,24% { opacity: 0; translate: 0; } 25%,55% { opacity: 1; translate: 0; } 78%,100% { opacity: 0; translate: 0 12cqh; } }
+@keyframes classic-burgundy-card-reveal { 0%,30% { opacity: 0; transform: translateY(var(--letter-start-y)) scale(.55); } 34% { opacity: 1; transform: translateY(calc(var(--letter-start-y) - 15cqh)) scale(.55); } 60% { opacity: 1; transform: translateY(calc(var(--letter-start-y) - 26cqh)) scale(.55); } 100% { opacity: 1; transform: translateY(0) scale(1); } }
+@keyframes classic-burgundy-card-window { 0%,60% { clip-path: inset(0 0 33% 0); } 80%,100% { clip-path: inset(0); } }
+/* Match the ivory envelope's card lift and keep the burgundy pocket in front of it. */
+.classic-burgundy-entrance[data-entrance="classicBurgundyEnvelope"] { --envelope-width: min(84cqw,460px); --envelope-height: calc(var(--envelope-width) * .712); }
+.classic-burgundy-entrance[data-entrance="classicBurgundyEnvelope"] :is(.classic-burgundy-envelope,.classic-burgundy-pocket-overlay,.classic-burgundy-open) { top: var(--envelope-top); width: var(--envelope-width); transform: translateX(-50%); }
+.classic-burgundy-entrance[data-entrance="classicBurgundyEnvelope"].is-sealed .classic-burgundy-envelope { animation: paper-envelope-reminder 3.6s ease-in-out .5s infinite; }
+.classic-burgundy-entrance[data-entrance="classicBurgundyEnvelope"].is-opening .guest-invitation-artwork { animation: paper-card-reveal 4.6s cubic-bezier(.4,0,.2,1) both; }
+.classic-burgundy-entrance[data-entrance="classicBurgundyEnvelope"].is-opening .guest-letter-window { animation: paper-card-window 4.6s linear both; }
+.classic-burgundy-entrance[data-entrance="classicBurgundyEnvelope"].is-opening .classic-burgundy-pocket-overlay { animation: paper-envelope-settle 4.6s cubic-bezier(.4,0,.2,1) both; }
+@media (prefers-reduced-motion: reduce) { .classic-burgundy-entrance.is-opening * { animation-duration: .01ms !important; } }
+.opening-mini-classicBurgundyEnvelope { background: #75172b; border: 1px solid #4e0b1e; border-radius: 2px; box-shadow: 0 3px 6px #210c1438; }
+.opening-mini-classicBurgundyEnvelope::before { content: ""; position: absolute; inset: 0; background: linear-gradient(135deg,#862036,#621025); clip-path: polygon(0 0,100% 0,50% 76%); filter: drop-shadow(0 2px 2px #27071466); }
+.opening-mini-classicBurgundyEnvelope::after { content: "C"; position: absolute; left: 50%; top: 75%; transform: translate(-50%,-50%); display: grid; place-items: center; width: 15%; aspect-ratio: 1; border-radius: 50%; background: radial-gradient(circle at 35% 30%,#f4d476,#b97720 72%,#78400c); border: 1px solid #f9d67f; color: #60330b; font: italic 8px Georgia,serif; box-shadow: 0 1px 2px #210c146b; }
+.classic-burgundy-scene.is-sage .classic-burgundy-envelope { filter: hue-rotate(83deg) saturate(.26) brightness(3) drop-shadow(2px 14px 13px #34382042) drop-shadow(0 3px 2px #3438202c); }
+.classic-burgundy-pocket-overlay.is-sage { filter: hue-rotate(83deg) saturate(.26) brightness(3) drop-shadow(0 4px 3px #34382035); }
+.classic-burgundy-scene.is-sage .classic-burgundy-envelope::after { content: ""; position: absolute; inset: 0; z-index: 10; background: url('/images/opening/sage-cotton-paper.png') center / cover; mix-blend-mode: multiply; opacity: .45; pointer-events: none; }
+.classic-burgundy-scene.is-sage .classic-burgundy-flap::after { content: ""; position: absolute; inset: 0; z-index: 2; background: url('/images/opening/sage-cotton-paper.png') center / cover; clip-path: polygon(0 0,100% 0,90% 34%,50% 100%,10% 34%); mix-blend-mode: multiply; opacity: .45; pointer-events: none; }
+.opening-mini-classicSageEnvelope { background: #85896b; border: 1px solid #64684f; border-radius: 2px; box-shadow: 0 3px 6px #34382038; }
+.opening-mini-classicSageEnvelope::before { content: ""; position: absolute; inset: 0; background: url('/images/opening/sage-cotton-paper.png') center / cover; mix-blend-mode: multiply; clip-path: polygon(0 0,100% 0,50% 76%); filter: drop-shadow(0 2px 2px #34382055); }
 /* One vertical full-screen prototype; existing openings remain available. */
 .guest-card-suite[data-entrance-complete="false"] .guest-main-card:has(.is-vertical-envelope) { width: 100vw; height: calc(100svh - 66px); max-height: none; aspect-ratio: auto; }
 .guest-invitation-column:has(.is-vertical-envelope) { padding: 0 !important; }
@@ -1280,7 +1365,7 @@ html:has(.guest-preview-page) { scroll-padding-top: 66px; }
 .paper-envelope-pastel-green .vertical-double-scene::after { background-image: url('/images/opening/pastel-green-plain-envelope.png'); background-color: #d3d7bd; }
 .paper-envelope-pastel-green .vertical-double-scene::after { clip-path: polygon(0 0,100% 0,100% 20%,50% 51%,0 20%); }
 .paper-envelope-pastel-green .vertical-double-scene::before { clip-path: polygon(0 100%,0 77%,50% 47%,100% 77%,100% 100%); }
-.opening-mini-pastelGreenEnvelope { background-image: url('/images/opening/pastel-green-plain-envelope.png') !important; background-size: contain !important; background-repeat: no-repeat; background-position: center; }
+.opening-mini-pastelGreenEnvelope { background-image: url('/images/opening/pastel-green-plain-envelope.png') !important; background-size: 100% 150% !important; background-repeat: no-repeat; background-position: center top; }
 
 .paper-envelope-embossed-ivory { --vertical-embossed-image: url('/images/opening/vertical-embossed-ivory.png'); --guest-paper: #eee5d3 !important; }
 
@@ -1308,10 +1393,10 @@ html:has(.guest-preview-page) { scroll-padding-top: 66px; }
 .bordeaux-wax { position: absolute; left: 50%; top: 50%; transform: translate(-50%,-50%); width: clamp(70px,18cqw,116px); aspect-ratio: 1; display: grid; place-items: center; background: url('/images/opening/cream-wax-seal.png') center / contain no-repeat; color: #e8c98b; font: italic clamp(18px,4cqw,29px)/1 Georgia,serif; filter: sepia(.7) saturate(2) hue-rotate(320deg) brightness(.65); }
 .bordeaux-lace-open { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; background: transparent; cursor: pointer; z-index: 4; pointer-events: auto; }
 .bordeaux-lace-open:focus-visible { outline: 2px solid #d8b975; outline-offset: -8px; }
-.is-opening .bordeaux-paper-hinge { animation: bordeaux-paper-open 1.65s .15s cubic-bezier(.45,0,.25,1) both; }
-.is-opening .lace-fold-right { animation: bordeaux-lace-right 1.45s 1.4s cubic-bezier(.45,0,.25,1) both; }
-.is-opening .lace-fold-top { animation: bordeaux-lace-top 1.55s 2.8s cubic-bezier(.45,0,.25,1) both; }
-.is-opening .lace-fold-bottom { animation: bordeaux-lace-bottom 1.55s 2.8s cubic-bezier(.45,0,.25,1) both; }
+.is-opening .bordeaux-paper-hinge { animation: bordeaux-paper-open 1.05s .05s cubic-bezier(.45,0,.25,1) both; }
+.is-opening .lace-fold-right { animation: bordeaux-lace-right 1s 1s cubic-bezier(.45,0,.25,1) both; }
+.is-opening .lace-fold-top { animation: bordeaux-lace-top .95s 1.95s cubic-bezier(.45,0,.25,1) both; }
+.is-opening .lace-fold-bottom { animation: bordeaux-lace-bottom .95s 1.95s cubic-bezier(.45,0,.25,1) both; }
 @keyframes bordeaux-paper-open { from { transform: rotateY(0); } to { transform: rotateY(-180deg); } }
 @keyframes bordeaux-lace-right { from { transform: rotateY(0); } to { transform: rotateY(180deg); } }
 @keyframes bordeaux-lace-top { from { transform: rotateX(0); } to { transform: rotateX(180deg); } }
@@ -1340,10 +1425,98 @@ html:has(.guest-preview-page) { scroll-padding-top: 66px; }
   background: #adb59b url('/images/opening/sage-cotton-paper.png') center / 100% 100% no-repeat;
 }
 
-/* Coarse handmade rag paper from the supplied material reference. */
+/* Floral burgundy material supplied for the bridal lace paper fold. */
 .bordeaux-paper-fold {
-  background: #702b38 url('/images/opening/burgundy-rough-rag-paper.png') center / 100% 100% no-repeat;
+  background: #702b38 url('/images/opening/burgundy-floral-paper.png') center / 100% 100% no-repeat;
 }
 .is-green-lace .bordeaux-paper-fold {
   background: #183d2d url('/images/opening/forest-green-rough-rag-paper.png') center / 100% 100% no-repeat;
 }
+
+/* Each lace flap is a complete embroidered image with its own finished edge. */
+.bordeaux-lace-fold { inset: auto; clip-path: none; background-color: transparent; background-repeat: no-repeat; background-size: 100% 100%; }
+.lace-fold-top { top: 0; left: -10%; width: 120%; height: 40%; background-image: url('/images/opening/bridal-lace-top-flap-v2.png'); }
+.lace-fold-bottom { bottom: 0; left: -10%; width: 120%; height: 40%; background-image: url('/images/opening/bridal-lace-bottom-flap-v2.png'); }
+.lace-fold-right { top: 0; right: 0; width: 100%; height: 100%; background-image: url('/images/opening/bridal-lace-side-flap-v2.png'); }
+
+/* The lace reveals blank invitation paper before its artwork and lettering appear. */
+.is-lace-envelope .custom-invitation-cover.wedding-cover::after {
+  content: ""; display: block; position: absolute; inset: 0; z-index: 10; pointer-events: none;
+  background-color: var(--wedding-paper);
+  background-image: linear-gradient(color-mix(in srgb,var(--wedding-paper) 94%,transparent),color-mix(in srgb,var(--wedding-paper) 94%,transparent)),var(--wedding-paper-texture);
+  background-size: cover;
+}
+.is-lace-envelope.is-opening .custom-invitation-cover.wedding-cover::after { animation: lace-blank-paper 4.6s steps(1,end) both; }
+.is-lace-envelope.is-opening .custom-invitation-cover > :not(.custom-cover-copy) { animation: lace-artwork-arrive .75s 2.95s ease-out both; }
+.is-lace-envelope.is-opening .custom-invitation-cover > .custom-cover-copy,
+.is-lace-envelope.is-opening .baby-photo-titles { animation: lace-copy-arrive .75s 3.55s ease-out both; }
+.is-lace-envelope .guest-invitation-artwork:not(:has(.custom-invitation-cover))::after { content: ""; position: absolute; inset: 0; z-index: 10; pointer-events: none; background: var(--guest-paper) var(--guest-background) center / cover; }
+.is-lace-envelope.is-opening .guest-invitation-artwork:not(:has(.custom-invitation-cover))::after { animation: lace-blank-paper 4.6s steps(1,end) both; }
+.is-lace-envelope.is-opening .guest-invitation-artwork:not(:has(.custom-invitation-cover)) > * { animation: lace-artwork-arrive .9s 3s ease-out both; }
+@keyframes lace-blank-paper { 0%,62% { opacity: 1; } 63%,100% { opacity: 0; } }
+@keyframes lace-artwork-arrive { from { opacity: 0; transform: scale(.97); } to { opacity: 1; transform: scale(1); } }
+@keyframes lace-copy-arrive { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: translateY(0); } }
+@media (prefers-reduced-motion: reduce) { .is-lace-envelope .guest-invitation-artwork::after, .is-lace-envelope .custom-invitation-cover.wedding-cover::after { display: none; } }
+
+/* Keep the invitation completely blank behind the lace until the folds finish. */
+.is-lace-envelope .guest-invitation-artwork::after {
+  content: ""; position: absolute; inset: 0; z-index: 11; pointer-events: none;
+  background: var(--guest-paper) var(--guest-background) center / cover;
+}
+.is-lace-envelope.is-opening .guest-invitation-artwork::after { animation: lace-blank-paper 4.6s steps(1,end) both; }
+.is-lace-envelope.is-opened .guest-invitation-artwork::after { display: none; }
+
+/* Rose fiber uses the bridal lace fold timing with a separate handmade-paper face. */
+.is-rose-fiber .bordeaux-lace-scene { border-radius: 9px; overflow: hidden; }
+.rose-flap-clips { position: absolute; }
+.is-rose-fiber .bordeaux-lace-fold,
+.is-rose-fiber .bordeaux-paper-fold {
+  background: #d9a6aa url('/images/opening/rose-fiber-paper.png') center / cover no-repeat;
+}
+.is-rose-fiber .lace-fold-top {
+  z-index: 3; inset: 0; width: 100%; height: 100%;
+  clip-path: url('#rose-flap-top');
+  background-image: linear-gradient(#fff8f01a, #863e5012), url('/images/opening/rose-fiber-paper.png');
+  filter: drop-shadow(0 2px 2px #633c4a4a);
+}
+.is-rose-fiber .lace-fold-bottom {
+  z-index: 3; inset: 0; width: 100%; height: 100%;
+  clip-path: url('#rose-flap-bottom');
+  background-image: linear-gradient(#80384b0e, #fff8f012), url('/images/opening/rose-fiber-paper.png');
+  filter: drop-shadow(0 -2px 2px #633c4a4a);
+}
+.is-rose-fiber .lace-fold-right {
+  z-index: 2; inset: 0; width: 100%; height: 100%;
+  clip-path: url('#rose-flap-right');
+  background-image: linear-gradient(90deg, #74394a14, #fff9f013), url('/images/opening/rose-fiber-paper.png');
+  filter: drop-shadow(-2px 0 2px #633c4a4a);
+}
+.is-rose-fiber .bordeaux-paper-hinge { z-index: 4; }
+.is-rose-fiber .bordeaux-paper-fold {
+  clip-path: url('#rose-flap-left');
+  background-image: linear-gradient(90deg, #fff9f00c, #783c4a18), url('/images/opening/rose-fiber-paper.png');
+  filter: drop-shadow(2px 0 2px #633c4a55);
+}
+.rose-curved-seams { position: absolute; inset: 0; z-index: 5; width: 100%; height: 100%; overflow: visible; pointer-events: none; }
+.rose-curved-seams path { fill: none; stroke: #764558; stroke-opacity: .28; stroke-width: .55; filter: blur(.25px); }
+.is-rose-fiber.is-opening .rose-curved-seams { animation: rose-seams-open 1s ease-out forwards; }
+@keyframes rose-seams-open { to { opacity: 0; } }
+.is-rose-fiber .bordeaux-wax {
+  width: clamp(90px, 25cqw, 160px);
+  background-image: url('/images/opening/rose-wax-seal.png');
+  filter: none;
+}
+
+/* Guest preview shows the main invitation as a full viewport screen. */
+.is-guest-preview .guest-preview-stage,
+.is-guest-preview .guest-preview-stage.is-mobile { width: 100vw; max-width: none; margin: 0; box-shadow: none; --guest-screen-height: 100dvh; }
+.is-guest-preview .custom-builder-preview-pane { width: 100%; padding: 0; }
+.is-guest-preview .guest-card-suite { padding-inline: 0; }
+.is-guest-preview .guest-card-layout { width: 100%; max-width: none; }
+.is-guest-preview .guest-invitation-column { width: 100%; min-height: 0; padding: 0; }
+.is-guest-preview .guest-main-card,
+.is-guest-preview .guest-main-card.is-portrait,
+.is-guest-preview .guest-main-card:not(.is-portrait) { width: 100vw; max-width: none; height: 100dvh; min-height: 100dvh; aspect-ratio: auto; margin-inline: 0; box-shadow: none; }
+.is-guest-preview .guest-main-card .guest-main-content,
+.is-guest-preview .guest-main-card.is-portrait .guest-main-content { width: 100%; height: 100%; max-width: none; margin: 0; }
+.is-guest-preview .guest-main-card.is-square-mobile .guest-editable-artwork > .invitation-art { top: 0; bottom: 0; height: 100% !important; aspect-ratio: auto; transform: none; }
