@@ -1,5 +1,7 @@
 {
   "rewrites": [
+    { "source": "/surprises/for/a1cbe778fe47dc687ef50b9f24d4981d", "destination": "/ani-share.html" },
+    { "source": "/surprises/for/a1cbe778fe47dc687ef50b9f24d4981d/", "destination": "/ani-share.html" },
     { "source": "/(.*)", "destination": "/index.html" }
   ]
 }
