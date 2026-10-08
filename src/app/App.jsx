@@ -22,6 +22,7 @@ import InvitationOpeningPage from "../invitations/pages/InvitationOpeningPage.js
 import CustomInvitationPage from "../invitations/pages/CustomInvitationPage.jsx";
 import CustomDesignGalleryPage from "../invitations/pages/CustomDesignGalleryPage.jsx";
 import CustomDesignExperiencePage from "../invitations/pages/CustomDesignExperiencePage.jsx";
+import CustomOrderRoute from "../custom-orders/CustomOrderRoute.jsx";
 
 function InvitationCatalogRedirect() {
   const { search, hash, state } = useLocation();
@@ -42,6 +43,7 @@ function InvitationCatalogRedirect() {
 export default function App() {
   return (
     <Routes>
+      <Route path="surprises/for/:orderId/*" element={<CustomOrderRoute />} />
       <Route
         path="invitations/:slug/open"
         element={<InvitationOpeningPage />}

@@ -24,6 +24,7 @@ Use `npm run build` to create a production bundle.
 - `/modules/friendship-diary` — optional module showcase
 - `/surprises` — Digital Surprise presentation and local mock creator flow
 - `/surprises/demo` — interactive Birthday Surprise example; accepts validated `occasion`, `theme`, and `modules` query parameters for previewing visual choices
+- `/surprises/for/:orderId` — hardcoded custom orders with unguessable 128-bit random IDs registered in `src/custom-orders/orders.js`. The Ani order renders its card, music, cake, album, and scratch surprise as one vertically scrollable page without the main website layout. The cake uses a generated image and pink glitter number 25 candles; the flames are coded and respond to taps or an optional microphone activated by the visitor. Microphone detection requires browser permission and a secure context (localhost works). Old chapter paths redirect to the order page. Its source is isolated in `src/custom-orders/ani`, and its images are under its ID in `public/custom-orders`. The link is shareable by anyone who receives it; this frontend has no access control. The scratch reveal contains a birthday wish because no voucher asset was supplied.
 - `/about` and `/contact` — public information pages
 
 Old project links, including `/projects/friendship-diary`, redirect to their current category or module route.
