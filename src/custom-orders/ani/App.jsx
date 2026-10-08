@@ -132,7 +132,9 @@ function BirthdayCard() {
         <div className="intro" data-reveal>
           <p className="eyebrow">From Akh Netavi, with love</p>
           <h1>
-            {isOpen ? "It’s your day, Ani." : "At this point, you’re officially too old for Leonardo DiCaprio."}
+            {isOpen
+              ? "It’s your day, Ani."
+              : "At this point, you’re officially too old for Leonardo DiCaprio."}
           </h1>
           <p className="subtitle">
             {isOpen
@@ -225,7 +227,8 @@ function MusicPage() {
         <p className="eyebrow">Side A · From Akh Netavi</p>
         <h1>
           Spinning records.
-          <br />Another Taylor album on repeat.
+          <br />
+          Another Taylor album on repeat.
         </h1>
         <p className="subtitle">
           For Ani, on her special day. Give this one a spin.
@@ -283,7 +286,12 @@ export default function App() {
       <footer className="maker-credit">
         <span>Made by</span>
         <a href="/" aria-label="11:11 — visit the company that made this card">
-          <img src="/logos/logo-pink-star.svg" alt="11:11" width="1330" height="1112" />
+          <img
+            src="/logos/logo-pink-star.svg"
+            alt="11:11"
+            width="1330"
+            height="1112"
+          />
         </a>
       </footer>
     </main>
