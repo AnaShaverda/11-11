@@ -241,7 +241,24 @@ button {
 .sticker--surprise-three img { object-position: 57% 60%; }
 
 @media (max-width: 1120px) {
-  .portrait-stickers { display: none; }
+  .birthday-site .page { padding-bottom: 110px; }
+  .portrait-stickers {
+    inset: auto 0 4px;
+    height: 88px;
+  }
+  .portrait-sticker {
+    position: absolute;
+    inset: auto;
+    width: clamp(62px, 8vw, 82px);
+    padding: 4px 4px 11px;
+  }
+  .portrait-stickers .portrait-sticker:nth-child(1) { top: auto; right: auto; bottom: 9px; left: 10px; }
+  .portrait-stickers .portrait-sticker:nth-child(2) { top: auto; right: 10px; bottom: 7px; left: auto; }
+  .portrait-stickers .portrait-sticker:nth-child(n + 3) { display: none; }
+  .portrait-stickers--card .portrait-sticker:nth-child(2),
+  .portrait-stickers--album .portrait-sticker:nth-child(2) { display: none; }
+  .portrait-stickers--music .portrait-sticker:nth-child(1),
+  .portrait-stickers--surprise .portrait-sticker:nth-child(1) { display: none; }
 }
 
 .corner-logo {
@@ -1069,7 +1086,7 @@ button {
 
 @media (max-width: 760px) {
   .page {
-    padding: 110px 20px 34px;
+    padding: 64px 20px 110px;
     overflow-y: auto;
   }
 
@@ -1120,14 +1137,17 @@ button {
 
   .card-scene {
     grid-row: 2;
-    height: 490px;
-    min-height: 490px;
+    height: 550px;
+    min-height: 550px;
     margin-top: 8px;
   }
 
   .birthday-card {
     inset: 6% 8% 17%;
   }
+
+  .card__message { margin-top: 8px; padding-top: 0; }
+  .card__footer { flex-shrink: 0; }
 
   .open-button {
     grid-row: 3;
