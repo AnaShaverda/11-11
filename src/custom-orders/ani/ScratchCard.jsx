@@ -8,6 +8,7 @@ export default function ScratchCard() {
   const [scratched, setScratched] = useState([]);
   const revealed = scratched.length === totalPatches;
   const progress = Math.round((scratched.length / totalPatches) * 100);
+  const ScratchSurface = revealed ? "a" : "button";
 
   const scratch = (event) => {
     if (revealed) return;
@@ -62,28 +63,24 @@ export default function ScratchCard() {
             <span>No. 004</span>
           </div>
           <p className="ticket-title">Ani, you’re the lucky one.</p>
-          <button
+          <ScratchSurface
             className={`scratch-surface ${revealed ? "is-revealed" : ""}`}
-            type="button"
-            onClick={scratch}
+            type={revealed ? undefined : "button"}
+            href={revealed ? "https://www.amazon.co.uk/gc/redeem" : undefined}
+            onClick={revealed ? undefined : scratch}
             aria-label={
               revealed
-                ? "Ani’s birthday wish revealed"
+                ? "Open Amazon UK gift card redemption"
                 : `Scratch birthday surprise. ${progress}% uncovered`
             }
             aria-describedby="scratch-status"
           >
             <span className="scratch-prize" aria-hidden={!revealed}>
-              <span className="prize-kicker">Your birthday wish</span>
-              <strong>
-                A year full of
-                <br />
-                beautiful things.
-              </strong>
-              <span>Big laughs. Sweet moments. Endless love.</span>
-              <span className="prize-signature">
-                Happy birthday, Ani! — Akh Netavi
-              </span>
+              <img
+                className="scratch-prize-image"
+                src="/custom-orders/a1cbe778fe47dc687ef50b9f24d4981d/images/birthday-wishes-gift-card.png"
+                alt=""
+              />
             </span>
             {!revealed && (
               <svg
@@ -156,7 +153,7 @@ export default function ScratchCard() {
                 </g>
               </svg>
             )}
-          </button>
+          </ScratchSurface>
         </article>
         <div
           className="scratch-progress"
@@ -173,7 +170,7 @@ export default function ScratchCard() {
         </div>
         <p className="scratch-status" id="scratch-status" role="status">
           {revealed
-            ? "Surprise! Your birthday wish is revealed."
+            ? "Surprise! Your Birthday Wishes gift card is revealed."
             : `${progress}% uncovered · every click reveals a little more`}
         </p>
         <button

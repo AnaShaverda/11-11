@@ -1894,6 +1894,13 @@ button {
   color: var(--berry);
   padding: 15px;
 }
+.scratch-prize-image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 14px;
+}
 .prize-kicker {
   font-size: 9px;
   letter-spacing: 0.16em;
