@@ -1,7 +1,7 @@
 import WeddingThemeDecoration, { weddingThemeStyle } from "./WeddingThemeDecoration.jsx";
 import Icon from "../../components/ui/Icon.jsx";
 import { useLanguage } from "../../localization/LanguageContext.jsx";
-import { classicalThemes, christeningCustomThemes, getClassicalTheme, canUploadCustomCover, footerScenes } from "../data/customClassicalThemes.js";
+import { classicalThemes, christeningCustomThemes, getClassicalTheme, canUploadCustomCover, footerScenes, portraitSamplePhoto } from "../data/customClassicalThemes.js";
 
 export const coverFrames = ["arch", "engraved", "botanical", "oval", "classic", "minimal", "film", "laurelCorners", "scrollwork", "regal"];
 export const lightCoverColors = new Set([...[...classicalThemes, ...christeningCustomThemes].map(theme => theme.color), "#f6f1e7", "#eee6d8", "#e4e9df", "#e8e4ef", "#e2eaf0", "#e9dddd"]);
@@ -35,12 +35,12 @@ export function normalizeCustomDesign(value, defaults = {}) {
   };
 }
 
-export default function CustomInvitationCover({ design, sample, invitationLabel, invitationGreeting }) {
+export default function CustomInvitationCover({ design, sample, invitationLabel, invitationGreeting, adaptiveArtwork = false }) {
   const { language } = useLanguage();
   const selectedTheme = getClassicalTheme(design.theme);
   // The embossed themes are the envelope; their invitation is the floral paper card inside.
   const theme = selectedTheme.embossedPaper ? getClassicalTheme("vellumPromise") : selectedTheme;
-  const image = canUploadCustomCover(theme) ? design.coverImage : "";
+  const image = canUploadCustomCover(theme) ? design.coverImage || (theme.photoTheme ? portraitSamplePhoto : "") : "";
   const framedPhoto = image && design.photoLayout === "framed";
   const isBlushChristening = theme.id === "christeningBlushGrace";
   const defaultChristeningTitle = language === "ka" ? "ნათლობა" : "Christening";
@@ -61,7 +61,7 @@ export default function CustomInvitationCover({ design, sample, invitationLabel,
 
   return <div className={`custom-invitation-cover wedding-cover theme-${theme.id}${image ? ' has-photo' : ''}${framedPhoto ? ' is-framed-photo' : ''}`} style={weddingThemeStyle(theme)}>
     {image && !framedPhoto && <img className="wedding-full-cover-photo" src={image} alt={sample.title} style={{ objectPosition: `50% ${design.position}%`, transform: `scale(${design.zoom / 100}) rotate(${design.rotation}deg)` }} />}
-    {(!image || framedPhoto) && <WeddingThemeDecoration theme={theme} title={sample.title} initials={sample.initials} />}
+    {(!image || framedPhoto) && <WeddingThemeDecoration theme={theme} title={sample.title} initials={sample.initials} adaptive={adaptiveArtwork} separateOrnaments={adaptiveArtwork} />}
     <div className="custom-cover-copy">
       {framedPhoto && <div className="wedding-cover-photo"><img src={image} alt={sample.title} style={{ transform: `scale(${design.zoom / 100}) rotate(${design.rotation}deg)` }} /></div>}
       <small>{coverHeading}</small>

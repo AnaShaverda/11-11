@@ -130,12 +130,12 @@ function AttendanceCard({ template, design, rsvpDeadline, maxCompanions, onEditT
   </NoteCard>;
 }
 
-function GuestNotesCard({ template, design, noteSettings, onNoteSettingsChange, onEditText, creator, showCreatorTools, tools, fullName }) {
+function GuestNotesCard({ template, design, noteSettings, onNoteSettingsChange, onEditText, creator, showCreatorTools, tools, fullName, initialNote = "" }) {
   const { t } = useLanguage();
   const [saved, setSaved] = useState(() => {
     try { return JSON.parse(localStorage.getItem(`1111-guest-message-v1:${template.slug}`)) ?? null; } catch { return null; }
   });
-  const [note, setNote] = useState(() => saved?.note ?? readReply(template.slug, 5)?.note ?? "");
+  const [note, setNote] = useState(() => saved?.note ?? readReply(template.slug, 5)?.note ?? initialNote);
   function submit(event) {
     event.preventDefault();
     const message = { fullName: fullName.trim(), note: note.trim() };
@@ -203,6 +203,23 @@ function PhotoLightbox({ photos, index, onIndexChange, onClose }) {
 function PhotoGallery({ photos, design, creator, tools, galleryTools, headingField, onEditText }) {
   const { t } = useLanguage();
   const [activePhoto, setActivePhoto] = useState(null);
+  const [slide, setSlide] = useState(0);
+  const stripRef = useRef(null);
+  const currentSlide = Math.min(slide, Math.max(photos.length - 1, 0));
+  const goToPhoto = index => {
+    const item = stripRef.current?.children[index];
+    if (!item) return;
+    setSlide(index);
+    stripRef.current.scrollTo({ left: item.offsetLeft, behavior: "smooth" });
+  };
+  const syncSlide = () => {
+    const strip = stripRef.current;
+    if (!strip?.children.length) return;
+    const center = strip.scrollLeft + strip.clientWidth / 2;
+    const nearest = Array.from(strip.children).reduce((best, item, index) =>
+      Math.abs(item.offsetLeft + item.clientWidth / 2 - center) < Math.abs(strip.children[best].offsetLeft + strip.children[best].clientWidth / 2 - center) ? index : best, 0);
+    setSlide(nearest);
+  };
   return <section className="guest-gallery" id="guest-photos" aria-labelledby="guest-gallery-title" tabIndex={-1}>
     {tools}
     <div className="guest-gallery-heading">
@@ -211,14 +228,19 @@ function PhotoGallery({ photos, design, creator, tools, galleryTools, headingFie
     </div>
     {creator && <CanvasGalleryTools {...galleryTools} />}
     {photos.length === 0 && <div className="guest-canvas-empty-gallery"><Icon name="image" size={32} /><p>{t("guestCards.canvas.galleryEmpty")}</p></div>}
-    <div className="guest-photo-strip">{photos.map((photo, index) => {
+    <div className="guest-photo-strip" ref={stripRef} onScroll={syncSlide}>{photos.map((photo, index) => {
       const caption = photo.captionKey ? t(photo.captionKey) : t("guestCards.photoNumber", { number: index + 1 });
       return <figure className="guest-polaroid" key={photo.id}>
         {creator && !photo.sample && <button className="guest-canvas-remove-photo" type="button" onClick={() => galleryTools.onRemove(photo.id)} aria-label={t("guestCards.removePhoto", { name: caption })}><Icon name="close" size={16} /></button>}
         <button type="button" onClick={() => setActivePhoto(index)} aria-label={t("guestCards.openPhoto", { name: caption })}><GalleryPhoto photo={photo} caption={caption} /></button>
-        {photo.captionKey && <figcaption>{caption}</figcaption>}
+        <figcaption><span>{String(index + 1).padStart(2, "0")} / {String(photos.length).padStart(2, "0")}</span>{photo.captionKey && <strong>{caption}</strong>}</figcaption>
       </figure>;
     })}</div>
+    {photos.length > 1 && <div className="guest-gallery-slider-controls" aria-label={t("guestCards.gallery.title")}>
+      <button type="button" onClick={() => goToPhoto(currentSlide - 1)} disabled={currentSlide === 0} aria-label={t("guestCards.previousPhoto")}><Icon name="arrow-left" size={18} /></button>
+      <div className="guest-gallery-slider-dots">{photos.map((photo, index) => <button key={photo.id} type="button" aria-label={t("guestCards.photoNumber", { number: index + 1 })} aria-current={currentSlide === index ? "true" : undefined} onClick={() => goToPhoto(index)} />)}</div>
+      <button type="button" onClick={() => goToPhoto(currentSlide + 1)} disabled={currentSlide === photos.length - 1} aria-label={t("guestCards.nextPhoto")}><Icon name="arrow-right" size={18} /></button>
+    </div>}
     {activePhoto !== null && <PhotoLightbox photos={photos} index={activePhoto} onIndexChange={setActivePhoto} onClose={() => setActivePhoto(null)} />}
   </section>;
 }
@@ -253,7 +275,7 @@ function CustomMomentsCard({ moments, city, date, design, images = {} }) {
 }
 
 export default function GuestCardSuite({ template, sample, copyTranslations, editableFields, onEditText, settings, photos, dayPlan = [], noteSettings = normalizeGuestNoteSettings(null), openingReplay = 0, mobile, hasPortrait,
-  creator, showCreatorTools = creator, onSettingsChange, onAddSection, planDraft, onSavePlan, onNoteSettingsChange, galleryTools, customDesign, moments = [], momentImages = {}, city = "", weddingParty = [] }) {
+  creator, showCreatorTools = creator, onSettingsChange, onAddSection, planDraft, onSavePlan, onNoteSettingsChange, galleryTools, customDesign, moments = [], momentImages = {}, city = "", weddingParty = [], initialGuestName = "", initialNote = "", adaptiveCoverArtwork = false }) {
   const { t, language } = useLanguage();
   const root = useRef(null);
   const [guestIdentity, setGuestIdentity] = useState(() => {
@@ -263,7 +285,7 @@ export default function GuestCardSuite({ template, sample, copyTranslations, edi
       const note = JSON.parse(localStorage.getItem(`1111-guest-message-v1:${template.slug}`));
       if (typeof note?.fullName === "string" && note.fullName.length <= MAX_GUEST_NAME_LENGTH) return { name: note.fullName, source: "notes" };
     } catch { /* Names can still be shared without local storage. */ }
-    return { name: "", source: null };
+    return { name: initialGuestName, source: initialGuestName ? "sample" : null };
   });
   const changeGuestName = (name, source) => setGuestIdentity({ name, source });
   const reducedMotion = useReducedGuestMotion();
@@ -341,7 +363,7 @@ export default function GuestCardSuite({ template, sample, copyTranslations, edi
         <section className={`guest-main-card${presentation === "portrait" ? " is-portrait" : " is-square-mobile"}`} id="guest-invitation" aria-label={t("guestCards.invitation")}>
           <div className="guest-main-content">
             <InvitationEntrance key={entranceKey} settings={creator ? { ...settings, entrance: "immediate", openingEffect: "none" } : settings} design={design} title={sample.name ?? sample.posterName ?? sample.title} initials={sample.initials} reducedMotion={reducedMotion} onComplete={completeEntrance}>
-              {template.isCustom ? <CustomInvitationCover design={customDesign} sample={sample} invitationLabel={t("guestCards.invitation")} invitationGreeting={language === "ka" ? "გეპატიჟებით" : "You’re invited"} />
+              {template.isCustom ? <CustomInvitationCover design={customDesign} sample={sample} invitationLabel={t("guestCards.invitation")} invitationGreeting={language === "ka" ? "გეპატიჟებით" : "You’re invited"} adaptiveArtwork={adaptiveCoverArtwork} />
                 : <EditableInvitationArtwork fields={editableFields} onEdit={onEditText}><CardCopyProvider overrides={copyTranslations}><InvitationArtwork template={template} large presentation={presentation} sample={sample} ariaLabel={sample.title} /></CardCopyProvider></EditableInvitationArtwork>}
             </InvitationEntrance>
           </div>
@@ -384,7 +406,7 @@ export default function GuestCardSuite({ template, sample, copyTranslations, edi
           tools={showCreatorTools && <CanvasSectionTools title={t("guestCards.rsvp")} recommended onRemove={() => removeSection({ rsvp: false })}>
           </CanvasSectionTools>} /></div>}
         {showCreatorTools && !settings.rsvp && <CanvasAddSection section="rsvp" onAdd={onAddSection} />}
-        {noteSettings.enabled && <div className="guest-section-screen" data-section="notes"><GuestNotesCard key={`notes-${template.slug}`} template={template} design={design} noteSettings={noteSettings} onNoteSettingsChange={onNoteSettingsChange} onEditText={onEditText} creator={creator} showCreatorTools={showCreatorTools} fullName={guestIdentity.name}
+        {noteSettings.enabled && <div className="guest-section-screen" data-section="notes"><GuestNotesCard key={`notes-${template.slug}`} template={template} design={design} noteSettings={noteSettings} onNoteSettingsChange={onNoteSettingsChange} onEditText={onEditText} creator={creator} showCreatorTools={showCreatorTools} fullName={guestIdentity.name} initialNote={initialNote}
           tools={showCreatorTools && <CanvasSectionTools title={t("guestCards.notes.title")} onRemove={() => { onNoteSettingsChange({ ...noteSettings, enabled: false }); setRemovedSection("notes"); }} />} /></div>}
         {showCreatorTools && !noteSettings.enabled && <CanvasAddSection section="notes" onAdd={onAddSection} />}
       </div>

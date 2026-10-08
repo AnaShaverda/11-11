@@ -416,7 +416,7 @@
   .guest-custom-theme .guest-custom-moments li { padding: 24px 8px; border-right: 0 !important; }
   .guest-custom-theme .guest-custom-moments li + li { border-top: 1px solid var(--custom-rule); }
   .guest-custom-theme .guest-gallery { margin: 0; }
-  .guest-custom-theme .guest-polaroid { flex-basis: 76%; }
+  .guest-custom-theme .guest-polaroid { flex-basis: calc(100% - 12px); }
 }
 @media (max-width: 720px) {
   .guest-preview-page:has(.guest-custom-theme) .guest-preview-stage { --guest-screen-height: 100dvh; }

@@ -91,3 +91,4 @@ import "./styles/page-gutters.css";
 
 import "./styles/wedding-themes.css";
 import "./styles/invitation-form.css";
+import "./styles/custom-design-gallery.css";

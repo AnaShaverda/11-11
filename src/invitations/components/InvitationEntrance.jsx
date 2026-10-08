@@ -49,7 +49,7 @@ export default function InvitationEntrance({ settings, design, title, initials, 
     const page = artwork.current.closest(".guest-preview-page");
     if (page?.dataset.previewMode === "mobile") {
       const cardTop = artwork.current.closest(".guest-main-card").getBoundingClientRect().top + window.scrollY;
-      const toolbarHeight = page.querySelector(".guest-preview-toolbar").getBoundingClientRect().height;
+      const toolbarHeight = page.querySelector(".guest-preview-toolbar")?.getBoundingClientRect().height ?? 0;
       window.scrollTo({ top: Math.max(0, cardTop - toolbarHeight), behavior: "instant" });
     }
     setPhase(reducedMotion ? "opened" : "opening");

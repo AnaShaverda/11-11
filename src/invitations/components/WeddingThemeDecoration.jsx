@@ -7,6 +7,32 @@ import { useLanguage } from '../../localization/LanguageContext.jsx';
 
 const themeFonts = { silkIvory: 'elegance', somethingBlue: 'magnola', pressedRose: 'elegance', gardenVeil: 'zalino', pearlLetter: 'casmera', lilacWhisper: 'magnola', champagneVows: 'casmera', vellumPromise: 'elegance', quietParchment: 'zalino', meadowMorning: 'magnola', autumn: 'casmera', rtveli: 'zalino', embossedIvory: 'elegance', embossedSage: 'magnola' };
 
+// Each mask isolates a complete botanical cluster in the transparent source.
+// The preview positions these pieces independently without scaling either axis.
+const ornamentPieces = {
+  silkIvory: [['top', 'inset(0 0 48% 0)'], ['bottom', 'inset(62% 0 0)']],
+  somethingBlue: [['top', 'inset(0 0 58% 0)'], ['bottom', 'inset(52% 0 0)']],
+  pressedRose: [['top', 'inset(0 39% 0 0)'], ['bottom', 'inset(0 0 0 61%)']],
+  gardenVeil: [
+    ['top', 'inset(0 50% 68% 0)'],
+    ['top', 'inset(0 0 59% 72%)'],
+    ['bottom', 'inset(28% 48% 0 0)'],
+    ['bottom', 'inset(40% 0 0 48%)'],
+  ],
+  pearlLetter: [['top', 'inset(0 0 57% 0)'], ['bottom', 'inset(63% 0 0)']],
+  lilacWhisper: [['top', 'inset(0 0 27% 0)'], ['bottom', 'inset(73% 0 0)']],
+  champagneVows: [['bottom', 'inset(0)']],
+  vellumPromise: [['top', 'inset(0 0 35% 0)'], ['bottom', 'inset(65% 0 0)']],
+  quietParchment: [
+    ['top', 'inset(0 0 67% 24%)'],
+    ['top', 'inset(0 0 56% 72%)'],
+    ['bottom', 'polygon(0 35%, 55% 35%, 55% 55%, 85% 72%, 85% 100%, 0 100%)'],
+  ],
+  meadowMorning: [['top', 'inset(0 0 66% 0)'], ['bottom', 'inset(42% 0 0)']],
+  autumn: [['top', 'inset(0 0 57% 0)'], ['bottom', 'inset(49% 0 0)']],
+  rtveli: [['top', 'inset(0 0 52% 0)'], ['bottom', 'inset(48% 0 0)']],
+};
+
 export function weddingThemeStyle(theme) {
   return {
     '--wedding-paper': theme.color,
@@ -27,7 +53,7 @@ function WeddingOrnamentPiece({ theme }) {
 }
 
 // Full decorative frames belong on the cover; supporting cards use a quiet border.
-export default function WeddingThemeDecoration({ theme, adaptive = false, title, initials }) {
+export default function WeddingThemeDecoration({ theme, adaptive = false, separateOrnaments = false, title, initials }) {
   if (theme.christeningLayout) return <ChristeningClassicArtwork layout={theme.christeningLayout} adaptive={adaptive} />;
   if (theme.artworkTone) return <ChristeningArtwork tone={theme.artworkTone} adaptive={adaptive} />;
   if (theme.embossedPaper) return adaptive ? null : <div className="wedding-artwork wedding-embossed-details" aria-hidden="true">
@@ -37,10 +63,13 @@ export default function WeddingThemeDecoration({ theme, adaptive = false, title,
   </div>;
   return <div className={`wedding-artwork frame-shape-${theme.frameShape}${adaptive ? ' is-adaptive' : ''}`} aria-hidden="true">
     {adaptive ? <div className="wedding-adaptive-frame" /> : <img className="wedding-frame-full" src={theme.frameAsset} alt="" decoding="async" />}
-    {adaptive ? theme.ornamentAsset && <>
-      <img className="wedding-section-ornament wedding-section-ornament-top" src={theme.ornamentAsset} alt="" decoding="async" />
-      <img className="wedding-section-ornament wedding-section-ornament-bottom" src={theme.ornamentAsset} alt="" decoding="async" />
-    </> : <WeddingOrnamentPiece theme={theme} />}
+    {adaptive ? theme.ornamentAsset && (separateOrnaments
+      ? (ornamentPieces[theme.id] ?? [['top', 'inset(0)']]).map(([anchor, clipPath], index) =>
+        <img key={`${anchor}-${index}`} className={`wedding-preview-ornament wedding-preview-ornament-${anchor}`} src={theme.ornamentAsset} alt="" decoding="async" style={{ clipPath }} />)
+      : <>
+        <img className="wedding-section-ornament wedding-section-ornament-top" src={theme.ornamentAsset} alt="" decoding="async" />
+        <img className="wedding-section-ornament wedding-section-ornament-bottom" src={theme.ornamentAsset} alt="" decoding="async" />
+      </>) : <WeddingOrnamentPiece theme={theme} />}
   </div>;
 }
 

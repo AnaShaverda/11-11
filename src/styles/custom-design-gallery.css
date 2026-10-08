@@ -1,0 +1,62 @@
+.custom-design-gallery-page { min-height: 100vh; padding: 24px 24px 80px; background: #f6f1ee; color: #382b31; }
+.custom-design-gallery-inner { max-width: 1100px; margin: 0 auto; }
+.custom-design-gallery-back { display: inline-flex; align-items: center; min-height: 44px; color: #795163; font-size: 14px; text-decoration: none; }
+.custom-design-gallery-back:hover { text-decoration: underline; }
+.custom-design-gallery-heading { max-width: 690px; margin: 20px auto 24px; text-align: center; }
+.custom-design-gallery-heading > span { color: #9a657a; font-size: 12px; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; }
+.custom-design-gallery-heading h1 { margin: 10px 0; font: 400 clamp(32px, 4vw, 50px)/1.1 Georgia, "Noto Serif Georgian", serif; }
+.custom-design-gallery-heading p { margin: 0; color: #746169; font-size: 15px; line-height: 1.6; }
+.custom-design-gallery-tabs { display: flex; justify-content: center; gap: 8px; margin: 0 0 24px; }
+.custom-design-gallery-tabs button { min-height: 44px; padding: 8px 20px; border: 1px solid #d5bec8; border-radius: 999px; background: #fffaf7; color: #6b4d5a; font: inherit; cursor: pointer; }
+.custom-design-gallery-tabs button[aria-pressed="true"] { background: #7b4058; border-color: #7b4058; color: white; }
+.custom-design-workspace { display: grid; grid-template-columns: minmax(0, 1fr) 400px; align-items: start; gap: 28px; max-width: 1100px; margin: 0 auto; }
+.custom-design-featured { display: grid; grid-template-columns: 1fr; width: 100%; margin: 0; }
+.custom-design-phone { display: flex; justify-content: center; align-items: center; min-height: 690px; padding: 28px; }
+.custom-design-phone-screen { position: relative; width: min(100%, 300px); padding: 4px; border: 2px solid #9b9b9a; border-radius: 44px; background: linear-gradient(110deg, #77787b, #d8d8d4 12%, #8c8d90 35%, #ecece8 65%, #77787b 95%); box-shadow: 0 24px 42px #302b2e42, inset 0 0 0 1px #f8f8f8aa; }
+.custom-design-phone-display { position: relative; width: 100%; aspect-ratio: 390 / 844; overflow: hidden; border-radius: 37px; background: #f4efe5; box-shadow: 0 0 0 3px #151719; }
+.custom-design-phone-display::before { content: ""; position: absolute; z-index: 3; top: 5px; left: 50%; width: 72px; height: 18px; transform: translateX(-50%); border-radius: 999px; background: #0a0b0e; pointer-events: none; }
+.custom-design-phone-display::after { content: ""; position: absolute; z-index: 3; bottom: 5px; left: 50%; width: 72px; height: 4px; transform: translateX(-50%); border-radius: 999px; background: #20202299; pointer-events: none; }
+.custom-design-phone-button { position: absolute; z-index: 0; width: 3px; border-radius: 3px; background: linear-gradient(90deg, #747477, #c6c7c5); box-shadow: 0 1px 2px #30303355; }
+.custom-design-phone-action { left: -5px; top: 16%; height: 24px; }
+.custom-design-phone-volume { left: -5px; top: 25%; height: 55px; }
+.custom-design-phone-power { right: -5px; top: 26%; height: 65px; }
+.custom-design-experience-frame { position: absolute; top: 0; left: 0; display: block; width: 390px; height: 844px; border: 0; transform-origin: top left; background: #f4efe5; }
+.custom-design-featured-info { display: grid; gap: 12px; min-width: 0; padding: 18px 24px 24px; }
+.custom-design-featured-info > span { color: #a27788; font-size: 12px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; }
+.custom-design-featured-info h2 { margin: 0; font: 400 30px/1.2 Georgia, "Noto Serif Georgian", serif; overflow-wrap: anywhere; }
+.custom-design-featured-actions { display: flex; flex-wrap: wrap; gap: 8px; }
+.custom-design-featured-actions :is(button, a) { display: inline-flex; align-items: center; justify-content: center; min-height: 42px; padding: 8px 12px; border: 1px solid #d5bec8; border-radius: 8px; background: transparent; color: #713d54; font: inherit; font-size: 12px; text-decoration: none; cursor: pointer; }
+.custom-design-featured-actions :is(button, a):hover { background: #f5e9ed; }
+.custom-design-gallery-choose { display: flex; justify-content: space-between; align-items: center; min-height: 48px; padding: 12px 15px; border-radius: 9px; background: #7b4058; color: #fff; font-size: 14px; font-weight: 600; text-decoration: none; }
+.custom-design-gallery-choose:hover { background: #633148; }
+.custom-design-picker { min-width: 0; }
+.custom-design-picker h2 { margin: 0 0 16px; font: 400 27px/1.2 Georgia, "Noto Serif Georgian", serif; }
+.custom-design-picker-track { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 10px; padding: 4px; }
+.custom-design-picker-track button { display: block; min-width: 0; padding: 0; border: 0; border-radius: 6px; background: transparent; color: #59414b; font: inherit; cursor: pointer; }
+.custom-design-picker-track button[aria-pressed="true"] .custom-theme-mini { outline: 3px solid #7b4058; outline-offset: 2px; }
+.custom-design-picker-track .custom-theme-mini.wedding-theme-mini { width: 100%; aspect-ratio: 2 / 3; max-height: none; border-radius: 6px; overflow: hidden; }
+.custom-design-gallery-page :is(a, button):focus-visible { outline: 3px solid #b26a88; outline-offset: 3px; }
+html:has(.custom-design-experience-page), body:has(.custom-design-experience-page) { overflow-x: hidden; }
+.custom-design-experience-page { overflow-x: clip; }
+html:has(.custom-design-experience-page) *, html:has(.custom-design-experience-page) { scrollbar-width: none; }
+html:has(.custom-design-experience-page) *::-webkit-scrollbar, html:has(.custom-design-experience-page)::-webkit-scrollbar { display: none; width: 0; height: 0; }
+@media (max-width: 720px) {
+  .custom-design-experience-page .guest-invitation-column { padding: 0 !important; }
+  .custom-design-experience-page .guest-preview-stage, .custom-design-experience-page .guest-card-layout, .custom-design-experience-page .guest-main-card { width: 100% !important; max-width: none; }
+  .custom-design-experience-page .guest-main-card, .custom-design-experience-page .guest-main-card.is-portrait { height: 100dvh !important; min-height: 100dvh !important; }
+  .custom-design-experience-page .guest-main-card .guest-main-content, .custom-design-experience-page .guest-main-card .guest-invitation-entrance, .custom-design-experience-page .guest-main-card .guest-letter-window, .custom-design-experience-page .guest-main-card .guest-invitation-artwork { position: absolute !important; inset: 0 !important; width: 100% !important; height: 100% !important; }
+  .custom-design-experience-page .guest-main-card .custom-invitation-cover.wedding-cover { display: grid; align-items: center; width: 100%; height: 100% !important; min-height: 100% !important; aspect-ratio: auto; }
+  /* Use the same continuous border and anchored ornament layers as the invitation sections. */
+  .custom-design-experience-page .guest-main-card .wedding-cover:not(.has-photo):not(.wedding-portrait-cover) .wedding-artwork { inset: 0; width: 100%; height: 100%; aspect-ratio: auto; transform: none; }
+  .custom-design-experience-page .guest-main-card .wedding-cover .wedding-adaptive-frame { position: absolute; inset: 0; border: 1px solid transparent; border-image-source: var(--wedding-frame-image); border-image-slice: 25% 25%; border-image-width: 37.5cqw 25cqw; border-image-repeat: stretch; opacity: 1; }
+  .custom-design-experience-page .guest-main-card .wedding-cover .frame-shape-oval .wedding-adaptive-frame,
+  .custom-design-experience-page .guest-main-card .wedding-cover .frame-shape-arch .wedding-adaptive-frame { border-image-slice: 45% 45%; border-image-width: 67.5cqw 45cqw; }
+  .custom-design-experience-page .guest-main-card .wedding-cover .wedding-preview-ornament { position: absolute; left: 0; width: 100%; height: 150cqw; object-fit: contain; opacity: 1; pointer-events: none; }
+  .custom-design-experience-page .guest-main-card .wedding-cover .wedding-preview-ornament-top { top: 0; object-position: center top; }
+  .custom-design-experience-page .guest-main-card .wedding-cover .wedding-preview-ornament-bottom { bottom: 0; object-position: center bottom; }
+  .custom-design-experience-page .guest-main-card .wedding-cover:not(.has-photo):not(.wedding-portrait-cover) .custom-cover-copy { width: min(65%, 260px); min-height: 100%; height: 100%; padding: 0 !important; align-content: center; gap: clamp(12px, 4cqw, 22px); }
+  .custom-design-experience-page .guest-main-card .wedding-cover:not(.has-photo):not(.wedding-portrait-cover) :is(.wedding-artwork, .wedding-section-ornament, .custom-cover-copy > *) { animation: none !important; }
+  .custom-design-experience-page .guest-main-card .wedding-cover .wedding-full-cover-photo, .custom-design-experience-page .guest-main-card .wedding-cover .wedding-portrait-photo { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+}
+@media (max-width: 900px) { .custom-design-workspace { grid-template-columns: 1fr; max-width: 600px; }.custom-design-featured { grid-row: 1; max-width: 420px; justify-self: center; }.custom-design-picker-track { grid-template-columns: repeat(auto-fit, minmax(96px, 1fr)); } }
+@media (max-width: 720px) { .custom-design-gallery-page { padding-inline: 16px; }.custom-design-gallery-heading { margin-top: 16px; }.custom-design-gallery-heading p { font-size: 14px; }.custom-design-phone { min-height: 0; padding: 22px; }.custom-design-phone-screen { width: min(100%, 278px); }.custom-design-featured-info { padding: 20px; }.custom-design-picker h2 { font-size: 24px; } }

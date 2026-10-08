@@ -20,6 +20,8 @@ import LoginPage from "../auth/pages/LoginPage.jsx";
 import RegisterPage from "../auth/pages/RegisterPage.jsx";
 import InvitationOpeningPage from "../invitations/pages/InvitationOpeningPage.jsx";
 import CustomInvitationPage from "../invitations/pages/CustomInvitationPage.jsx";
+import CustomDesignGalleryPage from "../invitations/pages/CustomDesignGalleryPage.jsx";
+import CustomDesignExperiencePage from "../invitations/pages/CustomDesignExperiencePage.jsx";
 
 function InvitationCatalogRedirect() {
   const { search, hash, state } = useLocation();
@@ -43,6 +45,14 @@ export default function App() {
       <Route
         path="invitations/:slug/open"
         element={<InvitationOpeningPage />}
+      />
+      <Route
+        path="invitations/create/:category/demo/:theme"
+        element={<CustomDesignExperiencePage />}
+      />
+      <Route
+        path="invitations/create/:category/designs"
+        element={<CustomDesignGalleryPage />}
       />
       <Route
         path="invitations/create/:category"

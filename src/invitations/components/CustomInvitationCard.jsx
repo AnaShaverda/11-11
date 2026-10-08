@@ -12,7 +12,7 @@ export default function CustomInvitationCard({ category, animationIndex = 0 }) {
     id={`design-custom-${category}`}
     className="invitation-card invitation-showcase-card invitation-card--glass invitation-card--custom"
     style={{ "--catalog-card-delay": `${Math.min(animationIndex, 6) * 40}ms` }}
-    to={`/invitations/create/${category}`}
+    to={`/invitations/create/${category}/designs`}
     aria-label={`${t("customCollection.heading")}: ${categoryName}`}>
     <div className="invitation-card-media custom-design-preview">
       <img className="custom-design-artwork" src="/images/custom-classical/custom-design-envelope.jpg" alt="" />

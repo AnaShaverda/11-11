@@ -113,7 +113,7 @@ export const classicalThemes = [
     accent: "#8499a8",
     paper: "ivory",
     frame: "stationery",
-    frameShape: "oval",
+    frameShape: "rectangle",
     pattern: "plain",
     font: "serif",
     layout: "center",
@@ -121,7 +121,7 @@ export const classicalThemes = [
     footerScene: "none",
     ornament: "",
     italic: false,
-    frameAsset: "/images/wedding-themes/somethingBlue-frame.webp",
+    frameAsset: "/images/wedding-themes/somethingBlue-square-frame.svg",
     ornamentAsset: "/images/wedding-themes/somethingBlue-ornaments.webp",
     illustration: "/images/wedding-themes/somethingBlue-illustration.webp",
   },
@@ -368,6 +368,7 @@ export const classicalThemes = [
 ];
 
 // Photo cover stays confined to the first invitation card.
+export const portraitSamplePhoto = "/images/wedding/portrait-sample.png";
 classicalThemes.push({
   ...classicalThemes.find((theme) => theme.id === "quietParchment"),
   id: "couplePortrait",

@@ -4,7 +4,7 @@ import { normalizeWeddingParty, weddingPartyRoles } from "../data/weddingParty.j
 import { WeddingThemePreview } from "../components/WeddingThemeDecoration.jsx";
 import { getWaxInitials, getWaxMonogram, normalizeWaxInitial } from "../components/EmbossedWaxSeal.jsx";
 import { useCallback, useEffect, useRef, useState } from "react";
-import { Link, useParams } from "react-router-dom";
+import { Link, useParams, useSearchParams } from "react-router-dom";
 import Icon from "../../components/ui/Icon.jsx";
 import { useLanguage } from "../../localization/LanguageContext.jsx";
 import { useAppearance } from "../../appearance/AppearanceContext.jsx";
@@ -36,12 +36,15 @@ function readDraft(slug) {
 }
 
 function Builder({ template }) {
+  const [searchParams] = useSearchParams();
+  const selectedTheme = searchParams.get("theme");
+  const selectedOccasion = searchParams.get("occasion");
   const { t, language, setLanguage } = useLanguage();
   const { theme, toggleTheme } = useAppearance();
   const l = labels[language] ?? labels.en;
   const w = wizardLabels[language] ?? wizardLabels.en;
   const draft = useRef(readDraft(template.slug));
-  const requestedOccasion = getInitialOccasion(template.subcategory, draft.current.eventType);
+  const requestedOccasion = getInitialOccasion(template.subcategory, selectedOccasion || draft.current.eventType);
   const initialOccasion = customizableOccasions.includes(requestedOccasion) ? requestedOccasion : "";
   const [eventType, setEventType] = useState(initialOccasion);
   const availableThemes = getCustomThemes(eventType);
@@ -49,14 +52,14 @@ function Builder({ template }) {
   const wording = getOccasionWording(eventType, language);
   const isWedding = eventType === "wedding" || eventType === "pre-wedding";
   const occasionMoments = useRef(draft.current.occasionMoments ?? {});
-  const [step, setStep] = useState(0);
+  const [step, setStep] = useState(selectedTheme ? (customizableOccasions.includes(template.subcategory) ? 1 : 2) : 0);
   const [view, setView] = useState(() => window.matchMedia("(min-width: 721px)").matches ? "desktop" : "mobile");
   const [stepsExpanded, setStepsExpanded] = useState(false);
   const [fields, setFields] = useState(() => ({ title: "", initialFirst: "", initialSecond: "", date: "", time: "", location: "", city: "", line: "", opening: "", ...draft.current.fields }));
   const [moments, setMoments] = useState(() => initialOccasion || Array.isArray(draft.current.moments) ? normalizeMoments(draft.current.moments, initialOccasion || "parties") : []);
   const [weddingParty, setWeddingParty] = useState(() => normalizeWeddingParty(draft.current.weddingParty));
   const [customMomentName, setCustomMomentName] = useState("");
-  const [design, setDesign] = useState(() => normalizeCustomDesign({ ...draft.current.design, theme: getCustomThemeForOccasion(draft.current.design?.theme, initialOccasion).id }, template.defaultDesign));
+  const [design, setDesign] = useState(() => normalizeCustomDesign({ ...draft.current.design, theme: getCustomThemeForOccasion(selectedTheme || draft.current.design?.theme, initialOccasion).id }, template.defaultDesign));
   const coverUploadAllowed = canUploadCustomCover(availableThemes.find(theme => theme.id === design.theme));
   const [settings, setSettings] = useState(() => normalizeGuestSettings({ ...guestPreviewDefaults, ...draft.current.settings, entrance: entranceStyles.includes(draft.current.settings?.entrance) ? draft.current.settings.entrance : guestPreviewDefaults.entrance, motion: guestPreviewDefaults.motion, openingEffect: guestPreviewDefaults.openingEffect }));
   const [noteSettings, setNoteSettings] = useState(() => normalizeGuestNoteSettings(draft.current.noteSettings));
