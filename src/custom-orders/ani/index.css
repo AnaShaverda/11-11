@@ -17,6 +17,42 @@
   min-width: 320px;
 }
 
+.birthday-site .maker-credit {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  min-height: 130px;
+  padding: 20px 24px 28px;
+  color: #55172d;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+}
+
+.birthday-site .maker-credit a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 76px;
+  min-height: 64px;
+  border-radius: 4px;
+}
+
+.birthday-site .maker-credit a:focus-visible {
+  outline: 2px solid #ed1e79;
+  outline-offset: 4px;
+}
+
+.birthday-site .maker-credit img {
+  display: block;
+  width: 70px;
+  height: auto;
+  filter: drop-shadow(0 2px 2px #55172d55);
+}
+
 .birthday-site .page-navigation a {
   color: #a02530;
   border-radius: 3px;
@@ -445,11 +481,11 @@ button {
 .birthday-card {
   position: absolute;
   z-index: 2;
-  inset: 8% 8% 18%;
+  inset: 6% 8% 17%;
   display: flex;
   flex-direction: column;
   overflow: hidden;
-  padding: 24px 28px 22px;
+  padding: 20px 22px;
   border: 1px solid rgba(47, 40, 36, 0.18);
   border-radius: 2px;
   background:
@@ -510,7 +546,7 @@ button {
   margin: 0;
   color: var(--berry);
   font-family: "DM Serif Display", serif;
-  font-size: clamp(48px, 6vw, 68px);
+  font-size: 49px;
   font-weight: 400;
   line-height: 0.78;
   letter-spacing: -0.045em;
@@ -521,12 +557,14 @@ button {
   align-self: center;
   width: min(100%, 260px);
   margin: 8px 0 0;
+  padding-top: 0;
   font-size: 10px;
   line-height: 1.55;
   text-align: center;
 }
 
 .card__footer {
+  flex-shrink: 0;
   padding-top: 14px;
   border-top: 1px solid rgba(47, 40, 36, 0.17);
 }
@@ -1146,8 +1184,7 @@ button {
     inset: 6% 8% 17%;
   }
 
-  .card__message { margin-top: 8px; padding-top: 0; }
-  .card__footer { flex-shrink: 0; }
+  .card__message { margin-top: 8px; }
 
   .open-button {
     grid-row: 3;
@@ -1169,10 +1206,6 @@ button {
 
   .card-scene {
     width: 100%;
-  }
-
-  .card__content h2 {
-    font-size: 49px;
   }
 
   .cake {
@@ -1255,6 +1288,29 @@ button {
 
 .birthday-site .page:first-child {
   padding-bottom: 112px;
+}
+
+@media (min-width: 761px) and (max-width: 1300px),
+       (min-width: 761px) and (max-height: 860px) {
+  .birthday-site .page:first-child { padding: 64px 20px 112px; }
+  .experience {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto;
+    text-align: center;
+  }
+  .intro, .card-scene, .open-button { grid-column: 1; }
+  .intro h1, .subtitle { margin-right: auto; margin-left: auto; }
+  .intro h1 { font-size: clamp(42px, 5vw, 62px); }
+  .eyebrow::before { display: none; }
+  .subtitle { margin-top: 16px; }
+  .card-scene {
+    grid-row: 2;
+    height: 550px;
+    min-height: 550px;
+    margin-top: 8px;
+  }
+  .open-button { grid-row: 3; justify-self: center; margin-top: 10px; }
+  .corner-note, .star--one { display: none; }
 }
 
 .scroll-cue {

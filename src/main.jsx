@@ -47,7 +47,21 @@ import "./styles/navigation.css";
 import "./styles/pink-disco-bride.css";
 import "./styles/typography.css";
 
-createRoot(document.getElementById("root")).render(
+const rootElement = document.getElementById("root");
+const bootScene = document.getElementById("boot-scene");
+if (bootScene) {
+  const observer = new MutationObserver(() => {
+    if (!rootElement.firstElementChild) return;
+    observer.disconnect();
+    requestAnimationFrame(() => {
+      bootScene.classList.add("is-leaving");
+      window.setTimeout(() => bootScene.remove(), 250);
+    });
+  });
+  observer.observe(rootElement, { childList: true });
+}
+
+createRoot(rootElement).render(
   <React.StrictMode>
     <BrowserRouter>
       <LanguageProvider>

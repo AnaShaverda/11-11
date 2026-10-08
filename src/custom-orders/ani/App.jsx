@@ -280,6 +280,12 @@ export default function App() {
       <BirthdayCake />
       <PhotoAlbum />
       <ScratchCard />
+      <footer className="maker-credit">
+        <span>Made by</span>
+        <a href="/" aria-label="11:11 — visit the company that made this card">
+          <img src="/logos/logo-pink-star.svg" alt="11:11" width="1330" height="1112" />
+        </a>
+      </footer>
     </main>
   );
 }
