@@ -39,7 +39,7 @@ export default function CustomInvitationCover({ design, sample, invitationLabel,
   const { language } = useLanguage();
   const selectedTheme = getClassicalTheme(design.theme);
   // The embossed themes are the envelope; their invitation is the floral paper card inside.
-  const theme = selectedTheme.embossedPaper ? getClassicalTheme("vellumPromise") : selectedTheme;
+  const theme = selectedTheme.embossedPaper ? getClassicalTheme("pearlLetter") : selectedTheme;
   const image = canUploadCustomCover(theme) ? design.coverImage || (theme.photoTheme ? portraitSamplePhoto : "") : "";
   const framedPhoto = image && design.photoLayout === "framed";
   const isBlushChristening = theme.id === "christeningBlushGrace";

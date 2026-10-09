@@ -58,5 +58,206 @@ html:has(.custom-design-experience-page) *::-webkit-scrollbar, html:has(.custom-
   .custom-design-experience-page .guest-main-card .wedding-cover:not(.has-photo):not(.wedding-portrait-cover) :is(.wedding-artwork, .wedding-section-ornament, .custom-cover-copy > *) { animation: none !important; }
   .custom-design-experience-page .guest-main-card .wedding-cover .wedding-full-cover-photo, .custom-design-experience-page .guest-main-card .wedding-cover .wedding-portrait-photo { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
 }
-@media (max-width: 900px) { .custom-design-workspace { grid-template-columns: 1fr; max-width: 600px; }.custom-design-featured { grid-row: 1; max-width: 420px; justify-self: center; }.custom-design-picker-track { grid-template-columns: repeat(auto-fit, minmax(96px, 1fr)); } }
+
 @media (max-width: 720px) { .custom-design-gallery-page { padding-inline: 16px; }.custom-design-gallery-heading { margin-top: 16px; }.custom-design-gallery-heading p { font-size: 14px; }.custom-design-phone { min-height: 0; padding: 22px; }.custom-design-phone-screen { width: min(100%, 278px); }.custom-design-featured-info { padding: 20px; }.custom-design-picker h2 { font-size: 24px; } }
+
+/* The gallery shares the website shell and appearance tokens. */
+.custom-design-gallery-page {
+  min-height: 0;
+  padding: clamp(24px, 4vw, 56px) clamp(16px, 3vw, 48px) 64px;
+  background: transparent;
+  color: var(--color-text);
+}
+.custom-design-gallery-inner { max-width: 1280px; }
+.custom-design-gallery-back { color: var(--text-link); font-size: var(--ui-font-label); gap: 8px; }
+.custom-design-gallery-heading { max-width: 760px; margin: 16px auto 28px; }
+.custom-design-gallery-heading h1 { margin: 0 0 14px; font-size: var(--ui-font-title); font-weight: 700; line-height: 1.2; letter-spacing: -.035em; text-wrap: balance; }
+.custom-design-gallery-heading p { color: var(--color-text-secondary); font-size: var(--ui-font-body); line-height: 1.6; }
+.custom-design-gallery-tabs { gap: 10px; margin-bottom: 36px; flex-wrap: wrap; }
+.custom-design-gallery-tabs button { padding: 10px 24px; border-color: var(--border-strong); background: var(--surface-glass); color: var(--color-text-secondary); font-size: var(--ui-font-label); transition: background var(--transition-fast), color var(--transition-fast); }
+.custom-design-gallery-tabs button:hover { background: var(--surface-hover); color: var(--color-text); }
+.custom-design-gallery-tabs button[aria-pressed="true"] { background: var(--text-link); border-color: var(--text-link); color: var(--color-bg-start); font-weight: 700; }
+.custom-design-workspace { max-width: none; grid-template-columns: minmax(0, 1fr) 360px; gap: clamp(24px, 4vw, 56px); }
+.custom-design-picker h2 { margin-bottom: 24px; font-size: var(--ui-font-section); font-weight: 600; line-height: 1.25; letter-spacing: -.025em; }
+.custom-design-picker-track { gap: 18px; padding: 4px; }
+.custom-design-picker-track button { border-radius: 12px; color: var(--color-text); transition: transform var(--transition-fast); }
+.custom-design-picker-track button:hover { transform: translateY(-3px); }
+.custom-design-picker-track button[aria-pressed="true"] .custom-theme-mini { outline-color: var(--text-accent); outline-offset: 4px; }
+.custom-design-picker-track .custom-theme-mini.wedding-theme-mini { border-radius: 10px; box-shadow: var(--shadow-card); }
+.custom-design-featured { position: sticky; top: 24px; }
+.custom-design-phone { min-height: 0; padding: 0 20px 24px; }
+.custom-design-featured-info { padding: 0 20px; gap: 16px; }
+.custom-design-featured-actions { justify-content: center; }
+.custom-design-featured-actions a { min-height: 44px; padding: 10px 18px; border-color: var(--border-strong); border-radius: 999px; color: var(--text-link); font-size: var(--ui-font-label); }
+.custom-design-featured-actions a:hover { background: var(--surface-hover); }
+.custom-design-gallery-choose { min-height: 48px; padding: 14px 20px; border-radius: 999px; background: var(--text-link); color: var(--color-bg-start); font-size: var(--ui-font-label); font-weight: 700; transition: opacity var(--transition-fast); }
+.custom-design-gallery-choose:hover { background: var(--text-link); opacity: .85; }
+.custom-design-gallery-page :is(a, button):focus-visible { outline-color: var(--ui-field-focus); }
+@media (max-width: 1000px) {
+  .custom-design-workspace { grid-template-columns: minmax(0, 1fr) 300px; max-width: none; gap: 24px; }
+  .custom-design-picker-track { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 14px; }
+}
+@media (max-width: 720px) {
+  .custom-design-workspace { grid-template-columns: 1fr; max-width: 600px; }
+  .custom-design-featured { position: static; grid-row: 1; width: 100%; max-width: 340px; justify-self: center; }
+  .custom-design-gallery-heading { margin-top: 16px; }
+  .custom-design-gallery-heading p { font-size: .875rem; }
+  .custom-design-gallery-tabs { margin-bottom: 28px; }
+  .custom-design-phone { padding: 0 20px 24px; }
+  .custom-design-featured-info { padding: 0 12px; }
+  .custom-design-picker { margin-top: 12px; }
+  .custom-design-picker-track { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
+}
+
+/* Keep the chooser and phone within the first viewport. */
+.custom-design-gallery-page { --gallery-height: calc(100dvh - 250px); padding-block: 12px 16px; }
+.custom-design-gallery-back { min-height: 32px; font-size: .8125rem; }
+.custom-design-gallery-toolbar { display: flex; align-items: center; justify-content: space-between; gap: 24px; margin: 10px 0 20px; }
+.custom-design-gallery-heading { max-width: none; margin: 0; text-align: left; }
+.custom-design-gallery-heading h1 { margin: 0 0 6px; font-size: clamp(22px, 2vw, 28px); line-height: 1.2; }
+.custom-design-gallery-heading p { font-size: .875rem; line-height: 1.4; }
+.custom-design-gallery-tabs { flex-shrink: 0; margin: 0; gap: 8px; }
+.custom-design-gallery-tabs button { padding: 8px 18px; font-size: .8125rem; }
+.custom-design-workspace { grid-template-columns: minmax(0, 1fr) 360px; gap: 32px; }
+.custom-design-picker h2 { margin-bottom: 14px; font-size: 20px; }
+.custom-design-picker-track { grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 14px; max-width: calc((var(--gallery-height) - 70px) * 10 / 9); }
+.custom-design-featured { position: static; }
+.custom-design-phone { padding: 0 0 12px; }
+.custom-design-phone-screen { width: min(100%, 300px); }
+.custom-design-featured-info { padding: 0; gap: 10px; }
+.custom-design-featured-actions a { min-height: 36px; padding: 6px 14px; font-size: .8125rem; }
+.custom-design-gallery-choose { min-height: 44px; padding: 10px 16px; font-size: .8125rem; }
+@media (min-width: 721px) and (max-width: 1000px) {
+  .custom-design-gallery-toolbar { gap: 16px; }
+  .custom-design-gallery-heading h1 { font-size: 22px; }
+  .custom-design-gallery-heading p { max-width: 42ch; }
+  .custom-design-workspace { grid-template-columns: minmax(0, 1fr) 320px; gap: 24px; }
+}
+@media (max-width: 720px) {
+  .custom-design-gallery-page { --gallery-height: calc(100dvh - 530px); padding-inline: 12px; }
+  .custom-design-gallery-toolbar { flex-direction: column; align-items: stretch; gap: 12px; margin: 6px 0 16px; }
+  .custom-design-gallery-heading h1 { font-size: 22px; }
+  .custom-design-gallery-heading p { font-size: .8125rem; }
+  .custom-design-gallery-tabs { justify-content: flex-start; }
+  .custom-design-workspace { grid-template-columns: 1fr; gap: 14px; }
+  .custom-design-featured { max-width: 300px; }
+  .custom-design-phone-screen { width: min(100%, 278px); }
+  .custom-design-featured-info { grid-template-columns: auto minmax(0, 1fr); align-items: center; gap: 8px; }
+  .custom-design-featured-actions a { font-size: .75rem; padding-inline: 12px; }
+  .custom-design-gallery-choose { font-size: .75rem; gap: 8px; padding-inline: 12px; }
+  .custom-design-picker { margin-top: 0; }
+  .custom-design-picker h2 { font-size: 18px; margin-bottom: 8px; }
+  .custom-design-picker-track { display: flex; max-width: none; gap: 12px; overflow-x: auto; padding: 6px; }
+  .custom-design-picker-track button { flex: 0 0 64px; }
+}
+@media (min-width: 1001px) {
+  .custom-design-gallery-inner { display: grid; grid-template-columns: minmax(0, 1fr) 360px; grid-template-rows: 32px auto 1fr; column-gap: 32px; align-items: start; }
+  .custom-design-gallery-back { grid-column: 1; }
+  .custom-design-gallery-toolbar { grid-column: 1; flex-wrap: wrap; }
+  .custom-design-workspace { display: contents; }
+  .custom-design-picker { grid-column: 1; }
+  .custom-design-featured { grid-column: 2; grid-row: 1 / span 3; }
+}
+/* Larger artwork thumbnails use the available width beside the phone. */
+@media (min-width: 721px) {
+  .custom-design-picker-track { max-width: none; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 18px; }
+}
+@media (min-width: 1001px) {
+  .custom-design-gallery-inner { grid-template-columns: minmax(0, 1fr) 330px; column-gap: 24px; }
+}
+@media (max-width: 720px) {
+  .custom-design-picker-track { gap: 14px; }
+  .custom-design-picker-track button { flex-basis: 110px; }
+}
+
+@media (min-width: 721px) {
+  .custom-design-picker-track { max-width: min(100%, calc((100dvh - 350px) * 4 / 3)); }
+}
+/* Category navigation uses left-aligned underline tabs. */
+.custom-design-gallery-toolbar { justify-content: flex-start; }
+.custom-design-gallery-tabs { justify-content: flex-start; gap: 24px; }
+.custom-design-gallery-tabs button {
+  min-height: 44px;
+  padding: 8px 0;
+  border: 0;
+  border-bottom: 1px solid var(--border-strong);
+  border-radius: 0;
+  background: transparent;
+  color: var(--color-text-secondary);
+  font-size: .875rem;
+  font-weight: 400;
+}
+.custom-design-gallery-tabs button:hover { background: transparent; color: var(--color-text); }
+.custom-design-gallery-tabs button[aria-pressed="true"] {
+  border-bottom: 3px solid var(--text-link);
+  background: transparent;
+  color: var(--color-text);
+  font-weight: 700;
+}
+
+/* Align the gallery to the header's outer edges. */
+.site-frame > .site-main:has(.custom-design-gallery-page) { width: 100%; max-width: none; }
+.custom-design-gallery-page { width: 100%; padding-inline: 0; }
+.custom-design-gallery-inner { width: 100%; max-width: none; margin-inline: 0; }
+.custom-design-picker-track { max-width: none; }
+@media (min-width: 1001px) {
+  .custom-design-picker-track { grid-template-columns: repeat(5, minmax(0, 1fr)); }
+  .custom-design-featured { position: sticky; top: 16px; }
+}
+@media (max-width: 720px) {
+  .custom-design-workspace { max-width: none; }
+  .custom-design-picker-track { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; overflow: visible; padding: 4px; }
+}
+/* Start the phone beside the first row of artwork. */
+@media (min-width: 1001px) {
+  .custom-design-gallery-inner { grid-template-rows: 32px auto auto 1fr; }
+  .custom-design-picker { display: contents; }
+  .custom-design-picker > h2 { grid-column: 1; grid-row: 3; }
+  .custom-design-picker-track { grid-column: 1; grid-row: 4; }
+  .custom-design-featured { grid-column: 2; grid-row: 4; align-self: start; }
+}
+@media (min-width: 1001px) {
+  .custom-design-featured { margin-top: 4px; }
+}
+/* Give the preview more breathing room beside the theme collection. */
+@media (min-width: 1001px) {
+  .custom-design-gallery-inner { column-gap: clamp(48px, 6vw, 100px); }
+}
+@media (min-width: 721px) and (max-width: 1000px) {
+  .custom-design-workspace { column-gap: 40px; }
+}
+/* Preview on the left, theme collection on the right. */
+@media (min-width: 1001px) {
+  .custom-design-gallery-inner { grid-template-columns: 330px minmax(0, 1fr); }
+  .custom-design-gallery-back, .custom-design-gallery-toolbar { grid-column: 2; }
+  .custom-design-picker > h2, .custom-design-picker-track { grid-column: 2; }
+  .custom-design-featured { grid-column: 1; }
+}
+@media (min-width: 721px) and (max-width: 1000px) {
+  .custom-design-workspace { grid-template-columns: 320px minmax(0, 1fr); }
+  .custom-design-featured { grid-column: 1; grid-row: 1; }
+  .custom-design-picker { grid-column: 2; grid-row: 1; }
+}
+@media (min-width: 1001px) {
+  .custom-design-gallery-back, .custom-design-gallery-toolbar { grid-column: 1 / -1; }
+}
+
+/* Smaller cards leave room for readable theme names. */
+.custom-design-picker-track button { align-self: start; text-align: left; }
+.custom-design-picker-track .custom-theme-mini.wedding-theme-mini { width: 90%; margin-inline: auto; }
+.custom-design-theme-title { display: block; margin: 10px 0 0; color: var(--color-text); font-size: .8125rem; line-height: 1.4; text-align: center; overflow-wrap: anywhere; }
+@media (max-width: 720px) {
+  .custom-design-theme-title { margin-top: 8px; font-size: .75rem; }
+}
+/* A denser desktop collection keeps more themes in each row. */
+@media (min-width: 1001px) {
+  .custom-design-picker-track { grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 16px; }
+}
+
+/* Remove the unused navigation row from the gallery. */
+@media (min-width: 1001px) {
+  .custom-design-gallery-inner { grid-template-rows: auto auto 1fr; }
+  .custom-design-gallery-toolbar { grid-row: 1; }
+  .custom-design-picker > h2 { grid-row: 2; }
+  .custom-design-picker-track, .custom-design-featured { grid-row: 3; }
+}

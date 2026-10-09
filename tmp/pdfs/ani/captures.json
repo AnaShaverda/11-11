@@ -1,0 +1,100 @@
+[
+  {
+    "device": "Desktop",
+    "width": 1440,
+    "height": 1000,
+    "label": "Birthday card",
+    "file": "tmp/pdfs/ani/desktop-1.png"
+  },
+  {
+    "device": "Desktop",
+    "width": 1440,
+    "height": 1000,
+    "label": "Birthday music",
+    "file": "tmp/pdfs/ani/desktop-2.png"
+  },
+  {
+    "device": "Desktop",
+    "width": 1440,
+    "height": 1000,
+    "label": "Birthday cake and candles",
+    "file": "tmp/pdfs/ani/desktop-3.png"
+  },
+  {
+    "device": "Desktop",
+    "width": 1440,
+    "height": 1000,
+    "label": "Birthday memories",
+    "file": "tmp/pdfs/ani/desktop-4.png"
+  },
+  {
+    "device": "Desktop",
+    "width": 1440,
+    "height": 1000,
+    "label": "Birthday surprise",
+    "file": "tmp/pdfs/ani/desktop-5.png"
+  },
+  {
+    "device": "Desktop",
+    "width": 1440,
+    "height": 1000,
+    "label": "Birthday card - opened",
+    "file": "tmp/pdfs/ani/desktop-card-open.png"
+  },
+  {
+    "device": "Desktop",
+    "width": 1440,
+    "height": 1000,
+    "label": "Birthday surprise - revealed",
+    "file": "tmp/pdfs/ani/desktop-surprise-revealed.png"
+  },
+  {
+    "device": "Mobile",
+    "width": 390,
+    "height": 844,
+    "label": "Birthday card",
+    "file": "tmp/pdfs/ani/mobile-1.png"
+  },
+  {
+    "device": "Mobile",
+    "width": 390,
+    "height": 844,
+    "label": "Birthday music",
+    "file": "tmp/pdfs/ani/mobile-2.png"
+  },
+  {
+    "device": "Mobile",
+    "width": 390,
+    "height": 844,
+    "label": "Birthday cake and candles",
+    "file": "tmp/pdfs/ani/mobile-3.png"
+  },
+  {
+    "device": "Mobile",
+    "width": 390,
+    "height": 844,
+    "label": "Birthday memories",
+    "file": "tmp/pdfs/ani/mobile-4.png"
+  },
+  {
+    "device": "Mobile",
+    "width": 390,
+    "height": 844,
+    "label": "Birthday surprise",
+    "file": "tmp/pdfs/ani/mobile-5.png"
+  },
+  {
+    "device": "Mobile",
+    "width": 390,
+    "height": 844,
+    "label": "Birthday card - opened",
+    "file": "tmp/pdfs/ani/mobile-card-open.png"
+  },
+  {
+    "device": "Mobile",
+    "width": 390,
+    "height": 844,
+    "label": "Birthday surprise - revealed",
+    "file": "tmp/pdfs/ani/mobile-surprise-revealed.png"
+  }
+]

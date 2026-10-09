@@ -403,9 +403,6 @@
 }
 @media (max-width: 700px) {
   .theme-modern-editorial .theme-world-hero { background: #fff; }
-  .theme-preview-page { width: min(100% - 24px, 600px); }
-  .theme-preview-intro { margin-bottom: 20px; }
-  .theme-preview-intro h1 { font-size: clamp(2.5rem, 10vw, 4rem); }
   .theme-compact-world { height: 285px; }
   .theme-compact-copy { width: 78%; }
   .theme-compact-copy strong { font-size: clamp(2.1rem, 9vw, 3.5rem); }

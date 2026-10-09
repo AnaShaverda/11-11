@@ -78,7 +78,7 @@ import "./styles/retro-bridal.css";
 import "./styles/christening-cards.css";
 
 import "./styles/card-image-sizing.css";
-import "./styles/invitation-opening.css";
+import "./styles/invitation-portrait.css";
 import "./styles/card-typography.css";
 import "./styles/birthday-card-layout.css";
 
@@ -98,7 +98,6 @@ import "./styles/guest-cards.css";
 
 import "./styles/card-content-fit.css";
 import "./styles/glass-catalog-cards.css";
-import "./styles/invitation-editor.css";
 
 import "./styles/light-mode.css";
 import "./styles/page-gutters.css";

@@ -1,0 +1,89 @@
+{
+  "generation": "Built-in imagegen",
+  "concepts": [
+    "cherry-tower/concept.png",
+    "mint-bash/concept.png",
+    "sunny-pop/concept.png",
+    "peach-fizz/concept.png"
+  ],
+  "assets": [
+    "public/images/bridal/experience/mint-hero.png",
+    "public/images/bridal/experience/sunny-hero.png",
+    "public/images/bridal/experience/clink-glass.png",
+    "public/images/birthday/peach-fizz/experience-hero.png"
+  ],
+  "prompt_set": {
+    "concepts": "Fullscreen editorial birthday or bridal invitations; oversized serif names and italic celebration title; themed stripes, scallops, watercolor champagne illustration; details, popping, clinking, personal toast, wishes and RSVP; coordinated mobile composition.",
+    "mint": "Transparent watercolor dark green champagne bottle with gold foil, large pink ribbon, two clear golden champagne coupe glasses with pink bows, Good friends label.",
+    "sunny": "Matching transparent watercolor bottle and two golden champagne coupe glasses with lavender bows, lemons and white citrus blossoms.",
+    "peach": "Transparent rose champagne bottle with gold foil and peach satin ribbon, two golden champagne coupes with peach bows, peach fruit and tiny white blossoms, Peach fizz label.",
+    "glass": "Single isolated crystal champagne coupe with golden champagne, slender stem and pink ribbon, transparent background. Edited to remove background haze."
+  },
+  "design_tokens": {
+    "cherry": [
+      "#f5c5c7",
+      "#a51e37"
+    ],
+    "mint": [
+      "#e8f2e2",
+      "#103e30"
+    ],
+    "sunny": [
+      "#fff2c1",
+      "#35182f"
+    ],
+    "peach": [
+      "#f8d7c2",
+      "#9e402f"
+    ],
+    "display": "Casmera demo with Georgia italic",
+    "body": "Georgia / Noto Serif Georgian"
+  },
+  "browser": "Codex built-in browser through cua_repl; screenshots saved using getScreenshot and inspected with view_image alongside concepts.",
+  "viewports": [
+    "390x844 mobile",
+    "1000x800 desktop",
+    "1440x900 DOM layout bounds"
+  ],
+  "native_size_limit": "Vision boards contain multiple screen and moodboard panels, so live screens were compared to corresponding panels rather than whole-board native dimensions. The initial 1440 screenshot was clipped by the browser panel; desktop screenshot comparison used 1000x800. Later cherry desktop resize did not apply; final cherry screenshot is mobile. Desktop behavior was checked earlier by DOM bounds and other shared theme desktop captures.",
+  "comparison_points": [
+    "palette",
+    "oversized editorial title and italic accent",
+    "watercolor ribbon artwork",
+    "fullscreen desktop grid and mobile stack",
+    "striped backgrounds and scalloped footer",
+    "primary and outline CTAs"
+  ],
+  "fixes": [
+    "isolated fonts from global font override",
+    "added true italic accent",
+    "increased desktop type and artwork size",
+    "fixed unavailable icon names",
+    "prevented whitespace-only wishes and toasts",
+    "removed glass hue rotation that tinted champagne green"
+  ],
+  "copy_diff": "Core title, date, You\u2019re invited and RSVP preserved. Intentional changes: language toggle displays target language; invented concept navigation/gallery and decorative slogans omitted; birthday/bridal activity copy adapts to recipient.",
+  "intentional_deviations": [
+    "Cherry reuses original collection artwork",
+    "Vision-board contact sheets translated into full-width scroll sections",
+    "Added user-requested personal toast and draggable glasses",
+    "Wishes and RSVP use device-local demo storage",
+    "Shared clinking glass has pink ribbon across the new watercolor themes",
+    "No concept-only photo moodboard gallery"
+  ],
+  "checks": [
+    "production build passed",
+    "all five routes load",
+    "mobile no horizontal overflow",
+    "visible assets load",
+    "Georgian language works",
+    "cork toast choice updates message",
+    "personal toast displays with cheers",
+    "native pointer drag glasses triggers cheers",
+    "mobile cheers button works",
+    "wish and RSVP save",
+    "RSVP persists after reload",
+    "demo test entries cleared"
+  ],
+  "limitation": "Calendar export code builds, but the in-app browser download-event verification timed out. Existing main bundle size warning remains."
+}

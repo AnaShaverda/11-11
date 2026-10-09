@@ -193,12 +193,16 @@ export const selectedBridalStudies = [
     "font": "painted-party"
   }
 ];
+selectedBridalStudies.push(
+  { key: "mint-ribbon", code: "R1", name: "Mint Ribbon", kaName: "პიტნისფერი ბაფთა", headline: "MINT\nBASH", kaHeadline: "პიტნისფერი\nწვეულება", paper: "mint", ink: "#103e30", accent: "#d95384", mode: "standard", font: "casmera", artwork: "/images/bridal/experience/mint-hero.png" },
+  { key: "sunny-ribbon", code: "R2", name: "Sunny Ribbon", kaName: "მზიანი ბაფთა", headline: "SUNNY\nBASH", kaHeadline: "მზიანი\nწვეულება", paper: "butter", ink: "#35182f", accent: "#aa81c6", mode: "standard", font: "casmera", artwork: "/images/bridal/experience/sunny-hero.png" },
+);
 const studies = selectedBridalStudies;
 const slug = (s) => `bridal-${s.key}`;
 const records = (fn) => Object.fromEntries(studies.map((s) => [slug(s), fn(s)]));
 const paperColors = { ivory: "#faf4e8", blush: "#f5c4cd", butter: "#fff0b7", lilac: "#e7d4ed", mint: "#b7e0d2", burgundy: "#501d2b" };
 const paper = (s) => `/images/bridal/selected/backgrounds/${s.paper}-paper.webp`;
-const art = (s) => `/images/bridal/selected/${s.key}/foreground.webp`;
+const art = (s) => s.artwork || `/images/bridal/selected/${s.key}/foreground.webp`;
 const phrase = "Her people. A joyful toast. A beautiful new chapter.";
 const kaPhrase = "მისი მეგობრები. მხიარული სადღეგრძელო. მშვენიერი ახალი თავი.";
 export const selectedBridalThemes = studies.map((s) => ({ id: slug(s), slug: slug(s), category: "other", subcategory: "bridal-party", name: s.name, description: s.mode === "boot" ? "A pink painted Western boot, ivory paper, and a bridal night made for dancing." : "Hand-painted celebration artwork, textured paper, and a cheerful bridal party.", mood: "Retro · painted · bridal", visual: slug(s), layout: "editorial", decor: "" }));

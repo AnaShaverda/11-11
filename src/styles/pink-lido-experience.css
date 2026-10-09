@@ -1,0 +1,1042 @@
+.lido-experience {
+  --lido-ink:#a31942;
+  --lido-paper:#fbe1dc;
+  position:relative;
+  isolation:isolate;
+  width:100%;
+  min-height:100svh;
+  overflow:hidden;
+  background:var(--lido-paper) url('/images/backgrounds/separated/birthday-pink-lido-paper.png') center/100% 100%;
+  color:var(--lido-ink);
+  font-family:Georgia,'Noto Serif Georgian',serif}
+.lido-experience * {
+  box-sizing:border-box}
+.lido-experience button,.lido-experience input {
+  font:inherit}
+.lido-experience button,.lido-experience a {
+  -webkit-tap-highlight-color:transparent}
+.lido-experience button {
+  cursor:pointer}
+.lido-experience button:focus-visible,.lido-experience a:focus-visible,.lido-experience input:focus-visible {
+  outline:3px solid #a31942;
+  outline-offset:5px}
+.lido-toolbar {
+  position:relative;
+  z-index:5;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:24px 36px}
+.lido-toolbar a {
+  color:inherit;
+  text-decoration:none;
+  display:flex;
+  gap:18px;
+  align-items:center;
+  font-size:22px}
+.lido-toolbar a span {
+  font-size:18px}
+.lido-toolbar>div {
+  display:flex;
+  gap:24px;
+  align-items:center}
+.lido-toolbar button {
+  background:transparent;
+  border:0;
+  color:inherit;
+  min-height:44px;
+  padding:6px}
+.lido-motion-control {
+  display:flex;
+  gap:9px;
+  align-items:center;
+  font-size:13px!important}
+.lido-switch {
+  width:36px;
+  height:22px;
+  border:1px solid var(--lido-ink);
+  border-radius:20px;
+  display:inline-flex;
+  align-items:center;
+  padding:2px}
+.lido-switch:after {
+  content:'';
+  width:16px;
+  height:16px;
+  border-radius:50%;
+  background:var(--lido-ink);
+  transition:transform .3s}
+.lido-motion-control[aria-pressed=true] .lido-switch {
+  background:var(--lido-ink)}
+.lido-motion-control[aria-pressed=true] .lido-switch:after {
+  background:#fff1e6;
+  transform:translateX(13px)}
+.lido-invitation {
+  position:relative;
+  z-index:3;
+  text-align:center;
+  width:min(720px,75%);
+  margin:clamp(18px,3vh,50px) auto 0;
+  padding-bottom:220px;
+  pointer-events:none}
+.lido-invitation h1 {
+  color:inherit;
+  margin:0;
+  font-weight:normal;
+  letter-spacing:-.065em;
+  line-height:.88}
+.lido-invitation h1 span {
+  display:block;
+  font-size:clamp(100px,12vw,190px)}
+.lido-invitation h1 em {
+  display:block;
+  font-size:clamp(60px,7.5vw,112px);
+  font-weight:normal;
+  letter-spacing:-.055em;
+  line-height:1.1}
+.lido-line {
+  font-size:clamp(17px,2vw,26px);
+  margin:24px 0 18px}
+.lido-date {
+  font-size:14px;
+  letter-spacing:.17em;
+  line-height:1.8;
+  margin:0 0 24px}
+.lido-date span {
+  margin:0 10px}
+.lido-primary {
+  pointer-events:auto;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:25px;
+  border:1px solid var(--lido-ink);
+  border-radius:40px;
+  background:var(--lido-ink);
+  color:#fff4e7;
+  padding:17px 28px;
+  min-height:54px;
+  font-size:18px;
+  transition:transform .25s,box-shadow .25s}
+.lido-primary:hover {
+  transform:translateY(-3px);
+  box-shadow:0 9px 0 #a3194218}
+.lido-pool-scene {
+  position:absolute;
+  z-index:1;
+  bottom:-150px;
+  left:-8%;
+  width:116%;
+  height:460px}
+.lido-pool {
+  position:absolute;
+  width:100%;
+  height:100%;
+  object-fit:fill;
+  pointer-events:none}
+.lido-water {
+  position:absolute;
+  inset:12% 9% 8%;
+  border:0;
+  border-radius:50%;
+  background:transparent;
+  overflow:hidden;
+  cursor:crosshair!important}
+.lido-ring {
+  position:absolute;
+  width:clamp(180px,26vw,380px);
+  right:9%;
+  top:22%;
+  pointer-events:none;
+  filter:drop-shadow(0 16px 12px #336a6820)}
+.lido-water-hint {
+  position:absolute;
+  top:40%;
+  left:50%;
+  transform:translateX(-50%);
+  text-align:center;
+  display:grid;
+  gap:4px;
+  font-size:15px;
+  pointer-events:none;
+  white-space:nowrap;
+  color:#7c1736}
+.lido-water-hint>span {
+  font-size:42px;
+  line-height:1}
+.lido-umbrella {
+  position:absolute;
+  z-index:2;
+  left:-7%;
+  bottom:9%;
+  width:clamp(240px,30vw,470px);
+  pointer-events:none;
+  transform:rotate(-18deg)}
+.lido-palm {
+  position:absolute;
+  z-index:2;
+  width:clamp(160px,24vw,380px);
+  top:-8%;
+  pointer-events:none}
+.lido-palm img {
+  width:100%}
+.lido-palm-left {
+  left:-8%;
+  transform:rotate(65deg)}
+.lido-palm-right {
+  right:-7%;
+  transform:rotate(-30deg)}
+.lido-ripple {
+  position:absolute;
+  width:22px;
+  height:22px;
+  border:2px solid #ffffffe0;
+  border-radius:50%;
+  animation:lido-ripple 1.2s ease-out forwards;
+  pointer-events:none}
+.lido-ripple:after {
+  content:'';
+  position:absolute;
+  inset:5px;
+  border:1px solid #fff;
+  border-radius:50%}
+.lido-motion .lido-ring {
+  animation:lido-bob 5s ease-in-out infinite}
+.lido-motion .lido-palm img {
+  transform-origin:15% 80%;
+  animation:lido-sway 7s ease-in-out infinite alternate}
+.lido-motion .lido-palm-right img {
+  animation-delay:-3s}
+.lido-motion .lido-invitation {
+  animation:lido-arrive 1s ease-out both}
+.lido-detail-intro {
+  font-size:15px;
+  margin:8px 0 18px}
+.lido-chapter h2 {
+  font-size:42px;
+  line-height:1.1;
+  font-weight:normal;
+  letter-spacing:-.04em;
+  margin:0 0 32px}
+.lido-facts {
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:26px;
+  padding:24px 0;
+  border-block:1px solid #a3194225}
+.lido-facts span {
+  font-family:Arial,sans-serif;
+  font-size:10px;
+  letter-spacing:.15em}
+.lido-facts p {
+  font-size:18px;
+  line-height:1.5;
+  margin:12px 0}
+.lido-facts small {
+  line-height:1.6;
+  display:block}
+.lido-facts button,.lido-rsvp>button {
+  border:0;
+  border-bottom:1px solid currentColor;
+  background:none;
+  color:inherit;
+  padding:8px 0;
+  font-size:13px}
+.lido-bring {
+  background:#f9d46b40;
+  padding:18px;
+  border-radius:12px;
+  line-height:1.5;
+  margin:24px 0}
+.lido-chapter h3 {
+  font-size:24px;
+  font-weight:normal;
+  margin:24px 0 18px}
+.lido-plan {
+  list-style:none;
+  padding:0;
+  margin:0}
+.lido-plan li {
+  display:flex;
+  gap:26px;
+  border-bottom:1px solid #a3194218;
+  padding:13px 0}
+.lido-plan time {
+  font-size:13px;
+  padding-top:3px}
+.lido-rsvp {
+  margin-top:28px;
+  padding-top:4px;
+  border-top:1px solid #a3194225}
+.lido-rsvp form>label {
+  font-size:13px;
+  display:block;
+  margin-bottom:8px}
+.lido-rsvp input[type=text],.lido-rsvp input:not([type]) {
+  width:100%;
+  border:1px solid #a3194260;
+  background:transparent;
+  border-radius:10px;
+  padding:13px;
+  color:inherit}
+.lido-rsvp fieldset {
+  display:flex;
+  flex-wrap:wrap;
+  gap:20px;
+  border:0;
+  padding:18px 0}
+.lido-rsvp fieldset label {
+  display:flex;
+  align-items:center;
+  gap:8px;
+  font-size:14px}
+.lido-rsvp input[type=radio] {
+  accent-color:var(--lido-ink);
+  width:17px;
+  height:17px}
+.lido-rsvp p {
+  line-height:1.6}
+.lido-demo {
+  font-family:Arial,sans-serif;
+  font-size:10px;
+  line-height:1.6;
+  text-align:center;
+  opacity:.7;
+  margin:28px 0 0}
+.lido-sr-only {
+  position:absolute;
+  clip-path:inset(50%);
+  width:1px;
+  height:1px;
+  overflow:hidden}
+.lido-experience[lang=ka] h1 span {
+  font-size:clamp(80px,10vw,150px)}
+.lido-experience[lang=ka] h1 em {
+  font-size:clamp(38px,5vw,75px);
+  font-style:normal;
+  line-height:1.3}
+
+@keyframes lido-bob {
+  0%,100% {
+  transform:translateY(0) rotate(-8deg)}
+50% {
+  transform:translateY(-16px) rotate(4deg)}
+}
+@keyframes lido-sway {
+  from {
+  transform:rotate(-4deg)}
+to {
+  transform:rotate(4deg)}
+}
+@keyframes lido-arrive {
+  from {
+  opacity:0;
+  transform:translateY(24px)}
+to {
+  opacity:1;
+  transform:translateY(0)}
+}
+@keyframes lido-ripple {
+  from {
+  transform:translate(-50%,-50%) scale(1);
+  opacity:1}
+to {
+  transform:translate(-50%,-50%) scale(12);
+  opacity:0}
+}
+
+@media(min-width:1000px) and (min-height:800px) {
+  .lido-invitation {
+  margin-top:5vh}
+.lido-pool-scene {
+  bottom:-150px}
+.lido-water-hint {
+  top:43%}
+}
+
+@media(max-width:600px) {
+  .lido-experience {
+  background-image:url('/images/backgrounds/separated/birthday-pink-lido-paper-portrait.png');
+  min-height:100svh}
+.lido-toolbar {
+  padding:16px 20px}
+.lido-toolbar>div {
+  gap:12px}
+.lido-toolbar a {
+  gap:12px}
+.lido-invitation {
+  width:92%;
+  margin:66px auto 0;
+  padding-bottom:310px}
+.lido-invitation h1 span {
+  font-size:clamp(90px,27vw,140px)}
+.lido-invitation h1 em {
+  font-size:clamp(48px,14vw,72px)}
+.lido-line {
+  font-size:17px;
+  margin:23px 0 16px}
+.lido-date {
+  font-size:10px;
+  letter-spacing:.12em;
+  margin-bottom:22px}
+.lido-date span {
+  margin:0 4px}
+.lido-primary {
+  font-size:16px;
+  padding:15px 24px;
+  gap:18px}
+.lido-palm {
+  width:180px;
+  top:-27px}
+.lido-palm-left {
+  left:-72px}
+.lido-palm-right {
+  right:-75px}
+.lido-pool-scene {
+  width:160%;
+  left:-30%;
+  height:360px;
+  bottom:-50px}
+.lido-ring {
+  width:175px;
+  right:13%;
+  top:24%}
+.lido-umbrella {
+  width:230px;
+  bottom:135px;
+  left:-110px}
+.lido-water-hint {
+  top:65%;
+  font-size:12px}
+.lido-chapter h2 {
+  font-size:34px}
+.lido-facts {
+  gap:18px}
+.lido-facts p {
+  font-size:16px}
+.lido-experience[lang=ka] h1 em {
+  font-size:clamp(29px,8.4vw,44px)}
+.lido-experience[lang=ka] h1 span {
+  font-size:clamp(75px,23vw,120px)}
+}
+
+@media(max-height:680px) {
+  .lido-invitation {
+  margin-top:8px;
+  padding-bottom:250px}
+.lido-invitation h1 span {
+  font-size:95px}
+.lido-invitation h1 em {
+  font-size:52px}
+.lido-line {
+  margin:16px 0;
+  font-size:17px}
+.lido-pool-scene {
+  bottom:-130px}
+.lido-umbrella {
+  bottom:30px}
+.lido-water-hint {
+  top:44%}
+}
+
+@media(prefers-reduced-motion:reduce) {
+  .lido-experience *, .lido-experience *:before,.lido-experience *:after {
+  animation:none!important;
+  transition:none!important}
+}
+
+
+.lido-toolbar {
+  background:linear-gradient(#fbe1dcef,#fbe1dc00)}
+.lido-invitation h1 em {
+  font-family:Georgia,serif;
+  font-style:italic}
+.lido-experience[lang=ka] h1 em {
+  font-family:Georgia,"Noto Serif Georgian",serif;
+  font-style:normal}
+
+/* Keep invitation typography independent of the storefront's global heading fonts. */
+.lido-experience .lido-invitation h1,.lido-experience .lido-invitation h1 span,.lido-experience .lido-invitation h1 em {
+  font-family:Georgia,'Noto Serif Georgian',serif!important}
+.lido-experience .lido-invitation h1 em {
+  font-style:italic!important}
+.lido-experience[lang=ka] .lido-invitation h1 em {
+  font-style:normal!important}
+.lido-toolbar>a,.lido-toolbar>div {
+  background:#fbe1dce8;
+  border-radius:28px;
+  padding:2px 12px}
+.lido-toolbar {
+  padding-top:16px;
+  padding-bottom:16px}
+.lido-ring {
+  top:16%;
+  width:clamp(180px,22vw,320px)}
+
+@media(max-width:600px) {
+  .lido-toolbar {
+  padding-inline:12px}
+.lido-toolbar>a,.lido-toolbar>div {
+  padding-inline:8px}
+.lido-ring {
+  width:175px;
+  top:24%}
+}
+
+
+/* Each party chapter is part of the document's normal vertical scroll. */
+.lido-experience  {
+   background: #f9a9c2;
+   overflow: clip;
+   }
+
+.lido-cover  {
+   position: relative;
+   isolation: isolate;
+   min-height: 100svh;
+   overflow: hidden;
+   background: #fbe1dc url('/images/backgrounds/separated/birthday-pink-lido-paper.png') center / 100% 100%;
+   }
+
+.lido-scroll-cue  {
+   position: absolute;
+   z-index: 4;
+   bottom: 18px;
+   right: 28px;
+   color: var(--lido-ink);
+   text-decoration: none;
+   display: grid;
+   place-items: center;
+   width: 44px;
+   height: 44px;
+   border-radius: 50%;
+   background: #fff3e9cc;
+   font-size: 24px;
+   }
+
+.lido-chapter  {
+   position: relative;
+   isolation: isolate;
+   min-height: 100svh;
+   display: grid;
+   grid-template-columns: 1.15fr 1fr;
+   align-items: center;
+   gap: 6vw;
+   padding: 100px max(7vw, 24px);
+   overflow: hidden;
+   scroll-margin-top: 0;
+   }
+
+.lido-chapter:focus  {
+   outline: none;
+   }
+
+.lido-chapter-copy  {
+   position: relative;
+   z-index: 2;
+   max-width: 650px;
+   }
+
+.lido-chapter h2  {
+   font-family: Georgia, 'Noto Serif Georgian', serif !important;
+   font-size: clamp(42px, 5.2vw, 76px);
+   line-height: 1.05;
+   letter-spacing: -.05em;
+   font-weight: 400;
+   margin: 0 0 40px;
+   text-wrap: balance;
+   }
+
+.lido-details-chapter  {
+   background-color: #a3e3cb;
+   background-image: repeating-radial-gradient(ellipse at 60% 110%, transparent 0 40px, #f0fff74a 41px 43px, transparent 44px 72px);
+   }
+
+.lido-details-chapter:before  {
+   content: '';
+   position: absolute;
+   inset: 0;
+   background: url('/images/backgrounds/separated/birthday-pink-lido-paper.png') center / cover;
+   opacity: .08;
+   mix-blend-mode: multiply;
+   pointer-events: none;
+   }
+
+.lido-facts  {
+   border-color: #a3194240;
+   padding-block: 26px;
+   }
+
+.lido-facts p  {
+   font-size: 23px;
+   }
+
+.lido-facts span  {
+   font-size: 11px;
+   font-weight: 700;
+   }
+
+.lido-facts button  {
+   display: inline-flex;
+   color: #fff3e9;
+   background: var(--lido-ink);
+   border: 0;
+   border-radius: 30px;
+   padding: 14px 20px;
+   margin-top: 6px;
+   min-height: 44px;
+   }
+
+.lido-facts small  {
+   font-size: 14px;
+   max-width: 220px;
+   }
+
+.lido-bring  {
+   background: #ffe589;
+   border-radius: 0;
+   transform: rotate(-2deg);
+   padding: 22px;
+   font-size: 18px;
+   margin: 32px 0;
+   box-shadow: 5px 5px 0 #a3194212;
+   }
+
+.lido-chapter-link  {
+   display: inline-flex;
+   align-items: center;
+   gap: 30px;
+   color: inherit;
+   text-decoration: none;
+   border-bottom: 1px solid currentColor;
+   padding: 12px 0;
+   min-height: 44px;
+   font-size: 16px;
+   }
+
+.lido-chapter-art  {
+   position: relative;
+   min-width: 0;
+   height: 480px;
+   pointer-events: none;
+   }
+
+.lido-detail-art>img  {
+   position: absolute;
+   width: 110%;
+   max-width: 600px;
+   top: 2%;
+   left: 0;
+   filter: drop-shadow(12px 25px 10px #36776420);
+   }
+
+.lido-orbit  {
+   position: absolute;
+   width: 430px;
+   height: 430px;
+   border: 2px dashed #fff8da90;
+   border-radius: 50%;
+   left: -5%;
+   top: 5%;
+   }
+
+.lido-art-word  {
+   position: absolute;
+   color: var(--lido-ink);
+   font-size: clamp(45px, 5vw, 75px);
+   font-family: Georgia, serif;
+   font-style: italic;
+   transform: rotate(-12deg);
+   right: 0;
+   bottom: 12%;
+   }
+
+.lido-plan-chapter  {
+   background: #ffe58c;
+   grid-template-columns: 1fr 1.15fr;
+   border-block: 28px solid transparent;
+   border-image: repeating-conic-gradient(#ffce53 0% 25%, #fff3c2 0% 50%) 28 / 28px round;
+   }
+
+.lido-plan-art>img  {
+   position: absolute;
+   width: 125%;
+   left: -20%;
+   top: 0;
+   transform: rotate(-15deg);
+   }
+
+.lido-sun  {
+   position: absolute;
+   font-size: 130px;
+   bottom: -10px;
+   right: -10px;
+   color: #d85a75;
+   }
+
+.lido-plan  {
+   margin-bottom: 24px;
+   }
+
+.lido-plan li  {
+   align-items: center;
+   gap: 20px;
+   padding: 24px 0;
+   border-color: #a3194230;
+   }
+
+.lido-plan-number  {
+   font-size: 12px;
+   display: grid;
+   place-items: center;
+   width: 36px;
+   height: 36px;
+   flex-shrink: 0;
+   background: #f3a8be;
+   border-radius: 50%;
+   }
+
+.lido-plan time  {
+   font-size: 13px;
+   letter-spacing: .08em;
+   }
+
+.lido-chapter .lido-plan h3  {
+   font-family: Georgia, 'Noto Serif Georgian', serif !important;
+   font-size: clamp(24px, 2.5vw, 34px);
+   margin: 8px 0 0;
+   }
+
+.lido-plan-star  {
+   font-size: 42px;
+   margin-left: auto;
+   }
+
+.lido-rsvp-chapter  {
+   background-color: #f9a9c2;
+   background-image: radial-gradient(#fff5dd8c 2px, transparent 3px);
+   background-size: 32px 32px;
+   }
+
+.lido-rsvp  {
+   border: 0;
+   padding: 0;
+   margin: 0;
+   }
+
+.lido-rsvp form>label  {
+   font-family: Arial, sans-serif;
+   font-size: 11px;
+   font-weight: 600;
+   letter-spacing: .16em;
+   text-transform: uppercase;
+   margin-bottom: 14px;
+   }
+
+.lido-rsvp input:not([type])  {
+   background: #fff4e9;
+   padding: 18px;
+   min-height: 58px;
+   font-size: 20px;
+   border-radius: 12px;
+   }
+
+.lido-rsvp fieldset  {
+   gap: 16px;
+   margin: 8px 0 18px;
+   flex-direction: column;
+   }
+
+.lido-rsvp fieldset label  {
+   font-size: 19px;
+   min-height: 32px;
+   }
+
+.lido-rsvp input[type=radio]  {
+   width: 22px;
+   height: 22px;
+   }
+
+.lido-rsvp .lido-primary  {
+   min-width: 230px;
+   }
+
+.lido-rsvp .lido-demo  {
+   text-align: left;
+   font-size: 11px;
+   margin: 24px 0;
+   }
+
+.lido-reply-name  {
+   font-size: 30px;
+   }
+
+.lido-rsvp-art .lido-rsvp-pool  {
+   width: 120%;
+   height: 110%;
+   object-fit: fill;
+   position: absolute;
+   left: -10%;
+   top: -10%;
+   }
+
+.lido-rsvp-art .lido-rsvp-ring  {
+   position: absolute;
+   width: 72%;
+   left: 16%;
+   top: 0;
+   }
+
+.lido-rsvp-art .lido-art-word  {
+   bottom: 3%;
+   right: 10%;
+   line-height: .95;
+   }
+
+.lido-motion .lido-detail-art>img, .lido-motion .lido-rsvp-ring  {
+   animation: lido-bob 6s ease-in-out infinite;
+   }
+
+.lido-motion .lido-sun  {
+   animation: lido-turn 30s linear infinite;
+   }
+
+.lido-motion .lido-plan-art>img  {
+   animation: lido-parasol 8s ease-in-out infinite;
+   }
+
+@keyframes lido-turn  {
+   to  {
+   transform: rotate(360deg);
+   }
+ }
+
+@keyframes lido-parasol  {
+   0%,100%  {
+   transform: rotate(-15deg) translateY(0);
+   }
+ 50%  {
+   transform: rotate(-10deg) translateY(-14px);
+   }
+ }
+
+@media (max-width: 800px)  {
+  
+  .lido-chapter  {
+   grid-template-columns: 1fr;
+   padding: 70px 28px 35px;
+   gap: 25px;
+   min-height: 100svh;
+   }
+
+  .lido-chapter h2  {
+   font-size: clamp(40px, 9vw, 60px);
+   margin-bottom: 28px;
+   }
+
+  .lido-chapter-copy  {
+   width: 100%;
+   max-width: 600px;
+   margin-inline: auto;
+   }
+
+  .lido-chapter-art  {
+   height: 250px;
+   width: min(100%, 360px);
+   margin-inline: auto;
+   }
+
+  .lido-detail-art>img  {
+   width: 85%;
+   left: 8%;
+   top: -2%;
+   }
+
+  .lido-orbit  {
+   width: 260px;
+   height: 260px;
+   left: 10%;
+   top: 0;
+   }
+
+  .lido-art-word  {
+   font-size: 45px;
+   right: 2%;
+   bottom: 0;
+   }
+
+  .lido-plan-art  {
+   grid-row: 2;
+   height: 210px;
+   }
+
+  .lido-plan-art>img  {
+   width: 90%;
+   top: -15%;
+   left: -14%;
+   }
+
+  .lido-sun  {
+   font-size: 100px;
+   right: 8%;
+   bottom: 8%;
+   }
+
+  .lido-plan-chapter  {
+   border-width: 18px;
+   border-image-width: 18px;
+   }
+
+  .lido-plan li  {
+   padding: 21px 0;
+   gap: 14px;
+   }
+
+  .lido-plan-star  {
+   font-size: 30px;
+   }
+
+  .lido-facts  {
+   gap: 16px;
+   }
+
+  .lido-facts p  {
+   font-size: 19px;
+   }
+
+  .lido-facts small  {
+   font-size: 13px;
+   }
+
+  .lido-facts button  {
+   font-size: 12px;
+   padding: 12px 14px;
+   }
+
+  .lido-bring  {
+   font-size: 16px;
+   padding: 18px;
+   }
+
+  .lido-rsvp-art  {
+   height: 290px;
+   margin-top: 24px;
+   }
+
+  .lido-rsvp-art .lido-art-word  {
+   font-size: 44px;
+   bottom: 0;
+   right: 10%;
+   }
+
+}
+
+@media (max-width: 600px)  {
+   .lido-cover  {
+   background-image: url('/images/backgrounds/separated/birthday-pink-lido-paper-portrait.png');
+   }
+ }
+
+@media (prefers-reduced-motion: reduce)  {
+   .lido-experience *  {
+   animation: none !important;
+   transition: none !important;
+   }
+ }
+
+
+/* Repeat actual checker tiles instead of stretching a border image. */
+.lido-plan-chapter { border: 0; border-image: none; }
+.lido-plan-chapter:before, .lido-plan-chapter:after { content: ''; position: absolute; left: 0; right: 0; height: 28px; background: repeating-conic-gradient(#ffce53 0% 25%, #fff3c2 0% 50%) 0 0 / 56px 56px; pointer-events: none; }
+.lido-plan-chapter:before { top: 0; }
+.lido-plan-chapter:after { bottom: 0; }
+
+.lido-icon-up { transform: rotate(180deg); }
+.lido-date-dot { display: inline-block; width: 3px; height: 3px; border-radius: 50%; background: currentColor; vertical-align: middle; }
+.lido-water-hint>svg { justify-self: center; }
+.lido-facts button, .lido-rsvp>button { align-items: center; display: inline-flex; gap: 10px; }
+.lido-experience .ui-icon { flex-shrink: 0; }
+/* Separate watercolor pieces keep the summer scene playful on every screen. */
+
+.lido-detail-art>.lido-art-word { right: 0; bottom: 6%; }
+
+
+
+.lido-rsvp-art>.lido-rsvp-ring { width: 62%; left: 0; top: -3%; }
+@keyframes lido-swimsuit-float { 0%,100% { transform: rotate(-13deg) translateY(0); } 50% { transform: rotate(-8deg) translateY(-12px); } }
+@keyframes lido-glasses-float { 0%,100% { transform: rotate(12deg) translateY(0); } 50% { transform: rotate(7deg) translateY(-8px); } }
+@media (max-width: 800px) {
+  .lido-detail-art { height: 310px; margin-top: 15px; }
+  
+  .lido-detail-art>.lido-art-word { bottom: 14%; font-size: 38px; }
+  .lido-plan-art { height: 260px; margin-top: 18px; }
+  
+  
+  
+}
+@media (prefers-reduced-motion: reduce) { .lido-experience * { animation: none !important; transition: none !important; } }
+
+.lido-wishes-chapter { background-color: #d6c2f2; background-image: radial-gradient(#fff9ebaa 2px, transparent 3px); background-size: 36px 36px; }
+.lido-wishes-chapter h2 { margin-bottom: 20px; }
+.lido-wish-intro { font-size: 23px; line-height: 1.4; margin: 0 0 28px; }
+.lido-wish-form { display: grid; gap: 12px; }
+.lido-wish-form label { font-size: 15px; }
+.lido-wish-form input, .lido-wish-form textarea { width: 100%; min-width: 0; font: inherit; font-size: 18px; color: var(--lido-ink); border: 1px solid #a3194260; border-radius: 10px; background: #fff6ef; padding: 14px 18px; }
+.lido-wish-form textarea { min-height: 140px; max-height: 320px; resize: vertical; line-height: 1.6; margin-bottom: 8px; }
+.lido-wish-form .lido-primary { justify-self: start; min-width: 235px; }
+.lido-wish-demo { text-align: left; margin: 20px 0 8px; font-size: 11px; }
+.lido-wishes-art { height: 610px; }
+.lido-wishes-towel { position: absolute; inset: 2% -3% 0 3%; background: repeating-linear-gradient(90deg, #f098b0 0 45px, #ffe8df 45px 90px); border: 7px solid #ffe8df; border-radius: 5px; transform: rotate(13deg); box-shadow: 12px 15px 0 #a319420b; }
+.lido-wishes-swimsuit { position: absolute; width: 85%; height: 110%; object-fit: contain; left: -4%; top: -5%; transform: rotate(-12deg); }
+.lido-wishes-glasses { position: absolute; width: 62%; right: -6%; bottom: 5%; transform: rotate(15deg); }
+.lido-wish-note { padding: 30px; background: #fff3dd; border: 1px solid #a3194230; transform: rotate(-2deg); box-shadow: 8px 10px 0 #a3194210; margin-block: 36px; }
+.lido-wish-message { font-size: 25px; line-height: 1.5; white-space: pre-wrap; overflow-wrap: anywhere; margin: 0 0 20px; }
+.lido-wish-author { font-size: 17px; font-style: italic; overflow-wrap: anywhere; }
+.lido-wish-status { font-size: 11px; margin-top: 25px; }
+.lido-wish-note button { display: inline-flex; gap: 12px; align-items: center; background: none; color: inherit; border: 0; border-bottom: 1px solid currentColor; padding: 12px 0; min-height: 44px; }
+.lido-motion .lido-wishes-swimsuit { animation: lido-swimsuit-float 7s ease-in-out infinite; }
+.lido-motion .lido-wishes-glasses { animation: lido-glasses-float 5s ease-in-out infinite; }
+@media (max-width: 800px) {
+  .lido-wishes-art { height: 370px; width: min(90%, 340px); margin-top: 30px; }
+  .lido-wishes-swimsuit { width: 86%; left: -6%; }
+  .lido-wishes-glasses { width: 65%; right: -5%; bottom: 1%; }
+  .lido-wishes-towel { inset: 3% -1% 0 3%; border-width: 4px; background-size: auto; }
+  .lido-wish-intro { font-size: 19px; }
+  .lido-wish-form .lido-primary { width: 100%; }
+  .lido-wish-note { padding: 24px; }
+  .lido-wish-message { font-size: 22px; }
+}
+@media (prefers-reduced-motion: reduce) { .lido-experience * { animation: none !important; transition: none !important; } }
+/* Scope the serif system above the storefront's global typography rule. */
+:root body .lido-experience :is(h1,h2,h3,p,label,button,input,textarea,a,time,small,span) { font-family: Georgia, 'Noto Serif Georgian', serif !important; }
+:root body .lido-experience .lido-facts>div>span, :root body .lido-experience .lido-demo { font-family: Arial, 'Noto Sans Georgian', sans-serif !important; }
+.lido-wishes-chapter h2 { max-width: 7.3em; }
+
+/* Blue Splash shares the invitation interactions and has its own painted palette. */
+.blue-splash-experience { --lido-ink: #075a9f; --lido-paper: #f8f2e6; background: #9cd5e0; }
+.blue-splash-experience .lido-cover { background: #f8f2e6 url('/images/backgrounds/separated/birthday-blue-splash-paper.png') center / 100% 100%; }
+.blue-splash-experience .lido-toolbar { background: linear-gradient(#f8f2e6ef, #f8f2e600); }
+.blue-splash-experience .lido-toolbar a, .blue-splash-experience .lido-toolbar button { background-color: #f8f2e6e8; }
+.blue-splash-experience .lido-water-hint { color: #075a9f; }
+.blue-splash-experience .lido-details-chapter { background-color: #9cd5e0; }
+.blue-splash-experience .lido-details-chapter:before { background-image: url('/images/backgrounds/separated/birthday-blue-splash-paper.png'); }
+.blue-splash-experience .lido-wishes-chapter { background-color: #b9dcf8; }
+.blue-splash-experience .lido-rsvp-chapter { background-color: #9cd5e0; }
+.blue-splash-experience .lido-wishes-towel { background: repeating-linear-gradient(90deg, #6aa9d8 0 45px, #fff3dd 45px 90px); border-color: #fff3dd; }
+.blue-splash-experience .lido-plan-number { background: #f8f2e6; }
+.blue-splash-experience .lido-facts, .blue-splash-experience .lido-plan li, .blue-splash-experience fieldset { border-color: #075a9f40; }
+.blue-splash-experience input, .blue-splash-experience textarea { border-color: #075a9f60; }
+.blue-splash-experience :is(button, a, input, textarea):focus-visible { outline-color: #075a9f; }
+.splash-ladder { position: absolute; z-index: 2; width: clamp(130px, 19vw, 280px); left: 3%; bottom: 3%; pointer-events: none; transform: rotate(-8deg); }
+.blue-splash-experience .lido-plan-art>img { width: 75%; height: 100%; object-fit: contain; left: 12%; top: 0; }
+.blue-splash-experience .lido-pool-scene { bottom: -100px; }
+.blue-splash-experience .lido-ring { left: 23%; }
+.lido-motion .splash-ladder { animation: lido-sway 8s ease-in-out infinite; }
+@media (max-width: 800px) {
+  .blue-splash-experience .lido-cover { background-image: url('/images/backgrounds/separated/birthday-blue-splash-paper-portrait.png'); }
+  .blue-splash-experience .lido-pool-scene { bottom: -50px; }
+  .splash-ladder { width: 130px; left: -15px; bottom: 75px; }
+  .blue-splash-experience .lido-ring { left: 58%; }
+  .blue-splash-experience .lido-plan-art>img { width: 55%; left: 22%; }
+}
+@media (prefers-reduced-motion: reduce) { .lido-motion .splash-ladder { animation: none; } }

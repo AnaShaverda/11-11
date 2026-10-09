@@ -2,33 +2,16 @@
   "mode": "built-in image_gen",
   "assets": [
     {
-      "id": "silkIvory",
-      "kind": "frame",
-      "source": "/Users/mac/.codex/generated_images/01a10ca0-3f5d-7b82-ad8c-20d9d5315fed/exec-c071eaa3-63c1-4387-9c97-c57756c557c7.png",
-      "prompt": "Use case: background-extraction. Production asset extraction from APPROVED reference board. Output only the FRAME BORDER of the LEFT invitation cover, isolated with real alpha transparency. Preserve the exact original illustration and character; do not redesign or substitute. subtle ivory blind-embossed oval cartouche, thin relief with restrained light and shadow. Single straight-on portrait canvas 2:3. Preserve original locations relative to the full cover and keep center empty. REMOVE ALL FLOWERS, LEAVES, CRESTS, BOTANICALS AND SCENES; the frame is a separate reusable layer. Border inset about 5%. Remove all text, numbers, logos, paper, texture background, card body, props, shadows outside artwork, board and swatches. NO opaque fills or background. Transparent interior. Quiet romantic classical wedding stationery detail, exact reference colors. Output ONE transparent PNG artwork, no labels.",
-      "reference": "/Users/mac/.codex/generated_images/01a10ca0-3f5d-7b82-ad8c-20d9d5315fed/exec-3f2aa7d0-3625-4ed2-bcec-46c616c02395.png",
-      "destination": "silkIvory-frame.webp",
-      "size": [1024, 1536],
-      "bytes": 192368
-    },
-    {
-      "id": "silkIvory",
-      "kind": "ornament",
-      "source": "/Users/mac/.codex/generated_images/01a10ca0-3f5d-7b82-ad8c-20d9d5315fed/exec-96e6298d-a6b7-4e71-93f4-822078c46b39.png",
-      "prompt": "Use case: background-extraction. Production asset extraction from APPROVED reference board. Output only the BOTANICAL/CREST ORNAMENTS of the LEFT invitation cover, isolated with real alpha transparency. Preserve the exact original illustration and character; do not redesign or substitute. Ivory blind embossed laurel leaves, subtle tiny beige relief shadows. FOUR separate small leaf sprays around the four corners, copied from the left cover. No oval.. Single straight-on portrait canvas 2:3. Preserve original locations relative to the full cover and keep center empty. REMOVE ALL FRAME LINES, OVALS, ARCHES, BORDER RULES; ornament artwork is a separate reusable layer. Keep foliage in outer 18%, top/bottom 20%; empty center. Remove all text, numbers, logos, paper, texture background, card body, props, shadows outside artwork, board and swatches. NO opaque fills or background. Transparent interior. Quiet romantic classical wedding stationery detail, exact reference colors. Output ONE transparent PNG artwork, no labels.",
-      "reference": "/Users/mac/.codex/generated_images/01a10ca0-3f5d-7b82-ad8c-20d9d5315fed/exec-3f2aa7d0-3625-4ed2-bcec-46c616c02395.png",
-      "destination": "silkIvory-ornaments.webp",
-      "size": [1024, 1536],
-      "bytes": 393336
-    },
-    {
-      "id": "silkIvory",
+      "id": "ivoryDetails",
       "kind": "illustration",
       "source": "/Users/mac/.codex/generated_images/01a10ca0-3f5d-7b82-ad8c-20d9d5315fed/exec-cdd09dcc-508e-4583-9761-224d26e27ba4.png",
       "prompt": "Use case: background-extraction. Input image is the APPROVED DESIGN. Extract only the existing illustration in its CENTER event details card: fine taupe engraved classical manor with symmetrical stairs, urns and tall cypress trees. Preserve the exact visual subject, composition, delicate painted/engraved lines, colors and ornaments of the reference. This is asset extraction for implementation, not a redesign. Remove all text, UI, borders, paper/card background, other cards, swatches, props and board. Output ONE isolated landscape illustration on a genuinely transparent alpha background. Keep its original quiet classical wedding look and subtle faded edges. No replacement building, new florals, added lettering, shadows, labels or new decorative elements. Fit artwork with a little transparent breathing room.",
       "reference": "exec-3f2aa7d0-3625-4ed2-bcec-46c616c02395.png",
-      "destination": "silkIvory-illustration.webp",
-      "size": [1536, 1024],
+      "destination": "ivoryDetails-illustration.webp",
+      "size": [
+        1536,
+        1024
+      ],
       "bytes": 1198894
     },
     {
@@ -38,7 +21,10 @@
       "prompt": "Use case: background-extraction. Production asset extraction from APPROVED reference board. Output only the FRAME BORDER of the LEFT invitation cover, isolated with real alpha transparency. Preserve the exact original illustration and character; do not redesign or substitute. pencil-thin desaturated blue-grey elongated oval line. Single straight-on portrait canvas 2:3. Preserve original locations relative to the full cover and keep center empty. REMOVE ALL FLOWERS, LEAVES, CRESTS, BOTANICALS AND SCENES; the frame is a separate reusable layer. Border inset about 5%. Remove all text, numbers, logos, paper, texture background, card body, props, shadows outside artwork, board and swatches. NO opaque fills or background. Transparent interior. Quiet romantic classical wedding stationery detail, exact reference colors. Output ONE transparent PNG artwork, no labels.",
       "reference": "/Users/mac/.codex/generated_images/01a10ca0-3f5d-7b82-ad8c-20d9d5315fed/exec-d593e080-1273-4072-a1ec-012cc87fb58d.png",
       "destination": "somethingBlue-frame.webp",
-      "size": [1024, 1536],
+      "size": [
+        1024,
+        1536
+      ],
       "bytes": 70206
     },
     {
@@ -48,7 +34,10 @@
       "prompt": "Use case: background-extraction. Production asset extraction from APPROVED reference board. Output only the BOTANICAL/CREST ORNAMENTS of the LEFT invitation cover, isolated with real alpha transparency. Preserve the exact original illustration and character; do not redesign or substitute. Two desaturated powder-blue watercolor olive branches, one top-left and one bottom-right, matching the exact left cover botanical sprigs.. Single straight-on portrait canvas 2:3. Preserve original locations relative to the full cover and keep center empty. REMOVE ALL FRAME LINES, OVALS, ARCHES, BORDER RULES; ornament artwork is a separate reusable layer. Keep foliage in outer 18%, top/bottom 20%; empty center. Remove all text, numbers, logos, paper, texture background, card body, props, shadows outside artwork, board and swatches. NO opaque fills or background. Transparent interior. Quiet romantic classical wedding stationery detail, exact reference colors. Output ONE transparent PNG artwork, no labels.",
       "reference": "/Users/mac/.codex/generated_images/01a10ca0-3f5d-7b82-ad8c-20d9d5315fed/exec-d593e080-1273-4072-a1ec-012cc87fb58d.png",
       "destination": "somethingBlue-ornaments.webp",
-      "size": [1024, 1536],
+      "size": [
+        1024,
+        1536
+      ],
       "bytes": 447626
     },
     {
@@ -58,7 +47,10 @@
       "prompt": "Use case: background-extraction. Input image is the APPROVED DESIGN. Extract only the existing illustration in its CENTER event details card: powder-blue watercolor Mediterranean stone villa courtyard with cypress trees. Preserve the exact visual subject, composition, delicate painted/engraved lines, colors and ornaments of the reference. This is asset extraction for implementation, not a redesign. Remove all text, UI, borders, paper/card background, other cards, swatches, props and board. Output ONE isolated landscape illustration on a genuinely transparent alpha background. Keep its original quiet classical wedding look and subtle faded edges. No replacement building, new florals, added lettering, shadows, labels or new decorative elements. Fit artwork with a little transparent breathing room.",
       "reference": "exec-d593e080-1273-4072-a1ec-012cc87fb58d.png",
       "destination": "somethingBlue-illustration.webp",
-      "size": [1536, 1024],
+      "size": [
+        1536,
+        1024
+      ],
       "bytes": 1541936
     },
     {
@@ -68,7 +60,10 @@
       "prompt": "Use case: background-extraction. Production asset extraction from APPROVED reference board. Output only the FRAME BORDER of the LEFT invitation cover, isolated with real alpha transparency. Preserve the exact original illustration and character; do not redesign or substitute. hairline warm sepia rectangular border with tiny fine engraved corner flourishes. Single straight-on portrait canvas 2:3. Preserve original locations relative to the full cover and keep center empty. REMOVE ALL FLOWERS, LEAVES, CRESTS, BOTANICALS AND SCENES; the frame is a separate reusable layer. Border inset about 5%. Remove all text, numbers, logos, paper, texture background, card body, props, shadows outside artwork, board and swatches. NO opaque fills or background. Transparent interior. Quiet romantic classical wedding stationery detail, exact reference colors. Output ONE transparent PNG artwork, no labels.",
       "reference": "/Users/mac/.codex/generated_images/01a10ca0-3f5d-7b82-ad8c-20d9d5315fed/exec-16c73d33-491a-4f78-a867-1e8db4d263b7.png",
       "destination": "pressedRose-frame.webp",
-      "size": [1024, 1536],
+      "size": [
+        1024,
+        1536
+      ],
       "bytes": 66656
     },
     {
@@ -78,7 +73,10 @@
       "prompt": "Use case: background-extraction. Production asset extraction from APPROVED reference board. Output only the BOTANICAL/CREST ORNAMENTS of the LEFT invitation cover, isolated with real alpha transparency. Preserve the exact original illustration and character; do not redesign or substitute. Pressed dusty-blush rose stem with muted olive leaves along top-left edge, tiny dried rosebud at bottom-right edge and sparse blush petals, copied faithfully from left cover.. Single straight-on portrait canvas 2:3. Preserve original locations relative to the full cover and keep center empty. REMOVE ALL FRAME LINES, OVALS, ARCHES, BORDER RULES; ornament artwork is a separate reusable layer. Keep foliage in outer 18%, top/bottom 20%; empty center. Remove all text, numbers, logos, paper, texture background, card body, props, shadows outside artwork, board and swatches. NO opaque fills or background. Transparent interior. Quiet romantic classical wedding stationery detail, exact reference colors. Output ONE transparent PNG artwork, no labels.",
       "reference": "/Users/mac/.codex/generated_images/01a10ca0-3f5d-7b82-ad8c-20d9d5315fed/exec-16c73d33-491a-4f78-a867-1e8db4d263b7.png",
       "destination": "pressedRose-ornaments.webp",
-      "size": [1024, 1536],
+      "size": [
+        1024,
+        1536
+      ],
       "bytes": 333000
     },
     {
@@ -88,7 +86,10 @@
       "prompt": "Use case: background-extraction. Input image is the APPROVED DESIGN. Extract only the existing illustration in its CENTER event details card: fine sepia engraved glass garden conservatory with peaked glass roofs, steps, potted plants and tall narrow trees. Preserve the exact visual subject, composition, delicate painted/engraved lines, colors and ornaments of the reference. This is asset extraction for implementation, not a redesign. Remove all text, UI, borders, paper/card background, other cards, swatches, props and board. Output ONE isolated landscape illustration on a genuinely transparent alpha background. Keep its original quiet classical wedding look and subtle faded edges. No replacement building, new florals, added lettering, shadows, labels or new decorative elements. Fit artwork with a little transparent breathing room.",
       "reference": "exec-16c73d33-491a-4f78-a867-1e8db4d263b7.png",
       "destination": "pressedRose-illustration.webp",
-      "size": [1536, 1024],
+      "size": [
+        1536,
+        1024
+      ],
       "bytes": 1686284
     },
     {
@@ -98,7 +99,10 @@
       "prompt": "Use case: background-extraction. Production asset extraction from APPROVED reference board. Output only the FRAME BORDER of the LEFT invitation cover, isolated with real alpha transparency. Preserve the exact original illustration and character; do not redesign or substitute. slender olive-taupe double arch, straight sides and bottom, delicate two-line engraving. Single straight-on portrait canvas 2:3. Preserve original locations relative to the full cover and keep center empty. REMOVE ALL FLOWERS, LEAVES, CRESTS, BOTANICALS AND SCENES; the frame is a separate reusable layer. Border inset about 5%. Remove all text, numbers, logos, paper, texture background, card body, props, shadows outside artwork, board and swatches. NO opaque fills or background. Transparent interior. Quiet romantic classical wedding stationery detail, exact reference colors. Output ONE transparent PNG artwork, no labels.",
       "reference": "/Users/mac/.codex/generated_images/01a10ca0-3f5d-7b82-ad8c-20d9d5315fed/exec-107e9b8e-8c44-47d0-9cfc-7e63aa0f56a7.png",
       "destination": "gardenVeil-frame.webp",
-      "size": [1024, 1536],
+      "size": [
+        1024,
+        1536
+      ],
       "bytes": 131700
     },
     {
@@ -108,7 +112,10 @@
       "prompt": "Use case: background-extraction. Production asset extraction from APPROVED reference board. Output only the BOTANICAL/CREST ORNAMENTS of the LEFT invitation cover, isolated with real alpha transparency. Preserve the exact original illustration and character; do not redesign or substitute. Delicate sage watercolor ferns, olive leaves and tiny ivory garden flowers, mostly lowest corners with a sparse hanging sprig top-left. Exact botanical character and positions of the cover.. Single straight-on portrait canvas 2:3. Preserve original locations relative to the full cover and keep center empty. REMOVE ALL FRAME LINES, OVALS, ARCHES, BORDER RULES; ornament artwork is a separate reusable layer. Keep foliage in outer 18%, top/bottom 20%; empty center. Remove all text, numbers, logos, paper, texture background, card body, props, shadows outside artwork, board and swatches. NO opaque fills or background. Transparent interior. Quiet romantic classical wedding stationery detail, exact reference colors. Output ONE transparent PNG artwork, no labels.",
       "reference": "/Users/mac/.codex/generated_images/01a10ca0-3f5d-7b82-ad8c-20d9d5315fed/exec-107e9b8e-8c44-47d0-9cfc-7e63aa0f56a7.png",
       "destination": "gardenVeil-ornaments.webp",
-      "size": [1024, 1536],
+      "size": [
+        1024,
+        1536
+      ],
       "bytes": 1049876
     },
     {
@@ -118,7 +125,10 @@
       "prompt": "Use case: background-extraction. Input image is the APPROVED DESIGN. Extract only the existing illustration in its CENTER event details card: delicate sage watercolor garden fern sprigs and tiny ivory flowers at the bottom of the center details card, no building. Preserve the exact visual subject, composition, delicate painted/engraved lines, colors and ornaments of the reference. This is asset extraction for implementation, not a redesign. Remove all text, UI, borders, paper/card background, other cards, swatches, props and board. Output ONE isolated landscape illustration on a genuinely transparent alpha background. Keep its original quiet classical wedding look and subtle faded edges. No replacement building, new florals, added lettering, shadows, labels or new decorative elements. Fit artwork with a little transparent breathing room.",
       "reference": "exec-107e9b8e-8c44-47d0-9cfc-7e63aa0f56a7.png",
       "destination": "gardenVeil-illustration.webp",
-      "size": [1536, 1024],
+      "size": [
+        1536,
+        1024
+      ],
       "bytes": 1139094
     },
     {
@@ -128,7 +138,10 @@
       "prompt": "Use case: background-extraction. Production asset extraction from APPROVED reference board. Output only the FRAME BORDER of the LEFT invitation cover, isolated with real alpha transparency. Preserve the exact original illustration and character; do not redesign or substitute. chalk/oyster white blind embossed double rectangular border, subtle relief, fine graphite shadow. Single straight-on portrait canvas 2:3. Preserve original locations relative to the full cover and keep center empty. REMOVE ALL FLOWERS, LEAVES, CRESTS, BOTANICALS AND SCENES; the frame is a separate reusable layer. Border inset about 5%. Remove all text, numbers, logos, paper, texture background, card body, props, shadows outside artwork, board and swatches. NO opaque fills or background. Transparent interior. Quiet romantic classical wedding stationery detail, exact reference colors. Output ONE transparent PNG artwork, no labels.",
       "reference": "/Users/mac/.codex/generated_images/01a10ca0-3f5d-7b82-ad8c-20d9d5315fed/exec-94998db4-742e-4f12-824f-6507b4632e3a.png",
       "destination": "pearlLetter-frame.webp",
-      "size": [1024, 1536],
+      "size": [
+        1024,
+        1536
+      ],
       "bytes": 519886
     },
     {
@@ -138,7 +151,10 @@
       "prompt": "Use case: background-extraction. Production asset extraction from APPROVED reference board. Output only the BOTANICAL/CREST ORNAMENTS of the LEFT invitation cover, isolated with real alpha transparency. Preserve the exact original illustration and character; do not redesign or substitute. Small graphite hairline classical crest at top-center, exact shape and scrolls from reference cover but EMPTY interior, remove the number. NO florals.. Single straight-on portrait canvas 2:3. Preserve original locations relative to the full cover and keep center empty. REMOVE ALL FRAME LINES, OVALS, ARCHES, BORDER RULES; ornament artwork is a separate reusable layer. Keep foliage in outer 18%, top/bottom 20%; empty center. Remove all text, numbers, logos, paper, texture background, card body, props, shadows outside artwork, board and swatches. NO opaque fills or background. Transparent interior. Quiet romantic classical wedding stationery detail, exact reference colors. Output ONE transparent PNG artwork, no labels.",
       "reference": "/Users/mac/.codex/generated_images/01a10ca0-3f5d-7b82-ad8c-20d9d5315fed/exec-94998db4-742e-4f12-824f-6507b4632e3a.png",
       "destination": "pearlLetter-ornaments.webp",
-      "size": [1024, 1536],
+      "size": [
+        1024,
+        1536
+      ],
       "bytes": 164028
     },
     {
@@ -148,7 +164,10 @@
       "prompt": "Use case: background-extraction. Input image is the APPROVED DESIGN. Extract only the existing illustration in its CENTER event details card: small fine graphite pencil engraving of a two-story symmetrical classical house, cypress trees, low garden hedge. Preserve the exact visual subject, composition, delicate painted/engraved lines, colors and ornaments of the reference. This is asset extraction for implementation, not a redesign. Remove all text, UI, borders, paper/card background, other cards, swatches, props and board. Output ONE isolated landscape illustration on a genuinely transparent alpha background. Keep its original quiet classical wedding look and subtle faded edges. No replacement building, new florals, added lettering, shadows, labels or new decorative elements. Fit artwork with a little transparent breathing room.",
       "reference": "exec-94998db4-742e-4f12-824f-6507b4632e3a.png",
       "destination": "pearlLetter-illustration.webp",
-      "size": [1774, 887],
+      "size": [
+        1774,
+        887
+      ],
       "bytes": 893642
     },
     {
@@ -158,7 +177,10 @@
       "prompt": "Use case: background-extraction. Production asset extraction from APPROVED reference board. Output only the FRAME BORDER of the LEFT invitation cover, isolated with real alpha transparency. Preserve the exact original illustration and character; do not redesign or substitute. fine oyster-grey rectangular line border. Single straight-on portrait canvas 2:3. Preserve original locations relative to the full cover and keep center empty. REMOVE ALL FLOWERS, LEAVES, CRESTS, BOTANICALS AND SCENES; the frame is a separate reusable layer. Border inset about 5%. Remove all text, numbers, logos, paper, texture background, card body, props, shadows outside artwork, board and swatches. NO opaque fills or background. Transparent interior. Quiet romantic classical wedding stationery detail, exact reference colors. Output ONE transparent PNG artwork, no labels.",
       "reference": "/Users/mac/.codex/generated_images/01a10ca0-3f5d-7b82-ad8c-20d9d5315fed/exec-671d8391-021d-4f90-a68a-e61491f65885.png",
       "destination": "lilacWhisper-frame.webp",
-      "size": [1024, 1536],
+      "size": [
+        1024,
+        1536
+      ],
       "bytes": 32138
     },
     {
@@ -168,7 +190,10 @@
       "prompt": "Use case: background-extraction. Production asset extraction from APPROVED reference board. Output only the BOTANICAL/CREST ORNAMENTS of the LEFT invitation cover, isolated with real alpha transparency. Preserve the exact original illustration and character; do not redesign or substitute. Pale lilac watercolor wisteria hanging along top-left outer edge, desaturated sage leaves, sparse tiny pale lilac petals bottom-right, exact left-cover ornament composition.. Single straight-on portrait canvas 2:3. Preserve original locations relative to the full cover and keep center empty. REMOVE ALL FRAME LINES, OVALS, ARCHES, BORDER RULES; ornament artwork is a separate reusable layer. Keep foliage in outer 18%, top/bottom 20%; empty center. Remove all text, numbers, logos, paper, texture background, card body, props, shadows outside artwork, board and swatches. NO opaque fills or background. Transparent interior. Quiet romantic classical wedding stationery detail, exact reference colors. Output ONE transparent PNG artwork, no labels.",
       "reference": "/Users/mac/.codex/generated_images/01a10ca0-3f5d-7b82-ad8c-20d9d5315fed/exec-671d8391-021d-4f90-a68a-e61491f65885.png",
       "destination": "lilacWhisper-ornaments.webp",
-      "size": [1024, 1536],
+      "size": [
+        1024,
+        1536
+      ],
       "bytes": 577608
     },
     {
@@ -178,7 +203,10 @@
       "prompt": "Use case: background-extraction. Input image is the APPROVED DESIGN. Extract only the existing illustration in its CENTER event details card: small desaturated olive twig in the CENTER details card, fine sage-grey watercolor. Preserve the exact visual subject, composition, delicate painted/engraved lines, colors and ornaments of the reference. This is asset extraction for implementation, not a redesign. Remove all text, UI, borders, paper/card background, other cards, swatches, props and board. Output ONE isolated landscape illustration on a genuinely transparent alpha background. Keep its original quiet classical wedding look and subtle faded edges. No replacement building, new florals, added lettering, shadows, labels or new decorative elements. Fit artwork with a little transparent breathing room.",
       "reference": "exec-671d8391-021d-4f90-a68a-e61491f65885.png",
       "destination": "lilacWhisper-illustration.webp",
-      "size": [1536, 1024],
+      "size": [
+        1536,
+        1024
+      ],
       "bytes": 175410
     },
     {
@@ -188,7 +216,10 @@
       "prompt": "Use case: background-extraction. Production asset extraction from APPROVED reference board. Output only the FRAME BORDER of the LEFT invitation cover, isolated with real alpha transparency. Preserve the exact original illustration and character; do not redesign or substitute. hairline muted champagne-gold classical rectangular border with exactly the reference tiny scrolls at corners and center sides, no metallic shine. Single straight-on portrait canvas 2:3. Preserve original locations relative to the full cover and keep center empty. REMOVE ALL FLOWERS, LEAVES, CRESTS, BOTANICALS AND SCENES; the frame is a separate reusable layer. Border inset about 5%. Remove all text, numbers, logos, paper, texture background, card body, props, shadows outside artwork, board and swatches. NO opaque fills or background. Transparent interior. Quiet romantic classical wedding stationery detail, exact reference colors. Output ONE transparent PNG artwork, no labels.",
       "reference": "/Users/mac/.codex/generated_images/01a10ca0-3f5d-7b82-ad8c-20d9d5315fed/exec-eea81f48-9650-4f0c-a315-3e043c6dafe9.png",
       "destination": "champagneVows-frame.webp",
-      "size": [1024, 1536],
+      "size": [
+        1024,
+        1536
+      ],
       "bytes": 113942
     },
     {
@@ -198,7 +229,10 @@
       "prompt": "Use case: background-extraction. Production asset extraction from APPROVED reference board. Output only the BOTANICAL/CREST ORNAMENTS of the LEFT invitation cover, isolated with real alpha transparency. Preserve the exact original illustration and character; do not redesign or substitute. Small tasteful white blossoms, sage leaves and fine ivory tied bow centered at lowest edge, copied from the left cover, no gold border or flourishes.. Single straight-on portrait canvas 2:3. Preserve original locations relative to the full cover and keep center empty. REMOVE ALL FRAME LINES, OVALS, ARCHES, BORDER RULES; ornament artwork is a separate reusable layer. Keep foliage in outer 18%, top/bottom 20%; empty center. Remove all text, numbers, logos, paper, texture background, card body, props, shadows outside artwork, board and swatches. NO opaque fills or background. Transparent interior. Quiet romantic classical wedding stationery detail, exact reference colors. Output ONE transparent PNG artwork, no labels.",
       "reference": "/Users/mac/.codex/generated_images/01a10ca0-3f5d-7b82-ad8c-20d9d5315fed/exec-eea81f48-9650-4f0c-a315-3e043c6dafe9.png",
       "destination": "champagneVows-ornaments.webp",
-      "size": [1024, 1536],
+      "size": [
+        1024,
+        1536
+      ],
       "bytes": 522990
     },
     {
@@ -208,7 +242,10 @@
       "prompt": "Use case: background-extraction. Input image is the APPROVED DESIGN. Extract only the existing illustration in its CENTER event details card: muted sepia and sage watercolor garden manor, curved garden path, trees and delicate white flowering shrubs. Preserve the exact visual subject, composition, delicate painted/engraved lines, colors and ornaments of the reference. This is asset extraction for implementation, not a redesign. Remove all text, UI, borders, paper/card background, other cards, swatches, props and board. Output ONE isolated landscape illustration on a genuinely transparent alpha background. Keep its original quiet classical wedding look and subtle faded edges. No replacement building, new florals, added lettering, shadows, labels or new decorative elements. Fit artwork with a little transparent breathing room.",
       "reference": "exec-eea81f48-9650-4f0c-a315-3e043c6dafe9.png",
       "destination": "champagneVows-illustration.webp",
-      "size": [1536, 1024],
+      "size": [
+        1536,
+        1024
+      ],
       "bytes": 1500712
     },
     {
@@ -218,7 +255,10 @@
       "prompt": "Use case: background-extraction. Production asset extraction from APPROVED reference board. Output only the FRAME BORDER of the LEFT invitation cover, isolated with real alpha transparency. Preserve the exact original illustration and character; do not redesign or substitute. subtle milk-white blind embossed arch with thin relief highlights, straight sides and bottom. Single straight-on portrait canvas 2:3. Preserve original locations relative to the full cover and keep center empty. REMOVE ALL FLOWERS, LEAVES, CRESTS, BOTANICALS AND SCENES; the frame is a separate reusable layer. Border inset about 5%. Remove all text, numbers, logos, paper, texture background, card body, props, shadows outside artwork, board and swatches. NO opaque fills or background. Transparent interior. Quiet romantic classical wedding stationery detail, exact reference colors. Output ONE transparent PNG artwork, no labels.",
       "reference": "/Users/mac/.codex/generated_images/01a10ca0-3f5d-7b82-ad8c-20d9d5315fed/exec-a5e60f73-a41d-40e4-9ff1-73baa6d26f2b.png",
       "destination": "vellumPromise-frame.webp",
-      "size": [1024, 1536],
+      "size": [
+        1024,
+        1536
+      ],
       "bytes": 290516
     },
     {
@@ -228,7 +268,10 @@
       "prompt": "Use case: background-extraction. Production asset extraction from APPROVED reference board. Output only the BOTANICAL/CREST ORNAMENTS of the LEFT invitation cover, isolated with real alpha transparency. Preserve the exact original illustration and character; do not redesign or substitute. Fine pale beige dried stems along top-left edge and one delicate white anemone at bottom-right with grey center and muted olive leaves, same artwork as left reference cover.. Single straight-on portrait canvas 2:3. Preserve original locations relative to the full cover and keep center empty. REMOVE ALL FRAME LINES, OVALS, ARCHES, BORDER RULES; ornament artwork is a separate reusable layer. Keep foliage in outer 18%, top/bottom 20%; empty center. Remove all text, numbers, logos, paper, texture background, card body, props, shadows outside artwork, board and swatches. NO opaque fills or background. Transparent interior. Quiet romantic classical wedding stationery detail, exact reference colors. Output ONE transparent PNG artwork, no labels.",
       "reference": "/Users/mac/.codex/generated_images/01a10ca0-3f5d-7b82-ad8c-20d9d5315fed/exec-a5e60f73-a41d-40e4-9ff1-73baa6d26f2b.png",
       "destination": "vellumPromise-ornaments.webp",
-      "size": [1024, 1536],
+      "size": [
+        1024,
+        1536
+      ],
       "bytes": 516186
     },
     {
@@ -238,7 +281,10 @@
       "prompt": "Use case: background-extraction. Input image is the APPROVED DESIGN. Extract only the existing illustration in its CENTER event details card: soft taupe watercolor glass conservatory in a garden with white anemones on the lower left. Preserve the exact visual subject, composition, delicate painted/engraved lines, colors and ornaments of the reference. This is asset extraction for implementation, not a redesign. Remove all text, UI, borders, paper/card background, other cards, swatches, props and board. Output ONE isolated landscape illustration on a genuinely transparent alpha background. Keep its original quiet classical wedding look and subtle faded edges. No replacement building, new florals, added lettering, shadows, labels or new decorative elements. Fit artwork with a little transparent breathing room.",
       "reference": "exec-a5e60f73-a41d-40e4-9ff1-73baa6d26f2b.png",
       "destination": "vellumPromise-illustration.webp",
-      "size": [1536, 1024],
+      "size": [
+        1536,
+        1024
+      ],
       "bytes": 1591182
     },
     {
@@ -248,7 +294,10 @@
       "prompt": "Use case: background-extraction. Production asset extraction from APPROVED reference board. Output only the FRAME BORDER of the LEFT invitation cover, isolated with real alpha transparency. Preserve the exact original illustration and character; do not redesign or substitute. warm sepia-grey thin double arch line, straight sides and bottom. Single straight-on portrait canvas 2:3. Preserve original locations relative to the full cover and keep center empty. REMOVE ALL FLOWERS, LEAVES, CRESTS, BOTANICALS AND SCENES; the frame is a separate reusable layer. Border inset about 5%. Remove all text, numbers, logos, paper, texture background, card body, props, shadows outside artwork, board and swatches. NO opaque fills or background. Transparent interior. Quiet romantic classical wedding stationery detail, exact reference colors. Output ONE transparent PNG artwork, no labels.",
       "reference": "/Users/mac/.codex/generated_images/01a10ca0-3f5d-7b82-ad8c-20d9d5315fed/exec-5bf466a1-3a43-46d9-a9da-5af78bbba92c.png",
       "destination": "quietParchment-frame.webp",
-      "size": [1024, 1536],
+      "size": [
+        1024,
+        1536
+      ],
       "bytes": 133868
     },
     {
@@ -258,7 +307,10 @@
       "prompt": "Use case: background-extraction. Production asset extraction from APPROVED reference board. Output only the BOTANICAL/CREST ORNAMENTS of the LEFT invitation cover, isolated with real alpha transparency. Preserve the exact original illustration and character; do not redesign or substitute. Fine muted olive twigs with small ivory blossoms along lowest-left outer edge and sparse branch top-right, plus the small olive twig crest top-center, copy reference cover character.. Single straight-on portrait canvas 2:3. Preserve original locations relative to the full cover and keep center empty. REMOVE ALL FRAME LINES, OVALS, ARCHES, BORDER RULES; ornament artwork is a separate reusable layer. Keep foliage in outer 18%, top/bottom 20%; empty center. Remove all text, numbers, logos, paper, texture background, card body, props, shadows outside artwork, board and swatches. NO opaque fills or background. Transparent interior. Quiet romantic classical wedding stationery detail, exact reference colors. Output ONE transparent PNG artwork, no labels.",
       "reference": "/Users/mac/.codex/generated_images/01a10ca0-3f5d-7b82-ad8c-20d9d5315fed/exec-5bf466a1-3a43-46d9-a9da-5af78bbba92c.png",
       "destination": "quietParchment-ornaments.webp",
-      "size": [1024, 1536],
+      "size": [
+        1024,
+        1536
+      ],
       "bytes": 708624
     },
     {
@@ -268,7 +320,10 @@
       "prompt": "Use case: background-extraction. Input image is the APPROVED DESIGN. Extract only the existing illustration in its CENTER event details card: warm sepia engraved country house and cypress trees, soft garden landscape and low wall. Preserve the exact visual subject, composition, delicate painted/engraved lines, colors and ornaments of the reference. This is asset extraction for implementation, not a redesign. Remove all text, UI, borders, paper/card background, other cards, swatches, props and board. Output ONE isolated landscape illustration on a genuinely transparent alpha background. Keep its original quiet classical wedding look and subtle faded edges. No replacement building, new florals, added lettering, shadows, labels or new decorative elements. Fit artwork with a little transparent breathing room.",
       "reference": "exec-5bf466a1-3a43-46d9-a9da-5af78bbba92c.png",
       "destination": "quietParchment-illustration.webp",
-      "size": [1536, 1024],
+      "size": [
+        1536,
+        1024
+      ],
       "bytes": 1484392
     },
     {
@@ -278,7 +333,10 @@
       "prompt": "Use case: background-extraction. Production asset extraction from APPROVED reference board. Output only the FRAME BORDER of the LEFT invitation cover, isolated with real alpha transparency. Preserve the exact original illustration and character; do not redesign or substitute. fine olive-grey double rectangular border, subtle tiny engraved flourishes at corners. Single straight-on portrait canvas 2:3. Preserve original locations relative to the full cover and keep center empty. REMOVE ALL FLOWERS, LEAVES, CRESTS, BOTANICALS AND SCENES; the frame is a separate reusable layer. Border inset about 5%. Remove all text, numbers, logos, paper, texture background, card body, props, shadows outside artwork, board and swatches. NO opaque fills or background. Transparent interior. Quiet romantic classical wedding stationery detail, exact reference colors. Output ONE transparent PNG artwork, no labels.",
       "reference": "/Users/mac/.codex/generated_images/01a10ca0-3f5d-7b82-ad8c-20d9d5315fed/exec-2e5ffe00-94ad-4c50-beca-105f5d494c18.png",
       "destination": "meadowMorning-frame.webp",
-      "size": [1024, 1536],
+      "size": [
+        1024,
+        1536
+      ],
       "bytes": 115226
     },
     {
@@ -288,7 +346,10 @@
       "prompt": "Use case: background-extraction. Production asset extraction from APPROVED reference board. Output only the BOTANICAL/CREST ORNAMENTS of the LEFT invitation cover, isolated with real alpha transparency. Preserve the exact original illustration and character; do not redesign or substitute. Soft watercolor white cosmos, tiny powder-blue forget-me-nots, wispy sage grasses along very bottom edge; delicate trailing stems in upper corners. Keep exact reference botanical forms and gentle color. No landscape.. Single straight-on portrait canvas 2:3. Preserve original locations relative to the full cover and keep center empty. REMOVE ALL FRAME LINES, OVALS, ARCHES, BORDER RULES; ornament artwork is a separate reusable layer. Keep foliage in outer 18%, top/bottom 20%; empty center. Remove all text, numbers, logos, paper, texture background, card body, props, shadows outside artwork, board and swatches. NO opaque fills or background. Transparent interior. Quiet romantic classical wedding stationery detail, exact reference colors. Output ONE transparent PNG artwork, no labels.",
       "reference": "/Users/mac/.codex/generated_images/01a10ca0-3f5d-7b82-ad8c-20d9d5315fed/exec-2e5ffe00-94ad-4c50-beca-105f5d494c18.png",
       "destination": "meadowMorning-ornaments.webp",
-      "size": [1024, 1536],
+      "size": [
+        1024,
+        1536
+      ],
       "bytes": 1169192
     },
     {
@@ -298,7 +359,10 @@
       "prompt": "Use case: background-extraction. Input image is the APPROVED DESIGN. Extract only the existing illustration in its CENTER event details card: fine pale sage/powder-blue watercolor stone country villa with tall cypresses, meadow flowers and garden path. Preserve the exact visual subject, composition, delicate painted/engraved lines, colors and ornaments of the reference. This is asset extraction for implementation, not a redesign. Remove all text, UI, borders, paper/card background, other cards, swatches, props and board. Output ONE isolated landscape illustration on a genuinely transparent alpha background. Keep its original quiet classical wedding look and subtle faded edges. No replacement building, new florals, added lettering, shadows, labels or new decorative elements. Fit artwork with a little transparent breathing room.",
       "reference": "exec-2e5ffe00-94ad-4c50-beca-105f5d494c18.png",
       "destination": "meadowMorning-illustration.webp",
-      "size": [1536, 1024],
+      "size": [
+        1536,
+        1024
+      ],
       "bytes": 1447930
     }
   ]

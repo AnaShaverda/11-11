@@ -125,10 +125,7 @@
   position: absolute;
   top: 20cqw;
 }
-.wedding-cover.theme-vellumPromise {
-  border: 8px solid color-mix(in srgb, var(--wedding-paper) 65%, #cec7b9);
-  box-shadow: inset 0 0 0 1px #fff9;
-}
+
 
 .custom-theme-mini.wedding-theme-mini {
   aspect-ratio: 2 / 3;
@@ -652,14 +649,6 @@
   position: absolute;
   top: -8cqw;
 }
-.wedding-cover.theme-champagneVows .custom-cover-copy {
-  padding: 10cqw 0 85cqw;
-  gap: 4cqw;
-}
-.theme-champagneVows .wedding-theme-mini-copy {
-  inset: 20% 18% 48%;
-  gap: 5cqw;
-}
 
 /* Supporting cards put legibility first; full-strength florals belong on the cover. */
 .wedding-stationery-note .wedding-ornament-composition {
@@ -707,9 +696,6 @@
 }
 .wedding-cover.has-photo .custom-cover-copy em {
   font-size: 3.4cqw;
-}
-.wedding-cover.has-photo.theme-champagneVows .wedding-ornament-composition {
-  opacity: 0.3;
 }
 
 /* Supporting cards use a quiet continuous rule; decorative frame fragments stay on the cover. */
@@ -1509,10 +1495,6 @@
 .wedding-cover.has-photo.is-framed-photo .wedding-ornament-composition {
   opacity: 0.6;
 }
-.wedding-cover.has-photo.is-framed-photo.theme-champagneVows
-  .custom-cover-copy {
-  padding: 15cqw 0 65cqw;
-}
 
 .opening-mini-doorsBrown {
   width: 50px;
@@ -1610,11 +1592,6 @@
 .theme-pearlLetter .wedding-theme-mini-copy > small:first-child {
   position: absolute;
   top: -36cqw;
-}
-
-.wedding-cover.theme-champagneVows .wedding-ornament-composition,
-.wedding-theme-mini.theme-champagneVows .wedding-ornament-composition {
-  transform: translateY(11%);
 }
 
 /* Pearl stationery now uses airy corner florals instead of a central crest. */

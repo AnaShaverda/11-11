@@ -26,7 +26,7 @@
 .design-hero-rule { display: none; }
 
 /* Keep page titles compact; invitation poster typography remains artwork. */
-:root[data-theme] :is(.surprise-showcase-copy h1, .friendship-module-hero h1, .theme-preview-intro h1, .preview-intro h1, .experience-page h1, .inner-page.copy-page h1) {
+:root[data-theme] :is(.surprise-showcase-copy h1, .friendship-module-hero h1, .preview-intro h1, .experience-page h1, .inner-page.copy-page h1) {
   max-width: 24ch; font-size: var(--ui-font-title); line-height: 1.2; letter-spacing: -.035em;
 }
 :root[data-theme] :is(.home-more h2, .surprise-flow h2, .surprise-config-heading h2, .surprise-share-concept h2, .surprise-demo-intro h2, .theme-explorer-heading h2, .theme-options h2, .design-board-heading h2, .design-page-end h2, .experience-section h2, .experience-cta h2, .other-chooser h2) {

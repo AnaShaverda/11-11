@@ -30,12 +30,10 @@ export default function InvitationPreviewPage() {
       <div className="design-hero">
         <div className="design-hero-art"><InvitationArtwork template={template} large /></div>
         <div className="design-hero-copy">
-          <div className="design-hero-summary"><span className="preview-category">{t(getCategoryCaptionKey(template.category, template.subcategory))} {t("common.invitation")} · {t(`themes.${template.id}.style`)}</span><h1>{t(`themes.${template.id}.name`)}</h1><p>{t(`themes.${template.id}.description`)}</p><Link className="invitation-open-action" to={`/invitations/${template.slug}/open`}>{t("invitationOpening.action")} <Icon name="arrow-up-right" size={16} /></Link></div>
+          <div className="design-hero-summary"><span className="preview-category">{t(getCategoryCaptionKey(template.category, template.subcategory))} {t("common.invitation")} · {t(`themes.${template.id}.style`)}</span><h1>{t(`themes.${template.id}.name`)}</h1><p>{t(`themes.${template.id}.description`)}</p></div>
           <InvitationMoodBoards template={template} sample={sample} />
         </div>
       </div>
-      <div className="design-guest-preview-link"><div><h2>{t("guestCards.suite.title")}</h2><p>{t("guestCards.suite.description")}</p></div><Link className="invitation-open-action" to={`/invitations/${template.slug}/open`}>{t("guestCards.suite.action")} <Icon name="arrow-up-right" size={18} /></Link></div>
-      {!(template.visualAssets?.standaloneCard || template.visualAssets?.cardOnlyBridal || template.visualAssets?.isolatedBridalCard) && <div className="design-page-end"><div><span>{t("product.demo.label")}</span><h2>{t("product.demo.title")}</h2><p>{t("product.demo.description")}</p></div><Link className="primary-link" to={`/experiences/${template.themeId}/demo`}>{t("product.demo.action")} <Icon name="arrow-up-right" size={18} /></Link></div>}
       <div className="design-page-end"><div><span>{t("invitations.end.label")}</span><h2>{t("invitations.end.title")}</h2></div><Link className="primary-link" to="/invitations">{t("invitations.end.action")} <Icon name="arrow-up-right" size={18} /></Link></div>
     </section>
   );

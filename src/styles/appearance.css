@@ -93,15 +93,8 @@
 :root[data-theme="light"] .other-options button.is-active { border-color: #ac74bd; background: #efd8f0; }
 :root[data-theme="light"] .other-options button small { color: var(--color-text-secondary); }
 :root[data-theme="light"] .theme-explorer-heading > span { color: var(--text-accent); }
-:root[data-theme="light"] .theme-explorer-heading > strong,
-:root[data-theme="light"] .theme-mood { border-color: var(--border-soft); color: var(--text-accent); }
 :root[data-theme="light"] .theme-card { border-color: var(--border-soft); background: var(--surface-glass); box-shadow: var(--shadow-card); }
 :root[data-theme="light"] .theme-card:hover { box-shadow: 0 18px 38px rgba(75, 72, 144, .17); }
-:root[data-theme="light"] .theme-card-caption > .ui-icon,
-:root[data-theme="light"] .theme-preview-toolbar > span { color: var(--text-link); }
-:root[data-theme="light"] .module-picker button { border-color: var(--border-soft); background: var(--surface-glass); color: var(--color-text); }
-:root[data-theme="light"] .module-picker button:hover { background: var(--surface-hover); }
-:root[data-theme="light"] .module-picker button.is-active { border-color: #ac86ce; background: #e9dcf6; color: #352452; }
 
 :root[data-theme="light"] .filter-button,
 :root[data-theme="light"] .style-filter-button { border-color: var(--border-soft); background: var(--surface-glass); color: var(--color-text); }

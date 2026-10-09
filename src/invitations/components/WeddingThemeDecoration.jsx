@@ -5,29 +5,17 @@ import EmbossedWaxSeal from './EmbossedWaxSeal.jsx';
 import Icon from '../../components/ui/Icon.jsx';
 import { useLanguage } from '../../localization/LanguageContext.jsx';
 
-const themeFonts = { silkIvory: 'elegance', somethingBlue: 'magnola', pressedRose: 'elegance', gardenVeil: 'zalino', pearlLetter: 'casmera', lilacWhisper: 'magnola', champagneVows: 'casmera', vellumPromise: 'elegance', quietParchment: 'zalino', meadowMorning: 'magnola', autumn: 'casmera', rtveli: 'zalino', embossedIvory: 'elegance', embossedSage: 'magnola' };
+const themeFonts = { somethingBlue: 'magnola', pressedRose: 'elegance', pearlLetter: 'casmera', lilacWhisper: 'magnola', meadowMorning: 'magnola', autumn: 'casmera', rtveli: 'zalino', embossedIvory: 'elegance', embossedSage: 'magnola' };
 
 // Each mask isolates a complete botanical cluster in the transparent source.
 // The preview positions these pieces independently without scaling either axis.
 const ornamentPieces = {
-  silkIvory: [['top', 'inset(0 0 48% 0)'], ['bottom', 'inset(62% 0 0)']],
   somethingBlue: [['top', 'inset(0 0 58% 0)'], ['bottom', 'inset(52% 0 0)']],
   pressedRose: [['top', 'inset(0 39% 0 0)'], ['bottom', 'inset(0 0 0 61%)']],
-  gardenVeil: [
-    ['top', 'inset(0 50% 68% 0)'],
-    ['top', 'inset(0 0 59% 72%)'],
-    ['bottom', 'inset(28% 48% 0 0)'],
-    ['bottom', 'inset(40% 0 0 48%)'],
-  ],
+
   pearlLetter: [['top', 'inset(0 0 57% 0)'], ['bottom', 'inset(63% 0 0)']],
   lilacWhisper: [['top', 'inset(0 0 27% 0)'], ['bottom', 'inset(73% 0 0)']],
-  champagneVows: [['bottom', 'inset(0)']],
-  vellumPromise: [['top', 'inset(0 0 35% 0)'], ['bottom', 'inset(65% 0 0)']],
-  quietParchment: [
-    ['top', 'inset(0 0 67% 24%)'],
-    ['top', 'inset(0 0 56% 72%)'],
-    ['bottom', 'polygon(0 35%, 55% 35%, 55% 55%, 85% 72%, 85% 100%, 0 100%)'],
-  ],
+
   meadowMorning: [['top', 'inset(0 0 66% 0)'], ['bottom', 'inset(42% 0 0)']],
   autumn: [['top', 'inset(0 0 57% 0)'], ['bottom', 'inset(49% 0 0)']],
   rtveli: [['top', 'inset(0 0 52% 0)'], ['bottom', 'inset(48% 0 0)']],

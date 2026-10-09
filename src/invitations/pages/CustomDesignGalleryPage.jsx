@@ -36,8 +36,9 @@ export default function CustomDesignGalleryPage() {
   const template = getCustomTemplate(category);
   const occasion = category === "christening" || category === "baby-kids" ? "christening" : category === "all" ? (searchParams.get("occasion") === "christening" ? "christening" : "wedding") : "wedding";
   const themes = getCustomThemes(occasion);
-  const [selectedIndex, setSelectedIndex] = useState(0);
-  useEffect(() => { setSelectedIndex(0); }, [occasion]);
+  const defaultIndex = Math.max(0, themes.findIndex(theme => theme.id === "pressedRose"));
+  const [selectedIndex, setSelectedIndex] = useState(defaultIndex);
+  useEffect(() => { setSelectedIndex(defaultIndex); }, [occasion, defaultIndex]);
   const theme = themes[selectedIndex] ?? themes[0];
   const copy = language === "ka" ? {
     eyebrow: "შენი დიზაინი", title: "ნახე მთელი მოსაწვევი", intro: "აირჩიე დიზაინი და ნახე მოსაწვევი ამავე მობილურზე.", wedding: "ქორწილი", christening: "ნათლობა", choose: "ამ დიზაინის არჩევა", back: "კოლექციაში დაბრუნება", full: "სრული ეკრანი", select: "დიზაინის არჩევა", preview: "მოსაწვევი",
@@ -46,16 +47,22 @@ export default function CustomDesignGalleryPage() {
   };
   if (!template) return <main className="inner-page copy-page"><h1>{t("invitations.notFound.title")}</h1><Link to="/invitations">{t("invitations.allInvitations")}</Link></main>;
 
-  return <main className="custom-design-gallery-page"><div className="custom-design-gallery-inner">
-    <Link className="custom-design-gallery-back" to="/invitations">← {copy.back}</Link>
-    <header className="custom-design-gallery-heading"><span>{copy.eyebrow}</span><h1>{copy.title}</h1><p>{copy.intro}</p></header>
+  return <div className="custom-design-gallery-page"><div className="custom-design-gallery-inner">
+    <div className="custom-design-gallery-toolbar">
     {category === "all" && <div className="custom-design-gallery-tabs" role="group" aria-label={language === "ka" ? "ღონისძიების ტიპი" : "Event type"}>
       {["wedding", "christening"].map(type => <button key={type} type="button" aria-pressed={occasion === type} onClick={() => setSearchParams({ occasion: type })}>{copy[type]}</button>)}
     </div>}
+    </div>
     <div className="custom-design-workspace">
-    <section className="custom-design-picker" aria-label={copy.select}><h2>{copy.select}</h2><div className="custom-design-picker-track">
-      {themes.map((item, index) => <button type="button" key={item.id} aria-label={item.name[language] ?? item.name.en} aria-pressed={selectedIndex === index} onClick={() => setSelectedIndex(index)}><WeddingThemePreview theme={item} label={copy.preview} /></button>)}
-    </div></section>
+    <section className="custom-design-picker" aria-label={copy.select}>
+      <h2>{copy.select}</h2>
+      <div className="custom-design-picker-track">
+        {themes.map((item, index) => <button type="button" key={item.id} aria-label={item.name[language] ?? item.name.en} aria-pressed={selectedIndex === index} onClick={() => setSelectedIndex(index)}>
+          <WeddingThemePreview theme={item} label={copy.preview} />
+          <span className="custom-design-theme-title">{item.name[language] ?? item.name.en}</span>
+        </button>)}
+      </div>
+    </section>
     <section className="custom-design-featured" aria-label={theme.name[language] ?? theme.name.en}>
       <ExperiencePhone category={category} theme={theme} language={language} />
       <div className="custom-design-featured-info">
@@ -64,5 +71,5 @@ export default function CustomDesignGalleryPage() {
       </div>
     </section>
     </div>
-  </div></main>;
+  </div></div>;
 }

@@ -33,9 +33,6 @@
 :root body .preview-pink-minimal .line-birthday-copy:lang(ka) .line-birthday-title { font-size: 14cqw; }
 :root body .preview-party-doodles .line-birthday-copy:lang(ka) .line-birthday-title { left: 12%; width: 76%; font-size: 7.5cqw; }
 .preview-pink-minimal .line-birthday-copy:lang(ka) .line-birthday-phrase { left: 5%; width: 90%; font-size: 2.2cqw; }
-/* Fullscreen keeps the tall reference composition; normal card dimensions are inherited. */
-.invitation-opening:has(.line-birthday-copy) .invitation-opening-frame:not(.is-original) { aspect-ratio: 1 / 2; width: min(100%, calc((100svh - 32px) / 2)); }
-.invitation-opening .invitation-art--portrait:has(.line-birthday-copy) { aspect-ratio: 1 / 2 !important; }
 .invitation-art--portrait .line-birthday-copy > * { left: 13%; width: 74%; }
 .invitation-art--portrait .line-birthday-opening { top: 33%; font-size: 4.4cqw; letter-spacing: .15em; }
 .invitation-art--portrait .line-birthday-title { top: 43%; font-size: 20cqw; line-height: 1; }

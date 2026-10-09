@@ -49,7 +49,7 @@ export default function CustomDesignExperiencePage() {
       <GuestCardSuite template={previewTemplate} sample={sample} customDesign={design} moments={moments} city={sample.city}
         weddingParty={wedding ? [{ id: "maid", role: "maidOfHonour", name: language === "ka" ? "თამარ ბერიძე" : "Tamar Beridze" }, { id: "best", role: "bestMan", name: language === "ka" ? "გიორგი მაისურაძე" : "Giorgi Maisuradze" }] : []}
         copyTranslations={{}} editableFields={[]} settings={settings} photos={photos} dayPlan={dayPlan}
-        noteSettings={{ enabled: true, preset: "wish", prompt: "" }} creator={false} showCreatorTools={false} mobile hasPortrait adaptiveCoverArtwork
+        noteSettings={{ enabled: true, preset: "wish", prompt: "" }} creator={false} showCreatorTools={false} mobile hasPortrait adaptiveCoverArtwork={wedding}
         initialGuestName={language === "ka" ? "თამარ ბერიძე" : "Tamar Beridze"}
         initialNote={language === "ka" ? "გილოცავთ! მოუთმენლად ველი ამ დღეს." : "Congratulations! I can’t wait to celebrate with you."} />
     </div>

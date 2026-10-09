@@ -1,0 +1,14 @@
+{
+  "tool": "built-in image_gen",
+  "brief": "Use case: illustration-story. Standalone transparent watercolor cutout for Pink Lido birthday invitation. Reference concept for object design; existing pink swim ring and yellow parasol for soft watercolor/gouache style, imperfect wash brush marks, textured paper within painted areas, bright colors, handmade edges, simple forms. One complete centered object, 10% transparent margin, no props, text, emoji or ground plane.",
+  "subjects": {
+    "swimsuit": "Cheerful one-piece swimsuit, yellow and warm ivory vertical stripes, two shoulder straps, front view flat lay, slightly tilted.",
+    "sunglasses": "Pink coral cat-eye sunglasses, dark plum lenses, front three-quarter flat lay view.",
+    "hat": "Summer straw sunhat, wide rounded brim, golden straw, broad pink ribbon with a bow, angled top-down three-quarter view."
+  },
+  "assets": {
+    "swimsuit": "/images/birthday/pink-lido/party-accessories/swimsuit.png",
+    "sunglasses": "/images/birthday/pink-lido/party-accessories/sunglasses.png",
+    "hat": "/images/birthday/pink-lido/party-accessories/hat.png"
+  }
+}

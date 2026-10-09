@@ -19,9 +19,28 @@ test('custom collections support weddings and christenings with distinct themes'
 });
 
 test('switching occasions replaces incompatible saved themes with the right default', () => {
-  assert.equal(getCustomThemeForOccasion('silkIvory', 'christening').id, 'christeningBlueDove');
-  assert.equal(getCustomThemeForOccasion('christeningBlueDove', 'wedding').id, 'silkIvory');
+  assert.equal(getCustomThemeForOccasion('somethingBlue', 'christening').id, 'christeningBlueDove');
+  assert.equal(getCustomThemeForOccasion('christeningBlueDove', 'wedding').id, 'somethingBlue');
   assert.equal(getCustomThemeForOccasion('christeningBlushGrace', 'christening').id, 'christeningBlushGrace');
+});
+
+test('removed wedding themes migrate saved drafts while portrait themes retain their styling', () => {
+  const themes = getCustomThemes('wedding');
+  for (const [removed, replacement] of [['gardenVeil', 'meadowMorning'], ['quietParchment', 'pearlLetter'], ['vellumPromise', 'pearlLetter'], ['champagneVows', 'pearlLetter']]) {
+    assert.ok(!themes.some(theme => theme.id === removed));
+    assert.equal(getCustomThemeForOccasion(removed, 'wedding').id, replacement);
+    assert.equal(getClassicalTheme(removed).id, replacement);
+    assert.equal(getDetailsArtwork(removed), getDetailsArtwork(replacement));
+  }
+  assert.equal(getClassicalTheme('forestClassic').id, 'meadowMorning');
+  assert.equal(getClassicalTheme('sepia').id, 'pearlLetter');
+  for (const id of ['couplePortrait', 'couplePortraitDark']) {
+    const theme = getClassicalTheme(id);
+    assert.equal(theme.color, '#efe9db');
+    assert.equal(theme.frameShape, 'arch');
+    assert.equal(theme.italic, true);
+    assert.ok(existsSync(new URL(`../public${theme.frameAsset}`, import.meta.url)));
+  }
 });
 
 test('kids catalog custom entry leads to Christening and other collections are excluded', () => {

@@ -312,10 +312,6 @@ html:has(.guest-preview-page), body:has(.guest-preview-page) { min-width: 0; }
 @keyframes guest-float { 0%, 100% { translate: 0 0; } 50% { translate: 0 -5px; } }
 @keyframes guest-sparkle { 0%, 100% { opacity: .2; } 50% { opacity: 1; } }
 @keyframes guest-shimmer { 0%, 100% { opacity: .75; } 50% { opacity: 1; } }
-.design-guest-preview-link { display: flex; align-items: center; justify-content: space-between; gap: 28px; margin-top: 46px; padding: 30px 0; border-top: 1px solid var(--color-border); border-bottom: 1px solid var(--color-border); }
-.design-guest-preview-link h2 { font-size: 26px; margin: 0 0 10px; }
-.design-guest-preview-link p { max-width: 58ch; color: var(--color-text-secondary); font-size: 15px; line-height: 1.6; margin: 0; }
-.design-guest-preview-link .invitation-open-action { margin: 0; flex-shrink: 0; }
 /* Soft screen treatments apply on desktop and mobile; artwork stays vivid. */
 .guest-preview-page[data-template="birthday-slice-club"],
 .guest-card-suite[data-template="birthday-slice-club"] {
@@ -420,7 +416,6 @@ html:has(.guest-preview-page), body:has(.guest-preview-page) { min-width: 0; }
   .guest-preview-stage, .guest-preview-stage.is-mobile { margin-top: 0; box-shadow: none; --guest-screen-height: calc(100svh - 66px); }
   .guest-lightbox-inner { padding: 8px; }
   .guest-lightbox-close { top: 14px; right: 14px; }
-  .design-guest-preview-link { align-items: start; flex-direction: column; gap: 16px; }
 }
 @media (prefers-reduced-motion: reduce) {
   .guest-opening-celebration { display: none; }

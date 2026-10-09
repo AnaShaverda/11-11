@@ -23,15 +23,10 @@ export const classicalPapers = {
 };
 
 const themeDetailsDrawings = {
-  silkIvory: "silkIvory",
   somethingBlue: "somethingBlue",
   pressedRose: "pressedRose",
-  gardenVeil: "meadowMorning",
   pearlLetter: "pearlLetter",
   lilacWhisper: "pearlLetter",
-  champagneVows: "silkIvory",
-  vellumPromise: "silkIvory",
-  quietParchment: "silkIvory",
   meadowMorning: "meadowMorning",
   autumn: "autumn",
   rtveli: "rtveli",
@@ -41,7 +36,7 @@ const themeDetailsDrawings = {
 
 export function getDetailsArtwork(themeId) {
   if (themeId?.startsWith("christening")) return getClassicalTheme(themeId).illustration;
-  return `/images/wedding-themes/${themeDetailsDrawings[themeId] ?? "silkIvory"}-illustration.webp`;
+  return `/images/wedding-themes/${themeDetailsDrawings[legacyThemeIds[themeId] ?? themeId] ?? "ivoryDetails"}-illustration.webp`;
 }
 
 export const footerScenes = {
@@ -77,30 +72,6 @@ export const ornamentTones = {
 };
 
 export const classicalThemes = [
-  {
-    id: "silkIvory",
-    number: "01",
-    name: {
-      en: "Silk & Ivory",
-      ka: "აბრეშუმი და სპილოსძვლისფერი",
-    },
-    color: "#f4efe5",
-    ink: "#554635",
-    accent: "#aa967a",
-    paper: "ivory",
-    frame: "stationery",
-    frameShape: "oval",
-    pattern: "plain",
-    font: "serif",
-    layout: "center",
-    scene: "",
-    footerScene: "none",
-    ornament: "",
-    italic: false,
-    frameAsset: "/images/wedding-themes/silkIvory-frame.webp",
-    ornamentAsset: "/images/wedding-themes/silkIvory-ornaments.webp",
-    illustration: "/images/wedding-themes/silkIvory-illustration.webp",
-  },
   {
     id: "somethingBlue",
     number: "02",
@@ -149,30 +120,7 @@ export const classicalThemes = [
     ornamentAsset: "/images/wedding-themes/pressedRose-ornaments.webp",
     illustration: "/images/wedding-themes/pressedRose-illustration.webp",
   },
-  {
-    id: "gardenVeil",
-    number: "04",
-    name: {
-      en: "Garden Veil",
-      ka: "ბაღის ნაზი ფარდა",
-    },
-    color: "#f3f1e7",
-    ink: "#48503d",
-    accent: "#929977",
-    paper: "ivory",
-    frame: "stationery",
-    frameShape: "arch",
-    pattern: "plain",
-    font: "serif",
-    layout: "center",
-    scene: "",
-    footerScene: "none",
-    ornament: "",
-    italic: false,
-    frameAsset: "/images/wedding-themes/gardenVeil-frame.webp",
-    ornamentAsset: "/images/wedding-themes/gardenVeil-ornaments.webp",
-    illustration: "/images/wedding-themes/gardenVeil-illustration.webp",
-  },
+
   {
     id: "pearlLetter",
     number: "05",
@@ -221,78 +169,7 @@ export const classicalThemes = [
     ornamentAsset: "/images/wedding-themes/lilacWhisper-ornaments.webp",
     illustration: "/images/wedding-themes/lilacWhisper-illustration.webp",
   },
-  {
-    id: "champagneVows",
-    number: "07",
-    name: {
-      en: "Champagne Vows",
-      ka: "შამპანურისფერი აღთქმა",
-    },
-    color: "#f5efe3",
-    ink: "#5b4837",
-    accent: "#b99b71",
-    paper: "ivory",
-    frame: "stationery",
-    frameShape: "rectangle",
-    pattern: "plain",
-    font: "serif",
-    layout: "center",
-    scene: "",
-    footerScene: "none",
-    ornament: "",
-    italic: true,
-    frameAsset: "/images/wedding-themes/champagneVows-frame.webp",
-    ornamentAsset: "/images/wedding-themes/champagneVows-ornaments.webp",
-    illustration: "/images/wedding-themes/champagneVows-illustration.webp",
-  },
-  {
-    id: "vellumPromise",
-    number: "08",
-    name: {
-      en: "Vellum Promise",
-      ka: "ნაზი დაპირება",
-    },
-    color: "#f4f0e9",
-    ink: "#5d5245",
-    accent: "#b3a38e",
-    paper: "ivory",
-    frame: "stationery",
-    frameShape: "arch",
-    pattern: "plain",
-    font: "serif",
-    layout: "center",
-    scene: "",
-    footerScene: "none",
-    ornament: "",
-    italic: false,
-    frameAsset: "/images/wedding-themes/vellumPromise-frame.webp",
-    ornamentAsset: "/images/wedding-themes/vellumPromise-ornaments.webp",
-    illustration: "/images/wedding-themes/vellumPromise-illustration.webp",
-  },
-  {
-    id: "quietParchment",
-    number: "09",
-    name: {
-      en: "Quiet Parchment",
-      ka: "მშვიდი პერგამენტი",
-    },
-    color: "#efe9db",
-    ink: "#514b36",
-    accent: "#a29471",
-    paper: "ivory",
-    frame: "stationery",
-    frameShape: "arch",
-    pattern: "plain",
-    font: "serif",
-    layout: "center",
-    scene: "",
-    footerScene: "none",
-    ornament: "",
-    italic: true,
-    frameAsset: "/images/wedding-themes/quietParchment-frame.webp",
-    ornamentAsset: "/images/wedding-themes/quietParchment-ornaments.webp",
-    illustration: "/images/wedding-themes/quietParchment-illustration.webp",
-  },
+
   {
     id: "meadowMorning",
     number: "10",
@@ -370,7 +247,20 @@ export const classicalThemes = [
 // Photo cover stays confined to the first invitation card.
 export const portraitSamplePhoto = "/images/wedding/portrait-sample.png";
 classicalThemes.push({
-  ...classicalThemes.find((theme) => theme.id === "quietParchment"),
+  color: "#efe9db",
+  ink: "#514b36",
+  accent: "#a29471",
+  paper: "ivory",
+  frame: "stationery",
+  frameShape: "arch",
+  pattern: "plain",
+  font: "serif",
+  layout: "center",
+  scene: "",
+  footerScene: "none",
+  ornament: "",
+  italic: true,
+  frameAsset: "/images/wedding-themes/quietParchment-frame.webp",
   id: "couplePortrait",
   number: "13",
   name: { en: "Our Portrait — Light", ka: "ჩვენი პორტრეტი — ღია" },
@@ -390,7 +280,10 @@ classicalThemes.push({
 });
 
 // Existing local drafts keep their content and footer while moving to the new collection.
-export const weddingCustomThemes = classicalThemes.map(theme => ({ ...theme, occasion: "wedding" }));
+export const weddingCustomThemes = [
+  ...classicalThemes.filter(theme => theme.photoTheme),
+  ...classicalThemes.filter(theme => !theme.photoTheme),
+].map(theme => ({ ...theme, occasion: "wedding" }));
 export const christeningCustomThemes = [
   { id: "christeningBlueDove", name: { en: "Blue Dove", ka: "ცისფერი მტრედი" }, color: "#fffaf2", ink: "#49677c", accent: "#9bb7c9", frameAsset: null, ornamentAsset: "/images/christening/blue-dove.png", christeningLayout: "sky" },
   { id: "christeningOliveBlessing", name: { en: "Olive Blessing", ka: "ზეთისხილის კურთხევა" }, color: "#faf8ef", ink: "#54674f", accent: "#a3b392", frameAsset: null, ornamentAsset: "/images/christening/olive-wreath.png", christeningLayout: "wreath" },
@@ -404,25 +297,31 @@ export function getCustomThemes(occasion) {
 }
 export function getCustomThemeForOccasion(id, occasion) {
   const themes = getCustomThemes(occasion);
-  return themes.find(theme => theme.id === id) ?? themes[0];
+  return themes.find(theme => theme.id === (legacyThemeIds[id] ?? id))
+    ?? themes.find(theme => theme.id === "somethingBlue")
+    ?? themes[0];
 }
 
 const legacyThemeIds = {
-  ivoryClassic: "silkIvory",
+  ivoryClassic: "somethingBlue",
   blueClassic: "somethingBlue",
-  forestClassic: "gardenVeil",
-  sepia: "quietParchment",
-  heritage: "silkIvory",
+  gardenVeil: "meadowMorning",
+  quietParchment: "pearlLetter",
+  vellumPromise: "pearlLetter",
+  champagneVows: "pearlLetter",
+  forestClassic: "meadowMorning",
+  sepia: "pearlLetter",
+  heritage: "somethingBlue",
   romance: "pressedRose",
   midnight: "pearlLetter",
-  gilded: "champagneVows",
+  gilded: "pearlLetter",
   silver: "pearlLetter",
   sageMeadow: "meadowMorning",
   pastelBloom: "pressedRose",
   lavenderHour: "lilacWhisper",
   bluePorcelain: "somethingBlue",
-  embossedIvory: "vellumPromise",
-  embossedSage: "vellumPromise",
+  embossedIvory: "pearlLetter",
+  embossedSage: "pearlLetter",
 };
 export function getClassicalTheme(id) {
   return (
