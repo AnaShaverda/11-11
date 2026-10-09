@@ -41,7 +41,7 @@ export default function BirthdayCake() {
     if (next.every((flame) => !flame)) {
       releaseMicrophone();
       setMicrophoneState("idle");
-      setMessage("Your wish is on its way, Ani. Happy birthday!");
+      setMessage("Your wish is on its way, " + name + ". Happy birthday!");
     } else {
       setMessage("Keep going—there are more wishes to make.");
     }

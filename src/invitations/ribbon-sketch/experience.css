@@ -1,0 +1,102 @@
+
+@import "./fonts.css";
+
+
+.ribbon-sketch { position:relative;container-type:inline-size;isolation:isolate;width:100%;min-height:100svh;background:#fff8f5;color:#731d34;color-scheme:light;font-family:"RS Inter",sans-serif; }
+.ribbon-sketch :where(p,h1,h2,h3,figure) { margin:0; }
+.ribbon-sketch :where(button,input,textarea) { font:inherit;border:0;border-radius:0;margin:0;color:inherit;background:transparent;text-align:inherit; }
+.ribbon-sketch :where(button) { padding:0;cursor:pointer; }
+.ribbon-sketch :where(input,textarea) { outline-offset:3px; }
+.ribbon-sketch :where(img) { display:block; }
+.ribbon-sketch :where(form) { margin:0; }
+.ribbon-sketch :focus-visible { outline:2px solid #ad1626;outline-offset:5px; }
+.ribbon-sketch .rs-reference { --rs-u:calc(100cqw / 1440);width:100%;height:auto; }
+.ribbon-sketch .rs-reference-mobile { --rs-u:calc(100cqw / 390); }
+.ribbon-sketch .rs-polaroid { transition:scale .2s; }
+.ribbon-sketch[data-motion="true"] .rs-polaroid:hover { scale:1.025; }
+.ribbon-sketch .rs-polaroid:focus-visible { z-index:5; }
+.ribbon-sketch .rs-response-form input,.ribbon-sketch .rs-wish-form input,.ribbon-sketch .rs-wish-form textarea { font-family:"RS Inter",sans-serif;font-size:calc(13 * var(--rs-u));line-height:1.6;color:#731d34; }
+.ribbon-sketch input::placeholder,.ribbon-sketch textarea::placeholder { color:#8d5b69;opacity:1; }
+.ribbon-sketch textarea { resize:vertical; }
+.ribbon-sketch .rs-attendance[aria-pressed="true"] { border:1px solid #ad1626;background:#fff8f5;color:#ad1626; }
+.ribbon-sketch .rs-attendance[aria-pressed="false"] { border:1px solid #dfa5b6;background:transparent;color:#731d34; }
+.ribbon-sketch [data-film]::before,.ribbon-sketch [data-film]::after { content:"";position:absolute;z-index:2;pointer-events:none; }
+.ribbon-sketch [data-film-direction="horizontal"]::before,.ribbon-sketch [data-film-direction="horizontal"]::after { left:calc(3 * var(--rs-u));right:0;height:calc(4 * var(--rs-u));background:repeating-linear-gradient(90deg,#fff8f5 0 calc(7 * var(--rs-u)),transparent calc(7 * var(--rs-u)) calc(14 * var(--rs-u))); }
+.ribbon-sketch [data-film-direction="horizontal"]::before { top:calc(3 * var(--rs-u)); }
+.ribbon-sketch [data-film-direction="horizontal"]::after { bottom:calc(3 * var(--rs-u)); }
+.ribbon-sketch [data-film-direction="vertical"]::before,.ribbon-sketch [data-film-direction="vertical"]::after { top:calc(3 * var(--rs-u));bottom:0;width:calc(4 * var(--rs-u));background:repeating-linear-gradient(#fff8f5 0 calc(7 * var(--rs-u)),transparent calc(7 * var(--rs-u)) calc(14 * var(--rs-u))); }
+.ribbon-sketch [data-film-direction="vertical"]::before { left:calc(3 * var(--rs-u)); }
+.ribbon-sketch [data-film-direction="vertical"]::after { right:calc(3 * var(--rs-u)); }
+.ribbon-sketch[data-open="true"] [data-name="The sealed invitation"] { visibility:hidden; }
+.rs-open-stage { position:absolute;left:0;top:0;width:100%;height:62.5cqw;display:grid;place-items:center;background:#fbd5de; }
+.rs-open-panel { width:min(390px,100%);container-type:inline-size; }
+.ribbon-sketch .rs-reference-open { --rs-u:calc(100cqw / 390); }
+.ribbon-sketch[data-motion="true"] .rs-open-panel { animation:rs-unseal .6s ease-out; }
+@keyframes rs-unseal { from { opacity:0;translate:0 20px; } to { opacity:1;translate:0 0; } }
+.rs-file-input,.rs-sr-only { position:absolute!important;width:1px!important;height:1px!important;overflow:hidden!important;clip-path:inset(50%);white-space:nowrap; }
+.rs-modal-backdrop { position:fixed;z-index:1000;inset:0;display:grid;place-items:center;padding:20px;background:#37101ec9;backdrop-filter:blur(5px); }
+.rs-modal { position:relative;width:min(390px,100%);max-height:calc(100svh - 40px);overflow:auto;overscroll-behavior:contain;container-type:inline-size;background:#fbd5de;box-shadow:0 20px 80px #0004; }
+.ribbon-sketch .rs-modal .rs-reference { --rs-u:calc(100cqw / 390); }
+.ribbon-sketch .rs-modal-close { position:absolute;z-index:9;right:6px;top:4px;width:30px;height:30px;font:22px "RS Inter",sans-serif;color:#ad1626; }
+.ribbon-sketch .rs-modal-photo .rs-modal-close { display:none; }
+.rs-local-note { padding:0 24px 16px!important;font:11px/1.6 "RS Inter",sans-serif;color:#8d5b69;text-align:center; }
+.rs-new-photos { display:flex;flex-wrap:wrap;justify-content:center;gap:25px;padding:45px 24px;background:#fbd5de; }
+.rs-new-photos button { width:150px;padding:8px;background:#fffcf8;box-shadow:2px 7px 14px #731d3426;rotate:-4deg; }
+.rs-new-photos img { width:100%;aspect-ratio:1;object-fit:cover; }
+.rs-new-photos span { display:block;margin-top:8px;font:20px "RS Caveat",cursive; }
+@media(max-width:899px) {
+  .rs-open-stage { height:216.6667cqw;align-items:start;padding-top:15cqw; }
+  .rs-open-panel { width:100%; }
+}
+@media(prefers-reduced-motion:reduce) {
+  .ribbon-sketch * { animation:none!important;transition:none!important;scroll-behavior:auto!important; }
+}
+.ribbon-sketch[data-motion="false"] * { animation:none!important;transition:none!important;scroll-behavior:auto!important; }
+
+.ribbon-sketch { --font-main:'RS Inter'; }
+.ribbon-sketch .rs-confirmation-headline { line-height:.98; }
+.ribbon-sketch .rs-confirmation-message { line-height:1.6; }
+
+.ribbon-sketch [data-name='Handwritten birthday message'] {line-height:1.2;white-space:pre-wrap;}
+
+.ribbon-sketch [data-name='Realistic CRT television body'],.ribbon-sketch [data-name='Realistic camera body'],.ribbon-sketch [data-name='Pink envelope with red ribbon'],.ribbon-sketch [data-name='Open physical pink envelope'] {pointer-events:none;}
+.ribbon-sketch [data-name='Photo playback navigation'],.ribbon-sketch [data-name='Capture action'] {z-index:4;}
+
+.ribbon-sketch .rs-reference-mobile430 { --rs-u:calc(100cqw / 430); }
+
+/* Ribbon Sketch envelope shares the existing flap and letter motion. */
+.rs-ribbon-opening { position:relative;width:100%;height:100svh;min-height:560px;container-type:size;background:#f1ece5;--font-main:'RS Cormorant Garamond'; }
+.rs-ribbon-letter { position:absolute;left:50%;top:50%;translate:-50% -50%;width:min(560px,88cqw,78cqh);aspect-ratio:1;box-shadow:0 12px 50px #731d3418; }
+.rs-ribbon-opening .guest-invitation-entrance { --letter-start-y:calc(var(--envelope-top) + var(--envelope-height) * .15 - 50cqh); }
+.rs-ribbon-opening .guest-envelope-open { --font-main:'RS Inter'; }
+.ribbon-sketch.rs-with-ribbon-opening[hidden] { display:none; }
+.ribbon-sketch.rs-with-ribbon-opening [data-name="The sealed invitation"] { display:none; }
+@media(max-width:600px) { .rs-ribbon-opening { min-height:440px; } }
+.rs-ribbon-opening .guest-envelope-greeting { color:var(--guest-ink); }
+
+/* Show the complete generated illustrations inside each scrapbook and screen slot. */
+.ribbon-sketch img:is([src*="/images/party/"],[src*="/images/wedding/heartmarked/ribbon-wine-clink"],[src*="/images/birthday/velvet-post/bow-"],[src*="/images/birthday/peach-fizz/coupe-artwork"]) { object-fit:contain;background:#fff4f1;padding:4%; }
+
+.rs-ribbon-opening { background:#fbd5de; }
+.rs-ribbon-opening .paper-envelope { --guest-paper:#f4cbd5!important;--guest-ink:#8d263d!important;--guest-accent:#ad1626!important;--soft-paper-image:url('/images/birthday/ribbon-sketch/ribbon-envelope-texture.png');--soft-paper-base:#f4cbd5;--soft-paper-seam:#8d263d55;--soft-paper-shadow:#8d263d; }
+.rs-ribbon-opening .guest-envelope-scene::before { background:radial-gradient(ellipse at 50% 45%,#fff4f1,#fbd5de); }
+
+
+
+
+.rs-ribbon-opening .guest-envelope-seal { top:62%;width:38%;border:0;border-radius:0;background:none;box-shadow:none; }
+.rs-ribbon-opening .guest-envelope-custom-seal { display:block;width:100%;height:100%;object-fit:contain; }
+.rs-ribbon-opening .guest-envelope-greeting { --font-main:'RS Caveat';font-size:clamp(26px,5cqw,40px); }
+.rs-ribbon-opening .guest-envelope-title { --font-main:'RS Caveat';font-size:clamp(18px,4cqw,26px); }
+ .rs-ribbon-opening .guest-envelope-title { left:6%;width:38%;bottom:9%;text-align:left;font-size:clamp(14px,3cqw,20px); }
+
+.ribbon-sketch .rs-replay-envelope { position:fixed;top:max(12px,env(safe-area-inset-top));right:max(12px,env(safe-area-inset-right));z-index:10;display:flex;align-items:center;gap:7px;padding:10px 14px;border:1px solid #ad162633;border-radius:24px;background:#fff8f5ed;color:#8d263d;--font-main:'RS Inter';font-size:12px;line-height:1.4;box-shadow:0 3px 12px #731d3410; }
+.ribbon-sketch .rs-replay-envelope span { font-size:19px;line-height:1; }
+.ribbon-sketch .rs-replay-envelope:hover { background:#fbd5de; }
+
+.rs-ribbon-opening .guest-envelope-greeting {display:none}
+.rs-ribbon-opening .paper-envelope {--guest-paper:#fff8f5!important;--soft-paper-image:url('/images/birthday/ribbon-sketch/sketch-paper.png');--soft-paper-base:#fff8f5}
+.rs-ribbon-opening .guest-envelope-open {border:1px solid #8d263d!important;border-radius:48% 52% 49% 51%/55% 43% 57% 45%!important;padding:14px 28px!important;min-height:52px;background:#fff8f577!important;rotate:-2deg}
+.rs-ribbon-opening .guest-envelope-open::after {content:"♡";margin-left:12px;font-size:22px}
+.rs-ribbon-opening .guest-envelope-open > span {border-bottom:0!important}
+.rs-ribbon-opening .guest-envelope-open {border:0!important;border-radius:0!important;background:none!important;padding:0!important;rotate:0}.rs-ribbon-opening .guest-envelope-open::after{content:none}.rs-ribbon-opening .guest-envelope-open>span{border-bottom:1px solid #8d263d!important;padding-bottom:8px}

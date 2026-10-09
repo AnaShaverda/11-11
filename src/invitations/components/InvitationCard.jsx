@@ -1,3 +1,4 @@
+import RibbonSketchCardArt from "./RibbonSketchCardArt.jsx";
 import { useRef } from "react";
 import useInvitationTextLayout from "../hooks/useInvitationTextLayout.js";
 import SelectedBridalPoster from "./SelectedBridalPoster.jsx";
@@ -72,7 +73,7 @@ export function InvitationArtwork({
   const invitedLabel = formatCardOpening(
     t("invitations.invited"),
     language,
-    typography.opening
+    typography.opening,
   );
   const artworkRoot = useRef(null);
   const defaults = getInvitationSample(template.slug, t);
@@ -82,10 +83,13 @@ export function InvitationArtwork({
     Object.entries(sample)
       .filter(
         ([key, value]) =>
-          value !== defaults[key] && ["string", "number"].includes(typeof value)
+          value !== defaults[key] &&
+          ["string", "number"].includes(typeof value),
       )
-      .map(([, value]) => String(value))
+      .map(([, value]) => String(value)),
   );
+  if (template.slug === "birthday-ribbon-sketch")
+    return <RibbonSketchCardArt />;
   const { design } = template;
   const photoCard = template.visualAssets?.photoCard;
   const layeredScene =
@@ -152,7 +156,8 @@ export function InvitationArtwork({
           : {}),
       }}
       aria-hidden={ariaLabel ? undefined : true}
-      aria-label={ariaLabel}>
+      aria-label={ariaLabel}
+    >
       {layeredScene ? (
         <div className="invitation-layered-copy">
           <InvitationArtwork
@@ -212,7 +217,7 @@ export function InvitationArtwork({
         />
       ) : coverImage &&
         ["cherry-toast", "little-yes", "blush-lift"].includes(
-          template.visual
+          template.visual,
         ) ? (
         <BridalLinePoster variant={template.visual} {...sample} />
       ) : coverImage && template.subcategory === "gender-reveal" ? (
@@ -221,7 +226,7 @@ export function InvitationArtwork({
         <WeddingHeartPoster {...sample} />
       ) : coverImage &&
         ["wedding-day-notes", "date-and-dinner", "colorful-company"].includes(
-          template.visual
+          template.visual,
         ) ? (
         <WeddingDayPoster variant={template.visual} {...sample} />
       ) : coverImage &&
@@ -438,13 +443,15 @@ export default function InvitationCard({ template, animationIndex = 0 }) {
       }}
       to={`/invitations/${template.slug}`}
       aria-label={`${t("common.exploreDesign")}: ${t(
-        `themes.${template.id}.name`
-      )}: ${sample.title}`}>
+        `themes.${template.id}.name`,
+      )}: ${sample.title}`}
+    >
       <div className="invitation-card-media">
         {template.category === "Birthday" ? (
           <div
             className="birthday-card-artwork"
-            style={{ "--card-paper": template.design.palette[0] }}>
+            style={{ "--card-paper": template.design.palette[0] }}
+          >
             <InvitationArtwork template={template} />
           </div>
         ) : (

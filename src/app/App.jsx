@@ -1,3 +1,5 @@
+import { lazy, Suspense } from "react";
+import SiteLoader from "../components/ui/SiteLoader.jsx";
 import { Navigate, Route, Routes, useLocation } from "react-router-dom";
 import WebsiteLayout from "../components/layout/WebsiteLayout.jsx";
 import WebsiteIntroLayout from "../components/layout/WebsiteIntroLayout.jsx";
@@ -26,6 +28,8 @@ import PinkLidoExperience from "../invitations/pages/PinkLidoExperience.jsx";
 import CherryTowerExperience from "../invitations/pages/CherryTowerExperience.jsx";
 import CocktailSummerExperience from "../invitations/pages/CocktailSummerExperience.jsx";
 
+const RibbonSketchExperience = lazy(() => import("../invitations/pages/RibbonSketchExperience.jsx"));
+
 function InvitationCatalogRedirect() {
   const { search, hash, state } = useLocation();
   const params = new URLSearchParams(search);
@@ -45,6 +49,7 @@ function InvitationCatalogRedirect() {
 export default function App() {
   return (
     <Routes>
+      <Route path="invitations/birthday-ribbon-sketch" element={<Suspense fallback={<SiteLoader pending />}><RibbonSketchExperience /></Suspense>} />
       <Route path="invitations/bridal-pink-country-club" element={<CocktailSummerExperience key="pink-country-club" theme="pink-country-club" />} />
       <Route path="invitations/bridal-citrus-cool" element={<CocktailSummerExperience key="citrus-cool" theme="citrus-cool" />} />
       <Route path="invitations/bridal-cherry-soda" element={<CocktailSummerExperience key="cherry-soda" theme="cherry-soda" />} />

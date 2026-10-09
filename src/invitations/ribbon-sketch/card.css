@@ -1,0 +1,33 @@
+
+@import "./fonts.css";
+.rs-catalog-art { position:relative; width:100%;height:100%;min-height:100%;overflow:hidden;container-type:inline-size;background:#fff8f5;color:#ad1626;font-family:"RS Cormorant Garamond",serif; }
+.rs-catalog-art * { box-sizing:border-box; }
+.rs-card-eyebrow { position:absolute;left:7%;top:8%;font:2.3cqw "RS Inter",sans-serif;letter-spacing:.02em; }
+.rs-card-name { position:absolute;left:6%;top:19%;font-size:21cqw;line-height:.9;font-weight:400; }
+.rs-card-era { position:absolute;left:10%;top:35%;font:7.8cqw "RS Caveat",cursive;rotate:-7deg;color:#731d34; }
+.rs-card-promise { position:absolute;left:7%;top:53%;font-size:4.2cqw;color:#731d34; }
+.rs-card-date { position:absolute;left:7%;top:66%;font:2.2cqw/1.9 "RS Inter",sans-serif; }
+.rs-card-photo { position:absolute;width:27%;padding:2% 2% 1%;background:#fffcf8;box-shadow:1px 4px 9px #731d3424; }
+.rs-card-photo img { display:block;width:100%;aspect-ratio:1;object-fit:cover; }
+.rs-card-photo span { display:block;text-align:center;font:3.2cqw/1.5 "RS Caveat",cursive;white-space:nowrap;color:#731d34; }
+.rs-card-photo-mia { top:25%;right:7%;rotate:8deg; }
+.rs-card-photo-cake { top:53%;right:18%;width:23%;rotate:-12deg; }
+.rs-card-bow { position:absolute;width:20%;height:auto;right:0;top:51%;rotate:16deg; }
+.rs-card-ribbon { position:absolute;left:3%;bottom:7%;width:51%;height:12%;object-fit:cover; }
+.rs-card-invited { position:absolute;right:3%;bottom:8%;font:5.2cqw "RS Caveat",cursive;rotate:-8deg; }
+
+.rs-catalog-art {--font-main:'RS Cormorant Garamond'}
+.rs-card-eyebrow,.rs-card-date {--font-main:'RS Inter'}
+.rs-card-era,.rs-card-photo span,.rs-card-invited {--font-main:'RS Caveat'}
+
+.rs-card-photo img { object-fit:contain;background:#fff4f1;padding:4%; }
+.rs-catalog-art-refined { background-color:#fff8f5;background-image:radial-gradient(#ad162612 .7px,transparent .7px);background-size:15px 15px; } .rs-catalog-art-refined .rs-card-name { top:18%;font-size:20cqw; } .rs-catalog-art-refined .rs-card-era { top:35%;left:7%;font-size:6.2cqw; } .rs-catalog-art-refined .rs-card-promise { top:53%;font-size:3.8cqw;width:48%;line-height:1.2; } .rs-catalog-art-refined .rs-card-date { top:67%; } .rs-card-wine { position:absolute;right:3%;top:30%;width:42%;height:45%;object-fit:contain; }
+
+.rs-card-new{background:#fffaf1;color:#710b1a;background-image:radial-gradient(#710b1a88 .6px,transparent .8px);background-size:5cqw 5cqw;--font-main:"RS Cormorant Garamond"}
+.rs-card-new-frame{position:absolute;inset:2%;width:96%;height:96%;object-fit:fill;filter:brightness(.5) saturate(.8)}
+.rs-card-new-eyebrow{position:absolute;top:22%;left:15%;width:70%;text-align:center;--font-main:"RS Caveat";font-size:5cqw}
+.rs-card-new-name{position:absolute;top:29%;left:15%;width:70%;text-align:center;font-size:18cqw;line-height:.9;font-weight:400}
+.rs-card-new-era{position:absolute;left:15%;top:47%;width:70%;text-align:center;--font-main:"RS Caveat";font-size:6cqw;rotate:-3deg}
+.rs-card-new-coupe{position:absolute;left:39%;top:57%;width:22%;height:22%;object-fit:contain}
+.rs-card-new-date{position:absolute;top:81%;left:15%;width:70%;text-align:center;--font-main:"RS Inter";font-size:2.4cqw;line-height:1.7;letter-spacing:.08em}
+.rs-card-new-love{position:absolute;top:91%;left:15%;width:70%;text-align:center;--font-main:"RS Caveat";font-size:3.5cqw}

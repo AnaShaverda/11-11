@@ -1,0 +1,28 @@
+@font-face {
+  font-family: 'RS Caveat';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(/fonts/ribbon-sketch/012f33f9814bf961.woff2) format('truetype');
+}
+@font-face {
+  font-family: 'RS Cormorant Garamond';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(/fonts/ribbon-sketch/6d37a86241a25d63.woff2) format('truetype');
+}
+@font-face {
+  font-family: 'RS Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(/fonts/ribbon-sketch/1b08e7fc267a5c7e.woff2) format('truetype');
+}
+@font-face {
+  font-family: 'RS Inter';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(/fonts/ribbon-sketch/8c883f63b2c4157d.woff2) format('truetype');
+}

@@ -1,0 +1,10 @@
+<svg preserveAspectRatio="none" overflow="visible" style="display: block;" width="100.75" height="100.75" viewBox="0 0 100.75 100.75" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle id="Editable control wheel" cx="50.375" cy="50.375" r="49.375" fill="url(#paint0_linear_0_29)" stroke="#C7C1B8" stroke-width="2"/>
+<defs>
+<linearGradient id="paint0_linear_0_29" x1="0" y1="0" x2="0" y2="100.75" gradientUnits="userSpaceOnUse">
+<stop stop-color="#F3EEE5"/>
+<stop offset="0.45" stop-color="#B7B1A7"/>
+<stop offset="1" stop-color="#E6E0D8"/>
+</linearGradient>
+</defs>
+</svg>

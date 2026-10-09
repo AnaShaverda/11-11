@@ -15,12 +15,12 @@ function shouldShowLoader() {
   return true;
 }
 
-export default function SiteLoader() {
+export default function SiteLoader({ pending = false, always = false }) {
   const { t } = useLanguage();
-  const [visible, setVisible] = useState(shouldShowLoader);
+  const [visible, setVisible] = useState(() => pending || always || shouldShowLoader());
 
   useEffect(() => {
-    if (!visible) return undefined;
+    if (pending || !visible) return undefined;
     try {
       window.sessionStorage.setItem(storageKey, "true");
     } catch {
@@ -28,9 +28,9 @@ export default function SiteLoader() {
     }
     const timer = window.setTimeout(() => setVisible(false), 1250);
     return () => window.clearTimeout(timer);
-  }, [visible]);
+  }, [visible, pending]);
 
-  if (!visible) return null;
+  if (!pending && !visible) return null;
 
   return (
     <div
