@@ -48,7 +48,7 @@ export default function RibbonSketchDesign({
 
     <section className="rsb-postcard-hero" id="party-home" data-name="Birthday girl era">
       <div className="rsb-postcard-wrap" data-cheers={cheers}><RibbonSketchCardArt key="pink-ink-clean-glass" hero onCheers={celebrate} /></div>
-      <button type="button" className="rsb-button rsb-postcard-rsvp" onClick={() => go("party-reply")}>{tr("I’ll be there")}<span aria-hidden="true"><InvitationArtwork name="arrow-right" size="1em" /></span></button>
+      <button type="button" className="rsb-scroll-cue" onClick={() => go("party-details")} aria-label={tr("Scroll to party details")}><InvitationArtwork name="arrow-down" size={22} /></button>
     </section>
     <section className="rsb-details rsb-reveal" id="party-details" aria-label={tr("Party details")}><RibbonSectionBubbles />
       <div className="rsb-date-art"><span>{tr("23")}</span><p>{tr("MAY 2027")}</p><small>{tr("A very special day")}<br /><span className="rsb-hand"><InvitationArtwork name="heart-filled" size="1em" /></span></small></div>
@@ -58,7 +58,7 @@ export default function RibbonSketchDesign({
     <RibbonSketchGames />
     <RibbonSketchWishSection actions={actions} state={state} />
     <section className="rsb-reply rsb-reveal" id="party-reply" aria-labelledby="rsb-reply-title"><RibbonSectionBubbles />
-      <div className="rsb-reply-heading"><h2 id="rsb-reply-title">{tr("Will you")}<br />{tr("be there?")}</h2><img className="rsb-reply-cake" src="/images/components/separated/ribbon-social-cake.webp" alt="" /><p className="rsb-reply-note">{tr("It wouldn\u2019t be the same")}<br />{tr("without you")}<br /><span className="rsb-hand"><InvitationArtwork name="heart-filled" size="1em" /></span></p></div>
+      <div className="rsb-reply-heading"><h2 id="rsb-reply-title">{tr("Will you")}<br />{tr("be there?")}</h2><img className="rsb-reply-cake" src="/images/birthday/ribbon-sketch/blush-ribbon-cake.webp" alt="" /><p className="rsb-reply-note">{tr("It wouldn\u2019t be the same")}<br />{tr("without you")}<br /><span className="rsb-hand"><InvitationArtwork name="heart-filled" size="1em" /></span></p></div>
       <div className="rsb-stationery">
       <form className="rsb-response-form" data-name="Will you be there RSVP" onSubmit={event => {
             actions.rsvp(event);

@@ -19,11 +19,11 @@ const themeAssets = {
       component("red-heart", at(45, 84, 10, 10), at(43, 85, 14, 8)),
     ],
   },
-  "birthday-party-doodles": {
+  "birthday-playground": {
     background: { color: "#fff5df" },
     components: [
-      { id: "playground-cake", image: "/images/birthday/party-doodles/playground/cake.webp", ...at(27, 56, 37, 40), portrait: at(25, 59, 40, 35) },
-      { id: "playground-present", image: "/images/birthday/party-doodles/playground/gift.webp", ...at(52, 33, 49, 63), portrait: at(52, 40, 49, 55) },
+      { id: "playground-cake", image: "/images/birthday/playground/cake.webp", ...at(27, 56, 37, 40), portrait: at(25, 59, 40, 35) },
+      { id: "playground-present", image: "/images/birthday/playground/gift.webp", ...at(52, 33, 49, 63), portrait: at(52, 40, 49, 55) },
     ],
   },
   "birthday-white-and-blue": {

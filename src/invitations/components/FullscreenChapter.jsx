@@ -26,7 +26,7 @@ export default function FullscreenChapter({ children, chrome, className = "", co
   document.fonts.ready.then(measure);
   return () => { cancelAnimationFrame(frame); resize.disconnect(); visible.disconnect(); };
  }, []);
- return <section {...props} ref={section} className={`${className} doodles-fullscreen`}>
-  {chrome}<div ref={content} className={`doodles-screen-content ${contentClassName}`} style={{ "--chapter-scale": scale }}>{children}</div>
+ return <section {...props} ref={section} className={`${className} playground-fullscreen`}>
+  {chrome}<div ref={content} className={`playground-screen-content ${contentClassName}`} style={{ "--chapter-scale": scale }}>{children}</div>
  </section>;
 }

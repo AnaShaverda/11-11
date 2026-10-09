@@ -6,15 +6,15 @@ import { useEffect, useRef, useState } from "react";
 import RibbonSketchDesign from "../ribbon-sketch/RibbonSketchDesign.jsx";
 import InvitationEntrance from "../components/InvitationEntrance.jsx";
 import RibbonSketchCardArt from "../components/RibbonSketchCardArt.jsx";
-import { ribbonAssets, ribbonPhotos, ribbonPhotoCaptions } from "../ribbon-sketch/assets.js";
+import { ribbonPhotos, ribbonPhotoCaptions } from "../ribbon-sketch/assets.js";
 import "../ribbon-sketch/experience.css";
 
 const storageKey = "1111-ribbon-sketch:v1";
 const photoCaptions = [
   "make a wish",
-  "the birthday girl ♡",
+  "the birthday girl",
   "little moments",
-  "my favorite people ♡",
+  "my favorite people",
   "a night with you",
   "sweet little things",
 ];
@@ -226,7 +226,7 @@ export default function RibbonSketchExperience() {
     viewerPhoto,
     viewerIndex,
     viewerCaption: uploads.includes(viewerPhoto)
-      ? "a new little memory ♡"
+      ? "a new little memory"
       : ribbonPhotoCaptions[viewerPhoto] ?? photoCaptions[viewerIndex % photoCaptions.length],
     totalPhotos: photos.length,
   };

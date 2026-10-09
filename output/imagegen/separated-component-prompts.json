@@ -14,34 +14,6 @@
     "generatedPath": "/Users/mac/.codex/generated_images/01a100c5-12b3-73a1-a228-9fea27b10b9b/exec-24c341dc-41e5-4909-92d9-ab400cd812b2.png"
   },
   {
-    "id": "red-cake",
-    "source": "/Users/mac/Desktop/11-11/public/images/birthday/party-doodles/invitation-square.webp",
-    "prompt": "Use case: background-extraction. Edit target: original party-doodles invitation image. Extract ONLY the red outlined birthday cake on its pedestal with its three candles, from the top left. Remove every other object. Center this ONE isolated component on a transparent canvas, closely framed with 4% transparent edge margin. Preserve its original shape, exact stroke style, line weight, color and aspect ratio. Genuine transparent alpha everywhere outside ink, including enclosed loops and the object's interior. No white fill, no paper, no background texture, no shadows, no text, no extra marks. This is a separately movable decoration asset, not a whole invitation.",
-    "background": false,
-    "generatedPath": "/Users/mac/.codex/generated_images/01a100c5-12b3-73a1-a228-9fea27b10b9b/exec-0ece1c22-2edf-416c-a1b0-260e19eec2cd.png"
-  },
-  {
-    "id": "red-gift",
-    "source": "/Users/mac/Desktop/11-11/public/images/birthday/party-doodles/invitation-square.webp",
-    "prompt": "Use case: background-extraction. Edit target: original party-doodles invitation image. Extract ONLY the red outlined polka-dot gift box with its tied ribbon, from the bottom left. Remove every other object. Center this ONE isolated component on a transparent canvas, closely framed with 4% transparent edge margin. Preserve its original shape, exact stroke style, line weight, color and aspect ratio. Genuine transparent alpha everywhere outside ink, including enclosed loops and the object's interior. No white fill, no paper, no background texture, no shadows, no text, no extra marks. This is a separately movable decoration asset, not a whole invitation.",
-    "background": false,
-    "generatedPath": "/Users/mac/.codex/generated_images/01a100c5-12b3-73a1-a228-9fea27b10b9b/exec-1b8c28e7-36c9-4e05-a46f-fe203c62474b.png"
-  },
-  {
-    "id": "red-loose-bow",
-    "source": "/Users/mac/Desktop/11-11/public/images/birthday/party-doodles/invitation-square.webp",
-    "prompt": "Use case: background-extraction. Edit target: original party-doodles invitation artwork. Extract ONLY the thin red loose ribbon bow at the top right, with its hanging tails. Remove all other objects. Center this ONE isolated component, closely framed with 3% transparent edge margin, and preserve its original aspect ratio. Preserve its original shape, line weight, color and hand-drawn stroke style. Genuine alpha transparency outside all ink including enclosed loops and all object interiors. No white or pink fill, no paper, no texture, no shadows, no text, no extra decoration. Separately movable asset, not an invitation.",
-    "background": false,
-    "generatedPath": "/Users/mac/.codex/generated_images/01a100c5-12b3-73a1-a228-9fea27b10b9b/exec-b84849fe-9e4a-429e-8e03-80dd98fb7652.png"
-  },
-  {
-    "id": "red-starburst",
-    "source": "/Users/mac/Desktop/11-11/public/images/birthday/party-doodles/invitation-square.webp",
-    "prompt": "Use case: background-extraction. Edit target: original party-doodles invitation artwork. Extract ONLY ONE small red six-point pen starburst from the right side. Remove all other objects. Center this ONE isolated component, closely framed with 3% transparent edge margin, and preserve its original aspect ratio. Preserve its original shape, line weight, color and hand-drawn stroke style. Genuine alpha transparency outside all ink including enclosed loops and all object interiors. No white or pink fill, no paper, no texture, no shadows, no text, no extra decoration. Separately movable asset, not an invitation.",
-    "background": false,
-    "generatedPath": "/Users/mac/.codex/generated_images/01a100c5-12b3-73a1-a228-9fea27b10b9b/exec-da024879-d184-47e7-89c3-d6f99884ef36.png"
-  },
-  {
     "id": "blue-cake",
     "source": "/Users/mac/Desktop/11-11/public/images/birthday/white-and-blue/invitation-square.webp",
     "prompt": "Use case: background-extraction. Edit target: original white-and-blue invitation artwork. Extract ONLY the blue outlined two-tier birthday cake with its candles, tied bow, and pedestal. Remove the blue outer border. Center this ONE isolated component, closely framed with 3% transparent edge margin, and preserve its original aspect ratio. Preserve its original shape, line weight, color and hand-drawn stroke style. Genuine alpha transparency outside all ink including enclosed loops and all object interiors. No white or pink fill, no paper, no texture, no shadows, no text, no extra decoration. Separately movable asset, not an invitation.",

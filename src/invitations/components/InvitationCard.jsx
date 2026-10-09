@@ -89,7 +89,7 @@ export function InvitationArtwork({
       )
       .map(([, value]) => String(value)),
   );
-  if (template.slug === "birthday-party-doodles")
+  if (template.slug === "birthday-playground")
     return <BirthdayPlaygroundPoster sample={sample} language={language} ariaLabel={ariaLabel} className={className}/>;
   if (template.slug === "birthday-ribbon-sketch")
     return <RibbonSketchCardArt />;

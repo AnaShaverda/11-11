@@ -2,8 +2,7 @@ import { useState } from "react";
 import { useRibbonCopy } from "../ribbon-sketch/copy.js";
 import "../ribbon-sketch/card.css";
 
-export const postcardGlass = "/images/birthday/ribbon-sketch/postcard-coupe.png";
-export const pinkInkGlass = "/images/birthday/ribbon-sketch/pink-ink-coupe-clean.png";
+export const pinkInkGlass = "/images/birthday/ribbon-sketch/rounded-ribbon-wine-clear.webp";
 
 export default function RibbonSketchCardArt({ hero = false, onCheers }) {
   const tr = useRibbonCopy();
@@ -15,7 +14,6 @@ export default function RibbonSketchCardArt({ hero = false, onCheers }) {
       <span className="rs-ink-stripes rs-ink-stripes-top" aria-hidden="true" />
       <span className="rs-ink-stripes rs-ink-stripes-bottom" aria-hidden="true" />
       <Title className="rs-ink-title"><span>{tr("MIA’S")}</span><span>{tr("BIRTHDAY")}</span></Title>
-      <span className="rs-ink-note">{tr("same spark")}<br />{tr("different era")}</span>
       {onCheers ? <button type="button" className="rs-ink-glass" onClick={() => { setBurst(value => value + 1); onCheers(); }} aria-label={tr("Make a little cheers")}>{art}{burst > 0 && <span key={`bubbles-${burst}`} className="rs-ink-bubbles" aria-hidden="true">{Array.from({length:12}, (_, index) => <span key={index} className="rs-filled-bubble" style={{"--bubble-color":["#efb5c1","#a75068","#7c102b","#d889a0"][index % 4],"--bubble-x":`${(index % 5 - 2) * 17}px`,"--bubble-delay":`${index * .18}s`,left:`${42 + (index * 7 % 23)}%`,width:`${8 + index % 4 * 4}px`}} />)}</span>}<span className="rs-ink-guide">{tr("Tap the glass to see the bubbles")}</span></button> : <span className="rs-ink-glass">{art}</span>}
       <span className="rs-ink-day">23</span>
       <span className="rs-ink-month">{tr("May")}</span>

@@ -1,14 +1,14 @@
 {
-  "total": 127,
+  "total": 126,
   "summary": {
-    "independent-components": 104,
+    "independent-components": 103,
     "retained-scene": 17,
     "existing-layers": 4,
     "background-only": 1,
     "graphic-background": 1
   },
   "categories": {
-    "Birthday": 44,
+    "Birthday": 43,
     "Wedding": 30,
     "Other": 53,
     "Corporate": 0
@@ -53,116 +53,6 @@
             "top": "85%",
             "width": "14%",
             "height": "8%"
-          }
-        }
-      ]
-    },
-    {
-      "slug": "birthday-party-doodles",
-      "category": "Birthday",
-      "visibility": "active",
-      "textLayer": "localized HTML",
-      "separation": "independent-components",
-      "background": {
-        "color": "#fffaf3"
-      },
-      "components": [
-        {
-          "id": "red-cake",
-          "image": "/images/components/separated/red-cake.webp",
-          "left": "3%",
-          "top": "1%",
-          "width": "29%",
-          "height": "35%",
-          "portrait": {
-            "left": "3%",
-            "top": "3%",
-            "width": "35%",
-            "height": "27%"
-          }
-        },
-        {
-          "id": "red-gift",
-          "image": "/images/components/separated/red-gift.webp",
-          "left": "3%",
-          "top": "66%",
-          "width": "29%",
-          "height": "31%",
-          "portrait": {
-            "left": "3%",
-            "top": "72%",
-            "width": "35%",
-            "height": "24%"
-          }
-        },
-        {
-          "id": "red-loose-bow",
-          "image": "/images/components/separated/red-loose-bow.webp",
-          "left": "74%",
-          "top": "1%",
-          "width": "24%",
-          "height": "26%",
-          "portrait": {
-            "left": "71%",
-            "top": "3%",
-            "width": "27%",
-            "height": "21%"
-          }
-        },
-        {
-          "id": "red-heart",
-          "image": "/images/components/separated/red-heart.webp",
-          "left": "76%",
-          "top": "20%",
-          "width": "7%",
-          "height": "10%",
-          "portrait": {
-            "left": "72%",
-            "top": "20%",
-            "width": "10%",
-            "height": "8%"
-          }
-        },
-        {
-          "id": "red-starburst",
-          "image": "/images/components/separated/red-starburst.webp",
-          "left": "90%",
-          "top": "28%",
-          "width": "9%",
-          "height": "13%",
-          "portrait": {
-            "left": "87%",
-            "top": "29%",
-            "width": "11%",
-            "height": "9%"
-          }
-        },
-        {
-          "id": "red-heart-lower",
-          "image": "/images/components/separated/red-heart.webp",
-          "left": "88%",
-          "top": "74%",
-          "width": "10%",
-          "height": "13%",
-          "portrait": {
-            "left": "86%",
-            "top": "79%",
-            "width": "12%",
-            "height": "9%"
-          }
-        },
-        {
-          "id": "red-starburst-lower",
-          "image": "/images/components/separated/red-starburst.webp",
-          "left": "77%",
-          "top": "80%",
-          "width": "9%",
-          "height": "13%",
-          "portrait": {
-            "left": "74%",
-            "top": "86%",
-            "width": "11%",
-            "height": "9%"
           }
         }
       ]

@@ -113,7 +113,7 @@ export function getCardTypography(template) {
     : visual.startsWith("christening-")
     ? "magnola"
     : cardFonts[visual]
-      ?? ({ "ribbon-sketch": "zalino", "party-doodles": "birthday", "white-and-blue": "magnola", "pink-minimal": "casmera" }[visual])
+      ?? ({ "ribbon-sketch": "zalino", "playground": "playground", "white-and-blue": "magnola", "pink-minimal": "casmera" }[visual])
       ?? (modernOpenings.has(visual) ? "zalino"
         : retroOpenings.has(visual) ? "casmera"
         : formalWeddings.has(visual) ? "zalino" : "casmera"));

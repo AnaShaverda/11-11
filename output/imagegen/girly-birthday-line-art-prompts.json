@@ -19,22 +19,6 @@
       "original": "src/assets/birthday/ribbon-sketch/ornament.png"
     },
     {
-      "slug": "party-doodles",
-      "kind": "portrait",
-      "source": "/Users/mac/.codex/generated_images/01a0fded-c5d5-70f0-9061-b505b5e7c2c3/exec-737ed435-d55f-4d89-b317-45354e685fa8.png",
-      "prompt": "Use case: precise-object-edit. Input screenshot contains FOUR invitation cards side by side. Extract ONLY card 2 counting left to right into its own flat full-bleed portrait image, aspect ratio 1:2. Reproduce the exact line art, object shapes, stroke weight, relative placements and paper colors from that card as closely as possible. This is a faithful extraction, NOT a redesign or new illustration. Preserve red wonky three-candle cake occupying top-left quarter, loose single-line bow top-right, small hearts and star at right, red dotted gift box with ribbon in bottom-left quarter, little heart and star at bottom-right. No cherries on cake, no added decoration. Remove all printed text cleanly, leaving its space empty: app renders text. Remove external grey background, shadows, neighboring cards, bottom concept label and board heading. No added illustrations or new details. No text, letters, numbers or watermark.",
-      "destination": "public/images/recipient/birthday-party-doodles/invitation-portrait.webp",
-      "original": "src/assets/birthday/party-doodles/portrait.png"
-    },
-    {
-      "slug": "party-doodles",
-      "kind": "ornament",
-      "source": "/Users/mac/.codex/generated_images/01a0fded-c5d5-70f0-9061-b505b5e7c2c3/exec-67aa9dc6-707e-429d-8a3a-be538f37425f.png",
-      "prompt": "Use case: stylized-concept. ONE isolated decorative component for a modern invitation moodboard. One small wonky birthday cake with three candles on a pedestal, red #bc1828 monoline outline only. Center in a square canvas with ample margin. Genuine alpha TRANSPARENT background, no paper, no backdrop, no white rectangle, no shadow. Spare fine freehand ink contours with gentle wobble. Absolutely NO text, numbers, lettering, extra flowers, leaves, ornate decorative flourishes, gradients, watercolor, 3D or realism. Only the specified subject. Preserve open interior shapes and transparency inside outlines.",
-      "destination": "public/images/birthday/party-doodles/line-ornament.webp",
-      "original": "src/assets/birthday/party-doodles/ornament.png"
-    },
-    {
       "slug": "white-and-blue",
       "kind": "portrait",
       "source": "/Users/mac/.codex/generated_images/01a0fded-c5d5-70f0-9061-b505b5e7c2c3/exec-c279db2d-f0a2-4189-bb20-ad764e224eab.png",
@@ -73,14 +57,6 @@
       "prompt": "Use case: precise-object-edit. Adapt this approved tall birthday background into ONE square 1:1 full-bleed invitation background for a website catalog. Preserve EXACT SAME drawings, subject shapes, line weight, colors and minimal style of reference, resizing and repositioning them to suit square format. Do not embellish, add objects or redraw them in another style. Keep same ornaments on outer margins and the center x=22%-78%, y=35%-80% completely empty.  No text, numbers, letters, mockup shadows, watercolor, new flowers, leaf ornamentation, textures, extra cherries on cake or gradients. Entire artwork flat, one square card face. Central empty space will receive editable type.",
       "destination": "public/images/birthday/ribbon-sketch/invitation-square.webp",
       "original": "src/assets/birthday/ribbon-sketch/square.png"
-    },
-    {
-      "slug": "party-doodles",
-      "format": "square",
-      "source": "/Users/mac/.codex/generated_images/01a0fded-c5d5-70f0-9061-b505b5e7c2c3/exec-db0cfee9-161f-488e-a459-56e90f6487de.png",
-      "prompt": "Use case: precise-object-edit. Adapt this approved tall birthday background into ONE square 1:1 full-bleed invitation background for a website catalog. Preserve EXACT SAME drawings, subject shapes, line weight, colors and minimal style of reference, resizing and repositioning them to suit square format. Do not embellish, add objects or redraw them in another style. Keep same ornaments on outer margins and the center x=22%-78%, y=35%-80% completely empty.  No text, numbers, letters, mockup shadows, watercolor, new flowers, leaf ornamentation, textures, extra cherries on cake or gradients. Entire artwork flat, one square card face. Central empty space will receive editable type.",
-      "destination": "public/images/birthday/party-doodles/invitation-square.webp",
-      "original": "src/assets/birthday/party-doodles/square.png"
     },
     {
       "slug": "white-and-blue",

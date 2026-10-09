@@ -120,7 +120,6 @@
 .invitation-art--separated.invitation-art--portrait:not(.preview-portrait-promise):not(.preview-our-people):not(.preview-heartmarked):not(.preview-sweet-snapshot):not(.preview-ribbon-revel):not(.preview-garden-table):not(.preview-first-dance) .wedding-ink-copy { padding-top: 14cqh; }
 :root body .invitation-art--separated.preview-blue-pour .wedding-ink-details { position: static; width: 100%; }
 :root body .invitation-art--separated.preview-sweet-snapshot .wedding-ink-details { bottom: 3%; }
-:root body .invitation-art--portrait.preview-party-doodles .line-birthday-phrase { top: 68%; left: 35%; width: 60%; font-size: 4cqw; line-height: 1.4; }
 :root body .invitation-art--portrait.preview-white-and-blue .line-birthday-phrase { top: 81%; font-size: 6cqw; line-height: 1.4; }
 .invitation-art--portrait .cocktail-bridal .cocktail-host { top: 26%; }
 .invitation-art:not(.invitation-art--portrait) .cocktail-bridal .cocktail-host { top: 27%; }

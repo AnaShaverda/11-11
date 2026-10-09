@@ -1,5 +1,5 @@
 import "../../styles/birthday-playground-poster.css";
-const art = "/images/birthday/party-doodles/playground/";
+const art = "/images/birthday/playground/";
 export default function BirthdayPlaygroundPoster({ sample, language, ariaLabel, className = "" }) {
  return <div className={`playground-poster ${className}`} lang={language} aria-label={ariaLabel} aria-hidden={ariaLabel ? undefined : true}>
   <strong className="playground-poster-title">{sample.headline || (language === "ka" ? "ჩემი დაბადების დღეა!" : "it’s my birthday!")}</strong>

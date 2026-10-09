@@ -4,7 +4,7 @@ export const designMembershipOverrides = {
   "birthday-paper-garland": { birthday: ["adult-birthday", "kids-birthday"], "baby-kids": ["kids-birthday"] },
   "birthday-strawberry-social": { birthday: ["adult-birthday", "kids-birthday"], "baby-kids": ["kids-birthday"], parties: ["themed"] },
   "birthday-white-and-blue": { birthday: ["adult-birthday", "kids-birthday"], "baby-kids": ["kids-birthday"] },
-  "birthday-party-doodles": { birthday: ["adult-birthday", "kids-birthday"], "baby-kids": ["kids-birthday"], parties: ["themed"] },
+  "birthday-playground": { birthday: ["adult-birthday", "kids-birthday"], "baby-kids": ["kids-birthday"], parties: ["themed"] },
   "birthday-pink-post": { birthday: ["adult-birthday", "kids-birthday"], "baby-kids": ["kids-birthday"] },
   "birthday-pink-minimal": { birthday: ["adult-birthday", "kids-birthday"], "baby-kids": ["kids-birthday"] },
   "birthday-little-pizza-chef": { birthday: ["kids-birthday"], "baby-kids": ["kids-birthday"], parties: ["themed"] },
