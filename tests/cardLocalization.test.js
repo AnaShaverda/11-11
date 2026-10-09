@@ -52,7 +52,6 @@ test("names, possessives, initials, dates and locations use Georgian resources",
   assert.equal(christening.date, "18 მაისი 2027 · 13:00");
   assert.equal(christening.location, "თბილისი");
   assert.equal(getInvitationSample("wedding-little-yes", t).mark, "ა და ს");
-  assert.equal(getInvitationSample("birthday-velvet-post", t).namePossessive, "მარიფერის");
 });
 
 test("supporting cards and demo events translate while preserving event configuration", () => {

@@ -2,8 +2,8 @@
 // Each theme has a downloaded Latin display and a Georgian companion.
 // The assignment and CSS weight stay the same when the language changes.
 const cardFonts = {
-  "pink-post": "magnola",
-  "velvet-post": "elegance",
+
+
   "disco-scrapbook": "casmera",
   "paper-garland": "magnola",
   "pastel-disco": "elegance",
@@ -65,7 +65,7 @@ const formalWeddings = new Set([
 
 const handwrittenAccents = new Set([
   "pastel-dream",
-  "pink-post", "garden-party", "painted-summer", "pink-disco-bride", "blush-lift",
+   "garden-party", "painted-summer", "pink-disco-bride", "blush-lift",
   "bridal-dream-doll-bride", "bridal-pink-tea-club", "bridal-doll-pink-card",
   "bridal-pink-cocktail-card", "christening-blush-grace", "christening-blush-petals",
   "bridal-retro-pink-card", "bridal-pink-disco-dream-card", "bridal-pink-disco-dream",
@@ -83,16 +83,16 @@ const modernOpenings = new Set([
   "khinkali-beer",
 ]);
 const scriptOpenings = new Set([
-  "pink-post", "painted-summer", "garden-party", "velvet-post", "floral-affair",
+   "painted-summer", "garden-party",  "floral-affair",
   "pink-glam", "ribbon-social", "pink-disco-bride", "blush-lift",
   "bridal-dream-doll-bride", "bridal-pink-tea-club", "bridal-doll-pink-card",
   "bridal-pink-cocktail-card", "bridal-rose-supper-club",
   "christening-blush-grace", "christening-blush-petals",
 ]);
 
-// Georgian 3D lettering belongs to classic stationery, Velvet Post and Y2K.
+// Georgian 3D lettering belongs to classic stationery and Y2K.
 const threeDHeadings = new Set([
-  "velvet-post", "classic-celebration", "ribbon-sketch", "paper-garland", "y2k-digital",
+   "classic-celebration", "ribbon-sketch", "paper-garland", "y2k-digital",
 ]);
 
 export function formatCardOpening(text, language, font) {
@@ -113,7 +113,7 @@ export function getCardTypography(template) {
     : visual.startsWith("christening-")
     ? "magnola"
     : cardFonts[visual]
-      ?? ({ "ribbon-sketch": "zalino", "playground": "playground", "white-and-blue": "magnola", "pink-minimal": "casmera" }[visual])
+      ?? ({ "ribbon-sketch": "zalino", "playground": "playground", "white-and-blue": "magnola" }[visual])
       ?? (modernOpenings.has(visual) ? "zalino"
         : retroOpenings.has(visual) ? "casmera"
         : formalWeddings.has(visual) ? "zalino" : "casmera"));

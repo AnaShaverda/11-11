@@ -348,13 +348,7 @@ const themeCatalog = [
     "Ink & Ivy",
     "Indigo illustrations & wildflowers",
   ],
-  [
-    "birthday-pink-post",
-    "ვარდისფერი წერილი",
-    "ვარდისფერი აკვარელი და პირადი წერილი",
-    "Pink Post",
-    "Blush watercolor & personal notes",
-  ],
+
   [
     "birthday-disco-scrapbook",
     "დისკოს ალბომი",
@@ -362,13 +356,7 @@ const themeCatalog = [
     "Disco Scrapbook",
     "Cut-paper colors & disco sparkle",
   ],
-  [
-    "birthday-velvet-post",
-    "ბორდოს წერილი",
-    "ბორდოს ზოლები და ვარდისფერი მელანი",
-    "Velvet Post",
-    "Wine stripes & blush ink",
-  ],
+
   [
     "birthday-checkerboard-cheers",
     "კოქტეილების წვეულება",
@@ -885,13 +873,7 @@ const themeDescriptions = [
     "Indigo pen illustrations, wandering wildflowers, and a wedding story drawn with love.",
     "Indigo · whimsical · hand-drawn",
   ],
-  [
-    "birthday-pink-post",
-    "ნაზი აკვარელის კონვერტი და დაბადების დღის პირადი წერილი.",
-    "ვარდისფერი წერილი",
-    "A soft watercolor envelope and a birthday note made just for you.",
-    "Blush · simple · personal",
-  ],
+
   [
     "birthday-disco-scrapbook",
     "ფერადი ქაღალდი, კალენდრის ხაზები და ცეკვის მოწვევა.",
@@ -899,13 +881,7 @@ const themeDescriptions = [
     "Colorful paper accents, a loose calendar grid, and an invitation to dance.",
     "Cream · colorful · analog",
   ],
-  [
-    "birthday-velvet-post",
-    "ბორდოს ზოლები, ვარდისფერი ქაღალდი და კოქტეილისა და ტორტის ესკიზები.",
-    "ბორდოს წერილი",
-    "Wine-red stripes, blush paper, and charming cocktail-and-cake sketches.",
-    "Wine red · blush · romantic",
-  ],
+
   [
     "birthday-checkerboard-cheers",
     "ნარინჯისფერი კვადრატები, წითელი ტალღები და დაბადების დღის სადღეგრძელო.",

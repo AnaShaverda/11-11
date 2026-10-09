@@ -1,3 +1,4 @@
+import CheckerboardCheersPoster from "./CheckerboardCheersPoster.jsx";
 import BirthdayPlaygroundPoster from "./BirthdayPlaygroundPoster.jsx";
 import RibbonSketchCardArt from "./RibbonSketchCardArt.jsx";
 import { useRef } from "react";
@@ -89,6 +90,8 @@ export function InvitationArtwork({
       )
       .map(([, value]) => String(value)),
   );
+  if (template.slug === "birthday-checkerboard-cheers")
+    return <CheckerboardCheersPoster sample={sample} language={language} presentation={presentation} className={className} ariaLabel={ariaLabel}/>;
   if (template.slug === "birthday-playground")
     return <BirthdayPlaygroundPoster sample={sample} language={language} ariaLabel={ariaLabel} className={className}/>;
   if (template.slug === "birthday-ribbon-sketch")

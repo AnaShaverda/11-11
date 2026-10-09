@@ -1,7 +1,6 @@
 .theme-paper-garland { --theme-bg:#fffcf7; --theme-ink:#704566; --theme-accent:#e7afa9; --theme-panel:#faf1ee; --theme-stroke:#70456630; --theme-display: "Noto Serif Georgian"; --world-paper:#fffcf7; --world-photo:url('/images/birthday/paper-garland/watercolor-wishes-square.webp'); background:var(--theme-bg); color:var(--theme-ink); }
 .theme-pastel-disco { --theme-bg:#fff9ef; --theme-ink:#5a5c91; --theme-accent:#ddaecb; --theme-panel:#e6f0f3; --theme-stroke:#5a5c9130; --theme-display: "Noto Serif Georgian"; --world-paper:#fff9ef; --world-photo:url('/images/birthday/pastel-disco/painted-pastel-disco.webp'); background:var(--theme-bg); color:var(--theme-ink); }
-.theme-checkerboard-cheers { --theme-bg:#fff1df; --theme-ink:#bd251c; --theme-accent:#f6b5e5; --theme-panel:#ffe0c6; --theme-stroke:#bd251c30; --theme-display: "Noto Serif Georgian"; --world-paper:#fff1df; --world-photo:url('/images/birthday/checkerboard-cheers/red-checker-toast.webp'); background:var(--theme-bg); color:var(--theme-ink); }
-.invitation-preview-art.full-image-cover:is(.preview-paper-garland,.preview-pastel-disco,.preview-checkerboard-cheers) { background:var(--cover-image) center / cover no-repeat; }
+.invitation-preview-art.full-image-cover:is(.preview-paper-garland,.preview-pastel-disco) { background:var(--cover-image) center / cover no-repeat; }
 .full-image-cover.preview-paper-garland { color:#704566; }
 .full-image-cover.preview-paper-garland .full-image-cover-copy { top:32%; left:20%; width:60%; align-items:center; text-align:center; }
 .full-image-cover.preview-paper-garland .full-image-cover-copy strong { font:700 8cqw/1.05 Georgia,serif; letter-spacing:-.04em; }
@@ -12,15 +11,9 @@
 .full-image-cover.preview-pastel-disco .full-image-cover-copy strong { font:italic 700 8cqw/1.02 Georgia,serif; letter-spacing:-.04em; }
 .full-image-cover.preview-pastel-disco .full-image-cover-copy em { font-size:2.5cqw; max-width:100%; }
 .full-image-cover.preview-pastel-disco .full-image-cover-details { margin-top:3cqw; border-top-color:#5a5c9150; }
-.full-image-cover.preview-checkerboard-cheers { color:#f6b5e5; }
-.full-image-cover.preview-checkerboard-cheers .full-image-cover-copy { top:12%; left:14%; width:58%; }
-.full-image-cover.preview-checkerboard-cheers .full-image-cover-copy strong { font:700 9cqw/.98 Georgia,serif; letter-spacing:-.055em; }
-.full-image-cover.preview-checkerboard-cheers .full-image-cover-copy em { font-size:2.5cqw; max-width:100%; }
-.full-image-cover.preview-checkerboard-cheers .full-image-cover-details { margin-top:3cqw; border-top-color:#f6b5e590; }
-:is(.theme-paper-garland,.theme-pastel-disco,.theme-checkerboard-cheers) .theme-invitation-card.full-image-cover { width:100%; padding:0; border:0; box-shadow:none; }
-:is(.theme-paper-garland,.theme-pastel-disco,.theme-checkerboard-cheers) .theme-invitation-card .full-image-cover-details { max-width:100%; font-size:1.8cqw; letter-spacing:.04em; }
-:is(.theme-paper-garland,.theme-pastel-disco,.theme-checkerboard-cheers) .theme-world-hero-photo,
-:is(.theme-paper-garland,.theme-pastel-disco,.theme-checkerboard-cheers) .theme-world-image > div { background-image:var(--world-photo); background-size:cover; }
+:is(.theme-paper-garland,.theme-pastel-disco) .theme-invitation-card.full-image-cover { width:100%; padding:0; border:0; box-shadow:none; }
+:is(.theme-paper-garland,.theme-pastel-disco) .theme-invitation-card .full-image-cover-details { max-width:100%; font-size:1.8cqw; letter-spacing:.04em; }
+:is(.theme-paper-garland,.theme-pastel-disco) .theme-world-hero-photo,:is(.theme-paper-garland,.theme-pastel-disco) .theme-world-image > div { background-image:var(--world-photo); background-size:cover; }
 .design-type-paper-garland .design-type-board { background:#fffcf7; color:#704566; }
 .design-type-pastel-disco .design-type-board { background:#fff9ef; color:#5a5c91; }
 .design-type-checkerboard-cheers .design-type-board { background:#bd251c; color:#f6b5e5; }

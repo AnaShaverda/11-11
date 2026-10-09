@@ -28,6 +28,10 @@ import PinkLidoExperience from "../invitations/pages/PinkLidoExperience.jsx";
 import CherryTowerExperience from "../invitations/pages/CherryTowerExperience.jsx";
 import CocktailSummerExperience from "../invitations/pages/CocktailSummerExperience.jsx";
 
+const CheckerboardCheersExperience = lazy(() => import("../invitations/pages/CheckerboardCheersExperience.jsx"));
+
+const StationeryBirthdayExperience = lazy(() => import("../invitations/pages/StationeryBirthdayExperience.jsx"));
+
 const BirthdayPlaygroundExperience = lazy(() => import("../invitations/pages/BirthdayPlaygroundExperience.jsx"));
 
 const RibbonSketchExperience = lazy(() => import("../invitations/pages/RibbonSketchExperience.jsx"));
@@ -54,6 +58,8 @@ export default function App() {
     <Suspense fallback={<SiteLoader pending />} >
     <SiteLoader key={pathname} />
     <Routes>
+      <Route path="invitations/birthday-checkerboard-cheers" element={<CheckerboardCheersExperience />} />
+      <Route path="invitations/birthday-white-and-blue" element={<StationeryBirthdayExperience key="white-and-blue" />} />
       <Route path="invitations/birthday-playground" element={<BirthdayPlaygroundExperience />} />
       <Route path="invitations/birthday-party-doodles" element={<Navigate to="/invitations/birthday-playground" replace />} />
       <Route path="invitations/birthday-ribbon-sketch" element={<RibbonSketchExperience />} />

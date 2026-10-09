@@ -100,9 +100,9 @@ export const invitationStyleTags = {
   "wedding-blue-pour": ["line-art", "blue", "light-neutral"],
   "wedding-garden-dance": ["cartoon", "pastel", "green", "light-neutral"],
   "wedding-ink-and-ivy": ["line-art", "blue", "light-neutral"],
-  "birthday-pink-post": ["cartoon", "pastel", "light-neutral"],
+
   "birthday-disco-scrapbook": ["cartoon", "pastel", "light-neutral"],
-  "birthday-velvet-post": ["cartoon", "pastel", "light-neutral"],
+
   "birthday-checkerboard-cheers": ["cartoon", "retro", "light-neutral"],
   "birthday-pastel-disco": ["cartoon", "pastel", "light-neutral"],
   "birthday-paper-garland": ["minimal", "pastel", "light-neutral"],

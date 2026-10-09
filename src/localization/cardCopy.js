@@ -370,13 +370,13 @@ const ka = {
   "cards.samples.wedding-ink-and-ivy.location": "თბილისი",
   "cards.samples.wedding-ink-and-ivy.line": "ცოტა მელანი. მთელი ცხოვრების სიყვარული.",
   "cards.samples.wedding-ink-and-ivy.mark": "ნ და ლ",
-  "cards.samples.birthday-pink-post.title": "მიას დაბადების დღე",
-  "cards.samples.birthday-pink-post.name": "მია",
-  "cards.samples.birthday-pink-post.date": "23 მაისი",
-  "cards.samples.birthday-pink-post.time": "17:00",
-  "cards.samples.birthday-pink-post.location": "თბილისი",
-  "cards.samples.birthday-pink-post.line": "მოდი, ერთად ვიზეიმოთ.",
-  "cards.samples.birthday-pink-post.mark": "26",
+
+
+
+
+
+
+
   "cards.samples.birthday-disco-scrapbook.title": "პრისცილას დაბადების დღე",
   "cards.samples.birthday-disco-scrapbook.name": "პრისცილა",
   "cards.samples.birthday-disco-scrapbook.date": "02 სექტემბერი",
@@ -384,13 +384,13 @@ const ka = {
   "cards.samples.birthday-disco-scrapbook.location": "თბილისი",
   "cards.samples.birthday-disco-scrapbook.line": "შეინახე თარიღი. მოიტანე შენი ბრწყინვალება.",
   "cards.samples.birthday-disco-scrapbook.mark": "33",
-  "cards.samples.birthday-velvet-post.title": "მარიფერის დაბადების დღე",
-  "cards.samples.birthday-velvet-post.name": "მარიფერი",
-  "cards.samples.birthday-velvet-post.date": "17 იანვარი",
-  "cards.samples.birthday-velvet-post.time": "16:00",
-  "cards.samples.birthday-velvet-post.location": "თბილისი",
-  "cards.samples.birthday-velvet-post.line": "ოცი წლის სადღეგრძელო.",
-  "cards.samples.birthday-velvet-post.mark": "20",
+
+
+
+
+
+
+
   "cards.samples.birthday-checkerboard-cheers.title": "ალექსის დაბადების დღის წვეულება",
   "cards.samples.birthday-checkerboard-cheers.name": "ალექსი",
   "cards.samples.birthday-checkerboard-cheers.date": "08 ივნისი",
@@ -927,21 +927,21 @@ const ka = {
   "cards.designs.wedding-ink-and-ivy.accentCard": "ზეიმი",
   "cards.designs.wedding-ink-and-ivy.accentCopy": "ჩვენი საყვარელი დღე საყვარელ ადამიანებთან ერთად",
   "cards.designs.wedding-ink-and-ivy.finish": "ერთად ყოფნა ლამაზი დასაწყისია.",
-  "cards.designs.birthday-pink-post.specimen": "პატარა წერილი შენთვის",
-  "cards.designs.birthday-pink-post.phrase": "შენთან ყოფნა დაბადების დღის საუკეთესო საჩუქარია.",
-  "cards.designs.birthday-pink-post.accentCard": "წვეულება",
-  "cards.designs.birthday-pink-post.accentCopy": "შენთან ყოფნა დაბადების დღის საუკეთესო საჩუქარია.",
-  "cards.designs.birthday-pink-post.finish": "ერთად აღსანიშნავი დაბადების დღე.",
+
+
+
+
+
   "cards.designs.birthday-disco-scrapbook.specimen": "ეს დღე ცეკვისთვისაა",
   "cards.designs.birthday-disco-scrapbook.phrase": "კარგი მეგობრები. შესანიშნავი მუსიკა. შენი დაბადების დღე.",
   "cards.designs.birthday-disco-scrapbook.accentCard": "წვეულება",
   "cards.designs.birthday-disco-scrapbook.accentCopy": "კარგი მეგობრები. შესანიშნავი მუსიკა. შენი დაბადების დღე.",
   "cards.designs.birthday-disco-scrapbook.finish": "ერთად აღსანიშნავი დაბადების დღე.",
-  "cards.designs.birthday-velvet-post.specimen": "სიყვარულით მონიშნული დაბადების დღე",
-  "cards.designs.birthday-velvet-post.phrase": "ტორტი, კოქტეილები და საყვარელი ადამიანები",
-  "cards.designs.birthday-velvet-post.accentCard": "წვეულება",
-  "cards.designs.birthday-velvet-post.accentCopy": "ტორტი, კოქტეილები და საყვარელი ადამიანები",
-  "cards.designs.birthday-velvet-post.finish": "ერთად აღსანიშნავი დაბადების დღე.",
+
+
+
+
+
   "cards.designs.birthday-checkerboard-cheers.specimen": "სასიამოვნო დრო იწყება",
   "cards.designs.birthday-checkerboard-cheers.phrase": "კოქტეილები, ტორტი და შენი საყვარელი ადამიანები",
   "cards.designs.birthday-checkerboard-cheers.accentCard": "წვეულება",
@@ -1626,13 +1626,13 @@ const ka = {
   "cards.events.wedding-ink-and-ivy.time": "17:00",
   "cards.events.wedding-ink-and-ivy.location": "თბილისი, საქართველო",
   "cards.events.wedding-ink-and-ivy.description": "ცოტა მელანი. მთელი ცხოვრების სიყვარული.",
-  "cards.events.birthday-pink-post.title": "მიას დაბადების დღე",
-  "cards.events.birthday-pink-post.hostName": "მია",
-  "cards.events.birthday-pink-post.celebrationName": "26-ე დაბადების დღე",
-  "cards.events.birthday-pink-post.date": "23 მაისი 2027",
-  "cards.events.birthday-pink-post.time": "17:00",
-  "cards.events.birthday-pink-post.location": "თბილისი, საქართველო",
-  "cards.events.birthday-pink-post.description": "მოდი, ერთად ვიზეიმოთ.",
+
+
+
+
+
+
+
   "cards.events.birthday-disco-scrapbook.title": "პრისცილას დაბადების დღე",
   "cards.events.birthday-disco-scrapbook.hostName": "პრისცილა",
   "cards.events.birthday-disco-scrapbook.celebrationName": "33-ე დაბადების დღე",
@@ -1640,13 +1640,13 @@ const ka = {
   "cards.events.birthday-disco-scrapbook.time": "19:00",
   "cards.events.birthday-disco-scrapbook.location": "თბილისი, საქართველო",
   "cards.events.birthday-disco-scrapbook.description": "შეინახე თარიღი. მოიტანე შენი ბრწყინვალება.",
-  "cards.events.birthday-velvet-post.title": "მარიფერის დაბადების დღე",
-  "cards.events.birthday-velvet-post.hostName": "მარიფერი",
-  "cards.events.birthday-velvet-post.celebrationName": "20-ე დაბადების დღე",
-  "cards.events.birthday-velvet-post.date": "17 იანვარი 2027",
-  "cards.events.birthday-velvet-post.time": "16:00",
-  "cards.events.birthday-velvet-post.location": "თბილისი, საქართველო",
-  "cards.events.birthday-velvet-post.description": "ოცი წლის სადღეგრძელო.",
+
+
+
+
+
+
+
   "cards.events.birthday-checkerboard-cheers.title": "ალექსის დაბადების დღის წვეულება",
   "cards.events.birthday-checkerboard-cheers.hostName": "ალექსი",
   "cards.events.birthday-checkerboard-cheers.celebrationName": "28-ე დაბადების დღე",
@@ -1799,9 +1799,9 @@ Object.assign(ka, {
   "cards.samples.bridal-peach-cherry.namePossessive": "ანას",
   "cards.samples.bridal-electric-pink.namePossessive": "ანას",
   "cards.samples.bridal-rose-supper-club.namePossessive": "ანას",
-  "cards.samples.birthday-pink-post.namePossessive": "მიას",
+
   "cards.samples.birthday-disco-scrapbook.namePossessive": "პრისცილას",
-  "cards.samples.birthday-velvet-post.namePossessive": "მარიფერის",
+
   "cards.samples.birthday-checkerboard-cheers.namePossessive": "ალექსის",
   "cards.samples.birthday-pastel-disco.namePossessive": "მიას",
   "cards.samples.birthday-paper-garland.namePossessive": "ნინის",
@@ -1845,9 +1845,9 @@ Object.assign(ka, {
   "cards.events.bridal-pink-disco.hostNamePossessive": "ანას",
   "cards.events.wedding-blush-lift.hostNamePossessive": "ანას",
   "cards.events.wedding-cherry-toast.hostNamePossessive": "ანას",
-  "cards.events.birthday-pink-post.hostNamePossessive": "მიას",
+
   "cards.events.birthday-disco-scrapbook.hostNamePossessive": "პრისცილას",
-  "cards.events.birthday-velvet-post.hostNamePossessive": "მარიფერის",
+
   "cards.events.birthday-checkerboard-cheers.hostNamePossessive": "ალექსის",
   "cards.events.birthday-pastel-disco.hostNamePossessive": "მიას",
   "cards.events.birthday-paper-garland.hostNamePossessive": "ნინის",
@@ -2034,15 +2034,15 @@ Object.assign(ka, {
   "cards.stories.ink-and-ivy.inviteOpening": "ჩვენს ოჯახებთან ერთად გიწვევთ ზეიმზე",
   "cards.stories.ink-and-ivy.inviteMessage": "შემოგვიერთდი ჩვენი ახალი თავის დასაწყისში.",
   "cards.stories.ink-and-ivy.inviteFooter": "ახალი თავი · 11:11",
-  "cards.stories.pink-post.inviteOpening": "მოწვეული ხარ ზეიმზე",
-  "cards.stories.pink-post.inviteMessage": "წვეულებაზე შენი ადგილი გელოდება.",
-  "cards.stories.pink-post.inviteFooter": "კარგი ადამიანები · სასიამოვნო დრო · 11:11",
+
+
+
   "cards.stories.disco-scrapbook.inviteOpening": "მოწვეული ხარ ზეიმზე",
   "cards.stories.disco-scrapbook.inviteMessage": "წვეულებაზე შენი ადგილი გელოდება.",
   "cards.stories.disco-scrapbook.inviteFooter": "კარგი ადამიანები · სასიამოვნო დრო · 11:11",
-  "cards.stories.velvet-post.inviteOpening": "მოწვეული ხარ ზეიმზე",
-  "cards.stories.velvet-post.inviteMessage": "წვეულებაზე შენი ადგილი გელოდება.",
-  "cards.stories.velvet-post.inviteFooter": "კარგი ადამიანები · სასიამოვნო დრო · 11:11",
+
+
+
   "cards.stories.checkerboard-cheers.inviteOpening": "მოწვეული ხარ ზეიმზე",
   "cards.stories.checkerboard-cheers.inviteMessage": "წვეულებაზე შენი ადგილი გელოდება.",
   "cards.stories.checkerboard-cheers.inviteFooter": "კარგი ადამიანები · სასიამოვნო დრო · 11:11",

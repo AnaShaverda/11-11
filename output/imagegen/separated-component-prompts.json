@@ -28,88 +28,11 @@
     "generatedPath": "/Users/mac/.codex/generated_images/01a100c5-12b3-73a1-a228-9fea27b10b9b/exec-38a8c21e-38b7-43f7-878d-80618a53f2d9.png"
   },
   {
-    "id": "burgundy-bow",
-    "source": "/Users/mac/Desktop/11-11/public/images/birthday/pink-minimal/invitation-square.webp",
-    "prompt": "Use case: background-extraction. Edit target: original pink-minimal invitation artwork. Extract ONLY the burgundy outlined bow with its two pointed trailing ribbons. Remove the cherries including their thin stems, hearts and waves. Center this ONE isolated component, closely framed with 3% transparent edge margin, and preserve its original aspect ratio. Preserve its original shape, line weight, color and hand-drawn stroke style. Genuine alpha transparency outside all ink including enclosed loops and all object interiors. No white or pink fill, no paper, no texture, no shadows, no text, no extra decoration. Separately movable asset, not an invitation.",
-    "background": false,
-    "generatedPath": "/Users/mac/.codex/generated_images/01a100c5-12b3-73a1-a228-9fea27b10b9b/exec-a23c61e2-daf0-4840-9c5e-723a8aac2fb0.png"
-  },
-  {
-    "id": "burgundy-cherries",
-    "source": "/Users/mac/Desktop/11-11/public/images/birthday/pink-minimal/invitation-square.webp",
-    "prompt": "Use case: background-extraction. Edit target: original pink-minimal invitation artwork. Extract ONLY the two burgundy outlined cherries and their stems. Remove the bow and its trailing ribbons, hearts and waves. Center this ONE isolated component, closely framed with 3% transparent edge margin, and preserve its original aspect ratio. Preserve its original shape, line weight, color and hand-drawn stroke style. Genuine alpha transparency outside all ink including enclosed loops and all object interiors. No white or pink fill, no paper, no texture, no shadows, no text, no extra decoration. Separately movable asset, not an invitation.",
-    "background": false,
-    "generatedPath": "/Users/mac/.codex/generated_images/01a100c5-12b3-73a1-a228-9fea27b10b9b/exec-d106efe7-cf7d-4276-9b79-45c6199df0d0.png"
-  },
-  {
-    "id": "burgundy-heart",
-    "source": "/Users/mac/Desktop/11-11/public/images/birthday/pink-minimal/invitation-square.webp",
-    "prompt": "Use case: background-extraction. Edit target: original pink-minimal invitation artwork. Extract ONLY ONE small burgundy outlined heart from the left of the cherries. Remove all other objects. Center this ONE isolated component, closely framed with 3% transparent edge margin, and preserve its original aspect ratio. Preserve its original shape, line weight, color and hand-drawn stroke style. Genuine alpha transparency outside all ink including enclosed loops and all object interiors. No white or pink fill, no paper, no texture, no shadows, no text, no extra decoration. Separately movable asset, not an invitation.",
-    "background": false,
-    "generatedPath": "/Users/mac/.codex/generated_images/01a100c5-12b3-73a1-a228-9fea27b10b9b/exec-b37ab48a-5887-4bec-a5d9-22c83f0e44d0.png"
-  },
-  {
-    "id": "burgundy-waves",
-    "source": "/Users/mac/Desktop/11-11/public/images/birthday/pink-minimal/invitation-square.webp",
-    "prompt": "Use case: background-extraction. Edit target: original pink-minimal invitation artwork. Extract ONLY the two parallel burgundy hand-drawn wavy lines across the bottom as one divider ornament. Remove all other objects. Center this ONE isolated component, closely framed with 3% transparent edge margin, and preserve its original aspect ratio. Preserve its original shape, line weight, color and hand-drawn stroke style. Genuine alpha transparency outside all ink including enclosed loops and all object interiors. No white or pink fill, no paper, no texture, no shadows, no text, no extra decoration. Separately movable asset, not an invitation.",
-    "background": false,
-    "generatedPath": "/Users/mac/.codex/generated_images/01a100c5-12b3-73a1-a228-9fea27b10b9b/exec-8d8d0869-8acf-4c13-bffc-4cae797f72c3.png"
-  },
-  {
-    "id": "pink-post-envelope",
-    "source": "/Users/mac/Desktop/11-11/public/images/birthday/pink-post/watercolor-birthday-post.webp",
-    "prompt": "Use case: background-extraction. Edit target: original invitation. Extract ONLY the pink open envelope across the lower half, WITHOUT the wax seal or small heart. Exactly one separately movable component centered and closely framed with 3% margin, preserve original aspect ratio, shapes, colors and illustration style. Genuine alpha transparency outside the selected object; remove all paper, backdrop and unrelated marks. Preserve watercolor/ink within the object, no opaque rectangular fill, no added text, no extra objects, no ground shadow.",
-    "background": false,
-    "generatedPath": "/Users/mac/.codex/generated_images/01a100c5-12b3-73a1-a228-9fea27b10b9b/exec-c2dced69-0146-46a7-bfd4-7054e6acea07.png"
-  },
-  {
-    "id": "pink-post-seal",
-    "source": "/Users/mac/Desktop/11-11/public/images/birthday/pink-post/watercolor-birthday-post.webp",
-    "prompt": "Use case: background-extraction. Edit target: original invitation. Extract ONLY the ivory heart wax seal at bottom right. Exactly one separately movable component centered and closely framed with 3% margin, preserve original aspect ratio, shapes, colors and illustration style. Genuine alpha transparency outside the selected object; remove all paper, backdrop and unrelated marks. Preserve watercolor/ink within the object, no opaque rectangular fill, no added text, no extra objects, no ground shadow.",
-    "background": false,
-    "generatedPath": "/Users/mac/.codex/generated_images/01a100c5-12b3-73a1-a228-9fea27b10b9b/exec-af921fd6-973b-43aa-9465-bcc98c86b299.png"
-  },
-  {
-    "id": "pink-post-heart",
-    "source": "/Users/mac/Desktop/11-11/public/images/birthday/pink-post/watercolor-birthday-post.webp",
-    "prompt": "Use case: background-extraction. Edit target: original invitation. Extract ONLY the small pink watercolor heart at top right. Exactly one separately movable component centered and closely framed with 3% margin, preserve original aspect ratio, shapes, colors and illustration style. Genuine alpha transparency outside the selected object; remove all paper, backdrop and unrelated marks. Preserve watercolor/ink within the object, no opaque rectangular fill, no added text, no extra objects, no ground shadow.",
-    "background": false,
-    "generatedPath": "/Users/mac/.codex/generated_images/01a100c5-12b3-73a1-a228-9fea27b10b9b/exec-8a36d3d3-ffe8-4d4b-90bd-26447a7b2508.png"
-  },
-  {
     "id": "disco-scrapbook-paper",
     "source": "/Users/mac/Desktop/11-11/public/images/birthday/disco-scrapbook/analog-disco-party.webp",
     "prompt": "Use case: precise-object-edit. Edit target: original invitation. Remove the disco ball, martini glass, stars and ALL colored tape pieces. Keep only the original ivory paper and black pencil grid along the bottom and right in precisely the same composition. Preserve square canvas, exact palette, texture, pattern, and proportions. Fill removed objects naturally with the neighboring background. No objects, no text or lettering, no shadows. This is a background-only asset, decorations will be separate transparent files.",
     "background": true,
     "generatedPath": "/Users/mac/.codex/generated_images/01a100c5-12b3-73a1-a228-9fea27b10b9b/exec-b6d9ab3b-9853-4533-a706-ac07db1efc31.png"
-  },
-  {
-    "id": "velvet-post-paper",
-    "source": "/Users/mac/Desktop/11-11/public/images/birthday/velvet-post/blush-wine-stationery.webp",
-    "prompt": "Use case: precise-object-edit. Edit target: original invitation. Remove cake, martini glass, and pink ribbon. Keep only original blush textured paper and burgundy brush stripes along left, right and bottom. Preserve square canvas, exact palette, texture, pattern, and proportions. Fill removed objects naturally with the neighboring background. No objects, no text or lettering, no shadows. This is a background-only asset, decorations will be separate transparent files.",
-    "background": true,
-    "generatedPath": "/Users/mac/.codex/generated_images/01a100c5-12b3-73a1-a228-9fea27b10b9b/exec-1de71948-5448-48d9-97f7-7c3a753c1caa.png"
-  },
-  {
-    "id": "velvet-ribbon",
-    "source": "/Users/mac/Desktop/11-11/public/images/birthday/velvet-post/blush-wine-stationery.webp",
-    "prompt": "Use case: background-extraction. Edit target: original invitation. Extract ONLY the long curling pink ribbon at top right. Exactly one separately movable component centered and closely framed with 3% margin, preserve original aspect ratio, shapes, colors and illustration style. Genuine alpha transparency outside the selected object; remove all paper, backdrop and unrelated marks. Preserve watercolor/ink within the object, no opaque rectangular fill, no added text, no extra objects, no ground shadow.",
-    "background": false,
-    "generatedPath": "/Users/mac/.codex/generated_images/01a100c5-12b3-73a1-a228-9fea27b10b9b/exec-8ecea035-f4e0-466c-b694-e3b4e82804da.png"
-  },
-  {
-    "id": "checkerboard-paper",
-    "source": "/Users/mac/Desktop/11-11/public/images/birthday/checkerboard-cheers/red-checker-toast.webp",
-    "prompt": "Use case: precise-object-edit. Edit target: original invitation. Remove BOTH cocktail glasses and their garnishes. Keep only original bright red painted paper and orange-and-ivory wavy checkerboard corners. Preserve square canvas, exact palette, texture, pattern, and proportions. Fill removed objects naturally with the neighboring background. No objects, no text or lettering, no shadows. This is a background-only asset, decorations will be separate transparent files.",
-    "background": true,
-    "generatedPath": "/Users/mac/.codex/generated_images/01a100c5-12b3-73a1-a228-9fea27b10b9b/exec-a1d871b4-5f2d-4dfc-9d27-2ab7779ffe71.png"
-  },
-  {
-    "id": "checkerboard-spritz",
-    "source": "/Users/mac/Desktop/11-11/public/images/birthday/checkerboard-cheers/red-checker-toast.webp",
-    "prompt": "Use case: background-extraction. Edit target: original invitation. Extract ONLY the orange spritz glass on the right, with its citrus slice, ice and rosemary. Remove martini glass and background. Exactly one separately movable component centered and closely framed with 3% margin, preserve original aspect ratio, shapes, colors and illustration style. Genuine alpha transparency outside the selected object; remove all paper, backdrop and unrelated marks. Preserve watercolor/ink within the object, no opaque rectangular fill, no added text, no extra objects, no ground shadow.",
-    "background": false,
-    "generatedPath": "/Users/mac/.codex/generated_images/01a100c5-12b3-73a1-a228-9fea27b10b9b/exec-fe23ab7d-01d1-4304-b4cb-170fe228ac8f.png"
   },
   {
     "id": "cobalt-left-toast",
@@ -1592,15 +1515,6 @@
     "kind": "portrait-frame",
     "prompt": "Use case: illustration-story. Reference image: the supplied transparent square decorative frame. Generate a NEW matching native 9:16 portrait version for a tall fullscreen invitation, composition 1080 by 1920. Redraw/recompose the same frame around the four edges of the taller canvas; extend ribbon paths or add matching floral/leaf sections along the sides. Keep the same original colors, illustration style, delicate line weight and decorative motifs. Bows, leaves, flowers and lace details must retain natural proportions, NOT stretched vertically. Keep a 3% outer margin and a large entirely transparent empty center for editable text. Only the frame from the reference, no paper or background paint, no additional accessories, no text, no shadows, no watermark. Genuine transparent alpha outside and inside the frame.",
     "generatedPath": "/Users/mac/.codex/generated_images/01a100c5-12b3-73a1-a228-9fea27b10b9b/exec-7a7b93bc-30de-47b0-acf8-5087464ac086.png"
-  },
-  {
-    "id": "checkerboard-paper-portrait",
-    "originalId": "checkerboard-paper",
-    "source": "/Users/mac/Desktop/11-11/public/images/backgrounds/separated/checkerboard-paper.webp",
-    "background": true,
-    "kind": "portrait-background",
-    "prompt": "Use case: illustration-story. Reference image: original square invitation background, without foreground decorations. Generate a dedicated tall fullscreen variant of this SAME background at a native 9:16 portrait aspect ratio, 1080 by 1920 composition. Recompose and extend the design vertically rather than stretching the square artwork. Keep original colors, painted paper textures, graphical style and motif placement. Circles, moons, water ripples, halftone dots and checks must keep natural undistorted proportions; add more pattern rows or extend blank paper as needed. Keep the center/title area quiet and open, matching the source. Do not add characters, spiders, glasses, foreground accessories, lettering, logos, watermarks or new motifs. Full-bleed opaque background.",
-    "generatedPath": "/Users/mac/.codex/generated_images/01a100c5-12b3-73a1-a228-9fea27b10b9b/exec-2924cd64-5b6e-402f-8e8a-560df3fb5afc.png"
   },
   {
     "id": "disco-scrapbook-paper-portrait",

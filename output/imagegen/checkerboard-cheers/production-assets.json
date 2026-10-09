@@ -1,0 +1,14 @@
+{
+  "tool": "built-in image_gen",
+  "assets": [
+    {
+      "name": "checker-pattern.webp",
+      "prompt": "Use case: illustration-story. Production website pattern texture: seamless repeating hand-painted wavy orange and warm cream CHECKERBOARD textile pattern, orange #f78026 and cream #fff1df only, soft gouache brush texture, flowing organic subtly warped grid like retro birthday supper club tablecloth. Checks large, coherent regular spacing, no perspective, flat frontal texture tile, edges seamless. No objects, shadows, text, border, people, hands. Entire square filled. Beautiful tactile matte paint, refined rather than distressed. This will be repeated as a horizontal table runner and fullscreen edge pattern in a premium birthday invitation."
+    }
+  ],
+  "reusedPhotos": "src/invitations/ribbon-sketch/celebrationArtwork.js",
+  "reusedCocktails": [
+    "/images/components/separated/checkerboard-spritz.webp",
+    "/images/birthday/checkerboard-cheers/painted-olive-martini.webp"
+  ]
+}

@@ -75,9 +75,6 @@
 .invitation-art.preview-birthday.preview-beer-party:not(.invitation-art--portrait) .full-image-cover-copy > em { max-width: 72%; }
 :root body .invitation-art.preview-birthday.preview-beer-party:lang(ka) .full-image-cover-copy > strong { font-size: 6.3cqw; line-height: 1.12; }
 :root body .invitation-art.preview-birthday.preview-pink-glam:lang(ka) .full-image-cover-copy > strong { font-size: 6.5cqw; line-height: 1.25; }
-:root body .invitation-art.preview-birthday.preview-checkerboard-cheers:lang(ka) .full-image-cover-copy > strong { font-size: 7cqw; line-height: 1.15; }
-.invitation-art.preview-birthday.preview-checkerboard-cheers .full-image-cover-copy { width: 62%; }
-.invitation-art.preview-birthday.preview-checkerboard-cheers .full-image-cover-details { margin-top: 2cqw; }
 
 /* Lift square-card details into the quiet sky above the table and waterline. */
 .invitation-art.preview-birthday:not(.invitation-art--portrait):is(.preview-garden-party, .preview-painted-summer, .preview-tropical-summer) .full-image-cover-copy {

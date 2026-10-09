@@ -1,14 +1,14 @@
 {
-  "total": 126,
+  "total": 122,
   "summary": {
-    "independent-components": 103,
+    "independent-components": 99,
     "retained-scene": 17,
     "existing-layers": 4,
     "background-only": 1,
     "graphic-background": 1
   },
   "categories": {
-    "Birthday": 43,
+    "Birthday": 39,
     "Wedding": 30,
     "Other": 53,
     "Corporate": 0
@@ -99,131 +99,6 @@
       ]
     },
     {
-      "slug": "birthday-pink-minimal",
-      "category": "Birthday",
-      "visibility": "active",
-      "textLayer": "localized HTML",
-      "separation": "independent-components",
-      "background": {
-        "color": "#f9d0d9"
-      },
-      "components": [
-        {
-          "id": "bow-cherries-assembly",
-          "left": "10%",
-          "top": "42%",
-          "width": "80%",
-          "height": "45%",
-          "portrait": {
-            "left": "10%",
-            "top": "42%",
-            "width": "80%",
-            "height": "38%"
-          },
-          "aspectRatio": 1.3333333333333333,
-          "components": [
-            {
-              "id": "burgundy-bow",
-              "image": "/images/components/separated/burgundy-bow.webp",
-              "left": "20%",
-              "top": "0%",
-              "width": "60%",
-              "height": "59.2445%"
-            },
-            {
-              "id": "burgundy-cherries",
-              "image": "/images/components/separated/burgundy-cherries.webp",
-              "left": "11.84%",
-              "top": "10.094%",
-              "width": "74%",
-              "height": "83.7918%"
-            }
-          ]
-        },
-        {
-          "id": "burgundy-heart",
-          "image": "/images/components/separated/burgundy-heart.webp",
-          "left": "21%",
-          "top": "54%",
-          "width": "8%",
-          "height": "10%",
-          "portrait": {
-            "left": "10%",
-            "top": "54%",
-            "width": "12%",
-            "height": "8%"
-          }
-        },
-        {
-          "id": "burgundy-heart-right",
-          "image": "/images/components/separated/burgundy-heart.webp",
-          "left": "71%",
-          "top": "62%",
-          "width": "8%",
-          "height": "10%",
-          "portrait": {
-            "left": "79%",
-            "top": "60%",
-            "width": "12%",
-            "height": "8%"
-          },
-          "rotation": 10
-        },
-        {
-          "id": "burgundy-waves",
-          "image": "/images/components/separated/burgundy-waves.webp",
-          "left": "0%",
-          "top": "90%",
-          "width": "100%",
-          "height": "8%",
-          "portrait": {
-            "left": "0%",
-            "top": "92%",
-            "width": "100%",
-            "height": "5%"
-          }
-        }
-      ]
-    },
-    {
-      "slug": "birthday-pink-post",
-      "category": "Birthday",
-      "visibility": "active",
-      "textLayer": "localized HTML",
-      "separation": "independent-components",
-      "background": {
-        "color": "#f7f1e5",
-        "image": "/images/bridal/selected/backgrounds/ivory-paper.webp",
-        "size": "cover"
-      },
-      "components": [
-        {
-          "id": "pink-post-envelope-1",
-          "image": "/images/components/separated/pink-post-envelope.webp",
-          "left": "0%",
-          "top": "24%",
-          "width": "100%",
-          "height": "76%"
-        },
-        {
-          "id": "pink-post-seal-2",
-          "image": "/images/components/separated/pink-post-seal.webp",
-          "left": "84%",
-          "top": "77%",
-          "width": "13%",
-          "height": "15%"
-        },
-        {
-          "id": "pink-post-heart-3",
-          "image": "/images/components/separated/pink-post-heart.webp",
-          "left": "86%",
-          "top": "6%",
-          "width": "10%",
-          "height": "13%"
-        }
-      ]
-    },
-    {
       "slug": "birthday-disco-scrapbook",
       "category": "Birthday",
       "visibility": "active",
@@ -279,77 +154,6 @@
           "width": "12%",
           "height": "7%",
           "rotation": 3
-        }
-      ]
-    },
-    {
-      "slug": "birthday-velvet-post",
-      "category": "Birthday",
-      "visibility": "active",
-      "textLayer": "localized HTML",
-      "separation": "independent-components",
-      "background": {
-        "color": "#f5d8dd",
-        "image": "/images/backgrounds/separated/velvet-post-paper.webp",
-        "size": "100% 100%"
-      },
-      "components": [
-        {
-          "id": "martini-1",
-          "image": "/images/birthday/velvet-post/bow-martini.webp",
-          "left": "2%",
-          "top": "57%",
-          "width": "24%",
-          "height": "39%"
-        },
-        {
-          "id": "cake-2",
-          "image": "/images/birthday/velvet-post/bow-birthday-cake.webp",
-          "left": "70%",
-          "top": "55%",
-          "width": "28%",
-          "height": "43%"
-        },
-        {
-          "id": "velvet-ribbon-3",
-          "image": "/images/components/separated/velvet-ribbon.webp",
-          "left": "79%",
-          "top": "-2%",
-          "width": "19%",
-          "height": "49%"
-        }
-      ]
-    },
-    {
-      "slug": "birthday-checkerboard-cheers",
-      "category": "Birthday",
-      "visibility": "active",
-      "textLayer": "localized HTML",
-      "separation": "independent-components",
-      "background": {
-        "color": "#fff1df",
-        "image": "/images/backgrounds/separated/checkerboard-paper.webp",
-        "portrait": {
-          "image": "/images/backgrounds/separated/checkerboard-paper-portrait.webp",
-          "size": "100% 100%"
-        }
-      },
-      "components": [
-        {
-          "id": "martini-1",
-          "image": "/images/birthday/checkerboard-cheers/painted-olive-martini.webp",
-          "left": "55%",
-          "top": "53%",
-          "width": "31%",
-          "height": "45%"
-        },
-        {
-          "id": "checkerboard-spritz-2",
-          "image": "/images/components/separated/checkerboard-spritz.webp",
-          "left": "80%",
-          "top": "31%",
-          "width": "21%",
-          "height": "60%"
         }
       ]
     },
@@ -594,7 +398,7 @@
         },
         {
           "id": "martini-5",
-          "image": "/images/birthday/velvet-post/bow-martini.webp",
+          "image": "/images/birthday/ribbon-social/bow-martini.webp",
           "left": "80%",
           "top": "63%",
           "width": "18%",

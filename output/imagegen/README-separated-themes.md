@@ -16,7 +16,6 @@ Bows, hearts, cakes, gifts, glasses, bottles, individual dancers, balloons and o
 
 Connected frames and intrinsic illustration details remain together. For example, a cake includes its frosting and candles, and a connected dinner-table illustration includes its place settings. Integrated photographic scenes and detailed scrapbook collages are preserved rather than presented as extracted components.
 
-Pink Minimal's bow and cherries are one `bow-cherries-assembly` component. Its nested image pieces use a shared 4:3 coordinate canvas, with the bow knot anchored to the stem loop. Square and portrait layouts only reposition and resize the assembly, never its internal join. The original transparent assets remain available, and the hearts and underline remain separate.
 
 Glass towers, painted toast panels, and the envelope/portrait/bow assembly render as complete groups by default. Their extracted individual parts remain in `componentLibrary`; switch a group's `components` to that library to work with the pieces independently. Original full artwork has not been deleted.
 

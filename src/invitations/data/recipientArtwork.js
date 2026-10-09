@@ -16,7 +16,6 @@ export const recipientArtwork = {
   ...selectedBridalPortraits,
   "birthday-ballerina": "/images/recipient/birthday-ballerina/invitation-portrait.webp",
   "birthday-beer-party": "/images/recipient/birthday-beer-party/invitation-portrait.webp",
-  "birthday-checkerboard-cheers": "/images/recipient/birthday-checkerboard-cheers/invitation-portrait.webp",
   "birthday-classic-celebration": "/images/recipient/birthday-classic-celebration/invitation-portrait-cartoon-ribbon-frame.webp",
   "birthday-cobalt-cheers": "/images/recipient/birthday-cobalt-cheers/invitation-portrait.webp",
   "birthday-coquette": "/images/recipient/birthday-coquette/invitation-portrait.webp",
@@ -29,12 +28,12 @@ export const recipientArtwork = {
   "birthday-pastel-disco": "/images/recipient/birthday-pastel-disco/invitation-portrait.webp",
   "birthday-pastel-dream": "/images/recipient/birthday-pastel-dream/invitation-portrait.webp",
   "birthday-pink-glam": "/images/recipient/birthday-pink-glam/invitation-portrait.webp",
-  "birthday-pink-post": "/images/recipient/birthday-pink-post/invitation-portrait.webp",
+
   "birthday-retro-pop": "/images/recipient/birthday-retro-pop/invitation-portrait.webp",
   "birthday-ribbon-social": "/images/recipient/birthday-ribbon-social/invitation-portrait.webp",
   "birthday-strawberry-social": "/images/recipient/birthday-strawberry-social/invitation-portrait.webp",
   "birthday-tropical-summer": "/images/recipient/birthday-tropical-summer/invitation-portrait.webp",
-  "birthday-velvet-post": "/images/recipient/birthday-velvet-post/invitation-portrait.webp",
+
   "birthday-y2k-party": "/images/recipient/birthday-y2k-party/invitation-portrait.webp",
   "bridal-cool-girl-card": "/images/recipient/bridal-cool-girl-card/invitation-portrait.webp",
   "bridal-doll-pink-card": "/images/recipient/bridal-doll-pink-card/invitation-portrait.webp",

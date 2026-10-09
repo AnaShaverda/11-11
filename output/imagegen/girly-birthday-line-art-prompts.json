@@ -35,22 +35,6 @@
       "original": "src/assets/birthday/white-and-blue/ornament.png"
     },
     {
-      "slug": "pink-minimal",
-      "kind": "portrait",
-      "source": "/Users/mac/.codex/generated_images/01a0fded-c5d5-70f0-9061-b505b5e7c2c3/exec-6210af2d-126b-44c2-bf97-58474bd1994b.png",
-      "prompt": "Use case: precise-object-edit. Input screenshot contains FOUR invitation cards side by side. Extract ONLY card 4 counting left to right into its own flat full-bleed portrait image, aspect ratio 1:2. Reproduce the exact line art, object shapes, stroke weight, relative placements and paper colors from that card as closely as possible. This is a faithful extraction, NOT a redesign or new illustration. Preserve original blush paper and burgundy artwork. The large outline bow and hanging cherries occupy x=20%-85%, y=50%-85%, with one little heart at each side and two thin waves along bottom. Upper half empty for big bold title. Match simple round cherry shapes and long straight stems. Remove all printed text cleanly, leaving its space empty: app renders text. Remove external grey background, shadows, neighboring cards, bottom concept label and board heading. No added illustrations or new details. No text, letters, numbers or watermark.",
-      "destination": "public/images/recipient/birthday-pink-minimal/invitation-portrait.webp",
-      "original": "src/assets/birthday/pink-minimal/portrait.png"
-    },
-    {
-      "slug": "pink-minimal",
-      "kind": "ornament",
-      "source": "/Users/mac/.codex/generated_images/01a0fded-c5d5-70f0-9061-b505b5e7c2c3/exec-c52615b3-6b4e-4374-bcdc-b66cdffe0876.png",
-      "prompt": "Use case: stylized-concept. ONE isolated decorative component for a modern invitation moodboard. One pair of outlined cherries whose stems are tied with a loose double-loop ribbon bow. Burgundy #7c1129 monoline only, no filled regions. Center in a square canvas with ample margin. Genuine alpha TRANSPARENT background, no paper, no backdrop, no white rectangle, no shadow. Spare fine freehand ink contours with gentle wobble. Absolutely NO text, numbers, lettering, extra flowers, leaves, ornate decorative flourishes, gradients, watercolor, 3D or realism. Only the specified subject. Preserve open interior shapes and transparency inside outlines.",
-      "destination": "public/images/birthday/pink-minimal/line-ornament.webp",
-      "original": "src/assets/birthday/pink-minimal/ornament.png"
-    },
-    {
       "slug": "ribbon-sketch",
       "format": "square",
       "source": "/Users/mac/.codex/generated_images/01a0fded-c5d5-70f0-9061-b505b5e7c2c3/exec-a3414b2e-a1aa-40df-833e-b9e83674a473.png",
@@ -65,14 +49,6 @@
       "prompt": "Use case: precise-object-edit. Adapt this approved tall birthday background into ONE square 1:1 full-bleed invitation background for a website catalog. Preserve EXACT SAME drawings, subject shapes, line weight, colors and minimal style of reference, resizing and repositioning them to suit square format. Do not embellish, add objects or redraw them in another style. Keep same ornaments on outer margins and the center x=22%-78%, y=35%-80% completely empty. Resize the exact cake from reference to width 26%, height 27%, centered at x=50%, y=19%; frame fully visible, white paper unchanged. No text, numbers, letters, mockup shadows, watercolor, new flowers, leaf ornamentation, textures, extra cherries on cake or gradients. Entire artwork flat, one square card face. Central empty space will receive editable type.",
       "destination": "public/images/birthday/white-and-blue/invitation-square.webp",
       "original": "src/assets/birthday/white-and-blue/square.png"
-    },
-    {
-      "slug": "pink-minimal",
-      "format": "square",
-      "source": "/Users/mac/.codex/generated_images/01a0fded-c5d5-70f0-9061-b505b5e7c2c3/exec-47f5e620-b358-4dce-8938-600c8bc7c04a.png",
-      "prompt": "Use case: precise-object-edit. Adapt this approved tall birthday background into ONE square 1:1 full-bleed invitation background for a website catalog. Preserve EXACT SAME drawings, subject shapes, line weight, colors and minimal style of reference, resizing and repositioning them to suit square format. Do not embellish, add objects or redraw them in another style. Keep upper half empty for title. The same bow-tied cherries occupy x=28%-72%, y=54%-88%, hearts at sides, and waves at very bottom. No text, numbers, letters, mockup shadows, watercolor, new flowers, leaf ornamentation, textures, extra cherries on cake or gradients. Entire artwork flat, one square card face. Central empty space will receive editable type.",
-      "destination": "public/images/birthday/pink-minimal/invitation-square.webp",
-      "original": "src/assets/birthday/pink-minimal/square.png"
     }
   ]
 }

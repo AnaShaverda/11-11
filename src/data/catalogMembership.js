@@ -5,8 +5,7 @@ export const designMembershipOverrides = {
   "birthday-strawberry-social": { birthday: ["adult-birthday", "kids-birthday"], "baby-kids": ["kids-birthday"], parties: ["themed"] },
   "birthday-white-and-blue": { birthday: ["adult-birthday", "kids-birthday"], "baby-kids": ["kids-birthday"] },
   "birthday-playground": { birthday: ["adult-birthday", "kids-birthday"], "baby-kids": ["kids-birthday"], parties: ["themed"] },
-  "birthday-pink-post": { birthday: ["adult-birthday", "kids-birthday"], "baby-kids": ["kids-birthday"] },
-  "birthday-pink-minimal": { birthday: ["adult-birthday", "kids-birthday"], "baby-kids": ["kids-birthday"] },
+
   "birthday-little-pizza-chef": { birthday: ["kids-birthday"], "baby-kids": ["kids-birthday"], parties: ["themed"] },
   "birthday-comic-cutout": { birthday: ["adult-birthday", "kids-birthday"], "baby-kids": ["kids-birthday"], parties: ["themed"] },
   "birthday-retro-sport": { birthday: ["adult-birthday", "kids-birthday"], "baby-kids": ["kids-birthday"], parties: ["themed"] },

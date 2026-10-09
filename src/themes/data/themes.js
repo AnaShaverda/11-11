@@ -2,9 +2,9 @@ import { applyThemeStatus } from "./themeStatus.js";
 import { girlyBirthdayThemes } from "../../invitations/data/girlyBirthdayDesigns.js";
 export const birthdayThemes = [
   ...girlyBirthdayThemes,
-  {"id": "birthday-pink-post", "slug": "birthday-pink-post", "category": "birthday", "name": "Pink Post", "description": "A soft watercolor envelope and a birthday note made just for you.", "mood": "Blush · simple · personal", "visual": "pink-post", "layout": "editorial", "decor": ""},
+
   {"id": "birthday-disco-scrapbook", "slug": "birthday-disco-scrapbook", "category": "birthday", "name": "Disco Scrapbook", "description": "Colorful paper accents, a loose calendar grid, and an invitation to dance.", "mood": "Cream · colorful · analog", "visual": "disco-scrapbook", "layout": "editorial", "decor": ""},
-  {"id": "birthday-velvet-post", "slug": "birthday-velvet-post", "category": "birthday", "name": "Velvet Post", "description": "Wine-red stripes, blush paper, and charming cocktail-and-cake sketches.", "mood": "Wine red · blush · romantic", "visual": "velvet-post", "layout": "editorial", "decor": ""},
+
   {"id": "birthday-checkerboard-cheers", "slug": "birthday-checkerboard-cheers", "category": "birthday", "name": "Checkerboard Cheers", "description": "Wavy orange checks, vivid red curves, and a birthday made for a toast.", "mood": "Orange · bold · retro", "visual": "checkerboard-cheers", "layout": "editorial", "decor": ""},
   {"id": "birthday-pastel-disco", "status": "inactive", "slug": "birthday-pastel-disco", "category": "birthday", "name": "Pastel Disco", "description": "Powder-blue stripes, a painted mirror ball, and a dreamy birthday dance.", "mood": "Powder blue · dreamy · playful", "visual": "pastel-disco", "layout": "editorial", "decor": ""},
   {"id": "birthday-paper-garland", "slug": "birthday-paper-garland", "category": "birthday", "name": "Watercolor Wishes", "description": "A loosely painted birthday cake, pastel bunting, and delicate sparkles on a clean background.", "mood": "Pastel · airy · watercolor", "visual": "paper-garland", "layout": "editorial", "decor": ""},

@@ -75,7 +75,7 @@
 .rs-ribbon-opening .guest-envelope-greeting { color:var(--guest-ink); }
 
 /* Show the complete generated illustrations inside each scrapbook and screen slot. */
-.ribbon-sketch img:is([src*="/images/party/"],[src*="/images/wedding/heartmarked/ribbon-wine-clink"],[src*="/images/birthday/velvet-post/bow-"],[src*="/images/birthday/peach-fizz/coupe-artwork"]) { object-fit:contain;background:#fff4f1;padding:4%; }
+.ribbon-sketch img:is([src*="/images/party/"],[src*="/images/wedding/heartmarked/ribbon-wine-clink"],[src*="/images/birthday/peach-fizz/coupe-artwork"]) { object-fit:contain;background:#fff4f1;padding:4%; }
 
 .rs-ribbon-opening { background:#fbd5de; }
 .rs-ribbon-opening .paper-envelope { --guest-paper:#f4cbd5!important;--guest-ink:#8d263d!important;--guest-accent:#ad1626!important;--soft-paper-image:url('/images/birthday/ribbon-sketch/ribbon-envelope-texture.png');--soft-paper-base:#f4cbd5;--soft-paper-seam:#8d263d55;--soft-paper-shadow:#8d263d; }

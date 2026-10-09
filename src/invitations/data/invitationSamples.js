@@ -81,9 +81,9 @@ export const invitationSamples = {
   "wedding-blue-pour": {"title": "Nino & Luka", "date": "12 JUN 2027", "location": "TBILISI", "line": "A little toast. A lifetime together.", "mark": "N&L"},
   "wedding-garden-dance": { title: "Ana & Giorgi", date: "19 JUN 2027", location: "TBILISI", line: "Love, laughter, and a little dancing.", mark: "A&G" },
   "wedding-ink-and-ivy": { title: "Nino & Luka", date: "12 JUN 2027", location: "TBILISI", line: "A little ink. A lifetime of love.", mark: "N&L" },
-  "birthday-pink-post": {"title": "Mia’s Birthday", "name": "Mia", "age": 26, "date": "23 MAY", "time": "17:00", "location": "TBILISI", "line": "Come over. Let’s celebrate.", "mark": "26"},
+
   "birthday-disco-scrapbook": {"title": "Priscilla’s Birthday", "name": "Priscilla", "age": 33, "date": "02 SEP", "time": "19:00", "location": "TBILISI", "line": "Save the date. Bring your sparkle.", "mark": "33"},
-  "birthday-velvet-post": {"title": "Marifer’s Birthday", "name": "Marifer", "age": 20, "date": "17 JAN", "time": "16:00", "location": "TBILISI", "line": "A toast to twenty.", "mark": "20"},
+
   "birthday-checkerboard-cheers": {"title": "Alex’s Birthday Party", "name": "Alex", "age": 28, "date": "08 JUN", "time": "19:00", "location": "TBILISI", "line": "Let’s make a night of it.", "mark": "28"},
   "birthday-pastel-disco": {"title": "Mia’s Disco Birthday", "name": "Mia", "age": 24, "date": "08 JUN", "time": "19:00", "location": "TBILISI", "line": "Meet me on the dance floor.", "mark": "24"},
   "birthday-paper-garland": {"title": "Nini’s Birthday", "name": "Nini", "age": 9, "date": "18 JUL", "time": "15:00", "location": "TBILISI", "line": "A day full of happy wishes.", "mark": "9"},

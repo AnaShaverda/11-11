@@ -30,16 +30,7 @@ const studies = [
     phrase: "birthday party", kaPhrase: "დაბადების დღის წვეულება",
     finish: "Blue ink. Bright wishes.", kaFinish: "ლურჯი ხაზები. ნათელი სურვილები.",
   },
-  {
-    slug: "pink-minimal", name: "Pink Minimal", kaName: "სადა ვარდისფერი",
-    paper: "#f9d0d9", ink: "#7c1129", tags: ["line-art", "pastel"],
-    description: "Bold party lettering, burgundy cherry outlines, and simple pink paper.",
-    kaDescription: "გამოკვეთილი ასოები, ალუბლის შინდისფერი კონტურები და სადა ვარდისფერი ქაღალდი.",
-    mood: "Pink · burgundy · bold", kaMood: "ვარდისფერი · შინდისფერი · გამოკვეთილი",
-    headline: "LET’S PARTY", kaHeadline: "ვიზეიმოთ",
-    phrase: "For the birthday girl.", kaPhrase: "დაბადების დღის იუბილარისთვის.",
-    finish: "Sweet details. Big birthday energy.", kaFinish: "ტკბილი დეტალები. დიდი დაბადების დღის განწყობა.",
-  },
+
 ];
 
 const id = (study) => `birthday-${study.slug}`;
@@ -74,7 +65,7 @@ export const girlyBirthdayAssets = records((study) => study.slug === "playground
 export const girlyBirthdayPortraits = records((study) => study.slug === "playground" ? null : `/images/recipient/${id(study)}/invitation-portrait.webp`);
 export const girlyBirthdaySamples = records((study) => ({
   title: "Mia’s Birthday", name: "Mia", headline: study.headline,
-  opening: study.slug === "playground" ? "come celebrate" : study.slug === "pink-minimal" ? "save the date" : "you’re invited",
+  opening: study.slug === "playground" ? "come celebrate" : "you’re invited",
   date: "23 MAY 2027 · 17:00", location: "TBILISI", line: study.phrase,
 }));
 
@@ -89,7 +80,7 @@ for (const study of studies) {
     for (const [field, value] of Object.entries(values)) girlyBirthdayCaptions[language][`themes.${slug}.${field}`] = value;
   }
   const localized = {
-    samples: { title: "მიას დაბადების დღე", name: "მია", headline: study.kaHeadline, opening: study.slug === "playground" ? "ერთად ვიზეიმოთ" : study.slug === "pink-minimal" ? "შეინახე თარიღი" : "გეპატიჟებით", date: "23 მაისი 2027 · 17:00", location: "თბილისი", line: study.kaPhrase },
+    samples: { title: "მიას დაბადების დღე", name: "მია", headline: study.kaHeadline, opening: study.slug === "playground" ? "ერთად ვიზეიმოთ" : "გეპატიჟებით", date: "23 მაისი 2027 · 17:00", location: "თბილისი", line: study.kaPhrase },
     designs: { specimen: study.kaHeadline, phrase: study.kaPhrase, accentCard: "დაბადების დღის სურვილები", accentCopy: study.kaPhrase, finish: study.kaFinish },
   };
   for (const [namespace, fields] of Object.entries(localized)) {

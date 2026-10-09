@@ -25,37 +25,6 @@ test("separated themes reference saved backgrounds and individually identified c
   }
 });
 
-test("the bow and cherries form one component while hearts and underline stay independent", () => {
-  const components = separatedThemeAssets["birthday-pink-minimal"].components;
-  assert.equal(components.length, 4);
-  assert.equal(new Set(getBirthdayImageAssets(components).map(component => component.image)).size, 4);
-  const withoutHearts = components.filter(component => !component.id.includes("heart"));
-  assert.equal(withoutHearts.length, 2);
-  assert.deepEqual(withoutHearts[0].components.map(component => component.id), ["burgundy-bow", "burgundy-cherries"]);
-  assert.equal(getBirthdayImageAssets(components.filter(component => component.id !== "bow-cherries-assembly")).length, 3);
-});
-
-test("the bow knot and cherry stem stay joined in the same fixed-ratio coordinate space", () => {
-  const layers = separatedThemeAssets["birthday-pink-minimal"];
-  const before = JSON.stringify(layers);
-  const square = getSeparatedComponents(layers)[0];
-  const portrait = getSeparatedComponents(layers, "portrait")[0];
-  assert.equal(square.aspectRatio, 4 / 3);
-  assert.equal(portrait.aspectRatio, square.aspectRatio);
-  assert.deepEqual(portrait.components, square.components);
-  assert.notEqual(portrait.height, square.height);
-  const [bow, cherries] = square.components;
-  const anchor = (part, x, y) => ({
-    x: parseFloat(part.left) + parseFloat(part.width) * x,
-    y: (parseFloat(part.top) + parseFloat(part.height) * y) / square.aspectRatio,
-  });
-  const knot = anchor(bow, 0.493, 0.234);
-  const stem = anchor(cherries, 0.51, 0.045);
-  assert.ok(Math.abs(knot.x - stem.x) < 0.01);
-  assert.ok(Math.abs(knot.y - stem.y) < 0.01);
-  assert.equal(JSON.stringify(layers), before);
-});
-
 test("portrait overrides do not mutate the square component configuration", () => {
   const layers = separatedThemeAssets["birthday-ribbon-sketch"];
   const before = JSON.stringify(layers);
@@ -84,9 +53,6 @@ test("ornate frames use portrait artwork but simple line frames and plain paper 
   const simple = separatedThemeAssets["gender-reveal-bear-hug"];
   assert.deepEqual(getSeparatedBackground(simple), getSeparatedBackground(simple, "portrait"));
   assert.equal(getSeparatedComponents(simple).at(-1).image, getSeparatedComponents(simple, "portrait").at(-1).image);
-  const before = JSON.stringify(separatedThemeAssets["birthday-checkerboard-cheers"]);
-  assert.match(getSeparatedBackground(separatedThemeAssets["birthday-checkerboard-cheers"], "portrait").image, /-portrait\.webp$/);
-  assert.equal(JSON.stringify(separatedThemeAssets["birthday-checkerboard-cheers"]), before);
 });
 
 test("complete glass-tower and envelope/portrait compositions retain their individual components", () => {

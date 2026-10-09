@@ -5,7 +5,7 @@
 The user-added `../3d_unicode.ttf` is registered as **3D Unicode**, Regular (400).
 It contains all 33 standard Georgian Mkhedruli letters and no English letters.
 It is used for Georgian headings on Classic Celebration, Ribbon Sketch,
-Paper Garland, Velvet Post and Y2K Digital. The existing supplied English display font remains
+Paper Garland and Y2K Digital. The existing supplied English display font remains
 first in each shared stack; 3D Unicode renders the unsupported Georgian letters.
 Each theme's requested weight remains the same in both languages.
 The file is served locally; no third-party font request is made at runtime.

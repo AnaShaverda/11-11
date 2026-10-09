@@ -89,9 +89,9 @@ const storefront = {
   "wedding-blue-pour": {"slug": "wedding-blue-pour", "title": "Blue Pour", "style": "Cobalt ink & a playful pour"},
   "wedding-garden-dance": { slug: "wedding-garden-dance", title: "Garden Dance", style: "Watercolor guests & garden disco" },
   "wedding-ink-and-ivy": { slug: "wedding-ink-and-ivy", title: "Ink & Ivy", style: "Indigo illustrations & wildflowers" },
-  "birthday-pink-post": {"slug": "birthday-pink-post", "title": "Pink Post", "style": "Blush watercolor & personal notes"},
+
   "birthday-disco-scrapbook": {"slug": "birthday-disco-scrapbook", "title": "Disco Scrapbook", "style": "Cut-paper colors & disco sparkle"},
-  "birthday-velvet-post": {"slug": "birthday-velvet-post", "title": "Velvet Post", "style": "Wine stripes & blush ink"},
+
   "birthday-checkerboard-cheers": {"slug": "birthday-checkerboard-cheers", "title": "Checkerboard Cheers", "style": "Orange checks & painted cocktails"},
   "birthday-pastel-disco": {"slug": "birthday-pastel-disco", "title": "Pastel Disco", "style": "Pastel sparkles & painted disco"},
   "birthday-paper-garland": {"slug": "birthday-paper-garland", "title": "Watercolor Wishes", "style": "Soft watercolor cake, bunting & sparkles"},

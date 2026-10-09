@@ -46,15 +46,7 @@ const named = (slug, key, x, y, w, h, options) =>
   part(`${slug}-${key}`, x, y, w, h, options);
 const texture = "/images/bridal/selected/backgrounds/ivory-paper.webp";
 
-add(
-  "birthday-pink-post",
-  [
-    part("pink-post-envelope", 0, 24, 100, 76),
-    part("pink-post-seal", 84, 77, 13, 15),
-    part("pink-post-heart", 86, 6, 10, 13),
-  ],
-  texture,
-);
+
 add(
   "birthday-disco-scrapbook",
   [
@@ -78,44 +70,7 @@ add(
   ],
   background("disco-scrapbook-paper"),
 );
-add(
-  "birthday-velvet-post",
-  [
-    reused(
-      "/images/birthday/velvet-post/bow-martini.webp",
-      "martini",
-      2,
-      57,
-      24,
-      39,
-    ),
-    reused(
-      "/images/birthday/velvet-post/bow-birthday-cake.webp",
-      "cake",
-      70,
-      55,
-      28,
-      43,
-    ),
-    part("velvet-ribbon", 79, -2, 19, 49),
-  ],
-  background("velvet-post-paper"),
-);
-add(
-  "birthday-checkerboard-cheers",
-  [
-    reused(
-      "/images/birthday/checkerboard-cheers/painted-olive-martini.webp",
-      "martini",
-      55,
-      53,
-      31,
-      45,
-    ),
-    part("checkerboard-spritz", 80, 31, 21, 60),
-  ],
-  background("checkerboard-paper"),
-);
+
 add(
   "birthday-cobalt-cheers",
   [
@@ -139,7 +94,7 @@ add(
       37,
     ),
     reused(
-      "/images/birthday/velvet-post/bow-martini.webp",
+      "/images/birthday/ribbon-social/bow-martini.webp",
       "martini",
       80,
       63,

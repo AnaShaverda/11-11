@@ -11,23 +11,9 @@
 .preview-white-and-blue .line-birthday-opening { top: 91%; }
 .preview-white-and-blue .line-birthday-title { top: 51%; left: 14%; width: 72%; font-size: 15cqw; }
 :root body .preview-white-and-blue .line-birthday-phrase { top: 83%; font-size: 5cqw; font-style: italic; }
-.preview-pink-minimal .line-birthday-opening { top: 6%; }
-.preview-pink-minimal .line-birthday-title { top: 12%; left: 19%; width: 62%; font-size: 16cqw; line-height: .92; letter-spacing: -.035em; }
-.preview-pink-minimal .line-birthday-phrase { top: 86%; font-size: 2.4cqw; }
 /* Scale the original cherries separately so the bottom waves keep their position. */
-.invitation-art.full-image-cover.preview-pink-minimal { background: var(--cover-image) center top / 100% 400% no-repeat !important; }
-.invitation-art.full-image-cover.preview-pink-minimal::before,
-.invitation-art.full-image-cover.preview-pink-minimal::after {
-  content: ""; display: block; position: absolute; inset: 0; width: 100%; height: 100%;
-  border: 0; border-radius: 0; opacity: 1; pointer-events: none;
-  background: var(--cover-image) center / 100% 100% no-repeat;
-}
-.invitation-art.full-image-cover.preview-pink-minimal::before { transform: scale(.9); clip-path: inset(0 0 10% 0); }
-.invitation-art.full-image-cover.preview-pink-minimal::after { transform: none; clip-path: inset(91% 0 0 0); }
 :root body .line-birthday-copy:lang(ka) .line-birthday-title { font-size: 9cqw; line-height: 1.2; }
 :root body .preview-white-and-blue .line-birthday-copy:lang(ka) .line-birthday-title { font-size: 10cqw; }
-:root body .preview-pink-minimal .line-birthday-copy:lang(ka) .line-birthday-title { font-size: 14cqw; }
-.preview-pink-minimal .line-birthday-copy:lang(ka) .line-birthday-phrase { left: 5%; width: 90%; font-size: 2.2cqw; }
 .invitation-art--portrait .line-birthday-copy > * { left: 13%; width: 74%; }
 .invitation-art--portrait .line-birthday-opening { top: 33%; font-size: 4.4cqw; letter-spacing: .15em; }
 .invitation-art--portrait .line-birthday-title { top: 43%; font-size: 20cqw; line-height: 1; }
@@ -36,12 +22,7 @@
 .invitation-art--portrait.preview-white-and-blue .line-birthday-title { top: 58%; left: 7%; width: 86%; font-size: 19cqw; line-height: 1.02; }
 :root body .invitation-art--portrait.preview-white-and-blue .line-birthday-phrase { top: 78%; font-size: 7cqw; letter-spacing: 0; }
 .invitation-art--portrait.preview-white-and-blue .line-birthday-opening { top: 89%; }
-.invitation-art--portrait.preview-pink-minimal .line-birthday-opening { top: 6%; }
-.invitation-art--portrait.preview-pink-minimal .line-birthday-title { top: 12%; left: 8%; width: 84%; font-size: 33cqw; line-height: .92; }
-.invitation-art--portrait.preview-pink-minimal .line-birthday-phrase { top: 86%; font-size: 4.5cqw; }
 :root body .invitation-art--portrait .line-birthday-copy:lang(ka) .line-birthday-title { font-size: 14cqw; line-height: 1.2; }
-:root body .invitation-art--portrait.preview-pink-minimal .line-birthday-copy:lang(ka) .line-birthday-title { font-size: 17cqw; top: 20%; }
-.invitation-art--portrait.preview-pink-minimal .line-birthday-copy:lang(ka) .line-birthday-phrase { top: 86%; font-size: 3.4cqw; }
 /* Companion moodboards keep each study's two-color palette. */
 .design-pattern-modern-birthday-lines { --showcase-accent: var(--showcase-ink); --showcase-secondary: var(--showcase-paper); }
 .design-pattern-modern-birthday-lines .design-support-message h3 { font-size: clamp(2rem, 4.4vw, 4.5rem); line-height: 1.1; letter-spacing: -.03em; }
