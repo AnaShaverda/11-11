@@ -286,18 +286,18 @@
   box-shadow: none; clip-path: none;
 }
 .custom-builder-opening-choice .opening-mini::after { display: none; }
-.custom-builder-opening-choice .opening-mini-envelope { background-image: url('/images/opening/preview-envelope.png'); }
-.custom-builder-opening-choice .opening-mini-embossedIvoryEnvelope { background-image: url('/images/opening/preview-embossed-ivory.png'); }
-.custom-builder-opening-choice .opening-mini-embossedSageEnvelope { background-image: url('/images/opening/preview-embossed-sage.png'); }
-.custom-builder-opening-choice .opening-mini-doors { background-image: url('/images/opening/preview-doors-white.png'); }
-.custom-builder-opening-choice .opening-mini-doorsBrown { background-image: url('/images/opening/preview-doors-brown.png'); }
+.custom-builder-opening-choice .opening-mini-envelope { background-image: url('/images/opening/preview-envelope.webp'); }
+.custom-builder-opening-choice .opening-mini-embossedIvoryEnvelope { background-image: url('/images/opening/preview-embossed-ivory.webp'); }
+.custom-builder-opening-choice .opening-mini-embossedSageEnvelope { background-image: url('/images/opening/preview-embossed-sage.webp'); }
+.custom-builder-opening-choice .opening-mini-doors { background-image: url('/images/opening/preview-doors-white.webp'); }
+.custom-builder-opening-choice .opening-mini-doorsBrown { background-image: url('/images/opening/preview-doors-brown.webp'); }
 .custom-builder-opening-choice .opening-mini-doorsBlueFloral { position: relative; background: #f5f4eb; }
 .custom-builder-opening-choice .opening-mini-doorsBlueFloral::before,
-.custom-builder-opening-choice .opening-mini-doorsBlueFloral::after { content: ""; display: block; position: absolute; width: 31%; height: 82%; top: 9%; background: url('/images/opening/blue-floral-door-leaf.png') center / 200% 100% no-repeat; }
+.custom-builder-opening-choice .opening-mini-doorsBlueFloral::after { content: ""; display: block; position: absolute; width: 31%; height: 82%; top: 9%; background: url('/images/opening/blue-floral-door-leaf.webp') center / 200% 100% no-repeat; }
 .custom-builder-opening-choice .opening-mini-doorsBlueFloral::before { left: 19%; }
 .custom-builder-opening-choice .opening-mini-doorsBlueFloral::after { left: 50%; transform: scaleX(-1); }
 .custom-builder-opening-choice .opening-mini-stampedPaper { position: relative; background: linear-gradient(90deg,#f8f3e8 0 49.7%,#d7cbb9 49.8% 50.2%,#f8f3e8 50.3%); }
-.custom-builder-opening-choice .opening-mini-stampedPaper::before { content: ""; position: absolute; display: block; width: 50px; height: 50px; top: 50%; left: 50%; transform: translate(-50%,-50%); background: url('/images/opening/ivory-paper-wax-seal.png') center / contain no-repeat; }
+.custom-builder-opening-choice .opening-mini-stampedPaper::before { content: ""; position: absolute; display: block; width: 50px; height: 50px; top: 50%; left: 50%; transform: translate(-50%,-50%); background: url('/images/opening/ivory-paper-wax-seal.webp') center / contain no-repeat; }
 .custom-builder-opening-choice .opening-mini-immediate { display: grid; place-items: center; background: #f4f0e9; }
 .custom-builder-opening-choice .opening-mini-immediate .wedding-theme-mini { display: block; width: 68px; height: 102px; min-height: 0; max-height: none; margin: 0; overflow: hidden; }
 
@@ -411,39 +411,39 @@
 .custom-builder-opening-choice .opening-mini { height: 88px; position: relative; overflow: hidden; }
 @media(max-width:380px) { .custom-builder-opening-choice > div { grid-template-columns: repeat(2,minmax(0,1fr)); } }
 
-.custom-builder-opening-choice .opening-mini-embossedIvoryEnvelope { background-image: url('/images/opening/vertical-embossed-ivory.png') !important; background-size: contain !important; background-repeat: no-repeat; background-position: center; }
+.custom-builder-opening-choice .opening-mini-embossedIvoryEnvelope { background-image: url('/images/opening/vertical-embossed-ivory.webp') !important; background-size: contain !important; background-repeat: no-repeat; background-position: center; }
 .custom-builder-opening-choice .opening-mini-embossedIvoryEnvelope::after { display: none; }
 
-.custom-builder-opening-choice .opening-mini-embossedSageEnvelope { background-image: url('/images/opening/vertical-embossed-sage.png') !important; background-size: contain !important; background-repeat: no-repeat; background-position: center; }
+.custom-builder-opening-choice .opening-mini-embossedSageEnvelope { background-image: url('/images/opening/vertical-embossed-sage.webp') !important; background-size: contain !important; background-repeat: no-repeat; background-position: center; }
 .custom-builder-opening-choice .opening-mini-embossedSageEnvelope::after { display: none; }
 
-.custom-builder-opening-choice .opening-mini-embossedBurgundyEnvelope { background-image: url('/images/opening/vertical-embossed-burgundy.png') !important; background-size: contain !important; background-repeat: no-repeat; background-position: center; }
+.custom-builder-opening-choice .opening-mini-embossedBurgundyEnvelope { background-image: url('/images/opening/vertical-embossed-burgundy.webp') !important; background-size: contain !important; background-repeat: no-repeat; background-position: center; }
 .custom-builder-opening-choice .opening-mini-embossedBurgundyEnvelope::after { display: none; }
 
-.custom-builder-opening-choice .opening-mini-bordeauxLaceEnvelope { background: #faf5e9 url('/images/opening/bordeaux-bridal-lace.png') center / contain no-repeat; overflow: hidden; }
+.custom-builder-opening-choice .opening-mini-bordeauxLaceEnvelope { background: #faf5e9 url('/images/opening/bordeaux-bridal-lace.webp') center / contain no-repeat; overflow: hidden; }
 .custom-builder-opening-choice .opening-mini-bordeauxLaceEnvelope::after { display: block; inset: 0 48% 0 0; width: auto; height: auto; border: 0; border-radius: 0; transform: none; background: #702430; clip-path: polygon(0 0,40% 0,100% 50%,40% 100%,0 100%); }
 
 .custom-builder-opening-choice .opening-mini-bordeauxLaceEnvelope::after {
-  background: #702b38 url('/images/opening/burgundy-cotton-paper.png') center / cover;
+  background: #702b38 url('/images/opening/burgundy-cotton-paper.webp') center / cover;
 }
 
-.custom-builder-opening-choice .opening-mini-greenLaceEnvelope { background: #faf5e9 url('/images/opening/bordeaux-bridal-lace.png') center / contain no-repeat; overflow: hidden; }
-.custom-builder-opening-choice .opening-mini-greenLaceEnvelope::after { display: block; inset: 0 48% 0 0; width: auto; height: auto; border: 0; border-radius: 0; transform: none; background: #adb59b url('/images/opening/sage-cotton-paper.png') center / cover; clip-path: polygon(0 0,40% 0,100% 50%,40% 100%,0 100%); }
+.custom-builder-opening-choice .opening-mini-greenLaceEnvelope { background: #faf5e9 url('/images/opening/bordeaux-bridal-lace.webp') center / contain no-repeat; overflow: hidden; }
+.custom-builder-opening-choice .opening-mini-greenLaceEnvelope::after { display: block; inset: 0 48% 0 0; width: auto; height: auto; border: 0; border-radius: 0; transform: none; background: #adb59b url('/images/opening/sage-cotton-paper.webp') center / cover; clip-path: polygon(0 0,40% 0,100% 50%,40% 100%,0 100%); }
 
 .custom-builder-opening-choice .opening-mini-bordeauxLaceEnvelope::after {
-  background: #702b38 url('/images/opening/burgundy-rough-rag-paper.png') center / cover;
+  background: #702b38 url('/images/opening/burgundy-rough-rag-paper.webp') center / cover;
 }
 .custom-builder-opening-choice .opening-mini-greenLaceEnvelope::after {
-  background: #183d2d url('/images/opening/forest-green-rough-rag-paper.png') center / cover;
+  background: #183d2d url('/images/opening/forest-green-rough-rag-paper.webp') center / cover;
 }
 .custom-builder-opening-choice .opening-mini-roseFiberEnvelope {
-  background: #d9a6aa url('/images/opening/rose-fiber-paper.png') center / cover;
+  background: #d9a6aa url('/images/opening/rose-fiber-paper.webp') center / cover;
   overflow: hidden;
 }
 .custom-builder-opening-choice .opening-mini-roseFiberEnvelope::after {
   display: block; inset: 0 48% 0 0; width: auto; height: auto;
   border: 0; border-radius: 0; transform: none;
-  background: #d9a6aa url('/images/opening/rose-fiber-paper.png') center / cover;
+  background: #d9a6aa url('/images/opening/rose-fiber-paper.webp') center / cover;
   clip-path: polygon(0 0, 40% 0, 100% 50%, 40% 100%, 0 100%);
   filter: brightness(.91);
 }

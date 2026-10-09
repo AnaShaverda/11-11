@@ -6,7 +6,7 @@ import { themeDemoEvents } from "../../themes/data/demoEvents.js";
 import { invitationSamples } from "./invitationSamples.js";
 import { MAX_GUEST_NOTE_LENGTH } from "./guestNotes.js";
 
-export const guestPreviewDefaults = { timeZone: "Asia/Tbilisi", details: true, rsvp: true, rsvpDeadline: "", music: false, gallery: false, motion: "none", format: "square", companions: 1, entrance: "envelope", envelope: true, openingEffect: "none", openingIntensity: "subtle", openingSpeed: "slow", openingDuration: 8, openingPalette: "theme" };
+export const guestPreviewDefaults = { timeZone: "Asia/Tbilisi", details: true, rsvp: true, rsvpDeadline: "", music: false, gallery: false, motion: "none", format: "square", companions: 1, entrance: "ivoryPaperEnvelope", envelopeStamp: false, envelope: true, openingEffect: "none", openingIntensity: "subtle", openingSpeed: "slow", openingDuration: 8, openingPalette: "theme" };
 export const entranceStyles = ["ivoryPaperEnvelope", "pinkPaperEnvelope", "bluePaperEnvelope", "classicBurgundyEnvelope", "redPortraitEnvelope", "pastelGreenEnvelope", "bordeauxLaceEnvelope", "greenLaceEnvelope", "doors", "doorsBrown", "doorsBlueFloral", "stampedPaper", "immediate"];
 export const motionStyles = ["none", "gentle", "float", "sparkle", "elegant"];
 export const openingEffects = ["none", "confetti", "streamers", "hearts", "sparkles", "petals"];

@@ -2,13 +2,13 @@ import assert from "node:assert/strict";
 import test from "node:test";
 import { readFileSync } from "node:fs";
 import { projects, getProjectBySlug } from "../src/data/projects.js";
-import { activeThemes } from "../src/themes/data/themeRegistry.js";
+import { themes } from "../src/themes/data/themeRegistry.js";
 import { getDesignMembership, itemMatchesCategory } from "../src/data/catalogMembership.js";
 import { giftCatalogItems } from "../src/surprises/data/giftCatalog.js";
 import { getInvitationCatalogLink, readCatalogCategory, readCatalogOccasion } from "../src/invitations/data/catalogFilters.js";
 import { captions } from "../src/localization/captions.js";
 
-const items = activeThemes.map((theme) => ({ ...theme, ...getDesignMembership(theme) }));
+const items = themes.map((theme) => ({ ...theme, ...getDesignMembership(theme) }));
 
 test("all eight categories have SVG assets and bilingual labels, with weddings and birthdays first", () => {
   assert.deepEqual(projects.map((p) => p.id), ["wedding", "birthday", "baby-kids", "pre-wedding", "parties", "gifts", "trending", "corporate"]);

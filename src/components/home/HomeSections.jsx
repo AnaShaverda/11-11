@@ -1,7 +1,6 @@
 import { Link } from "react-router-dom";
 import Icon from "../ui/Icon.jsx";
 import HomeInvitations from "./HomeInvitations.jsx";
-import HomeSurpriseSection from "../../surprises/components/HomeSurpriseSection.jsx";
 import { useLanguage } from "../../localization/LanguageContext.jsx";
 
 const possibilities = [
@@ -24,7 +23,6 @@ export default function HomeSections() {
         <div className="home-section-intro"><span className="home-section-index">{t("home.possibilities.index")}</span><h2>{t("home.possibilities.title")}</h2><p>{t("home.possibilities.description")}</p></div>
         <div className="possibility-list">{possibilities.map((item) => <div className="possibility-row" key={item.id}><span aria-hidden="true"><Icon name={item.icon} size={24} /></span><div><strong>{t(`home.possibility.${item.id}.title`)}</strong><small>{t(`home.possibility.${item.id}.detail`)}</small></div></div>)}</div>
       </section>
-      <HomeSurpriseSection />
       <HomeInvitations />
       <section className="home-interactive">
         <div className="home-section-intro"><span className="home-section-index">{t("home.interactive.index")}</span><h2>{t("home.interactive.title")}</h2><p>{t("home.interactive.description")}</p></div>

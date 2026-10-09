@@ -3,6 +3,13 @@ import { invitationEditorCopy } from "./invitationEditorCopy.js";
 
 export const guestCardCopy = {
   en: {
+    "guestCards.entrance.redPortraitEnvelope": "Red portrait envelope",
+    "guestCards.entrance.pastelGreenEnvelope": "Pastel green envelope",
+    "guestCards.entrance.bordeauxLaceEnvelope": "Burgundy lace envelope",
+    "guestCards.entrance.greenLaceEnvelope": "Green lace envelope",
+    "guestCards.entrance.doorsBlueFloral": "Blue floral doors",
+    "guestCards.entrance.stampedPaper": "Paper with wax seal",
+
     ...invitationEditorCopy.en,
     ...guestCanvasCopy.en,
     "guestCards.preview": "Guest preview", "guestCards.back": "Back to design",
@@ -72,6 +79,13 @@ export const guestCardCopy = {
     "guestCards.photos.family.0": "Little beginnings", "guestCards.photos.family.1": "Together with love", "guestCards.photos.family.2": "A beautiful day",
   },
   ka: {
+    "guestCards.entrance.redPortraitEnvelope": "წითელი ვერტიკალური კონვერტი",
+    "guestCards.entrance.pastelGreenEnvelope": "პასტელური მწვანე კონვერტი",
+    "guestCards.entrance.bordeauxLaceEnvelope": "ბორდოსფერი მაქმანიანი კონვერტი",
+    "guestCards.entrance.greenLaceEnvelope": "მწვანე მაქმანიანი კონვერტი",
+    "guestCards.entrance.doorsBlueFloral": "ლურჯი ყვავილოვანი კარები",
+    "guestCards.entrance.stampedPaper": "ქაღალდი ცვილის ბეჭდით",
+
     ...invitationEditorCopy.ka,
     ...guestCanvasCopy.ka,
     "guestCards.preview": "სტუმრის ხედი", "guestCards.back": "დიზაინზე დაბრუნება",

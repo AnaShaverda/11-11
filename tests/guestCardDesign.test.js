@@ -87,18 +87,18 @@ test("full names retain compound and international names without guessing first 
   assert.equal(normalizeGuestReply({ attendance: "declined", fullName: "Maya Beridze", companions: 1 }, 3).companions, 0);
 });
 
-test("entrance migration preserves legacy choices and gives valid new preferences precedence", () => {
-  assert.equal(guestPreviewDefaults.entrance, "envelope");
+test("entrance migration maps legacy envelopes to ivory and and gives valid new preferences precedence", () => {
+  assert.equal(guestPreviewDefaults.entrance, "ivoryPaperEnvelope");
   for (const legacy of [{}, { envelope: true }, { envelope: null }, { envelope: "false" }]) {
-    assert.equal(normalizeGuestSettings(legacy).entrance, "envelope");
+    assert.equal(normalizeGuestSettings(legacy).entrance, "ivoryPaperEnvelope");
   }
   assert.equal(normalizeGuestSettings({ envelope: false }).entrance, "immediate");
   assert.equal(normalizeGuestSettings({ entrance: "unknown", envelope: false }).entrance, "immediate");
-  assert.equal(normalizeGuestSettings({ entrance: {}, envelope: true }).entrance, "envelope");
+  assert.equal(normalizeGuestSettings({ entrance: {}, envelope: true }).entrance, "ivoryPaperEnvelope");
   for (const entrance of entranceStyles) {
     const next = normalizeGuestSettings({ entrance, envelope: entrance !== "envelope", motion: "elegant", gallery: true, companions: 3, openingEffect: "hearts" });
     assert.equal(next.entrance, entrance);
-    assert.equal(next.envelope, entrance === "envelope");
+    assert.equal(next.envelope, !["doors", "doorsBrown", "doorsBlueFloral", "stampedPaper", "immediate"].includes(entrance));
     assert.equal(next.motion, "elegant");
     assert.equal(next.gallery, true);
     assert.equal(next.companions, 3);

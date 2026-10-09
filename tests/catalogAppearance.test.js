@@ -1,13 +1,13 @@
 import test from "node:test";
 import assert from "node:assert/strict";
 import { catalogColorOptions, catalogThemeOptions, getCatalogAppearance, matchesCatalogAppearance, readCatalogAppearance } from "../src/invitations/data/catalogAppearance.js";
-import { activeInvitationTemplates } from "../src/invitations/data/templates.js";
+import { activeInvitationTemplates, invitationTemplates } from "../src/invitations/data/templates.js";
 import { getInvitationCatalogLink, updateCatalogFilters } from "../src/invitations/data/catalogFilters.js";
 import { projects } from "../src/data/projects.js";
 import { giftCatalogItems } from "../src/surprises/data/giftCatalog.js";
 import { captions } from "../src/localization/captions.js";
 
-const design = (id) => activeInvitationTemplates.find((item) => item.id === id);
+const design = (id) => invitationTemplates.find((item) => item.id === id);
 test("theme and color filters match the public design metadata", () => {
   assert.ok(getCatalogAppearance(design("birthday-white-and-blue")).colors.includes("blue"));
   const ribbon = getCatalogAppearance(design("birthday-ribbon-sketch"));

@@ -28,13 +28,6 @@
     "generatedPath": "/Users/mac/.codex/generated_images/01a100c5-12b3-73a1-a228-9fea27b10b9b/exec-38a8c21e-38b7-43f7-878d-80618a53f2d9.png"
   },
   {
-    "id": "disco-scrapbook-paper",
-    "source": "/Users/mac/Desktop/11-11/public/images/birthday/disco-scrapbook/analog-disco-party.webp",
-    "prompt": "Use case: precise-object-edit. Edit target: original invitation. Remove the disco ball, martini glass, stars and ALL colored tape pieces. Keep only the original ivory paper and black pencil grid along the bottom and right in precisely the same composition. Preserve square canvas, exact palette, texture, pattern, and proportions. Fill removed objects naturally with the neighboring background. No objects, no text or lettering, no shadows. This is a background-only asset, decorations will be separate transparent files.",
-    "background": true,
-    "generatedPath": "/Users/mac/.codex/generated_images/01a100c5-12b3-73a1-a228-9fea27b10b9b/exec-b6d9ab3b-9853-4533-a706-ac07db1efc31.png"
-  },
-  {
     "id": "cobalt-left-toast",
     "source": "/Users/mac/Desktop/11-11/public/images/birthday/cobalt-cheers/blue-ink-toast.webp",
     "prompt": "Use case: background-extraction. Edit target: original invitation. Extract ONLY the left blue-ink hand holding its coupe glass with checked sleeve; remove the right hand, right glass and central splashes. Exactly one separately movable component centered and closely framed with 3% margin, preserve original aspect ratio, shapes, colors and illustration style. Genuine alpha transparency outside the selected object; remove all paper, backdrop and unrelated marks. Preserve watercolor/ink within the object, no opaque rectangular fill, no added text, no extra objects, no ground shadow.",
@@ -1281,13 +1274,6 @@
     "generatedPath": "/Users/mac/.codex/generated_images/01a100c5-12b3-73a1-a228-9fea27b10b9b/exec-81a93c3a-2797-49f5-8841-7522a1052cf6.png"
   },
   {
-    "id": "birthday-disco-scrapbook-tape",
-    "source": "/Users/mac/Desktop/11-11/public/images/birthday/disco-scrapbook/analog-disco-party.webp",
-    "prompt": "Use case: background-extraction\nAsset type: individual invitation transparent component\nEdit target: attached source artwork.\nPrimary request: ONLY the single pink torn piece of tape from the upper left. Remove all other objects and paper.\nConstraints: preserve original hand-painted or line-art style, hues, object details; no text or watermark. Genuine transparent alpha, no paper, matte, white box, checkerboard or additional objects. Center the isolated object with small clear padding. For a frame preserve the full square canvas and original frame alignment.",
-    "background": false,
-    "generatedPath": "/Users/mac/.codex/generated_images/01a100c5-12b3-73a1-a228-9fea27b10b9b/exec-6172da3f-b67d-4331-928c-52561bc658c1.png"
-  },
-  {
     "id": "birthday-classic-celebration-frame",
     "source": "/Users/mac/Desktop/11-11/public/images/birthday/classic-celebration/cherry-candle-celebration-cartoon-ribbon-frame.webp",
     "prompt": "Use case: background-extraction\nEdit target: source invitation image.\nPrimary request: ONLY the thin pink rectangular border, without the upper-left bow, cake, panel or paper.\nConstraints: preserve original hues, linework, brush texture and shape; no text, watermark or extra objects. Real transparent alpha, no paper or matte. Center isolated object with small padding. For borders and frames preserve original full square canvas alignment.",
@@ -1515,15 +1501,6 @@
     "kind": "portrait-frame",
     "prompt": "Use case: illustration-story. Reference image: the supplied transparent square decorative frame. Generate a NEW matching native 9:16 portrait version for a tall fullscreen invitation, composition 1080 by 1920. Redraw/recompose the same frame around the four edges of the taller canvas; extend ribbon paths or add matching floral/leaf sections along the sides. Keep the same original colors, illustration style, delicate line weight and decorative motifs. Bows, leaves, flowers and lace details must retain natural proportions, NOT stretched vertically. Keep a 3% outer margin and a large entirely transparent empty center for editable text. Only the frame from the reference, no paper or background paint, no additional accessories, no text, no shadows, no watermark. Genuine transparent alpha outside and inside the frame.",
     "generatedPath": "/Users/mac/.codex/generated_images/01a100c5-12b3-73a1-a228-9fea27b10b9b/exec-7a7b93bc-30de-47b0-acf8-5087464ac086.png"
-  },
-  {
-    "id": "disco-scrapbook-paper-portrait",
-    "originalId": "disco-scrapbook-paper",
-    "source": "/Users/mac/Desktop/11-11/public/images/backgrounds/separated/disco-scrapbook-paper.webp",
-    "background": true,
-    "kind": "portrait-background",
-    "prompt": "Use case: illustration-story. Reference image: original square invitation background, without foreground decorations. Generate a dedicated tall fullscreen variant of this SAME background at a native 9:16 portrait aspect ratio, 1080 by 1920 composition. Recompose and extend the design vertically rather than stretching the square artwork. Keep original colors, painted paper textures, graphical style and motif placement. Circles, moons, water ripples, halftone dots and checks must keep natural undistorted proportions; add more pattern rows or extend blank paper as needed. Keep the center/title area quiet and open, matching the source. Do not add characters, spiders, glasses, foreground accessories, lettering, logos, watermarks or new motifs. Full-bleed opaque background.",
-    "generatedPath": "/Users/mac/.codex/generated_images/01a100c5-12b3-73a1-a228-9fea27b10b9b/exec-66db4eb9-e253-4fbf-8088-8fbc474ca702.png"
   },
   {
     "id": "birthday-city-after-dark-background-portrait",

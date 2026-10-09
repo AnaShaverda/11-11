@@ -1,3 +1,4 @@
+import PopDiscoPoster from "./PopDiscoPoster.jsx";
 import CheckerboardCheersPoster from "./CheckerboardCheersPoster.jsx";
 import BirthdayPlaygroundPoster from "./BirthdayPlaygroundPoster.jsx";
 import RibbonSketchCardArt from "./RibbonSketchCardArt.jsx";
@@ -90,6 +91,8 @@ export function InvitationArtwork({
       )
       .map(([, value]) => String(value)),
   );
+  if (template.slug === "birthday-disco-scrapbook")
+    return <PopDiscoPoster sample={sample} language={language} presentation={presentation} className={className} ariaLabel={ariaLabel}/>;
   if (template.slug === "birthday-checkerboard-cheers")
     return <CheckerboardCheersPoster sample={sample} language={language} presentation={presentation} className={className} ariaLabel={ariaLabel}/>;
   if (template.slug === "birthday-playground")

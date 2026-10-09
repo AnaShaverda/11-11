@@ -20,7 +20,7 @@ export default function InvitationEntrance({ settings, design, title, initials, 
   const paperVariant = settings.entrance === "embossedIvoryEnvelope" ? "embossed-ivory" : settings.entrance === "embossedSageEnvelope" ? "embossed-sage" : settings.entrance === "embossedBurgundyEnvelope" ? "embossed-burgundy" : settings.entrance === "pastelGreenEnvelope" ? "pastel-green" : verticalEnvelope ? "floral" : settings.entrance === "ivoryPaperEnvelope" ? "ivory" : settings.entrance === "redVelvetEnvelope" ? "velvet" : settings.entrance === "pinkPaperEnvelope" ? "pink" : settings.entrance === "bluePaperEnvelope" ? "blue" : null;
   const softPaperEnvelope = ["ivory", "pink", "blue", "pastel-green"].includes(paperVariant);
   const mutedPaperTexture = ["pink", "blue", "pastel-green"].includes(paperVariant);
-  const softPaperTexture = paperTexture ?? (paperVariant === "ivory" ? "/images/opening/ivory-open-pocket.png" : paperVariant === "pastel-green" ? "/images/opening/pastel-green-plain-envelope.png" : `/images/opening/paper-envelope-${paperVariant}.png`);
+  const softPaperTexture = paperTexture ?? (paperVariant === "ivory" ? "/images/opening/ivory-open-pocket.webp" : paperVariant === "pastel-green" ? "/images/opening/pastel-green-plain-envelope.webp" : `/images/opening/paper-envelope-${paperVariant}.png`);
   const monogram = getWaxMonogram(title, initials);
   const entrance = paperVariant ? "envelope" : ["doorsBrown", "doorsBlueFloral"].includes(settings.entrance) ? "doors" : settings.entrance;
   const embossedVariant = entrance === "embossedIvoryEnvelope" ? "ivory" : entrance === "embossedSageEnvelope" ? "sage" : null;
@@ -80,8 +80,8 @@ export default function InvitationEntrance({ settings, design, title, initials, 
       {phase === "sealed" && <button type="button" className="bordeaux-lace-open" aria-label={t("guestCards.envelope.open")} onClick={openInvitation} />}
     </div>}
     {verticalEnvelope && phase !== "opened" && <div className="guest-envelope-scene vertical-double-scene">
-      <div className="vertical-envelope-wing wing-left"><img className="vertical-wing-flowers" src="/images/opening/red-envelope-flowers.png" alt="" /></div>
-      <div className="vertical-envelope-wing wing-right"><img className="vertical-wing-flowers" src="/images/opening/red-envelope-flowers.png" alt="" /></div>
+      <div className="vertical-envelope-wing wing-left"><img className="vertical-wing-flowers" src="/images/opening/red-envelope-flowers.webp" alt="" /></div>
+      <div className="vertical-envelope-wing wing-right"><img className="vertical-wing-flowers" src="/images/opening/red-envelope-flowers.webp" alt="" /></div>
       <span className="vertical-envelope-wax">{monogram && <span>{monogram}</span>}</span>
       {phase === "sealed" && <button type="button" className="vertical-envelope-tap" aria-label={t("guestCards.envelope.open")} onClick={openInvitation} />}
     </div>}
@@ -111,7 +111,7 @@ export default function InvitationEntrance({ settings, design, title, initials, 
         
         <span className="guest-envelope-title">{title}</span>
       </div>
-      <div className="guest-envelope guest-envelope-seal-layer" aria-hidden="true">{settings.envelopeStamp && ["pink", "blue"].includes(paperVariant) && <span className="paper-envelope-stamp"><span className="paper-stamp-art"><img src={`/images/christening/${paperVariant === "velvet" ? "pink" : paperVariant}-dove.png`} alt="" /><span>{monogram || <InvitationMotif name="heart" />}</span></span></span>}{paperVariant === "floral" && <><img className="envelope-flower-drawing is-left" src="/images/opening/red-envelope-flowers.png" alt="" /><img className="envelope-flower-drawing is-right" src="/images/opening/red-envelope-flowers.png" alt="" /></>}<span className="guest-envelope-seal">{sealArtwork ? <img className="guest-envelope-custom-seal" src={sealArtwork} alt="" /> : paperVariant && monogram ? <span className="paper-envelope-monogram">{monogram}</span> : <InvitationArtwork name="heart" size={21} />}</span></div>
+      <div className="guest-envelope guest-envelope-seal-layer" aria-hidden="true">{settings.envelopeStamp && ["pink", "blue"].includes(paperVariant) && <span className="paper-envelope-stamp"><span className="paper-stamp-art"><img src={`/images/christening/${paperVariant === "velvet" ? "pink" : paperVariant}-dove.png`} alt="" /><span>{monogram || <InvitationMotif name="heart" />}</span></span></span>}{paperVariant === "floral" && <><img className="envelope-flower-drawing is-left" src="/images/opening/red-envelope-flowers.webp" alt="" /><img className="envelope-flower-drawing is-right" src="/images/opening/red-envelope-flowers.webp" alt="" /></>}<span className="guest-envelope-seal">{sealArtwork ? <img className="guest-envelope-custom-seal" src={sealArtwork} alt="" /> : paperVariant && monogram ? <span className="paper-envelope-monogram">{monogram}</span> : <InvitationArtwork name="heart" size={21} />}</span></div>
       {phase === "sealed" && <button type="button" className="guest-envelope-open" aria-label={t("guestCards.envelope.open")} onClick={openInvitation}>
         <span>{t("guestCards.envelope.open")} <InvitationArtwork name="arrow-up-right" size={17} /></span>
       </button>}

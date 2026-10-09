@@ -1,19 +1,5 @@
-.theme-disco-scrapbook { --theme-bg:#faf3e3; --theme-ink:#2d2929; --theme-accent:#eabe4a; --theme-panel:#f2e5c7; --theme-stroke:#2d292930; --theme-display: "Noto Serif Georgian"; --world-paper:#faf3e3; --world-photo:url('/images/birthday/disco-scrapbook/analog-disco-party.webp'); background:var(--theme-bg); color:var(--theme-ink); }
-.invitation-preview-art.full-image-cover:is(.preview-disco-scrapbook) { background:var(--cover-image) center / cover no-repeat; }
-.full-image-cover.preview-disco-scrapbook { color:#2d2929; }
-.full-image-cover.preview-disco-scrapbook .full-image-cover-copy { top:20%; left:14%; width:62%; }
-.full-image-cover.preview-disco-scrapbook .full-image-cover-opening { color:#587db7; background:#ead16d; padding:.5cqw 1cqw; transform:rotate(-3deg); align-self:flex-start; }
-.full-image-cover.preview-disco-scrapbook .full-image-cover-copy strong { font:italic 700 8cqw/1.06 Georgia,serif; letter-spacing:-.045em; }
-.full-image-cover.preview-disco-scrapbook .full-image-cover-copy em { font-size:2.5cqw; max-width:100%; }
-.full-image-cover.preview-disco-scrapbook .full-image-cover-details { margin-top:3cqw; border-top-color:#2d292950; }
-:is(.theme-disco-scrapbook) .theme-invitation-card.full-image-cover { width:100%; padding:0; border:0; box-shadow:none; }
-:is(.theme-disco-scrapbook) .theme-invitation-card .full-image-cover-details { max-width:100%; font-size:1.8cqw; letter-spacing:.04em; }
-:is(.theme-disco-scrapbook) .theme-world-hero-photo,:is(.theme-disco-scrapbook) .theme-world-image > div { background-image:var(--world-photo); background-size:cover; }
 .design-type-disco-scrapbook .design-type-board { background:#faf3e3; color:#2d2929; }
 :is(.design-type-disco-scrapbook) .design-type-words h3 { max-width:9em; font-family: "Noto Serif Georgian"; font-style:italic; font-weight:400; }
 .design-pattern-velvet-stripes .design-pattern-panel { background-color:#842638; background-image:repeating-linear-gradient(90deg,#be657960 0 24px,transparent 24px 48px); color:#f5d8dd; }
 .design-pattern-scrapbook-grid .design-pattern-panel { background-color:#faf3e3; background-image:linear-gradient(#2d292940 1px,transparent 1px),linear-gradient(90deg,#2d292940 1px,transparent 1px); background-size:80px 80px; color:#2d2929; }
 .design-pattern-pink-paper .design-pattern-panel { background-color:#e6b8c3; background-image:repeating-linear-gradient(135deg,transparent 0 60px,#f7f1e570 61px 62px,transparent 63px 90px); color:#55463e; }
-.full-image-cover.preview-disco-scrapbook .scrapbook-word { display:inline-block; padding:0 .08em .05em; margin:.03em 0; color:#a24a67; background:#f0cf65; transform:rotate(-2deg); }
-.full-image-cover.preview-disco-scrapbook .scrapbook-word:nth-child(2n) { color:#345c98; background:#efb4c7; transform:rotate(2deg); }
-.full-image-cover.preview-disco-scrapbook .scrapbook-word:nth-child(3n) { color:#694981; background:#e7dab2; }

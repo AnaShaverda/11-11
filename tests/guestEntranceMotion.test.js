@@ -2,9 +2,9 @@ import test from "node:test";
 import assert from "node:assert/strict";
 import { getEntranceTransition } from "../src/invitations/data/guestEntranceMotion.js";
 
-test("door reveal pauses for continuation and celebrates before the invitation becomes interactive", () => {
+test("door reveal finishes automatically and celebrates before the invitation becomes interactive", () => {
   const doors = getEntranceTransition("doors", "opening", false);
-  assert.equal(doors.next, "preview");
+  assert.equal(doors.next, "finishing");
   assert.ok(doors.celebrationDelay > 0 && doors.celebrationDelay < doors.duration);
   assert.deepEqual(getEntranceTransition("doors", "preview", false), null);
   const finish = getEntranceTransition("doors", "finishing", false);
@@ -21,7 +21,7 @@ test("reduced motion skips reveal and dismissal delays without firing a celebrat
       const transition = getEntranceTransition(entrance, phase, true);
       assert.equal(transition.duration, 0);
       assert.equal(transition.celebrationDelay, null);
-      assert.equal(transition.next, entrance === "doors" && phase === "opening" ? "preview" : "opened");
+      assert.equal(transition.next, entrance === "doors" && phase === "opening" ? "finishing" : "opened");
     }
   }
 });

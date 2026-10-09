@@ -2,7 +2,7 @@ import { useLanguage } from "../../localization/LanguageContext.jsx";
 import InvitationArtwork from "./InvitationArtwork.jsx";
 
 function DoorLeaf({ side, variant }) {
-  const image = variant === "blueFloral" ? "/images/opening/blue-floral-door-leaf.png" : `/images/opening/classical-${variant}-door-leaf.webp`;
+  const image = variant === "blueFloral" ? "/images/opening/blue-floral-door-leaf.webp" : `/images/opening/classical-${variant}-door-leaf.webp`;
   return <div className={`guest-door-leaf is-${side}`} aria-hidden="true">
     <img src={image} alt="" decoding="async" draggable="false" />
   </div>;

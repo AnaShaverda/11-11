@@ -1,32 +1,34 @@
 import { lazy, Suspense } from "react";
+import { useLanguage } from "../localization/LanguageContext.jsx";
 import SiteLoader from "../components/ui/SiteLoader.jsx";
 import { Navigate, Route, Routes, useLocation } from "react-router-dom";
 import WebsiteLayout from "../components/layout/WebsiteLayout.jsx";
 import WebsiteIntroLayout from "../components/layout/WebsiteIntroLayout.jsx";
-import HomePage from "../pages/HomePage.jsx";
-import AboutPage from "../pages/AboutPage.jsx";
-import ContactPage from "../pages/ContactPage.jsx";
-import ProjectDetailPage from "../pages/ProjectDetailPage.jsx";
-import NotFoundPage from "../pages/NotFoundPage.jsx";
+const HomePage = lazy(() => import("../pages/HomePage.jsx"));
+const AboutPage = lazy(() => import("../pages/AboutPage.jsx"));
+const ContactPage = lazy(() => import("../pages/ContactPage.jsx"));
+const ProjectDetailPage = lazy(() => import("../pages/ProjectDetailPage.jsx"));
+const NotFoundPage = lazy(() => import("../pages/NotFoundPage.jsx"));
 import {
   getInvitationCatalogLink,
   readCatalogCategory,
 } from "../invitations/data/catalogFilters.js";
-import InvitationsPage from "../invitations/pages/InvitationsPage.jsx";
-import InvitationPreviewPage from "../invitations/pages/InvitationPreviewPage.jsx";
-import FriendshipDiaryModulePage from "../modules/pages/FriendshipDiaryModulePage.jsx";
-import SurpriseShowcasePage from "../surprises/pages/SurpriseShowcasePage.jsx";
-import SurpriseDemoPage from "../surprises/pages/SurpriseDemoPage.jsx";
-import LoginPage from "../auth/pages/LoginPage.jsx";
-import RegisterPage from "../auth/pages/RegisterPage.jsx";
-import CustomInvitationPage from "../invitations/pages/CustomInvitationPage.jsx";
-import CustomDesignGalleryPage from "../invitations/pages/CustomDesignGalleryPage.jsx";
-import CustomDesignExperiencePage from "../invitations/pages/CustomDesignExperiencePage.jsx";
-import CustomOrderRoute from "../custom-orders/CustomOrderRoute.jsx";
-import PizzaChefExperience from "../invitations/pages/PizzaChefExperience.jsx";
-import PinkLidoExperience from "../invitations/pages/PinkLidoExperience.jsx";
-import CherryTowerExperience from "../invitations/pages/CherryTowerExperience.jsx";
-import CocktailSummerExperience from "../invitations/pages/CocktailSummerExperience.jsx";
+const InvitationsPage = lazy(() => import("../invitations/pages/InvitationsPage.jsx"));
+const InvitationPreviewPage = lazy(() => import("../invitations/pages/InvitationPreviewPage.jsx"));
+const FriendshipDiaryModulePage = lazy(() => import("../modules/pages/FriendshipDiaryModulePage.jsx"));
+
+const LoginPage = lazy(() => import("../auth/pages/LoginPage.jsx"));
+const RegisterPage = lazy(() => import("../auth/pages/RegisterPage.jsx"));
+const CustomInvitationPage = lazy(() => import("../invitations/pages/CustomInvitationPage.jsx"));
+const CustomDesignGalleryPage = lazy(() => import("../invitations/pages/CustomDesignGalleryPage.jsx"));
+const CustomDesignExperiencePage = lazy(() => import("../invitations/pages/CustomDesignExperiencePage.jsx"));
+const CustomOrderRoute = lazy(() => import("../custom-orders/CustomOrderRoute.jsx"));
+const PizzaChefExperience = lazy(() => import("../invitations/pages/PizzaChefExperience.jsx"));
+const PinkLidoExperience = lazy(() => import("../invitations/pages/PinkLidoExperience.jsx"));
+const CherryTowerExperience = lazy(() => import("../invitations/pages/CherryTowerExperience.jsx"));
+const CocktailSummerExperience = lazy(() => import("../invitations/pages/CocktailSummerExperience.jsx"));
+
+const PopDiscoExperience = lazy(() => import("../invitations/pages/PopDiscoExperience.jsx"));
 
 const CheckerboardCheersExperience = lazy(() => import("../invitations/pages/CheckerboardCheersExperience.jsx"));
 
@@ -35,6 +37,11 @@ const StationeryBirthdayExperience = lazy(() => import("../invitations/pages/Sta
 const BirthdayPlaygroundExperience = lazy(() => import("../invitations/pages/BirthdayPlaygroundExperience.jsx"));
 
 const RibbonSketchExperience = lazy(() => import("../invitations/pages/RibbonSketchExperience.jsx"));
+
+function GiftsPlaceholder() {
+  const { t } = useLanguage();
+  return <section className="inner-page copy-page"><h1>{t("common.gifts")}</h1></section>;
+}
 
 function InvitationCatalogRedirect() {
   const { search, hash, state } = useLocation();
@@ -58,6 +65,7 @@ export default function App() {
     <Suspense fallback={<SiteLoader pending />} >
     <SiteLoader key={pathname} />
     <Routes>
+      <Route path="invitations/birthday-disco-scrapbook" element={<PopDiscoExperience />} />
       <Route path="invitations/birthday-checkerboard-cheers" element={<CheckerboardCheersExperience />} />
       <Route path="invitations/birthday-white-and-blue" element={<StationeryBirthdayExperience key="white-and-blue" />} />
       <Route path="invitations/birthday-playground" element={<BirthdayPlaygroundExperience />} />
@@ -116,8 +124,10 @@ export default function App() {
           path="modules/friendship-diary"
           element={<FriendshipDiaryModulePage />}
         />
-        <Route path="surprises" element={<SurpriseShowcasePage />} />
-        <Route path="surprises/demo" element={<SurpriseDemoPage />} />
+        <Route path="gifts" element={<GiftsPlaceholder />} />
+        <Route path="gifts-surprises" element={<GiftsPlaceholder />} />
+        <Route path="surprises" element={<GiftsPlaceholder />} />
+        <Route path="surprises/demo" element={<GiftsPlaceholder />} />
         <Route path="*" element={<NotFoundPage />} />
       </Route>
     </Routes>

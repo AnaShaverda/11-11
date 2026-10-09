@@ -36,7 +36,6 @@ import "./styles/playful-weddings.css";
 import "./styles/personal-weddings.css";
 import "./styles/birthday-guests.css";
 import "./styles/category-previews.css";
-import "./styles/surprises.css";
 import "./styles/appearance.css";
 import "./styles/auth.css";
 import "./styles/usability.css";

@@ -19,7 +19,6 @@ export const recipientArtwork = {
   "birthday-classic-celebration": "/images/recipient/birthday-classic-celebration/invitation-portrait-cartoon-ribbon-frame.webp",
   "birthday-cobalt-cheers": "/images/recipient/birthday-cobalt-cheers/invitation-portrait.webp",
   "birthday-coquette": "/images/recipient/birthday-coquette/invitation-portrait.webp",
-  "birthday-disco-scrapbook": "/images/recipient/birthday-disco-scrapbook/invitation-portrait.webp",
   "birthday-floral-affair": "/images/recipient/birthday-floral-affair/invitation-portrait.webp",
   "birthday-football-club": "/images/recipient/birthday-football-club/invitation-portrait.webp",
   "birthday-garden-party": "/images/recipient/birthday-garden-party/invitation-portrait.webp",

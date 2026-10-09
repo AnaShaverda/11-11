@@ -4,7 +4,7 @@ import { fileURLToPath } from 'node:url';
 
 const root = fileURLToPath(new URL('../', import.meta.url));
 const imageExtension = /\.(png|jpe?g|webp|gif|svg|avif|ico)$/i;
-const ignored = new Set(['node_modules', '.git', 'dist', 'build', 'output', 'design-proposals']);
+const ignored = new Set(['node_modules', '.git', 'dist', 'build', 'output', 'design-proposals', 'tmp']);
 function walk(directory) {
   return fs.readdirSync(directory, { withFileTypes: true }).flatMap(entry => {
     const filename = path.join(directory, entry.name);
@@ -35,6 +35,9 @@ for (const source of sources) {
 }
 // This helper also returns a path from a function, rather than an exported record.
 dynamicPrefixes.add('/images/wedding-themes/');
+// Icon and ornament names are passed as props into the SVG components.
+dynamicPrefixes.add('/images/invitations/marks/');
+dynamicPrefixes.add('/images/invitations/ornaments/');
 const unused = [];
 const images = files.filter(filename => imageExtension.test(filename));
 for (const filename of images) {

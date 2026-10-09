@@ -7,8 +7,6 @@ import { catalogThemeOptions, getCatalogAppearance, matchesCatalogAppearance, re
 import { getInvitationCatalogLink, readCatalogCategory, readCatalogFilters, readCatalogOccasion, updateCatalogFilters } from "../data/catalogFilters.js";
 import { itemMatchesCategory } from "../../data/catalogMembership.js";
 import { getCelebrationSubcategory } from "../../data/projects.js";
-import { giftCatalogItems } from "../../surprises/data/giftCatalog.js";
-import GiftCatalog from "../../surprises/components/GiftCatalog.jsx";
 import BirthdayExperience from "../../projects/BirthdayExperience.jsx";
 import WeddingExperience from "../../projects/WeddingExperience.jsx";
 import CorporateExperience from "../../projects/CorporateExperience.jsx";
@@ -31,9 +29,8 @@ export default function InvitationsPage() {
   const hasAppearance = appearance.themes.length > 0 || appearance.colors.length > 0;
   const showAppearance = availableTemplates.length > 0 || hasAppearance;
   const visibleTemplates = availableTemplates.filter((item) => matchesCatalogAppearance(item, appearance));
-  const visibleGifts = giftCatalogItems.filter((item) => itemMatchesCategory(item, project?.id, occasion) && matchesCatalogAppearance(item, appearance));
   const customCategory = project?.id === "baby-kids" ? (["all", "christening"].includes(occasion) ? "christening" : null) : project?.id && customCategories.includes(project.id) ? project.id : !project || project.id === "trending" ? "all" : null;
-  const resultCount = visibleTemplates.length + visibleGifts.length + Number(Boolean(customCategory));
+  const resultCount = visibleTemplates.length + Number(Boolean(customCategory));
   const resultKey = [project?.id ?? "all", occasion, appearance.themes.join(","), appearance.colors.join(",")].join("|");
   const availableAppearance = availableTemplates.map(getCatalogAppearance);
   const themeOptions = catalogThemeOptions.filter((option) => appearance.themes.includes(option.id) || availableAppearance.some((item) => item.themes.includes(option.id)));
@@ -62,7 +59,6 @@ export default function InvitationsPage() {
         <div className="invitation-collection-heading"><div className="collection-heading-copy"><h2>{title} <span className="category-heading-count" aria-live="polite" aria-atomic="true">({resultCount})</span></h2>{project ? <p>{t(`project.${project.id}.description`)}</p> : null}</div></div>
         {project?.id === "trending" ? <p className="category-curated-note">{t("category.trending.note")}</p> : null}
         {(visibleTemplates.length || customCategory) ? <InvitationGallery key={resultKey} templates={visibleTemplates} customCategory={customCategory} /> : null}
-        {visibleGifts.length ? <>{visibleTemplates.length ? <h3 className="gift-collection-heading">{t("common.gifts")}</h3> : null}<GiftCatalog key={resultKey} items={visibleGifts} /></> : null}
         {!resultCount && project?.id !== "corporate" ? <div className="invitation-empty-state"><h2>{t(selectedOccasion && !hasAppearance ? "catalog.occasion.empty.title" : "catalog.empty.title", { occasion: selectedOccasion ? t(selectedOccasion.captionKey) : title })}</h2><p>{t(selectedOccasion && !hasAppearance ? "catalog.occasion.empty.description" : "catalog.empty.description")}</p>{hasAppearance ? <button type="button" className="collection-clear-filters" onClick={() => updateFilters({ themes: "", colors: "" })}>{t("catalog.clearAppearance")}</button> : null}</div> : null}
         {project?.id === "corporate" ? <CorporateExperience embedded /> : null}
         {Experience ? <details data-scroll-restoration-details={`category-${project.id}`} className="collection-experience" open={hash === "#optional-modules" ? true : undefined}><summary>{t("catalog.more", { category: t(`common.${project.id}`) })}</summary><Experience project={project} embedded /></details> : null}

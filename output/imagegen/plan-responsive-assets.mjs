@@ -8,7 +8,7 @@ const frames = [
   "bridal-doll-pink-card-frame", "bridal-pink-cocktail-card-frame", "bridal-modern-pink-line-card-ribbon-frame",
   "wedding-portrait-promise-floral-frame", "wedding-ribbon-revel-floral-frame",
 ];
-const backgrounds = ["disco-scrapbook-paper", ...["city-after-dark", "comic-cutout", "retro-sport", "upside-down", "pink-lido", "blue-splash"].map(key => `birthday-${key}-background`), "bridal-cool-girl-card-background", "bridal-peach-cherry-background"];
+const backgrounds = [...["city-after-dark", "comic-cutout", "retro-sport", "upside-down", "pink-lido", "blue-splash"].map(key => `birthday-${key}-background`), "bridal-cool-girl-card-background", "bridal-peach-cherry-background"];
 const jobs = [
   ...frames.map(id => ({ id: `${id}-portrait`, originalId: id, source: `${process.cwd()}/public/images/components/separated/${id}.webp`, background: false, kind: "portrait-frame" })),
   ...backgrounds.map(id => ({ id: `${id}-portrait`, originalId: id, source: `${process.cwd()}/public/images/backgrounds/separated/${id}.webp`, background: true, kind: "portrait-background" })),

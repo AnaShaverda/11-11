@@ -135,7 +135,6 @@ export const birthdayThemeAssets = {
   ...cocktailBirthdayAssets,
   ...pinkChampagneBirthdayAssets,
 
-  "birthday-disco-scrapbook": {"coverImage": "/images/birthday/disco-scrapbook/analog-disco-party.webp", "invitation": [], "typography": {"image": "/images/birthday/disco-scrapbook/sketched-olive-martini.webp", "right": "0%", "bottom": "9%", "width": "24%", "height": "36%"}, "pattern": null, "supportCards": [null, null, {"image": "/images/birthday/disco-scrapbook/sketched-olive-martini.webp", "right": "-3%", "bottom": "0%", "width": "42%", "height": "55%"}]},
 
   "birthday-pastel-disco": {"coverImage": "/images/birthday/pastel-disco/painted-pastel-disco.webp", "invitation": [], "typography": {"image": "/images/birthday/pastel-disco/watercolor-mirror-ball.webp", "right": "0%", "bottom": "9%", "width": "24%", "height": "36%"}, "pattern": null, "supportCards": [null, null, {"image": "/images/birthday/pastel-disco/watercolor-mirror-ball.webp", "right": "-3%", "bottom": "0%", "width": "42%", "height": "55%"}]},
   "birthday-paper-garland": {"coverImage": "/images/birthday/paper-garland/watercolor-wishes-square.webp", "invitation": [], "typography": null, "pattern": null, "supportCards": [null, null, null]},

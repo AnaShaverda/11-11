@@ -47,29 +47,6 @@ const named = (slug, key, x, y, w, h, options) =>
 const texture = "/images/bridal/selected/backgrounds/ivory-paper.webp";
 
 
-add(
-  "birthday-disco-scrapbook",
-  [
-    reused(
-      "/images/birthday/disco/disco-ball-silver.webp",
-      "disco",
-      72,
-      -8,
-      35,
-      35,
-    ),
-    reused(
-      "/images/birthday/disco-scrapbook/sketched-olive-martini.webp",
-      "martini",
-      76,
-      56,
-      25,
-      41,
-    ),
-    part("red-starburst", 65, 3, 5, 7, { opacity: 0.7 }),
-  ],
-  background("disco-scrapbook-paper"),
-);
 
 add(
   "birthday-cobalt-cheers",
@@ -726,10 +703,6 @@ add(
   background("gender-reveal-pink-or-blue-background"),
 );
 
-proposed["birthday-disco-scrapbook"].components.push(
-  named("birthday-disco-scrapbook", "tape", -2, 2, 12, 8),
-  named("birthday-disco-scrapbook", "tape", -2, 12, 12, 7, { rotation: 3 }),
-);
 proposed["wedding-sweet-snapshot"].background.image = background(
   "wedding-sweet-snapshot-background",
 );

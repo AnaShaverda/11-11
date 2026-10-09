@@ -9,7 +9,7 @@ const portraitFrames = new Set([
   "wedding-portrait-promise-floral-frame", "wedding-ribbon-revel-floral-frame",
 ]);
 const portraitBackgrounds = new Set([
-  "disco-scrapbook-paper", "birthday-city-after-dark-background",
+  "birthday-city-after-dark-background",
   "birthday-comic-cutout-background", "birthday-retro-sport-background", "birthday-upside-down-background",
   "birthday-pink-lido-background", "birthday-blue-splash-background", "bridal-cool-girl-card-background", "bridal-peach-cherry-background",
 ]);

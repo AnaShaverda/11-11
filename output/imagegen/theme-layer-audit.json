@@ -1,14 +1,14 @@
 {
-  "total": 122,
+  "total": 121,
   "summary": {
-    "independent-components": 99,
+    "independent-components": 98,
     "retained-scene": 17,
     "existing-layers": 4,
     "background-only": 1,
     "graphic-background": 1
   },
   "categories": {
-    "Birthday": 39,
+    "Birthday": 38,
     "Wedding": 30,
     "Other": 53,
     "Corporate": 0
@@ -95,65 +95,6 @@
             "width": "52%",
             "height": "35%"
           }
-        }
-      ]
-    },
-    {
-      "slug": "birthday-disco-scrapbook",
-      "category": "Birthday",
-      "visibility": "active",
-      "textLayer": "localized HTML",
-      "separation": "independent-components",
-      "background": {
-        "color": "#faf3e3",
-        "image": "/images/backgrounds/separated/disco-scrapbook-paper.webp",
-        "portrait": {
-          "image": "/images/backgrounds/separated/disco-scrapbook-paper-portrait.webp",
-          "size": "100% 100%"
-        }
-      },
-      "components": [
-        {
-          "id": "disco-1",
-          "image": "/images/birthday/disco/disco-ball-silver.webp",
-          "left": "72%",
-          "top": "-8%",
-          "width": "35%",
-          "height": "35%"
-        },
-        {
-          "id": "martini-2",
-          "image": "/images/birthday/disco-scrapbook/sketched-olive-martini.webp",
-          "left": "76%",
-          "top": "56%",
-          "width": "25%",
-          "height": "41%"
-        },
-        {
-          "id": "red-starburst-3",
-          "image": "/images/components/separated/red-starburst.webp",
-          "left": "65%",
-          "top": "3%",
-          "width": "5%",
-          "height": "7%",
-          "opacity": 0.7
-        },
-        {
-          "id": "birthday-disco-scrapbook-tape-4",
-          "image": "/images/components/separated/birthday-disco-scrapbook-tape.webp",
-          "left": "-2%",
-          "top": "2%",
-          "width": "12%",
-          "height": "8%"
-        },
-        {
-          "id": "birthday-disco-scrapbook-tape-5",
-          "image": "/images/components/separated/birthday-disco-scrapbook-tape.webp",
-          "left": "-2%",
-          "top": "12%",
-          "width": "12%",
-          "height": "7%",
-          "rotation": 3
         }
       ]
     },
