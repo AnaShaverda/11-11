@@ -28,6 +28,8 @@ import PinkLidoExperience from "../invitations/pages/PinkLidoExperience.jsx";
 import CherryTowerExperience from "../invitations/pages/CherryTowerExperience.jsx";
 import CocktailSummerExperience from "../invitations/pages/CocktailSummerExperience.jsx";
 
+const PartyDoodlesExperience = lazy(() => import("../invitations/pages/PartyDoodlesExperience.jsx"));
+
 const RibbonSketchExperience = lazy(() => import("../invitations/pages/RibbonSketchExperience.jsx"));
 
 function InvitationCatalogRedirect() {
@@ -52,6 +54,7 @@ export default function App() {
     <Suspense fallback={<SiteLoader pending />} >
     <SiteLoader key={pathname} />
     <Routes>
+      <Route path="invitations/birthday-party-doodles" element={<PartyDoodlesExperience />} />
       <Route path="invitations/birthday-ribbon-sketch" element={<RibbonSketchExperience />} />
       <Route path="invitations/bridal-pink-country-club" element={<CocktailSummerExperience key="pink-country-club" theme="pink-country-club" />} />
       <Route path="invitations/bridal-citrus-cool" element={<CocktailSummerExperience key="citrus-cool" theme="citrus-cool" />} />

@@ -1,3 +1,4 @@
+import BirthdayPlaygroundPoster from "./BirthdayPlaygroundPoster.jsx";
 import RibbonSketchCardArt from "./RibbonSketchCardArt.jsx";
 import { useRef } from "react";
 import useInvitationTextLayout from "../hooks/useInvitationTextLayout.js";
@@ -88,6 +89,8 @@ export function InvitationArtwork({
       )
       .map(([, value]) => String(value)),
   );
+  if (template.slug === "birthday-party-doodles")
+    return <BirthdayPlaygroundPoster sample={sample} language={language} ariaLabel={ariaLabel} className={className}/>;
   if (template.slug === "birthday-ribbon-sketch")
     return <RibbonSketchCardArt />;
   const { design } = template;

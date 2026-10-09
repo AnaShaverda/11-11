@@ -59,3 +59,15 @@
 .design-pattern-modern-birthday-lines .design-support-card { background: var(--showcase-paper); color: var(--showcase-ink); }
 .design-pattern-modern-birthday-lines .design-support-3 { padding-bottom: 95px; }
 .design-pattern-modern-birthday-lines .design-palette-swatches { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+/* The collection preview uses the same cotton paper and present as the experience. */
+.preview-party-doodles .line-birthday-title{top:12%;left:22%;width:56%;font-size:14cqw;line-height:1.02;transform:rotate(-4deg)}
+.preview-party-doodles .line-birthday-opening{top:39%;font-size:3cqw;letter-spacing:.08em}
+.preview-party-doodles .line-birthday-details{top:45%;bottom:auto;left:10%;width:80%;font-size:2.7cqw;line-height:1.25;letter-spacing:.1em}
+.preview-party-doodles .line-birthday-details br{display:none}.preview-party-doodles .line-birthday-details .card-text-value+.card-text-value{margin-left:1em}
+.preview-party-doodles .line-birthday-phrase{display:none}
+.preview-party-doodles:after{content:'';position:absolute;inset:2%;border:1px solid #bc182840;pointer-events:none;z-index:4}
+.invitation-art--portrait.preview-party-doodles .line-birthday-title{top:15%;left:17%;width:66%;font-size:18cqw}
+.invitation-art--portrait.preview-party-doodles .line-birthday-opening{top:40%;font-size:4cqw}
+.invitation-art--portrait.preview-party-doodles .line-birthday-details{top:46%;left:7%;width:86%;font-size:3cqw}
+:root body .preview-party-doodles .line-birthday-copy:lang(ka) .line-birthday-title{top:15%;left:21%;width:58%;font-size:8cqw;transform:none}
+:root body .invitation-art--portrait.preview-party-doodles .line-birthday-copy:lang(ka) .line-birthday-title{top:18%;left:17%;width:66%;font-size:10cqw}

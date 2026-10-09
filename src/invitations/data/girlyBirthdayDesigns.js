@@ -11,9 +11,9 @@ const studies = [
     finish: "Tied together with birthday wishes.", kaFinish: "ბაფთით შეკრული დაბადების დღის სურვილები.",
   },
   {
-    slug: "party-doodles", name: "Party Doodles", kaName: "წვეულების ჩანახატები",
+    slug: "party-doodles", name: "Birthday Playground", kaName: "დაბადების დღის თამაში",
     paper: "#fffaf3", ink: "#bc1828", tags: ["line-art", "light-neutral"],
-    description: "Little red cake, gift, and bow sketches with playful handwritten type.",
+    description: "Cherry red, strawberry pink, paper-cut presents and sweet birthday games.",
     kaDescription: "ტორტის, საჩუქრისა და ბაფთის წითელი ჩანახატები და მხიარული ხელნაწერი.",
     mood: "White · red pen · playful", kaMood: "თეთრი · წითელი კალამი · მხიარული",
     headline: "it’s my birthday!", kaHeadline: "ჩემი დაბადების დღეა!",

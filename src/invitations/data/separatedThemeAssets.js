@@ -20,15 +20,10 @@ const themeAssets = {
     ],
   },
   "birthday-party-doodles": {
-    background: { color: "#fffaf3" },
+    background: { color: "#fff5df" },
     components: [
-      component("red-cake", at(3, 1, 29, 35), at(3, 3, 35, 27)),
-      component("red-gift", at(3, 66, 29, 31), at(3, 72, 35, 24)),
-      component("red-loose-bow", at(74, 1, 24, 26), at(71, 3, 27, 21)),
-      component("red-heart", at(76, 20, 7, 10), at(72, 20, 10, 8)),
-      component("red-starburst", at(90, 28, 9, 13), at(87, 29, 11, 9)),
-      { ...component("red-heart", at(88, 74, 10, 13), at(86, 79, 12, 9)), id: "red-heart-lower" },
-      { ...component("red-starburst", at(77, 80, 9, 13), at(74, 86, 11, 9)), id: "red-starburst-lower" },
+      { id: "playground-cake", image: "/images/birthday/party-doodles/playground/cake.webp", ...at(27, 56, 37, 40), portrait: at(25, 59, 40, 35) },
+      { id: "playground-present", image: "/images/birthday/party-doodles/playground/gift.webp", ...at(52, 33, 49, 63), portrait: at(52, 40, 49, 55) },
     ],
   },
   "birthday-white-and-blue": {

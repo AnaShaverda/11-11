@@ -2,7 +2,7 @@
 // Start every design inactive; reactivate a reviewed design here with "active".
 export const themeStatusOverrides = {
   "birthday-ribbon-sketch": "active",
-  "birthday-party-doodles": "inactive",
+  "birthday-party-doodles": "active",
   "birthday-white-and-blue": "inactive",
   "birthday-pink-minimal": "inactive",
   "birthday-pink-post": "inactive",

@@ -1,0 +1,18 @@
+@font-face{font-family:Playground;src:url('/fonts/playground/fraunces.ttf') format('truetype');font-weight:100 900;font-display:swap}
+.playground-poster{position:relative;width:100%;height:100%;overflow:hidden;background:#fff5df;color:#d71936;container-type:inline-size;isolation:isolate;text-align:left;font-family:'Noto Sans Georgian',sans-serif}
+.playground-poster:after{content:'';position:absolute;z-index:0;bottom:-6%;left:-10%;width:120%;height:20%;border-radius:50% 50% 0 0;rotate:-3deg;background:repeating-linear-gradient(95deg,#d71936 0 7cqw,#f7bacd 7cqw 14cqw)}
+.playground-poster-title{position:absolute;top:9%;left:7%;width:85%;font-family:Playground,'Noto Serif Georgian',serif;font-weight:900;font-variation-settings:'SOFT' 100,'WONK' 1,'opsz' 144;font-size:15cqw;letter-spacing:-.07em;line-height:.94;rotate:-5deg;z-index:4}
+.playground-poster[lang=ka] .playground-poster-title{font-size:11cqw;line-height:1.15;letter-spacing:-.03em}
+.playground-poster-intro{position:absolute;left:7%;top:43%;width:42%;font-size:2.5cqw;letter-spacing:.1em;text-transform:uppercase;line-height:1.5;z-index:4;margin:0}
+.playground-poster-date{position:absolute;left:7%;top:59%;width:42%;font-size:3.6cqw;font-weight:800;line-height:1.5;z-index:4;margin:0}
+.playground-poster-gift{position:absolute;right:-2%;bottom:6%;width:49%;height:63%;object-fit:contain;z-index:2}.playground-poster-cake{position:absolute;left:29%;bottom:4%;width:37%;height:42%;object-fit:contain;z-index:3}
+:root body .playground-poster *{font-family:Arial,'Noto Serif Georgian',sans-serif!important}
+:root body .playground-poster .playground-poster-title{font-family:Playground,'Noto Serif Georgian',serif!important}
+.playground-poster:after{display:none}
+.playground-poster-title{left:8%;width:84%;text-align:center;font-size:11cqw;top:7%;line-height:1.02}
+.playground-poster[lang=ka] .playground-poster-title{font-size:8.2cqw}
+.playground-poster-intro{top:30%;left:18%;width:64%;text-align:center;font-size:2cqw}
+.playground-poster-date{top:42%;left:15%;width:70%;text-align:center;font-size:3cqw}
+.playground-poster-gift{right:23%;bottom:4%;width:54%;height:43%}
+
+.playground-poster{background-color:#fff5df;background-image:url('/images/birthday/party-doodles/playground/soft-waves.svg?v=3');background-size:32% auto}

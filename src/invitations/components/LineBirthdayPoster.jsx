@@ -13,7 +13,7 @@ export default function LineBirthdayPoster({ sample, variant }) {
       <span className="line-birthday-opening">{sample.opening ?? t("invitations.invited")}</span>
       <strong className="line-birthday-title" style={getDesignFont(typography.display, language).style}>{title}</strong>
       <em className="line-birthday-phrase" style={getDesignFont(typography.accent ?? typography.details, language).style}>{sample.line}</em>
-      {!sample.headline && <span className="line-birthday-details"><span className="card-text-value">{sample.date}</span><br /><span className="card-text-value">{sample.location}</span></span>}
+      {(!sample.headline || variant === "party-doodles") && <span className="line-birthday-details"><span className="card-text-value">{sample.date}</span><br /><span className="card-text-value">{sample.location}</span></span>}
     </div>
   );
 }
