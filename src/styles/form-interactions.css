@@ -1,0 +1,16 @@
+/* Stable forms: fields do not resize or use bright, detached focus outlines. */
+:root body textarea { resize:none!important; }
+:root body form :is(input:not([type=radio]):not([type=checkbox]):not([type=file]):not([type=range]):not([type=color]), textarea, select) {
+  transition:border-color .16s ease,box-shadow .16s ease;
+}
+:root body form :is(input:not([type=radio]):not([type=checkbox]):not([type=file]):not([type=range]):not([type=color]), textarea, select):focus {
+  outline:2px solid transparent!important;
+  outline-offset:0!important;
+  border-color:var(--guest-ink,var(--rsb-ink,#8c3451))!important;
+  box-shadow:inset 0 -2px 0 var(--guest-ink,var(--rsb-ink,#8c3451))!important;
+  transform:none!important;
+}
+@media(forced-colors:active) {
+  :root body form :is(input,textarea,select):focus-visible { outline:2px solid Highlight!important;outline-offset:2px!important; }
+}
+@media(prefers-reduced-motion:reduce) { :root body form :is(input,textarea,select) { transition:none; } }

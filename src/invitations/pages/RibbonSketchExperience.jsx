@@ -1,6 +1,7 @@
+import useInvitationGuestName from "../hooks/useInvitationGuestName.js";
+import InvitationArtwork from "../components/InvitationArtwork.jsx";
 import { useLanguage } from "../../localization/LanguageContext.jsx";
 import RibbonSketchToolbar from "../ribbon-sketch/RibbonSketchToolbar.jsx";
-import SiteLoader from "../../components/ui/SiteLoader.jsx";
 import { useEffect, useRef, useState } from "react";
 import RibbonSketchDesign from "../ribbon-sketch/RibbonSketchDesign.jsx";
 import InvitationEntrance from "../components/InvitationEntrance.jsx";
@@ -78,6 +79,7 @@ export default function RibbonSketchExperience() {
   );
   const [opened, setOpened] = useState(false);
   const [saved] = useState(readSaved);
+  const [guestName, setGuestName] = useInvitationGuestName("birthday-ribbon-sketch", saved.wish?.name ?? saved.rsvp?.name ?? "");
   const [rsvp, setRsvp] = useState(() => saved.rsvp ?? null);
   const [wish, setWish] = useState(() => saved.wish ?? null);
   const [attending, setAttending] = useState(
@@ -210,6 +212,7 @@ export default function RibbonSketchExperience() {
     setNotice("Your added photos have been cleared.");
   }
   const state = {
+    guestName,
     motion,
     replyType: modal,
     opened,
@@ -229,6 +232,7 @@ export default function RibbonSketchExperience() {
   };
   function replay() { setModal(null); setOpened(false); window.scrollTo({ top: 0, behavior: "instant" }); window.requestAnimationFrame(() => document.querySelector(".rs-ribbon-opening .guest-envelope-open")?.focus({ preventScroll: true })); }
   const actions = {
+    guestName: setGuestName,
     replay,
     open: () => setOpened(true),
     read: () => scrollTo("Birthday girl era"),
@@ -271,7 +275,6 @@ export default function RibbonSketchExperience() {
   const ModalView = modal === "rsvp" || modal === "wish" ? ReplyConfirmation : null;
   return (
     <>
-      <SiteLoader always />
       <RibbonSketchToolbar motion={motion} onMotion={()=>setMotion(value=>!value)}/>
       {!opened && <section className="rs-ribbon-opening" aria-label="Mia’s birthday invitation">
         <InvitationEntrance paperTexture="/images/birthday/ribbon-sketch/sketch-paper.png" sealArtwork="/images/birthday/ribbon-sketch/line-ornament.webp" settings={{ entrance: "ivoryPaperEnvelope", openingEffect: "none" }} design={{ paper: "#fff8f5", ink: "#731d34", accent: "#ad1626" }} title="Mia’s birthday" initials="M" reducedMotion={!motion} onComplete={() => { setOpened(true); window.scrollTo(0, 0); }}>
@@ -302,7 +305,7 @@ export default function RibbonSketchExperience() {
               aria-label="View your captured memory"
             >
               <img src={src} alt="Your new birthday memory" />
-              <span>a new little memory ♡</span>
+              <span>a new little memory <InvitationArtwork name="heart" size="1em" /></span>
             </button>
           ))}
         </aside>
@@ -327,7 +330,7 @@ export default function RibbonSketchExperience() {
               onClick={() => setModal(null)}
               aria-label="Close dialog"
             >
-              ×
+              <InvitationArtwork name="close" size={22} />
             </button>
             <ModalView actions={actions} state={state} />
             {modal === "rsvp" || modal === "wish" ? (

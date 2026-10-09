@@ -31,3 +31,166 @@
 .rs-card-new-coupe{position:absolute;left:39%;top:57%;width:22%;height:22%;object-fit:contain}
 .rs-card-new-date{position:absolute;top:81%;left:15%;width:70%;text-align:center;--font-main:"RS Inter";font-size:2.4cqw;line-height:1.7;letter-spacing:.08em}
 .rs-card-new-love{position:absolute;top:91%;left:15%;width:70%;text-align:center;--font-main:"RS Caveat";font-size:3.5cqw}
+
+/* Birthday Postcard: the shared catalog, envelope and hero artwork. */
+.rs-postcard { background:linear-gradient(90deg,#fff9ee 0 50%,#f3cbd4 50% 100%);color:#731d34;--font-main:'RS Cormorant Garamond';isolation:isolate; }
+.rs-postcard::after { content:"";position:absolute;inset:0;z-index:5;pointer-events:none;opacity:.14;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 160 160' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Cpath fill='%23867669' filter='url(%23n)' opacity='.4' d='M0 0h160v160H0z'/%3E%3C/svg%3E"); }
+.rs-postcard .rs-postcard-title { position:absolute;left:7%;top:7%;width:40%;margin:0;font-size:4.7cqw;font-weight:600;line-height:1.3;letter-spacing:.16em;text-align:left;--font-main:'RS Cormorant Garamond'; }
+.rs-postcard-day { position:absolute;left:4%;top:-3%;font-size:60cqw;line-height:1;letter-spacing:-.06em;font-weight:400; }
+.rs-postcard-month { position:absolute;left:7%;top:51%;font-size:24cqw;line-height:1.2;rotate:-7deg;--font-main:'RS Caveat'; }
+.rs-postcard-date { position:absolute;left:7%;bottom:7%;font-size:3.2cqw;line-height:1.6;letter-spacing:.13em;--font-main:'RS Cormorant Garamond'; }
+.rs-postcard-glass { position:absolute;left:48%;top:11%;width:51%;height:59%;object-fit:contain; }
+.rs-postcard button.rs-postcard-glass { display:block;padding:0;border:0;background:none;cursor:pointer; }
+.rs-postcard-glass>img { width:100%;height:100%;object-fit:contain; }
+.rs-postcard-heart { position:absolute;right:8%;top:11%;font-size:8cqw;line-height:1;--font-main:'RS Caveat';rotate:-13deg; }
+.rs-postcard-note { position:absolute;left:68%;top:60%;width:27%;font-size:5.8cqw;line-height:1.05;rotate:-9deg;text-align:center;--font-main:'RS Caveat'; }
+.rs-postcard-motto { position:absolute;right:4%;bottom:7%;width:42%;text-align:center;font-size:2.5cqw;line-height:1.7;letter-spacing:.17em;--font-main:'RS Cormorant Garamond'; }
+.rs-postcard:lang(ka) .rs-postcard-title { --font-main:var(--font-georgian,'Noto Serif Georgian');font-size:3.5cqw;letter-spacing:.03em;line-height:1.6; }
+.rs-postcard:lang(ka) .rs-postcard-month { --font-main:var(--font-georgian,'Noto Serif Georgian');font-size:13cqw;top:61%;rotate:-5deg; }
+.rs-postcard:lang(ka) .rs-postcard-note { --font-main:var(--font-georgian,'Noto Serif Georgian');font-size:3cqw;line-height:1.5; }
+.rs-postcard:lang(ka) .rs-postcard-motto { --font-main:var(--font-georgian,'Noto Serif Georgian');font-size:1.9cqw;letter-spacing:.03em; }
+.rs-postcard-heart { width:8cqw;height:8cqw;font-size:0; }
+.rs-postcard-note .invitation-svg-art { vertical-align:middle; }
+
+/* Separate layout rows keep the date, month, note, and caption from colliding. */
+.rs-postcard { container-type:size;--postcard-unit:min(1cqw,1cqh);display:grid;grid-template-columns:1fr 1fr; }
+.rs-postcard-left,.rs-postcard-right { min-width:0;min-height:0;height:100%;display:grid;padding:7cqh 5cqw 7cqh 7cqw;text-align:left; }
+.rs-postcard-left { grid-template-rows:18% 43% 22% 17%; }
+.rs-postcard-right { grid-template-rows:61% 22% 17%;padding-left:3cqw;padding-right:3cqw;text-align:center; }
+.rs-postcard .rs-postcard-title,.rs-postcard .rs-postcard-day,.rs-postcard .rs-postcard-month,.rs-postcard .rs-postcard-date,.rs-postcard .rs-postcard-glass,.rs-postcard .rs-postcard-note,.rs-postcard .rs-postcard-motto { position:relative;inset:auto;margin:0;width:100%;max-width:100%;min-width:0;min-height:0;rotate:0; }
+.rs-postcard .rs-postcard-title { font-size:calc(4.5 * var(--postcard-unit));align-self:start; }
+.rs-postcard .rs-postcard-day { font-size:min(52cqw,37cqh);line-height:1;align-self:center; }
+.rs-postcard .rs-postcard-month { font-size:min(20cqw,16cqh);line-height:1;align-self:center; }
+.rs-postcard .rs-postcard-date { font-size:calc(3 * var(--postcard-unit));align-self:end; }
+.rs-postcard .rs-postcard-glass { height:100%;object-fit:contain;align-self:center; }
+.rs-postcard .rs-postcard-note { font-size:calc(5 * var(--postcard-unit));line-height:1.15;align-self:center; }
+.rs-postcard .rs-postcard-motto { font-size:calc(2.3 * var(--postcard-unit));line-height:1.7;align-self:end; }
+.rs-postcard:lang(ka) .rs-postcard-title { font-size:calc(3 * var(--postcard-unit)); }
+.rs-postcard:lang(ka) .rs-postcard-month { font-size:calc(11 * var(--postcard-unit)); }
+.rs-postcard:lang(ka) .rs-postcard-note { font-size:calc(2.7 * var(--postcard-unit)); }
+.rs-postcard:lang(ka) .rs-postcard-motto { font-size:calc(1.8 * var(--postcard-unit)); }
+:root[lang="ka"] .rs-postcard :is(.rs-postcard-month,.rs-postcard-note) { --font-main:"3D Unicode";font-family:"3D Unicode";font-weight:400;line-height:1.35; }
+:root body .rs-postcard:lang(ka) :is(.rs-postcard-month,.rs-postcard-note),
+:root body .rs-postcard:lang(ka) .rs-postcard-note * { font-family:"3D Unicode",sans-serif!important; }
+.rs-postcard button.rs-postcard-glass>img { height:calc(100% - 36px); }
+.rs-postcard-glass-hint { display:flex;align-items:center;justify-content:center;gap:.5em;min-height:36px;color:#731d34;--font-main:"RS Caveat";font-size:clamp(14px,calc(3.2 * var(--postcard-unit)),26px);line-height:1.3; }
+:root body .rs-postcard:lang(ka) .rs-postcard-glass-hint { font-family:"3D Unicode",sans-serif!important;font-size:clamp(12px,calc(2.7 * var(--postcard-unit)),22px); }
+/* Existing etched party illustrations add a collected stationery feel. */
+.rs-postcard-party-bow { position:absolute;object-fit:contain;pointer-events:none;z-index:1; }
+.rs-postcard-party-bow { right:5%;top:5%;width:13%;height:18%;rotate:12deg; }
+.rs-postcard-glass-hint { white-space:normal;max-width:100%;padding-inline:3%;text-align:center;overflow-wrap:anywhere; }
+
+/* A bolder printed cover for the collection and envelope. */
+.rs-postcard-preview { grid-template-columns:52% 48%;background:linear-gradient(90deg,#fff9ee 52%,#efc1cd 52%); }
+.rs-postcard-preview::before { content:"";position:absolute;inset:4%;border:1px solid #731d3433;pointer-events:none;z-index:2; }
+.rs-postcard-preview .rs-postcard-left { padding:10cqh 3cqw 9cqh 8cqw;grid-template-rows:22% 40% 20% 18%; }
+.rs-postcard-preview .rs-postcard-title { font-size:5cqw;letter-spacing:.07em;line-height:1.3; }
+.rs-postcard-preview .rs-postcard-day { font-size:min(54cqw,39cqh);letter-spacing:-.08em; }
+.rs-postcard-preview .rs-postcard-month { font-size:18cqw; }
+.rs-postcard-preview .rs-postcard-date { font-size:3cqw;letter-spacing:.06em;line-height:1.8; }
+.rs-postcard-preview .rs-postcard-right { padding:15cqh 4cqw 11cqh 2cqw;grid-template-rows:76% 24%; }
+.rs-postcard-preview .rs-postcard-glass { width:112%;max-width:none;justify-self:center;filter:drop-shadow(3px 5px 2px #731d3410); }
+.rs-postcard-preview .rs-postcard-note { font-size:5.5cqw;line-height:1.2;rotate:-5deg; }
+.rs-postcard-preview .rs-postcard-motto { display:none; }
+.rs-postcard-preview .rs-postcard-party-bow { top:5%;right:7%;width:20%;height:14%;rotate:8deg; }
+.rs-postcard-preview:lang(ka) .rs-postcard-title { font-size:3.8cqw;line-height:1.5; }
+.rs-postcard-preview:lang(ka) .rs-postcard-month { font-size:11cqw; }
+.rs-postcard-preview:lang(ka) .rs-postcard-note { font-size:3.6cqw;line-height:1.5; }
+.rs-postcard-preview .rs-postcard-left { grid-template-rows:22% 40% 18% 20%; }
+.rs-postcard-preview .rs-postcard-day { font-size:min(48cqw,30cqh); }
+.rs-postcard-preview .rs-postcard-month { align-self:start;line-height:1!important; }
+.rs-postcard-preview .rs-postcard-date { font-size:2.8cqw;line-height:1.6; }
+.rs-postcard-preview:lang(ka) .rs-postcard-month { font-size:10cqw; }
+
+/* Cherry-pink party stationery, shared by the cover and opened invitation. */
+.rs-postcard { background:#f49ab5;color:#79162f; }
+.rs-postcard::before { content:"";position:absolute;inset:2.5%;border:1px solid #79162f55;pointer-events:none;z-index:3; }
+.rs-postcard-left { background:#f49ab5; }
+.rs-postcard-right { position:relative;background:repeating-linear-gradient(90deg,#fff4da 0 6cqw,#f9c4d1 6cqw 9cqw);isolation:isolate; }
+.rs-postcard-right::before { content:"";position:absolute;inset:6% 7% 10%;background:#fff7e7;border:1px solid #79162f30;border-radius:48% 48% 8px 8px;box-shadow:4px 6px 0 #79162f0b;z-index:-1; }
+.rs-postcard .rs-postcard-title { font-weight:600;letter-spacing:.04em; }
+.rs-postcard .rs-postcard-date { width:fit-content;max-width:100%;padding:.5em .8em;background:#79162f;color:#fff7e7;border-radius:3px;font-weight:500;letter-spacing:.08em; }
+.rs-postcard .rs-postcard-note { color:#971c41; }
+.rs-postcard .rs-postcard-motto { font-weight:600;letter-spacing:.12em; }
+.rs-postcard-party-bow { right:5%;top:5%;width:18%;height:20%;rotate:10deg; }
+.rs-postcard-preview .rs-postcard-left { background:#f49ab5; }
+.rs-postcard-preview .rs-postcard-right { padding-top:15cqh; }
+.rs-postcard-preview .rs-postcard-date { font-size:2.5cqw; }
+/* Keep the party colors open, without frames or an inset arch. */
+.rs-postcard::before,.rs-postcard-preview::before,.rs-postcard-right::before { display:none; }
+/* Warm paper balances the lively stripes without a large block of pink. */
+.rs-postcard,.rs-postcard-left,.rs-postcard-preview .rs-postcard-left { background:#fff8eb; }
+.rs-postcard-right { background:repeating-linear-gradient(90deg,#fff8eb 0 6cqw,#f4c1cf 6cqw 9cqw); }
+.rs-postcard .rs-postcard-date { background:transparent;color:#79162f;padding:0;border-radius:0; }
+/* Tie the ribbon to the illustration, not to the card's viewport. */
+.rs-postcard-glass-art { display:block;position:relative;width:100%;height:100%;container-type:size; }
+.rs-postcard button.rs-postcard-glass>.rs-postcard-glass-art { height:calc(100% - 44px); }
+.rs-postcard-glass-object { position:absolute;left:50%;top:50%;translate:-50% -50%;width:min(100cqw,88.87cqh);aspect-ratio:1182/1330; }
+.rs-postcard-glass-object>img:first-child { display:block;width:100%;height:100%;object-fit:contain; }
+.rs-postcard-glass-object>.rs-postcard-tied-ribbon { position:absolute;left:48%;top:49%;width:36%;height:auto;translate:-50% -25%;rotate:-8deg;pointer-events:none; }
+
+/* Accepted direction: Pink Ink (02), with Dancing Type's striped corners (04). */
+.rs-pink-ink { container-type:size;background:#fff6e8;color:#7c102b;--font-main:"RS Cormorant Garamond";--ink-u:min(1cqw,.76cqh);display:grid;place-items:center; }
+.rs-pink-ink-sheet { position:relative;width:calc(100 * var(--ink-u));height:calc(131.58 * var(--ink-u));isolation:isolate; }
+.rs-pink-ink-sheet::after { content:"";position:absolute;inset:0;pointer-events:none;opacity:.12;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 160 160' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='3'/%3E%3C/filter%3E%3Cpath fill='%23867669' filter='url(%23n)' d='M0 0h160v160H0z'/%3E%3C/svg%3E");z-index:5; }
+.rs-ink-stripes { position:absolute;right:0;background:repeating-linear-gradient(90deg,#efb5c1 0 calc(2 * var(--ink-u)),transparent calc(2 * var(--ink-u)) calc(4 * var(--ink-u)));z-index:-1; }
+.rs-ink-stripes-top { top:0;width:20%;height:25%;clip-path:polygon(0 0,100% 0,100% 82%,55% 100%,0 80%); }
+.rs-ink-stripes-bottom { bottom:0;width:31%;height:44%;clip-path:polygon(0 42%,100% 0,100% 100%,0 100%); }
+.rs-pink-ink .rs-ink-title { position:absolute;top:5%;left:6%;width:84%;margin:0;line-height:.78;font-weight:500;letter-spacing:-.06em;z-index:2;--font-main:"RS Cormorant Garamond"; }
+.rs-ink-title>span { display:block; }
+.rs-ink-title>span:first-child { font-size:calc(25 * var(--ink-u)); }
+.rs-ink-title>span:last-child { font-size:calc(13.8 * var(--ink-u));line-height:1.1;letter-spacing:-.045em; }
+.rs-ink-note { position:absolute;top:43%;left:7%;width:32%;font-size:calc(2.6 * var(--ink-u));letter-spacing:.12em;line-height:1.5;text-transform:uppercase; }
+.rs-ink-glass { position:absolute;right:0;top:31%;width:64%;height:65%;display:block;border:0;background:none;padding:0;color:inherit; }
+button.rs-ink-glass { cursor:pointer; }
+.rs-ink-glass>img { width:100%;height:100%;object-fit:contain; }
+button.rs-ink-glass:focus-visible { outline:2px solid #7c102b;outline-offset:3px;border-radius:15px; }
+.rs-ink-day { position:absolute;left:6%;top:56%;font-size:calc(28 * var(--ink-u));line-height:1;font-weight:400;letter-spacing:-.07em;color:#a75068; }
+.rs-ink-month { position:absolute;left:7%;top:77%;font-size:calc(11 * var(--ink-u));line-height:1.1;--font-main:"RS Caveat"; }
+.rs-ink-date { position:absolute;left:7%;bottom:5%;font-size:calc(2.6 * var(--ink-u));line-height:1.8;letter-spacing:.16em; }
+.rs-ink-hint { position:absolute;right:3%;bottom:1%;width:58%;font-size:calc(3.1 * var(--ink-u));text-align:center;line-height:1.3;--font-main:"RS Caveat"; }
+:root body .rs-pink-ink:lang(ka) .rs-ink-title>span { font-family:"Noto Serif Georgian",serif!important;letter-spacing:-.04em;line-height:1.2; }
+.rs-pink-ink:lang(ka) .rs-ink-title>span:first-child { font-size:calc(18 * var(--ink-u)); }
+.rs-pink-ink:lang(ka) .rs-ink-title>span:last-child { font-size:calc(6.5 * var(--ink-u));margin-top:calc(1 * var(--ink-u)); }
+.rs-pink-ink:lang(ka) .rs-ink-note { font-size:calc(2.5 * var(--ink-u));letter-spacing:0; }
+:root body .rs-pink-ink:lang(ka) :is(.rs-ink-month,.rs-ink-hint) { font-family:"3D Unicode",sans-serif!important; }
+.rs-pink-ink:lang(ka) .rs-ink-month { font-size:calc(8 * var(--ink-u)); }
+.rs-pink-ink:lang(ka) .rs-ink-hint { font-size:calc(2.7 * var(--ink-u)); }
+.rs-ink-glass-art { display:block;width:100%;height:100%; }
+.rs-ink-glass-art>img { display:block;width:100%;height:100%;object-fit:contain; }
+.rs-ink-bubbles { position:absolute;inset:0;pointer-events:none; }
+.rs-ink-bubbles>.rs-filled-bubble { position:absolute;top:31%;height:auto;opacity:0;animation:rs-ink-bubble-rise 1.8s var(--bubble-delay) ease-out both; }
+@keyframes rs-ink-bubble-rise { 0%{opacity:0;translate:0 0;scale:.6} 15%{opacity:.9} 80%{opacity:.7} 100%{opacity:0;translate:var(--bubble-x) -130px;scale:1.2} }
+@keyframes rs-ink-shake { 0%,100%{rotate:0deg} 20%{rotate:-5deg} 40%{rotate:5deg} 60%{rotate:-3deg} 80%{rotate:2deg} }
+.ribbon-sketch[data-motion="true"] .rs-ink-glass-art.is-shaking { animation:rs-ink-shake .65s ease-in-out;transform-origin:50% 75%; }
+.ribbon-sketch[data-motion="false"] .rs-ink-bubbles { display:none; }
+@media(prefers-reduced-motion:reduce) { .rs-ink-bubbles { display:none; }.rs-ink-glass-art { animation:none!important; } }
+/* Keep 02's dramatic headline scale in both languages. */
+.rs-pink-ink .rs-ink-title { top:5%;left:6%;width:88%; }
+.rs-ink-title>span:first-child { font-size:calc(28 * var(--ink-u));line-height:.8; }
+.rs-ink-title>span:last-child { font-size:calc(15 * var(--ink-u));line-height:.95; }
+.rs-pink-ink:lang(ka) .rs-ink-title>span:first-child { font-size:calc(27 * var(--ink-u));line-height:1; }
+.rs-pink-ink:lang(ka) .rs-ink-title>span:last-child { font-size:calc(10.5 * var(--ink-u));line-height:1.1;margin-top:0; }
+.rs-ink-glass-art { rotate:-13deg;transform-origin:50% 75%; }
+.rs-ink-bubbles { rotate:-13deg;transform-origin:50% 75%; }
+@keyframes rs-ink-shake { 0%,100%{rotate:-13deg} 20%{rotate:-18deg} 40%{rotate:-8deg} 60%{rotate:-16deg} 80%{rotate:-11deg} }
+.rs-pink-ink .rs-ink-title,.rs-pink-ink .rs-ink-title>span { text-align:left!important;margin-left:0!important;margin-right:0!important; }
+.rs-pink-ink .rs-ink-title { left:5%;right:auto;translate:none;transform:none;max-width:none; }
+.rs-ink-bubbles>.rs-filled-bubble { top:30%;filter:contrast(1.7);animation-duration:2s; }
+.rs-ink-glass { overflow:visible; }
+.rs-ink-glass-art { overflow:visible; }
+.rs-ink-bubbles>.rs-filled-bubble { object-fit:contain;max-width:24px;max-height:24px; }
+.rs-pink-ink .rs-ink-glass { right:-3%; }
+.rs-pink-ink button.rs-ink-glass:focus:not(:focus-visible) { outline:none;box-shadow:none;border:0; }
+.rs-pink-ink .rs-ink-glass { top:26%;right:-5%; }
+.rs-pink-ink .rs-ink-glass { right:-9%; }
+/* Tall condensed lettering and a rising birthday baseline, as in concept 02. */
+.rs-pink-ink .rs-ink-title { width:90%;font-weight:500; }
+.rs-pink-ink .rs-ink-title>span:first-child { display:block;width:max-content;font-size:calc(30 * var(--ink-u));line-height:.78;letter-spacing:-.065em;transform:scale(.84,1.28);transform-origin:left top; }
+.rs-pink-ink .rs-ink-title>span:last-child { display:block;width:max-content;max-width:100%;font-size:calc(16 * var(--ink-u));line-height:1;letter-spacing:-.055em;margin-top:calc(5 * var(--ink-u));transform:rotate(-5deg) scaleX(.9);transform-origin:left center; }
+:root body .rs-pink-ink:lang(ka) .rs-ink-title>span:first-child { font-size:calc(25 * var(--ink-u));line-height:1;transform:scale(.92,1.15); }
+:root body .rs-pink-ink:lang(ka) .rs-ink-title>span:last-child { font-size:calc(10 * var(--ink-u));line-height:1.1;margin-top:calc(2 * var(--ink-u));transform:rotate(-4deg); }
+.rs-filled-bubble { display:block;aspect-ratio:1;background:var(--bubble-color,#a75068);mask:url('/images/invitations/marks/circle-filled.svg') center/contain no-repeat;-webkit-mask:url('/images/invitations/marks/circle-filled.svg') center/contain no-repeat; }
+.rs-ink-bubbles>.rs-filled-bubble { height:auto;filter:none; }
+.rs-ink-guide { position:absolute;bottom:0;left:8%;width:78%;text-align:center;--font-main:"RS Caveat";font-size:calc(3.5 * var(--ink-u));line-height:1.3;color:#7c102b;pointer-events:none; }
+:root body .rs-pink-ink:lang(ka) .rs-ink-guide { font-family:"3D Unicode",sans-serif!important;font-size:calc(2.8 * var(--ink-u)); }

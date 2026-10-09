@@ -5,99 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="theme-color" content="#070f50" />
     <link rel="preload" href="/logos/logo-pink-star.svg" as="image" />
+    <link rel="stylesheet" href="/site-loader.css" />
     <style>
       html,
       body {
         margin: 0;
         min-height: 100%;
         background: #070f50;
-      }
-      #boot-scene {
-        position: fixed;
-        z-index: 9999;
-        inset: 0;
-        display: grid;
-        place-items: center;
-        overflow: hidden;
-        background: linear-gradient(
-          180deg,
-          #070f50 0%,
-          #241346 68%,
-          #923054 100%
-        );
-        opacity: 1;
-        transition: opacity 0.22s ease;
-      }
-      #boot-scene.is-leaving {
-        opacity: 0;
-        pointer-events: none;
-      }
-      #boot-scene::before {
-        position: absolute;
-        inset: 0;
-        content: "";
-        background-image:
-          linear-gradient(#e0279230 1px, transparent 1px),
-          linear-gradient(90deg, #e0279230 1px, transparent 1px);
-        background-size: 90px 90px;
-        mask-image: linear-gradient(transparent 12%, #000 100%);
-      }
-      .boot-glow {
-        position: absolute;
-        width: min(72vw, 740px);
-        aspect-ratio: 1;
-        border-radius: 50%;
-        background: radial-gradient(circle, #c663b754, transparent 68%);
-        filter: blur(15px);
-      }
-      .boot-logo {
-        position: relative;
-        z-index: 2;
-        width: clamp(116px, 17vw, 220px);
-        height: auto;
-        filter: drop-shadow(0 10px 24px #100a4680);
-      }
-      .boot-star {
-        position: absolute;
-        width: var(--size);
-        height: var(--size);
-        left: var(--x);
-        top: var(--y);
-        background: #fff1fb;
-        clip-path: polygon(
-          50% 0,
-          61% 39%,
-          100% 50%,
-          61% 61%,
-          50% 100%,
-          39% 61%,
-          0 50%,
-          39% 39%
-        );
-        opacity: 0.75;
-        animation: boot-twinkle 2.4s ease-in-out infinite alternate;
-        animation-delay: var(--delay);
-      }
-      .boot-star:nth-of-type(3n) {
-        background: #ff9ad9;
-      }
-      @keyframes boot-twinkle {
-        from {
-          opacity: 0.25;
-          transform: scale(0.7);
-        }
-        to {
-          opacity: 1;
-          transform: scale(1.2);
-        }
-      }
-      @media (prefers-reduced-motion: reduce) {
-        #boot-scene {
-          transition: none;
-        }
-        .boot-star {
-          animation: none;
-        }
       }
     </style>
     <script>

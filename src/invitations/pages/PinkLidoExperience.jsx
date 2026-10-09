@@ -1,3 +1,4 @@
+import useInvitationGuestName from "../hooks/useInvitationGuestName.js";
 import { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import InvitationArtwork from "../components/InvitationArtwork.jsx";
@@ -24,11 +25,12 @@ export default function PinkLidoExperience({ theme = "pink-lido" }) {
   const [motion, setMotion] = useState(() => !window.matchMedia("(prefers-reduced-motion: reduce)").matches);
   const [ripples, setRipples] = useState([]);
   const [reply, setReply] = useState(() => readReply(theme));
-  const [name, setName] = useState(() => readReply(theme)?.name || "");
+  const [name, setName] = useInvitationGuestName(theme, readWish(theme)?.name || readReply(theme)?.name || "");
   const [attending, setAttending] = useState(() => readReply(theme)?.attending || "yes");
   const [storageSaved, setStorageSaved] = useState(true);
   const [wish, setWish] = useState(() => readWish(theme));
-  const [wishName, setWishName] = useState(() => readWish(theme)?.name || "");
+  const wishName = name;
+  const setWishName = setName;
   const [wishMessage, setWishMessage] = useState(() => readWish(theme)?.message || "");
   const [wishStored, setWishStored] = useState(true);
   const details = useRef(null);

@@ -47,9 +47,12 @@ function InvitationCatalogRedirect() {
 }
 
 export default function App() {
+  const { pathname } = useLocation();
   return (
+    <Suspense fallback={<SiteLoader pending />} >
+    <SiteLoader key={pathname} />
     <Routes>
-      <Route path="invitations/birthday-ribbon-sketch" element={<Suspense fallback={<SiteLoader pending />}><RibbonSketchExperience /></Suspense>} />
+      <Route path="invitations/birthday-ribbon-sketch" element={<RibbonSketchExperience />} />
       <Route path="invitations/bridal-pink-country-club" element={<CocktailSummerExperience key="pink-country-club" theme="pink-country-club" />} />
       <Route path="invitations/bridal-citrus-cool" element={<CocktailSummerExperience key="citrus-cool" theme="citrus-cool" />} />
       <Route path="invitations/bridal-cherry-soda" element={<CocktailSummerExperience key="cherry-soda" theme="cherry-soda" />} />
@@ -108,5 +111,6 @@ export default function App() {
         <Route path="*" element={<NotFoundPage />} />
       </Route>
     </Routes>
+    </Suspense>
   );
 }

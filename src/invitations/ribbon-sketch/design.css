@@ -43,7 +43,7 @@
 .rsb-camera { position:relative;width:min(600px,100%);margin:0 auto;isolation:isolate; }
 .rsb-camera-body { position:relative;z-index:1;display:block;width:100%;height:auto;pointer-events:none; }
 .rsb-camera-screen { position:absolute;z-index:2;left:10%;top:28.6%;width:57.1%;height:50.6%;display:grid;place-items:center;overflow:hidden;background:#121311;border-radius:2%;color:#e5d9cf; }
-.rsb-camera-screen > img { width:100%;height:100%;object-fit:cover; }
+.rsb-camera-screen > img { display:block;width:100%;height:100%;min-height:0;object-fit:cover;object-position:center; }
 .rsb-camera-screen > span:not(.rsb-camera-counter) { --font-main:"RS Cormorant Garamond";font-size:clamp(20px,3vw,35px);line-height:1.1; }
 .rsb-camera-screen small { display:block;--font-main:"RS Inter";font-size:9px;margin-top:14px; }
 .rsb-camera-counter { position:absolute;right:8px;bottom:6px;font-size:10px;color:white;background:#0007;padding:3px 6px;border-radius:3px; }
@@ -60,7 +60,7 @@
 .rsb-print-shelf { max-width:1050px;margin:25px auto 0; }
 .rsb-print-track { display:flex;gap:28px;justify-content:flex-start;overflow-x:auto;padding:30px 24px 35px;scroll-snap-type:x mandatory; }
 .rsb-print { flex:none;width:180px;padding:9px 9px 12px!important;background:#fffdfa!important;box-shadow:0 5px 16px #731d3420;rotate:var(--print-rotation);animation:rsb-develop .75s both;scroll-snap-align:center; }
-.rsb-print img { width:100%;aspect-ratio:1;object-fit:cover; }
+.rsb-print img { display:block;width:100%;height:auto;aspect-ratio:1;object-fit:cover;object-position:center; }
 .rsb-print span { display:block;--font-main:"RS Caveat";font-size:22px;margin-top:8px; }
 .rsb-text-button { min-height:44px;text-decoration:underline;text-underline-offset:5px;font-size:12px; }
 .rsb-reply { display:grid;grid-template-columns:1fr 1.1fr;gap:70px;padding:80px 8% 100px;max-width:1440px;margin:auto;scroll-margin-top:24px; }
@@ -193,7 +193,7 @@
 .rsb-print-shelf { position:relative;z-index:1; }.rsb-print {width:145px}
 .rsb-reply { position:relative;grid-template-columns:1fr 1.35fr;gap:64px;padding:12px 14% 14px 16%;max-width:none;background:#fffaf1; }
 .rsb-reply::before {content:"";position:absolute;left:0;top:0;bottom:0;width:9%;background:repeating-linear-gradient(90deg,#bcc5adbb 0 6px,transparent 6px 13px)}
-.rsb-reply::after {content:"Good\a People\a Brighter\a Days ♡";white-space:pre;position:absolute;right:3.5%;top:65px;--font-main:"RS Caveat";font-size:29px;line-height:1;rotate:-12deg}
+.rsb-reply::after {content:"Good\a People\a Brighter\a Days";white-space:pre;position:absolute;right:3.5%;top:65px;--font-main:"RS Caveat";font-size:29px;line-height:1;rotate:-12deg}
 .rsb-reply-heading {padding:0 25px 0 0;text-align:center;border-right:1px solid #b67576;align-self:center}
 .rsb-reply-heading h2 {font-size:70px;line-height:.85}
 .rsb-reply-heading img {display:block;width:50px;height:35px;object-fit:contain;margin:8px auto!important;filter:brightness(.5) saturate(.7)}
@@ -350,4 +350,301 @@
 .rsb-print-track>.rsb-print:nth-child(odd):last-child{grid-column:1/-1;justify-self:center;width:calc(50% - 7px)}
 .rsb-header{height:116px;min-height:116px;padding-top:72px}.rsb-hero{min-height:calc(100svh - 116px)}
 .ribbon-sketch[lang="ka"] .rsb-hero h1{font-size:90px}.ribbon-sketch[lang="ka"] .rsb-hero-era{font-size:30px}
+}
+
+/* The first section repeats the approved postcard composition. */
+.rsb-postcard-hero { padding:32px 24px 45px;background:#eeece9;text-align:center;overflow:clip; }
+.rsb-postcard-wrap { width:min(760px,100%);aspect-ratio:1;margin:0 auto;box-shadow:0 8px 30px #731d3414; }
+.rsb-postcard-wrap .rs-postcard { height:100%;min-height:0; }
+.rsb-postcard-rsvp { margin-top:26px!important; }
+.rsb-reply-heading img.rsb-reply-cake { width:150px;height:180px;object-fit:contain;margin:25px 0 0; }
+.ribbon-sketch { overflow-x:clip; }
+@media(max-width:700px) { .rsb-postcard-hero { padding:22px 16px 32px; }.rsb-reply-heading img.rsb-reply-cake { width:105px;height:130px;margin:20px auto 0; } }
+
+/* Fullscreen postcard hero, with responsive type sized to the shorter edge. */
+.rsb-postcard-hero { position:relative;height:calc(100svh - 112px);min-height:540px;padding:0;overflow:hidden; }
+.rsb-postcard-wrap { width:100%;height:100%;aspect-ratio:auto;box-shadow:none; }
+.rsb-postcard-wrap .rs-postcard { container-type:size;--postcard-unit:min(1cqw,1cqh); }
+.rsb-postcard-wrap .rs-postcard-title { font-size:calc(4.7 * var(--postcard-unit)); }
+.rsb-postcard-wrap .rs-postcard-day { top:5%;font-size:calc(60 * var(--postcard-unit)); }
+.rsb-postcard-wrap .rs-postcard-month { font-size:calc(24 * var(--postcard-unit)); }
+.rsb-postcard-wrap .rs-postcard-date { font-size:calc(3.2 * var(--postcard-unit)); }
+.rsb-postcard-wrap .rs-postcard-heart { width:calc(7 * var(--postcard-unit));height:calc(7 * var(--postcard-unit));font-size:0; }
+.rsb-postcard-wrap .rs-postcard-note { font-size:calc(5.8 * var(--postcard-unit)); }
+.rsb-postcard-wrap .rs-postcard-motto { font-size:calc(2.5 * var(--postcard-unit)); }
+.rsb-postcard-rsvp { position:absolute;left:50%;bottom:20px;translate:-50% 0;margin:0!important;z-index:6; }
+.rsb-postcard-wrap .rs-postcard:lang(ka) .rs-postcard-title { font-size:calc(3.5 * var(--postcard-unit)); }
+.rsb-postcard-wrap .rs-postcard:lang(ka) .rs-postcard-month { font-size:calc(13 * var(--postcard-unit)); }
+.rsb-postcard-wrap .rs-postcard:lang(ka) .rs-postcard-note { font-size:calc(3 * var(--postcard-unit)); }
+.rsb-postcard-wrap .rs-postcard:lang(ka) .rs-postcard-motto { font-size:calc(1.9 * var(--postcard-unit)); }
+.rsb-diary-controls button,.rsb-preview-nav button,.rs-modal-close { display:inline-flex;align-items:center;justify-content:center; }
+@media(max-width:700px) {
+ .rsb-postcard-hero { height:calc(100svh - 116px);min-height:540px; }
+ .rsb-postcard-rsvp { bottom:14px;font-size:15px;padding:9px 22px!important; }
+ .rsb-postcard-wrap .rs-postcard-date,.rsb-postcard-wrap .rs-postcard-motto { bottom:13%; }
+}
+
+/* Let the revealed images use their own space beneath the camera. */
+.rsb-camera-section { padding-bottom:40px; }
+.rsb-camera-section .rsb-print-shelf { position:relative;width:min(1100px,100%);max-width:100%;margin:28px auto 0; }
+.rsb-camera-section .rsb-print-track { position:relative;inset:auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:30px;padding:20px 8px 30px;overflow:visible;pointer-events:auto; }
+.rsb-camera-section .rsb-print { position:relative;inset:auto;width:100%;max-width:250px;justify-self:center; }
+@media(max-width:700px) {
+ .rsb-camera-section { padding:45px 6% 32px; }
+ .rsb-camera-section .rsb-print-track { grid-template-columns:repeat(2,minmax(0,1fr));gap:24px 16px;padding-inline:4px; }
+ .rsb-camera-section .rsb-print:nth-child(odd):last-child { grid-column:1/-1;width:min(240px,80%); }
+}
+
+@media(max-width:700px) { .rsb-postcard-wrap .rs-postcard-month { top:35%; }.rsb-postcard-wrap .rs-postcard:lang(ka) .rs-postcard-month { top:50%; } }
+
+/* A birthday wish has its own section; camera memories stay with the camera. */
+.rsb-wishes { display:grid;grid-template-columns:1fr 1fr;gap:clamp(30px,7vw,110px);align-items:center;min-height:100svh;padding:70px 10%;background-color:#e4eadb;background-image:repeating-linear-gradient(90deg,#fffaf166 0 20px,transparent 20px 40px),repeating-linear-gradient(0deg,#fffaf155 0 20px,transparent 20px 40px);scroll-margin-top:0; }
+.rsb-wish-intro h2 { font-size:clamp(52px,6vw,92px); }
+.rsb-wish-intro>.rsb-hand { margin-top:24px!important; }
+.rsb-wish-intro>img { width:190px;height:250px;object-fit:contain;margin:30px 0 0; }
+.rsb-wishes .rsb-stationery { background:transparent;border:0;outline:0;padding:0;width:100%; }
+.rsb-wishes textarea { resize:vertical;min-height:180px; }
+.rsb-header nav { gap:clamp(12px,2.8vw,44px); }
+.rsb-header-note { flex-shrink:0; }
+@media(max-width:700px) {
+ .rsb-wishes { grid-template-columns:1fr;gap:32px;padding:55px 8%; }
+ .rsb-wish-intro { text-align:center; }
+ .rsb-wish-intro h2 { font-size:48px; }
+ .rsb-wish-intro>img { width:110px;height:140px;margin:20px auto 0; }
+ .rsb-header nav { gap:8px; }.rsb-header nav button { font-size:8px;letter-spacing:.08em; }
+ .ribbon-sketch[lang="ka"] .rsb-wish-intro h2 { font-size:36px;line-height:1.35; }
+}
+.rsb-postcard-wrap .rs-postcard-day { top:auto;font-size:min(52cqw,37cqh); }
+.rsb-postcard-wrap .rs-postcard-month { top:auto;font-size:min(20cqw,16cqh); }
+.rsb-postcard-wrap .rs-postcard-note { font-size:calc(5 * var(--postcard-unit)); }
+.rsb-postcard-wrap .rs-postcard-motto { bottom:auto;font-size:calc(2.3 * var(--postcard-unit)); }
+.rsb-postcard-wrap .rs-postcard-date { bottom:auto; }
+.rsb-postcard-wrap .rs-postcard-left,.rsb-postcard-wrap .rs-postcard-right { padding-bottom:calc(7cqh + 42px); }
+.rsb-postcard-wrap .rs-postcard:lang(ka) .rs-postcard-month { top:auto;font-size:calc(11 * var(--postcard-unit)); }
+
+.rsb-design .maker-credit { background:#f8d5d4; }
+
+/* Georgian handwritten accents use the project's 3D Unicode face. */
+.ribbon-sketch[lang="ka"] .rsb-design .rsb-hand { --font-main:"3D Unicode";font-family:"3D Unicode";font-weight:400;line-height:1.4; }
+
+.rsb-games { min-height:100svh;padding:80px 9%;display:grid;grid-template-columns:1fr 1fr;gap:7vw;align-items:center;background:#f8d5d4; }
+.rsb-game-intro h2 { font-size:clamp(48px,6vw,88px);margin:22px 0!important; }
+.rsb-game-intro>p:last-child { max-width:360px;margin-top:24px!important;line-height:1.7; }
+.rsb-game-paper { background:#fff9ee;padding:clamp(22px,4vw,50px);border:1px solid #731d3425;box-shadow:6px 8px 0 #731d340d;min-width:0; }
+.rsb-game-count { font-size:13px;letter-spacing:.08em;margin-bottom:20px!important; }
+.rsb-game-paper h3 { font-size:clamp(24px,2.8vw,36px);line-height:1.3;margin-bottom:24px!important; }
+.rsb-game-options { display:grid;gap:12px; }
+.rsb-game-options button { display:flex;justify-content:space-between;align-items:center;text-align:left;padding:16px 18px;border:1px solid #731d3440;background:transparent;color:inherit;border-radius:3px;cursor:pointer; }
+.rsb-game-options button:disabled { opacity:1;cursor:default; }
+.rsb-game-options .is-correct { background:#e4eadb;border-color:#66745b; }
+.rsb-game-options .is-wrong { background:#f8d5d4; }
+.rsb-game-feedback p { margin:20px 0!important; }
+.rsb-game-result { text-align:center;display:grid;justify-items:center;gap:20px; }
+.rsb-game-paper button:focus-visible { outline:2px solid #731d34;outline-offset:4px; }
+.ribbon-sketch[data-motion="true"] :is(.rsb-postcard-wrap .rs-postcard-glass,.rsb-wish-intro>img,.rsb-reply-cake) { animation:rsb-item-sway 7s ease-in-out infinite;transform-origin:50% 80%; }
+.ribbon-sketch[data-motion="true"] .rsb-wish-intro>img { animation-delay:-2s; }
+.ribbon-sketch[data-motion="true"] .rsb-reply-cake { animation-delay:-4s; }
+.ribbon-sketch[data-motion="true"] .rs-postcard-heart { animation:rsb-item-breathe 5s ease-in-out infinite; }
+.ribbon-sketch[data-motion="true"] .rsb-game-options button:not(:disabled):hover { transform:translateY(-2px);background:#f8d5d466; }
+@keyframes rsb-item-sway { 0%,100% { transform:translateY(0) rotate(-2deg); } 50% { transform:translateY(-8px) rotate(2deg); } }
+@keyframes rsb-item-breathe { 0%,100% { scale:1; } 50% { scale:1.09; } }
+@media(max-width:700px) { .rsb-games { grid-template-columns:1fr;padding:55px 7%;gap:35px; }.rsb-game-intro{text-align:center}.rsb-game-intro>p:last-child{margin-inline:auto!important}.rsb-game-paper{padding:24px 20px} }
+@media(prefers-reduced-motion:reduce) { .rsb-design * { animation:none!important;transition:none!important; } }
+:root body .ribbon-sketch[lang="ka"] .rsb-design .rsb-hand,
+:root body .ribbon-sketch[lang="ka"] .rsb-design .rsb-hand * { font-family:"3D Unicode",sans-serif!important; }
+
+.rsb-game-ribbon { display:block;width:100px;height:78px;object-fit:contain; }
+@media(max-width:700px) { .rsb-game-ribbon { margin-inline:auto; } }
+
+.rsb-reply-heading img.rsb-reply-cake { display:block;width:190px;height:230px;object-fit:contain;filter:none;margin:24px auto; }
+@media(max-width:700px) { .rsb-reply-heading img.rsb-reply-cake { width:130px;height:160px; } }
+
+/* Give the fullscreen card the energy of a printed birthday poster. */
+.rsb-postcard-wrap .rs-postcard-left { padding:7cqh 4cqw calc(7cqh + 42px) 7cqw;grid-template-rows:24% 37% 21% 18%; }
+.rsb-postcard-wrap .rs-postcard-right { padding:9cqh 6cqw calc(7cqh + 42px);grid-template-rows:64% 21% 15%; }
+.rsb-postcard-wrap .rs-postcard-title { font-size:calc(6 * var(--postcard-unit));line-height:1.15; }
+.rsb-postcard-wrap .rs-postcard:lang(ka) .rs-postcard-title { font-size:calc(4.8 * var(--postcard-unit));line-height:1.4; }
+.rsb-postcard-wrap .rs-postcard-day { font-size:min(45cqw,30cqh); }
+.rsb-postcard-wrap .rs-postcard-month { font-size:calc(15 * var(--postcard-unit)); }
+.rsb-postcard-wrap .rs-postcard:lang(ka) .rs-postcard-month { font-size:calc(10 * var(--postcard-unit)); }
+.rsb-postcard-wrap .rs-postcard-date { font-size:calc(2.6 * var(--postcard-unit));line-height:1.5; }
+.rsb-postcard-wrap .rs-postcard-note { font-size:calc(4.7 * var(--postcard-unit)); }
+.rsb-postcard-wrap .rs-postcard:lang(ka) .rs-postcard-note { font-size:calc(3.2 * var(--postcard-unit)); }
+.rsb-postcard-wrap .rs-postcard-motto { font-size:calc(2 * var(--postcard-unit));line-height:1.6; }
+.rsb-postcard-wrap .rs-postcard:lang(ka) .rs-postcard-motto { font-size:calc(1.8 * var(--postcard-unit)); }
+.rsb-postcard-rsvp { border:1px solid #fff7e780!important;box-shadow:0 5px 0 #79162f25; }
+@media(max-width:700px) {
+ .rsb-postcard-wrap .rs-postcard-left { padding-left:6cqw;padding-right:3cqw; }
+ .rsb-postcard-wrap .rs-postcard-right { padding-left:4cqw;padding-right:4cqw; }
+ .rsb-postcard-wrap .rs-postcard-title { font-size:5.8cqw; }
+ .rsb-postcard-wrap .rs-postcard:lang(ka) .rs-postcard-title { font-size:4.5cqw; }
+ .rsb-postcard-wrap .rs-postcard-date { font-size:2.7cqw; }
+ .rsb-postcard-wrap .rs-postcard-glass-hint { font-size:3cqw;min-height:44px; }
+ .rsb-postcard-wrap .rs-postcard-motto { letter-spacing:0; }
+}
+.rsb-postcard-wrap .rs-postcard-day { font-size:min(48cqw,34cqh); }
+.rsb-postcard-wrap button.rs-postcard-glass>img { scale:1.16;transform-origin:50% 65%; }
+.rsb-postcard-wrap .rs-postcard-left { grid-template-rows:24% 37% 21% 18%; }
+.rsb-postcard-wrap .rs-postcard-date { line-height:1.7;letter-spacing:.09em; }
+.rsb-postcard-wrap button.rs-postcard-glass { border-radius:12px; }
+.rsb-postcard-wrap button.rs-postcard-glass:focus-visible { outline:2px solid #79162f;outline-offset:5px; }
+.rsb-postcard-rsvp { box-shadow:0 3px 0 #79162f15; }
+
+/* Like the pool invitations, controls float over the artwork. */
+.rsb-toolbar { background:linear-gradient(#fff8ebed,#fff8eb00);padding:16px 36px; }
+.rsb-toolbar>a,.rsb-toolbar>div { background:#fff8ebe8; }
+.rsb-postcard-hero { height:100svh;min-height:620px; }
+.rsb-postcard-wrap .rs-postcard-left { padding-top:max(90px,12cqh); }
+.rsb-postcard-wrap .rs-postcard-right { padding-top:max(90px,12cqh); }
+.rs-postcard-party-bow { top:12%; }
+@media(max-width:700px) {
+ .rsb-toolbar { padding:12px; }
+ .rsb-postcard-hero { height:100svh;min-height:620px; }
+ .rsb-postcard-wrap .rs-postcard-left,.rsb-postcard-wrap .rs-postcard-right { padding-top:max(82px,12cqh); }
+}
+
+/* Both columns must be allowed to shrink; Georgian words cannot size the grid. */
+.rsb-games { grid-template-columns:minmax(0,1fr) minmax(0,1fr); }
+.rsb-game-intro,.rsb-game-paper,.rsb-quiz,.rsb-game-result { min-width:0;max-width:100%; }
+.rsb-game-intro h2,.rsb-game-paper h3,.rsb-game-paper p { overflow-wrap:anywhere; }
+.rsb-game-options button { width:100%;min-width:0;gap:12px;white-space:normal;overflow-wrap:anywhere;font-size:16px;line-height:1.5;min-height:54px; }
+.rsb-game-options .invitation-svg-art { flex-shrink:0; }
+.rsb-game-paper .rsb-button { max-width:100%;min-width:0;white-space:normal;overflow-wrap:anywhere;justify-content:center;gap:12px;line-height:1.4; }
+@media(max-width:1000px) {
+ .rsb-games { grid-template-columns:minmax(0,1fr);min-height:auto;padding:64px clamp(20px,6vw,60px);gap:32px; }
+ .rsb-game-intro,.rsb-game-paper { width:100%;max-width:600px;justify-self:center; }
+ .rsb-game-intro { text-align:center; }
+ .rsb-game-ribbon { margin-inline:auto;width:80px;height:62px; }
+ .rsb-game-intro h2 { font-size:clamp(34px,6vw,56px);line-height:1.25; }
+ .ribbon-sketch[lang="ka"] .rsb-game-intro h2 { font-size:clamp(30px,5.5vw,48px);line-height:1.4; }
+ .rsb-game-intro>p:last-child { margin-inline:auto!important; }
+ .rsb-game-paper { padding:clamp(22px,5vw,40px); }
+ .rsb-game-paper h3 { font-size:clamp(23px,4vw,30px);line-height:1.45; }
+}
+@media(max-width:420px) {
+ .rsb-games { padding:48px 20px;gap:26px; }
+ .rsb-game-intro>.rsb-hand { font-size:27px; }
+ .rsb-game-paper .rsb-button { width:100%;padding-inline:16px!important; }
+}
+.rsb-postcard-wrap .rs-postcard-glass-object { scale:1.16;transform-origin:50% 65%; }
+.rsb-postcard-wrap .rs-pink-ink-hero { padding:76px 20px 76px;--ink-u:min(1cqw,.76cqh); }
+.rsb-postcard-wrap .rs-pink-ink-hero .rs-pink-ink-sheet { width:min(100%,calc((100svh - 152px) * .76));height:100%;container-type:size;--ink-u:min(1cqw,.76cqh); }
+.ribbon-sketch[data-motion="true"] .rs-ink-glass { animation:rsb-item-sway 7s ease-in-out infinite;transform-origin:50% 75%; }
+@media(max-width:700px) { .rsb-postcard-wrap .rs-pink-ink-hero { padding:76px 12px 76px; } }
+@media(prefers-reduced-motion:reduce) { .rs-ink-glass { animation:none!important; } }
+
+/* Every chapter fills the screen; the opening art is edge-to-edge, not a card inset. */
+.rsb-design>section { min-height:100svh;box-sizing:border-box; }
+.rsb-postcard-hero { height:100svh;min-height:100svh; }
+.rsb-postcard-wrap .rs-pink-ink-hero { padding:0; }
+.rsb-postcard-wrap .rs-pink-ink-hero .rs-pink-ink-sheet { width:100%;height:100%;--ink-u:min(1cqw,1cqh); }
+.rsb-postcard-wrap .rs-ink-title { left:5%;top:max(82px,10%);width:78%; }
+.rsb-postcard-wrap .rs-ink-title>span:first-child { font-size:calc(25 * var(--ink-u)); }
+.rsb-postcard-wrap .rs-ink-title>span:last-child { font-size:calc(13.8 * var(--ink-u)); }
+.rsb-postcard-wrap .rs-pink-ink:lang(ka) .rs-ink-title>span:first-child { font-size:calc(22 * var(--ink-u)); }
+.rsb-postcard-wrap .rs-pink-ink:lang(ka) .rs-ink-title>span:last-child { font-size:calc(9 * var(--ink-u)); }
+.rsb-postcard-wrap .rs-ink-glass { top:30%;right:3%;width:56%;height:60%; }
+.rsb-postcard-wrap .rs-ink-note { left:5%;top:45%; }
+.rsb-postcard-wrap .rs-ink-day { left:5%;top:57%;font-size:calc(24 * var(--ink-u)); }
+.rsb-postcard-wrap .rs-ink-month { left:5%;top:79%;font-size:calc(9 * var(--ink-u)); }
+.rsb-postcard-wrap .rs-pink-ink:lang(ka) .rs-ink-month { font-size:calc(7 * var(--ink-u)); }
+.rsb-postcard-wrap .rs-ink-date { left:5%;bottom:5%;font-size:calc(2.3 * var(--ink-u)); }
+.rsb-postcard-wrap .rs-ink-hint { bottom:8%;right:4%;width:47%; }
+.rsb-postcard-wrap .rs-ink-stripes-top { width:16%;height:29%; }
+.rsb-postcard-wrap .rs-ink-stripes-bottom { width:27%;height:42%; }
+@media(max-width:700px) {
+ .rsb-postcard-wrap .rs-ink-title { top:90px;width:90%; }
+ .rsb-postcard-wrap .rs-ink-title>span:first-child { font-size:28cqw; }
+ .rsb-postcard-wrap .rs-ink-title>span:last-child { font-size:15cqw; }
+ .rsb-postcard-wrap .rs-pink-ink:lang(ka) .rs-ink-title>span:first-child { font-size:27cqw; }
+ .rsb-postcard-wrap .rs-pink-ink:lang(ka) .rs-ink-title>span:last-child { font-size:10.5cqw; }
+ .rsb-postcard-wrap .rs-ink-glass { top:35%;right:0;width:64%;height:52%; }
+ .rsb-postcard-wrap .rs-ink-day { top:59%;font-size:28cqw; }
+ .rsb-postcard-wrap .rs-ink-month { top:74%; }
+ .rsb-postcard-wrap .rs-ink-date { bottom:12%;font-size:2.8cqw; }
+ .rsb-postcard-wrap .rs-ink-hint { bottom:10%;font-size:3cqw; }
+ .rsb-postcard-wrap .rs-pink-ink:lang(ka) .rs-ink-hint { font-size:2.7cqw; }
+}
+.rsb-postcard-wrap .rs-ink-title { left:4%;top:max(76px,9%);text-align:left!important; }
+@media(max-width:700px) { .rsb-postcard-wrap .rs-ink-title { left:5%;top:80px; } }
+
+.rsb-design>section { position:relative;isolation:isolate; }
+.rsb-section-bubbles { position:absolute;inset:0;overflow:hidden;pointer-events:none;z-index:2; }
+.rsb-section-bubbles>.rs-filled-bubble { position:absolute;bottom:-35px;height:auto;opacity:0; }
+.ribbon-sketch[data-motion="true"] .is-visible>.rsb-section-bubbles>.rs-filled-bubble { animation:rsb-chapter-bubble 4s var(--bubble-delay) ease-out both; }
+@keyframes rsb-chapter-bubble { 0%{opacity:0;translate:0 0;scale:.75} 12%{opacity:.45} 75%{opacity:.3} 100%{opacity:0;translate:var(--bubble-drift) -85vh;scale:1.25} }
+@media(prefers-reduced-motion:reduce) { .rsb-section-bubbles { display:none; } }
+.rsb-postcard-wrap .rs-ink-glass { right:-1%; }
+@media(max-width:700px) { .rsb-postcard-wrap .rs-ink-glass { right:-3%; } }
+.rsb-postcard-wrap .rs-ink-glass { top:24%;right:-4%; }
+@media(max-width:700px) { .rsb-postcard-wrap .rs-ink-glass { top:29%;right:-5%; } }
+.rsb-postcard-wrap .rs-ink-glass { right:-10%; }
+@media(max-width:700px) { .rsb-postcard-wrap .rs-ink-glass { right:-8%; } }
+.rsb-postcard-wrap .rs-ink-title>span:first-child { font-size:calc(30 * var(--ink-u)); }
+.rsb-postcard-wrap .rs-ink-title>span:last-child { font-size:calc(16 * var(--ink-u)); }
+
+/* Wide screens need a balanced poster composition, rather than portrait offsets. */
+@media(min-width:1001px) {
+ .rsb-postcard-wrap .rs-ink-title { left:5%;top:max(86px,11%);width:58%; }
+ .rsb-postcard-wrap .rs-ink-title>span:first-child { font-size:min(24cqw,25cqh); }
+ .rsb-postcard-wrap .rs-ink-title>span:last-child { font-size:min(13cqw,14cqh);margin-top:4cqh; }
+ .rsb-postcard-wrap .rs-ink-note { left:5%;top:56%;width:35%;text-align:left;font-size:1.9cqh;line-height:1.7; }
+ .rsb-postcard-wrap .rs-ink-glass { top:12%;right:-5%;width:60%;height:81%; }
+ .rsb-postcard-wrap .rs-ink-glass-art>img { transform:translateY(-5%) scale(1.12); }
+ .rsb-postcard-wrap .rs-ink-day { left:5%;top:65%;font-size:18cqh; }
+ .rsb-postcard-wrap .rs-ink-month { left:5%;top:83%;font-size:7cqh; }
+ .rsb-postcard-wrap .rs-ink-date { left:5%;bottom:3.5%;font-size:1.7cqh;line-height:1.6;text-align:left; }
+ .rsb-postcard-wrap .rs-ink-stripes-top { width:14%;height:24%; }
+ .rsb-postcard-wrap .rs-ink-stripes-bottom { width:27%;height:40%; }
+ .rsb-postcard-wrap .rs-pink-ink:lang(ka) .rs-ink-title>span:first-child { font-size:22cqh; }
+ .rsb-postcard-wrap .rs-pink-ink:lang(ka) .rs-ink-title>span:last-child { font-size:8.5cqh; }
+ .rsb-postcard-wrap .rs-pink-ink:lang(ka) .rs-ink-month { font-size:6cqh; }
+}
+@media(min-width:1001px) { .rsb-postcard-wrap .rs-ink-guide { bottom:3%;left:15%;width:65%;font-size:2.7cqh; }.rsb-postcard-wrap .rs-pink-ink:lang(ka) .rs-ink-guide { font-size:2.2cqh; } }
+
+.rsb-camera-screen > .rsb-camera-empty { padding:12%;font-size:clamp(14px,2.4vw,28px);line-height:1.3;text-align:center; }
+.rsb-shutter:disabled { cursor:default; }
+.rsb-shutter-cue[hidden] { display:none; }
+
+/* Portrait and tablet posters have their own composition, with room for the toolbar. */
+@media(max-width:1000px) {
+ .rsb-postcard-wrap .rs-ink-title { left:6%;top:max(88px,11%);width:88%; }
+ .rsb-postcard-wrap .rs-ink-title>span:first-child { font-size:min(29cqw,19cqh); }
+ .rsb-postcard-wrap .rs-ink-title>span:last-child { font-size:min(16cqw,10.5cqh);margin-top:3cqh; }
+ .rsb-postcard-wrap .rs-ink-note { left:6%;top:43%;width:36%;font-size:clamp(10px,1.6cqh,16px);text-align:left;line-height:1.6; }
+ .rsb-postcard-wrap .rs-ink-glass { top:32%;right:-7%;width:71%;height:52%; }
+ .rsb-postcard-wrap .rs-ink-glass-art>img { transform:translateY(-4%) scale(1.12); }
+ .rsb-postcard-wrap .rs-ink-day { left:6%;top:58%;font-size:min(30cqw,19cqh); }
+ .rsb-postcard-wrap .rs-ink-month { left:6%;top:76%;font-size:min(11cqw,7cqh); }
+ .rsb-postcard-wrap .rs-ink-date { left:6%;bottom:12%;font-size:clamp(10px,1.5cqh,15px);line-height:1.8;text-align:left; }
+ .rsb-postcard-wrap .rs-ink-guide { left:12%;bottom:0;width:72%;font-size:clamp(15px,2.2cqh,22px);line-height:1.3; }
+ .rsb-postcard-wrap .rs-ink-stripes-top { width:16%;height:22%; }
+ .rsb-postcard-wrap .rs-ink-stripes-bottom { width:30%;height:35%; }
+ .rsb-postcard-wrap .rs-pink-ink:lang(ka) .rs-ink-title>span:first-child { font-size:min(27cqw,18cqh); }
+ .rsb-postcard-wrap .rs-pink-ink:lang(ka) .rs-ink-title>span:last-child { font-size:min(10cqw,7cqh);margin-top:2cqh; }
+ .rsb-postcard-wrap .rs-pink-ink:lang(ka) .rs-ink-month { font-size:min(9cqw,6cqh); }
+ .rsb-postcard-wrap .rs-pink-ink:lang(ka) .rs-ink-guide { font-size:clamp(12px,1.8cqh,18px); }
+ .rsb-postcard-rsvp { bottom:20px;min-height:48px;font-size:17px;padding:10px 28px!important;white-space:nowrap; }
+}
+@media(max-width:1000px) and (max-height:600px) and (orientation:landscape) {
+ .rsb-postcard-wrap .rs-ink-title { top:76px;width:55%; }
+ .rsb-postcard-wrap .rs-ink-title>span:first-child { font-size:23cqh; }
+ .rsb-postcard-wrap .rs-ink-title>span:last-child { font-size:13cqh;margin-top:3cqh; }
+ .rsb-postcard-wrap .rs-ink-note { top:53%;font-size:2cqh; }
+ .rsb-postcard-wrap .rs-ink-glass { top:8%;right:-3%;width:54%;height:85%; }
+ .rsb-postcard-wrap .rs-ink-day { top:64%;font-size:17cqh; }
+ .rsb-postcard-wrap .rs-ink-month { left:21%;top:76%;font-size:8cqh; }
+ .rsb-postcard-wrap .rs-ink-date { bottom:3%;font-size:2cqh; }
+}
+
+/* Desktop memories develop in the four corners around the camera. */
+@media(min-width:1001px) {
+ .rsb-camera-section .rsb-print-shelf { position:static;width:auto;margin:20px 0 0; }
+ .rsb-camera-section .rsb-print-track { position:absolute;inset:0;display:block;max-width:none;padding:0;overflow:hidden;pointer-events:none; }
+ .rsb-camera-section .rsb-print { position:absolute;inset:auto;width:clamp(145px,15vw,230px);max-width:230px;pointer-events:auto; }
+ .rsb-camera-section .rsb-print:nth-child(4n+1) { left:5%;top:6%; }
+ .rsb-camera-section .rsb-print:nth-child(4n+2) { right:5%;top:6%; }
+ .rsb-camera-section .rsb-print:nth-child(4n+3) { left:5%;bottom:6%; }
+ .rsb-camera-section .rsb-print:nth-child(4n+4) { right:5%;bottom:6%; }
+ .rsb-camera-section .rsb-print-shelf>.rsb-text-button { position:relative;z-index:8; }
 }

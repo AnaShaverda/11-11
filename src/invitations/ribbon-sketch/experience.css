@@ -97,6 +97,6 @@
 .rs-ribbon-opening .guest-envelope-greeting {display:none}
 .rs-ribbon-opening .paper-envelope {--guest-paper:#fff8f5!important;--soft-paper-image:url('/images/birthday/ribbon-sketch/sketch-paper.png');--soft-paper-base:#fff8f5}
 .rs-ribbon-opening .guest-envelope-open {border:1px solid #8d263d!important;border-radius:48% 52% 49% 51%/55% 43% 57% 45%!important;padding:14px 28px!important;min-height:52px;background:#fff8f577!important;rotate:-2deg}
-.rs-ribbon-opening .guest-envelope-open::after {content:"♡";margin-left:12px;font-size:22px}
+
 .rs-ribbon-opening .guest-envelope-open > span {border-bottom:0!important}
 .rs-ribbon-opening .guest-envelope-open {border:0!important;border-radius:0!important;background:none!important;padding:0!important;rotate:0}.rs-ribbon-opening .guest-envelope-open::after{content:none}.rs-ribbon-opening .guest-envelope-open>span{border-bottom:1px solid #8d263d!important;padding-bottom:8px}

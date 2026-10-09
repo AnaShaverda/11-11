@@ -1,4 +1,5 @@
 import { Suspense } from "react";
+import SiteLoader from "../components/ui/SiteLoader.jsx";
 import { Navigate, useLocation, useParams } from "react-router-dom";
 import { customOrders } from "./orders.js";
 
@@ -24,7 +25,7 @@ export default function CustomOrderRoute() {
   }
 
   return (
-    <Suspense fallback={null}>
+    <Suspense fallback={<SiteLoader pending />}>
       <OrderPage />
     </Suspense>
   );

@@ -130,7 +130,7 @@ function AttendanceCard({ template, design, rsvpDeadline, maxCompanions, onEditT
   </NoteCard>;
 }
 
-function GuestNotesCard({ template, design, noteSettings, onNoteSettingsChange, onEditText, creator, showCreatorTools, tools, fullName, initialNote = "" }) {
+function GuestNotesCard({ template, design, noteSettings, onNoteSettingsChange, onEditText, creator, showCreatorTools, tools, fullName, onFullNameChange, initialNote = "" }) {
   const { t } = useLanguage();
   const [saved, setSaved] = useState(() => {
     try { return JSON.parse(localStorage.getItem(`1111-guest-message-v1:${template.slug}`)) ?? null; } catch { return null; }
@@ -151,6 +151,7 @@ function GuestNotesCard({ template, design, noteSettings, onNoteSettingsChange, 
       <small>{t("guestCards.savedLocally")}</small>
       <button className="guest-button" type="button" disabled={creator} onClick={() => setSaved(null)}>{t("guestCards.edit")} <InvitationArtwork name="pen" size={16} /></button>
     </div> : <form onSubmit={submit}>
+      <div className="guest-name-field"><label htmlFor="guest-note-name">{t("guestCards.fullName")}</label><input id="guest-note-name" name="fullName" autoComplete="name" required maxLength={MAX_GUEST_NAME_LENGTH} readOnly={creator} value={fullName} onChange={event => onFullNameChange(event.target.value, "notes")} /></div>
       <div className="guest-note-field">
         <label htmlFor="guest-personal-note"><span className="guest-editable-prompt" role={onEditText ? "button" : undefined} tabIndex={onEditText ? 0 : undefined} aria-label={onEditText ? t("guestCards.text.tapLabel", { label: t("guestCards.notes.question") }) : undefined}
           onClick={onEditText ? event => { event.preventDefault(); onEditText([{ group: "notes", key: "prompt", labelText: t("guestCards.notes.question"), value: getGuestNotePrompt(noteSettings, t), maxLength: MAX_NOTE_PROMPT_LENGTH, multiline: true }], event.currentTarget); } : undefined}
@@ -406,7 +407,7 @@ export default function GuestCardSuite({ template, sample, copyTranslations, edi
           tools={showCreatorTools && <CanvasSectionTools title={t("guestCards.rsvp")} recommended onRemove={() => removeSection({ rsvp: false })}>
           </CanvasSectionTools>} /></div>}
         {showCreatorTools && !settings.rsvp && <CanvasAddSection section="rsvp" onAdd={onAddSection} />}
-        {noteSettings.enabled && <div className="guest-section-screen" data-section="notes"><GuestNotesCard key={`notes-${template.slug}`} template={template} design={design} noteSettings={noteSettings} onNoteSettingsChange={onNoteSettingsChange} onEditText={onEditText} creator={creator} showCreatorTools={showCreatorTools} fullName={guestIdentity.name} initialNote={initialNote}
+        {noteSettings.enabled && <div className="guest-section-screen" data-section="notes"><GuestNotesCard key={`notes-${template.slug}`} template={template} design={design} noteSettings={noteSettings} onNoteSettingsChange={onNoteSettingsChange} onEditText={onEditText} creator={creator} showCreatorTools={showCreatorTools} fullName={guestIdentity.name} onFullNameChange={changeGuestName} initialNote={initialNote}
           tools={showCreatorTools && <CanvasSectionTools title={t("guestCards.notes.title")} onRemove={() => { onNoteSettingsChange({ ...noteSettings, enabled: false }); setRemovedSection("notes"); }} />} /></div>}
         {showCreatorTools && !noteSettings.enabled && <CanvasAddSection section="notes" onAdd={onAddSection} />}
       </div>

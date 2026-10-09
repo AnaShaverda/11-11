@@ -1,3 +1,4 @@
+import useInvitationGuestName from "../hooks/useInvitationGuestName.js";
 import { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import InvitationArtwork from "../components/InvitationArtwork.jsx";
@@ -19,7 +20,7 @@ function readSaved(kind, theme) {
 async function partyConfetti() { const { default: confetti } = await import("canvas-confetti"); confetti({ particleCount: 65, spread: 95, colors: ["#c71f2b", "#66794b", "#f1c65b"], disableForReducedMotion: true }); }
 function DemoForm({ kind, text, motion, theme }) {
   const [saved, setSaved] = useState(() => readSaved(kind, theme));
-  const [name, setName] = useState(() => readSaved(kind, theme)?.name || "");
+  const [name, setName] = useInvitationGuestName(theme, readSaved("wish", theme)?.name || readSaved("rsvp", theme)?.name || "");
   const [message, setMessage] = useState(() => readSaved(kind, theme)?.message || "");
   const [attending, setAttending] = useState(() => readSaved(kind, theme)?.attending || "yes");
   const [stored, setStored] = useState(true);

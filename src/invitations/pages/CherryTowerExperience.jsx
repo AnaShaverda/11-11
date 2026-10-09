@@ -1,3 +1,4 @@
+import useInvitationGuestName from "../hooks/useInvitationGuestName.js";
 import { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import SelectedBridalPoster from "../components/SelectedBridalPoster.jsx";
@@ -28,7 +29,7 @@ function PartyForm({ kind, theme, text, motion }) {
   const key = `1111-${theme}-${kind}-v1`;
   const [initial] = useState(() => readSaved(key, kind));
   const [saved, setSaved] = useState(initial);
-  const [name, setName] = useState(initial?.name || "");
+  const [name, setName] = useInvitationGuestName(theme, readSaved(`1111-${theme}-wish-v1`, "wish")?.name || readSaved(`1111-${theme}-rsvp-v1`, "rsvp")?.name || "");
   const [message, setMessage] = useState(initial?.message || "");
   const [attending, setAttending] = useState(initial?.attending || "yes");
   const [stored, setStored] = useState(true);
