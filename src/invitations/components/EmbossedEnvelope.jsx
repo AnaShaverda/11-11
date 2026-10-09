@@ -1,4 +1,4 @@
-import Icon from "../../components/ui/Icon.jsx";
+import InvitationArtwork from "./InvitationArtwork.jsx";
 import EmbossedWaxSeal from "./EmbossedWaxSeal.jsx";
 
 export default function EmbossedEnvelope({ variant, phase, title, initials, openLabel, onOpen, style, children }) {
@@ -15,7 +15,7 @@ export default function EmbossedEnvelope({ variant, phase, title, initials, open
       </svg>
       <EmbossedWaxSeal className="embossed-envelope-seal" title={title} initials={initials} />
       {phase === "sealed" && <button type="button" className="embossed-envelope-open" autoFocus onKeyDown={event => { if (event.key === "Tab") event.preventDefault(); }} onClick={onOpen}>
-        <span>{openLabel} <Icon name="arrow-up-right" size={17} /></span>
+        <span>{openLabel} <InvitationArtwork name="arrow-up-right" size={17} /></span>
       </button>}
     </div>
   </div>;

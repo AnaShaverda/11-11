@@ -2,7 +2,8 @@ import { useEffect, useRef, useState } from "react";
 import { createPortal } from "react-dom";
 import { weddingThemeStyle } from "./WeddingThemeDecoration.jsx";
 import { useLanguage } from "../../localization/LanguageContext.jsx";
-import Icon from "../../components/ui/Icon.jsx";
+import InvitationArtwork from "./InvitationArtwork.jsx";
+import InvitationMotif from "./InvitationMotif.jsx";
 import OpeningCelebration from "./OpeningCelebration.jsx";
 import DecorativeDoors from "./DecorativeDoors.jsx";
 import StampedPaperOpening from "./StampedPaperOpening.jsx";
@@ -110,9 +111,9 @@ export default function InvitationEntrance({ settings, design, title, initials, 
         
         <span className="guest-envelope-title">{title}</span>
       </div>
-      <div className="guest-envelope guest-envelope-seal-layer" aria-hidden="true">{settings.envelopeStamp && ["pink", "blue"].includes(paperVariant) && <span className="paper-envelope-stamp"><span className="paper-stamp-art"><img src={`/images/christening/${paperVariant === "velvet" ? "pink" : paperVariant}-dove.png`} alt="" /><span>{monogram || "♡"}</span></span></span>}{paperVariant === "floral" && <><img className="envelope-flower-drawing is-left" src="/images/opening/red-envelope-flowers.png" alt="" /><img className="envelope-flower-drawing is-right" src="/images/opening/red-envelope-flowers.png" alt="" /></>}<span className="guest-envelope-seal">{paperVariant && monogram ? <span className="paper-envelope-monogram">{monogram}</span> : <Icon name="heart" size={21} />}</span></div>
+      <div className="guest-envelope guest-envelope-seal-layer" aria-hidden="true">{settings.envelopeStamp && ["pink", "blue"].includes(paperVariant) && <span className="paper-envelope-stamp"><span className="paper-stamp-art"><img src={`/images/christening/${paperVariant === "velvet" ? "pink" : paperVariant}-dove.png`} alt="" /><span>{monogram || <InvitationMotif name="heart" />}</span></span></span>}{paperVariant === "floral" && <><img className="envelope-flower-drawing is-left" src="/images/opening/red-envelope-flowers.png" alt="" /><img className="envelope-flower-drawing is-right" src="/images/opening/red-envelope-flowers.png" alt="" /></>}<span className="guest-envelope-seal">{paperVariant && monogram ? <span className="paper-envelope-monogram">{monogram}</span> : <InvitationArtwork name="heart" size={21} />}</span></div>
       {phase === "sealed" && <button type="button" className="guest-envelope-open" aria-label={t("guestCards.envelope.open")} onClick={openInvitation}>
-        <span>{t("guestCards.envelope.open")} <Icon name="arrow-up-right" size={17} /></span>
+        <span>{t("guestCards.envelope.open")} <InvitationArtwork name="arrow-up-right" size={17} /></span>
       </button>}
     </div>}
     {embossedVariant && phase !== "opened" && createPortal(<EmbossedEnvelope variant={embossedVariant} phase={phase} title={title} initials={initials} style={design.weddingTheme ? weddingThemeStyle(design.weddingTheme) : undefined}

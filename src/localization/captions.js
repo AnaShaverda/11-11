@@ -2484,7 +2484,7 @@ const productCopy = {
     "home.possibilities.description":
       "An image says when and where. An 11:11 page can bring people into the moment: invite them before, play together during, and return to the memories after.",
     "home.final.description":
-      "Choose your moment → find your style → make it personal → preview. Explore the demos while we prepare creation and private sharing.",
+      "Choose your moment, find your style, make it personal, then preview. Explore the demos while we prepare creation and private sharing.",
     "home.interactive.description":
       "A few thoughtful extras, chosen for your occasion. Start with what matters; add only what makes it more personal.",
     "product.demo.label": "11:11 / GUEST DEMO",
@@ -2533,7 +2533,7 @@ const productCopy = {
     "home.possibilities.description":
       "11:11-ზე ზეიმი მოსაწვევით იწყება: შემდეგ — ერთად გართობა და მოგონებები, რომლებსაც ისევ დაუბრუნდები.",
     "home.final.description":
-      "აირჩიე მომენტი → სტილი → დაამატე სიტყვები → ნახე ნიმუში. შექმნა და პირადი გაზიარება მალე დაემატება.",
+      "აირჩიე მომენტი და სტილი, დაამატე სიტყვები, შემდეგ ნახე ნიმუში. შექმნა და პირადი გაზიარება მალე დაემატება.",
     "home.interactive.description":
       "დაამატე შენს მომენტს პირადი დეტალები. დაიწყე მთავარით და აირჩიე, რაც შენ გგავს.",
     "product.demo.label": "11:11 / სტუმრის დემო",

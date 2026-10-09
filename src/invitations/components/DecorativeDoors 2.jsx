@@ -1,5 +1,5 @@
 import { useLanguage } from "../../localization/LanguageContext.jsx";
-import Icon from "../../components/ui/Icon.jsx";
+import InvitationArtwork from "./InvitationArtwork.jsx";
 
 function DoorLeaf({ side }) {
   return <div className={`guest-door-leaf is-${side}`} aria-hidden="true">
@@ -37,10 +37,10 @@ export default function DecorativeDoors({ phase, title, onOpen, onView, viewButt
       <span className="guest-door-light" />
     </div>
     {phase === "sealed" && <button type="button" className="guest-door-open" onClick={onOpen} aria-label={t("guestCards.doors.open")}>
-      <span>{title}</span><small>{t("guestCards.doors.open")} <Icon name="arrow-up-right" size={16} /></small>
+      <span>{title}</span><small>{t("guestCards.doors.open")} <InvitationArtwork name="arrow-up-right" size={16} /></small>
     </button>}
     {(phase === "preview" || phase === "finishing") && <button className="guest-door-view" ref={viewButton} type="button" onClick={onView} disabled={phase === "finishing"}>
-      {t("guestCards.doors.view")} <Icon name="arrow-down" size={16} />
+      {t("guestCards.doors.view")} <InvitationArtwork name="arrow-down" size={16} />
     </button>}
   </div>;
 }

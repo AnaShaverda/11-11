@@ -1,11 +1,11 @@
-import Icon from "../../components/ui/Icon.jsx";
+import InvitationArtwork from "./InvitationArtwork.jsx";
 import { useLanguage } from "../../localization/LanguageContext.jsx";
 import { guestNotePresets, MAX_NOTE_PROMPT_LENGTH } from "../data/guestNotes.js";
 
 export default function GuestNotesEditor({ settings, onChange }) {
   const { t } = useLanguage();
   return <details className="guest-notes-settings">
-    <summary>{t("guestCards.notes.title")}<Icon name="chevron-down" size={14} /></summary>
+    <summary>{t("guestCards.notes.title")}<InvitationArtwork name="chevron-down" size={14} /></summary>
     <button className="guest-preview-toggle" type="button" role="switch" aria-checked={settings.enabled} onClick={() => onChange({ ...settings, enabled: !settings.enabled })}>
       <span>{t("guestCards.notes.allow")}</span><span className="guest-toggle-track" aria-hidden="true"><span /></span>
     </button>

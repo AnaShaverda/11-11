@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import Icon from "../../components/ui/Icon.jsx";
+import InvitationArtwork from "./InvitationArtwork.jsx";
 import { useLanguage } from "../../localization/LanguageContext.jsx";
 import { getDayPlanErrors, normalizeGuestDayPlan, MAX_DAY_PLAN_ITEMS, MAX_DAY_PLAN_TITLE, MAX_DAY_PLAN_DETAILS } from "../data/guestDayPlan.js";
 
@@ -60,7 +60,7 @@ export default function GuestDayPlanEditor({ dayPlan, onSave, embedded = false }
 
   const Container = embedded ? "div" : "details";
   return <Container className={`guest-plan-settings${embedded ? " is-embedded" : ""}`}>
-    {!embedded && <summary>{t("guestCards.plan.title")}<Icon name="chevron-down" size={14} /></summary>}
+    {!embedded && <summary>{t("guestCards.plan.title")}<InvitationArtwork name="chevron-down" size={14} /></summary>}
     <p className="guest-plan-hint">{t("guestCards.plan.hint")}</p>
     <form onSubmit={save} noValidate>
       <ol className="guest-plan-draft">{draft.map((item, index) => {
@@ -70,9 +70,9 @@ export default function GuestDayPlanEditor({ dayPlan, onSave, embedded = false }
           <div className="guest-plan-draft-heading">
             <span>{t("guestCards.plan.moment", { count: index + 1 })}</span>
             <div>
-              <button type="button" disabled={index === 0} onClick={() => move(index, -1)} aria-label={t("guestCards.plan.moveUp", { count: index + 1 })}><Icon name="chevron-down" className="guest-plan-up" size={14} /></button>
-              <button type="button" disabled={index === draft.length - 1} onClick={() => move(index, 1)} aria-label={t("guestCards.plan.moveDown", { count: index + 1 })}><Icon name="chevron-down" size={14} /></button>
-              <button type="button" onClick={() => remove(item.id)} aria-label={t("guestCards.plan.remove", { count: index + 1 })}><Icon name="close" size={14} /></button>
+              <button type="button" disabled={index === 0} onClick={() => move(index, -1)} aria-label={t("guestCards.plan.moveUp", { count: index + 1 })}><InvitationArtwork name="chevron-down" className="guest-plan-up" size={14} /></button>
+              <button type="button" disabled={index === draft.length - 1} onClick={() => move(index, 1)} aria-label={t("guestCards.plan.moveDown", { count: index + 1 })}><InvitationArtwork name="chevron-down" size={14} /></button>
+              <button type="button" onClick={() => remove(item.id)} aria-label={t("guestCards.plan.remove", { count: index + 1 })}><InvitationArtwork name="close" size={14} /></button>
             </div>
           </div>
           <label htmlFor={`plan-time-${item.id}`}>{t("guestCards.plan.time")}</label>

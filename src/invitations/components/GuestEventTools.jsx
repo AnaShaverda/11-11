@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import InvitationArtwork from './InvitationArtwork.jsx';
 import { useLanguage } from '../../localization/LanguageContext.jsx';
 import { createCalendarFile, eventTimeZones, getCalendarEvent, getCountdown, getGoogleCalendarUrl } from '../data/guestCalendar.js';
 
@@ -24,7 +25,7 @@ export default function GuestEventTools({ details, sample, template, settings, o
       {embedded && <p className="guest-countdown-label">{t('editor.countdown')}</p>}
       {event.instant > now ? <div className="guest-countdown" role="timer" aria-live="off">{Object.entries(getCountdown(event.instant, now)).map(([unit, value]) => <div key={unit}><strong>{String(value).padStart(2, '0')}</strong><span>{t(`editor.${unit}`)}</span></div>)}</div> : <p>{t('editor.eventStarted')}</p>}
       <details className="guest-calendar-menu"><summary>{t('editor.addCalendar')}</summary><div>
-        <a href={getGoogleCalendarUrl(event, metadata)} target="_blank" rel="noreferrer">Google Calendar ↗</a>
+        <a href={getGoogleCalendarUrl(event, metadata)} target="_blank" rel="noreferrer">Google Calendar <InvitationArtwork name="arrow-up-right" size={16} /></a>
         <button type="button" onClick={download}>{t('editor.calendarFile')}</button>
         <small>{t('editor.calendarHint')}</small>
       </div></details>

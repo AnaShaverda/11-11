@@ -1,5 +1,5 @@
 import WeddingThemeDecoration, { weddingThemeStyle } from "./WeddingThemeDecoration.jsx";
-import Icon from "../../components/ui/Icon.jsx";
+import InvitationArtwork from "./InvitationArtwork.jsx";
 import { useLanguage } from "../../localization/LanguageContext.jsx";
 import { classicalThemes, christeningCustomThemes, getClassicalTheme, canUploadCustomCover, footerScenes, portraitSamplePhoto } from "../data/customClassicalThemes.js";
 
@@ -48,13 +48,13 @@ export default function CustomInvitationCover({ design, sample, invitationLabel,
   if (theme.squarePhoto) return <div className={`custom-invitation-cover wedding-cover theme-${theme.id} baby-photo-cover`} style={weddingThemeStyle(theme)}>
     <WeddingThemeDecoration theme={theme} />
     <div className="baby-photo-content">
-      <div className="baby-square-photo">{image ? <img src={image} alt={sample.title} style={{ objectPosition: `50% ${design.position}%` }} /> : <span className="baby-photo-placeholder"><Icon name="image" size={40} /><span>{language === "ka" ? "დაამატე ბავშვის ფოტო" : "Add your child’s photo"}</span></span>}</div>
+      <div className="baby-square-photo">{image ? <img src={image} alt={sample.title} style={{ objectPosition: `50% ${design.position}%` }} /> : <span className="baby-photo-placeholder"><InvitationArtwork name="image" size={40} /><span>{language === "ka" ? "დაამატე ბავშვის ფოტო" : "Add your child’s photo"}</span></span>}</div>
       <div className="baby-photo-titles"><small>{coverHeading}</small><strong>{sample.title}</strong><span>{sample.displayDate || sample.date}</span></div>
     </div>
   </div>;
 
   if (theme.photoTheme) return <div className={`custom-invitation-cover wedding-cover wedding-portrait-cover tone-${design.coverTextTone}`} style={weddingThemeStyle(theme)}>
-    {image ? <img className="wedding-portrait-photo" src={image} alt={sample.title} /> : <div className="wedding-portrait-sample"><span className="wedding-photo-prompt"><Icon name="image" size={32} /><span>{language === "ka" ? "აირჩიე შენი ფოტო" : "Choose your photo"}</span></span></div>}
+    {image ? <img className="wedding-portrait-photo" src={image} alt={sample.title} /> : <div className="wedding-portrait-sample"><span className="wedding-photo-prompt"><InvitationArtwork name="image" size={32} /><span>{language === "ka" ? "აირჩიე შენი ფოტო" : "Choose your photo"}</span></span></div>}
     <div className="wedding-portrait-frame" aria-hidden="true" />
     <div className="custom-cover-copy"><small>{coverHeading}</small><strong>{sample.title}</strong><span className="wedding-cover-date">{sample.displayDate || sample.date}</span></div>
   </div>;

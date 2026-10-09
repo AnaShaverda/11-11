@@ -2,7 +2,7 @@ import { cardFontRegistry } from '../data/cardTypography.js';
 import { getClassicalPaper } from '../data/customClassicalThemes.js';
 import ChristeningArtwork, { ChristeningClassicArtwork } from './ChristeningArtwork.jsx';
 import EmbossedWaxSeal from './EmbossedWaxSeal.jsx';
-import Icon from '../../components/ui/Icon.jsx';
+import InvitationArtwork from "./InvitationArtwork.jsx";
 import { useLanguage } from '../../localization/LanguageContext.jsx';
 
 const themeFonts = { somethingBlue: 'magnola', pressedRose: 'elegance', pearlLetter: 'casmera', lilacWhisper: 'magnola', meadowMorning: 'magnola', autumn: 'casmera', rtveli: 'zalino', embossedIvory: 'elegance', embossedSage: 'magnola' };
@@ -64,7 +64,7 @@ export default function WeddingThemeDecoration({ theme, adaptive = false, separa
 export function WeddingThemePreview({ theme, label }) {
   const { language } = useLanguage();
   return <span className={`custom-theme-mini wedding-theme-mini theme-${theme.id}${theme.photoTheme ? ` is-photo-theme tone-${theme.coverTextTone}` : ''}`} style={weddingThemeStyle(theme)} aria-hidden="true">
-    {theme.squarePhoto ? <><WeddingThemeDecoration theme={theme} /><span className="baby-theme-preview-photo"><Icon name="image" size={28} /></span></> : theme.photoTheme ? <><span className="wedding-portrait-sample"><span className="wedding-photo-prompt"><Icon name="image" size={22} /><span>{language === 'ka' ? 'აირჩიე შენი ფოტო' : 'Choose your photo'}</span></span></span><span className="wedding-portrait-frame" /></> : <WeddingThemeDecoration theme={theme} />}
+    {theme.squarePhoto ? <><WeddingThemeDecoration theme={theme} /><span className="baby-theme-preview-photo"><InvitationArtwork name="image" size={28} /></span></> : theme.photoTheme ? <><span className="wedding-portrait-sample"><span className="wedding-photo-prompt"><InvitationArtwork name="image" size={22} /><span>{language === 'ka' ? 'აირჩიე შენი ფოტო' : 'Choose your photo'}</span></span></span><span className="wedding-portrait-frame" /></> : <WeddingThemeDecoration theme={theme} />}
     <span className="wedding-theme-mini-copy"><i>{label}</i><b /><small>18 · 06 · 2027</small></span>
   </span>;
 }

@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from "react";
+import InvitationArtwork from "./InvitationArtwork.jsx";
 
 export default function IceCatchGame({ artwork, language, storageKey }) {
   const ka = language === "ka";
@@ -56,7 +57,7 @@ export default function IceCatchGame({ artwork, language, storageKey }) {
       <div className="ice-glass" style={{left:`${view.x*100}%`}}><img src={artwork} alt="" draggable="false"/>{view.flash > 0 && <span key={view.flash} className="ice-plus">+1</span>}</div>
       {phase !== "playing" && <div className="ice-game-overlay"><h3>{phase === "done" ? (ka ? `${view.score} ყინული დაიჭირე!` : `${view.score} cubes. So cool!`) : phase === "paused" ? (ka ? "ცოტა შესვენება" : "A little pause") : (ka ? "ყინულის წვიმა!" : "Ice, ice, party!")}</h3><p>{ka ? "ამოძრავე ჭიქა და დაიჭირე ყინული. გაქვს 25 წამი!" : "Move your glass. Catch the falling ice. You have 25 seconds!"}</p><button onClick={phase === "paused" ? ()=>setPhase("playing") : start}>{phase === "paused" ? (ka ? "გაგრძელება" : "Resume") : phase === "done" ? (ka ? "კიდევ ერთხელ" : "Play again") : (ka ? "ვითამაშოთ" : "Let’s play")}</button></div>}
     </div>
-    <div className="ice-controls"><button aria-label={ka ? "ჭიქა მარცხნივ" : "Move glass left"} onClick={()=>engine.current.x=Math.max(.13,engine.current.x-.12)}>←</button><p>{ka ? "გაუსვი თითი · ამოძრავე მაუსი · გამოიყენე ← →" : "Swipe · move your mouse · use ← →"}</p><button aria-label={ka ? "ჭიქა მარჯვნივ" : "Move glass right"} onClick={()=>engine.current.x=Math.min(.87,engine.current.x+.12)}>→</button>{(phase === "playing" || phase === "paused") && <button onClick={()=>setPhase(phase === "playing" ? "paused" : "playing")}>{phase === "playing" ? (ka ? "პაუზა" : "Pause") : (ka ? "გაგრძელება" : "Resume")}</button>}</div>
+    <div className="ice-controls"><button aria-label={ka ? "ჭიქა მარცხნივ" : "Move glass left"} onClick={()=>engine.current.x=Math.max(.13,engine.current.x-.12)}><InvitationArtwork name="arrow-left" size={20} /></button><p>{ka ? "გაუსვი თითი · ამოძრავე მაუსი · გამოიყენე ისრის ღილაკები" : "Swipe · move your mouse · use arrow keys"}</p><button aria-label={ka ? "ჭიქა მარჯვნივ" : "Move glass right"} onClick={()=>engine.current.x=Math.min(.87,engine.current.x+.12)}><InvitationArtwork name="arrow-right" size={20} /></button>{(phase === "playing" || phase === "paused") && <button onClick={()=>setPhase(phase === "playing" ? "paused" : "playing")}>{phase === "playing" ? (ka ? "პაუზა" : "Pause") : (ka ? "გაგრძელება" : "Resume")}</button>}</div>
     <p className="sr-only" role="status">{phase === "done" ? `${ka ? "შედეგი" : "Final score"}: ${view.score}` : ""}</p>
   </div>;
 }

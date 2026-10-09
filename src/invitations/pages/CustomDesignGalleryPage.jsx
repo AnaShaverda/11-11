@@ -4,6 +4,7 @@ import { useLanguage } from "../../localization/LanguageContext.jsx";
 import { getCustomTemplate } from "../data/customTemplates.js";
 import { getCustomThemes } from "../data/customClassicalThemes.js";
 import { WeddingThemePreview } from "../components/WeddingThemeDecoration.jsx";
+import InvitationArtwork from "../components/InvitationArtwork.jsx";
 
 function ExperiencePhone({ category, theme, language }) {
   const display = useRef(null);
@@ -66,8 +67,8 @@ export default function CustomDesignGalleryPage() {
     <section className="custom-design-featured" aria-label={theme.name[language] ?? theme.name.en}>
       <ExperiencePhone category={category} theme={theme} language={language} />
       <div className="custom-design-featured-info">
-        <div className="custom-design-featured-actions"><Link to={`/invitations/create/${category}/demo/${theme.id}`}>{copy.full} ↗</Link></div>
-        <Link className="custom-design-gallery-choose" to={`/invitations/create/${category}?occasion=${encodeURIComponent(occasion)}&theme=${encodeURIComponent(theme.id)}`}>{copy.choose} <span aria-hidden="true">→</span></Link>
+        <div className="custom-design-featured-actions"><Link to={`/invitations/create/${category}/demo/${theme.id}`}>{copy.full} <InvitationArtwork name="arrow-up-right" size={18} /></Link></div>
+        <Link className="custom-design-gallery-choose" to={`/invitations/create/${category}?occasion=${encodeURIComponent(occasion)}&theme=${encodeURIComponent(theme.id)}`}>{copy.choose} <InvitationArtwork name="arrow-right" size={18} /></Link>
       </div>
     </section>
     </div>

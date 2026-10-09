@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
-import Icon from "../../components/ui/Icon.jsx";
+import InvitationArtwork from "../components/InvitationArtwork.jsx";
 import { useLanguage } from "../../localization/LanguageContext.jsx";
 import "../../styles/pink-lido-experience.css";
 
@@ -86,23 +86,23 @@ export default function PinkLidoExperience({ theme = "pink-lido" }) {
   }
   return <main className={`lido-experience ${blue ? "blue-splash-experience" : ""} ${motion ? "lido-motion" : ""}`} lang={language} ref={scene}>
     <section className="lido-cover" id="lido-cover" aria-label={copy.title}>
-    <header className="lido-toolbar"><Link to="/invitations" aria-label={copy.back}><Icon name="arrow-left" size={20} /><span>11:11</span></Link><div><button onClick={() => setLanguage(language === "ka" ? "en" : "ka")} aria-label={language === "ka" ? "Switch to English" : "ქართულად"}>{language === "ka" ? "EN" : "KA"}</button><button className="lido-motion-control" aria-pressed={motion} onClick={() => setMotion(value => !value)}>{copy.motion}<span aria-hidden="true" className="lido-switch" /></button></div></header>
+    <header className="lido-toolbar"><Link to="/invitations" aria-label={copy.back}><InvitationArtwork name="arrow-left" size={20} /><span>11:11</span></Link><div><button onClick={() => setLanguage(language === "ka" ? "en" : "ka")} aria-label={language === "ka" ? "Switch to English" : "ქართულად"}>{language === "ka" ? "EN" : "KA"}</button><button className="lido-motion-control" aria-pressed={motion} onClick={() => setMotion(value => !value)}>{copy.motion}<span aria-hidden="true" className="lido-switch" /></button></div></header>
     {!blue && <><div className="lido-palm lido-palm-left" aria-hidden="true"><img src={`${art}palm.webp`} alt="" /></div><div className="lido-palm lido-palm-right" aria-hidden="true"><img src={`${art}palm.webp`} alt="" /></div></>}
-    <section className="lido-invitation" aria-labelledby="lido-title"><h1 id="lido-title"><span>{copy.name}</span><em>{copy.title}</em></h1><p className="lido-line">{copy.line}</p><p className="lido-date">{copy.date} <span className="lido-date-dot" aria-hidden="true" /> 14:00 <span className="lido-date-dot" aria-hidden="true" /> {copy.city}</p><button className="lido-primary" onClick={openParty}>{copy.dive}<Icon name="arrow-right" size={20} /></button></section>
+    <section className="lido-invitation" aria-labelledby="lido-title"><h1 id="lido-title"><span>{copy.name}</span><em>{copy.title}</em></h1><p className="lido-line">{copy.line}</p><p className="lido-date">{copy.date} <span className="lido-date-dot" aria-hidden="true" /> 14:00 <span className="lido-date-dot" aria-hidden="true" /> {copy.city}</p><button className="lido-primary" onClick={openParty}>{copy.dive}<InvitationArtwork name="arrow-right" size={20} /></button></section>
     <div className="lido-pool-scene"><img className="lido-pool" src={`${art}pool.png`} alt="" /><button className="lido-water" aria-label={copy.splash} onClick={splash}>{ripples.map(item => <span key={item.id} className="lido-ripple" style={{ left: item.x, top: item.y }} />)}</button><img className="lido-ring" src={`${art}ring.webp`} alt="" /><div className="lido-water-hint" aria-hidden="true"><svg width="42" height="24" viewBox="0 0 42 24" fill="none" stroke="currentColor" strokeWidth="1.5" aria-hidden="true"><path d="M2 8c6-8 12 8 18 0s12 8 20 0M2 16c6-8 12 8 18 0s12 8 20 0" /></svg>{copy.splash}</div></div>
     <img className={blue ? "splash-ladder" : "lido-umbrella"} src={`${art}${blue ? "ladder" : "umbrella"}.webp`} alt="" />
-    <a className="lido-scroll-cue" href="#lido-details" aria-label={language === "ka" ? "წვეულების დეტალები" : "Scroll to party details"}><Icon name="arrow-down" size={22} /></a>
+    <a className="lido-scroll-cue" href="#lido-details" aria-label={language === "ka" ? "წვეულების დეტალები" : "Scroll to party details"}><InvitationArtwork name="arrow-down" size={22} /></a>
     </section>
     <section ref={details} id="lido-details" tabIndex={-1} className="lido-chapter lido-details-chapter" aria-labelledby="lido-details-title">
       <div className="lido-chapter-copy">
         <p className="lido-detail-intro">{copy.intro}</p>
         <h2 id="lido-details-title">{copy.details}</h2>
         <div className="lido-facts">
-          <div><span>01 / {language === "ka" ? "როდის" : "WHEN"}</span><p>{copy.when}<br />14:00 – 17:00</p><button onClick={calendar}>{copy.calendar}<Icon name="arrow-up-right" size={16} /></button></div>
+          <div><span>01 / {language === "ka" ? "როდის" : "WHEN"}</span><p>{copy.when}<br />14:00 – 17:00</p><button onClick={calendar}>{copy.calendar}<InvitationArtwork name="arrow-up-right" size={16} /></button></div>
           <div><span>02 / {language === "ka" ? "სად" : "WHERE"}</span><p>{copy.where}</p><small>{copy.venue}</small></div>
         </div>
         <p className="lido-bring">{copy.bring}</p>
-        <a className="lido-chapter-link" href="#lido-plan">{copy.plan} <Icon name="arrow-down" size={20} /></a>
+        <a className="lido-chapter-link" href="#lido-plan">{copy.plan} <InvitationArtwork name="arrow-down" size={20} /></a>
       </div>
       <div className="lido-chapter-art lido-detail-art" aria-hidden="true"><span className="lido-orbit" /><img src={`${art}ring.webp`} alt="" /><span className="lido-art-word">SPLASH!</span></div>
     </section>
@@ -111,7 +111,7 @@ export default function PinkLidoExperience({ theme = "pink-lido" }) {
       <div className="lido-chapter-copy">
         <h2 id="lido-plan-title">{copy.plan}</h2>
         <ol className="lido-plan">{[["14:00", copy.swim], ["15:30", copy.cake], ["16:00", copy.chill]].map(([time, title], index) => <li key={time}><span className="lido-plan-number">0{index + 1}</span><div><time>{time}</time><h3>{title}</h3></div></li>)}</ol>
-        <a className="lido-chapter-link" href="#lido-wishes">{copy.wishes} <Icon name="arrow-down" size={20} /></a>
+        <a className="lido-chapter-link" href="#lido-wishes">{copy.wishes} <InvitationArtwork name="arrow-down" size={20} /></a>
       </div>
     </section>
     <section id="lido-wishes" className="lido-chapter lido-wishes-chapter" aria-labelledby="lido-wishes-title">
@@ -119,31 +119,31 @@ export default function PinkLidoExperience({ theme = "pink-lido" }) {
         <h2 id="lido-wishes-title">{copy.wishTitle}</h2>
         <p className="lido-wish-intro">{copy.wishIntro}</p>
         <div className="lido-wish-content" aria-live="polite">
-          {wish ? <div className="lido-wish-note"><p className="lido-wish-message">{wish.message}</p><p className="lido-wish-author">{wish.name}</p><p className="lido-wish-status">{wishStored ? copy.wishSaved : (language === "ka" ? "სურვილი შენახულია ამ სესიაში." : "Your wish is saved for this session only.")}</p><button onClick={editWish}>{copy.wishEdit}<Icon name="pen" size={16} /></button></div> :
+          {wish ? <div className="lido-wish-note"><p className="lido-wish-message">{wish.message}</p><p className="lido-wish-author">{wish.name}</p><p className="lido-wish-status">{wishStored ? copy.wishSaved : (language === "ka" ? "სურვილი შენახულია ამ სესიაში." : "Your wish is saved for this session only.")}</p><button onClick={editWish}>{copy.wishEdit}<InvitationArtwork name="pen" size={16} /></button></div> :
             <form className="lido-wish-form" onSubmit={saveWish}>
               <label htmlFor="lido-wish-name">{copy.label}</label>
               <input id="lido-wish-name" value={wishName} onChange={event => setWishName(event.target.value)} required maxLength={80} pattern={".*\\S.*"} autoComplete="name" />
               <label htmlFor="lido-wish-message">{copy.wishLabel}</label>
               <textarea id="lido-wish-message" name="birthday-wish" value={wishMessage} onChange={event => { event.target.setCustomValidity(""); setWishMessage(event.target.value); }} required maxLength={400} rows={4} />
-              <button className="lido-primary" type="submit">{copy.wishSave}<Icon name="arrow-right" size={20} /></button>
+              <button className="lido-primary" type="submit">{copy.wishSave}<InvitationArtwork name="arrow-right" size={20} /></button>
             </form>}
         </div>
         <p className="lido-demo lido-wish-demo">{copy.wishDemo}</p>
-        <a className="lido-chapter-link" href="#lido-rsvp">{copy.rsvp}<Icon name="arrow-down" size={20} /></a>
+        <a className="lido-chapter-link" href="#lido-rsvp">{copy.rsvp}<InvitationArtwork name="arrow-down" size={20} /></a>
       </div>
       <div className="lido-chapter-art lido-wishes-art" aria-hidden="true"><span className="lido-wishes-towel" /><img className="lido-wishes-swimsuit" src={`${accessories}swimsuit.png`} alt="" loading="lazy" /><img className="lido-wishes-glasses" src={`${accessories}sunglasses.png`} alt="" loading="lazy" /></div>
     </section>
     <section id="lido-rsvp" className="lido-chapter lido-rsvp-chapter" aria-labelledby="lido-rsvp-title">
       <div className="lido-chapter-copy lido-rsvp" aria-live="polite">
-        {reply ? <><h2 id="lido-rsvp-title">{reply.attending === "yes" ? copy.thanks : copy.miss}</h2><p className="lido-reply-name">{reply.name}</p><p>{storageSaved ? copy.saved : (language === "ka" ? "პასუხი შენახულია მხოლოდ ამ სესიაში." : "Your reply is saved for this session only.")}</p><button onClick={editReply}>{copy.change}<Icon name="arrow-right" size={18} /></button></> : <form onSubmit={saveReply}>
+        {reply ? <><h2 id="lido-rsvp-title">{reply.attending === "yes" ? copy.thanks : copy.miss}</h2><p className="lido-reply-name">{reply.name}</p><p>{storageSaved ? copy.saved : (language === "ka" ? "პასუხი შენახულია მხოლოდ ამ სესიაში." : "Your reply is saved for this session only.")}</p><button onClick={editReply}>{copy.change}<InvitationArtwork name="arrow-right" size={18} /></button></> : <form onSubmit={saveReply}>
           <h2 id="lido-rsvp-title">{copy.rsvp}</h2>
           <label htmlFor="lido-guest-name">{copy.label}</label>
           <input id="lido-guest-name" value={name} onChange={event => setName(event.target.value)} required maxLength={80} pattern={".*\\S.*"} autoComplete="name" />
           <fieldset><legend className="lido-sr-only">{copy.rsvp}</legend><label><input type="radio" name="attendance" value="yes" checked={attending === "yes"} onChange={() => setAttending("yes")} />{copy.yes}</label><label><input type="radio" name="attendance" value="no" checked={attending === "no"} onChange={() => setAttending("no")} />{copy.no}</label></fieldset>
-          <button className="lido-primary" type="submit">{copy.send}<Icon name="arrow-right" size={20} /></button>
+          <button className="lido-primary" type="submit">{copy.send}<InvitationArtwork name="arrow-right" size={20} /></button>
         </form>}
         <p className="lido-demo">{copy.demo}</p>
-        <a className="lido-chapter-link" href="#lido-cover">{language === "ka" ? "თავში დაბრუნება" : "Back to the sunshine"}<Icon name="arrow-down" size={20} className="lido-icon-up" /></a>
+        <a className="lido-chapter-link" href="#lido-cover">{language === "ka" ? "თავში დაბრუნება" : "Back to the sunshine"}<InvitationArtwork name="arrow-down" size={20} className="lido-icon-up" /></a>
       </div>
       <div className="lido-chapter-art lido-rsvp-art" aria-hidden="true"><img className="lido-rsvp-pool" src={`${art}pool.png`} alt="" /><img className="lido-rsvp-ring" src={`${art}ring.webp`} alt="" /></div>
     </section>

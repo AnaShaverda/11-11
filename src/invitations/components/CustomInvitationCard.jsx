@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import Icon from "../../components/ui/Icon.jsx";
+import InvitationArtwork from "./InvitationArtwork.jsx";
 import { useLanguage } from "../../localization/LanguageContext.jsx";
 
 export default function CustomInvitationCard({ category, animationIndex = 0 }) {
@@ -16,7 +16,7 @@ export default function CustomInvitationCard({ category, animationIndex = 0 }) {
     aria-label={`${t("customCollection.heading")}: ${categoryName}`}>
     <div className="invitation-card-media custom-design-preview">
       <img className="custom-design-artwork" src="/images/custom-classical/custom-design-envelope.jpg" alt="" />
-      <span className="custom-design-copy"><strong>{copy.title}</strong><span>{copy.edit}</span><span className="custom-design-image-hint"><span>{copy.images}</span><Icon name="image" size={32} /></span></span>
+      <span className="custom-design-copy"><strong>{copy.title}</strong><span>{copy.edit}</span><span className="custom-design-image-hint"><span>{copy.images}</span><InvitationArtwork name="image" size={32} /></span></span>
     </div>
     <span className="invitation-card-bottom"><span><strong>{t("customCollection.heading")}</strong><small>{hint}</small></span></span>
   </Link>;

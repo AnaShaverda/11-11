@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import Icon from "../../components/ui/Icon.jsx";
+import InvitationArtwork from "./InvitationArtwork.jsx";
 import { useLanguage } from "../../localization/LanguageContext.jsx";
 import { getCardTextFields, getCardExtraCopyFields, normalizeCardText } from "../data/guestCardText.js";
 
@@ -38,7 +38,7 @@ function TextDialog({ template, sample, edits, onSave, onClose }) {
 
   return <dialog ref={dialog} className="guest-text-dialog" aria-labelledby="guest-text-editor-title" onClose={onClose}>
     <form onSubmit={save}>
-      <header><h2 id="guest-text-editor-title">{t("guestCards.text.edit")}</h2><button type="button" className="guest-text-close" aria-label={t("guestCards.text.close")} onClick={onClose}><Icon name="close" /></button></header>
+      <header><h2 id="guest-text-editor-title">{t("guestCards.text.edit")}</h2><button type="button" className="guest-text-close" aria-label={t("guestCards.text.close")} onClick={onClose}><InvitationArtwork name="close" /></button></header>
       <p>{t("guestCards.text.hint")}</p>
       <div className="guest-text-fields">{fields.map(field => input(field, "fields"))}</div>
       {extra.length > 0 && <><h3>{t("guestCards.text.wording")}</h3><div className="guest-text-fields">{extra.map(field => input(field, "translations"))}</div></>}
@@ -50,5 +50,5 @@ function TextDialog({ template, sample, edits, onSave, onClose }) {
 export default function InvitationTextEditor(props) {
   const { t } = useLanguage();
   const [open, setOpen] = useState(false);
-  return <div className="guest-text-settings"><button className="guest-opening-replay" type="button" onClick={() => setOpen(true)}><Icon name="pen" size={16} />{t("guestCards.text.edit")}</button>{open && <TextDialog {...props} onClose={() => setOpen(false)} />}</div>;
+  return <div className="guest-text-settings"><button className="guest-opening-replay" type="button" onClick={() => setOpen(true)}><InvitationArtwork name="pen" size={16} />{t("guestCards.text.edit")}</button>{open && <TextDialog {...props} onClose={() => setOpen(false)} />}</div>;
 }

@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { useLanguage } from "../../localization/LanguageContext.jsx";
-import Icon from "../../components/ui/Icon.jsx";
+import InvitationArtwork from "./InvitationArtwork.jsx";
 import OpeningCelebration from "./OpeningCelebration.jsx";
 import DecorativeDoors from "./DecorativeDoors.jsx";
 import { getEntranceTransition } from "../data/guestEntranceMotion.js";
@@ -66,9 +66,9 @@ export default function InvitationEntrance({ settings, design, title, reducedMot
         </svg>
         <span className="guest-envelope-title">{title}</span>
       </div>
-      <div className="guest-envelope guest-envelope-seal-layer" aria-hidden="true"><span className="guest-envelope-seal"><Icon name="heart" size={21} /></span></div>
+      <div className="guest-envelope guest-envelope-seal-layer" aria-hidden="true"><span className="guest-envelope-seal"><InvitationArtwork name="heart" size={21} /></span></div>
       {phase === "sealed" && <button type="button" className="guest-envelope-open" onClick={openInvitation}>
-        <span>{t("guestCards.envelope.open")} <Icon name="arrow-up-right" size={17} /></span>
+        <span>{t("guestCards.envelope.open")} <InvitationArtwork name="arrow-up-right" size={17} /></span>
       </button>}
     </div>}
     {entrance === "doors" && phase !== "opened" && <DecorativeDoors phase={phase} title={title} onOpen={openInvitation}

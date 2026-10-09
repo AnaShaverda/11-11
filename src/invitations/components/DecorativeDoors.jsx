@@ -1,5 +1,5 @@
 import { useLanguage } from "../../localization/LanguageContext.jsx";
-import Icon from "../../components/ui/Icon.jsx";
+import InvitationArtwork from "./InvitationArtwork.jsx";
 
 function DoorLeaf({ side, variant }) {
   const image = variant === "blueFloral" ? "/images/opening/blue-floral-door-leaf.png" : `/images/opening/classical-${variant}-door-leaf.webp`;
@@ -18,7 +18,7 @@ export default function DecorativeDoors({ phase, title, onOpen, variant = "white
       <span className="guest-door-light" />
     </div>
     {phase === "sealed" && <button type="button" className="guest-door-open" onClick={onOpen} aria-label={t("guestCards.doors.open")}>
-      <span>{title}</span><small>{t("guestCards.doors.open")} <Icon name="arrow-up-right" size={16} /></small>
+      <span>{title}</span><small>{t("guestCards.doors.open")} <InvitationArtwork name="arrow-up-right" size={16} /></small>
     </button>}
   </div>;
 }

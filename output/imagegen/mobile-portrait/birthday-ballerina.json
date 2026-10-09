@@ -1,12 +1,7 @@
 {
   "slug": "birthday-ballerina",
   "visual": "ballerina",
-  "palette": [
-    "#fff7ef",
-    "#985a76",
-    "#edc9d5",
-    "#cf91aa"
-  ],
+  "palette": ["#fff7ef", "#985a76", "#edc9d5", "#cf91aa"],
   "cover": "/images/birthday/ballerina/blush-ballet-studio.webp",
   "source": "/Users/mac/.codex/generated_images/01a0fc57-305e-7b33-ab00-593618dba7a4/exec-067297b8-04f9-4987-8fbb-4a0666675c86.png",
   "destination": "public/images/recipient/birthday-ballerina/invitation-portrait.webp",

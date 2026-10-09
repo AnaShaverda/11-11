@@ -2,9 +2,9 @@ import GuestMusicControl from "./GuestMusicControl.jsx";
 import { formatRsvpDeadline } from "../data/invitationDate.js";
 import { weddingPartyRoleLabel } from "../data/weddingParty.js";
 import { useCallback, useEffect, useRef, useState } from "react";
-import Icon from "../../components/ui/Icon.jsx";
+import InvitationArtwork from "./InvitationArtwork.jsx";
 import { CardCopyProvider, useLanguage } from "../../localization/LanguageContext.jsx";
-import { InvitationArtwork } from "./InvitationCard.jsx";
+import { InvitationArtwork as InvitationCardArtwork } from "./InvitationCard.jsx";
 import { getCardTypography, getDesignFont } from "../data/cardTypography.js";
 import { getGuestCardDesign, getGuestEventDetails, getReplySeats, normalizeGuestReply, MAX_GUEST_NAME_LENGTH } from "../data/guestCardDesign.js";
 import { getGuestNotePrompt, normalizeGuestNoteSettings, MAX_GUEST_NOTE_LENGTH, MAX_NOTE_PROMPT_LENGTH } from "../data/guestNotes.js";
@@ -90,12 +90,12 @@ function AttendanceCard({ template, design, rsvpDeadline, maxCompanions, onEditT
   return <NoteCard design={design} className="guest-rsvp" id="guest-rsvp" aria-labelledby="guest-rsvp-title" ornament={2} tabIndex={-1} tools={tools}>
     {showCreatorTools && <CanvasReplyTools settings={{ companions: maxCompanions }} onChange={onSettingsChange} />}
     {reply ? <div className="guest-reply-confirmation" role="status">
-      <span className="guest-reply-mark"><Icon name={reply.attendance === "going" ? "check" : "heart"} size={26} /></span>
+      <span className="guest-reply-mark"><InvitationArtwork name={reply.attendance === "going" ? "check" : "heart"} size={26} /></span>
       <h2 id="guest-rsvp-title">{t(reply.attendance === "going" ? "guestCards.confirmed" : "guestCards.declineConfirmed")}</h2>
       <p className="guest-reply-name">{reply.fullName}</p>
       {reply.attendance === "going" && <p>{t(reply.companions ? "guestCards.confirmedTogether" : "guestCards.confirmedAlone", { count: reply.companions, seats: getReplySeats(reply.attendance, reply.companions, maxCompanions) })}</p>}
       <small>{t("guestCards.savedLocally")}</small>
-      <button className="guest-button" type="button" onClick={editReply}>{t("guestCards.edit")} <Icon name="pen" size={16} /></button>
+      <button className="guest-button" type="button" onClick={editReply}>{t("guestCards.edit")} <InvitationArtwork name="pen" size={16} /></button>
     </div> : <form onSubmit={submit} noValidate>
       <h2 id="guest-rsvp-title"><EditableValue field={editableFields.find(field => field.key === "guestCards.rsvp.title")} onEdit={onEditText}>{t("guestCards.rsvp.title")}</EditableValue></h2>
       {deadlineLine && <p className="guest-rsvp-deadline">{deadlineLine}</p>}
@@ -118,9 +118,9 @@ function AttendanceCard({ template, design, rsvpDeadline, maxCompanions, onEditT
         {maxCompanions > 0 && <>
           <p id="guest-companions-label">{t("guestCards.comingWith")}</p>
           <div className="guest-companion-stepper" role="group" aria-labelledby="guest-companions-label">
-            <button type="button" aria-label={t("guestCards.fewer")} disabled={creator || companions === 0} onClick={() => setCompanions(count => Math.max(0, count - 1))}><Icon name="minus" size={18} /></button>
+            <button type="button" aria-label={t("guestCards.fewer")} disabled={creator || companions === 0} onClick={() => setCompanions(count => Math.max(0, count - 1))}><InvitationArtwork name="minus" size={18} /></button>
             <output aria-label={t("guestCards.companionCount")} aria-live="polite">{companions}</output>
-            <button type="button" aria-label={t("guestCards.more")} disabled={creator || companions >= maxCompanions} onClick={() => setCompanions(count => Math.min(maxCompanions, count + 1))}><Icon name="plus" size={18} /></button>
+            <button type="button" aria-label={t("guestCards.more")} disabled={creator || companions >= maxCompanions} onClick={() => setCompanions(count => Math.min(maxCompanions, count + 1))}><InvitationArtwork name="plus" size={18} /></button>
           </div>
         </>}
         <span className="guest-total-seats" aria-live="polite">{t(seats === 1 ? "guestCards.seat" : "guestCards.seats", { count: seats })}</span>
@@ -149,7 +149,7 @@ function GuestNotesCard({ template, design, noteSettings, onNoteSettingsChange, 
     {saved && !creator ? <div className="guest-reply-confirmation" role="status">
       <p>{t("editor.noteSaved")}</p>{saved.fullName && <p className="guest-reply-name">{saved.fullName}</p>}<blockquote className="guest-reply-note">{saved.note}</blockquote>
       <small>{t("guestCards.savedLocally")}</small>
-      <button className="guest-button" type="button" disabled={creator} onClick={() => setSaved(null)}>{t("guestCards.edit")} <Icon name="pen" size={16} /></button>
+      <button className="guest-button" type="button" disabled={creator} onClick={() => setSaved(null)}>{t("guestCards.edit")} <InvitationArtwork name="pen" size={16} /></button>
     </div> : <form onSubmit={submit}>
       <div className="guest-note-field">
         <label htmlFor="guest-personal-note"><span className="guest-editable-prompt" role={onEditText ? "button" : undefined} tabIndex={onEditText ? 0 : undefined} aria-label={onEditText ? t("guestCards.text.tapLabel", { label: t("guestCards.notes.question") }) : undefined}
@@ -189,12 +189,12 @@ function PhotoLightbox({ photos, index, onIndexChange, onClose }) {
     onClick={event => { if (event.target === event.currentTarget) onClose(); }}
     onKeyDown={event => { if (event.key === "ArrowRight" || event.key === "ArrowLeft") { event.preventDefault(); step(event.key === "ArrowRight" ? 1 : -1); } }}>
     <div className="guest-lightbox-inner">
-      <button className="guest-lightbox-close" type="button" onClick={onClose} aria-label={t("guestCards.closePhoto")}><Icon name="close" /></button>
+      <button className="guest-lightbox-close" type="button" onClick={onClose} aria-label={t("guestCards.closePhoto")}><InvitationArtwork name="close" /></button>
       <GalleryPhoto key={photo.id} photo={photo} caption={caption} eager />
       <div className="guest-lightbox-caption">
-        <button type="button" onClick={() => step(-1)} aria-label={t("guestCards.previousPhoto")} disabled={photos.length === 1}><Icon name="arrow-left" /></button>
+        <button type="button" onClick={() => step(-1)} aria-label={t("guestCards.previousPhoto")} disabled={photos.length === 1}><InvitationArtwork name="arrow-left" /></button>
         <div>{photo.captionKey && <strong>{caption}</strong>}<small>{t("guestCards.photoPosition", { current: index + 1, count: photos.length })}</small></div>
-        <button type="button" onClick={() => step(1)} aria-label={t("guestCards.nextPhoto")} disabled={photos.length === 1}><Icon name="arrow-right" /></button>
+        <button type="button" onClick={() => step(1)} aria-label={t("guestCards.nextPhoto")} disabled={photos.length === 1}><InvitationArtwork name="arrow-right" /></button>
       </div>
     </div>
   </dialog>;
@@ -227,19 +227,19 @@ function PhotoGallery({ photos, design, creator, tools, galleryTools, headingFie
       <h2 id="guest-gallery-title"><EditableValue field={headingField} onEdit={onEditText}>{t("guestCards.gallery.title")}</EditableValue></h2>
     </div>
     {creator && <CanvasGalleryTools {...galleryTools} />}
-    {photos.length === 0 && <div className="guest-canvas-empty-gallery"><Icon name="image" size={32} /><p>{t("guestCards.canvas.galleryEmpty")}</p></div>}
+    {photos.length === 0 && <div className="guest-canvas-empty-gallery"><InvitationArtwork name="image" size={32} /><p>{t("guestCards.canvas.galleryEmpty")}</p></div>}
     <div className="guest-photo-strip" ref={stripRef} onScroll={syncSlide}>{photos.map((photo, index) => {
       const caption = photo.captionKey ? t(photo.captionKey) : t("guestCards.photoNumber", { number: index + 1 });
       return <figure className="guest-polaroid" key={photo.id}>
-        {creator && !photo.sample && <button className="guest-canvas-remove-photo" type="button" onClick={() => galleryTools.onRemove(photo.id)} aria-label={t("guestCards.removePhoto", { name: caption })}><Icon name="close" size={16} /></button>}
+        {creator && !photo.sample && <button className="guest-canvas-remove-photo" type="button" onClick={() => galleryTools.onRemove(photo.id)} aria-label={t("guestCards.removePhoto", { name: caption })}><InvitationArtwork name="close" size={16} /></button>}
         <button type="button" onClick={() => setActivePhoto(index)} aria-label={t("guestCards.openPhoto", { name: caption })}><GalleryPhoto photo={photo} caption={caption} /></button>
         <figcaption><span>{String(index + 1).padStart(2, "0")} / {String(photos.length).padStart(2, "0")}</span>{photo.captionKey && <strong>{caption}</strong>}</figcaption>
       </figure>;
     })}</div>
     {photos.length > 1 && <div className="guest-gallery-slider-controls" aria-label={t("guestCards.gallery.title")}>
-      <button type="button" onClick={() => goToPhoto(currentSlide - 1)} disabled={currentSlide === 0} aria-label={t("guestCards.previousPhoto")}><Icon name="arrow-left" size={18} /></button>
+      <button type="button" onClick={() => goToPhoto(currentSlide - 1)} disabled={currentSlide === 0} aria-label={t("guestCards.previousPhoto")}><InvitationArtwork name="arrow-left" size={18} /></button>
       <div className="guest-gallery-slider-dots">{photos.map((photo, index) => <button key={photo.id} type="button" aria-label={t("guestCards.photoNumber", { number: index + 1 })} aria-current={currentSlide === index ? "true" : undefined} onClick={() => goToPhoto(index)} />)}</div>
-      <button type="button" onClick={() => goToPhoto(currentSlide + 1)} disabled={currentSlide === photos.length - 1} aria-label={t("guestCards.nextPhoto")}><Icon name="arrow-right" size={18} /></button>
+      <button type="button" onClick={() => goToPhoto(currentSlide + 1)} disabled={currentSlide === photos.length - 1} aria-label={t("guestCards.nextPhoto")}><InvitationArtwork name="arrow-right" size={18} /></button>
     </div>}
     {activePhoto !== null && <PhotoLightbox photos={photos} index={activePhoto} onIndexChange={setActivePhoto} onClose={() => setActivePhoto(null)} />}
   </section>;
@@ -268,7 +268,7 @@ function CustomMomentsCard({ moments, city, date, design, images = {} }) {
       <div><time>{moment.unknownTime || !moment.time ? (language === "ka" ? "დრო დაზუსტდება" : "Time to follow") : moment.time}</time>
         <h3>{(language === "ka" ? moment.ka : moment.en) || moment.en || moment.ka}</h3>
         {moment.venue && <p>{moment.venue}</p>}
-        {moment.venue && <a href={momentMapUrl(moment, city)} target="_blank" rel="noreferrer">{language === "ka" ? "რუკა" : "Map"} <Icon name="arrow-up-right" size={15} /></a>}
+        {moment.venue && <a href={momentMapUrl(moment, city)} target="_blank" rel="noreferrer">{language === "ka" ? "რუკა" : "Map"} <InvitationArtwork name="arrow-up-right" size={15} /></a>}
       </div>
     </li>)}</ol>
   </NoteCard>;
@@ -364,7 +364,7 @@ export default function GuestCardSuite({ template, sample, copyTranslations, edi
           <div className="guest-main-content">
             <InvitationEntrance key={entranceKey} settings={creator ? { ...settings, entrance: "immediate", openingEffect: "none" } : settings} design={design} title={sample.name ?? sample.posterName ?? sample.title} initials={sample.initials} reducedMotion={reducedMotion} onComplete={completeEntrance}>
               {template.isCustom ? <CustomInvitationCover design={customDesign} sample={sample} invitationLabel={t("guestCards.invitation")} invitationGreeting={language === "ka" ? "გეპატიჟებით" : "You’re invited"} adaptiveArtwork={adaptiveCoverArtwork} />
-                : <EditableInvitationArtwork fields={editableFields} onEdit={onEditText}><CardCopyProvider overrides={copyTranslations}><InvitationArtwork template={template} large presentation={presentation} sample={sample} ariaLabel={sample.title} /></CardCopyProvider></EditableInvitationArtwork>}
+                : <EditableInvitationArtwork fields={editableFields} onEdit={onEditText}><CardCopyProvider overrides={copyTranslations}><InvitationCardArtwork template={template} large presentation={presentation} sample={sample} ariaLabel={sample.title} /></CardCopyProvider></EditableInvitationArtwork>}
             </InvitationEntrance>
           </div>
         </section>
@@ -390,7 +390,7 @@ export default function GuestCardSuite({ template, sample, copyTranslations, edi
             {design.detailsArtwork && <img className="wedding-details-illustration" src={design.detailsArtwork} alt="" loading="lazy" decoding="async" />}
             <h2 id="guest-where-title"><EditableValue field={editableFields.find(field => field.key === "guestCards.where")} onEdit={onEditText}>{t("guestCards.where")}</EditableValue></h2><span className="guest-note-rule" aria-hidden="true" />
             <p className="guest-detail-value"><EditableValue field={editField("location")} onEdit={onEditText}>{details.location}</EditableValue></p>
-            <a className="guest-map-link" href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(details.location)}`} target="_blank" rel="noreferrer">{t("guestCards.map")} <Icon name="arrow-up-right" size={15} /></a>
+            <a className="guest-map-link" href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(details.location)}`} target="_blank" rel="noreferrer">{t("guestCards.map")} <InvitationArtwork name="arrow-up-right" size={15} /></a>
           </NoteCard>
         </div>}
         {showCreatorTools && !settings.details && <CanvasAddSection section="details" onAdd={onAddSection} />}

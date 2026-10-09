@@ -1,5 +1,5 @@
 import { useLayoutEffect, useRef, useState } from "react";
-import Icon from "../../components/ui/Icon.jsx";
+import InvitationArtwork from "./InvitationArtwork.jsx";
 import { catalogColorOptions } from "../data/catalogAppearance.js";
 import { projects } from "../../data/projects.js";
 import { useLanguage } from "../../localization/LanguageContext.jsx";
@@ -49,7 +49,7 @@ export default function CollectionFilters({ prefix, project, occasion, appearanc
           <label className="sidebar-filter-choice sidebar-category-choice" data-selected={selected}>
             <input type="radio" name={`${prefix}-category`} value={item.id} checked={selected} onClick={() => { if (selected && item.id !== "all") onCategoryChange(null); }} onKeyDown={(event) => { if (event.currentTarget.checked && item.id !== "all" && event.key === " ") { event.preventDefault(); onCategoryChange(null); } }} onChange={() => onCategoryChange(projects.find((category) => category.id === item.id) ?? null)} />
             <span>{t(item.captionKey)}</span>
-            {item.subcategories?.length ? <Icon name={selected ? "chevron-down" : "chevron-right"} size={16} /> : null}
+            {item.subcategories?.length ? <InvitationArtwork name={selected ? "chevron-down" : "chevron-right"} size={16} /> : null}
           </label>
           {item.subcategories?.length ? <div className={`sidebar-subcategories-panel${selected ? " is-open" : ""}`} aria-hidden={!selected} inert={!selected}><div className="sidebar-subcategories-content"><fieldset className="sidebar-subcategories" disabled={!selected}>
             <legend>{t("catalog.subcategories")} · {t(item.captionKey)}</legend>

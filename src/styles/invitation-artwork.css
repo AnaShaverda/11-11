@@ -1,0 +1,6 @@
+.invitation-svg-art{display:inline-block;flex:none;vertical-align:-.125em;background:currentColor;-webkit-mask:var(--invitation-art-url) center/contain no-repeat;mask:var(--invitation-art-url) center/contain no-repeat}
+.guest-preview-options[open]>summary .invitation-svg-art,.guest-plan-settings[open]>summary .invitation-svg-art,.guest-notes-settings[open]>summary .invitation-svg-art{transform:rotate(180deg)}
+.guest-canvas-text-list .invitation-svg-art{position:absolute;right:9px;top:50%;transform:translateY(-50%)}
+@media(max-width:700px){.guest-canvas-mode-button .invitation-svg-art{display:none}}
+.lido-water-hint>.invitation-svg-art{justify-self:center}
+.invitation-motif{display:inline-block;width:1em;height:1em;background:currentColor;-webkit-mask:var(--invitation-motif-url) center/contain no-repeat;mask:var(--invitation-motif-url) center/contain no-repeat;vertical-align:middle}
