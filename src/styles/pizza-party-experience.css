@@ -1,0 +1,170 @@
+@font-face{font-family:Pizza Editorial;src:url('/fonts/playground/fraunces.ttf') format('truetype');font-weight:100 900;font-display:swap}
+.pizza-party{--pp-cream:#fff4db;--pp-red:#d73525;--pp-green:#244a38;--pp-yellow:#f6cb62;background:var(--pp-cream);color:var(--pp-green);position:relative;isolation:isolate;color-scheme:light;overflow:clip}
+.pizza-party *{box-sizing:border-box}
+:root body .pizza-party :is(p,a,button,input,textarea,label,legend,small,span,li,time,blockquote){font-family:Arial,'Noto Sans Georgian',sans-serif!important}
+:root body .pizza-party :is(h1,h2,h3,.pp-party-title),:root body .pizza-party h1>span{font-family:'Pizza Editorial','Noto Serif Georgian',Georgia,serif!important;font-weight:850;font-variation-settings:'SOFT' 0,'WONK' 1,'opsz' 144}
+.pizza-party :is(h1,h2,h3,p){margin:0}
+.pizza-party :is(button,a,input,textarea):focus-visible{outline:3px solid currentColor;outline-offset:6px}
+.pizza-party :is(section,h2)[tabindex='-1']:focus{outline:none}
+.pizza-party button{cursor:pointer}
+.pizza-party button,.pizza-party a{touch-action:manipulation;-webkit-tap-highlight-color:transparent}
+.pp-header{position:fixed;top:0;left:0;right:0;z-index:20;display:flex;align-items:center;justify-content:space-between;padding:14px clamp(20px,4vw,64px);min-height:72px;background:var(--pp-cream);color:var(--pp-green);border-bottom:1px solid #244a3815}
+.pp-header>a{display:flex;align-items:center;gap:12px;text-decoration:none;color:inherit;font-size:23px;min-height:44px}
+.pp-header nav{display:flex;align-items:center;gap:24px}
+.pp-header nav button{background:none;border:0;color:inherit;min-height:44px;padding:8px 0;font-size:12px;font-weight:600}
+.pp-header .pp-header-rsvp{display:flex;align-items:center;justify-content:center;min-height:44px;padding:10px 28px;background:var(--pp-red);color:var(--pp-cream);border-radius:9px;text-decoration:none;font-size:12px;font-weight:700}
+.pp-motion-toggle{display:flex;align-items:center;gap:8px}
+.pp-motion-toggle>span{display:block;width:28px;height:17px;border:1px solid currentColor;border-radius:20px;padding:2px}
+.pp-motion-toggle>span:after{content:'';display:block;height:11px;width:11px;border-radius:50%;background:currentColor}
+.pp-motion-toggle[aria-pressed='true']>span:after{transform:translateX(11px)}
+.pp-section{position:relative;min-height:100svh;display:flex;flex-direction:column;justify-content:center;padding:110px clamp(24px,5vw,80px) 65px;scroll-margin-top:0}
+.pp-layout{width:100%;max-width:1440px;margin:auto;display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:5%}
+.pizza-party h1{font-size:clamp(65px,7.6vw,120px);line-height:.94;letter-spacing:-.055em}
+.pizza-party h1>span{display:block}
+.pizza-party h2{font-size:clamp(48px,5.8vw,88px);line-height:1.03;letter-spacing:-.055em;text-wrap:balance}
+.pp-eyebrow{font-size:11px;letter-spacing:.15em;font-weight:700;line-height:1.55;margin-bottom:26px!important;color:var(--pp-red)}
+.pp-awning{display:flex;position:absolute;top:72px;left:0;width:48%;height:40px;pointer-events:none}
+.pp-awning span{flex:1;background:var(--pp-red);border-radius:0 0 45% 45%}
+.pp-awning span:nth-child(even){background:#f4dba8}
+.pp-hero{padding-top:145px}
+.pp-hero-layout{grid-template-columns:1.05fr 1fr;gap:0}
+.pp-hero-copy{position:relative;z-index:2}
+.pp-party-title{font-size:clamp(24px,2.6vw,40px);line-height:1.2;margin-top:24px!important;letter-spacing:-.035em}
+.pp-age{font-size:clamp(20px,2vw,27px);font-weight:700;line-height:1.4;margin-top:18px!important}
+.pp-date{font-size:14px;line-height:1.6;margin-top:9px!important}
+.pp-hero-art{width:130%;margin-left:-14%;pointer-events:none}
+.pp-hero-art img{width:100%;height:auto;display:block;transform:rotate(-8deg)}
+.pp-actions{display:flex;align-items:center;flex-wrap:wrap;gap:14px;margin-top:32px}
+.pp-button{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:52px;padding:14px 27px;border:1px solid var(--pp-red);border-radius:9px;color:var(--pp-cream);background:var(--pp-red);font-size:15px;font-weight:600;line-height:1.4;text-decoration:none}
+.pp-outline{background:transparent;color:inherit;border-color:currentColor}
+.pp-light{background:var(--pp-cream);color:var(--pp-green);border-color:var(--pp-cream)}
+.pp-button:hover{filter:brightness(.94)}
+.pp-small{font-size:12px;line-height:1.7}
+.pp-details{background:var(--pp-green);color:var(--pp-cream)}
+.pp-details-layout{grid-template-columns:.9fr 1.1fr;gap:8%}
+.pp-details h2{max-width:500px}
+.pp-details .pp-age{margin-top:26px!important}
+.pp-facts{list-style:none;padding:0;margin:30px 0;display:grid;gap:16px}
+.pp-facts li{display:flex;align-items:center;gap:16px;font-size:18px;line-height:1.5}
+.pp-venue{max-width:290px;margin-top:20px!important;opacity:.8}
+.pp-menu-art{position:relative;min-height:570px;display:flex;align-items:center}
+.pp-tomato{position:absolute;width:83%;height:auto;right:-20%;bottom:1%;transform:rotate(12deg)}
+.pp-receipt{position:relative;z-index:1;width:75%;padding:45px 35px 40px;background:var(--pp-cream);color:var(--pp-green);transform:rotate(5deg);box-shadow:0 14px 24px #07180f30;clip-path:polygon(0 0,100% 0,100% 98%,96% 100%,92% 98%,88% 100%,84% 98%,80% 100%,76% 98%,72% 100%,68% 98%,64% 100%,60% 98%,56% 100%,52% 98%,48% 100%,44% 98%,40% 100%,36% 98%,32% 100%,28% 98%,24% 100%,20% 98%,16% 100%,12% 98%,8% 100%,4% 98%,0 100%)}
+.pp-receipt .pp-eyebrow{text-align:center;color:var(--pp-green)}
+.pp-receipt ol{list-style:none;margin:28px 0;padding:0}
+.pp-receipt li{padding:22px 0;border-top:1px solid #244a3840;display:grid;gap:9px;font-size:20px;line-height:1.45}
+.pp-receipt time{font-weight:800;font-size:25px}
+.pp-receipt-signoff{text-align:center;font-size:11px;font-weight:700;letter-spacing:.14em;line-height:1.8;max-width:220px;margin:0 auto!important}
+.pp-receipt>svg{display:block;color:var(--pp-red);margin:15px auto 0}
+.pp-play-layout{grid-template-columns:.82fr 1.18fr;gap:2%}
+.pp-intro{font-size:21px;line-height:1.6;max-width:340px;margin-top:28px!important}
+.pp-game-hint{max-width:280px;margin-top:22px!important}
+.pp-pizza-table{position:relative;min-width:0}
+.pp-check-cloth{position:absolute;inset:-8% -30% -8% 10%;background:repeating-conic-gradient(#244a38c4 0% 25%,#fff4db 0% 50%) 0/95px 95px;transform:rotate(12deg);opacity:.8}
+.pp-wishes{background:var(--pp-yellow)}
+.pp-form-layout{grid-template-columns:1fr 1fr;gap:8%}
+.pp-form>p:not(.pp-small){font-size:19px;line-height:1.5;margin-top:20px}
+.pp-form form{display:flex;flex-direction:column;margin-top:28px;gap:10px;max-width:540px}
+.pp-form label,.pp-form legend{font-size:13px;font-weight:600;line-height:1.5}
+.pp-form input:not([type='radio']),.pp-form textarea{display:block;width:100%;min-width:0;background:#fff8e8;color:var(--pp-green);border:1px solid #244a3838;border-radius:8px;padding:15px 17px;font-size:16px;line-height:1.6;min-height:52px;margin:0 0 8px}
+.pp-form textarea{resize:vertical;min-height:135px}
+.pp-form input::placeholder,.pp-form textarea::placeholder{color:#586f60;opacity:1}
+.pp-form form>.pp-button{align-self:flex-start;margin-top:13px}
+.pp-count{font-size:11px;text-align:right;margin-top:-10px;color:#48634f}
+.pp-demo{margin-top:20px!important;max-width:380px;color:inherit;opacity:.8}
+.pp-form fieldset{border:0;padding:0;margin:10px 0 5px;min-width:0}
+.pp-radios{display:flex;flex-wrap:wrap;gap:12px;margin-top:12px}
+.pp-radios label{display:flex;align-items:center;gap:9px;border:1px solid currentColor;padding:12px 15px;border-radius:8px;min-height:48px;cursor:pointer}
+.pp-radios label:has(input:checked){background:var(--pp-red);color:var(--pp-cream);border-color:var(--pp-red)}
+.pp-radios input{appearance:auto;accent-color:var(--pp-red);width:17px;height:17px;margin:0}
+.pp-radios input:checked{accent-color:var(--pp-green)}
+.pp-confirmation{margin-top:28px;max-width:500px}
+.pp-confirmation>svg{color:var(--pp-red);margin-bottom:15px}
+.pp-saved-name{font-size:24px;font-weight:700;margin-bottom:12px!important;overflow-wrap:anywhere}
+.pp-confirmation blockquote{font-size:21px;line-height:1.6;margin:15px 0;white-space:pre-wrap;overflow-wrap:anywhere}
+.pp-confirmation .pp-button{margin-top:25px}
+.pp-wish-art{position:relative;min-width:0;padding-bottom:60px}
+.pp-wish-art>img{display:block;width:115%;margin-left:-6%;transform:rotate(-8deg)}
+.pp-birthday-note{position:absolute;bottom:0;right:0;width:65%;padding:35px 25px;background:var(--pp-cream);box-shadow:0 10px 20px #244a3820;transform:rotate(8deg);display:flex;flex-direction:column;align-items:center;gap:15px;text-align:center}
+:root body .pizza-party .pp-birthday-note span{font-family:'Pool Kalam','Noto Serif Georgian',serif!important;font-size:30px;line-height:1.3}
+.pp-birthday-note svg{color:var(--pp-red)}
+.pp-rsvp{padding-bottom:20px}
+.pp-rsvp .pp-layout{padding-top:20px}
+.pp-rsvp h2{color:var(--pp-red)}
+.pp-farewell{min-width:0;text-align:center;padding-left:7%;border-left:1px solid #244a3830}
+.pizza-party .pp-farewell h3{font-size:clamp(36px,4.2vw,64px);line-height:1.1;letter-spacing:-.04em;max-width:400px;margin:0 auto}
+.pp-farewell img{width:100%;height:auto;display:block;margin:30px auto 0;transform:rotate(5deg)}
+:root body .pizza-party .invitation-maker-footer{--maker-bg:transparent;--maker-ink:var(--pp-green);min-height:125px;padding:28px 0 0;margin-top:30px}
+.pp-top{display:flex;align-items:center;justify-content:center;gap:10px;color:var(--pp-green);background:none;border:0;min-height:44px;font-size:11px;margin:10px auto 0}
+.pp-motion .pp-hero-art img{animation:pp-arrive .8s ease-out both}
+.pp-motion .pp-button{transition:transform .2s,filter .2s}
+.pp-motion .pp-button:hover{transform:translateY(-2px)}
+@keyframes pp-arrive{from{opacity:0;transform:translateY(25px) rotate(-3deg)}to{opacity:1;transform:translateY(0) rotate(-8deg)}}
+.pizza-party[lang='ka'] h1{font-size:clamp(48px,5.7vw,85px);line-height:1.15;letter-spacing:-.03em}
+.pizza-party[lang='ka'] h2{font-size:clamp(40px,4.7vw,68px);line-height:1.2;letter-spacing:-.02em}
+@media(min-width:1500px){.pp-section{padding-top:130px;padding-bottom:85px}.pp-hero{padding-top:165px}}
+@media(max-width:1000px){.pp-header{padding-inline:24px}.pp-section{padding-inline:32px}.pizza-party h1{font-size:clamp(58px,7.4vw,80px)}.pizza-party h2{font-size:clamp(45px,5.8vw,65px)}.pp-menu-art{min-height:460px}.pp-receipt{width:86%;padding:30px 25px}.pp-receipt li{font-size:16px;padding:18px 0}.pp-receipt time{font-size:22px}.pp-form-layout{gap:5%}.pp-reveal-layout{gap:4%}.pp-hero-art{width:125%}.pp-radios{gap:8px}.pp-radios label{padding:11px;font-size:12px}.pp-awning{width:55%}}
+@media(max-width:700px){.pp-header{min-height:65px;padding:8px 18px}.pp-header>a{font-size:20px;gap:7px}.pp-header nav{gap:13px}.pp-header nav button{font-size:10px}.pp-header .pp-header-rsvp{padding:10px 17px;font-size:11px}.pp-motion-toggle>span{width:24px;height:16px}.pp-motion-toggle>span:after{width:10px;height:10px}.pp-motion-toggle[aria-pressed='true']>span:after{transform:translateX(8px)}.pp-section{min-height:100svh;padding:105px 24px 50px}.pp-layout{display:grid;grid-template-columns:1fr;gap:40px;max-width:500px}.pp-awning{top:65px;width:100%;height:25px}.pp-hero{padding-top:123px;padding-bottom:30px}.pp-hero-layout{gap:15px}.pp-eyebrow{font-size:10px;margin-bottom:20px!important}.pizza-party h1{font-size:clamp(55px,12.2vw,82px);letter-spacing:-.055em}.pizza-party h2{font-size:clamp(43px,10vw,65px)}.pp-party-title{font-size:26px;margin-top:18px!important}.pp-age{font-size:20px;margin-top:12px!important}.pp-date{font-size:12px}.pp-actions{gap:12px;margin-top:24px}.pp-button{font-size:14px;min-height:50px;padding:13px 22px}.pp-hero-art{width:108%;margin-left:-4%;max-width:500px}.pp-hero-art img{transform:rotate(-4deg)}.pp-details-layout{gap:30px}.pp-menu-art{min-height:430px;max-width:430px;width:100%;margin:auto}.pp-receipt{width:77%;padding:30px 28px}.pp-tomato{right:-14%;width:75%;bottom:4%}.pp-facts{gap:13px;margin:25px 0}.pp-facts li{font-size:16px}.pp-venue{max-width:none}.pp-play-layout{gap:35px}.pp-play-copy{position:relative;z-index:1}.pp-intro{font-size:18px;margin-top:20px!important}.pp-game-hint{max-width:none;font-size:11px;margin-top:16px!important}.pp-check-cloth{inset:0 -35px -10px;background-size:75px 75px;transform:rotate(7deg)}.pp-slice-stage{width:110%;margin-left:-5%}.pp-slice-number{width:44px;height:44px;font-size:26px}.pp-reveal-layout{gap:30px}.pp-reveal h2{font-size:clamp(46px,11vw,72px)}.pp-prompt-ticket{padding:25px 20px 20px;margin-top:26px}.pp-reveal-art{width:80%;max-width:340px;justify-self:center}.pp-reveal-art>img:first-child{width:100%;margin:0}.pp-reveal-art .pp-tickets{width:75%;margin-top:-12%}.pp-form-layout{gap:45px}.pp-form>p:not(.pp-small){font-size:17px}.pp-form form{margin-top:25px}.pp-form form>.pp-button{width:100%}.pp-wish-art{width:85%;max-width:380px;margin:0 auto}.pp-birthday-note{padding:25px 20px}.pp-farewell{border:0;padding:0}.pizza-party .pp-farewell h3{font-size:38px;max-width:300px}.pp-farewell img{max-width:340px;margin-top:20px}.pp-rsvp{padding-bottom:15px}.pp-rsvp .pp-layout{padding-top:0}.pp-radios label{font-size:13px;padding:12px 14px}.pp-radios{gap:10px}.pizza-party[lang='ka'] h1{font-size:clamp(40px,9vw,60px)}.pizza-party[lang='ka'] h2{font-size:clamp(36px,8vw,50px)}}
+@media(prefers-reduced-motion:reduce){.pizza-party *{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+.pp-topping-controls{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:26px;max-width:450px}
+.pp-topping-controls button{display:flex;align-items:center;justify-content:center;gap:10px;background:var(--pp-cream);color:var(--pp-green);border:1px solid #244a3860;border-radius:10px;padding:10px 14px;min-height:62px;font-size:16px;line-height:1.4}
+.pp-topping-controls button[aria-pressed='true']{background:var(--pp-green);color:var(--pp-cream);border-color:var(--pp-green)}
+.pp-topping-icon,.pp-topping{display:block;background-image:url('/images/birthday/little-pizza-chef/toppings.png');background-size:200% 200%;background-repeat:no-repeat}
+.pp-topping-icon{width:36px;height:36px;flex-shrink:0}
+.pp-topping-0{background-position:0 0}.pp-topping-1{background-position:100% 0}.pp-topping-2{background-position:0 100%}.pp-topping-3{background-position:100% 100%}
+.pp-topped-pizza{position:relative;width:110%;aspect-ratio:1;margin-left:-5%}
+.pp-topped-pizza>img{display:block;width:100%;height:100%;object-fit:contain}
+.pp-topping{position:absolute;width:16%;height:16%;transform:translate(-50%,-50%);pointer-events:none}
+.pp-topping-status{margin-top:15px!important;min-height:24px}
+.pp-skip{display:block;border:0;background:none;color:inherit;text-decoration:underline;text-underline-offset:4px;min-height:44px;font-size:13px;padding:12px 0;margin-top:10px}
+.pp-motion .pp-topping{animation:pp-topping-pop .2s ease-out}
+@keyframes pp-topping-pop{from{opacity:0;scale:.7}to{opacity:1;scale:1}}
+@media(max-width:700px){.pp-topped-pizza{width:108%;margin-left:-4%}.pp-topping-controls{max-width:none;gap:10px}.pp-topping-controls button{min-height:58px;font-size:15px;padding:8px}.pp-topping-controls .pp-topping-icon{width:32px;height:32px}.pp-finished-art{width:100%;max-width:430px;justify-self:center}}
+/* A pizzeria table, with painted ingredients presented on little cream plates. */
+.pp-topping-controls{gap:14px;margin-top:28px}
+.pp-topping-controls button{position:relative;justify-content:flex-start;gap:12px;border:1px solid #244a3838;background:#fff8e8;padding:10px 16px 10px 10px;min-height:78px;font-size:16px;border-radius:12px;box-shadow:0 3px 0 #244a3810}
+.pp-topping-controls button[aria-pressed='true']{background:var(--pp-green);color:var(--pp-cream);box-shadow:0 3px 0 #163123}
+.pp-ingredient-plate{width:52px;height:52px;border-radius:50%;background:var(--pp-cream);box-shadow:inset 0 0 0 3px #f1e1bf,inset 0 0 0 5px #fff8e8;display:grid;place-items:center;flex-shrink:0}
+.pp-topping-controls .pp-topping-icon{width:40px;height:40px}
+.pp-selected-dot{width:7px;height:7px;border-radius:50%;background:var(--pp-yellow);margin-left:auto;flex-shrink:0}
+.pp-topping-icon,.pp-topping{background-image:url('/images/birthday/pizza-party/game-ingredients.webp')}
+.pp-topping{transform:translate(-50%,-50%) rotate(var(--topping-angle))}
+.pp-pizza-table{padding:20px 0}
+.pp-check-cloth{inset:2% -30% 2% 6%;background-size:85px 85px;transform:rotate(9deg);opacity:.65}
+.pp-topped-pizza{width:102%;margin-left:-1%}
+.pp-topping-status{font-size:13px;line-height:1.7;max-width:440px;min-height:25px}
+.pp-pizza-finished .pp-topping-status{font-weight:700;color:var(--pp-green)}
+.pp-motion .pp-pizza-finished .pp-topped-pizza{animation:pp-ready .5s ease-out}
+@keyframes pp-ready{0%{transform:rotate(0deg)}50%{transform:rotate(5deg) scale(1.025)}100%{transform:rotate(0deg)}}
+@media(max-width:700px){.pp-topping-controls{gap:10px}.pp-topping-controls button{min-height:70px;font-size:14px;padding:8px;gap:8px}.pp-ingredient-plate{width:44px;height:44px}.pp-topping-controls .pp-topping-icon{width:35px;height:35px}.pp-topped-pizza{width:106%;margin-left:-3%}.pp-check-cloth{inset:5% -40px 5%;background-size:65px 65px}.pp-topping-status{min-height:44px}.pp-play .pp-actions{margin-top:18px}.pp-play .pp-actions>.pp-button:first-child{flex:1}}
+@media(max-width:700px){.pp-wishes .pp-wish-art{display:none}}
+/* Text-only controls: the ingredient illustrations stay on the pizza itself. */
+.pp-topping-controls button{justify-content:center;min-height:58px;padding:14px 18px}
+/* Food artwork helps guests recognize each topping. */
+.pp-topping-controls button{justify-content:flex-start;min-height:78px;padding:10px 16px 10px 10px}
+@media(max-width:700px){.pp-topping-controls button{min-height:70px;padding:8px}}
+/* The invitation header belongs to the opening screen and scrolls away. */
+.pp-header{position:relative;top:auto;left:auto;right:auto}
+.pp-hero{min-height:calc(100svh - 72px);padding-top:73px}
+.pp-awning{top:0}
+/* Replay reveals on every entrance, from either scroll direction. */
+.pp-motion [data-scroll-reveal='true']{opacity:0;translate:0 28px;transition:opacity .65s ease,translate .75s cubic-bezier(.2,.65,.3,1)}
+.pp-motion [data-scroll-reveal='true'][data-reveal-edge='above']{translate:0 -28px}
+.pp-motion [data-scroll-reveal='true'].pp-in-view,.pp-motion [data-scroll-reveal='true']:focus-within{opacity:1;translate:0 0}
+@media(min-width:1500px){.pp-hero{padding-top:93px}}
+@media(max-width:700px){.pp-hero{min-height:calc(100svh - 65px);padding-top:58px}.pp-awning{top:0}.pp-motion [data-scroll-reveal='true']{translate:0 18px}.pp-motion [data-scroll-reveal='true'][data-reveal-edge='above']{translate:0 -18px}.pp-motion [data-scroll-reveal='true'].pp-in-view,.pp-motion [data-scroll-reveal='true']:focus-within{translate:0 0}}
+@media(prefers-reduced-motion:reduce){.pizza-party [data-scroll-reveal='true']{opacity:1!important;translate:none!important}}
+.pp-menu-paper-art{padding:0}
+.pp-menu-paper-art>img{width:100%;max-height:650px;object-fit:contain;margin:0;transform:rotate(-4deg)}
+/* Menu copy stays live and localized over the blank illustrated stationery. */
+.pp-menu-paper-art{max-width:450px;width:100%;justify-self:center;transform:rotate(-4deg)}
+.pp-menu-paper-art>img{width:100%;max-height:none;display:block;transform:none}
+.pp-handwritten-menu{position:absolute;left:12%;top:23%;width:65%;transform:rotate(-8deg);text-align:center;color:var(--pp-green)}
+:root body .pizza-party .pp-handwritten-menu :is(h3,li){font-family:'Birthday','Pool Kalam','Noto Serif Georgian',cursive!important;font-weight:400;line-height:1.3}
+:root body .pizza-party .pp-handwritten-menu h3{font-size:clamp(40px,4.8vw,68px);letter-spacing:0;border-bottom:3px solid var(--pp-red);width:fit-content;margin:0 auto 24px;padding:0 8px 5px}
+.pp-handwritten-menu ul{list-style:none;padding:0;margin:0;display:grid;gap:25px}
+:root body .pizza-party .pp-handwritten-menu li{font-size:clamp(24px,2.8vw,40px)}
+:root body .pizza-party[lang='ka'] .pp-handwritten-menu h3{font-family:'BPG Chveulebrivi','Noto Serif Georgian',serif!important;font-size:clamp(30px,3.5vw,47px)}
+:root body .pizza-party[lang='ka'] .pp-handwritten-menu li{font-family:'BPG Chveulebrivi','Noto Serif Georgian',serif!important;font-size:clamp(20px,2.2vw,30px)}
+@media(min-width:701px) and (max-width:1000px){.pp-handwritten-menu{top:21%;left:11%;width:66%}.pp-handwritten-menu ul{gap:15px}.pp-handwritten-menu h3{margin-bottom:15px!important}}
+.pp-menu-paper-art>img{height:auto;aspect-ratio:2/3}

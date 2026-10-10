@@ -1,9 +1,11 @@
+import { captionValue, createCaptionCopy } from "../../localization/captionValues.js";
+
 // One authored image per design is shared by discovery and fullscreen cards.
 const studies = [
-  { slug: "city-after-dark", name: "City After Dark", kaName: "ღამის ქალაქი", palette: ["#101e32", "#f6eedf", "#ef342b", "#075eb9"], headline: "A SUPER\nBIRTHDAY", kaHeadline: "სუპერ\nდაბადების დღე", description: "Midnight rooftops, a hanging spider, and bold red birthday lettering.", kaDescription: "ღამის ქალაქი, ჩამოკიდებული ობობა და გამოკვეთილი წითელი ასოები.", phrase: "Same friends. Bigger adventures.", kaPhrase: "იგივე მეგობრები. დიდი თავგადასავლები.", tags: ["cartoon", "retro", "dark"] },
-  { slug: "comic-cutout", name: "Comic Cutout", kaName: "ფერადი კომიქსი", palette: ["#f6eedf", "#101e32", "#075eb9", "#ef342b"], headline: "PARTY!", kaHeadline: "წვეულება!", description: "Cream paper, cobalt lettering, comic bursts, and playful halftone dots.", kaDescription: "კრემისფერი ქაღალდი, ლურჯი ასოები, კომიქსის ფორმები და მხიარული წერტილები.", phrase: "Same friends. Bigger adventures.", kaPhrase: "ახალი წელი. უფრო დიდი თავგადასავლები.", tags: ["cartoon", "retro", "light-neutral"] },
-  { slug: "retro-sport", name: "Retro Sport", kaName: "რეტრო გუნდი", palette: ["#f6eedf", "#101e32", "#ef342b", "#075eb9"], headline: "TEAM\nBIRTHDAY", kaHeadline: "დაბადების\nდღის გუნდი", description: "Scarlet sports stripes, bold varsity lettering, and a little red spider.", kaDescription: "წითელი სპორტული ზოლები, გამოკვეთილი ასოები და პატარა წითელი ობობა.", phrase: "Good friends make a stronger team.", kaPhrase: "კარგი მეგობრები ძლიერ გუნდს ქმნიან.", tags: ["cartoon", "retro"] },
-  { slug: "upside-down", name: "Upside Down", kaName: "თავდაყირა", palette: ["#0b58ad", "#f6eedf", "#ef342b", "#101e32"], headline: "LET’S\nHANG\nOUT!", kaHeadline: "ერთად\nვიზეიმოთ!", description: "A dangling red spider, playful cream lettering, and a cobalt city skyline.", kaDescription: "ჩამოკიდებული წითელი ობობა, მხიარული კრემისფერი ასოები და ლურჯი ქალაქი.", phrase: "Bigger fun. A brighter tomorrow.", kaPhrase: "მეტი მხიარულება. ნათელი ხვალინდელი დღე.", tags: ["cartoon", "retro"] },
+  { slug: "city-after-dark", name: createCaptionCopy("data.data.comicBirthdayDesigns.record1.name").en, kaName: createCaptionCopy("data.data.comicBirthdayDesigns.record1.name").ka, palette: ["#101e32", "#f6eedf", "#ef342b", "#075eb9"], headline: createCaptionCopy("data.data.comicBirthdayDesigns.record2.headline").en, kaHeadline: createCaptionCopy("data.data.comicBirthdayDesigns.record2.headline").ka, description: createCaptionCopy("data.data.comicBirthdayDesigns.record3.description").en, kaDescription: createCaptionCopy("data.data.comicBirthdayDesigns.record3.description").ka, phrase: createCaptionCopy("data.data.comicBirthdayDesigns.record4.phrase").en, kaPhrase: createCaptionCopy("data.data.comicBirthdayDesigns.record4.phrase").ka, tags: ["cartoon", "retro", "dark"] },
+  { slug: "comic-cutout", name: createCaptionCopy("data.data.comicBirthdayDesigns.record5.name").en, kaName: createCaptionCopy("data.data.comicBirthdayDesigns.record5.name").ka, palette: ["#f6eedf", "#101e32", "#075eb9", "#ef342b"], headline: createCaptionCopy("data.data.comicBirthdayDesigns.record6.headline").en, kaHeadline: createCaptionCopy("data.data.comicBirthdayDesigns.record6.headline").ka, description: createCaptionCopy("data.data.comicBirthdayDesigns.record7.description").en, kaDescription: createCaptionCopy("data.data.comicBirthdayDesigns.record7.description").ka, phrase: createCaptionCopy("data.data.comicBirthdayDesigns.record8.phrase").en, kaPhrase: createCaptionCopy("data.data.comicBirthdayDesigns.record8.phrase").ka, tags: ["cartoon", "retro", "light-neutral"] },
+  { slug: "retro-sport", name: createCaptionCopy("data.data.comicBirthdayDesigns.record9.name").en, kaName: createCaptionCopy("data.data.comicBirthdayDesigns.record9.name").ka, palette: ["#f6eedf", "#101e32", "#ef342b", "#075eb9"], headline: createCaptionCopy("data.data.comicBirthdayDesigns.record10.headline").en, kaHeadline: createCaptionCopy("data.data.comicBirthdayDesigns.record10.headline").ka, description: createCaptionCopy("data.data.comicBirthdayDesigns.record11.description").en, kaDescription: createCaptionCopy("data.data.comicBirthdayDesigns.record11.description").ka, phrase: createCaptionCopy("data.data.comicBirthdayDesigns.record12.phrase").en, kaPhrase: createCaptionCopy("data.data.comicBirthdayDesigns.record12.phrase").ka, tags: ["cartoon", "retro"] },
+  { slug: "upside-down", name: createCaptionCopy("data.data.comicBirthdayDesigns.record13.name").en, kaName: createCaptionCopy("data.data.comicBirthdayDesigns.record13.name").ka, palette: ["#0b58ad", "#f6eedf", "#ef342b", "#101e32"], headline: createCaptionCopy("data.data.comicBirthdayDesigns.record14.headline").en, kaHeadline: createCaptionCopy("data.data.comicBirthdayDesigns.record14.headline").ka, description: createCaptionCopy("data.data.comicBirthdayDesigns.record15.description").en, kaDescription: createCaptionCopy("data.data.comicBirthdayDesigns.record15.description").ka, phrase: createCaptionCopy("data.data.comicBirthdayDesigns.record16.phrase").en, kaPhrase: createCaptionCopy("data.data.comicBirthdayDesigns.record16.phrase").ka, tags: ["cartoon", "retro"] },
 ];
 const id = (s) => `birthday-${s.slug}`;
 const records = (fn) => Object.fromEntries(studies.map((s) => [id(s), fn(s)]));
@@ -16,19 +18,57 @@ export const comicBirthdayAssets = records((s) => ({ comicBirthday: true, coverI
 export const comicBirthdayPortraits = records(art);
 export const comicBirthdaySamples = records((s) => ({ title: "Dea’s Birthday", name: "Dea", posterName: "Dea", posterAge: ["city-after-dark", "comic-cutout"].includes(s.slug) ? 26 : 6, headline: s.headline, opening: "YOU’RE INVITED", date: "18 JUL 2027", time: ["city-after-dark", "comic-cutout"].includes(s.slug) ? "19:00" : "14:00", location: "TBILISI", line: s.phrase }));
 export const comicBirthdayEvents = records((s) => ({ title: "Dea’s Birthday", hostName: "Dea", celebrationName: "Birthday", age: ["city-after-dark", "comic-cutout"].includes(s.slug) ? 26 : 6, date: "18 July 2027", dateISO: ["city-after-dark", "comic-cutout"].includes(s.slug) ? "2027-07-18T19:00:00+04:00" : "2027-07-18T14:00:00+04:00", time: ["city-after-dark", "comic-cutout"].includes(s.slug) ? "19:00" : "14:00", location: "Tbilisi", description: s.phrase, enabledModules: ["invitation", "countdown", "gallery", "rsvp"] }));
-const story = { eyebrow: "CALLING ALL HEROES", heroLine: "A birthday adventure with our favorite people.", ticker: "GOOD FRIENDS · BIG ADVENTURES", storyTitle: "Our birthday team.", storyText: "Join Dea for a day of games, birthday cake, and superhero-sized fun.", inviteMessage: "Your next adventure starts here.", galleryTitle: "Super memories.", galleryText: "Little moments from a big birthday.", storySignoff: "Dea & friends", photoTag: "BIRTHDAY ADVENTURES", inviteOpening: "You’re invited", inviteFooter: "GOOD FRIENDS · BIG ADVENTURES", communityTitle: "Birthday wishes for our hero.", communityText: "Share a wish or a favorite memory.", rsvpTitle: "Will you join the team?", rsvpText: "Save your place at the birthday party.", footer: "ANOTHER SUPER YEAR" };
+const story = createCaptionCopy({
+  "eyebrow": "data.data.comicBirthdayDesigns.story.eyebrow",
+  "heroLine": "data.data.comicBirthdayDesigns.story.heroLine",
+  "ticker": "data.data.comicBirthdayDesigns.story.ticker",
+  "storyTitle": "data.data.comicBirthdayDesigns.story.storyTitle",
+  "storyText": "data.data.comicBirthdayDesigns.story.storyText",
+  "inviteMessage": "data.data.comicBirthdayDesigns.story.inviteMessage",
+  "galleryTitle": "data.data.comicBirthdayDesigns.story.galleryTitle",
+  "galleryText": "data.data.comicBirthdayDesigns.story.galleryText",
+  "storySignoff": "data.data.comicBirthdayDesigns.story.storySignoff",
+  "photoTag": "data.data.comicBirthdayDesigns.story.photoTag",
+  "inviteOpening": "data.data.comicBirthdayDesigns.story.inviteOpening",
+  "inviteFooter": "data.data.comicBirthdayDesigns.story.inviteFooter",
+  "communityTitle": "data.data.comicBirthdayDesigns.story.communityTitle",
+  "communityText": "data.data.comicBirthdayDesigns.story.communityText",
+  "rsvpTitle": "data.data.comicBirthdayDesigns.story.rsvpTitle",
+  "rsvpText": "data.data.comicBirthdayDesigns.story.rsvpText",
+  "footer": "data.data.comicBirthdayDesigns.story.footer"
+}).en;
 export const comicBirthdayStories = Object.fromEntries(studies.map((s) => [s.slug, { ...story, heroLine: s.phrase }]));
-const kaStory = { eyebrow: "გმირებო, გელოდებით", heroLine: "დაბადების დღის თავგადასავალი საყვარელ ადამიანებთან ერთად.", ticker: "კარგი მეგობრები · დიდი თავგადასავლები", storyTitle: "ჩვენი დაბადების დღის გუნდი.", storyText: "დეასთან ერთად გავატაროთ თამაშებით, ტორტითა და მხიარულებით სავსე დღე.", inviteMessage: "შენი ახალი თავგადასავალი აქ იწყება.", galleryTitle: "სუპერ მოგონებები.", galleryText: "დიდი დაბადების დღის პატარა მომენტები.", storySignoff: "დეა და მეგობრები", photoTag: "დაბადების დღის თავგადასავლები", inviteOpening: "გეპატიჟებით", inviteFooter: "კარგი მეგობრები · დიდი თავგადასავლები", communityTitle: "სურვილები ჩვენს გმირს.", communityText: "გაგვიზიარე სურვილი ან საყვარელი მოგონება.", rsvpTitle: "შემოუერთდები გუნდს?", rsvpText: "დაიკავე ადგილი დაბადების დღის წვეულებაზე.", footer: "კიდევ ერთი სუპერ წელი" };
-export const comicBirthdayCaptions = { en: { "comicBirthday.turns": "turns" }, ka: { "comicBirthday.turns": "ხდება" } };
+const kaStory = createCaptionCopy({
+  "eyebrow": "data.data.comicBirthdayDesigns.story.eyebrow",
+  "heroLine": "data.data.comicBirthdayDesigns.story.heroLine",
+  "ticker": "data.data.comicBirthdayDesigns.story.ticker",
+  "storyTitle": "data.data.comicBirthdayDesigns.story.storyTitle",
+  "storyText": "data.data.comicBirthdayDesigns.story.storyText",
+  "inviteMessage": "data.data.comicBirthdayDesigns.story.inviteMessage",
+  "galleryTitle": "data.data.comicBirthdayDesigns.story.galleryTitle",
+  "galleryText": "data.data.comicBirthdayDesigns.story.galleryText",
+  "storySignoff": "data.data.comicBirthdayDesigns.story.storySignoff",
+  "photoTag": "data.data.comicBirthdayDesigns.story.photoTag",
+  "inviteOpening": "data.data.comicBirthdayDesigns.story.inviteOpening",
+  "inviteFooter": "data.data.comicBirthdayDesigns.story.inviteFooter",
+  "communityTitle": "data.data.comicBirthdayDesigns.story.communityTitle",
+  "communityText": "data.data.comicBirthdayDesigns.story.communityText",
+  "rsvpTitle": "data.data.comicBirthdayDesigns.story.rsvpTitle",
+  "rsvpText": "data.data.comicBirthdayDesigns.story.rsvpText",
+  "footer": "data.data.comicBirthdayDesigns.story.footer"
+}).ka;
+export const comicBirthdayCaptions = createCaptionCopy({
+  "comicBirthday.turns": "invitations.data.comicBirthdayDesigns.copy1.comicBirthday.turns"
+});
 export const comicBirthdayCardCopy = {};
 for (const s of studies) {
-  for (const [lang, name, description, mood] of [["en", s.name, s.description, "Red · blue · retro comic"], ["ka", s.kaName, s.kaDescription, "წითელი · ლურჯი · რეტრო კომიქსი"]]) {
+  for (const [lang, name, description, mood] of [["en", s.name, s.description, "Red · blue · retro comic"], ["ka", s.kaName, s.kaDescription, captionValue("themes.birthday-upside-down.mood", "ka")]]) {
     for (const [key, value] of Object.entries({ name, description, style: description, mood })) comicBirthdayCaptions[lang][`themes.${id(s)}.${key}`] = value;
   }
   const localized = {
-    samples: { title: "დეას დაბადების დღე", name: "დეა", posterName: "დეა", headline: s.kaHeadline, opening: "გეპატიჟებით", date: "18 ივლისი 2027", location: "თბილისი", line: s.kaPhrase },
-    designs: { specimen: s.kaHeadline.replaceAll("\n", " "), phrase: s.kaPhrase, accentCard: "გმირებო, გელოდებით", accentCopy: s.kaPhrase, finish: "დაბადების დღე, რომელიც გაგვაერთიანებს." },
-    events: { title: "დეას დაბადების დღე", hostName: "დეა", celebrationName: "დაბადების დღე", date: "18 ივლისი 2027", location: "თბილისი", description: s.kaPhrase },
+    samples: { title: captionValue("invitations.midnight-martini.copy.extraCopy1.birthday", "ka"), name: captionValue("invitations.pages.SpiderBirthdayExperience.caption3", "ka"), posterName: captionValue("invitations.pages.SpiderBirthdayExperience.caption3", "ka"), headline: s.kaHeadline, opening: captionValue("data.data.poolBirthdayDesigns.story.inviteOpening", "ka"), date: captionValue("invitations.pages.PizzaChefExperience.copy1.date", "ka"), location: captionValue("ribbonSketch.tbilisi.120", "ka"), line: s.kaPhrase },
+    designs: { specimen: s.kaHeadline.replaceAll("\n", " "), phrase: s.kaPhrase, accentCard: captionValue("data.data.comicBirthdayDesigns.story.eyebrow", "ka"), accentCopy: s.kaPhrase, finish: captionValue("cards.designs.birthday-upside-down.finish", "ka") },
+    events: { title: captionValue("invitations.midnight-martini.copy.extraCopy1.birthday", "ka"), hostName: captionValue("invitations.pages.SpiderBirthdayExperience.caption3", "ka"), celebrationName: captionValue("ribbonSketch.birthdayGirlEra.96", "ka"), date: captionValue("invitations.pages.PizzaChefExperience.copy1.date", "ka"), location: captionValue("ribbonSketch.tbilisi.120", "ka"), description: s.kaPhrase },
   };
   for (const [namespace, fields] of Object.entries(localized)) for (const [field, value] of Object.entries(fields)) comicBirthdayCardCopy[`cards.${namespace}.${id(s)}.${field}`] = value;
   for (const [field, value] of Object.entries({ ...kaStory, heroLine: s.kaPhrase })) comicBirthdayCardCopy[`cards.stories.${s.slug}.${field}`] = value;

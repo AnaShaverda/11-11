@@ -1,3 +1,5 @@
+import { captionValue, createCaptionCopy } from "../../localization/captionValues.js";
+
 import { pinkChampagneStories, pinkChampagneCardCopy } from "./pinkChampagneDesigns.js";
 
 // Separate paper backgrounds, stripe layers and transparent foreground artwork.
@@ -5,10 +7,10 @@ export const selectedBridalStudies = [
   {
     "key": "blush-label",
     "code": "01",
-    "name": "Blush Label",
-    "kaName": "ვარდისფერი ეტიკეტი",
-    "headline": "TO THE\nBRIDE",
-    "kaHeadline": "პატარძლისთვის",
+    "name": createCaptionCopy("data.data.selectedBridalDesigns.record1.name").en,
+    "kaName": createCaptionCopy("data.data.selectedBridalDesigns.record1.name").ka,
+    "headline": createCaptionCopy("data.data.selectedBridalDesigns.record2.headline").en,
+    "kaHeadline": createCaptionCopy("data.data.selectedBridalDesigns.record2.headline").ka,
     "paper": "ivory",
     "ink": "#174a35",
     "accent": "#e4a4b5",
@@ -20,10 +22,10 @@ export const selectedBridalStudies = [
   {
     "key": "lilac-pop",
     "code": "03",
-    "name": "Lilac Pop",
-    "kaName": "იასამნისფერი შამპანური",
-    "headline": "HER BIG\nTOAST",
-    "kaHeadline": "პატარძლის\nსადღეგრძელო",
+    "name": createCaptionCopy("data.data.selectedBridalDesigns.record3.name").en,
+    "kaName": createCaptionCopy("data.data.selectedBridalDesigns.record3.name").ka,
+    "headline": createCaptionCopy("data.data.selectedBridalDesigns.record4.headline").en,
+    "kaHeadline": createCaptionCopy("data.data.selectedBridalDesigns.record4.headline").ka,
     "paper": "lilac",
     "ink": "#4c253f",
     "accent": "#d6aa4d",
@@ -35,10 +37,10 @@ export const selectedBridalStudies = [
   {
     "key": "cherry-clink",
     "code": "06",
-    "name": "Cherry Clink",
-    "kaName": "ალუბლისფერი სადღეგრძელო",
-    "headline": "READY\nTO POP",
-    "kaHeadline": "მოდი\nვიზეიმოთ!",
+    "name": createCaptionCopy("data.data.selectedBridalDesigns.record5.name").en,
+    "kaName": createCaptionCopy("data.data.selectedBridalDesigns.record5.name").ka,
+    "headline": createCaptionCopy("data.data.selectedBridalDesigns.record6.headline").en,
+    "kaHeadline": createCaptionCopy("data.data.selectedBridalDesigns.record6.headline").ka,
     "paper": "burgundy",
     "ink": "#fff1df",
     "accent": "#e7b557",
@@ -48,10 +50,10 @@ export const selectedBridalStudies = [
   {
     "key": "blue-spritz",
     "code": "S1",
-    "name": "Blue Spritz",
-    "kaName": "ლურჯი შპრიცი",
-    "headline": "FEELIN’\nSPRITZY",
-    "kaHeadline": "მოდი\nვიზეიმოთ!",
+    "name": createCaptionCopy("data.data.selectedBridalDesigns.record7.name").en,
+    "kaName": createCaptionCopy("data.data.selectedBridalDesigns.record7.name").ka,
+    "headline": createCaptionCopy("data.data.selectedBridalDesigns.record8.headline").en,
+    "kaHeadline": createCaptionCopy("data.data.selectedBridalDesigns.record8.headline").ka,
     "paper": "ivory",
     "ink": "#1477b4",
     "accent": "#e7c34b",
@@ -61,10 +63,10 @@ export const selectedBridalStudies = [
   {
     "key": "pink-stripe-social",
     "code": "S2",
-    "name": "Pink Stripe Social",
-    "kaName": "ვარდისფერი ზოლების წვეულება",
-    "headline": "SIP SIP\nHOORAY",
-    "kaHeadline": "მოდი\nვიზეიმოთ!",
+    "name": createCaptionCopy("data.data.selectedBridalDesigns.record9.name").en,
+    "kaName": createCaptionCopy("data.data.selectedBridalDesigns.record9.name").ka,
+    "headline": createCaptionCopy("data.data.selectedBridalDesigns.record10.headline").en,
+    "kaHeadline": createCaptionCopy("data.data.selectedBridalDesigns.record10.headline").ka,
     "paper": "ivory",
     "ink": "#153e5b",
     "accent": "#de517b",
@@ -74,10 +76,10 @@ export const selectedBridalStudies = [
   {
     "key": "mint-cheers",
     "code": "S3",
-    "name": "Mint Cheers",
-    "kaName": "პიტნისფერი სადღეგრძელო",
-    "headline": "CHEERS\nTO US!",
-    "kaHeadline": "ჩვენ\nგაგვიმარჯოს!",
+    "name": createCaptionCopy("data.data.selectedBridalDesigns.record11.name").en,
+    "kaName": createCaptionCopy("data.data.selectedBridalDesigns.record11.name").ka,
+    "headline": createCaptionCopy("data.data.selectedBridalDesigns.record12.headline").en,
+    "kaHeadline": createCaptionCopy("data.data.selectedBridalDesigns.record12.headline").ka,
     "paper": "ivory",
     "ink": "#174e35",
     "accent": "#a7d6c1",
@@ -87,10 +89,10 @@ export const selectedBridalStudies = [
   {
     "key": "lilac-happy-hour",
     "code": "S4",
-    "name": "Lilac Happy Hour",
-    "kaName": "იასამნისფერი ბედნიერი საათი",
-    "headline": "HAPPY\nHOUR",
-    "kaHeadline": "ბედნიერი\nსაღამო",
+    "name": createCaptionCopy("data.data.selectedBridalDesigns.record13.name").en,
+    "kaName": createCaptionCopy("data.data.selectedBridalDesigns.record13.name").ka,
+    "headline": createCaptionCopy("data.data.selectedBridalDesigns.record14.headline").en,
+    "kaHeadline": createCaptionCopy("data.data.selectedBridalDesigns.record14.headline").ka,
     "paper": "ivory",
     "ink": "#693150",
     "accent": "#d3bce1",
@@ -100,10 +102,10 @@ export const selectedBridalStudies = [
   {
     "key": "pink-country-club",
     "code": "D1",
-    "name": "Pink Country Club",
-    "kaName": "ვარდისფერი საზაფხულო კლუბი",
-    "headline": "STAY\nCOOL",
-    "kaHeadline": "ზაფხულის\nსიგრილე",
+    "name": createCaptionCopy("data.data.selectedBridalDesigns.record15.name").en,
+    "kaName": createCaptionCopy("data.data.selectedBridalDesigns.record15.name").ka,
+    "headline": createCaptionCopy("data.data.selectedBridalDesigns.record16.headline").en,
+    "kaHeadline": createCaptionCopy("data.data.selectedBridalDesigns.record16.headline").ka,
     "paper": "ivory",
     "ink": "#bd4a70",
     "accent": "#d1a545",
@@ -113,10 +115,10 @@ export const selectedBridalStudies = [
   {
     "key": "citrus-cool",
     "code": "D2",
-    "name": "Citrus Cool",
-    "kaName": "ციტრუსის სიგრილე",
-    "headline": "SIP INTO\nSUMMER",
-    "kaHeadline": "ზაფხულის\nწვეულება",
+    "name": createCaptionCopy("data.data.selectedBridalDesigns.record17.name").en,
+    "kaName": createCaptionCopy("data.data.selectedBridalDesigns.record17.name").ka,
+    "headline": createCaptionCopy("data.data.selectedBridalDesigns.record18.headline").en,
+    "kaHeadline": createCaptionCopy("data.data.selectedBridalDesigns.record18.headline").ka,
     "paper": "butter",
     "ink": "#c63c67",
     "accent": "#99bd7b",
@@ -126,10 +128,10 @@ export const selectedBridalStudies = [
   {
     "key": "cherry-soda",
     "code": "D3",
-    "name": "Cherry Soda",
-    "kaName": "ალუბლის ლიმონათი",
-    "headline": "SWEET\nSUMMER",
-    "kaHeadline": "ტკბილი\nზაფხული",
+    "name": createCaptionCopy("data.data.selectedBridalDesigns.record19.name").en,
+    "kaName": createCaptionCopy("data.data.selectedBridalDesigns.record19.name").ka,
+    "headline": createCaptionCopy("data.data.selectedBridalDesigns.record20.headline").en,
+    "kaHeadline": createCaptionCopy("data.data.selectedBridalDesigns.record20.headline").ka,
     "paper": "blush",
     "ink": "#143a58",
     "accent": "#c83548",
@@ -139,10 +141,10 @@ export const selectedBridalStudies = [
   {
     "key": "lilac-lemonade",
     "code": "D4",
-    "name": "Lilac Lemonade",
-    "kaName": "იასამნისფერი ლიმონათი",
-    "headline": "A little\nsunshine",
-    "kaHeadline": "ცოტაოდენი\nმზე",
+    "name": createCaptionCopy("data.data.selectedBridalDesigns.record21.name").en,
+    "kaName": createCaptionCopy("data.data.selectedBridalDesigns.record21.name").ka,
+    "headline": createCaptionCopy("data.data.selectedBridalDesigns.record22.headline").en,
+    "kaHeadline": createCaptionCopy("data.data.selectedBridalDesigns.record22.headline").ka,
     "paper": "lilac",
     "ink": "#642b54",
     "accent": "#ddba48",
@@ -152,10 +154,10 @@ export const selectedBridalStudies = [
   {
     "key": "mint-bash",
     "code": "F2",
-    "name": "Mint Bash",
-    "kaName": "პიტნისფერი წვეულება",
-    "headline": "POP!\nTO THE BRIDE",
-    "kaHeadline": "პატარძალს\nგაუმარჯოს!",
+    "name": createCaptionCopy("data.data.selectedBridalDesigns.record23.name").en,
+    "kaName": createCaptionCopy("data.data.selectedBridalDesigns.record23.name").ka,
+    "headline": createCaptionCopy("data.data.selectedBridalDesigns.record24.headline").en,
+    "kaHeadline": createCaptionCopy("data.data.selectedBridalDesigns.record24.headline").ka,
     "paper": "mint",
     "ink": "#164f57",
     "accent": "#ef8c6c",
@@ -167,10 +169,10 @@ export const selectedBridalStudies = [
   {
     "key": "sunny-pop",
     "code": "F4",
-    "name": "Sunny Pop",
-    "kaName": "მზიანი შამპანური",
-    "headline": "CHEERS\nTO HER!",
-    "kaHeadline": "პატარძალს\nგაუმარჯოს!",
+    "name": createCaptionCopy("data.data.selectedBridalDesigns.record25.name").en,
+    "kaName": createCaptionCopy("data.data.selectedBridalDesigns.record25.name").ka,
+    "headline": createCaptionCopy("data.data.selectedBridalDesigns.record26.headline").en,
+    "kaHeadline": createCaptionCopy("data.data.selectedBridalDesigns.record26.headline").ka,
     "paper": "butter",
     "ink": "#173c54",
     "accent": "#e895a3",
@@ -182,10 +184,10 @@ export const selectedBridalStudies = [
   {
     "key": "blush-boot-club",
     "code": "B1",
-    "name": "Blush Boot Club",
-    "kaName": "ვარდისფერი ჩექმების კლუბი",
-    "headline": "PINK\nBOOT CLUB",
-    "kaHeadline": "ვარდისფერი\nჩექმები",
+    "name": createCaptionCopy("data.data.selectedBridalDesigns.record27.name").en,
+    "kaName": createCaptionCopy("data.data.selectedBridalDesigns.record27.name").ka,
+    "headline": createCaptionCopy("data.data.selectedBridalDesigns.record28.headline").en,
+    "kaHeadline": createCaptionCopy("data.data.selectedBridalDesigns.record28.headline").ka,
     "paper": "ivory",
     "ink": "#c33865",
     "accent": "#cf963b",
@@ -194,8 +196,8 @@ export const selectedBridalStudies = [
   }
 ];
 selectedBridalStudies.push(
-  { key: "mint-ribbon", code: "R1", name: "Mint Ribbon", kaName: "პიტნისფერი ბაფთა", headline: "MINT\nBASH", kaHeadline: "პიტნისფერი\nწვეულება", paper: "mint", ink: "#103e30", accent: "#d95384", mode: "standard", font: "casmera", artwork: "/images/bridal/experience/mint-hero.png" },
-  { key: "sunny-ribbon", code: "R2", name: "Sunny Ribbon", kaName: "მზიანი ბაფთა", headline: "SUNNY\nBASH", kaHeadline: "მზიანი\nწვეულება", paper: "butter", ink: "#35182f", accent: "#aa81c6", mode: "standard", font: "casmera", artwork: "/images/bridal/experience/sunny-hero.png" },
+  { key: "mint-ribbon", code: "R1", name: createCaptionCopy("data.data.selectedBridalDesigns.record29.name").en, kaName: createCaptionCopy("data.data.selectedBridalDesigns.record29.name").ka, headline: createCaptionCopy("data.data.selectedBridalDesigns.record30.headline").en, kaHeadline: createCaptionCopy("data.data.selectedBridalDesigns.record30.headline").ka, paper: "mint", ink: "#103e30", accent: "#d95384", mode: "standard", font: "casmera", artwork: "/images/bridal/experience/mint-hero.png" },
+  { key: "sunny-ribbon", code: "R2", name: createCaptionCopy("data.data.selectedBridalDesigns.record31.name").en, kaName: createCaptionCopy("data.data.selectedBridalDesigns.record31.name").ka, headline: createCaptionCopy("data.data.selectedBridalDesigns.record32.headline").en, kaHeadline: createCaptionCopy("data.data.selectedBridalDesigns.record32.headline").ka, paper: "butter", ink: "#35182f", accent: "#aa81c6", mode: "standard", font: "casmera", artwork: "/images/bridal/experience/sunny-hero.png" },
 );
 const studies = selectedBridalStudies;
 const slug = (s) => `bridal-${s.key}`;
@@ -203,8 +205,8 @@ const records = (fn) => Object.fromEntries(studies.map((s) => [slug(s), fn(s)]))
 const paperColors = { ivory: "#faf4e8", blush: "#f5c4cd", butter: "#fff0b7", lilac: "#e7d4ed", mint: "#b7e0d2", burgundy: "#501d2b" };
 const paper = (s) => `/images/bridal/selected/backgrounds/${s.paper}-paper.webp`;
 const art = (s) => s.artwork || `/images/bridal/selected/${s.key}/foreground.webp`;
-const phrase = "Her people. A joyful toast. A beautiful new chapter.";
-const kaPhrase = "მისი მეგობრები. მხიარული სადღეგრძელო. მშვენიერი ახალი თავი.";
+const phrase = createCaptionCopy("data.data.selectedBridalDesigns.phrase").en;
+const kaPhrase = createCaptionCopy("data.data.selectedBridalDesigns.phrase").ka;
 export const selectedBridalThemes = studies.map((s) => ({ id: slug(s), slug: slug(s), category: "other", subcategory: "bridal-party", name: s.name, description: s.mode === "boot" ? "A pink painted Western boot, ivory paper, and a bridal night made for dancing." : "Hand-painted celebration artwork, textured paper, and a cheerful bridal party.", mood: "Retro · painted · bridal", visual: slug(s), layout: "editorial", decor: "" }));
 export const selectedBridalStorefront = records((s) => ({ slug: slug(s), title: s.name, style: selectedBridalThemes.find((t) => t.slug === slug(s)).description }));
 export const selectedBridalStyles = records((s) => s.paper === "burgundy" ? ["retro", "dark"] : ["retro", "pastel"]);
@@ -227,12 +229,12 @@ for (const s of studies) {
   const theme = selectedBridalThemes.find((t) => t.slug === slug(s));
   for (const [lang, name, description, mood] of [
     ["en", s.name, theme.description, theme.mood],
-    ["ka", s.kaName, s.mode === "boot" ? "ვარდისფერი ჩექმა, ქაღალდის ტექსტურა და ცეკვისთვის შექმნილი პატარძლის წვეულება." : "დახატული სადღესასწაულო ილუსტრაცია, ქაღალდის ტექსტურა და მხიარული პატარძლის წვეულება.", "რეტრო · დახატული · პატარძლის წვეულება"],
+    ["ka", s.kaName, s.mode === "boot" ? captionValue("themes.bridal-blush-boot-club.style", "ka") : captionValue("themes.bridal-sunny-ribbon.style", "ka"), captionValue("themes.bridal-sunny-ribbon.mood", "ka")],
   ]) for (const [key, value] of Object.entries({ name, description, style: description, mood })) selectedBridalCaptions[lang][`themes.${slug(s)}.${key}`] = value;
   const localized = {
-    samples: { title: "მარიამის პატარძლის წვეულება", name: "მარიამი", posterName: "მარიამი", headline: s.kaHeadline, opening: "პატარძლისთვის", date: "12 სექტემბერი 2027", location: "თბილისი", line: kaPhrase },
-    designs: { specimen: s.kaHeadline.replace("\n", " "), phrase: kaPhrase, accentCard: "პატარძლისთვის", accentCopy: "მისი მეგობრები. მისი დღესასწაული.", finish: "მის ახალ თავს გაუმარჯოს." },
-    events: { title: "მარიამის პატარძლის წვეულება", brideName: "მარიამი", hostName: "მარიამი", celebrationName: "პატარძლის წვეულება", date: "12 სექტემბერი 2027", location: "თბილისი", description: kaPhrase },
+    samples: { title: captionValue("invitations.pages.CherryTowerExperience.caption7", "ka"), name: captionValue("ui.invitations.pages.CocktailSummerExperience.mariam", "ka"), posterName: captionValue("ui.invitations.pages.CocktailSummerExperience.mariam", "ka"), headline: s.kaHeadline, opening: captionValue("data.data.selectedBridalDesigns.record2.headline", "ka"), date: captionValue("invitations.midnight-martini.copy.extraCopy1.date", "ka"), location: captionValue("ribbonSketch.tbilisi.120", "ka"), line: kaPhrase },
+    designs: { specimen: s.kaHeadline.replace("\n", " "), phrase: kaPhrase, accentCard: captionValue("data.data.selectedBridalDesigns.record2.headline", "ka"), accentCopy: captionValue("cards.designs.bridal-sunny-ribbon.accentCopy", "ka"), finish: captionValue("cards.stories.bridal-sunny-ribbon.storyTitle", "ka") },
+    events: { title: captionValue("invitations.pages.CherryTowerExperience.caption7", "ka"), brideName: captionValue("ui.invitations.pages.CocktailSummerExperience.mariam", "ka"), hostName: captionValue("ui.invitations.pages.CocktailSummerExperience.mariam", "ka"), celebrationName: captionValue("category.occasion.bachelorette", "ka"), date: captionValue("invitations.midnight-martini.copy.extraCopy1.date", "ka"), location: captionValue("ribbonSketch.tbilisi.120", "ka"), description: kaPhrase },
   };
   for (const [ns, fields] of Object.entries(localized)) for (const [key, value] of Object.entries(fields)) selectedBridalCardCopy[`cards.${ns}.${slug(s)}.${key}`] = value;
   for (const [key, value] of Object.entries(pinkChampagneCardCopy)) {
@@ -241,7 +243,7 @@ for (const s of studies) {
   }
   selectedBridalCardCopy[`cards.stories.${slug(s)}.heroLine`] = kaPhrase;
   if (s.mode === "boot") {
-    selectedBridalCardCopy[`cards.stories.${slug(s)}.storyTitle`] = "ცეკვისთვის შექმნილი საღამო.";
-    selectedBridalCardCopy[`cards.stories.${slug(s)}.inviteMessage`] = "წამოიღე საცეკვაო ჩექმები და პატარძლისთვის სიყვარული.";
+    selectedBridalCardCopy[`cards.stories.${slug(s)}.storyTitle`] = captionValue("cards.stories.bridal-blush-boot-club.storyTitle", "ka");
+    selectedBridalCardCopy[`cards.stories.${slug(s)}.inviteMessage`] = captionValue("cards.stories.bridal-blush-boot-club.inviteMessage", "ka");
   }
 }

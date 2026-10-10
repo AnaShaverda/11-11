@@ -1,3 +1,4 @@
+import { captionValue } from "../../localization/captionValues.js";
 import { cardFontRegistry } from '../data/cardTypography.js';
 import { getClassicalPaper } from '../data/customClassicalThemes.js';
 import ChristeningArtwork, { ChristeningClassicArtwork } from './ChristeningArtwork.jsx';
@@ -63,7 +64,7 @@ export default function WeddingThemeDecoration({ theme, adaptive = false, separa
 export function WeddingThemePreview({ theme, label }) {
   const { language } = useLanguage();
   return <span className={`custom-theme-mini wedding-theme-mini theme-${theme.id}${theme.photoTheme ? ` is-photo-theme tone-${theme.coverTextTone}` : ''}`} style={weddingThemeStyle(theme)} aria-hidden="true">
-    {theme.squarePhoto ? <><WeddingThemeDecoration theme={theme} /><span className="baby-theme-preview-photo"><InvitationArtwork name="image" size={28} /></span></> : theme.photoTheme ? <><span className="wedding-portrait-sample"><span className="wedding-photo-prompt"><InvitationArtwork name="image" size={22} /><span>{language === 'ka' ? 'აირჩიე შენი ფოტო' : 'Choose your photo'}</span></span></span><span className="wedding-portrait-frame" /></> : <WeddingThemeDecoration theme={theme} />}
+    {theme.squarePhoto ? <><WeddingThemeDecoration theme={theme} /><span className="baby-theme-preview-photo"><InvitationArtwork name="image" size={28} /></span></> : theme.photoTheme ? <><span className="wedding-portrait-sample"><span className="wedding-photo-prompt"><InvitationArtwork name="image" size={22} /><span>{captionValue("invitations.components.WeddingThemeDecoration.caption1", language)}</span></span></span><span className="wedding-portrait-frame" /></> : <WeddingThemeDecoration theme={theme} />}
     <span className="wedding-theme-mini-copy"><i>{label}</i><b /><small>18 · 06 · 2027</small></span>
   </span>;
 }

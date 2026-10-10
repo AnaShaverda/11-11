@@ -1,9 +1,40 @@
+import { captionValue,  createCaptionCopy } from "../../localization/captionValues.js";
 import { useState } from "react";
 import InvitationArtwork from "./InvitationArtwork.jsx";
 const decks = {
-  roulette: { en: { title: "Toast Roulette", prompts: ["Raise a toast to the woman who always makes you laugh.", "Give the guest on your left a three-word compliment.", "Make a toast using the words sparkle, friendship, and tomorrow.", "Toast to a small win you’re proud of this year.", "Tell the table one thing you love about the guest of honor.", "Let everyone add one word to a toast. Read the result aloud!"] }, ka: { title: "სადღეგრძელოს რულეტკა", prompts: ["თქვი სადღეგრძელო ქალზე, რომელიც ყოველთვის გაცინებს.", "მარცხნივ მჯდომ მეგობარს სამი სიტყვით გაუკეთე კომპლიმენტი.", "თქვი სადღეგრძელო სიტყვებით: ბრწყინვალება, მეგობრობა და ხვალ.", "შესვი ამ წელს შენი პატარა გამარჯვების სადღეგრძელო.", "გვითხარი ერთი რამ, რაც საღამოს მთავარ გმირში გიყვარს.", "თითოეულმა ერთი სიტყვა დაამატოს სადღეგრძელოს. ბოლოს ხმამაღლა წაიკითხეთ!"] } },
-  likely: { en: { title: "Most Likely To", prompts: ["Who’s most likely to become the dance-floor DJ?", "Who’s most likely to plan a girls’ trip before dessert?", "Who’s most likely to catch the bouquet?", "Who’s most likely to take fifty photos and post only one?", "Who’s most likely to cry during the wedding vows?", "Who’s most likely to turn a quick catch-up into a five-hour dinner?"] }, ka: { title: "ყველაზე მეტად ვინ…", prompts: ["ვინ გახდება საცეკვაო მოედნის დიჯეი?", "ვინ დაგეგმავს გოგოების მოგზაურობას დესერტამდე?", "ვინ დაიჭერს პატარძლის თაიგულს?", "ვინ გადაიღებს ორმოცდაათ ფოტოს და მხოლოდ ერთს გამოაქვეყნებს?", "ვინ იტირებს საქორწილო ფიცის დროს?", "ვინ აქცევს მოკლე შეხვედრას ხუთსაათიან ვახშმად?"] } },
-  never: { en: { title: "Never Have I Ever", prompts: ["Never have I ever rehearsed a toast in the mirror.", "Never have I ever bought an outfit just for one party.", "Never have I ever stayed on the dance floor until the last song.", "Never have I ever sent a voice note longer than five minutes.", "Never have I ever helped plan a surprise party.", "Never have I ever laughed so hard I cried at dinner."] }, ka: { title: "მე არასდროს…", prompts: ["არასდროს მივარჯიშია სადღეგრძელო სარკის წინ.", "არასდროს მიყიდია სამოსი მხოლოდ ერთი წვეულებისთვის.", "არასდროს დავრჩენილვარ საცეკვაო მოედანზე ბოლო სიმღერამდე.", "არასდროს გამიგზავნია ხუთ წუთზე გრძელი ხმოვანი შეტყობინება.", "არასდროს მიმიღია მონაწილეობა სიურპრიზის დაგეგმვაში.", "არასდროს მიტირია სიცილისგან ვახშამზე."] } },
+  roulette: createCaptionCopy({
+  "title": "invitations.components.PartyGames.copy1.title",
+  "prompts": [
+    "invitations.components.PartyGames.copy1.prompts.0",
+    "invitations.components.PartyGames.copy1.prompts.1",
+    "invitations.components.PartyGames.copy1.prompts.2",
+    "invitations.components.PartyGames.copy1.prompts.3",
+    "invitations.components.PartyGames.copy1.prompts.4",
+    "invitations.components.PartyGames.copy1.prompts.5"
+  ]
+}),
+  likely: createCaptionCopy({
+  "title": "invitations.components.PartyGames.copy2.title",
+  "prompts": [
+    "invitations.components.PartyGames.copy2.prompts.0",
+    "invitations.components.PartyGames.copy2.prompts.1",
+    "invitations.components.PartyGames.copy2.prompts.2",
+    "invitations.components.PartyGames.copy2.prompts.3",
+    "invitations.components.PartyGames.copy2.prompts.4",
+    "invitations.components.PartyGames.copy2.prompts.5"
+  ]
+}),
+  never: createCaptionCopy({
+  "title": "invitations.components.PartyGames.copy3.title",
+  "prompts": [
+    "invitations.components.PartyGames.copy3.prompts.0",
+    "invitations.components.PartyGames.copy3.prompts.1",
+    "invitations.components.PartyGames.copy3.prompts.2",
+    "invitations.components.PartyGames.copy3.prompts.3",
+    "invitations.components.PartyGames.copy3.prompts.4",
+    "invitations.components.PartyGames.copy3.prompts.5"
+  ]
+}),
 };
 function shuffle() {
   const cards = [0, 1, 2, 3, 4, 5];
@@ -20,5 +51,5 @@ export default function PartyGames({ language }) {
   const deck = decks[mode][lang];
   function choose(next) { setMode(next); setRound(0); setRevealed(false); setOrder(shuffle()); }
   function next() { setRound(value => value + 1); setRevealed(false); }
-  return <section className="party-games" aria-labelledby="party-games-title"><div className="party-games-copy"><h2 id="party-games-title">{ka ? "პატარა თამაშები." : "A little party play."}</h2><p>{ka ? "შემოიკრიბეთ მეგობრები. აირჩიეთ თამაში და გახსენით ბარათი." : "Gather your girls. Choose a game and turn over a card."}</p><div className="party-game-modes" role="group" aria-label={ka ? "აირჩიე თამაში" : "Choose a game"}>{Object.keys(decks).map(key => <button key={key} aria-pressed={mode === key} onClick={() => choose(key)}>{decks[key][lang].title}</button>)}</div><p className="party-game-rule">{ka ? mode === "roulette" ? "თქვი სადღეგრძელო და ყველამ ერთად ასწიეთ ბოკლები." : mode === "likely" ? "სამამდე დათვალეთ და მიუთითეთ მეგობარზე. არჩეულს შეუძლია მოსვას ან გამოტოვოს." : "თუ ეს გაგიკეთებია, მოყევი ამბავი. შეგიძლია მოსვა ან გამოტოვო." : mode === "roulette" ? "Give your toast, then everyone raises a glass." : mode === "likely" ? "Count to three and point. The chosen guest can take a sip or pass." : "If you’ve done it, share the story. Take a sip or pass."}</p><small>{ka ? "ნებისმიერი სასმელი. თქვენი წესები." : "Any drink. Your rules."}</small></div><div className="party-game-table"><button className={`party-game-card ${revealed ? "party-game-revealed" : ""}`} onClick={() => setRevealed(value => !value)} aria-expanded={revealed} aria-label={ka ? revealed ? "ბარათის დახურვა" : "ბარათის გახსნა" : revealed ? "Turn card over" : "Reveal party card"}><span className="party-game-card-title">{deck.title}</span>{revealed ? <span className="party-game-prompt">{deck.prompts[order[round % order.length]]}</span> : <><InvitationArtwork name="sparkle" size={64} /><span>{ka ? "შეეხე ბარათს" : "Tap for a little fun"}</span></>}<small>{ka ? "რაუნდი" : "Round"} {round + 1}</small></button><button className="cherry-link" onClick={next}>{ka ? "შემდეგი ბარათი" : "Next card"}<InvitationArtwork name="arrow-right" size={18} /></button></div></section>;
+  return <section className="party-games" aria-labelledby="party-games-title"><div className="party-games-copy"><h2 id="party-games-title">{captionValue("ui.invitations.components.PartyGames.aLittlePartyPlay", language)}</h2><p>{captionValue("ui.invitations.components.PartyGames.gatherYourGirlsChooseAGameAnd", language)}</p><div className="party-game-modes" role="group" aria-label={captionValue("ui.invitations.components.PartyGames.chooseAGame", language)}>{Object.keys(decks).map(key => <button key={key} aria-pressed={mode === key} onClick={() => choose(key)}>{decks[key][lang].title}</button>)}</div><p className="party-game-rule">{(mode === "roulette" ? captionValue("ui.invitations.components.PartyGames.giveYourToastThenEveryoneRaisesA", language) : (mode === "likely" ? captionValue("ui.invitations.components.PartyGames.countToThreeAndPointTheChosen", language) : captionValue("ui.invitations.components.PartyGames.ifYouVeDoneItShareThe", language)))}</p><small>{captionValue("ui.invitations.components.PartyGames.anyDrinkYourRules", language)}</small></div><div className="party-game-table"><button className={`party-game-card ${revealed ? "party-game-revealed" : ""}`} onClick={() => setRevealed(value => !value)} aria-expanded={revealed} aria-label={(revealed ? captionValue("ui.invitations.components.PartyGames.turnCardOver", language) : captionValue("ui.invitations.components.PartyGames.revealPartyCard", language))}><span className="party-game-card-title">{deck.title}</span>{revealed ? <span className="party-game-prompt">{deck.prompts[order[round % order.length]]}</span> : <><InvitationArtwork name="sparkle" size={64} /><span>{captionValue("ui.invitations.components.PartyGames.tapForALittleFun", language)}</span></>}<small>{captionValue("ui.invitations.components.PartyGames.round", language)} {round + 1}</small></button><button className="cherry-link" onClick={next}>{captionValue("ui.invitations.components.PartyGames.nextCard", language)}<InvitationArtwork name="arrow-right" size={18} /></button></div></section>;
 }

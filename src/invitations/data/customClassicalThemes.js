@@ -1,3 +1,4 @@
+import { createCaptionCopy } from "../../localization/captionValues.js";
 const asset = (name) => `/images/custom-classical/${name}.webp`;
 
 export const classicalScenes = {
@@ -74,10 +75,7 @@ export const classicalThemes = [
   {
     id: "somethingBlue",
     number: "02",
-    name: {
-      en: "Something Blue",
-      ka: "ცისფერი ამბავი",
-    },
+    name: createCaptionCopy("invitations.data.customClassicalThemes.copy1"),
     color: "#f1f3f2",
     ink: "#354553",
     accent: "#8499a8",
@@ -98,10 +96,7 @@ export const classicalThemes = [
   {
     id: "pressedRose",
     number: "03",
-    name: {
-      en: "Pressed Rose",
-      ka: "დაწნეხილი ვარდი",
-    },
+    name: createCaptionCopy("invitations.data.customClassicalThemes.copy2"),
     color: "#f5eae3",
     ink: "#614c3c",
     accent: "#b48a76",
@@ -123,10 +118,7 @@ export const classicalThemes = [
   {
     id: "pearlLetter",
     number: "05",
-    name: {
-      en: "Pearl Letter",
-      ka: "მარგალიტის წერილი",
-    },
+    name: createCaptionCopy("invitations.data.customClassicalThemes.copy3"),
     color: "#f1efea",
     ink: "#4e4c47",
     accent: "#aaa69c",
@@ -147,10 +139,7 @@ export const classicalThemes = [
   {
     id: "lilacWhisper",
     number: "06",
-    name: {
-      en: "Lilac Whisper",
-      ka: "იასამნის ჩურჩული",
-    },
+    name: createCaptionCopy("invitations.data.customClassicalThemes.copy4"),
     color: "#f3eff3",
     ink: "#554e59",
     accent: "#b0a0ba",
@@ -172,10 +161,7 @@ export const classicalThemes = [
   {
     id: "autumn",
     number: "11",
-    name: {
-      en: "Autumn Promise",
-      ka: "შემოდგომის დაპირება",
-    },
+    name: createCaptionCopy("invitations.data.customClassicalThemes.copy5"),
     color: "#f4ecdf",
     ink: "#66462f",
     accent: "#ad7950",
@@ -196,10 +182,7 @@ export const classicalThemes = [
   {
     id: "rtveli",
     number: "12",
-    name: {
-      en: "Rtveli",
-      ka: "რთველი",
-    },
+    name: createCaptionCopy("invitations.data.customClassicalThemes.copy6"),
     color: "#f1ecdf",
     ink: "#573a43",
     accent: "#8f6772",
@@ -238,7 +221,7 @@ classicalThemes.push({
   frameAsset: "/images/wedding-themes/quietParchment-frame.webp",
   id: "couplePortrait",
   number: "13",
-  name: { en: "Our Portrait — Light", ka: "ჩვენი პორტრეტი — ღია" },
+  name: createCaptionCopy("invitations.data.customClassicalThemes.copy7"),
   coverTextTone: "light",
   photoTheme: true,
   ornamentAsset: "/images/wedding-themes/pressedRose-ornaments.webp",
@@ -251,7 +234,7 @@ classicalThemes.push({
   id: "couplePortraitDark",
   number: "14",
   coverTextTone: "dark",
-  name: { en: "Our Portrait — Dark", ka: "ჩვენი პორტრეტი — მუქი" },
+  name: createCaptionCopy("invitations.data.customClassicalThemes.copy8"),
 });
 
 // Existing local drafts keep their content and footer while moving to the new collection.
@@ -260,11 +243,11 @@ export const weddingCustomThemes = [
   ...classicalThemes.filter(theme => !theme.photoTheme),
 ].map(theme => ({ ...theme, occasion: "wedding" }));
 export const christeningCustomThemes = [
-  { id: "christeningBlueDove", name: { en: "Blue Dove", ka: "ცისფერი მტრედი" }, color: "#fffaf2", ink: "#49677c", accent: "#9bb7c9", frameAsset: null, ornamentAsset: "/images/christening/blue-dove.png", christeningLayout: "sky" },
-  { id: "christeningOliveBlessing", name: { en: "Olive Blessing", ka: "ზეთისხილის კურთხევა" }, color: "#faf8ef", ink: "#54674f", accent: "#a3b392", frameAsset: null, ornamentAsset: "/images/christening/olive-wreath.png", christeningLayout: "wreath" },
-  { id: "christeningBlushGrace", name: { en: "Blush Grace", ka: "ვარდისფერი სინაზე" }, color: "#fffaf5", ink: "#855b68", accent: "#d6a6b4", frameAsset: null, ornamentAsset: "/images/christening/blush-cascade.png", christeningLayout: "cascade" },
-  { id: "christeningBabyBoy", name: { en: "Baby Boy · Blue", ka: "ბიჭუნა · ცისფერი" }, color: "#edf5fb", ink: "#49677c", accent: "#9bb7c9", frameAsset: "/images/wedding-themes/somethingBlue-frame.webp", ornamentAsset: "/images/components/watercolor/little-dove.webp", squarePhoto: true, artworkTone: "blue" },
-  { id: "christeningBabyGirl", name: { en: "Baby Girl · Pink", ka: "გოგონა · ვარდისფერი" }, color: "#fff1f4", ink: "#855b68", accent: "#d6a6b4", frameAsset: "/images/wedding-themes/pressedRose-frame.webp", ornamentAsset: "/images/components/watercolor/little-dove.webp", squarePhoto: true, artworkTone: "pink" },
+  { id: "christeningBlueDove", name: createCaptionCopy("invitations.data.customClassicalThemes.copy9"), color: "#fffaf2", ink: "#49677c", accent: "#9bb7c9", frameAsset: null, ornamentAsset: "/images/christening/blue-dove.png", christeningLayout: "sky" },
+  { id: "christeningOliveBlessing", name: createCaptionCopy("invitations.data.customClassicalThemes.copy10"), color: "#faf8ef", ink: "#54674f", accent: "#a3b392", frameAsset: null, ornamentAsset: "/images/christening/olive-wreath.png", christeningLayout: "wreath" },
+  { id: "christeningBlushGrace", name: createCaptionCopy("invitations.data.customClassicalThemes.copy11"), color: "#fffaf5", ink: "#855b68", accent: "#d6a6b4", frameAsset: null, ornamentAsset: "/images/christening/blush-cascade.png", christeningLayout: "cascade" },
+  { id: "christeningBabyBoy", name: createCaptionCopy("invitations.data.customClassicalThemes.copy12"), color: "#edf5fb", ink: "#49677c", accent: "#9bb7c9", frameAsset: "/images/wedding-themes/somethingBlue-frame.webp", ornamentAsset: "/images/components/watercolor/little-dove.webp", squarePhoto: true, artworkTone: "blue" },
+  { id: "christeningBabyGirl", name: createCaptionCopy("invitations.data.customClassicalThemes.copy13"), color: "#fff1f4", ink: "#855b68", accent: "#d6a6b4", frameAsset: "/images/wedding-themes/pressedRose-frame.webp", ornamentAsset: "/images/components/watercolor/little-dove.webp", squarePhoto: true, artworkTone: "pink" },
 ].map((theme, index) => ({ ...classicalThemes[0], ...theme, number: String(index + 1).padStart(2, "0"), occasion: "christening", frameShape: "classic", footerScene: "none", illustration: theme.ornamentAsset }));
 export const customizableOccasions = ["wedding", "christening"];
 export function getCustomThemes(occasion) {

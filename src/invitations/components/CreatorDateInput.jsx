@@ -1,3 +1,4 @@
+import { captionValue } from "../../localization/captionValues.js";
 import InvitationArtwork from "./InvitationArtwork.jsx";
 import { formatInvitationDate } from "../data/invitationDate.js";
 
@@ -10,9 +11,9 @@ export default function CreatorDateInput({ value, language, label, onChange }) {
     catch { input.focus(); }
   };
   return <span className="creator-date-input">
-    <span aria-hidden="true" className={value ? "" : "is-placeholder"}>{formatInvitationDate(value, language) || (language === "ka" ? "აირჩიე თარიღი" : "Choose a date")}</span>
+    <span aria-hidden="true" className={value ? "" : "is-placeholder"}>{formatInvitationDate(value, language) || (captionValue("invitations.components.CreatorDateInput.caption1", language))}</span>
     <InvitationArtwork name="calendar" size={20} />
-    <input type="date" lang={language === "ka" ? "ka-GE" : "en-GB"} aria-label={label} value={value} onClick={openPicker} onKeyDown={event => {
+    <input type="date" lang={captionValue("invitations.components.CreatorDateInput.caption2", language)} aria-label={label} value={value} onClick={openPicker} onKeyDown={event => {
       if (event.key === "Enter" || event.key === " ") { event.preventDefault(); openPicker(event); }
     }} onInput={updateDate} onChange={updateDate} />
   </span>;

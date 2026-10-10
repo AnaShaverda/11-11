@@ -124,35 +124,35 @@ export default function RibbonSketchCamera({
     setCapturedCount(value => exhausted ? 1 : value + 1);
   }
   return <section className="rsb-camera-section rsb-reveal" id="memories" aria-labelledby="rsb-camera-title"><RibbonSectionBubbles />
-    <div className="rsb-camera-side"><h2 id="rsb-camera-title">{tr("Capture")}<br />{tr("the moments")}</h2><p className="rsb-hand">{tr("Reveal a memory")}</p></div><p className="rsb-camera-side rsb-camera-side-right rsb-hand">{tr("Same")}<br />{tr("friends")}<br />{tr("Different")}<br /><RibbonText>{tr("chapter \u2661")}</RibbonText></p>
+    <div className="rsb-camera-side"><h2 id="rsb-camera-title">{tr("ribbonSketch.capture.65")}<br />{tr("ribbonSketch.theMoments.66")}</h2><p className="rsb-hand">{tr("ribbonSketch.revealAMemory.75")}</p></div><p className="rsb-camera-side rsb-camera-side-right rsb-hand">{tr("ribbonSketch.same.68")}<br />{tr("ribbonSketch.friends.69")}<br />{tr("ribbonSketch.different.70")}<br /><RibbonText>{tr("ribbonSketch.chapter.71")}</RibbonText></p>
     <div className="rsb-camera" data-flash={flash}>
-      <img className="rsb-camera-body" src="/images/birthday/ribbon-sketch/digital-camera.png" alt={tr("Champagne silver digital camera")} />
+      <img className="rsb-camera-body" src="/images/birthday/ribbon-sketch/digital-camera.png" alt={tr("ribbonSketch.champagneSilverDigitalCamera.100")} />
       <div className="rsb-camera-screen">
-        {screenPhoto || editMode && queue.length ? <img src={(screenPhoto ?? queue[index]).src} alt={"A little memory: " + (screenPhoto ?? queue[index]).name} /> : <span>{tr("A little")}<br />{tr("surprise")}<small><RibbonText>{tr("Press the shutter on top \u2661")}</RibbonText></small></span>}
-        {screenPhoto && !exhausted && <span className="rsb-camera-counter">{prints.length}{tr("memories")}</span>}
+        {screenPhoto || editMode && queue.length ? <img src={(screenPhoto ?? queue[index]).src} alt={"A little memory: " + (screenPhoto ?? queue[index]).name} /> : <span>{tr("ribbonSketch.aLittle.72")}<br />{tr("ribbonSketch.surprise.73")}<small><RibbonText>{tr("ribbonSketch.pressTheShutterOnTop.74")}</RibbonText></small></span>}
+        {screenPhoto && !exhausted && <span className="rsb-camera-counter">{prints.length}{tr("ribbonSketch.memories.101")}</span>}
       </div>
-      <span className="rsb-shutter-cue" aria-hidden="true"><span>{tr("press here")}</span><svg viewBox="0 0 70 42"><path d="M12 8l10 17M35 2v19M58 8L48 25" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" /></svg></span>
-      <button type="button" className="rsb-shutter" disabled={!queue.length} onClick={capture} aria-label={tr("Press camera shutter")}><span className="rs-sr-only">{tr("Press camera shutter")}</span></button>
+      <span className="rsb-shutter-cue" aria-hidden="true"><span>{tr("ribbonSketch.pressHere.78")}</span><svg viewBox="0 0 70 42"><path d="M12 8l10 17M35 2v19M58 8L48 25" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" /></svg></span>
+      <button type="button" className="rsb-shutter" disabled={!queue.length} onClick={capture} aria-label={tr("ribbonSketch.pressCameraShutter.102")}><span className="rs-sr-only">{tr("ribbonSketch.pressCameraShutter.102")}</span></button>
       {flash > 0 && motion && <span className="rsb-camera-flash" key={flash} aria-hidden="true" />}
     </div>
-    {editMode && <div className="rsb-host-editor"><p>{tr("Host photos")}</p><div className="rsb-camera-actions">
-      <button type="button" className="rsb-button rsb-outline" onClick={() => input.current?.click()}>{tr("Upload host photos")}</button>
-      {queue.length > 1 && <div className="rsb-preview-nav"><button type="button" aria-label={tr("Previous preview")} onClick={() => setIndex(i => (i - 1 + queue.length) % queue.length)}><InvitationArtwork name="arrow-left" size="1em" /></button><span>{index + 1}{tr("of")}{queue.length}</span><button type="button" aria-label={tr("Next preview")} onClick={() => setIndex(i => (i + 1) % queue.length)}><InvitationArtwork name="arrow-right" size="1em" /></button></div>}
-    </div><p className="rsb-local">{tr("Saved on this device \xB7 Shared publishing is not connected yet.")}</p><a href="/invitations/birthday-ribbon-sketch#memories"><RibbonText>{tr("Open guest preview \u2192")}</RibbonText></a></div>}
+    {editMode && <div className="rsb-host-editor"><p>{tr("ribbonSketch.hostPhotos.79")}</p><div className="rsb-camera-actions">
+      <button type="button" className="rsb-button rsb-outline" onClick={() => input.current?.click()}>{tr("ribbonSketch.uploadHostPhotos.80")}</button>
+      {queue.length > 1 && <div className="rsb-preview-nav"><button type="button" aria-label={tr("ribbonSketch.previousPreview.103")} onClick={() => setIndex(i => (i - 1 + queue.length) % queue.length)}><InvitationArtwork name="arrow-left" size="1em" /></button><span>{index + 1}{tr("ribbonSketch.of.104")}{queue.length}</span><button type="button" aria-label={tr("ribbonSketch.nextPreview.105")} onClick={() => setIndex(i => (i + 1) % queue.length)}><InvitationArtwork name="arrow-right" size="1em" /></button></div>}
+    </div><p className="rsb-local">{tr("ribbonSketch.savedOnThisDeviceSharedPublishingIsNot.81")}</p><a href="/invitations/birthday-ribbon-sketch#memories"><RibbonText>{tr("ribbonSketch.openGuestPreview.82")}</RibbonText></a></div>}
 
-    {editMode && <input ref={input} className="rs-file-input" type="file" multiple accept="image/*" onChange={choose} aria-label={tr("Upload host photos for the camera")} />}
+    {editMode && <input ref={input} className="rs-file-input" type="file" multiple accept="image/*" onChange={choose} aria-label={tr("ribbonSketch.uploadHostPhotosForTheCamera.106")} />}
     <p className="rsb-camera-status rs-sr-only" role="status" aria-live="polite">{notice}</p>
-    {<div className="rsb-print-shelf" aria-label={tr("Your captured memories")}>
+    {<div className="rsb-print-shelf" aria-label={tr("ribbonSketch.yourCapturedMemories.107")}>
       <div className="rsb-print-track">{prints.map((photo, i) => <button type="button" className="rsb-print" key={photo.id} onClick={() => setViewer(photo)} aria-label={"View little memory " + (i + 1)} style={{
           "--print-rotation": (i % 2 ? 3 : -3) + "deg",
           "--print-x": [13, 76, 15, 74][i % 4] + Math.floor(i / 4) * .6 + "%",
           "--print-y": [11, 10, 65, 65][i % 4] + Math.floor(i / 4) * .6 + "%",
           "--print-order": i
-        }}><img src={photo.src} alt={photo.name} /><span>{tr("little memory")}{String(i + 1).padStart(2, "0")}</span></button>)}</div>
-      <button type="button" className="rsb-text-button" disabled={!prints.length} onClick={clearCollection}>{tr("Clear collection")}</button>
+        }}><img src={photo.src} alt={photo.name} /><span>{tr("ribbonSketch.littleMemory.108")}{String(i + 1).padStart(2, "0")}</span></button>)}</div>
+      <button type="button" className="rsb-text-button" disabled={!prints.length} onClick={clearCollection}>{tr("ribbonSketch.clearCollection.76")}</button>
     </div>}
     {viewer && <div className="rsb-photo-backdrop" onClick={event => {
       if (event.target === event.currentTarget) setViewer(null);
-    }}><div className="rsb-photo-dialog" role="dialog" aria-modal="true" aria-label={tr("Your little memory")}><button type="button" ref={close} onClick={() => setViewer(null)} aria-label={tr("Close photograph")}><InvitationArtwork name="close" size={20} /></button><img src={viewer.src} alt={viewer.name} /></div></div>}
+    }}><div className="rsb-photo-dialog" role="dialog" aria-modal="true" aria-label={tr("ribbonSketch.yourLittleMemory.109")}><button type="button" ref={close} onClick={() => setViewer(null)} aria-label={tr("ribbonSketch.closePhotograph.110")}><InvitationArtwork name="close" size={20} /></button><img src={viewer.src} alt={viewer.name} /></div></div>}
   </section>;
 }

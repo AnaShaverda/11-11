@@ -1,20 +1,148 @@
-const presets = {
-  wedding: [
-    ["church", "Church wedding", "ჯვრისწერა"], ["civil", "Civil marriage registration", "ხელმოწერა"],
-    ["ceremony", "Wedding ceremony", "ცერემონია"], ["reception", "Wedding reception", "დარბაზი"],
-    ["photos", "Photo session", "ფოტოსესია"], ["dinner", "Wedding dinner", "საზეიმო ვახშამი"],
-    ["cake", "Cake cutting", "ტორტის გაჭრა"], ["dance", "First dance", "პირველი ცეკვა"],
+import { captionValue } from "../../localization/captionValues.js";
+const presetCaptionKeys = {
+  "wedding": [
+    {
+      "id": "church",
+      "captionKey": "moments.wedding.church"
+    },
+    {
+      "id": "civil",
+      "captionKey": "moments.wedding.civil"
+    },
+    {
+      "id": "ceremony",
+      "captionKey": "moments.wedding.ceremony"
+    },
+    {
+      "id": "reception",
+      "captionKey": "moments.wedding.reception"
+    },
+    {
+      "id": "photos",
+      "captionKey": "moments.wedding.photos"
+    },
+    {
+      "id": "dinner",
+      "captionKey": "moments.wedding.dinner"
+    },
+    {
+      "id": "cake",
+      "captionKey": "moments.wedding.cake"
+    },
+    {
+      "id": "dance",
+      "captionKey": "moments.wedding.dance"
+    }
   ],
-  christening: [["baptism", "Baptism ceremony", "ნათლობის ცერემონია"], ["photos", "Family photos", "ოჯახური ფოტოსესია"], ["reception", "Christening reception", "ნათლობის სუფრა"]],
-  birthday: [["welcome", "Welcome", "სტუმრების მიღება"], ["party", "Birthday party", "დაბადების დღის წვეულება"], ["cake", "Cake", "ტორტი"], ["dance", "Dancing", "ცეკვა"]],
-  "baby-kids": [["welcome", "Welcome", "სტუმრების მიღება"], ["activity", "Activities", "აქტივობები"], ["cake", "Cake", "ტორტი"]],
-  "pre-wedding": [["welcome", "Welcome", "სტუმრების მიღება"], ["dinner", "Dinner", "ვახშამი"], ["party", "Party", "წვეულება"]],
-  parties: [["welcome", "Welcome", "სტუმრების მიღება"], ["party", "Party", "წვეულება"], ["dinner", "Dinner", "ვახშამი"], ["dance", "Dancing", "ცეკვა"]],
-  gifts: [["surprise", "Surprise", "სიურპრიზი"], ["gathering", "Gathering", "შეხვედრა"]],
-  corporate: [["welcome", "Welcome", "სტუმრების მიღება"], ["presentation", "Presentation", "პრეზენტაცია"], ["dinner", "Dinner", "ვახშამი"], ["networking", "Networking", "ნეთვორქინგი"]],
+  "christening": [
+    {
+      "id": "baptism",
+      "captionKey": "moments.christening.baptism"
+    },
+    {
+      "id": "photos",
+      "captionKey": "moments.christening.photos"
+    },
+    {
+      "id": "reception",
+      "captionKey": "moments.christening.reception"
+    }
+  ],
+  "birthday": [
+    {
+      "id": "welcome",
+      "captionKey": "moments.birthday.welcome"
+    },
+    {
+      "id": "party",
+      "captionKey": "moments.birthday.party"
+    },
+    {
+      "id": "cake",
+      "captionKey": "moments.birthday.cake"
+    },
+    {
+      "id": "dance",
+      "captionKey": "moments.birthday.dance"
+    }
+  ],
+  "baby-kids": [
+    {
+      "id": "welcome",
+      "captionKey": "moments.baby-kids.welcome"
+    },
+    {
+      "id": "activity",
+      "captionKey": "moments.baby-kids.activity"
+    },
+    {
+      "id": "cake",
+      "captionKey": "moments.baby-kids.cake"
+    }
+  ],
+  "pre-wedding": [
+    {
+      "id": "welcome",
+      "captionKey": "moments.pre-wedding.welcome"
+    },
+    {
+      "id": "dinner",
+      "captionKey": "moments.pre-wedding.dinner"
+    },
+    {
+      "id": "party",
+      "captionKey": "moments.pre-wedding.party"
+    }
+  ],
+  "parties": [
+    {
+      "id": "welcome",
+      "captionKey": "moments.parties.welcome"
+    },
+    {
+      "id": "party",
+      "captionKey": "moments.parties.party"
+    },
+    {
+      "id": "dinner",
+      "captionKey": "moments.parties.dinner"
+    },
+    {
+      "id": "dance",
+      "captionKey": "moments.parties.dance"
+    }
+  ],
+  "gifts": [
+    {
+      "id": "surprise",
+      "captionKey": "moments.gifts.surprise"
+    },
+    {
+      "id": "gathering",
+      "captionKey": "moments.gifts.gathering"
+    }
+  ],
+  "corporate": [
+    {
+      "id": "welcome",
+      "captionKey": "moments.corporate.welcome"
+    },
+    {
+      "id": "presentation",
+      "captionKey": "moments.corporate.presentation"
+    },
+    {
+      "id": "dinner",
+      "captionKey": "moments.corporate.dinner"
+    },
+    {
+      "id": "networking",
+      "captionKey": "moments.corporate.networking"
+    }
+  ]
 };
 
-export function getMomentPresets(category) { return presets[category] ?? presets.parties; }
+export function getMomentPresets(category) { return (presetCaptionKeys[category] ?? presetCaptionKeys.parties).map(({ id, captionKey }) => [id, captionValue(captionKey, "en"), captionValue(captionKey, "ka")]); }
 
 export function defaultMoments(category) {
   const list = getMomentPresets(category);

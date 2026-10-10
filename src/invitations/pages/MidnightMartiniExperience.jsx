@@ -1,3 +1,4 @@
+import { captionValue } from "../../localization/captionValues.js";
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useLanguage } from '../../localization/LanguageContext.jsx';
@@ -27,7 +28,7 @@ export default function MidnightMartiniExperience() {
   return <main lang={language} className={`midnight-martini ${motion ? 'mm-motion' : ''}`}>
     <section className="mm-section mm-night mm-hero" id="mm-top" aria-labelledby="mm-title">
       <header className="mm-toolbar"><Link to="/invitations" className="mm-brand" aria-label={text.back}>11:11</Link><div>
-        <button onClick={() => setLanguage(language === 'ka' ? 'en' : 'ka')} aria-label={language === 'ka' ? 'Switch to English' : 'ქართულად'}>{language === 'ka' ? 'EN' : 'KA'}</button>
+        <button onClick={() => setLanguage((language === "ka" ? "en" : "ka"))} aria-label={captionValue("invitations.pages.MidnightMartiniExperience.caption2", language)}>{captionValue("invitations.pages.MidnightMartiniExperience.caption3", language)}</button>
         <button aria-pressed={motion} onClick={() => setMotion(value => !value)} className="mm-motion-control">{text.motion}<span className="mm-switch" aria-hidden="true" /></button>
         <a href="#mm-rsvp">{text.rsvp}</a>
       </div></header>

@@ -1,3 +1,5 @@
+import { useLanguage } from "../../localization/LanguageContext.jsx";
+import { captionValue } from "../../localization/captionValues.js";
 import { useEffect, useRef, useState } from 'react';
 import InvitationArtwork from '../components/InvitationArtwork.jsx';
 import { addCollected, isOnTarget, swingPosition, WEB_GOAL } from './gameModel.js';
@@ -17,6 +19,8 @@ function useReducedMotion() {
 }
 
 export default function SpiderGames({ comic, t, motion = true }) {
+ const { language } = useLanguage();
+
   const [status, setStatus] = useState('ready');
   const [collected, setCollected] = useState([]);
   const [message, setMessage] = useState('');
@@ -63,30 +67,30 @@ export default function SpiderGames({ comic, t, motion = true }) {
     if (!active) return;
     if (reduced || isOnTarget(position.current)) {
       setCollected(items => addCollected(items, items.length));
-      setMessage(t('Perfect landing. Keep going!', 'ზუსტი დაშვება. გააგრძელე!'));
+      setMessage(captionValue("invitations.spider-party.SpiderGames.caption1", language));
       elapsed.current += 950;
-    } else setMessage(t('Almost! Aim for the cream zone and try again.', 'თითქმის! დაუმიზნე ღია ზონას და სცადე ისევ.'));
+    } else setMessage(captionValue("invitations.spider-party.SpiderGames.caption2", language));
   }
   function collect(id) {
     if (!active) return;
     setCollected(items => addCollected(items, id));
-    setMessage(t('One more good thing, collected.', 'კიდევ ერთი კარგი მომენტი.'));
+    setMessage(captionValue("invitations.spider-party.SpiderGames.caption3", language));
   }
 
   return <div className={`sp-game ${comic ? 'sp-game-rescue' : 'sp-game-swing'}`}>
-    <div className="sp-game-hud"><span>{comic ? t('PARTY RESCUE', 'წვეულების გადარჩენა') : t('ROOFTOP SWING', 'სახურავებზე თამაში')}</span><output aria-label={t('Collected', 'შეგროვებულია')} aria-live="polite">{String(collected.length).padStart(2, '0')} / 06</output></div>
+    <div className="sp-game-hud"><span>{comic ? captionValue("invitations.spider-party.SpiderGames.caption4", language) : captionValue("invitations.spider-party.SpiderGames.caption5", language)}</span><output aria-label={captionValue("invitations.spider-party.SpiderGames.caption6", language)} aria-live="polite">{String(collected.length).padStart(2, '0')} / 06</output></div>
     <div className="sp-game-scene" ref={stage} style={{ '--landings': collected.length }}>
       {comic ? <>
         <svg className="sp-game-webs" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">{collected.map(id => <path key={id} d={`M50 5 L${places[id][0]} ${places[id][1]}`} />)}</svg>
         <img className="sp-rescue-spider" src="/images/components/separated/birthday-comic-cutout-spider.webp" alt="" aria-hidden="true" />
-        {treasures.map((name, id) => <button key={name} className={`sp-treasure ${collected.includes(id) ? 'is-collected' : ''}`} style={{ left: `${places[id][0]}%`, top: `${places[id][1]}%` }} disabled={!active || collected.includes(id)} onClick={() => collect(id)} aria-label={`${t('Collect party piece', 'შეაგროვე წვეულების ნაწილი')} ${id + 1}`}><InvitationArtwork name={collected.includes(id) ? 'check' : name} size={30} /></button>)}
+        {treasures.map((name, id) => <button key={name} className={`sp-treasure ${collected.includes(id) ? 'is-collected' : ''}`} style={{ left: `${places[id][0]}%`, top: `${places[id][1]}%` }} disabled={!active || collected.includes(id)} onClick={() => collect(id)} aria-label={`${captionValue("invitations.spider-party.SpiderGames.caption7", language)} ${id + 1}`}><InvitationArtwork name={collected.includes(id) ? 'check' : name} size={30} /></button>)}
       </> : <>
         <div className="sp-swing-rig"><img src="/images/components/separated/birthday-city-after-dark-spider.webp" alt="" aria-hidden="true" /></div>
         <div className="sp-rooftop-progress" aria-hidden="true">{treasures.map((name, id) => <span key={id} className={id < collected.length ? 'is-lit' : ''}><InvitationArtwork name="star" size={22} /></span>)}</div>
       </>}
-      {(!active || won) && <div className="sp-game-overlay"><h3>{won ? t('A super way to celebrate.', 'ზეიმის სუპერ დასაწყისი.') : status === 'paused' ? t('Take your time.', 'არ იჩქარო.') : comic ? t('A little party rescue?', 'გადავარჩინოთ წვეულება?') : t('The rooftops are yours.', 'სახურავები გელოდება.')}</h3><p>{won ? t('Six little wins. One brilliant birthday.', 'ექვსი გამარჯვება. ერთი დაუვიწყარი დაბადების დღე.') : comic ? t('Collect all six pieces with a tap. No timer, just a little fun.', 'შეაგროვე ექვსივე ნაწილი შეხებით. დრო შეზღუდული არ არის.') : t('Release your web when the marker reaches the cream zone.', 'გაუშვი ქსელი, როცა მაჩვენებელი ღია ზონაში მოხვდება.')}</p><button className="sp-button" onClick={status === 'paused' && !won ? () => setStatus('playing') : restart}>{won ? t('Play again', 'კიდევ ვითამაშოთ') : status === 'paused' ? t('Resume', 'გაგრძელება') : t('Play', 'თამაში')}<InvitationArtwork name={status === 'paused' ? 'play' : 'arrow-right'} size={18} /></button>{won && <a href="#sp-rsvp" className="sp-text-link">{t('Now, make it official', 'ახლა კი, დაგვიდასტურე')}<InvitationArtwork name="arrow-right" size={18} /></a>}</div>}
+      {(!active || won) && <div className="sp-game-overlay"><h3>{won ? captionValue("invitations.spider-party.SpiderGames.caption8", language) : status === 'paused' ? captionValue("invitations.spider-party.SpiderGames.caption9", language) : comic ? captionValue("invitations.spider-party.SpiderGames.caption10", language) : captionValue("invitations.spider-party.SpiderGames.caption11", language)}</h3><p>{won ? captionValue("invitations.spider-party.SpiderGames.caption12", language) : comic ? captionValue("invitations.spider-party.SpiderGames.caption13", language) : captionValue("invitations.spider-party.SpiderGames.caption14", language)}</p><button className="sp-button" onClick={status === 'paused' && !won ? () => setStatus('playing') : restart}>{won ? captionValue("invitations.spider-party.SpiderGames.caption15", language) : status === 'paused' ? captionValue("invitations.spider-party.SpiderGames.caption16", language) : captionValue("invitations.spider-party.SpiderGames.caption17", language)}<InvitationArtwork name={status === 'paused' ? 'play' : 'arrow-right'} size={18} /></button>{won && <a href="#sp-rsvp" className="sp-text-link">{captionValue("invitations.spider-party.SpiderGames.caption18", language)}<InvitationArtwork name="arrow-right" size={18} /></a>}</div>}
     </div>
-    {!comic && <div className="sp-swing-controls"><div className="sp-timing-track" aria-hidden="true"><span className="sp-timing-zone" /><span className="sp-timing-marker" ref={marker} /></div><button className="sp-button" disabled={!active} onClick={swing}>{reduced ? t('Swing to next rooftop', 'შემდეგ სახურავზე') : t('Release web', 'ქსელის გაშვება')}<InvitationArtwork name="arrow-up-right" size={18} /></button></div>}
-    <div className="sp-game-bottom"><p role="status">{won ? t('All six collected!', 'ექვსივე შეგროვებულია!') : message || (comic ? t('Tap a piece, or use Tab and Enter.', 'შეეხე ნაწილს ან გამოიყენე Tab და Enter.') : reduced ? t('Reduced motion: each press moves you to the next rooftop.', 'შემცირებული მოძრაობა: ყოველი დაჭერა შემდეგ სახურავზე გადაგიყვანს.') : t('Tap the button, or focus it and press Space.', 'შეეხე ღილაკს ან მონიშნე და დააჭირე Space-ს.'))}</p>{active && <button className="sp-text-link" onClick={() => setStatus('paused')}>{t('Pause', 'პაუზა')}<InvitationArtwork name="pause" size={16} /></button>}</div>
+    {!comic && <div className="sp-swing-controls"><div className="sp-timing-track" aria-hidden="true"><span className="sp-timing-zone" /><span className="sp-timing-marker" ref={marker} /></div><button className="sp-button" disabled={!active} onClick={swing}>{reduced ? captionValue("invitations.spider-party.SpiderGames.caption19", language) : captionValue("invitations.spider-party.SpiderGames.caption20", language)}<InvitationArtwork name="arrow-up-right" size={18} /></button></div>}
+    <div className="sp-game-bottom"><p role="status">{won ? captionValue("invitations.spider-party.SpiderGames.caption21", language) : message || (comic ? captionValue("invitations.spider-party.SpiderGames.caption22", language) : reduced ? captionValue("invitations.spider-party.SpiderGames.caption23", language) : captionValue("invitations.spider-party.SpiderGames.caption24", language))}</p>{active && <button className="sp-text-link" onClick={() => setStatus('paused')}>{captionValue("invitations.spider-party.SpiderGames.caption25", language)}<InvitationArtwork name="pause" size={16} /></button>}</div>
   </div>;
 }

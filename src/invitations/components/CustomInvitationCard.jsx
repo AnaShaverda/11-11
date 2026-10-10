@@ -1,12 +1,13 @@
+import { captionValue } from "../../localization/captionValues.js";
 import { Link } from "react-router-dom";
 import InvitationArtwork from "./InvitationArtwork.jsx";
 import { useLanguage } from "../../localization/LanguageContext.jsx";
 
 export default function CustomInvitationCard({ category, animationIndex = 0 }) {
   const { t, language } = useLanguage();
-  const copy = language === "ka" ? { badge: "შენი დიზაინი", title: "შენი სახელები", edit: "შეცვალე შენებურად", images: "დაამატე შენი ფოტო" } : { badge: "Make it yours", title: "Your names here", edit: "Customize every detail", images: "Add your own image" };
-  const hint = language === "ka" ? "ფოტო · ტექსტი · სტილი" : "Photos · Text · Style";
-  const categoryName = category === "christening" ? language === "ka" ? "ნათლობა" : "Christening" : category === "all" ? t("invitations.all") : t(`common.${category}`);
+  const copy = { badge: captionValue("ui.invitations.components.CustomInvitationCard.makeItYours", language), title: captionValue("ui.invitations.components.CustomInvitationCard.yourNamesHere", language), edit: captionValue("ui.invitations.components.CustomInvitationCard.customizeEveryDetail", language), images: captionValue("ui.invitations.components.CustomInvitationCard.addYourOwnImage", language) };
+  const hint = captionValue("invitations.components.CustomInvitationCard.caption1", language);
+  const categoryName = category === "christening" ? captionValue("invitations.components.CustomInvitationCard.caption2", language) : category === "all" ? t("invitations.all") : t(`common.${category}`);
 
   return <Link
     id={`design-custom-${category}`}

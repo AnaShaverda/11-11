@@ -1,6 +1,8 @@
+import { captionValue, createCaptionCopy } from "../../localization/captionValues.js";
+
 // The two approved gouache illustrations are shared by birthday and bridal cards.
 const studies = [
-  { art: "cherry-tower", name: "Cherry Tower", kaName: "ალუბლისფერი ბოკლების კოშკი", ink: "#a51e37", headline: "LET’S\nCELEBRATE!", kaHeadline: "მოდი\nვიზეიმოთ!", description: "Pink paper, a cherry-red champagne tower, and a playful popping cork.", kaDescription: "ვარდისფერი ქაღალდი, ალუბლისფერი ბოკლების კოშკი და მხიარული შამპანურის საცობი." },
+  { art: "cherry-tower", name: createCaptionCopy("data.data.pinkChampagneDesigns.record1.name").en, kaName: createCaptionCopy("data.data.pinkChampagneDesigns.record1.name").ka, ink: "#a51e37", headline: createCaptionCopy("data.data.pinkChampagneDesigns.record2.headline").en, kaHeadline: createCaptionCopy("data.data.pinkChampagneDesigns.record2.headline").ka, description: createCaptionCopy("data.data.pinkChampagneDesigns.record3.description").en, kaDescription: createCaptionCopy("data.data.pinkChampagneDesigns.record3.description").ka },
 ];
 const variants = studies.flatMap((s) => ["birthday", "bridal"].map((occasion) => ({
   ...s, occasion, slug: `${occasion}-${s.art}`, visual: occasion === "bridal" ? `bridal-${s.art}` : s.art,
@@ -8,7 +10,7 @@ const variants = studies.flatMap((s) => ["birthday", "bridal"].map((occasion) =>
 const records = (fn, predicate = () => true) => Object.fromEntries(variants.filter(predicate).map((s) => [s.slug, fn(s)]));
 const bridal = (s) => s.occasion === "bridal";
 const phrase = (s) => bridal(s) ? "A toast to the bride and all her favorite people." : "A birthday toast to good friends and another lovely year.";
-const kaPhrase = (s) => bridal(s) ? "სადღეგრძელო პატარძალს და მის საყვარელ ადამიანებს." : "სადღეგრძელო კარგ მეგობრებს და კიდევ ერთ მშვენიერ წელს.";
+const kaPhrase = (s) => bridal(s) ? captionValue("cards.stories.bridal-cherry-tower.heroLine", "ka") : captionValue("data.data.cocktailBirthdayDesigns.phrase", "ka");
 const paper = "/images/party/champagne-shared/blush-paper.webp";
 const illustration = (s) => `/images/party/${s.art}/champagne-artwork.webp`;
 const theme = (s) => ({ id: s.slug, slug: s.slug, category: bridal(s) ? "other" : "birthday", ...(bridal(s) ? { subcategory: "bridal-party" } : {}), name: s.name, description: s.description, mood: "Pink · retro · gouache", visual: s.visual, layout: "editorial", decor: "" });
@@ -52,31 +54,31 @@ const story = (s) => ({
   footer: bridal(s) ? "HERE’S TO THE BRIDE" : "HERE’S TO ANOTHER LOVELY YEAR",
 });
 const kaStory = (s) => ({
-  eyebrow: bridal(s) ? "პატარძლის სადღეგრძელო" : "დაბადების დღის სადღეგრძელო", heroLine: kaPhrase(s),
-  ticker: bridal(s) ? "პატარძალი · მეგობრები · შამპანური" : "კარგი მეგობრები · ბედნიერი დაბადების დღე",
-  storyTitle: bridal(s) ? "მის ახალ თავს გაუმარჯოს." : "კიდევ ერთ მშვენიერ წელს გაუმარჯოს.",
-  storyText: bridal(s) ? "მარიამთან ერთად ვიზეიმოთ პატარძლის წვეულება და გავატაროთ მხიარული საღამო საყვარელ ადამიანებთან." : "დეასთან ერთად ვიზეიმოთ ტორტით, სადღეგრძელოთი და მეგობრებთან გატარებული საღამოთი.",
-  inviteMessage: bridal(s) ? "წამოიღე პატარძლისთვის სიყვარული. შენთვის ადგილს შევინახავთ." : "წამოიღე დაბადების დღის სურვილები. შენთვის ადგილს შევინახავთ.",
-  galleryTitle: "ჩვენი საყვარელი მომენტები.", galleryText: "დასამახსოვრებელი საღამო.",
-  storySignoff: bridal(s) ? "სიყვარულით, მარიამი" : "სიყვარულით, დეა",
-  photoTag: bridal(s) ? "პატარძლის წვეულება" : "მოდი ვიზეიმოთ", inviteOpening: "გეპატიჟებით",
-  inviteFooter: "კარგი მეგობრები · მშვენიერი საღამო",
-  communityTitle: bridal(s) ? "სიყვარულით სავსე სურვილები პატარძალს." : "სიყვარულით სავსე სურვილები.",
-  communityText: "გაგვიზიარე სურვილი ან საყვარელი მოგონება.", rsvpTitle: "შემოგვიერთდები?",
-  rsvpText: bridal(s) ? "დაიკავე ადგილი პატარძლის წვეულებაზე." : "დაიკავე ადგილი დაბადების დღის წვეულებაზე.",
-  footer: bridal(s) ? "პატარძალს გაუმარჯოს" : "კიდევ ერთ მშვენიერ წელს გაუმარჯოს",
+  eyebrow: bridal(s) ? captionValue("cards.stories.bridal-sunny-ribbon.eyebrow", "ka") : captionValue("data.data.cocktailBirthdayDesigns.story.eyebrow", "ka"), heroLine: kaPhrase(s),
+  ticker: bridal(s) ? captionValue("cards.stories.bridal-sunny-ribbon.ticker", "ka") : captionValue("cards.stories.cherry-tower.ticker", "ka"),
+  storyTitle: bridal(s) ? captionValue("cards.stories.bridal-sunny-ribbon.storyTitle", "ka") : captionValue("invitations.midnight-martini.copy.extraCopy1.farewell", "ka"),
+  storyText: bridal(s) ? captionValue("cards.stories.bridal-sunny-ribbon.storyText", "ka") : captionValue("cards.stories.cherry-tower.storyText", "ka"),
+  inviteMessage: bridal(s) ? captionValue("cards.stories.bridal-sunny-ribbon.inviteMessage", "ka") : captionValue("cards.stories.cherry-tower.inviteMessage", "ka"),
+  galleryTitle: captionValue("cards.stories.bridal-sunny-ribbon.galleryTitle", "ka"), galleryText: captionValue("cards.stories.bridal-sunny-ribbon.galleryText", "ka"),
+  storySignoff: bridal(s) ? captionValue("cards.stories.bridal-sunny-ribbon.storySignoff", "ka") : captionValue("cards.stories.cherry-tower.storySignoff", "ka"),
+  photoTag: bridal(s) ? captionValue("category.occasion.bachelorette", "ka") : captionValue("cards.stories.cherry-tower.photoTag", "ka"), inviteOpening: captionValue("data.data.poolBirthdayDesigns.story.inviteOpening", "ka"),
+  inviteFooter: captionValue("cards.stories.bridal-sunny-ribbon.inviteFooter", "ka"),
+  communityTitle: bridal(s) ? captionValue("cards.stories.bridal-sunny-ribbon.communityTitle", "ka") : captionValue("data.data.poolBirthdayDesigns.story.communityTitle", "ka"),
+  communityText: captionValue("data.data.poolBirthdayDesigns.story.communityText", "ka"), rsvpTitle: captionValue("ribbonSketch.willYouBeThere.56", "ka"),
+  rsvpText: bridal(s) ? captionValue("cards.stories.bridal-sunny-ribbon.rsvpText", "ka") : captionValue("data.data.comicBirthdayDesigns.story.rsvpText", "ka"),
+  footer: bridal(s) ? captionValue("cards.stories.bridal-sunny-ribbon.footer", "ka") : captionValue("cards.stories.cherry-tower.footer", "ka"),
 });
 export const pinkChampagneStories = Object.fromEntries(variants.map((s) => [s.visual, story(s)]));
 export const pinkChampagneCaptions = { en: {}, ka: {} };
 export const pinkChampagneCardCopy = {};
 for (const s of variants) {
-  for (const [lang, name, description, mood] of [["en", s.name, s.description, "Pink · retro · gouache"], ["ka", s.kaName, s.kaDescription, "ვარდისფერი · რეტრო · გუაში"]]) {
+  for (const [lang, name, description, mood] of [["en", s.name, s.description, "Pink · retro · gouache"], ["ka", s.kaName, s.kaDescription, captionValue("themes.bridal-cherry-tower.mood", "ka")]]) {
     for (const [key, value] of Object.entries({ name, description, style: description, mood })) pinkChampagneCaptions[lang][`themes.${s.slug}.${key}`] = value;
   }
   const localized = {
-    samples: { title: bridal(s) ? "მარიამის პატარძლის წვეულება" : "დეას დაბადების დღე", name: bridal(s) ? "მარიამი" : "დეა", posterName: bridal(s) ? "მარიამი" : "დეა", headline: s.kaHeadline, opening: bridal(s) ? "პატარძლისთვის" : "დაბადების დღე", date: "12 სექტემბერი 2027", location: "თბილისი", line: kaPhrase(s) },
-    designs: { specimen: s.kaHeadline.replace("\n", " "), phrase: kaPhrase(s), accentCard: bridal(s) ? "პატარძლისთვის" : "დაბადების დღე", accentCopy: bridal(s) ? "მისი მეგობრები. ცოტაოდენი შამპანური." : "კარგი მეგობრები. ბედნიერი დაბადების დღე.", finish: bridal(s) ? "მის ახალ თავს გაუმარჯოს." : "კიდევ ერთ მშვენიერ წელს გაუმარჯოს." },
-    events: { title: bridal(s) ? "მარიამის პატარძლის წვეულება" : "დეას დაბადების დღე", hostName: bridal(s) ? "მარიამი" : "დეა", ...(bridal(s) ? { brideName: "მარიამი" } : {}), celebrationName: bridal(s) ? "პატარძლის წვეულება" : "დაბადების დღე", date: "12 სექტემბერი 2027", location: "თბილისი", description: kaPhrase(s) },
+    samples: { title: bridal(s) ? captionValue("invitations.pages.CherryTowerExperience.caption7", "ka") : captionValue("invitations.midnight-martini.copy.extraCopy1.birthday", "ka"), name: bridal(s) ? captionValue("ui.invitations.pages.CocktailSummerExperience.mariam", "ka") : captionValue("invitations.pages.SpiderBirthdayExperience.caption3", "ka"), posterName: bridal(s) ? captionValue("ui.invitations.pages.CocktailSummerExperience.mariam", "ka") : captionValue("invitations.pages.SpiderBirthdayExperience.caption3", "ka"), headline: s.kaHeadline, opening: bridal(s) ? captionValue("data.data.selectedBridalDesigns.record2.headline", "ka") : captionValue("ribbonSketch.birthdayGirlEra.96", "ka"), date: captionValue("invitations.midnight-martini.copy.extraCopy1.date", "ka"), location: captionValue("ribbonSketch.tbilisi.120", "ka"), line: kaPhrase(s) },
+    designs: { specimen: s.kaHeadline.replace("\n", " "), phrase: kaPhrase(s), accentCard: bridal(s) ? captionValue("data.data.selectedBridalDesigns.record2.headline", "ka") : captionValue("ribbonSketch.birthdayGirlEra.96", "ka"), accentCopy: bridal(s) ? captionValue("cards.designs.bridal-cherry-tower.accentCopy", "ka") : captionValue("cards.designs.birthday-cherry-tower.accentCopy", "ka"), finish: bridal(s) ? captionValue("cards.stories.bridal-sunny-ribbon.storyTitle", "ka") : captionValue("invitations.midnight-martini.copy.extraCopy1.farewell", "ka") },
+    events: { title: bridal(s) ? captionValue("invitations.pages.CherryTowerExperience.caption7", "ka") : captionValue("invitations.midnight-martini.copy.extraCopy1.birthday", "ka"), hostName: bridal(s) ? captionValue("ui.invitations.pages.CocktailSummerExperience.mariam", "ka") : captionValue("invitations.pages.SpiderBirthdayExperience.caption3", "ka"), ...(bridal(s) ? { brideName: captionValue("ui.invitations.pages.CocktailSummerExperience.mariam", "ka") } : {}), celebrationName: bridal(s) ? captionValue("category.occasion.bachelorette", "ka") : captionValue("ribbonSketch.birthdayGirlEra.96", "ka"), date: captionValue("invitations.midnight-martini.copy.extraCopy1.date", "ka"), location: captionValue("ribbonSketch.tbilisi.120", "ka"), description: kaPhrase(s) },
   };
   for (const [ns, fields] of Object.entries(localized)) for (const [key, value] of Object.entries(fields)) pinkChampagneCardCopy[`cards.${ns}.${s.slug}.${key}`] = value;
   for (const [key, value] of Object.entries(kaStory(s))) pinkChampagneCardCopy[`cards.stories.${s.visual}.${key}`] = value;

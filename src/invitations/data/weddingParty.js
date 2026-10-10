@@ -1,9 +1,10 @@
+import { createCaptionCopy } from "../../localization/captionValues.js";
 export const weddingPartyRoles = [
-  { id: 'bridesmaid', en: 'Bridesmaid', ka: 'პატარძლის მეჯვარე' },
-  { id: 'maidOfHonour', en: 'Maid of honour', ka: 'პატარძლის მთავარი მეჯვარე' },
-  { id: 'manOfHonour', en: 'Man of honour', ka: 'პატარძლის მეჯვარე (კაცი)' },
-  { id: 'bestMan', en: 'Best man', ka: 'სიძის მთავარი მეჯვარე' },
-  { id: 'groomsman', en: 'Groomsman', ka: 'სიძის მეჯვარე' },
+  { id: 'bridesmaid', ...createCaptionCopy("invitations.data.weddingParty.extraCopy1") },
+  { id: 'maidOfHonour', ...createCaptionCopy("invitations.data.weddingParty.extraCopy2") },
+  { id: 'manOfHonour', ...createCaptionCopy("invitations.data.weddingParty.extraCopy3") },
+  { id: 'bestMan', ...createCaptionCopy("invitations.data.weddingParty.extraCopy4") },
+  { id: 'groomsman', ...createCaptionCopy("invitations.data.weddingParty.extraCopy5") },
 ];
 export function normalizeWeddingParty(value) {
   return (Array.isArray(value) ? value : []).slice(0,20).filter(p => p && typeof p === 'object').map((p,index) => ({

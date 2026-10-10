@@ -1,34 +1,36 @@
+import { captionValue, createCaptionCopy } from "../../localization/captionValues.js";
+
 // Invitation studies: generated artwork stays text-free; all copy is editable and localized.
 const studies = [
   {
-    slug: "ribbon-sketch", name: "Ribbon Sketch", kaName: "ბაფთის ესკიზი",
+    slug: "ribbon-sketch", name: createCaptionCopy("data.data.girlyBirthdayDesigns.record1.name").en, kaName: createCaptionCopy("data.data.girlyBirthdayDesigns.record1.name").ka,
     paper: "#fbd5de", ink: "#ad1626", tags: ["line-art", "pastel"],
-    description: "A loose red ribbon frames blush paper and airy editorial lettering.",
-    kaDescription: "წითელი ბაფთის თავისუფალი ხაზები, ვარდისფერი ქაღალდი და დახვეწილი ასოები.",
-    mood: "Blush · red ink · ribbons", kaMood: "ვარდისფერი · წითელი ხაზები · ბაფთები",
-    headline: "birthday girl", kaHeadline: "დღის იუბილარი",
-    phrase: "A little party, a lot of love.", kaPhrase: "პატარა წვეულება, ბევრი სიყვარული.",
-    finish: "Tied together with birthday wishes.", kaFinish: "ბაფთით შეკრული დაბადების დღის სურვილები.",
+    description: createCaptionCopy("data.data.girlyBirthdayDesigns.record2.description").en,
+    kaDescription: createCaptionCopy("data.data.girlyBirthdayDesigns.record2.description").ka,
+    mood: createCaptionCopy("data.data.girlyBirthdayDesigns.record3.mood").en, kaMood: createCaptionCopy("data.data.girlyBirthdayDesigns.record3.mood").ka,
+    headline: createCaptionCopy("data.data.girlyBirthdayDesigns.record4.headline").en, kaHeadline: createCaptionCopy("data.data.girlyBirthdayDesigns.record4.headline").ka,
+    phrase: createCaptionCopy("data.data.girlyBirthdayDesigns.record5.phrase").en, kaPhrase: createCaptionCopy("data.data.girlyBirthdayDesigns.record5.phrase").ka,
+    finish: createCaptionCopy("data.data.girlyBirthdayDesigns.record6.finish").en, kaFinish: createCaptionCopy("data.data.girlyBirthdayDesigns.record6.finish").ka,
   },
   {
-    slug: "playground", name: "Birthday Playground", kaName: "დაბადების დღის თამაში",
+    slug: "playground", name: createCaptionCopy("data.data.girlyBirthdayDesigns.record7.name").en, kaName: createCaptionCopy("data.data.girlyBirthdayDesigns.record7.name").ka,
     paper: "#fff5df", ink: "#d71936", tags: ["playful", "pastel"],
-    description: "Soft pink waves, ribbon-wrapped presents, and sweet birthday games.",
-    kaDescription: "ვარდისფერი ტალღები, ბაფთიანი საჩუქრები და დაბადების დღის თამაშები.",
-    mood: "Cherry red · strawberry pink · playful", kaMood: "ალუბლისფერი · ვარდისფერი · მხიარული",
-    headline: "it’s my birthday!", kaHeadline: "ჩემი დაბადების დღეა!",
-    phrase: "Cake, wishes & good company.", kaPhrase: "ტორტი, სურვილები და საყვარელი ადამიანები.",
-    finish: "Come for cake. Stay for the memories.", kaFinish: "მოდი ტორტისთვის, დარჩი მოგონებებისთვის.",
+    description: createCaptionCopy("data.data.girlyBirthdayDesigns.record8.description").en,
+    kaDescription: createCaptionCopy("data.data.girlyBirthdayDesigns.record8.description").ka,
+    mood: createCaptionCopy("data.data.girlyBirthdayDesigns.record9.mood").en, kaMood: createCaptionCopy("data.data.girlyBirthdayDesigns.record9.mood").ka,
+    headline: createCaptionCopy("data.data.girlyBirthdayDesigns.record10.headline").en, kaHeadline: createCaptionCopy("data.data.girlyBirthdayDesigns.record10.headline").ka,
+    phrase: createCaptionCopy("data.data.girlyBirthdayDesigns.record11.phrase").en, kaPhrase: createCaptionCopy("data.data.girlyBirthdayDesigns.record11.phrase").ka,
+    finish: createCaptionCopy("data.data.girlyBirthdayDesigns.record12.finish").en, kaFinish: createCaptionCopy("data.data.girlyBirthdayDesigns.record12.finish").ka,
   },
   {
-    slug: "white-and-blue", name: "White & Blue", kaName: "თეთრი და ლურჯი",
+    slug: "white-and-blue", name: createCaptionCopy("data.data.girlyBirthdayDesigns.record13.name").en, kaName: createCaptionCopy("data.data.girlyBirthdayDesigns.record13.name").ka,
     paper: "#ffffff", ink: "#1749c8", tags: ["line-art", "light-neutral"],
-    description: "A cobalt cake drawing, a loose ink frame, and crisp white paper.",
-    kaDescription: "ლურჯი ტორტის ჩანახატი, თავისუფალი ხაზის ჩარჩო და სუფთა თეთრი ქაღალდი.",
-    mood: "White · cobalt · clean", kaMood: "თეთრი · ლურჯი · სადა",
-    headline: "make a wish", kaHeadline: "ჩაიფიქრე სურვილი",
-    phrase: "birthday party", kaPhrase: "დაბადების დღის წვეულება",
-    finish: "Blue ink. Bright wishes.", kaFinish: "ლურჯი ხაზები. ნათელი სურვილები.",
+    description: createCaptionCopy("data.data.girlyBirthdayDesigns.record14.description").en,
+    kaDescription: createCaptionCopy("data.data.girlyBirthdayDesigns.record14.description").ka,
+    mood: createCaptionCopy("data.data.girlyBirthdayDesigns.record15.mood").en, kaMood: createCaptionCopy("data.data.girlyBirthdayDesigns.record15.mood").ka,
+    headline: createCaptionCopy("data.data.girlyBirthdayDesigns.record16.headline").en, kaHeadline: createCaptionCopy("data.data.girlyBirthdayDesigns.record16.headline").ka,
+    phrase: createCaptionCopy("data.data.girlyBirthdayDesigns.record17.phrase").en, kaPhrase: createCaptionCopy("data.data.girlyBirthdayDesigns.record17.phrase").ka,
+    finish: createCaptionCopy("data.data.girlyBirthdayDesigns.record18.finish").en, kaFinish: createCaptionCopy("data.data.girlyBirthdayDesigns.record18.finish").ka,
   },
 
 ];
@@ -80,8 +82,8 @@ for (const study of studies) {
     for (const [field, value] of Object.entries(values)) girlyBirthdayCaptions[language][`themes.${slug}.${field}`] = value;
   }
   const localized = {
-    samples: { title: "ანიკოს დაბადების დღე", name: "ანიკო", headline: study.kaHeadline, opening: study.slug === "playground" ? "ერთად ვიზეიმოთ" : "გეპატიჟებით", date: "23 მაისი 2027 · 17:00", location: "თბილისი", line: study.kaPhrase },
-    designs: { specimen: study.kaHeadline, phrase: study.kaPhrase, accentCard: "დაბადების დღის სურვილები", accentCopy: study.kaPhrase, finish: study.kaFinish },
+    samples: { title: captionValue("ribbonSketch.anikoSBirthday.99", "ka"), name: captionValue("cards.events.birthday-slice-club.hostName", "ka"), headline: study.kaHeadline, opening: study.slug === "playground" ? captionValue("ui.invitations.data.customOccasions.letSCelebrateTogether", "ka") : captionValue("data.data.poolBirthdayDesigns.story.inviteOpening", "ka"), date: captionValue("cards.samples.birthday-white-and-blue.date", "ka"), location: captionValue("ribbonSketch.tbilisi.120", "ka"), line: study.kaPhrase },
+    designs: { specimen: study.kaHeadline, phrase: study.kaPhrase, accentCard: captionValue("invitations.pages.PinkLidoExperience.copy1.wishes", "ka"), accentCopy: study.kaPhrase, finish: study.kaFinish },
   };
   for (const [namespace, fields] of Object.entries(localized)) {
     for (const [field, value] of Object.entries(fields)) girlyBirthdayCardCopy[`cards.${namespace}.${slug}.${field}`] = value;

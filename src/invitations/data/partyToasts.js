@@ -1,11 +1,36 @@
+import { createCaptionCopy } from "../../localization/captionValues.js";
 // Original bilingual copy for the invitation's toast collection.
 export const partyToasts = [
-  { category: "women", en: { title: "To women who shine", body: "To the women who light up a room simply by being themselves. May we keep choosing our dreams, cheering each other on, and making space for every kind of beautiful." }, ka: { title: "ქალებს, რომლებიც ანათებენ", body: "იმ ქალებს გაუმარჯოს, რომლებიც ოთახს საკუთარი არსებობით ანათებენ. არასოდეს მოგვაკლდეს საკუთარი ოცნებების რწმენა, ერთმანეთის მხარდაჭერა და თავისუფლება, ვიყოთ ისეთი, როგორიც ვართ." } },
-  { category: "women", en: { title: "To our own kind of magic", body: "To our courage, our laughter, and the stories only we can tell. May we be loved as we are, heard when we speak, and proud of the women we are becoming." }, ka: { title: "ჩვენს განსაკუთრებულ ძალას", body: "ჩვენს გამბედაობას, სიცილსა და ამბებს გაუმარჯოს. გვიყვარდეს საკუთარი თავი, ისმოდეს ჩვენი ხმა და ყოველთვის ვამაყობდეთ იმ ქალებით, რომლებსაც საკუთარ თავში ვქმნით." } },
-  { category: "bride", en: { title: "To her next chapter", body: "To our beautiful bride: may this new chapter feel like coming home to someone who sees you, hears you, and chooses you every day. Here’s to love with room for all your dreams." }, ka: { title: "პატარძლის ახალ თავს", body: "ჩვენს საყვარელ პატარძალს გაუმარჯოს! ეს ახალი თავი იყოს სახლივით თბილი — ადამიანთან, რომელიც გხედავს, გისმენს და ყოველდღე გირჩევს. სიყვარულს, რომელშიც ყველა შენი ოცნებისთვის არის ადგილი." } },
-  { category: "bride", en: { title: "Before the big yes", body: "Before the vows and the happy tears, here’s to this little moment with your girls. May you carry our laughter into your wedding day and our friendship into every day after." }, ka: { title: "დიდი „დიახ“-ის წინ", body: "ფიცისა და ბედნიერების ცრემლების წინ, ამ პატარა საღამოს გაუმარჯოს — შენს გოგოებთან ერთად. ჩვენი სიცილი გაგყვეს ქორწილის დღეს, ჩვენი მეგობრობა კი — ყველა მომდევნო დღეს." } },
-  { category: "friendship", en: { title: "Same girls, new memories", body: "To the friends who know the whole story and love us anyway. To long talks, silly photos, and the kind of laughter that makes an ordinary evening unforgettable." }, ka: { title: "იგივე გოგოები, ახალი მოგონებები", body: "მეგობრებს გაუმარჯოს, რომლებმაც მთელი ჩვენი ამბავი იციან და მაინც ყველაზე მეტად ვუყვარვართ. გრძელ საუბრებს, სასაცილო ფოტოებსა და სიცილს, რომელიც ჩვეულებრივ საღამოს დაუვიწყარს ხდის." } },
-  { category: "friendship", en: { title: "To our favorite table", body: "May there always be a seat for each of us, something lovely to share, and a reason to stay for one more story. To friendship that feels like belonging." }, ka: { title: "ჩვენს საყვარელ სუფრას", body: "ყოველთვის იყოს ადგილი თითოეული ჩვენგანისთვის, რაღაც გემრიელი გასაზიარებლად და კიდევ ერთი ამბავი მოსაყოლად. იმ მეგობრობას გაუმარჯოს, რომელშიც თავს შინ გრძნობ." } },
-  { category: "love", en: { title: "To love, in all its forms", body: "To the love we find, the love we give, and the love we finally learn to give ourselves. May it be gentle, joyful, and bigger than we ever imagined." }, ka: { title: "სიყვარულს — ყველა ფორმით", body: "სიყვარულს გაუმარჯოს — რომელსაც ვპოულობთ, რომელსაც ვჩუქნით და რომელსაც საკუთარ თავსაც ვსწავლობთ. იყოს ის თბილი, მხიარული და იმაზე დიდი, ვიდრე ოდესმე წარმოგვედგინა." } },
-  { category: "celebration", en: { title: "To a brighter year", body: "To another year of becoming more ourselves. More little adventures, more people who feel like sunshine, and more evenings exactly like this one. Cheers to the birthday girl!" }, ka: { title: "უფრო ნათელ წელს", body: "კიდევ ერთ წელს გაუმარჯოს, რომელიც უფრო მეტად დაგვაახლოებს საკუთარ თავთან. მეტი პატარა თავგადასავალი, მეტი მზესავით თბილი ადამიანი და მეტი ასეთი საღამო. იუბილარს გაუმარჯოს!" } },
+  { category: "women", ...createCaptionCopy({
+  "title": "invitations.data.partyToasts.extraCopy1.title",
+  "body": "invitations.data.partyToasts.extraCopy1.body"
+}) },
+  { category: "women", ...createCaptionCopy({
+  "title": "invitations.data.partyToasts.extraCopy2.title",
+  "body": "invitations.data.partyToasts.extraCopy2.body"
+}) },
+  { category: "bride", ...createCaptionCopy({
+  "title": "invitations.data.partyToasts.extraCopy3.title",
+  "body": "invitations.data.partyToasts.extraCopy3.body"
+}) },
+  { category: "bride", ...createCaptionCopy({
+  "title": "invitations.data.partyToasts.extraCopy4.title",
+  "body": "invitations.data.partyToasts.extraCopy4.body"
+}) },
+  { category: "friendship", ...createCaptionCopy({
+  "title": "invitations.data.partyToasts.extraCopy5.title",
+  "body": "invitations.data.partyToasts.extraCopy5.body"
+}) },
+  { category: "friendship", ...createCaptionCopy({
+  "title": "invitations.data.partyToasts.extraCopy6.title",
+  "body": "invitations.data.partyToasts.extraCopy6.body"
+}) },
+  { category: "love", ...createCaptionCopy({
+  "title": "invitations.data.partyToasts.extraCopy7.title",
+  "body": "invitations.data.partyToasts.extraCopy7.body"
+}) },
+  { category: "celebration", ...createCaptionCopy({
+  "title": "invitations.data.partyToasts.extraCopy8.title",
+  "body": "invitations.data.partyToasts.extraCopy8.body"
+}) },
 ];

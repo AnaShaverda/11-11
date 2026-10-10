@@ -5,15 +5,14 @@ export const themeStatusOverrides = {
   "birthday-ribbon-sketch": "active",
   "birthday-playground": "active",
   "birthday-white-and-blue": "active",
-
   "birthday-disco-scrapbook": "active",
-
   "birthday-checkerboard-cheers": "active",
   "birthday-retro-disco": "avtive",
   "birthday-y2k-digital": "active",
   "birthday-pink-glam": "active",
   "birthday-city-after-dark": "active",
   "birthday-comic-cutout": "active",
+
   "birthday-retro-sport": "inactive",
   "birthday-upside-down": "inactive",
   "birthday-pink-lido": "active",

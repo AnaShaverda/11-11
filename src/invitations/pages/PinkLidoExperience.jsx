@@ -1,3 +1,4 @@
+import { createCaptionCopy, captionValue } from "../../localization/captionValues.js";
 import InvitationMakerFooter from "../components/InvitationMakerFooter.jsx";
 import useInvitationGuestName from "../hooks/useInvitationGuestName.js";
 import { useEffect, useRef, useState } from "react";
@@ -9,10 +10,46 @@ import "../../styles/pink-lido-experience.css";
 async function celebrate(options) { const { default: confetti } = await import("canvas-confetti"); confetti({ ...options, disableForReducedMotion: true }); }
 
 const accessories = "/images/birthday/pink-lido/party-accessories/";
-const words = {
-  en: { name: "Aniko’s", title: "Pool Party", line: "Dive in for a day of sunny fun.", date: "18 JULY 2027", city: "TBILISI", dive: "Dive into the party", splash: "Tap the water. Make a little splash.", motion: "Motion", back: "Back to invitations", details: "A little sunshine. A lot of birthday joy.", intro: "Aniko is turning 7 — and you’re invited!", when: "Sunday, 18 July 2027", where: "Tbilisi", venue: "Exact pool location to be shared by the host.", bring: "Bring your swimsuit, a towel & your sunny self.", plan: "The sunny little plan", swim: "Splashes & pool games", cake: "Cake & birthday wishes", chill: "One more dip", rsvp: "Are you diving in?", label: "Your name", yes: "I’ll be there", no: "Can’t make it", send: "Save demo reply", saved: "Your demo reply is saved on this device.", thanks: "See you poolside!", miss: "We’ll miss you poolside!", demo: "Preview invitation. Replies stay on this device", calendar: "Add to calendar", change: "Change reply", wishes: "Birthday wishes", wishTitle: "A little wish for Aniko.", wishIntro: "Leave a sunny birthday note.", wishLabel: "Your birthday wish", wishSave: "Save demo wish", wishSaved: "Your wish is saved on this device.", wishDemo: "Preview invitation. Wishes stay on this device.", wishEdit: "Edit your wish" },
-  ka: { name: "ანიკოს", title: "აუზის წვეულება", line: "შემოგვიერთდი მზიან და მხიარულ დღეს.", date: "18 ივლისი 2027", city: "თბილისი", dive: "შეუერთდი წვეულებას", splash: "შეეხე წყალს და ააშხეფე!", motion: "მოძრაობა", back: "მოსაწვევების კოლექცია", details: "მზე, აუზი და დაბადების დღის სიხარული.", intro: "ანიკო 7 წლის ხდება — გეპატიჟებით!", when: "კვირა, 18 ივლისი 2027", where: "თბილისი", venue: "აუზის ზუსტ მისამართს მასპინძელი გაგიზიარებთ.", bring: "წამოიღე საცურაო კოსტიუმი, პირსახოცი და კარგი განწყობა.", plan: "დღის გეგმა", swim: "აუზი და თამაშები", cake: "ტორტი და სურვილები", chill: "კიდევ ერთხელ აუზში", rsvp: "შემოგვიერთდები?", label: "შენი სახელი", yes: "მოვდივარ", no: "ვერ მოვდივარ", send: "დემო პასუხის შენახვა", saved: "დემო პასუხი ამ მოწყობილობაზე შეინახა.", thanks: "აუზთან გელოდებით!", miss: "დაგვაკლდები!", demo: "დემო მოსაწვევი. პასუხი რჩება ამ მოწყობილობაზე", calendar: "კალენდარში დამატება", change: "პასუხის შეცვლა", wishes: "დაბადების დღის სურვილები", wishTitle: "პატარა სურვილი ანიკოსთვის.", wishIntro: "დაუტოვე მზიანი დაბადების დღის სურვილი.", wishLabel: "შენი სურვილი", wishSave: "დემო სურვილის შენახვა", wishSaved: "შენი სურვილი ამ მოწყობილობაზე შეინახა.", wishDemo: "დემო მოსაწვევი. სურვილი რჩება ამ მოწყობილობაზე.", wishEdit: "სურვილის შეცვლა" }
-};
+const words = createCaptionCopy({
+  "name": "invitations.pages.PinkLidoExperience.copy1.name",
+  "title": "invitations.pages.PinkLidoExperience.copy1.title",
+  "line": "invitations.pages.PinkLidoExperience.copy1.line",
+  "date": "invitations.pages.PinkLidoExperience.copy1.date",
+  "city": "invitations.pages.PinkLidoExperience.copy1.city",
+  "dive": "invitations.pages.PinkLidoExperience.copy1.dive",
+  "splash": "invitations.pages.PinkLidoExperience.copy1.splash",
+  "motion": "invitations.pages.PinkLidoExperience.copy1.motion",
+  "back": "invitations.pages.PinkLidoExperience.copy1.back",
+  "details": "invitations.pages.PinkLidoExperience.copy1.details",
+  "intro": "invitations.pages.PinkLidoExperience.copy1.intro",
+  "when": "invitations.pages.PinkLidoExperience.copy1.when",
+  "where": "invitations.pages.PinkLidoExperience.copy1.where",
+  "venue": "invitations.pages.PinkLidoExperience.copy1.venue",
+  "bring": "invitations.pages.PinkLidoExperience.copy1.bring",
+  "plan": "invitations.pages.PinkLidoExperience.copy1.plan",
+  "swim": "invitations.pages.PinkLidoExperience.copy1.swim",
+  "cake": "invitations.pages.PinkLidoExperience.copy1.cake",
+  "chill": "invitations.pages.PinkLidoExperience.copy1.chill",
+  "rsvp": "invitations.pages.PinkLidoExperience.copy1.rsvp",
+  "label": "invitations.pages.PinkLidoExperience.copy1.label",
+  "yes": "invitations.pages.PinkLidoExperience.copy1.yes",
+  "no": "invitations.pages.PinkLidoExperience.copy1.no",
+  "send": "invitations.pages.PinkLidoExperience.copy1.send",
+  "saved": "invitations.pages.PinkLidoExperience.copy1.saved",
+  "thanks": "invitations.pages.PinkLidoExperience.copy1.thanks",
+  "miss": "invitations.pages.PinkLidoExperience.copy1.miss",
+  "demo": "invitations.pages.PinkLidoExperience.copy1.demo",
+  "calendar": "invitations.pages.PinkLidoExperience.copy1.calendar",
+  "change": "invitations.pages.PinkLidoExperience.copy1.change",
+  "wishes": "invitations.pages.PinkLidoExperience.copy1.wishes",
+  "wishTitle": "invitations.pages.PinkLidoExperience.copy1.wishTitle",
+  "wishIntro": "invitations.pages.PinkLidoExperience.copy1.wishIntro",
+  "wishLabel": "invitations.pages.PinkLidoExperience.copy1.wishLabel",
+  "wishSave": "invitations.pages.PinkLidoExperience.copy1.wishSave",
+  "wishSaved": "invitations.pages.PinkLidoExperience.copy1.wishSaved",
+  "wishDemo": "invitations.pages.PinkLidoExperience.copy1.wishDemo",
+  "wishEdit": "invitations.pages.PinkLidoExperience.copy1.wishEdit"
+});
 function readReply(theme) { try { return JSON.parse(localStorage.getItem(`1111-${theme}-rsvp-v1`)) || null; } catch { return null; } }
 
 function readWish(theme) { try { const saved = JSON.parse(localStorage.getItem(`1111-${theme}-wish-v1`)); return typeof saved?.name === "string" && typeof saved?.message === "string" ? saved : null; } catch { return null; } }
@@ -69,7 +106,7 @@ export default function PinkLidoExperience({ theme = "pink-lido" }) {
     event.preventDefault();
     if (!wishMessage.trim()) {
       const field = event.currentTarget.elements.namedItem("birthday-wish");
-      field.setCustomValidity(language === "ka" ? "დაწერე შენი სურვილი." : "Please write your birthday wish.");
+      field.setCustomValidity(captionValue("invitations.pages.PinkLidoExperience.caption2", language));
       field.reportValidity();
       return;
     }
@@ -89,20 +126,20 @@ export default function PinkLidoExperience({ theme = "pink-lido" }) {
   }
   return <main className={`lido-experience ${blue ? "blue-splash-experience" : ""} ${motion ? "lido-motion" : ""}`} lang={language} ref={scene}>
     <section className="lido-cover" id="lido-cover" aria-label={copy.title}>
-    <header className="lido-toolbar"><Link to="/invitations" aria-label={copy.back}><InvitationArtwork name="arrow-left" size={20} /><span>11:11</span></Link><div><button onClick={() => setLanguage(language === "ka" ? "en" : "ka")} aria-label={language === "ka" ? "Switch to English" : "ქართულად"}>{language === "ka" ? "EN" : "KA"}</button><button className="lido-motion-control" aria-pressed={motion} onClick={() => setMotion(value => !value)}>{copy.motion}<span aria-hidden="true" className="lido-switch" /></button></div></header>
+    <header className="lido-toolbar"><Link to="/invitations" aria-label={copy.back}><InvitationArtwork name="arrow-left" size={20} /><span>11:11</span></Link><div><button onClick={() => setLanguage((language === "ka" ? "en" : "ka"))} aria-label={captionValue("invitations.pages.PinkLidoExperience.caption4", language)}>{captionValue("invitations.pages.PinkLidoExperience.caption5", language)}</button><button className="lido-motion-control" aria-pressed={motion} onClick={() => setMotion(value => !value)}>{copy.motion}<span aria-hidden="true" className="lido-switch" /></button></div></header>
     {!blue && <><div className="lido-palm lido-palm-left" aria-hidden="true"><img src={`${art}palm.webp`} alt="" /></div><div className="lido-palm lido-palm-right" aria-hidden="true"><img src={`${art}palm.webp`} alt="" /></div></>}
     <section className="lido-invitation" aria-labelledby="lido-title"><h1 id="lido-title"><span>{copy.name}</span><em>{copy.title}</em></h1><p className="lido-line">{copy.line}</p><p className="lido-date">{copy.date} <span className="lido-date-dot" aria-hidden="true" /> 14:00 <span className="lido-date-dot" aria-hidden="true" /> {copy.city}</p><button className="lido-primary" onClick={openParty}>{copy.dive}<InvitationArtwork name="arrow-right" size={20} /></button></section>
     <div className="lido-pool-scene"><img className="lido-pool" src={`${art}pool.png`} alt="" /><button className="lido-water" aria-label={copy.splash} onClick={splash}>{ripples.map(item => <span key={item.id} className="lido-ripple" style={{ left: item.x, top: item.y }} />)}</button><img className="lido-ring" src={`${art}ring.webp`} alt="" /><div className="lido-water-hint" aria-hidden="true"><svg width="42" height="24" viewBox="0 0 42 24" fill="none" stroke="currentColor" strokeWidth="1.5" aria-hidden="true"><path d="M2 8c6-8 12 8 18 0s12 8 20 0M2 16c6-8 12 8 18 0s12 8 20 0" /></svg>{copy.splash}</div></div>
     <img className={blue ? "splash-ladder" : "lido-umbrella"} src={`${art}${blue ? "ladder" : "umbrella"}.webp`} alt="" />
-    <a className="lido-scroll-cue" href="#lido-details" aria-label={language === "ka" ? "წვეულების დეტალები" : "Scroll to party details"}><InvitationArtwork name="arrow-down" size={22} /></a>
+    <a className="lido-scroll-cue" href="#lido-details" aria-label={captionValue("invitations.pages.PinkLidoExperience.caption6", language)}><InvitationArtwork name="arrow-down" size={22} /></a>
     </section>
     <section ref={details} id="lido-details" tabIndex={-1} className="lido-chapter lido-details-chapter" aria-labelledby="lido-details-title">
       <div className="lido-chapter-copy">
         <p className="lido-detail-intro">{copy.intro}</p>
         <h2 id="lido-details-title">{copy.details}</h2>
         <div className="lido-facts">
-          <div><span>01 / {language === "ka" ? "როდის" : "WHEN"}</span><p>{copy.when}<br />14:00 – 17:00</p><button onClick={calendar}>{copy.calendar}<InvitationArtwork name="arrow-up-right" size={16} /></button></div>
-          <div><span>02 / {language === "ka" ? "სად" : "WHERE"}</span><p>{copy.where}</p><small>{copy.venue}</small></div>
+          <div><span>01 / {captionValue("invitations.pages.PinkLidoExperience.caption7", language)}</span><p>{copy.when}<br />14:00 – 17:00</p><button onClick={calendar}>{copy.calendar}<InvitationArtwork name="arrow-up-right" size={16} /></button></div>
+          <div><span>02 / {captionValue("invitations.pages.PinkLidoExperience.caption8", language)}</span><p>{copy.where}</p><small>{copy.venue}</small></div>
         </div>
         <p className="lido-bring">{copy.bring}</p>
         <a className="lido-chapter-link" href="#lido-plan">{copy.plan} <InvitationArtwork name="arrow-down" size={20} /></a>
@@ -122,7 +159,7 @@ export default function PinkLidoExperience({ theme = "pink-lido" }) {
         <h2 id="lido-wishes-title">{copy.wishTitle}</h2>
         <p className="lido-wish-intro">{copy.wishIntro}</p>
         <div className="lido-wish-content" aria-live="polite">
-          {wish ? <div className="lido-wish-note"><p className="lido-wish-message">{wish.message}</p><p className="lido-wish-author">{wish.name}</p><p className="lido-wish-status">{wishStored ? copy.wishSaved : (language === "ka" ? "სურვილი შენახულია ამ სესიაში." : "Your wish is saved for this session only.")}</p><button onClick={editWish}>{copy.wishEdit}<InvitationArtwork name="pen" size={16} /></button></div> :
+          {wish ? <div className="lido-wish-note"><p className="lido-wish-message">{wish.message}</p><p className="lido-wish-author">{wish.name}</p><p className="lido-wish-status">{wishStored ? copy.wishSaved : (captionValue("invitations.pages.PinkLidoExperience.caption9", language))}</p><button onClick={editWish}>{copy.wishEdit}<InvitationArtwork name="pen" size={16} /></button></div> :
             <form className="lido-wish-form" onSubmit={saveWish}>
               <label htmlFor="lido-wish-name">{copy.label}</label>
               <input id="lido-wish-name" value={wishName} onChange={event => setWishName(event.target.value)} required maxLength={80} pattern={".*\\S.*"} autoComplete="name" />
@@ -138,7 +175,7 @@ export default function PinkLidoExperience({ theme = "pink-lido" }) {
     </section>
     <section id="lido-rsvp" className="lido-chapter lido-rsvp-chapter" aria-labelledby="lido-rsvp-title">
       <div className="lido-chapter-copy lido-rsvp" aria-live="polite">
-        {reply ? <><h2 id="lido-rsvp-title">{reply.attending === "yes" ? copy.thanks : copy.miss}</h2><p className="lido-reply-name">{reply.name}</p><p>{storageSaved ? copy.saved : (language === "ka" ? "პასუხი შენახულია მხოლოდ ამ სესიაში." : "Your reply is saved for this session only.")}</p><button onClick={editReply}>{copy.change}<InvitationArtwork name="arrow-right" size={18} /></button></> : <form onSubmit={saveReply}>
+        {reply ? <><h2 id="lido-rsvp-title">{reply.attending === "yes" ? copy.thanks : copy.miss}</h2><p className="lido-reply-name">{reply.name}</p><p>{storageSaved ? copy.saved : (captionValue("invitations.pages.PinkLidoExperience.caption10", language))}</p><button onClick={editReply}>{copy.change}<InvitationArtwork name="arrow-right" size={18} /></button></> : <form onSubmit={saveReply}>
           <h2 id="lido-rsvp-title">{copy.rsvp}</h2>
           <label htmlFor="lido-guest-name">{copy.label}</label>
           <input id="lido-guest-name" value={name} onChange={event => setName(event.target.value)} required maxLength={80} pattern={".*\\S.*"} autoComplete="name" />
@@ -146,7 +183,7 @@ export default function PinkLidoExperience({ theme = "pink-lido" }) {
           <button className="lido-primary" type="submit">{copy.send}<InvitationArtwork name="arrow-right" size={20} /></button>
         </form>}
         <p className="lido-demo">{copy.demo}</p>
-        <a className="lido-chapter-link" href="#lido-cover">{language === "ka" ? "თავში დაბრუნება" : "Back to the sunshine"}<InvitationArtwork name="arrow-down" size={20} className="lido-icon-up" /></a>
+        <a className="lido-chapter-link" href="#lido-cover">{captionValue("invitations.pages.PinkLidoExperience.caption11", language)}<InvitationArtwork name="arrow-down" size={20} className="lido-icon-up" /></a>
       </div>
       <div className="lido-chapter-art lido-rsvp-art" aria-hidden="true"><img className="lido-rsvp-pool" src={`${art}pool.png`} alt="" /><img className="lido-rsvp-ring" src={`${art}ring.webp`} alt="" /></div>
     </section>

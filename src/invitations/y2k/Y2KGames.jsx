@@ -1,3 +1,5 @@
+import { useLanguage } from "../../localization/LanguageContext.jsx";
+import { captionValue } from "../../localization/captionValues.js";
 import { useEffect, useRef, useState } from 'react';
 import InvitationArtwork from '../components/InvitationArtwork.jsx';
 import { advanceRound, clampTray, createRound, GAME_SECONDS, makeMemoryDeck } from './gameModel.js';
@@ -5,6 +7,8 @@ import { advanceRound, clampTray, createRound, GAME_SECONDS, makeMemoryDeck } fr
 const assets = '/images/birthday/y2k-experience/';
 
 export function CDCatch({ t }) {
+ const { language } = useLanguage();
+
   const canvas = useRef(null);
   const area = useRef(null);
   const position = useRef(0.5);
@@ -85,23 +89,25 @@ export function CDCatch({ t }) {
   return <div className="y2k-game-unit">
     <div className="y2k-console">
       <img className="y2k-console-shell" src={`${assets}violet-console.png`} alt="" aria-hidden="true" loading="lazy" width="1536" height="1024" />
-      <div ref={area} className={`y2k-game-screen is-${status}`} tabIndex={0} role="group" aria-label={t('CD Catch game. Use left and right arrow keys, or drag to move.', 'CD Catch თამაში. იმოძრავე ისრის ღილაკებით ან თითის გასმით.')}
+      <div ref={area} className={`y2k-game-screen is-${status}`} tabIndex={0} role="group" aria-label={captionValue("invitations.y2k.Y2KGames.caption1", language)}
         onKeyDown={e => { if (status === 'playing' && ['ArrowLeft', 'ArrowRight'].includes(e.key)) { e.preventDefault(); direction.current = e.key === 'ArrowLeft' ? -1 : 1; } }}
         onKeyUp={e => { if (['ArrowLeft', 'ArrowRight'].includes(e.key)) { e.preventDefault(); direction.current = 0; } }}
         onBlur={() => { direction.current = 0; }}
         onPointerDown={e => { if (status === 'playing') { e.currentTarget.setPointerCapture(e.pointerId); move(e); } }} onPointerMove={move}>
-        <div className="y2k-game-hud"><span>CD CATCH</span><span>{t('TIME', 'დრო')} {hud.seconds}</span></div>
+        <div className="y2k-game-hud"><span>CD CATCH</span><span>{captionValue("invitations.y2k.Y2KGames.caption2", language)} {hud.seconds}</span></div>
         <canvas ref={canvas} width="600" height="360" aria-hidden="true" />
-        <span className="y2k-game-score">{t('SCORE', 'ქულა')} {hud.score.toString().padStart(2, '0')}</span>
-        {status !== 'playing' && <div className="y2k-game-overlay"><p>{status === 'finished' ? t('GOOD GAME!', 'კარგი თამაში!') : status === 'paused' ? t('PAUSED', 'პაუზა') : t('READY, PLAYER?', 'მზად ხარ?')}</p>{status === 'finished' && <span>{hud.score} {t('CDs collected', 'შეგროვებული CD')}</span>}<button className="y2k-button" disabled={!loaded} onClick={start}>{!loaded ? t('Loading…', 'იტვირთება…') : status === 'paused' ? t('Resume', 'გაგრძელება') : status === 'finished' ? t('Play again', 'თავიდან თამაში') : t('Start game', 'თამაშის დაწყება')}</button></div>}
+        <span className="y2k-game-score">{captionValue("invitations.y2k.Y2KGames.caption3", language)} {hud.score.toString().padStart(2, '0')}</span>
+        {status !== 'playing' && <div className="y2k-game-overlay"><p>{status === 'finished' ? captionValue("invitations.y2k.Y2KGames.caption4", language) : status === 'paused' ? captionValue("invitations.y2k.Y2KGames.caption5", language) : captionValue("invitations.y2k.Y2KGames.caption6", language)}</p>{status === 'finished' && <span>{hud.score} {captionValue("invitations.y2k.Y2KGames.caption7", language)}</span>}<button className="y2k-button" disabled={!loaded} onClick={start}>{!loaded ? captionValue("invitations.y2k.Y2KGames.caption8", language) : status === 'paused' ? captionValue("invitations.y2k.Y2KGames.caption9", language) : status === 'finished' ? captionValue("invitations.y2k.Y2KGames.caption10", language) : captionValue("invitations.y2k.Y2KGames.caption11", language)}</button></div>}
       </div>
     </div>
-    <div className="y2k-game-controls"><p id="y2k-game-instructions">{t('Drag to catch. Or use your arrow keys.', 'დაიჭირე თითის გასმით ან ისრის ღილაკებით.')}</p><span className="y2k-game-mobile-hud">{t('Score', 'ქულა')}: {hud.score} / {t('Time', 'დრო')}: {hud.seconds}</span>{status !== 'playing' && <button className="y2k-button y2k-game-mobile-start" disabled={!loaded} onClick={start}>{status === 'paused' ? t('Resume', 'გაგრძელება') : status === 'finished' ? t('Play again', 'თავიდან თამაში') : t('Start game', 'თამაშის დაწყება')}</button>}<button className="y2k-icon-button" disabled={status !== 'playing'} onClick={() => { direction.current = 0; setStatus('paused'); }} aria-label={t('Pause game', 'თამაშის დაპაუზება')}><InvitationArtwork name="pause" /></button></div>
-    <p className="y2k-sr-only" role="status">{status === 'finished' ? t(`Game over. You caught ${hud.score} CDs.`, `თამაში დასრულდა. დაიჭირე ${hud.score} CD.`) : status === 'paused' ? t('Game paused.', 'თამაში დაპაუზებულია.') : ''}</p>
+    <div className="y2k-game-controls"><p id="y2k-game-instructions">{captionValue("invitations.y2k.Y2KGames.caption12", language)}</p><span className="y2k-game-mobile-hud">{captionValue("invitations.y2k.Y2KGames.caption13", language)}: {hud.score} / {captionValue("invitations.y2k.Y2KGames.caption14", language)}: {hud.seconds}</span>{status !== 'playing' && <button className="y2k-button y2k-game-mobile-start" disabled={!loaded} onClick={start}>{status === 'paused' ? captionValue("invitations.y2k.Y2KGames.caption15", language) : status === 'finished' ? captionValue("invitations.y2k.Y2KGames.caption16", language) : captionValue("invitations.y2k.Y2KGames.caption17", language)}</button>}<button className="y2k-icon-button" disabled={status !== 'playing'} onClick={() => { direction.current = 0; setStatus('paused'); }} aria-label={captionValue("invitations.y2k.Y2KGames.caption18", language)}><InvitationArtwork name="pause" /></button></div>
+    <p className="y2k-sr-only" role="status">{status === 'finished' ? captionValue("ui.invitations.y2k.Y2KGames.gameOverYouCaughtCds", language, { value1: hud.score }) : status === 'paused' ? captionValue("invitations.y2k.Y2KGames.caption19", language) : ''}</p>
   </div>;
 }
 
 export function MemoryMatch({ t }) {
+ const { language } = useLanguage();
+
   const [deck, setDeck] = useState(makeMemoryDeck);
   const [open, setOpen] = useState([]);
   const [matched, setMatched] = useState([]);
@@ -120,8 +126,8 @@ export function MemoryMatch({ t }) {
     }
   }
   function restart() { clearTimeout(timer.current); setDeck(makeMemoryDeck()); setOpen([]); setMatched([]); setMoves(0); }
-  return <div className="y2k-memory"><div className="y2k-memory-status"><span>MEMORY.MATCH</span><span>{moves} {t('moves', 'სვლა')}</span></div><div className="y2k-memory-grid">{deck.map((card, index) => {
+  return <div className="y2k-memory"><div className="y2k-memory-status"><span>MEMORY.MATCH</span><span>{moves} {captionValue("invitations.y2k.Y2KGames.caption20", language)}</span></div><div className="y2k-memory-grid">{deck.map((card, index) => {
     const visible = open.includes(card.id) || matched.includes(card.pair);
-    return <button key={card.id} className={`y2k-memory-card ${visible ? 'is-flipped' : ''} ${matched.includes(card.pair) ? 'is-matched' : ''}`} onClick={() => flip(card)} disabled={matched.includes(card.pair)} aria-label={visible ? t(`${card.icon}, card ${index + 1}`, `${card.icon}, ბარათი ${index + 1}`) : t(`Reveal card ${index + 1}`, `გახსენი ბარათი ${index + 1}`)} aria-pressed={visible}>{visible ? <InvitationArtwork name={card.icon} size={35} /> : <span className="y2k-card-back">11:11</span>}</button>;
-  })}</div><div className="y2k-memory-bottom"><p role="status">{complete ? t('All matched. Best friends forever.', 'ყველა წყვილი ნაპოვნია. მეგობრები სამუდამოდ.') : t(`${matched.length} / 6 pairs found`, `${matched.length} / 6 წყვილი ნაპოვნია`)}</p><button className="y2k-button y2k-button-small" onClick={restart}>{t('New game', 'ახალი თამაში')}</button></div></div>;
+    return <button key={card.id} className={`y2k-memory-card ${visible ? 'is-flipped' : ''} ${matched.includes(card.pair) ? 'is-matched' : ''}`} onClick={() => flip(card)} disabled={matched.includes(card.pair)} aria-label={visible ? captionValue("ui.invitations.y2k.Y2KGames.card", language, { value1: card.icon, value2: index + 1 }) : captionValue("ui.invitations.y2k.Y2KGames.revealCard", language, { value1: index + 1 })} aria-pressed={visible}>{visible ? <InvitationArtwork name={card.icon} size={35} /> : <span className="y2k-card-back">11:11</span>}</button>;
+  })}</div><div className="y2k-memory-bottom"><p role="status">{complete ? captionValue("invitations.y2k.Y2KGames.caption21", language) : captionValue("ui.invitations.y2k.Y2KGames.6PairsFound", language, { value1: matched.length })}</p><button className="y2k-button y2k-button-small" onClick={restart}>{captionValue("invitations.y2k.Y2KGames.caption22", language)}</button></div></div>;
 }

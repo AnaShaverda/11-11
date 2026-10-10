@@ -1,3 +1,4 @@
+import { captionValue } from "../../localization/captionValues.js";
 import InvitationPhone from "../components/InvitationPhone.jsx";
 import { useEffect, useState } from "react";
 import { Link, useNavigate, useParams, useSearchParams } from "react-router-dom";
@@ -23,16 +24,12 @@ export default function CustomDesignGalleryPage() {
   const [selectedIndex, setSelectedIndex] = useState(defaultIndex);
   useEffect(() => { setSelectedIndex(defaultIndex); }, [occasion, defaultIndex]);
   const theme = themes[selectedIndex] ?? themes[0];
-  const copy = language === "ka" ? {
-    eyebrow: "შენი დიზაინი", title: "ნახე მთელი მოსაწვევი", intro: "აირჩიე დიზაინი და ნახე მოსაწვევი ამავე მობილურზე.", wedding: "ქორწილი", christening: "ნათლობა", choose: "ამ დიზაინის არჩევა", back: "კოლექციაში დაბრუნება", full: "ნახე სრულ ეკრანზე", select: "დიზაინის არჩევა", preview: "მოსაწვევი",
-  } : {
-    eyebrow: "Create your own", title: "Experience the whole invitation", intro: "Choose a design and see the invitation in the same phone.", wedding: "Wedding", christening: "Christening", choose: "Choose this design", back: "Back to collection", full: "View fullscreen", select: "Choose a design", preview: "Invitation",
-  };
+  const copy = { eyebrow: captionValue("ui.invitations.pages.CustomDesignGalleryPage.createYourOwn", language), title: captionValue("ui.invitations.pages.CustomDesignGalleryPage.experienceTheWholeInvitation", language), intro: captionValue("ui.invitations.pages.CustomDesignGalleryPage.chooseADesignAndSeeTheInvitation", language), wedding: captionValue("ui.invitations.pages.CustomDesignGalleryPage.wedding", language), christening: captionValue("ui.invitations.pages.CustomDesignGalleryPage.christening", language), choose: captionValue("ui.invitations.pages.CustomDesignGalleryPage.chooseThisDesign", language), back: captionValue("ui.invitations.pages.CustomDesignGalleryPage.backToCollection", language), full: captionValue("ui.invitations.pages.CustomDesignGalleryPage.viewFullscreen", language), select: captionValue("ui.invitations.pages.CustomDesignGalleryPage.chooseADesign", language), preview: captionValue("ui.invitations.pages.CustomDesignGalleryPage.invitation", language) };
   if (!template) return <main className="inner-page copy-page"><h1>{t("invitations.notFound.title")}</h1><Link to="/invitations">{t("invitations.allInvitations")}</Link></main>;
 
   return <div className="custom-design-gallery-page"><div className="custom-design-gallery-inner">
     <div className="custom-design-gallery-toolbar">
-    {category === "all" && <div className="custom-design-gallery-tabs" role="group" aria-label={language === "ka" ? "ღონისძიების ტიპი" : "Event type"}>
+    {category === "all" && <div className="custom-design-gallery-tabs" role="group" aria-label={captionValue("invitations.pages.CustomDesignGalleryPage.caption1", language)}>
       {["wedding", "christening"].map(type => <button key={type} type="button" aria-pressed={occasion === type} onClick={() => setSearchParams({ occasion: type })}>{copy[type]}</button>)}
     </div>}
     </div>

@@ -1,3 +1,4 @@
+import { captionValue } from "../../localization/captionValues.js";
 import InvitationMakerFooter from "./InvitationMakerFooter.jsx";
 import RibbonSketchToolbar from "../ribbon-sketch/RibbonSketchToolbar.jsx";
 import GuestMusicControl from "./GuestMusicControl.jsx";
@@ -262,16 +263,16 @@ function DayPlanCard({ dayPlan, design, onEditText, tools, editor, headingField 
 function CustomMomentsCard({ moments, city, date, design, images = {} }) {
   const { language } = useLanguage();
   return <NoteCard design={design} className="guest-custom-moments" id="guest-custom-moments" aria-labelledby="guest-custom-moments-title" ornament={1} tabIndex={-1}>
-    <h2 id="guest-custom-moments-title">{language === "ka" ? "ღონისძიების დეტალები" : "Event details"}</h2>
+    <h2 id="guest-custom-moments-title">{captionValue("invitations.components.GuestCardSuite.caption1", language)}</h2>
     {date && <p className="guest-custom-moments-date">{date}</p>}
     {design.detailsArtwork && <img className="wedding-details-illustration" src={design.detailsArtwork} alt="" loading="lazy" decoding="async" />}
     <ol>{sortMomentsByTime(moments).map((moment, index) => <li key={moment.id} data-moment-id={moment.id}>
       {images[moment.id]?.src && <img className="guest-custom-moment-image" src={images[moment.id].src} alt="" loading="lazy" decoding="async" />}
       <span className="guest-custom-moment-number">{String(index + 1).padStart(2, "0")}</span>
-      <div><time>{moment.unknownTime || !moment.time ? (language === "ka" ? "დრო დაზუსტდება" : "Time to follow") : moment.time}</time>
+      <div><time>{moment.unknownTime || !moment.time ? (captionValue("invitations.components.GuestCardSuite.caption2", language)) : moment.time}</time>
         <h3>{(language === "ka" ? moment.ka : moment.en) || moment.en || moment.ka}</h3>
         {moment.venue && <p>{moment.venue}</p>}
-        {moment.venue && <a href={momentMapUrl(moment, city)} target="_blank" rel="noreferrer">{language === "ka" ? "რუკა" : "Map"} <InvitationArtwork name="arrow-up-right" size={15} /></a>}
+        {moment.venue && <a href={momentMapUrl(moment, city)} target="_blank" rel="noreferrer">{captionValue("invitations.components.GuestCardSuite.caption3", language)} <InvitationArtwork name="arrow-up-right" size={15} /></a>}
       </div>
     </li>)}</ol>
   </NoteCard>;
@@ -360,7 +361,7 @@ export default function GuestCardSuite({ template, sample, copyTranslations, edi
     {template.isCustom && !creator && <RibbonSketchToolbar backTo="/" backHistory showMotion={false} />}
     {!(template.isCustom && !creator) && <nav className="guest-nav" aria-label={sample.title}>
       <span className="guest-wordmark">11:11</span>
-      <div><a href="#guest-invitation">{t("guestCards.invitation")}</a>{settings.gallery && (showCreatorTools || photos.length > 0) && <a href="#guest-photos">{t("guestCards.photos")}</a>}{settings.details && <a href="#guest-event-details">{t("guestCards.details")}</a>}{moments.length > 0 && <a href="#guest-custom-moments">{language === "ka" ? "განრიგი" : "Schedule"}</a>}{dayPlanCard && <a href="#guest-day-plan">{t("guestCards.plan.title")}</a>}{settings.rsvp && <a href="#guest-rsvp">{t("guestCards.rsvp")}</a>}{noteSettings.enabled && <a href="#guest-notes">{t("guestCards.notes.title")}</a>}</div>
+      <div><a href="#guest-invitation">{t("guestCards.invitation")}</a>{settings.gallery && (showCreatorTools || photos.length > 0) && <a href="#guest-photos">{t("guestCards.photos")}</a>}{settings.details && <a href="#guest-event-details">{t("guestCards.details")}</a>}{moments.length > 0 && <a href="#guest-custom-moments">{captionValue("invitations.components.GuestCardSuite.caption4", language)}</a>}{dayPlanCard && <a href="#guest-day-plan">{t("guestCards.plan.title")}</a>}{settings.rsvp && <a href="#guest-rsvp">{t("guestCards.rsvp")}</a>}{noteSettings.enabled && <a href="#guest-notes">{t("guestCards.notes.title")}</a>}</div>
     </nav>}
     {settings.music && <GuestMusicControl />}
     <div className="guest-card-layout">
@@ -368,7 +369,7 @@ export default function GuestCardSuite({ template, sample, copyTranslations, edi
         <section className={`guest-main-card${presentation === "portrait" ? " is-portrait" : " is-square-mobile"}`} id="guest-invitation" aria-label={t("guestCards.invitation")}>
           <div className="guest-main-content">
             <InvitationEntrance key={entranceKey} settings={creator && !previewOpening ? { ...settings, entrance: "immediate", openingEffect: "none" } : settings} design={design} title={sample.name ?? sample.posterName ?? sample.title} initials={sample.initials} reducedMotion={reducedMotion} onComplete={completeEntrance}>
-              {template.isCustom ? <CustomInvitationCover design={customDesign} sample={sample} invitationLabel={t("guestCards.invitation")} invitationGreeting={language === "ka" ? "გეპატიჟებით" : "You’re invited"} adaptiveArtwork={weddingTheme.occasion !== "christening" && (adaptiveCoverArtwork || fullscreenCards || !creator)} />
+              {template.isCustom ? <CustomInvitationCover design={customDesign} sample={sample} invitationLabel={t("guestCards.invitation")} invitationGreeting={captionValue("invitations.components.GuestCardSuite.caption5", language)} adaptiveArtwork={weddingTheme.occasion !== "christening" && (adaptiveCoverArtwork || fullscreenCards || !creator)} />
                 : <EditableInvitationArtwork fields={editableFields} onEdit={onEditText}><CardCopyProvider overrides={copyTranslations}><InvitationCardArtwork template={template} large presentation={presentation} sample={sample} ariaLabel={sample.title} /></CardCopyProvider></EditableInvitationArtwork>}
             </InvitationEntrance>
           </div>
@@ -402,8 +403,8 @@ export default function GuestCardSuite({ template, sample, copyTranslations, edi
         </div>
         {settings.details && moments.length > 0 && <div className="guest-section-screen" data-section="moments"><CustomMomentsCard moments={moments} city={city} date={sample.displayDate} design={design} images={momentImages} /></div>}
         {template.isCustom && weddingParty.some(person => person.name.trim() || creator) && <div className="guest-section-screen" data-section="wedding-party"><NoteCard design={design} className="guest-wedding-party" id="guest-wedding-party" aria-labelledby="guest-wedding-party-title" tabIndex={-1}>
-          <h2 id="guest-wedding-party-title">{language === "ka" ? "ჩვენი მეჯვარეები" : "Our wedding party"}</h2>
-          <ul>{weddingParty.filter(person => creator || person.name.trim()).map(person => <li key={person.id}><small>{weddingPartyRoleLabel(person.role,language)}</small><p>{person.name.trim() || (language === "ka" ? "სახელი და გვარი" : "Full name")}</p></li>)}</ul>
+          <h2 id="guest-wedding-party-title">{captionValue("invitations.components.GuestCardSuite.caption6", language)}</h2>
+          <ul>{weddingParty.filter(person => creator || person.name.trim()).map(person => <li key={person.id}><small>{weddingPartyRoleLabel(person.role,language)}</small><p>{person.name.trim() || (captionValue("invitations.components.GuestCardSuite.caption7", language))}</p></li>)}</ul>
         </NoteCard></div>}
         {dayPlanCard && <div className="guest-section-screen" data-section="plan">{dayPlanCard}</div>}
         {showCreatorTools && !dayPlanCard && <CanvasAddSection section="plan" onAdd={onAddSection} />}

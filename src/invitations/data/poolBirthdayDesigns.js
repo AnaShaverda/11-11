@@ -1,7 +1,9 @@
+import { captionValue, createCaptionCopy } from "../../localization/captionValues.js";
+
 // Approved gouache pool studies; shared imagery across every card presentation.
 const studies = [
-  { slug: "pink-lido", name: "Pink Lido", kaName: "ვარდისფერი აუზი", palette: ["#fbe1dc", "#be4169", "#9cd5d0", "#f9d46b"], description: "Pink painted stripes, a mint pool, and a little yellow parasol.", kaDescription: "ვარდისფერი დახატული ზოლები, პიტნისფერი აუზი და პატარა ყვითელი ქოლგა." },
-  { slug: "blue-splash", name: "Blue Splash", kaName: "ლურჯი შხეფები", palette: ["#f8f2e6", "#075a9f", "#9cd5e0", "#f9d46b"], description: "Loose blue gingham, aqua ripples, and a sunny yellow swim ring.", kaDescription: "ლურჯი დახატული უჯრები, ცისფერი ტალღები და მზიანი ყვითელი საცურაო რგოლი." },
+  { slug: "pink-lido", name: createCaptionCopy("data.data.poolBirthdayDesigns.record1.name").en, kaName: createCaptionCopy("data.data.poolBirthdayDesigns.record1.name").ka, palette: ["#fbe1dc", "#be4169", "#9cd5d0", "#f9d46b"], description: createCaptionCopy("data.data.poolBirthdayDesigns.record2.description").en, kaDescription: createCaptionCopy("data.data.poolBirthdayDesigns.record2.description").ka },
+  { slug: "blue-splash", name: createCaptionCopy("data.data.poolBirthdayDesigns.record3.name").en, kaName: createCaptionCopy("data.data.poolBirthdayDesigns.record3.name").ka, palette: ["#f8f2e6", "#075a9f", "#9cd5e0", "#f9d46b"], description: createCaptionCopy("data.data.poolBirthdayDesigns.record4.description").en, kaDescription: createCaptionCopy("data.data.poolBirthdayDesigns.record4.description").ka },
 ];
 const id = (s) => `birthday-${s.slug}`;
 const records = (fn) => Object.fromEntries(studies.map((s) => [id(s), fn(s)]));
@@ -14,17 +16,53 @@ export const poolBirthdayAssets = records((s) => ({ paintedPool: true, coverImag
 export const poolBirthdayPortraits = records(art);
 export const poolBirthdaySamples = records(() => ({ title: "Aniko’s Pool Party", name: "Aniko", posterName: "Aniko", posterAge: 7, headline: "SPLASH!", opening: "POOL PARTY", date: "18 JULY 2027", time: "14:00", location: "TBILISI", line: "Dive in for a day of sunny fun." }));
 export const poolBirthdayEvents = records(() => ({ title: "Aniko’s Pool Party", hostName: "Aniko", celebrationName: "Pool Party", age: 7, date: "18 July 2027", dateISO: "2027-07-18T14:00:00+04:00", time: "14:00", location: "Tbilisi", description: "Dive in for a day of sunny fun.", enabledModules: ["invitation", "countdown", "gallery", "rsvp"] }));
-const story = { eyebrow: "A LITTLE SUNSHINE", heroLine: "Dive in for a day of sunny fun.", ticker: "SUNSHINE · SPLASHES · BIRTHDAY WISHES", storyTitle: "A sunny day with our favorite people.", storyText: "Join Aniko for birthday cake, poolside games, and a splash of summer fun.", inviteMessage: "Bring your swimsuit and your brightest birthday wishes.", galleryTitle: "Sunshine memories.", galleryText: "Little moments from a sunny celebration.", storySignoff: "Aniko & family", photoTag: "POOL PARTY", inviteOpening: "You’re invited", inviteFooter: "SUNSHINE · GOOD FRIENDS", communityTitle: "A little birthday love.", communityText: "Share a wish or a favorite memory.", rsvpTitle: "Will you dive in?", rsvpText: "Save your place at the pool party.", footer: "SUNNY DAYS · HAPPY BIRTHDAYS" };
+const story = createCaptionCopy({
+  "eyebrow": "data.data.poolBirthdayDesigns.story.eyebrow",
+  "heroLine": "data.data.poolBirthdayDesigns.story.heroLine",
+  "ticker": "data.data.poolBirthdayDesigns.story.ticker",
+  "storyTitle": "data.data.poolBirthdayDesigns.story.storyTitle",
+  "storyText": "data.data.poolBirthdayDesigns.story.storyText",
+  "inviteMessage": "data.data.poolBirthdayDesigns.story.inviteMessage",
+  "galleryTitle": "data.data.poolBirthdayDesigns.story.galleryTitle",
+  "galleryText": "data.data.poolBirthdayDesigns.story.galleryText",
+  "storySignoff": "data.data.poolBirthdayDesigns.story.storySignoff",
+  "photoTag": "data.data.poolBirthdayDesigns.story.photoTag",
+  "inviteOpening": "data.data.poolBirthdayDesigns.story.inviteOpening",
+  "inviteFooter": "data.data.poolBirthdayDesigns.story.inviteFooter",
+  "communityTitle": "data.data.poolBirthdayDesigns.story.communityTitle",
+  "communityText": "data.data.poolBirthdayDesigns.story.communityText",
+  "rsvpTitle": "data.data.poolBirthdayDesigns.story.rsvpTitle",
+  "rsvpText": "data.data.poolBirthdayDesigns.story.rsvpText",
+  "footer": "data.data.poolBirthdayDesigns.story.footer"
+}).en;
 export const poolBirthdayStories = Object.fromEntries(studies.map((s) => [s.slug, { ...story }]));
 export const poolBirthdayCaptions = { en: {}, ka: {} };
 export const poolBirthdayCardCopy = {};
-const kaStory = { eyebrow: "ცოტაოდენი მზე", heroLine: "შემოგვიერთდი მზიან და მხიარულ დღეს.", ticker: "მზე · შხეფები · დაბადების დღის სურვილები", storyTitle: "მზიანი დღე საყვარელ ადამიანებთან ერთად.", storyText: "ანიკოსთან ერთად ვიზეიმოთ ტორტით, აუზის თამაშებითა და ზაფხულის მხიარულებით.", inviteMessage: "წამოიღე საცურაო კოსტიუმი და ყველაზე ნათელი სურვილები.", galleryTitle: "მზიანი მოგონებები.", galleryText: "მზიანი დღესასწაულის პატარა მომენტები.", storySignoff: "ანიკო და ოჯახი", photoTag: "აუზის წვეულება", inviteOpening: "გეპატიჟებით", inviteFooter: "მზე · კარგი მეგობრები", communityTitle: "სიყვარულით სავსე სურვილები.", communityText: "გაგვიზიარე სურვილი ან საყვარელი მოგონება.", rsvpTitle: "შემოგვიერთდები?", rsvpText: "დაიკავე ადგილი აუზის წვეულებაზე.", footer: "მზიანი დღეები · ბედნიერი დაბადების დღე" };
+const kaStory = createCaptionCopy({
+  "eyebrow": "data.data.poolBirthdayDesigns.story.eyebrow",
+  "heroLine": "data.data.poolBirthdayDesigns.story.heroLine",
+  "ticker": "data.data.poolBirthdayDesigns.story.ticker",
+  "storyTitle": "data.data.poolBirthdayDesigns.story.storyTitle",
+  "storyText": "data.data.poolBirthdayDesigns.story.storyText",
+  "inviteMessage": "data.data.poolBirthdayDesigns.story.inviteMessage",
+  "galleryTitle": "data.data.poolBirthdayDesigns.story.galleryTitle",
+  "galleryText": "data.data.poolBirthdayDesigns.story.galleryText",
+  "storySignoff": "data.data.poolBirthdayDesigns.story.storySignoff",
+  "photoTag": "data.data.poolBirthdayDesigns.story.photoTag",
+  "inviteOpening": "data.data.poolBirthdayDesigns.story.inviteOpening",
+  "inviteFooter": "data.data.poolBirthdayDesigns.story.inviteFooter",
+  "communityTitle": "data.data.poolBirthdayDesigns.story.communityTitle",
+  "communityText": "data.data.poolBirthdayDesigns.story.communityText",
+  "rsvpTitle": "data.data.poolBirthdayDesigns.story.rsvpTitle",
+  "rsvpText": "data.data.poolBirthdayDesigns.story.rsvpText",
+  "footer": "data.data.poolBirthdayDesigns.story.footer"
+}).ka;
 for (const s of studies) {
-  for (const [lang, name, description, mood] of [["en", s.name, s.description, "Pastel · poolside · painted"], ["ka", s.kaName, s.kaDescription, "პასტელი · აუზი · დახატული"]]) for (const [key, value] of Object.entries({ name, description, style: description, mood })) poolBirthdayCaptions[lang][`themes.${id(s)}.${key}`] = value;
+  for (const [lang, name, description, mood] of [["en", s.name, s.description, "Pastel · poolside · painted"], ["ka", s.kaName, s.kaDescription, captionValue("themes.birthday-blue-splash.mood", "ka")]]) for (const [key, value] of Object.entries({ name, description, style: description, mood })) poolBirthdayCaptions[lang][`themes.${id(s)}.${key}`] = value;
   const localized = {
-    samples: { title: "ანიკოს აუზის წვეულება", name: "ანიკო", posterName: "ანიკო", headline: "შხეფები!", opening: "აუზის წვეულება", date: "18 ივლისი 2027", location: "თბილისი", line: "შემოგვიერთდი მზიან და მხიარულ დღეს." },
-    designs: { specimen: "შხეფები!", phrase: "შემოგვიერთდი მზიან და მხიარულ დღეს.", accentCard: "აუზის წვეულება", accentCopy: "მზე, შხეფები და დაბადების დღის სურვილები.", finish: "ცოტაოდენი მზე. ბევრი სიხარული." },
-    events: { title: "ანიკოს აუზის წვეულება", hostName: "ანიკო", celebrationName: "აუზის წვეულება", date: "18 ივლისი 2027", location: "თბილისი", description: "შემოგვიერთდი მზიან და მხიარულ დღეს." },
+    samples: { title: captionValue("cards.events.birthday-blue-splash.title", "ka"), name: captionValue("cards.events.birthday-slice-club.hostName", "ka"), posterName: captionValue("cards.events.birthday-slice-club.hostName", "ka"), headline: captionValue("cards.designs.birthday-blue-splash.specimen", "ka"), opening: captionValue("data.data.poolBirthdayDesigns.story.photoTag", "ka"), date: captionValue("invitations.pages.PizzaChefExperience.copy1.date", "ka"), location: captionValue("ribbonSketch.tbilisi.120", "ka"), line: captionValue("data.data.poolBirthdayDesigns.story.heroLine", "ka") },
+    designs: { specimen: captionValue("cards.designs.birthday-blue-splash.specimen", "ka"), phrase: captionValue("data.data.poolBirthdayDesigns.story.heroLine", "ka"), accentCard: captionValue("data.data.poolBirthdayDesigns.story.photoTag", "ka"), accentCopy: captionValue("cards.designs.birthday-blue-splash.accentCopy", "ka"), finish: captionValue("cards.designs.birthday-blue-splash.finish", "ka") },
+    events: { title: captionValue("cards.events.birthday-blue-splash.title", "ka"), hostName: captionValue("cards.events.birthday-slice-club.hostName", "ka"), celebrationName: captionValue("data.data.poolBirthdayDesigns.story.photoTag", "ka"), date: captionValue("invitations.pages.PizzaChefExperience.copy1.date", "ka"), location: captionValue("ribbonSketch.tbilisi.120", "ka"), description: captionValue("data.data.poolBirthdayDesigns.story.heroLine", "ka") },
   };
   for (const [namespace, fields] of Object.entries(localized)) for (const [field, value] of Object.entries(fields)) poolBirthdayCardCopy[`cards.${namespace}.${id(s)}.${field}`] = value;
   for (const [field, value] of Object.entries(kaStory)) poolBirthdayCardCopy[`cards.stories.${s.slug}.${field}`] = value;

@@ -155,3 +155,14 @@ export const guestCardCopy = {
     "guestCards.photos.family.0": "პატარა დასაწყისი", "guestCards.photos.family.1": "ერთად, სიყვარულით", "guestCards.photos.family.2": "ლამაზი დღე",
   },
 };
+
+Object.assign(guestCardCopy.en, {
+  "guestCards.entrance.embossedIvoryEnvelope": "Embossed ivory envelope",
+  "guestCards.entrance.embossedSageEnvelope": "Embossed sage envelope",
+  "guestCards.entrance.embossedBurgundyEnvelope": "Embossed burgundy envelope",
+});
+Object.assign(guestCardCopy.ka, {
+  "guestCards.entrance.embossedIvoryEnvelope": "რელიეფური სპილოსძვლისფერი კონვერტი",
+  "guestCards.entrance.embossedSageEnvelope": "რელიეფური სალბისფერი კონვერტი",
+  "guestCards.entrance.embossedBurgundyEnvelope": "რელიეფური ბორდოსფერი კონვერტი",
+});

@@ -1,3 +1,4 @@
+import { captionValue } from "../../localization/captionValues.js";
 import InvitationMakerFooter from "../components/InvitationMakerFooter.jsx";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
@@ -28,7 +29,7 @@ export default function PeachFizzExperience() {
     <header className="pf-toolbar">
       <Link to="/invitations" className="pf-brand" aria-label={text.back}><span>11:11</span></Link>
       <div className="pf-tools">
-        <button className="pf-language" onClick={() => setLanguage(language === "ka" ? "en" : "ka")} aria-label={language === "ka" ? "Switch to English" : "ქართულად"}>{language === "ka" ? "EN" : "KA"}</button>
+        <button className="pf-language" onClick={() => setLanguage((language === "ka" ? "en" : "ka"))} aria-label={captionValue("invitations.pages.PeachFizzExperience.caption2", language)}>{captionValue("invitations.pages.PeachFizzExperience.caption3", language)}</button>
         <button className="pf-motion-control" aria-pressed={motion} onClick={() => setMotion(value => !value)}>{text.motion}<span className="pf-switch" aria-hidden="true" /></button>
         <a className="pf-button pf-toolbar-rsvp" href="#pf-rsvp">{text.rsvp}</a>
       </div>
@@ -49,7 +50,7 @@ export default function PeachFizzExperience() {
           <button className="pf-button pf-outline pf-calendar" onClick={calendar}>{text.calendar}</button><p className="pf-venue">{text.venue}</p>
         </div>
         <div className="pf-evening"><h3 className="pf-label">{text.evening}</h3><ol className="pf-timeline">{["20:00", "21:00", "22:30", "00:00"].map((time, i) => <li key={time}><time>{time}</time><span>{text.schedule[i]}</span></li>)}</ol>
-          <div className="pf-dress"><h3 className="pf-label">{text.dress}</h3><div className="pf-swatches" role="img" aria-label={language === "ka" ? "ატმისფერი, იასამნისფერი, ოქროსფერი და ლურჯი" : "Peach, lilac, gold and navy"}>{["#f7c0ae", "#aa91c2", "#e6ac24", "#153d58"].map(color => <span key={color} style={{ background: color }} />)}</div><p>{text.dressLine}</p></div>
+          <div className="pf-dress"><h3 className="pf-label">{text.dress}</h3><div className="pf-swatches" role="img" aria-label={captionValue("invitations.pages.PeachFizzExperience.caption4", language)}>{["#f7c0ae", "#aa91c2", "#e6ac24", "#153d58"].map(color => <span key={color} style={{ background: color }} />)}</div><p>{text.dressLine}</p></div>
         </div>
       </div>
     </section>

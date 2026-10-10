@@ -7,6 +7,7 @@ import { poolBirthdayCaptions } from "../invitations/data/poolBirthdayDesigns.js
 import { girlyBirthdayCaptions } from "../invitations/data/girlyBirthdayDesigns.js";
 import { cardCopy } from "./cardCopy.js";
 import { guestCardCopy } from "./guestCardCopy.js";
+import { captionValues } from "./captionValues.js";
 
 export const defaultLanguage = "ka";
 export const languages = ["ka", "en"];
@@ -2829,6 +2830,10 @@ Object.assign(captions.ka, {
 
 Object.assign(captions.en, guestCardCopy.en);
 Object.assign(captions.ka, guestCardCopy.ka);
+
+for (const [captionKey, values] of Object.entries(captionValues)) {
+  for (const language of languages) captions[language][captionKey] = values[language];
+}
 
 Object.assign(captions.en, {
   "themes.birthday-desktop-sleepover.name": "Desktop Sleepover",

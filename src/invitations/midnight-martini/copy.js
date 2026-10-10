@@ -1,3 +1,4 @@
+import { createCaptionCopy } from "../../localization/captionValues.js";
 import { peachFizzCopy } from '../peach-fizz/copy.js';
 
 export const midnightAssets = {
@@ -6,56 +7,182 @@ export const midnightAssets = {
   star: '/images/components/separated/birthday-midnight-martini-gold-star.webp',
 };
 
-export const midnightCopy = {
-  en: {
-    ...peachFizzCopy.en,
-    headline: ['LET’S', 'CELEBRATE'], birthday: 'Dea’s birthday',
-    details: ['The evening,', 'stirred right.'], detailsLine: 'An intimate celebration of Dea, good food, great people and a few martinis.',
-    company: 'Good company. Great nights.',
-    schedule: ['Welcome drinks', 'Dinner & toasts', 'Cake & candles', 'One more song'],
-    scheduleNotes: ['Arrive, sip, catch up', 'Good food, better people', 'Make a wish', 'Same crowd, later hours'],
-    mixTitle: ['Make it', 'a martini.'], mixLine: 'How do you take yours?', mixChoices: ['Olive', 'A little sparkle', 'Extra pink'],
-    mixMessages: ['Good choice. Martinis taste better with you here.', 'A little sparkle for a memorable night.', 'A little pink. A lot to celebrate.'],
-    cheersButton: 'Cheers to Dea', cheersAgain: 'One more toast', cheersMessage: 'To Dea — here’s to your next great chapter.',
-    gamesTitle: ['A little', 'after-hours play.'], gamesLine: 'A few fun moments while we count down to Dea’s big night.',
-    gameTabs: ['Toast roulette', 'Birthday quiz'], reveal: 'Reveal a toast', another: 'Another toast',
-    toasts: ['To Dea — may your next chapter be even more iconic.', 'To the friends who turn an ordinary night into a favorite memory.', 'To good company, great stories, and the dance floor waiting for us.', 'To another year of making your own kind of magic.', 'To the people who show up, raise a glass, and stay for one more song.', 'To Dea — a little wiser, a little bolder, always worth celebrating.'],
-    quizLine: 'Three questions. How party-ready are you?',
-    questions: [
-      { title: 'What are we celebrating?', options: ['Dea’s birthday', 'New Year', 'A wedding'], answer: 0 },
-      { title: 'When do welcome drinks begin?', options: ['18:00', '20:00', '22:30'], answer: 1 },
-      { title: 'Which colors set the mood?', options: ['Navy, blush & gold', 'Black & silver', 'Lilac & orange'], answer: 0 },
-    ],
-    wishes: ['A note', 'worth keeping.'], wishLine: 'Leave a wish for Dea.', message: 'Your wish', saveWish: 'Save your wish',
-    wishSignature: ['Good company.', 'Great nights.'],
-    join: ['See you', 'after dark.'], joinLine: 'Your seat is waiting.', saveReply: 'Send RSVP',
-    thanks: 'See you after dark.', miss: 'We’ll raise a glass to you.',
-  },
-  ka: {
-    ...peachFizzCopy.ka,
-    headline: ['მოდი', 'ვიზეიმოთ!'], birthday: 'დეას დაბადების დღე',
-    details: ['საღამო,', 'ჩვენებურად.'], detailsLine: 'დეას დაბადების დღე, გემრიელი ვახშამი, საყვარელი ადამიანები და მარტინი.',
-    company: 'კარგი ადამიანები. დაუვიწყარი საღამო.',
-    schedule: ['შეხვედრა და კოქტეილები', 'ვახშამი და სადღეგრძელოები', 'ტორტი და სანთლები', 'კიდევ ერთი სიმღერა'],
-    scheduleNotes: ['მოდი, შევხვდეთ ერთმანეთს', 'ვახშამი კარგ გარემოცვაში', 'ჩაიფიქრე სურვილი', 'საღამო გრძელდება'],
-    mixTitle: ['შენი', 'მარტინი.'], mixLine: 'როგორი გიყვარს?', mixChoices: ['ზეთისხილით', 'ცოტა ბრჭყვიალა', 'მეტი ვარდისფერი'],
-    mixMessages: ['კარგი არჩევანია. შენთან ერთად უფრო გემრიელია.', 'ცოტა ელვარება დაუვიწყარი საღამოსთვის.', 'ცოტა ვარდისფერი. ბევრი სიხარული.'],
-    cheersButton: 'დეას გაუმარჯოს', cheersAgain: 'კიდევ ერთი სადღეგრძელო', cheersMessage: 'დეას და მის ახალ, ბედნიერ წელს გაუმარჯოს!',
-    gamesTitle: ['ცოტა', 'გართობა.'], gamesLine: 'რამდენიმე სახალისო წუთი დეას საღამოს მოლოდინში.',
-    gameTabs: ['სადღეგრძელოები', 'დაბადების დღის ქვიზი'], reveal: 'გახსენი სადღეგრძელო', another: 'კიდევ ერთი',
-    toasts: ['დეას — წინ კიდევ ბევრი დაუვიწყარი ამბავია.', 'მეგობრებს, რომლებიც ჩვეულებრივ საღამოს მოგონებად აქცევენ.', 'კარგ ადამიანებს, კარგ ამბებს და ცეკვას.', 'კიდევ ერთ წელს, სიხარულითა და ოცნებებით სავსეს.', 'მათ, ვინც გვერდით გვყავს და კიდევ ერთ სიმღერას ელოდება.', 'დეას — უფრო თამამს და ყოველთვის გამორჩეულს.'],
-    quizLine: 'სამი კითხვა. მზად ხარ წვეულებისთვის?',
-    questions: [
-      { title: 'რას ვზეიმობთ?', options: ['დეას დაბადების დღეს', 'ახალ წელს', 'ქორწილს'], answer: 0 },
-      { title: 'როდის იწყება საღამო?', options: ['18:00', '20:00', '22:30'], answer: 1 },
-      { title: 'რომელი ფერები გვიხდება?', options: ['ლურჯი, ვარდისფერი და ოქროსფერი', 'შავი და ვერცხლისფერი', 'იასამნისფერი და ნარინჯისფერი'], answer: 0 },
-    ],
-    wishes: ['სურვილი', 'სამახსოვროდ.'], wishLine: 'დაუტოვე დეას თბილი სურვილი.', saveWish: 'სურვილის შენახვა',
-    wishSignature: ['კარგი ადამიანები.', 'ბედნიერი საღამოები.'],
-    join: ['საღამოს', 'გელოდებით.'], joinLine: 'შენი ადგილი გელოდება.', saveReply: 'პასუხის შენახვა',
-    thanks: 'საღამოს შევხვდებით.', miss: 'შენც გაგიხსენებთ.',
-  },
-};
+export const midnightCopy = createCaptionCopy({
+  "back": "invitations.midnight-martini.copy.extraCopy1.back",
+  "motion": "invitations.midnight-martini.copy.extraCopy1.motion",
+  "rsvp": "invitations.midnight-martini.copy.extraCopy1.rsvp",
+  "invited": "invitations.midnight-martini.copy.extraCopy1.invited",
+  "headline": [
+    "invitations.midnight-martini.copy.extraCopy1.headline.0",
+    "invitations.midnight-martini.copy.extraCopy1.headline.1"
+  ],
+  "birthday": "invitations.midnight-martini.copy.extraCopy1.birthday",
+  "date": "invitations.midnight-martini.copy.extraCopy1.date",
+  "city": "invitations.midnight-martini.copy.extraCopy1.city",
+  "details": [
+    "invitations.midnight-martini.copy.extraCopy1.details.0",
+    "invitations.midnight-martini.copy.extraCopy1.details.1"
+  ],
+  "calendar": "invitations.midnight-martini.copy.extraCopy1.calendar",
+  "evening": "invitations.midnight-martini.copy.extraCopy1.evening",
+  "schedule": [
+    "invitations.midnight-martini.copy.extraCopy1.schedule.0",
+    "invitations.midnight-martini.copy.extraCopy1.schedule.1",
+    "invitations.midnight-martini.copy.extraCopy1.schedule.2",
+    "invitations.midnight-martini.copy.extraCopy1.schedule.3"
+  ],
+  "dress": "invitations.midnight-martini.copy.extraCopy1.dress",
+  "dressLine": "invitations.midnight-martini.copy.extraCopy1.dressLine",
+  "venue": "invitations.midnight-martini.copy.extraCopy1.venue",
+  "clink": [
+    "invitations.midnight-martini.copy.extraCopy1.clink.0",
+    "invitations.midnight-martini.copy.extraCopy1.clink.1"
+  ],
+  "drag": "invitations.midnight-martini.copy.extraCopy1.drag",
+  "orTap": "invitations.midnight-martini.copy.extraCopy1.orTap",
+  "tap": "invitations.midnight-martini.copy.extraCopy1.tap",
+  "again": "invitations.midnight-martini.copy.extraCopy1.again",
+  "cheers": "invitations.midnight-martini.copy.extraCopy1.cheers",
+  "leftGlass": "invitations.midnight-martini.copy.extraCopy1.leftGlass",
+  "rightGlass": "invitations.midnight-martini.copy.extraCopy1.rightGlass",
+  "choose": "invitations.midnight-martini.copy.extraCopy1.choose",
+  "toasts": [
+    "invitations.midnight-martini.copy.extraCopy1.toasts.0",
+    "invitations.midnight-martini.copy.extraCopy1.toasts.1",
+    "invitations.midnight-martini.copy.extraCopy1.toasts.2",
+    "invitations.midnight-martini.copy.extraCopy1.toasts.3",
+    "invitations.midnight-martini.copy.extraCopy1.toasts.4",
+    "invitations.midnight-martini.copy.extraCopy1.toasts.5"
+  ],
+  "toastMessages": [
+    "invitations.midnight-martini.copy.extraCopy1.toastMessages.0",
+    "invitations.midnight-martini.copy.extraCopy1.toastMessages.1",
+    "invitations.midnight-martini.copy.extraCopy1.toastMessages.2"
+  ],
+  "skip": "invitations.midnight-martini.copy.extraCopy1.skip",
+  "games": "invitations.midnight-martini.copy.extraCopy1.games",
+  "optional": "invitations.midnight-martini.copy.extraCopy1.optional",
+  "ticket": "invitations.midnight-martini.copy.extraCopy1.ticket",
+  "fortuneTitle": "invitations.midnight-martini.copy.extraCopy1.fortuneTitle",
+  "reveal": "invitations.midnight-martini.copy.extraCopy1.reveal",
+  "another": "invitations.midnight-martini.copy.extraCopy1.another",
+  "fortunes": [
+    "invitations.midnight-martini.copy.extraCopy1.fortunes.0",
+    "invitations.midnight-martini.copy.extraCopy1.fortunes.1",
+    "invitations.midnight-martini.copy.extraCopy1.fortunes.2",
+    "invitations.midnight-martini.copy.extraCopy1.fortunes.3",
+    "invitations.midnight-martini.copy.extraCopy1.fortunes.4"
+  ],
+  "quiz": "invitations.midnight-martini.copy.extraCopy1.quiz",
+  "quizLine": "invitations.midnight-martini.copy.extraCopy1.quizLine",
+  "startQuiz": "invitations.midnight-martini.copy.extraCopy1.startQuiz",
+  "next": "invitations.midnight-martini.copy.extraCopy1.next",
+  "replay": "invitations.midnight-martini.copy.extraCopy1.replay",
+  "questions": [
+    {
+      "title": "invitations.midnight-martini.copy.extraCopy1.questions.0.title",
+      "options": [
+        "invitations.midnight-martini.copy.extraCopy1.questions.0.options.0",
+        "invitations.midnight-martini.copy.extraCopy1.questions.0.options.1",
+        "invitations.midnight-martini.copy.extraCopy1.questions.0.options.2"
+      ],
+      "answer": 0
+    },
+    {
+      "title": "invitations.midnight-martini.copy.extraCopy1.questions.1.title",
+      "options": [
+        "invitations.midnight-martini.copy.extraCopy1.questions.1.options.0",
+        "invitations.midnight-martini.copy.extraCopy1.questions.1.options.1",
+        "invitations.midnight-martini.copy.extraCopy1.questions.1.options.2"
+      ],
+      "answer": 1
+    },
+    {
+      "title": "invitations.midnight-martini.copy.extraCopy1.questions.2.title",
+      "options": [
+        "invitations.midnight-martini.copy.extraCopy1.questions.2.options.0",
+        "invitations.midnight-martini.copy.extraCopy1.questions.2.options.1",
+        "invitations.midnight-martini.copy.extraCopy1.questions.2.options.2"
+      ],
+      "answer": 0
+    }
+  ],
+  "correct": "invitations.midnight-martini.copy.extraCopy1.correct",
+  "incorrect": "invitations.midnight-martini.copy.extraCopy1.incorrect",
+  "result": "invitations.midnight-martini.copy.extraCopy1.result",
+  "score": "invitations.midnight-martini.copy.extraCopy1.score",
+  "wishes": [
+    "invitations.midnight-martini.copy.extraCopy1.wishes.0",
+    "invitations.midnight-martini.copy.extraCopy1.wishes.1"
+  ],
+  "wishLine": "invitations.midnight-martini.copy.extraCopy1.wishLine",
+  "name": "invitations.midnight-martini.copy.extraCopy1.name",
+  "message": "invitations.midnight-martini.copy.extraCopy1.message",
+  "namePlaceholder": "invitations.midnight-martini.copy.extraCopy1.namePlaceholder",
+  "messagePlaceholder": "invitations.midnight-martini.copy.extraCopy1.messagePlaceholder",
+  "saveWish": "invitations.midnight-martini.copy.extraCopy1.saveWish",
+  "saveReply": "invitations.midnight-martini.copy.extraCopy1.saveReply",
+  "wishThanks": "invitations.midnight-martini.copy.extraCopy1.wishThanks",
+  "wishSignature": [
+    "invitations.midnight-martini.copy.extraCopy1.wishSignature.0",
+    "invitations.midnight-martini.copy.extraCopy1.wishSignature.1"
+  ],
+  "join": [
+    "invitations.midnight-martini.copy.extraCopy1.join.0",
+    "invitations.midnight-martini.copy.extraCopy1.join.1"
+  ],
+  "joinLine": "invitations.midnight-martini.copy.extraCopy1.joinLine",
+  "coming": "invitations.midnight-martini.copy.extraCopy1.coming",
+  "yes": "invitations.midnight-martini.copy.extraCopy1.yes",
+  "no": "invitations.midnight-martini.copy.extraCopy1.no",
+  "thanks": "invitations.midnight-martini.copy.extraCopy1.thanks",
+  "miss": "invitations.midnight-martini.copy.extraCopy1.miss",
+  "saved": "invitations.midnight-martini.copy.extraCopy1.saved",
+  "session": "invitations.midnight-martini.copy.extraCopy1.session",
+  "editWish": "invitations.midnight-martini.copy.extraCopy1.editWish",
+  "editReply": "invitations.midnight-martini.copy.extraCopy1.editReply",
+  "wishDemo": "invitations.midnight-martini.copy.extraCopy1.wishDemo",
+  "replyDemo": "invitations.midnight-martini.copy.extraCopy1.replyDemo",
+  "farewell": "invitations.midnight-martini.copy.extraCopy1.farewell",
+  "made": "invitations.midnight-martini.copy.extraCopy1.made",
+  "top": "invitations.midnight-martini.copy.extraCopy1.top",
+  "requiredMessage": "invitations.midnight-martini.copy.extraCopy1.requiredMessage",
+  "detailsLine": "invitations.midnight-martini.copy.extraCopy1.detailsLine",
+  "company": "invitations.midnight-martini.copy.extraCopy1.company",
+  "scheduleNotes": [
+    "invitations.midnight-martini.copy.extraCopy1.scheduleNotes.0",
+    "invitations.midnight-martini.copy.extraCopy1.scheduleNotes.1",
+    "invitations.midnight-martini.copy.extraCopy1.scheduleNotes.2",
+    "invitations.midnight-martini.copy.extraCopy1.scheduleNotes.3"
+  ],
+  "mixTitle": [
+    "invitations.midnight-martini.copy.extraCopy1.mixTitle.0",
+    "invitations.midnight-martini.copy.extraCopy1.mixTitle.1"
+  ],
+  "mixLine": "invitations.midnight-martini.copy.extraCopy1.mixLine",
+  "mixChoices": [
+    "invitations.midnight-martini.copy.extraCopy1.mixChoices.0",
+    "invitations.midnight-martini.copy.extraCopy1.mixChoices.1",
+    "invitations.midnight-martini.copy.extraCopy1.mixChoices.2"
+  ],
+  "mixMessages": [
+    "invitations.midnight-martini.copy.extraCopy1.mixMessages.0",
+    "invitations.midnight-martini.copy.extraCopy1.mixMessages.1",
+    "invitations.midnight-martini.copy.extraCopy1.mixMessages.2"
+  ],
+  "cheersButton": "invitations.midnight-martini.copy.extraCopy1.cheersButton",
+  "cheersAgain": "invitations.midnight-martini.copy.extraCopy1.cheersAgain",
+  "cheersMessage": "invitations.midnight-martini.copy.extraCopy1.cheersMessage",
+  "gamesTitle": [
+    "invitations.midnight-martini.copy.extraCopy1.gamesTitle.0",
+    "invitations.midnight-martini.copy.extraCopy1.gamesTitle.1"
+  ],
+  "gamesLine": "invitations.midnight-martini.copy.extraCopy1.gamesLine",
+  "gameTabs": [
+    "invitations.midnight-martini.copy.extraCopy1.gameTabs.0",
+    "invitations.midnight-martini.copy.extraCopy1.gameTabs.1"
+  ]
+});
 
 export async function celebrateMidnight() {
   const { default: confetti } = await import('canvas-confetti');

@@ -1,3 +1,4 @@
+import { createCaptionCopy, captionValue } from "../../localization/captionValues.js";
 import InvitationMakerFooter from "../components/InvitationMakerFooter.jsx";
 import useInvitationGuestName from "../hooks/useInvitationGuestName.js";
 import { useEffect, useRef, useState } from "react";
@@ -7,14 +8,80 @@ import { useLanguage } from "../../localization/LanguageContext.jsx";
 import "../../styles/pizza-chef-experience.css";
 
 const assets = "/images/birthday/little-pizza-chef/";
-const copy = {
-  en: { name: "Aniko’s", title: "Pizza Party", line: "A little dough. A lot of birthday fun.", date: "18 JULY 2027", city: "TBILISI", start: "Let’s make pizza", motion: "Motion", mix: "MIX", make: "MAKE", celebrate: "CELEBRATE", details: "A birthday fresh from the oven.", intro: "Aniko is turning 7. Join us for pizza-making, birthday cake, and kitchen fun with friends.", when: "Sunday, 18 July 2027", location: "Tbilisi", venue: "The host will share the exact location.", calendar: "Add to calendar", roll: "Roll the dough", create: "Make your masterpiece", cake: "Cake & birthday wishes", play: "Make your pizza", playTitle: "Your pizza. Your rules.", playIntro: "Choose your favorite toppings.", toppings: ["Basil", "Tomatoes", "Olives", "Cheese"], bake: "Bake my pizza", ready: "Ready for the oven.", baked: "A masterpiece, chef!", reset: "Make another pizza", wishes: "Birthday wishes for the chef.", wishIntro: "A little note. A lot of birthday love.", yourName: "Your name", wishLabel: "Your birthday wish", saveWish: "Save demo wish", editWish: "Edit your wish", wishSaved: "Your wish is saved on this device.", demo: "Preview invitation. Wishes and replies stay on this device.", session: "Saved for this session only.", rsvp: "Will you make pizza with us?", yes: "Yes, count me in", no: "I can’t make it", saveReply: "Save demo reply", thanks: "See you in the kitchen!", miss: "We’ll save you a slice.", replySaved: "Your reply is saved on this device.", editReply: "Change reply", back: "Back to the party", notes: "RECIPE NOTES", recipe: "A little kindness. A pinch of laughter. Friends to share it with.", attendance: "Attendance", wishError: "Please write your birthday wish." },
-  ka: { name: "ანიკოს", title: "პიცის წვეულება", line: "ცოტაოდენი ცომი. ბევრი მხიარულება.", date: "18 ივლისი 2027", city: "თბილისი", start: "მოვამზადოთ პიცა", motion: "მოძრაობა", mix: "მოვზილოთ", make: "მოვამზადოთ", celebrate: "ვიზეიმოთ", details: "ღუმელიდან გამოსული დაბადების დღე.", intro: "ანიკო 7 წლის ხდება. ერთად მოვამზადოთ პიცა, მივირთვათ ტორტი და გავერთოთ მეგობრებთან.", when: "კვირა, 18 ივლისი 2027", location: "თბილისი", venue: "ზუსტ მისამართს მასპინძელი გაგიზიარებთ.", calendar: "კალენდარში დამატება", roll: "მოვზილოთ ცომი", create: "შევქმნათ ჩვენი პიცა", cake: "ტორტი და სურვილები", play: "შექმენი შენი პიცა", playTitle: "შენი პიცა. შენი წესები.", playIntro: "აირჩიე საყვარელი ინგრედიენტები.", toppings: ["რეჰანი", "პომიდორი", "ზეთისხილი", "ყველი"], bake: "გამოვაცხოთ პიცა", ready: "პიცა ღუმელისთვის მზადაა.", baked: "შედევრია, შეფო!", reset: "კიდევ ერთი პიცა", wishes: "სურვილები პატარა შეფს.", wishIntro: "პატარა წერილი. ბევრი სიყვარული.", yourName: "შენი სახელი", wishLabel: "შენი სურვილი", saveWish: "დემო სურვილის შენახვა", editWish: "სურვილის შეცვლა", wishSaved: "შენი სურვილი ამ მოწყობილობაზე შეინახა.", demo: "დემო მოსაწვევი. სურვილები და პასუხები რჩება ამ მოწყობილობაზე.", session: "შენახულია მხოლოდ ამ სესიაში.", rsvp: "ჩვენთან ერთად მოამზადებ პიცას?", yes: "დიახ, მოვდივარ", no: "ვერ მოვდივარ", saveReply: "დემო პასუხის შენახვა", thanks: "სამზარეულოში გელოდებით!", miss: "პიცის ნაჭერს შეგინახავთ.", replySaved: "პასუხი ამ მოწყობილობაზე შეინახა.", editReply: "პასუხის შეცვლა", back: "წვეულების დასაწყისში", notes: "რეცეპტის ჩანაწერები", recipe: "ცოტა სიკეთე. ბევრი სიცილი. მეგობრები ერთად.", attendance: "დასწრება", wishError: "დაწერე შენი სურვილი." }
-};
-const sliceCopy = {
-  en: { line: "Good friends. Great slices. Happy birthdays.", start: "Join the pizza party", mix: "GOOD FRIENDS", make: "GREAT SLICES", celebrate: "HAPPY BIRTHDAYS", details: "A birthday by the slice.", intro: "Join Aniko for pizza, birthday cake, and a joyful afternoon with friends.", roll: "Meet the club", create: "Pizza & party games", play: "Design your dream pizza", playTitle: "Your slice of imagination.", playIntro: "Build a pizza just for fun.", wishes: "A slice of birthday love.", rsvp: "Will you join the club?", thanks: "You’re in the club!", notes: "RECIPE FOR A GREAT BIRTHDAY" },
-  ka: { line: "კარგი მეგობრები. გემრიელი პიცა. ბედნიერი დაბადების დღე.", start: "შემოუერთდი წვეულებას", mix: "კარგი მეგობრები", make: "გემრიელი პიცა", celebrate: "ბედნიერი დაბადების დღე", details: "დაბადების დღე პიცის ნაჭრებით.", intro: "ანიკოსთან ერთად მივირთვათ პიცა, ტორტი და გავატაროთ მხიარული დღე მეგობრებთან.", roll: "შევხვდეთ მეგობრებს", create: "პიცა და თამაშები", play: "შექმენი საოცნებო პიცა", playTitle: "შენი გემრიელი წარმოსახვა.", playIntro: "შექმენი პიცა გასართობად.", wishes: "სიყვარულით სავსე სურვილები.", rsvp: "შემოუერთდები კლუბს?", thanks: "უკვე კლუბში ხარ!", notes: "ბედნიერი დაბადების დღის რეცეპტი" }
-};
+const copy = createCaptionCopy({
+  "name": "invitations.pages.PizzaChefExperience.copy1.name",
+  "title": "invitations.pages.PizzaChefExperience.copy1.title",
+  "line": "invitations.pages.PizzaChefExperience.copy1.line",
+  "date": "invitations.pages.PizzaChefExperience.copy1.date",
+  "city": "invitations.pages.PizzaChefExperience.copy1.city",
+  "start": "invitations.pages.PizzaChefExperience.copy1.start",
+  "motion": "invitations.pages.PizzaChefExperience.copy1.motion",
+  "mix": "invitations.pages.PizzaChefExperience.copy1.mix",
+  "make": "invitations.pages.PizzaChefExperience.copy1.make",
+  "celebrate": "invitations.pages.PizzaChefExperience.copy1.celebrate",
+  "details": "invitations.pages.PizzaChefExperience.copy1.details",
+  "intro": "invitations.pages.PizzaChefExperience.copy1.intro",
+  "when": "invitations.pages.PizzaChefExperience.copy1.when",
+  "location": "invitations.pages.PizzaChefExperience.copy1.location",
+  "venue": "invitations.pages.PizzaChefExperience.copy1.venue",
+  "calendar": "invitations.pages.PizzaChefExperience.copy1.calendar",
+  "roll": "invitations.pages.PizzaChefExperience.copy1.roll",
+  "create": "invitations.pages.PizzaChefExperience.copy1.create",
+  "cake": "invitations.pages.PizzaChefExperience.copy1.cake",
+  "play": "invitations.pages.PizzaChefExperience.copy1.play",
+  "playTitle": "invitations.pages.PizzaChefExperience.copy1.playTitle",
+  "playIntro": "invitations.pages.PizzaChefExperience.copy1.playIntro",
+  "toppings": [
+    "invitations.pages.PizzaChefExperience.copy1.toppings.0",
+    "invitations.pages.PizzaChefExperience.copy1.toppings.1",
+    "invitations.pages.PizzaChefExperience.copy1.toppings.2",
+    "invitations.pages.PizzaChefExperience.copy1.toppings.3"
+  ],
+  "bake": "invitations.pages.PizzaChefExperience.copy1.bake",
+  "ready": "invitations.pages.PizzaChefExperience.copy1.ready",
+  "baked": "invitations.pages.PizzaChefExperience.copy1.baked",
+  "reset": "invitations.pages.PizzaChefExperience.copy1.reset",
+  "wishes": "invitations.pages.PizzaChefExperience.copy1.wishes",
+  "wishIntro": "invitations.pages.PizzaChefExperience.copy1.wishIntro",
+  "yourName": "invitations.pages.PizzaChefExperience.copy1.yourName",
+  "wishLabel": "invitations.pages.PizzaChefExperience.copy1.wishLabel",
+  "saveWish": "invitations.pages.PizzaChefExperience.copy1.saveWish",
+  "editWish": "invitations.pages.PizzaChefExperience.copy1.editWish",
+  "wishSaved": "invitations.pages.PizzaChefExperience.copy1.wishSaved",
+  "demo": "invitations.pages.PizzaChefExperience.copy1.demo",
+  "session": "invitations.pages.PizzaChefExperience.copy1.session",
+  "rsvp": "invitations.pages.PizzaChefExperience.copy1.rsvp",
+  "yes": "invitations.pages.PizzaChefExperience.copy1.yes",
+  "no": "invitations.pages.PizzaChefExperience.copy1.no",
+  "saveReply": "invitations.pages.PizzaChefExperience.copy1.saveReply",
+  "thanks": "invitations.pages.PizzaChefExperience.copy1.thanks",
+  "miss": "invitations.pages.PizzaChefExperience.copy1.miss",
+  "replySaved": "invitations.pages.PizzaChefExperience.copy1.replySaved",
+  "editReply": "invitations.pages.PizzaChefExperience.copy1.editReply",
+  "back": "invitations.pages.PizzaChefExperience.copy1.back",
+  "notes": "invitations.pages.PizzaChefExperience.copy1.notes",
+  "recipe": "invitations.pages.PizzaChefExperience.copy1.recipe",
+  "attendance": "invitations.pages.PizzaChefExperience.copy1.attendance",
+  "wishError": "invitations.pages.PizzaChefExperience.copy1.wishError"
+});
+const sliceCopy = createCaptionCopy({
+  "line": "invitations.pages.PizzaChefExperience.copy2.line",
+  "start": "invitations.pages.PizzaChefExperience.copy2.start",
+  "mix": "invitations.pages.PizzaChefExperience.copy2.mix",
+  "make": "invitations.pages.PizzaChefExperience.copy2.make",
+  "celebrate": "invitations.pages.PizzaChefExperience.copy2.celebrate",
+  "details": "invitations.pages.PizzaChefExperience.copy2.details",
+  "intro": "invitations.pages.PizzaChefExperience.copy2.intro",
+  "roll": "invitations.pages.PizzaChefExperience.copy2.roll",
+  "create": "invitations.pages.PizzaChefExperience.copy2.create",
+  "play": "invitations.pages.PizzaChefExperience.copy2.play",
+  "playTitle": "invitations.pages.PizzaChefExperience.copy2.playTitle",
+  "playIntro": "invitations.pages.PizzaChefExperience.copy2.playIntro",
+  "wishes": "invitations.pages.PizzaChefExperience.copy2.wishes",
+  "rsvp": "invitations.pages.PizzaChefExperience.copy2.rsvp",
+  "thanks": "invitations.pages.PizzaChefExperience.copy2.thanks",
+  "notes": "invitations.pages.PizzaChefExperience.copy2.notes"
+});
 function readSaved(kind, theme) {
   try { const value = JSON.parse(localStorage.getItem(`1111-${theme}-${kind}-v1`)); return typeof value?.name === "string" && (kind === "wish" ? typeof value.message === "string" : ["yes", "no"].includes(value.attending)) ? value : null; } catch { return null; }
 }
@@ -76,7 +143,7 @@ export default function PizzaChefExperience({ theme = "pizza-chef" }) {
   }
   return <main ref={page} className={`chef-experience ${slice ? "slice-club-experience" : ""} ${motion ? "chef-motion" : ""}`} lang={language}>
     <section className="chef-cover" id="chef-cover" aria-labelledby="chef-title" tabIndex={-1}>
-      <header className="chef-toolbar"><Link to="/invitations" aria-label={language === "ka" ? "მოსაწვევების კოლექცია" : "Back to invitations"}><InvitationArtwork name="arrow-left" size={20} />11:11</Link><div><button onClick={() => setLanguage(language === "ka" ? "en" : "ka")} aria-label={language === "ka" ? "Switch to English" : "ქართულად"}>{language === "ka" ? "EN" : "KA"}</button><button aria-pressed={motion} onClick={() => setMotion(value => !value)}>{text.motion}<span className="chef-motion-switch" aria-hidden="true" /></button></div></header>
+      <header className="chef-toolbar"><Link to="/invitations" aria-label={captionValue("invitations.pages.PizzaChefExperience.caption3", language)}><InvitationArtwork name="arrow-left" size={20} />11:11</Link><div><button onClick={() => setLanguage((language === "ka" ? "en" : "ka"))} aria-label={captionValue("invitations.pages.PizzaChefExperience.caption5", language)}>{captionValue("invitations.pages.PizzaChefExperience.caption6", language)}</button><button aria-pressed={motion} onClick={() => setMotion(value => !value)}>{text.motion}<span className="chef-motion-switch" aria-hidden="true" /></button></div></header>
       <div className="chef-hero-layout"><div className="chef-hero-copy"><h1 id="chef-title"><span>{text.name}</span>{text.title}</h1><p>{text.line}</p><p className="chef-date">{text.date} / 14:00 / {text.city}</p><button className="chef-primary" onClick={() => goTo("chef-details")}>{text.start}<InvitationArtwork name="arrow-right" size={20} /></button></div><img className="chef-hero-pizza" src={illustration} alt="" />{slice && <img className="slice-second-pizza" src={illustration} alt="" />}</div>
       <div className="chef-ticker" aria-hidden="true"><span>{text.mix}</span><span>{text.make}</span><span>{text.celebrate}</span></div>
     </section>
@@ -86,7 +153,7 @@ export default function PizzaChefExperience({ theme = "pizza-chef" }) {
     </section>
     <section className="chef-section chef-play" id="chef-play" tabIndex={-1} aria-labelledby="chef-play-title">
       <div className="chef-copy" data-chef-reveal><h2 id="chef-play-title">{text.playTitle}</h2><p>{text.playIntro}</p><div className="chef-toppings" role="group" aria-label={text.playIntro}>{text.toppings.map((label, index) => <button key={index} aria-pressed={selected.includes(index)} onClick={() => toggleTopping(index)}><span className={`chef-ingredient chef-ingredient-${index}`} aria-hidden="true" />{label}</button>)}</div><button className="chef-primary" onClick={baked ? () => { setBaked(false); setSelected([]); } : bake}>{baked ? text.reset : text.bake}<InvitationArtwork name="arrow-right" size={20} /></button><p className="chef-bake-status" role="status">{baked ? text.baked : text.ready}</p><button className="chef-text-link" onClick={() => goTo("chef-wishes")}>{text.wishes}<InvitationArtwork name="arrow-down" size={20} /></button></div>
-      <div className={`chef-pizza-builder ${baked ? "chef-is-baked" : ""}`} role="img" aria-label={`${text.play}: ${selected.map(index => text.toppings[index]).join(", ") || (language === "ka" ? "ინგრედიენტების გარეშე" : "no toppings")}`}><img src={`${assets}pizza-base.png`} alt="" loading="lazy" />{selected.flatMap(index => toppingPositions[index].map(([x, y], n) => <span key={`${index}-${n}`} className={`chef-ingredient chef-ingredient-${index} chef-pizza-topping`} style={{ left: `${x}%`, top: `${y}%`, rotate: `${n * 49 + index * 30}deg` }} />))}</div>
+      <div className={`chef-pizza-builder ${baked ? "chef-is-baked" : ""}`} role="img" aria-label={`${text.play}: ${selected.map(index => text.toppings[index]).join(", ") || (captionValue("invitations.pages.PizzaChefExperience.caption7", language))}`}><img src={`${assets}pizza-base.png`} alt="" loading="lazy" />{selected.flatMap(index => toppingPositions[index].map(([x, y], n) => <span key={`${index}-${n}`} className={`chef-ingredient chef-ingredient-${index} chef-pizza-topping`} style={{ left: `${x}%`, top: `${y}%`, rotate: `${n * 49 + index * 30}deg` }} />))}</div>
     </section>
     <section className="chef-section chef-wishes" id="chef-wishes" tabIndex={-1} aria-labelledby="chef-wish-title"><div data-chef-reveal><DemoForm kind="wish" text={text} motion={motion} theme={theme} /><button className="chef-text-link" onClick={() => goTo("chef-rsvp")}>{text.rsvp}<InvitationArtwork name="arrow-down" size={20} /></button></div><div className="chef-wish-art" aria-hidden="true"><img src={illustration} alt="" loading="lazy" /><div className="chef-recipe"><span>{text.notes}</span>{!slice && <p>{text.recipe}</p>}<i /><i /><i /></div></div></section>
     <section className="chef-section chef-rsvp" id="chef-rsvp" tabIndex={-1} aria-labelledby="chef-reply-title"><div data-chef-reveal><DemoForm kind="reply" text={text} motion={motion} theme={theme} /><button className="chef-text-link" onClick={() => goTo("chef-cover")}>{text.back}<InvitationArtwork name="arrow-left" size={20} /></button></div><div className="chef-rsvp-art" aria-hidden="true"><img src={illustration} alt="" loading="lazy" /><p>{text.mix}<br />{text.make}<br />{text.celebrate}</p></div></section>

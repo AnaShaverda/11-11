@@ -23,7 +23,8 @@ const CustomInvitationPage = lazy(() => import("../invitations/pages/CustomInvit
 const CustomDesignGalleryPage = lazy(() => import("../invitations/pages/CustomDesignGalleryPage.jsx"));
 const CustomDesignExperiencePage = lazy(() => import("../invitations/pages/CustomDesignExperiencePage.jsx"));
 const CustomOrderRoute = lazy(() => import("../custom-orders/CustomOrderRoute.jsx"));
-const PizzaChefExperience = lazy(() => import("../invitations/pages/PizzaChefExperience.jsx"));
+const PizzaPartyExperience = lazy(() => import("../invitations/pages/PizzaPartyExperience.jsx"));
+const SliceClubExperience = lazy(() => import("../invitations/pages/SliceClubExperience.jsx"));
 const PinkLidoExperience = lazy(() => import("../invitations/pages/PinkLidoExperience.jsx"));
 const CherryTowerExperience = lazy(() => import("../invitations/pages/CherryTowerExperience.jsx"));
 const PeachFizzExperience = lazy(() => import("../invitations/pages/PeachFizzExperience.jsx"));
@@ -96,8 +97,8 @@ export default function App() {
       <Route path="invitations/bridal-sunny-ribbon" element={<CherryTowerExperience key="sunny-ribbon" bridal variant="sunny-pop" />} />
       <Route path="invitations/birthday-peach-fizz" element={<PeachFizzExperience />} />
       <Route path="invitations/birthday-midnight-martini" element={<MidnightMartiniExperience />} />
-      <Route path="invitations/birthday-little-pizza-chef" element={<PizzaChefExperience key="pizza-chef" />} />
-      <Route path="invitations/birthday-slice-club" element={<PizzaChefExperience key="slice-club" theme="slice-club" />} />
+      <Route path="invitations/birthday-little-pizza-chef" element={<PizzaPartyExperience />} />
+      <Route path="invitations/birthday-slice-club" element={<SliceClubExperience />} />
       <Route path="invitations/birthday-blue-splash" element={<PinkLidoExperience key="blue-splash" theme="blue-splash" />} />
       <Route path="invitations/birthday-pink-lido" element={<PinkLidoExperience key="pink-lido" />} />
       <Route path="surprises/for/:orderId/*" element={<CustomOrderRoute />} />
