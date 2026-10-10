@@ -14,7 +14,6 @@ export const recipientArtwork = {
   ...cocktailBirthdayPortraits,
   ...pinkChampagnePortraits,
   ...selectedBridalPortraits,
-  "birthday-cobalt-cheers": "/images/recipient/birthday-cobalt-cheers/invitation-portrait.webp",
   "birthday-pink-glam": "/images/recipient/birthday-pink-glam/invitation-portrait.webp",
 
   "birthday-retro-pop": "/images/recipient/birthday-retro-pop/invitation-portrait.webp",

@@ -1,3 +1,4 @@
+import InvitationMakerFooter from "../components/InvitationMakerFooter.jsx";
 import useInvitationGuestName from "../hooks/useInvitationGuestName.js";
 import { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
@@ -89,5 +90,6 @@ export default function PizzaChefExperience({ theme = "pizza-chef" }) {
     </section>
     <section className="chef-section chef-wishes" id="chef-wishes" tabIndex={-1} aria-labelledby="chef-wish-title"><div data-chef-reveal><DemoForm kind="wish" text={text} motion={motion} theme={theme} /><button className="chef-text-link" onClick={() => goTo("chef-rsvp")}>{text.rsvp}<InvitationArtwork name="arrow-down" size={20} /></button></div><div className="chef-wish-art" aria-hidden="true"><img src={illustration} alt="" loading="lazy" /><div className="chef-recipe"><span>{text.notes}</span>{!slice && <p>{text.recipe}</p>}<i /><i /><i /></div></div></section>
     <section className="chef-section chef-rsvp" id="chef-rsvp" tabIndex={-1} aria-labelledby="chef-reply-title"><div data-chef-reveal><DemoForm kind="reply" text={text} motion={motion} theme={theme} /><button className="chef-text-link" onClick={() => goTo("chef-cover")}>{text.back}<InvitationArtwork name="arrow-left" size={20} /></button></div><div className="chef-rsvp-art" aria-hidden="true"><img src={illustration} alt="" loading="lazy" /><p>{text.mix}<br />{text.make}<br />{text.celebrate}</p></div></section>
+    <InvitationMakerFooter palette="pizza" />
   </main>;
 }

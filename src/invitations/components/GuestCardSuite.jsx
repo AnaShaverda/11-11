@@ -1,3 +1,4 @@
+import InvitationMakerFooter from "./InvitationMakerFooter.jsx";
 import RibbonSketchToolbar from "../ribbon-sketch/RibbonSketchToolbar.jsx";
 import GuestMusicControl from "./GuestMusicControl.jsx";
 import { formatRsvpDeadline } from "../data/invitationDate.js";
@@ -416,7 +417,7 @@ export default function GuestCardSuite({ template, sample, copyTranslations, edi
       </div>
     </div>
     <footer className={`guest-footer${template.isCustom && customDesign.showFooter !== false && footerScenes[customDesign.footerScene] ? " has-footer-art" : ""}`}>
-      <span>{t("guestCards.made")}</span>
+      <InvitationMakerFooter palette="guest" embedded />
       {template.isCustom && customDesign.showFooter !== false && footerScenes[customDesign.footerScene] && <img className="guest-footer-art" src={footerScenes[customDesign.footerScene]} alt="" aria-hidden="true" />}
     </footer>
   </article>;

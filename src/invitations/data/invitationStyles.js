@@ -104,7 +104,6 @@ export const invitationStyleTags = {
   "birthday-disco-scrapbook": ["cartoon", "pastel", "light-neutral"],
 
   "birthday-checkerboard-cheers": ["cartoon", "retro", "light-neutral"],
-  "birthday-cobalt-cheers": ["cartoon", "blue", "retro", "light-neutral"],
   "birthday-retro-pop": ["cartoon", "retro", "line-art"],
   "birthday-desktop-sleepover": ["pastel", "retro", "photographic"],
   "birthday-y2k-party": ["metallic", "line-art", "retro"],

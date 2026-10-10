@@ -1,3 +1,4 @@
+import InvitationMakerFooter from "../components/InvitationMakerFooter.jsx";
 import useInvitationGuestName from "../hooks/useInvitationGuestName.js";
 import { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
@@ -149,5 +150,6 @@ export default function PinkLidoExperience({ theme = "pink-lido" }) {
       </div>
       <div className="lido-chapter-art lido-rsvp-art" aria-hidden="true"><img className="lido-rsvp-pool" src={`${art}pool.png`} alt="" /><img className="lido-rsvp-ring" src={`${art}ring.webp`} alt="" /></div>
     </section>
+    <InvitationMakerFooter palette={blue ? "pool" : "cherry"} />
   </main>;
 }

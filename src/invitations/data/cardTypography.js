@@ -64,7 +64,7 @@ const retroOpenings = new Set([
 ]);
 const modernOpenings = new Set([
   "y2k-digital",
-  "cobalt-cheers", "bridal-electric-pink", "bridal-cool-girl-card",
+  "bridal-electric-pink", "bridal-cool-girl-card",
 
 ]);
 const scriptOpenings = new Set([
@@ -88,7 +88,7 @@ export function formatCardOpening(text, language, font) {
 export function getCardTypography(template) {
   const visual = template.previewArt;
   const display = template.visualAssets?.selectedBridal?.font
-    ?? (["midnight-martini", "peach-fizz", "pink-pop", "cherry-tower", "bridal-pink-pop", "bridal-cherry-tower"].includes(visual)
+    ?? (["midnight-martini", "peach-fizz", "cherry-tower", "bridal-cherry-tower"].includes(visual)
     ? "cocktail"
     : ["city-after-dark", "comic-cutout", "retro-sport", "upside-down"].includes(visual)
     ? "comic"

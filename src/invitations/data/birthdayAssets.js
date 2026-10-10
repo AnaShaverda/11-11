@@ -9,8 +9,6 @@ import { paintedSummerAssets } from "./summerAssets.js";
 const image = (group, name) => `/images/birthday/${group}/${name}.webp`;
 
 export const birthdayImages = {
-  cobaltCover: image("cobalt-cheers", "blue-ink-toast"),
-  cobaltItem: image("cobalt-cheers", "coupe-cheers"),
   pinkGlamCover: image("pink-glam", "satin-disco-heart"),
   y2kCover: image("y2k-party", "chrome-cyber-party"),
   retroCover: image("retro-pop", "screenprint-groove"),
@@ -91,7 +89,6 @@ export const birthdayThemeAssets = {
   ...pinkChampagneBirthdayAssets,
 
 
-  "birthday-cobalt-cheers": { coverImage: birthdayImages.cobaltCover, invitation: [], typography: { image: birthdayImages.cobaltItem, right: "0%", bottom: "9%", width: "24%", height: "32%" }, pattern: null, supportCards: [null, null, { image: birthdayImages.cobaltItem, right: "-3%", bottom: "0%", width: "42%", height: "55%" }] },
   "birthday-retro-pop": {
     coverImage: birthdayImages.retroCover,
     invitation: [],

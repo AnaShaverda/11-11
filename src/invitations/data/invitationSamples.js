@@ -85,7 +85,6 @@ export const invitationSamples = {
   "birthday-disco-scrapbook": {"title": "Dea’s Birthday", "name": "Dea", "age": 33, "date": "02 SEP", "time": "19:00", "location": "TBILISI", "line": "Save the date. Bring your sparkle.", "mark": "33"},
 
   "birthday-checkerboard-cheers": {"title": "Dea’s Birthday Party", "name": "Dea", "age": 28, "date": "08 JUN", "time": "19:00", "location": "TBILISI", "line": "Let’s make a night of it.", "mark": "28"},
-  "birthday-cobalt-cheers": { title: "Aniko’s Birthday Party", name: "Aniko", age: 25, date: "14 MAR", time: "19:00", location: "TBILISI", line: "Dress to impress", mark: "25" },
   "birthday-retro-pop": {
     title: "Dea’s 25th Birthday",
     posterName: "Dea’s",

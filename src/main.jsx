@@ -19,7 +19,6 @@ import "./styles/birthday-art-direction.css";
 import "./styles/full-image-cover.css";
 import "./styles/retro-pop.css";
 import "./styles/y2k-party.css";
-import "./styles/reference-socials.css";
 import "./styles/painted-parties.css";
 import "./styles/letter-parties.css";
 import "./styles/ink-and-ivy.css";

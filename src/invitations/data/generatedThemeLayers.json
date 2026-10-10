@@ -1,28 +1,4 @@
 {
-  "birthday-cobalt-cheers": {
-    "background": {
-      "color": "#f7f5ed",
-      "image": "/images/bridal/selected/backgrounds/ivory-paper.webp"
-    },
-    "components": [
-      {
-        "id": "cobalt-left-toast-1",
-        "image": "/images/components/separated/cobalt-left-toast.webp",
-        "left": "-1%",
-        "top": "33%",
-        "width": "53%",
-        "height": "44%"
-      },
-      {
-        "id": "cobalt-right-toast-2",
-        "image": "/images/components/separated/cobalt-right-toast.webp",
-        "left": "49%",
-        "top": "34%",
-        "width": "53%",
-        "height": "44%"
-      }
-    ]
-  },
   "birthday-city-after-dark": {
     "background": {
       "color": "#101e32",
@@ -2206,72 +2182,6 @@
         "top": "7%",
         "width": "51%",
         "height": "93%"
-      }
-    ],
-    "container": "foreground"
-  },
-  "birthday-pink-pop": {
-    "background": {
-      "color": "#f5c5c7",
-      "image": "/images/party/champagne-shared/blush-paper.webp"
-    },
-    "components": [
-      {
-        "id": "birthday-pink-pop-bottle-1",
-        "image": "/images/components/separated/birthday-pink-pop-bottle.webp",
-        "left": "35%",
-        "top": "0%",
-        "width": "38%",
-        "height": "100%"
-      },
-      {
-        "id": "birthday-pink-pop-left-flute-2",
-        "image": "/images/components/separated/birthday-pink-pop-left-flute.webp",
-        "left": "1%",
-        "top": "17%",
-        "width": "26%",
-        "height": "79%"
-      },
-      {
-        "id": "birthday-pink-pop-right-flute-3",
-        "image": "/images/components/separated/birthday-pink-pop-right-flute.webp",
-        "left": "73%",
-        "top": "32%",
-        "width": "25%",
-        "height": "68%"
-      }
-    ],
-    "container": "foreground"
-  },
-  "bridal-pink-pop": {
-    "background": {
-      "color": "#f5c5c7",
-      "image": "/images/party/champagne-shared/blush-paper.webp"
-    },
-    "components": [
-      {
-        "id": "birthday-pink-pop-bottle-1",
-        "image": "/images/components/separated/birthday-pink-pop-bottle.webp",
-        "left": "35%",
-        "top": "0%",
-        "width": "38%",
-        "height": "100%"
-      },
-      {
-        "id": "birthday-pink-pop-left-flute-2",
-        "image": "/images/components/separated/birthday-pink-pop-left-flute.webp",
-        "left": "1%",
-        "top": "17%",
-        "width": "26%",
-        "height": "79%"
-      },
-      {
-        "id": "birthday-pink-pop-right-flute-3",
-        "image": "/images/components/separated/birthday-pink-pop-right-flute.webp",
-        "left": "73%",
-        "top": "32%",
-        "width": "25%",
-        "height": "68%"
       }
     ],
     "container": "foreground"

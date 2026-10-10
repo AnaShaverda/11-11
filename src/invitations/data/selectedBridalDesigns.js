@@ -219,7 +219,7 @@ export const selectedBridalAssets = records((s) => ({
 export const selectedBridalPortraits = records(paper);
 export const selectedBridalSamples = records((s) => ({ title: "Mariam’s Bridal Party", name: "Mariam", posterName: "Mariam", headline: s.headline, opening: "FOR THE BRIDE", date: "12 SEP 2027", time: "20:00", location: "TBILISI", line: phrase }));
 export const selectedBridalEvents = records(() => ({ title: "Mariam’s Bridal Party", brideName: "Mariam", hostName: "Mariam", celebrationName: "Bridal Party", date: "12 September 2027", dateISO: "2027-09-12T20:00:00+04:00", time: "20:00", location: "Tbilisi", description: phrase, enabledModules: ["invitation", "countdown", "gallery", "rsvp"] }));
-const sourceStory = pinkChampagneStories["bridal-pink-pop"];
+const sourceStory = pinkChampagneStories["bridal-cherry-tower"];
 export const selectedBridalStories = Object.fromEntries(studies.map((s) => [slug(s), { ...sourceStory, heroLine: phrase, ...(s.mode === "boot" ? { storyTitle: "A night made for dancing.", inviteMessage: "Bring your dancing boots and your love for the bride." } : {}) }]));
 export const selectedBridalCaptions = { en: {}, ka: {} };
 export const selectedBridalCardCopy = {};
@@ -236,7 +236,7 @@ for (const s of studies) {
   };
   for (const [ns, fields] of Object.entries(localized)) for (const [key, value] of Object.entries(fields)) selectedBridalCardCopy[`cards.${ns}.${slug(s)}.${key}`] = value;
   for (const [key, value] of Object.entries(pinkChampagneCardCopy)) {
-    const prefix = "cards.stories.bridal-pink-pop.";
+    const prefix = "cards.stories.bridal-cherry-tower.";
     if (key.startsWith(prefix)) selectedBridalCardCopy[`cards.stories.${slug(s)}.${key.slice(prefix.length)}`] = value;
   }
   selectedBridalCardCopy[`cards.stories.${slug(s)}.heroLine`] = kaPhrase;

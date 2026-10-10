@@ -12,15 +12,6 @@
       "web": "public/images/birthday/midnight-martini/martini-artwork.webp"
     },
     {
-      "theme": "peach-fizz",
-      "name": "coupe-artwork",
-      "transparent": true,
-      "prompt": "Use case: stylized-concept. Create a genuinely transparent PNG illustration asset for an invitation. Use ONLY panel 04, Peach Fizz, bottom right of the supplied approved moodboard as the visual direction. Re-create its two jaunty flat painted coupe glasses with long navy stems and oval navy bases: left tilted glass lavender bowl with small ivory irregular bubbles and a simple dark red cherry on an olive stalk; right tilted glass mustard-gold bowl with ivory dots and a small simple lemon wedge. Three small coral celebration brush rays between the bowls. Illustrated glasses lean toward each other, lightly touch bowls, one a bit higher. All objects fully visible with small comfortable margins, occupying most of a square-ish isolated composition. Match the approved flat retro gouache and painted-paper collage style with dry brush pigment grain and rough, charming edges. NO background, NO peach stripes, no text, no labels, no border, no other objects. Actual fully transparent background outside the illustrations, opaque painted bowls and stems. No realistic glass, gloss, complex detail, gradients, 3D, drop shadows or realistic lighting.",
-      "source": "/Users/mac/.codex/generated_images/01a0fded-c5d5-70f0-9061-b505b5e7c2c3/exec-45ee6b0b-2302-40d9-9f70-0efdb89dc6b5.png",
-      "original": "src/assets/birthday/peach-fizz/coupe-artwork.png",
-      "web": "public/images/birthday/peach-fizz/coupe-artwork.webp"
-    },
-    {
       "theme": "midnight-martini",
       "name": "navy-paper",
       "transparent": false,
@@ -28,15 +19,6 @@
       "source": "/Users/mac/.codex/generated_images/01a0fded-c5d5-70f0-9061-b505b5e7c2c3/exec-ece1f7c4-5821-4fbd-8c92-1eb3586aa87b.png",
       "original": "src/assets/birthday/midnight-martini/navy-paper.png",
       "web": "public/images/birthday/midnight-martini/navy-paper.webp"
-    },
-    {
-      "theme": "peach-fizz",
-      "name": "peach-paper",
-      "transparent": false,
-      "prompt": "Use case: stylized-concept. Background paper only for an invitation, square. Match panel 04 Peach Fizz bottom right of approved moodboard: pale peach blush and warm ivory broad alternating irregular painted vertical stripes, slightly wonky hand-brushed edges, dry gouache / screenprint pigment grain, limited flat colors, gentle contrast. Approximately seven broad stripes across full width. Entire square edge to edge. NO glasses, objects, cherries, lemon, accents, rays, lettering, labels, borders, watermark or shadow. Flat scanned handmade painted paper, no realism, paper edge or perspective.",
-      "source": "/Users/mac/.codex/generated_images/01a0fded-c5d5-70f0-9061-b505b5e7c2c3/exec-01d8b7e2-5239-4a87-b30f-6d3b8a1106a7.png",
-      "original": "src/assets/birthday/peach-fizz/peach-paper.png",
-      "web": "public/images/birthday/peach-fizz/peach-paper.webp"
     }
   ]
 }

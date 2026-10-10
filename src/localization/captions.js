@@ -365,7 +365,6 @@ const themeCatalog = [
     "Orange checks & painted cocktails",
   ],
   [
-    "birthday-cobalt-cheers",
     "ლურჯი სადღეგრძელო",
     "ლურჯი მელანი და კოქტეილები",
     "Cobalt Cheers",
@@ -756,7 +755,6 @@ const themeDescriptions = [
     "Orange · bold · retro",
   ],
   [
-    "birthday-cobalt-cheers",
     "ლურჯი პოსტერის ასოები, კოქტეილის ილუსტრაციები და დაბადების დღე მეგობრებთან ერთად.",
     "ლურჯი · გრაფიკული · მეგობრული",
     "Bold blue lettering, illustrated cocktail cheers, and a birthday with good company.",

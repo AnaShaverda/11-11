@@ -28,7 +28,7 @@ function Invitation({ theme, event, story, template }) {
         title: event.title, name: event.hostName, namePossessive: event.hostNamePossessive, age: event.age ?? 25,
         posterName: event.hostName, posterAge: event.age ?? 25, posterOccasion: event.celebrationName,
         line: event.description,
-        date: ["cobalt-cheers", "wedding-day-notes", "date-and-dinner", "colorful-company"].includes(theme.visual) ? compactDate : theme.subcategory === "gender-reveal" ? compactDate : `${compactDate} · ${event.time}`,
+        date: ["wedding-day-notes", "date-and-dinner", "colorful-company"].includes(theme.visual) ? compactDate : theme.subcategory === "gender-reveal" ? compactDate : `${compactDate} · ${event.time}`,
         time: event.time, location: event.location, details: `${compactDate} · ${event.time} · ${event.location}`,
       }}
     />

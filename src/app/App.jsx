@@ -26,6 +26,8 @@ const CustomOrderRoute = lazy(() => import("../custom-orders/CustomOrderRoute.js
 const PizzaChefExperience = lazy(() => import("../invitations/pages/PizzaChefExperience.jsx"));
 const PinkLidoExperience = lazy(() => import("../invitations/pages/PinkLidoExperience.jsx"));
 const CherryTowerExperience = lazy(() => import("../invitations/pages/CherryTowerExperience.jsx"));
+const PeachFizzExperience = lazy(() => import("../invitations/pages/PeachFizzExperience.jsx"));
+const MidnightMartiniExperience = lazy(() => import("../invitations/pages/MidnightMartiniExperience.jsx"));
 const CocktailSummerExperience = lazy(() => import("../invitations/pages/CocktailSummerExperience.jsx"));
 
 const PopDiscoExperience = lazy(() => import("../invitations/pages/PopDiscoExperience.jsx"));
@@ -92,7 +94,8 @@ export default function App() {
       <Route path="invitations/bridal-sunny-pop" element={<CherryTowerExperience key="sunny-pop" bridal variant="sunny-pop" originalArtwork />} />
       <Route path="invitations/bridal-mint-ribbon" element={<CherryTowerExperience key="mint-ribbon" bridal variant="mint-bash" />} />
       <Route path="invitations/bridal-sunny-ribbon" element={<CherryTowerExperience key="sunny-ribbon" bridal variant="sunny-pop" />} />
-      <Route path="invitations/birthday-peach-fizz" element={<CherryTowerExperience key="peach-fizz" variant="peach-fizz" />} />
+      <Route path="invitations/birthday-peach-fizz" element={<PeachFizzExperience />} />
+      <Route path="invitations/birthday-midnight-martini" element={<MidnightMartiniExperience />} />
       <Route path="invitations/birthday-little-pizza-chef" element={<PizzaChefExperience key="pizza-chef" />} />
       <Route path="invitations/birthday-slice-club" element={<PizzaChefExperience key="slice-club" theme="slice-club" />} />
       <Route path="invitations/birthday-blue-splash" element={<PinkLidoExperience key="blue-splash" theme="blue-splash" />} />

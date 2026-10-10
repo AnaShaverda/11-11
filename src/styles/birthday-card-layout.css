@@ -21,10 +21,3 @@
 /* Leave a visible gap above the age and keep the invitation off the rocket. */
 
 /* Legible poster details stay below the hands, inside the blue frame. */
-.invitation-art.preview-birthday.preview-cobalt-cheers .cobalt-poster-bottom { bottom: 3%; gap: 1cqw; }
-.invitation-art.preview-birthday.preview-cobalt-cheers .social-date { align-self: center; font-size: 3cqw; line-height: 1.4; }
-.invitation-art.preview-birthday.preview-cobalt-cheers .social-menu { font-size: max(7px, 2.3cqw); line-height: 1.4; }
-.invitation-art.preview-birthday.preview-cobalt-cheers .social-info-grid { font-size: max(8px, 2.8cqw); line-height: 1.3; }
-.invitation-art.preview-birthday.preview-cobalt-cheers .social-info-grid b { font-size: max(7px, 2.4cqw); line-height: 1.3; }
-.invitation-art.preview-birthday.preview-cobalt-cheers .social-info-grid > span { padding: .8cqw; }
-.invitation-art.preview-birthday.preview-cobalt-cheers:lang(ka) .cobalt-poster-heading > strong { font-size: 10.5cqw; line-height: 1.05; }

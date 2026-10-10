@@ -20,7 +20,6 @@ function getArtworkExtraCopyFields(template, sample) {
     return [extra(`cards.reveal.${variant}`, "headline"), extra("cards.reveal.invited", "opening"), extra("cards.reveal.closing", "closing")];
   }
   if (template.category === "Wedding") return [extra("cards.wedding.saveDate", "opening"), ...(["wedding-day-notes", "date-and-dinner", "colorful-company"].includes(template.visual) ? [0, 1, 2, 3].map(index => extra(`cards.wedding.step.${index}`, `step${index + 1}`)) : [])];
-  if (template.visual === "cobalt-cheers") return [extra("cards.social.title.0", "occasion"), extra("cards.social.title.1", "occasionSecond"), extra("cards.social.menu", "menu"), extra("cards.social.wear", "dressCode"), extra("cards.social.time", "timeLabel"), extra("cards.social.where", "locationLabel")];
   return [extra("invitations.invited", "opening"), ...(template.slug === "birthday-y2k-party" ? [extra("cards.y2k", "occasion"), extra("cards.party", "occasionSecond")] : !assets.coverImage ? [extra("invitations.invites", "closing")] : [])];
 }
 
@@ -80,7 +79,6 @@ export function getEditableCardFields(template, sample, translations, t) {
   const fields = getCardTextFields(template, sample).map(field => ({ ...field, group: "fields", aliases: [field.value] }));
   const assets = template.visualAssets ?? {};
   const titleIsMetadata = sample.headline !== undefined || assets.christeningCard || assets.retroBridal
-    || ["cobalt-cheers"].includes(template.visual)
     || ["birthday-y2k-party", "birthday-retro-pop"].includes(template.slug)
     || (assets.photoCard && !assets.coverImage);
   const title = fields.find(field => field.key === "title");

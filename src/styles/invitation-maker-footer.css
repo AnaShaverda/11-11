@@ -1,0 +1,18 @@
+:root body .invitation-maker-footer{display:flex;flex-direction:column;justify-content:center;align-items:center;gap:4px;min-height:160px;padding:28px 24px 32px;margin:0;border:0;background:var(--maker-bg);color:var(--maker-ink);text-align:center}
+:root body .invitation-maker-footer>span{font:600 11px/1.5 Arial,'Noto Sans Georgian',sans-serif!important;letter-spacing:.14em;text-transform:uppercase}
+:root body .invitation-maker-footer>a{display:flex;align-items:center;justify-content:center;width:80px;min-height:68px;padding:4px;border-radius:4px}
+:root body .invitation-maker-footer img{display:block;width:70px;height:auto;max-width:100%}
+:root body .invitation-maker-footer>a:focus-visible{outline:2px solid var(--maker-ink);outline-offset:5px}
+.maker-cherry{--maker-bg:#f4bec8;--maker-ink:#861b32}
+.maker-mint{--maker-bg:#d4e5cc;--maker-ink:#25584e}
+.maker-sunny{--maker-bg:#f8db8e;--maker-ink:#78451c}
+.maker-peach{--maker-bg:#f5c5ae;--maker-ink:#182447}
+.maker-pool{--maker-bg:#c1e7ec;--maker-ink:#075a9f}
+.maker-pizza{--maker-bg:#d3d8ae;--maker-ink:#3e542e}
+
+.maker-guest{--maker-bg:color-mix(in srgb,var(--guest-paper) 88%,var(--guest-ink));--maker-ink:var(--guest-ink)}
+.maker-adaptive-logo{display:block;width:70px;height:59px;background:var(--maker-ink);mask:url(/logos/logo-pink-star.svg) center/contain no-repeat;-webkit-mask:url(/logos/logo-pink-star.svg) center/contain no-repeat}
+.guest-footer:has(.invitation-maker-footer){padding:0;gap:0}.guest-footer>.invitation-maker-footer{width:100%}
+
+.maker-lilac{--maker-bg:#e3d4ef;--maker-ink:#49376a}
+.maker-midnight{--maker-bg:#e9a8ae;--maker-ink:#153d58}

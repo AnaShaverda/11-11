@@ -23,7 +23,6 @@ import { Link } from "react-router-dom";
 import { getInvitationSample } from "../../localization/cardCopy.js";
 import BirthdayIllustrations from "./BirthdayIllustrations.jsx";
 import { useLanguage } from "../../localization/LanguageContext.jsx";
-import ReferenceSocialPoster from "./ReferenceSocialPoster.jsx";
 import WeddingDayPoster from "./WeddingDayPoster.jsx";
 import WeddingHeartPoster from "./WeddingHeartPoster.jsx";
 import WeddingInkPoster from "./WeddingInkPoster.jsx";
@@ -279,13 +278,6 @@ export function InvitationArtwork({
           "golden-promise",
         ].includes(template.visual) ? (
         <WeddingInkPoster {...sample} />
-      ) : coverImage &&
-        ["cobalt-cheers"].includes(template.visual) ? (
-        <ReferenceSocialPoster
-          variant={template.visual}
-          {...sample}
-          openingFont={typography.opening}
-        />
       ) : coverImage && template.slug === "birthday-y2k-party" ? (
         <div className="y2k-image-cover-copy">
           <span className="y2k-image-opening">{invitedLabel}</span>

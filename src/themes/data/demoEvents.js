@@ -82,7 +82,6 @@ export const themeDemoEvents = {
   "birthday-disco-scrapbook": {"title": "Dea’s Birthday", "hostName": "Dea", "age": 33, "celebrationName": "33th Birthday", "date": "2 September 2027", "dateISO": "2027-09-02T19:00:00+04:00", "time": "19:00", "location": "Tbilisi, Georgia", "description": "Save the date. Bring your sparkle.", "enabledModules": ["invitation", "countdown", "gallery"]},
 
   "birthday-checkerboard-cheers": {"title": "Dea’s Birthday Party", "hostName": "Dea", "age": 28, "celebrationName": "28th Birthday", "date": "8 June 2027", "dateISO": "2027-06-08T19:00:00+04:00", "time": "19:00", "location": "Tbilisi, Georgia", "description": "Let’s make a night of it.", "enabledModules": ["invitation", "countdown", "gallery"]},
-  "birthday-cobalt-cheers": { title: "Aniko’s Birthday Party", hostName: "Aniko", age: 25, celebrationName: "25th Birthday", date: "14 March 2027", dateISO: "2027-03-14T19:00:00+04:00", time: "19:00", location: "Tbilisi, Georgia", description: "Dress to impress", enabledModules: ["invitation", "countdown", "gallery"] },
   birthday: {
     title: "Aniko’s 25th Birthday",
     hostName: "Aniko",

@@ -1,5 +1,5 @@
 {
-  "total": 101,
+  "total": 98,
   "summary": {
     "independent-components": 89,
     "retained-scene": 11,
@@ -8,10 +8,9 @@
     "graphic-background": 1
   },
   "categories": {
-    "Birthday": 18,
+    "Birthday": 16,
     "Wedding": 30,
-    "Other": 53,
-    "Corporate": 0
+    "Other": 52
   },
   "granularity": "Independent decorative objects are separate layers. Intrinsic details, connected borders and connected narrative illustrations remain within their own illustration.",
   "themes": [
@@ -94,44 +93,6 @@
             "top": "6%",
             "width": "52%",
             "height": "35%"
-          }
-        }
-      ]
-    },
-    {
-      "slug": "birthday-cobalt-cheers",
-      "category": "Birthday",
-      "visibility": "active",
-      "textLayer": "localized HTML",
-      "separation": "independent-components",
-      "background": {
-        "color": "#f7f5ed",
-        "image": "/images/bridal/selected/backgrounds/ivory-paper.webp",
-        "size": "cover"
-      },
-      "components": [
-        {
-          "id": "cobalt-left-toast-1",
-          "image": "/images/components/separated/cobalt-left-toast.webp",
-          "left": "-1%",
-          "top": "44%",
-          "width": "53%",
-          "height": "27%",
-          "portrait": {
-            "top": "42%",
-            "height": "29%"
-          }
-        },
-        {
-          "id": "cobalt-right-toast-2",
-          "image": "/images/components/separated/cobalt-right-toast.webp",
-          "left": "49%",
-          "top": "44%",
-          "width": "53%",
-          "height": "27%",
-          "portrait": {
-            "top": "42%",
-            "height": "29%"
           }
         }
       ]
@@ -509,45 +470,6 @@
           "top": "7%",
           "width": "51%",
           "height": "93%"
-        }
-      ],
-      "container": "foreground"
-    },
-    {
-      "slug": "birthday-pink-pop",
-      "category": "Birthday",
-      "visibility": "active",
-      "textLayer": "localized HTML",
-      "separation": "independent-components",
-      "background": {
-        "color": "#f5c5c7",
-        "image": "/images/party/champagne-shared/blush-paper.webp",
-        "size": "cover"
-      },
-      "components": [
-        {
-          "id": "birthday-pink-pop-bottle-1",
-          "image": "/images/components/separated/birthday-pink-pop-bottle.webp",
-          "left": "35%",
-          "top": "0%",
-          "width": "38%",
-          "height": "100%"
-        },
-        {
-          "id": "birthday-pink-pop-left-flute-2",
-          "image": "/images/components/separated/birthday-pink-pop-left-flute.webp",
-          "left": "1%",
-          "top": "17%",
-          "width": "26%",
-          "height": "79%"
-        },
-        {
-          "id": "birthday-pink-pop-right-flute-3",
-          "image": "/images/components/separated/birthday-pink-pop-right-flute.webp",
-          "left": "73%",
-          "top": "32%",
-          "width": "25%",
-          "height": "68%"
         }
       ],
       "container": "foreground"
@@ -3326,45 +3248,6 @@
           "height": "13%"
         }
       ]
-    },
-    {
-      "slug": "bridal-pink-pop",
-      "category": "Other",
-      "visibility": "active",
-      "textLayer": "localized HTML",
-      "separation": "independent-components",
-      "background": {
-        "color": "#f5c5c7",
-        "image": "/images/party/champagne-shared/blush-paper.webp",
-        "size": "cover"
-      },
-      "components": [
-        {
-          "id": "birthday-pink-pop-bottle-1",
-          "image": "/images/components/separated/birthday-pink-pop-bottle.webp",
-          "left": "35%",
-          "top": "0%",
-          "width": "38%",
-          "height": "100%"
-        },
-        {
-          "id": "birthday-pink-pop-left-flute-2",
-          "image": "/images/components/separated/birthday-pink-pop-left-flute.webp",
-          "left": "1%",
-          "top": "17%",
-          "width": "26%",
-          "height": "79%"
-        },
-        {
-          "id": "birthday-pink-pop-right-flute-3",
-          "image": "/images/components/separated/birthday-pink-pop-right-flute.webp",
-          "left": "73%",
-          "top": "32%",
-          "width": "25%",
-          "height": "68%"
-        }
-      ],
-      "container": "foreground"
     },
     {
       "slug": "bridal-cherry-tower",

@@ -28,20 +28,6 @@
     "generatedPath": "/Users/mac/.codex/generated_images/01a100c5-12b3-73a1-a228-9fea27b10b9b/exec-38a8c21e-38b7-43f7-878d-80618a53f2d9.png"
   },
   {
-    "id": "cobalt-left-toast",
-    "source": "/Users/mac/Desktop/11-11/public/images/birthday/cobalt-cheers/blue-ink-toast.webp",
-    "prompt": "Use case: background-extraction. Edit target: original invitation. Extract ONLY the left blue-ink hand holding its coupe glass with checked sleeve; remove the right hand, right glass and central splashes. Exactly one separately movable component centered and closely framed with 3% margin, preserve original aspect ratio, shapes, colors and illustration style. Genuine alpha transparency outside the selected object; remove all paper, backdrop and unrelated marks. Preserve watercolor/ink within the object, no opaque rectangular fill, no added text, no extra objects, no ground shadow.",
-    "background": false,
-    "generatedPath": "/Users/mac/.codex/generated_images/01a100c5-12b3-73a1-a228-9fea27b10b9b/exec-5f82d824-cf74-451c-8485-37e170ae871f.png"
-  },
-  {
-    "id": "cobalt-right-toast",
-    "source": "/Users/mac/Desktop/11-11/public/images/birthday/cobalt-cheers/blue-ink-toast.webp",
-    "prompt": "Use case: background-extraction. Edit target: original invitation. Extract ONLY the right blue-ink hand holding its coupe glass with checked sleeve; remove the left hand, left glass and central splashes. Exactly one separately movable component centered and closely framed with 3% margin, preserve original aspect ratio, shapes, colors and illustration style. Genuine alpha transparency outside the selected object; remove all paper, backdrop and unrelated marks. Preserve watercolor/ink within the object, no opaque rectangular fill, no added text, no extra objects, no ground shadow.",
-    "background": false,
-    "generatedPath": "/Users/mac/.codex/generated_images/01a100c5-12b3-73a1-a228-9fea27b10b9b/exec-d28e41e3-962a-4f41-87c4-89b80bddfa18.png"
-  },
-  {
     "id": "wedding-little-yes-ring-hand",
     "source": "/Users/mac/Desktop/11-11/public/images/wedding/little-yes/ring-hand-lines.webp",
     "prompt": "Use case: background-extraction. Edit target: original wedding-little-yes invitation. Extract the single outlined hand with engagement ring and sage cuff, without surrounding gold sparkles. One independently movable component on genuine transparent alpha, centered on its own canvas with 3% margin and original aspect ratio. Preserve original shape, proportions, illustration style, line weight, palette, material and all intrinsic detail. Remove paper and every unrelated object; clean transparent edges, no residual texture or stray marks. For ink drawings, interiors and spaces enclosed by lines must be transparent. For painted or filled objects, retain paint and opaque object interiors. No extra decorations, no text, no letters, no shadows outside the object.",
@@ -845,41 +831,6 @@
     "prompt": "Use case: background-extraction. Edit target: original birthday-midnight-martini transparent illustration. Extract ONLY ONE pink short painted horizontal bar at lower left, remove all other marks. Exactly one independently movable object, centered and closely framed with 3% transparent margin, preserve original aspect ratio, palette, paint texture, illustration shapes and all intrinsic details. Preserve genuine alpha transparency outside the selected object and remove all other objects, marks and ornaments. No background, no paper, no new decoration, no lettering, no shadows.",
     "background": false,
     "generatedPath": "/Users/mac/.codex/generated_images/01a100c5-12b3-73a1-a228-9fea27b10b9b/exec-1eb3bfe0-1cd0-4a76-b3c9-e1122f32f157.png"
-  },
-  {
-    "id": "birthday-peach-fizz-left-coupe",
-    "source": "/Users/mac/Desktop/11-11/public/images/birthday/peach-fizz/coupe-artwork.webp",
-    "prompt": "Use case: background-extraction. Edit target: original birthday-peach-fizz transparent illustration. Extract ONLY the purple left coupe glass with its cherry garnish, remove yellow glass, rays and all other marks. Exactly one independently movable object, centered and closely framed with 3% transparent margin, preserve original aspect ratio, palette, paint texture, illustration shapes and all intrinsic details. Preserve genuine alpha transparency outside the selected object and remove all other objects, marks and ornaments. No background, no paper, no new decoration, no lettering, no shadows.",
-    "background": false,
-    "generatedPath": "/Users/mac/.codex/generated_images/01a100c5-12b3-73a1-a228-9fea27b10b9b/exec-13b265f5-d1fc-4176-b97e-94a3939c2009.png"
-  },
-  {
-    "id": "birthday-peach-fizz-right-coupe",
-    "source": "/Users/mac/Desktop/11-11/public/images/birthday/peach-fizz/coupe-artwork.webp",
-    "prompt": "Use case: background-extraction. Edit target: original birthday-peach-fizz transparent illustration. Extract ONLY the yellow right coupe glass with its citrus slice, remove purple glass, rays and all other marks. Exactly one independently movable object, centered and closely framed with 3% transparent margin, preserve original aspect ratio, palette, paint texture, illustration shapes and all intrinsic details. Preserve genuine alpha transparency outside the selected object and remove all other objects, marks and ornaments. No background, no paper, no new decoration, no lettering, no shadows.",
-    "background": false,
-    "generatedPath": "/Users/mac/.codex/generated_images/01a100c5-12b3-73a1-a228-9fea27b10b9b/exec-940e32e3-98df-4dfe-a7b6-0ad47c16dfe0.png"
-  },
-  {
-    "id": "birthday-pink-pop-bottle",
-    "source": "/Users/mac/Desktop/11-11/public/images/party/pink-pop/champagne-artwork.webp",
-    "prompt": "Use case: background-extraction. Edit target: original birthday-pink-pop transparent illustration. Extract ONLY the central dark blue champagne bottle with pink neck and cherry label, remove both flutes and dots. Exactly one independently movable object, centered and closely framed with 3% transparent margin, preserve original aspect ratio, palette, paint texture, illustration shapes and all intrinsic details. Preserve genuine alpha transparency outside the selected object and remove all other objects, marks and ornaments. No background, no paper, no new decoration, no lettering, no shadows.",
-    "background": false,
-    "generatedPath": "/Users/mac/.codex/generated_images/01a100c5-12b3-73a1-a228-9fea27b10b9b/exec-f391f2f6-5d33-4426-8d73-09c66b2ca6ca.png"
-  },
-  {
-    "id": "birthday-pink-pop-left-flute",
-    "source": "/Users/mac/Desktop/11-11/public/images/party/pink-pop/champagne-artwork.webp",
-    "prompt": "Use case: background-extraction. Edit target: original birthday-pink-pop transparent illustration. Extract ONLY the pink left champagne flute with yellow champagne and bubbles inside the glass, remove bottle, right flute and dots. Exactly one independently movable object, centered and closely framed with 3% transparent margin, preserve original aspect ratio, palette, paint texture, illustration shapes and all intrinsic details. Preserve genuine alpha transparency outside the selected object and remove all other objects, marks and ornaments. No background, no paper, no new decoration, no lettering, no shadows.",
-    "background": false,
-    "generatedPath": "/Users/mac/.codex/generated_images/01a100c5-12b3-73a1-a228-9fea27b10b9b/exec-53addb69-9154-429b-bfeb-980835591dbf.png"
-  },
-  {
-    "id": "birthday-pink-pop-right-flute",
-    "source": "/Users/mac/Desktop/11-11/public/images/party/pink-pop/champagne-artwork.webp",
-    "prompt": "Use case: background-extraction. Edit target: original birthday-pink-pop transparent illustration. Extract ONLY the pink right champagne flute with yellow champagne and bubbles inside the glass, remove bottle, left flute and dots. Exactly one independently movable object, centered and closely framed with 3% transparent margin, preserve original aspect ratio, palette, paint texture, illustration shapes and all intrinsic details. Preserve genuine alpha transparency outside the selected object and remove all other objects, marks and ornaments. No background, no paper, no new decoration, no lettering, no shadows.",
-    "background": false,
-    "generatedPath": "/Users/mac/.codex/generated_images/01a100c5-12b3-73a1-a228-9fea27b10b9b/exec-5a9b7471-d0c3-4af1-8540-fd6d58d026d5.png"
   },
   {
     "id": "birthday-cherry-tower-bottle",

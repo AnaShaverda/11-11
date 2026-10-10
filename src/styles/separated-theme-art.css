@@ -85,8 +85,6 @@
 .invitation-art--separated:not(.invitation-art--portrait).preview-our-people .wedding-ink-copy > strong { top: 43%; font-size: 6cqw; line-height: 1.2; }
 .invitation-art--separated:not(.invitation-art--portrait).preview-our-people .wedding-ink-copy > em { top: 63%; }
 .invitation-art--separated:not(.invitation-art--portrait).preview-our-people .wedding-ink-details { top: 73%; }
-.invitation-art--separated.preview-cobalt-cheers .cobalt-poster-heading > strong { font-size: 9cqw; line-height: 1.12; letter-spacing: 0; }
-.invitation-art--separated.preview-cobalt-cheers .cobalt-poster-heading > span { font-size: 4cqw; line-height: 1.25; letter-spacing: 0; }
 .invitation-art--separated.preview-cherry-toast .bridal-line-copy > strong { font-size: 6.5cqw; line-height: 1.2; }
 .invitation-art--separated.preview-cherry-toast .bridal-line-copy > em { top: 34%; }
 .invitation-art--separated.preview-cherry-toast .bridal-line-details { top: auto; bottom: 4%; }

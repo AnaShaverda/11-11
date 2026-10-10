@@ -3,20 +3,17 @@
   "concepts": [
     "cherry-tower/concept.png",
     "mint-bash/concept.png",
-    "sunny-pop/concept.png",
-    "peach-fizz/concept.png"
+    "sunny-pop/concept.png"
   ],
   "assets": [
     "public/images/bridal/experience/mint-hero.png",
     "public/images/bridal/experience/sunny-hero.png",
-    "public/images/bridal/experience/clink-glass.png",
-    "public/images/birthday/peach-fizz/experience-hero.png"
+    "public/images/bridal/experience/clink-glass.png"
   ],
   "prompt_set": {
     "concepts": "Fullscreen editorial birthday or bridal invitations; oversized serif names and italic celebration title; themed stripes, scallops, watercolor champagne illustration; details, popping, clinking, personal toast, wishes and RSVP; coordinated mobile composition.",
     "mint": "Transparent watercolor dark green champagne bottle with gold foil, large pink ribbon, two clear golden champagne coupe glasses with pink bows, Good friends label.",
     "sunny": "Matching transparent watercolor bottle and two golden champagne coupe glasses with lavender bows, lemons and white citrus blossoms.",
-    "peach": "Transparent rose champagne bottle with gold foil and peach satin ribbon, two golden champagne coupes with peach bows, peach fruit and tiny white blossoms, Peach fizz label.",
     "glass": "Single isolated crystal champagne coupe with golden champagne, slender stem and pink ribbon, transparent background. Edited to remove background haze."
   },
   "design_tokens": {
@@ -31,10 +28,6 @@
     "sunny": [
       "#fff2c1",
       "#35182f"
-    ],
-    "peach": [
-      "#f8d7c2",
-      "#9e402f"
     ],
     "display": "Casmera demo with Georgia italic",
     "body": "Georgia / Noto Serif Georgian"
@@ -62,7 +55,7 @@
     "prevented whitespace-only wishes and toasts",
     "removed glass hue rotation that tinted champagne green"
   ],
-  "copy_diff": "Core title, date, You\u2019re invited and RSVP preserved. Intentional changes: language toggle displays target language; invented concept navigation/gallery and decorative slogans omitted; birthday/bridal activity copy adapts to recipient.",
+  "copy_diff": "Core title, date, You’re invited and RSVP preserved. Intentional changes: language toggle displays target language; invented concept navigation/gallery and decorative slogans omitted; birthday/bridal activity copy adapts to recipient.",
   "intentional_deviations": [
     "Cherry reuses original collection artwork",
     "Vision-board contact sheets translated into full-width scroll sections",

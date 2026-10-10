@@ -3,15 +3,6 @@
   "reference": "/Users/mac/.codex/generated_images/01a0fded-c5d5-70f0-9061-b505b5e7c2c3/exec-77639d19-1504-4424-b419-3715f3c337ce.png",
   "assets": [
     {
-      "group": "pink-pop",
-      "name": "champagne-artwork",
-      "transparent": true,
-      "prompt": "Use case: stylized-concept. Generate an isolated transparent PNG illustration for birthday and bridal invitations. Supplied moodboard is the approved visual reference. Match ONLY panel 01 Pink Pop at top left: one large navy champagne bottle with raspberry-pink speckled foil, ivory collar and ivory label with abstract pink petal stamps, flanked by TWO slender champagne flutes of different heights with raspberry outlines and stems, ivory rims and mustard bubbly drink with ivory dots. Sparse navy confetti dots above flutes. Re-create the approved arrangement, simple chunky retro gouache and textured painted-paper collage, flat opaque shapes, natural dry-brush pigment grain, imperfect hand-printed edges. Square-ish isolated composition; bottle and full stems fully visible, narrow comfortable margins. Entire background outside objects is genuinely transparent, NO pink field, no text, no brand, no labels with lettering, no shadow, no 3D, no photorealistic glass, no gloss, no detailed watercolor. Preserve ivory and mustard opaque shapes inside the illustrated glasses.",
-      "source": "/Users/mac/.codex/generated_images/01a0fded-c5d5-70f0-9061-b505b5e7c2c3/exec-cf9fdae9-a73e-4110-87b3-eca2043929c0.png",
-      "original": "src/assets/party/pink-pop/champagne-artwork.png",
-      "web": "public/images/party/pink-pop/champagne-artwork.webp"
-    },
-    {
       "group": "cherry-tower",
       "name": "champagne-artwork",
       "transparent": true,

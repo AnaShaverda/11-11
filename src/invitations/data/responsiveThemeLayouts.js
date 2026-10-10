@@ -72,6 +72,5 @@ export function applyResponsiveThemeLayout(slug, original) {
   if (slug === "wedding-happily-away") reposition(component => component.id.includes("car"), at(8, 57, 86, 28));
   if (slug === "wedding-tipsy-together") reposition(component => component.id.includes("bride") || component.id.includes("groom"), { top: "57%", height: "29%" });
   if (slug === "wedding-cherry-toast") reposition(() => true, { top: "55%", height: "32%" });
-  if (slug === "birthday-cobalt-cheers") reposition(() => true, { top: "44%", height: "27%" }, { top: "42%", height: "29%" });
   return record;
 }

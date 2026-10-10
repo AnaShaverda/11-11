@@ -9,7 +9,6 @@ export const themeStatusOverrides = {
   "birthday-disco-scrapbook": "active",
 
   "birthday-checkerboard-cheers": "active",
-  "birthday-cobalt-cheers": "active",
   "birthday-retro-disco": "avtive",
   "birthday-y2k-digital": "active",
   "birthday-pink-glam": "active",
@@ -23,7 +22,6 @@ export const themeStatusOverrides = {
   "birthday-slice-club": "active",
   "birthday-midnight-martini": "active",
   "birthday-peach-fizz": "active",
-  "birthday-pink-pop": "active",
   "birthday-cherry-tower": "active",
   "wedding-little-yes": "inactive",
   "wedding-happy-table": "inactive",
@@ -92,7 +90,6 @@ export const themeStatusOverrides = {
   "gender-reveal-little-surprise": "inactive",
   "gender-reveal-ribbon-surprise": "inactive",
   "gender-reveal-pink-or-blue": "inactive",
-  "bridal-pink-pop": "inactive",
   "bridal-cherry-tower": "inactive",
   "bridal-blush-label": "inactive",
   "bridal-lilac-pop": "inactive",

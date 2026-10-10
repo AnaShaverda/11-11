@@ -48,14 +48,7 @@ const texture = "/images/bridal/selected/backgrounds/ivory-paper.webp";
 
 
 
-add(
-  "birthday-cobalt-cheers",
-  [
-    part("cobalt-left-toast", -1, 33, 53, 44),
-    part("cobalt-right-toast", 49, 34, 53, 44),
-  ],
-  texture,
-);
+
 ]);
 for (const key of [
   "city-after-dark",
@@ -630,13 +623,7 @@ foreground("birthday-peach-fizz", [
   named("birthday-peach-fizz", "left-coupe", 0, 0, 51, 96),
   named("birthday-peach-fizz", "right-coupe", 49, 7, 51, 93),
 ]);
-const pop = [
-  named("birthday-pink-pop", "bottle", 35, 0, 38, 100),
-  named("birthday-pink-pop", "left-flute", 1, 17, 26, 79),
-  named("birthday-pink-pop", "right-flute", 73, 32, 25, 68),
-];
-for (const slug of ["birthday-pink-pop", "bridal-pink-pop"])
-  foreground(slug, pop);
+
 const tower = [
   named("birthday-cherry-tower", "bottle", 68, 25, 31, 75),
   ...[

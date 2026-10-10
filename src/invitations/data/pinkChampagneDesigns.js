@@ -1,6 +1,5 @@
 // The two approved gouache illustrations are shared by birthday and bridal cards.
 const studies = [
-  { art: "pink-pop", name: "Pink Pop", kaName: "ვარდისფერი ბუშტუკები", ink: "#153d58", headline: "POP THE\nBUBBLY!", kaHeadline: "მოდი\nვიზეიმოთ!", description: "Blush paper, a navy champagne bottle, and raspberry flutes.", kaDescription: "ვარდისფერი ქაღალდი, მუქი ლურჯი შამპანურის ბოთლი და ჟოლოსფერი ბოკლები." },
   { art: "cherry-tower", name: "Cherry Tower", kaName: "ალუბლისფერი ბოკლების კოშკი", ink: "#a51e37", headline: "LET’S\nCELEBRATE!", kaHeadline: "მოდი\nვიზეიმოთ!", description: "Pink paper, a cherry-red champagne tower, and a playful popping cork.", kaDescription: "ვარდისფერი ქაღალდი, ალუბლისფერი ბოკლების კოშკი და მხიარული შამპანურის საცობი." },
 ];
 const variants = studies.flatMap((s) => ["birthday", "bridal"].map((occasion) => ({
