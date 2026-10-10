@@ -3,12 +3,12 @@ import { eventModules } from "../../modules/data/eventModules.js";
 import { activeThemes, getThemeBySlug, isThemeActive } from "../../themes/data/themeRegistry.js";
 
 export const surpriseOccasions = [
-  { id: "birthday", label: "Birthday", icon: "asterisk", headline: "Another year of you.", note: "For the person whose day deserves more than a text.", themeIds: ["birthday-retro-disco", "birthday-coquette", "birthday-y2k-digital"] },
-  { id: "friendship", label: "Friendship", icon: "heart", headline: "For my favorite person.", note: "All your inside jokes and shared stories in one place.", themeIds: ["birthday-coquette", "birthday-pastel-dream", "birthday-retro-disco"] },
-  { id: "romantic", label: "Romantic", icon: "heart-filled", headline: "A little world for us.", note: "Something tender to open whenever you miss each other.", themeIds: ["wedding-rose-letter", "wedding-heart-hideaway", "birthday-coquette"] },
+  { id: "birthday", label: "Birthday", icon: "asterisk", headline: "Another year of you.", note: "For the person whose day deserves more than a text.", themeIds: ["birthday-retro-disco", "birthday-y2k-digital"] },
+  { id: "friendship", label: "Friendship", icon: "heart", headline: "For my favorite person.", note: "All your inside jokes and shared stories in one place.", themeIds: ["birthday-retro-disco"] },
+  { id: "romantic", label: "Romantic", icon: "heart-filled", headline: "A little world for us.", note: "Something tender to open whenever you miss each other.", themeIds: ["wedding-rose-letter", "wedding-heart-hideaway"] },
   { id: "anniversary", label: "Anniversary", icon: "sparkle", headline: "Another chapter together.", note: "A way to revisit everything you have become together.", themeIds: ["wedding-first-dance", "wedding-ink-and-ivy", "wedding-rose-letter"] },
-  { id: "graduation", label: "Graduation", icon: "star", headline: "Look how far you came.", note: "A celebration of the work, courage, and people behind it.", themeIds: ["birthday-y2k-digital", "birthday-pastel-dream"] },
-  { id: "just-because", label: "Just Because", icon: "flower", headline: "You deserve this today.", note: "No occasion needed to make someone feel seen.", themeIds: ["birthday-garden-party", "birthday-pastel-dream", "birthday-coquette"] },
+  { id: "graduation", label: "Graduation", icon: "star", headline: "Look how far you came.", note: "A celebration of the work, courage, and people behind it.", themeIds: ["birthday-y2k-digital"] },
+  { id: "just-because", label: "Just Because", icon: "flower", headline: "You deserve this today.", note: "No occasion needed to make someone feel seen.", themeIds: ["birthday-retro-disco"] },
 ].map((occasion) => {
   const themeIds = occasion.themeIds.filter((id) => isThemeActive(getThemeBySlug(id)));
   return {

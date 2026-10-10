@@ -1,0 +1,75 @@
+/* The cover is a single painted scene. Moodboard assets remain independent. */
+.invitation-preview-art.full-image-cover {
+  container-type: inline-size;
+  aspect-ratio: 1;
+  height: auto !important;
+  min-height: 0 !important;
+  background: var(--cover-image) center / cover no-repeat;
+  color: #722b36;
+}
+.invitation-preview-art.full-image-cover::before,
+.invitation-preview-art.full-image-cover::after { display: none; }
+.full-image-cover-copy {
+  position: absolute;
+  z-index: 3;
+  left: 16%;
+  top: 27%;
+  width: 39%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+}
+.full-image-cover-opening {
+  margin-bottom: 3.5cqw;
+  font-size: clamp(9px, 1.8cqw, 14px);
+  font-weight: 700;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+}
+.full-image-cover-copy strong {
+  font-family: "Noto Serif Georgian";
+  font-size: 7cqw;
+  font-weight: 400;
+  line-height: 1.02;
+  letter-spacing: -.055em;
+}
+.full-image-cover-copy em {
+  max-width: 85%;
+  margin-top: 3cqw;
+  font-family: "Noto Serif Georgian";
+  font-size: clamp(12px, 2.6cqw, 20px);
+  line-height: 1.45;
+}
+.full-image-cover-details {
+  margin-top: 5cqw;
+  padding-top: 2.3cqw;
+  border-top: 1px solid #722b3660;
+  font-size: clamp(9px, 1.8cqw, 14px);
+  font-weight: 700;
+  line-height: 1.8;
+  letter-spacing: .13em;
+}
+
+.invitation-preview-art.full-image-cover.preview-pink-glam {
+  background: var(--cover-image) center / cover no-repeat !important;
+  color: #fff0f8;
+}
+.full-image-cover.preview-pink-glam .full-image-cover-copy {
+  left: 12%;
+  top: 23%;
+  width: 43%;
+  text-shadow: 0 1px 9px #39072d40;
+}
+.full-image-cover.preview-pink-glam .full-image-cover-copy strong {
+  font-family: "Noto Serif Georgian";
+  font-size: 8cqw;
+  font-weight: 400;
+  line-height: 1.06;
+}
+.full-image-cover.preview-pink-glam .full-image-cover-copy em {
+  font-size: clamp(12px, 2.4cqw, 20px);
+}
+.full-image-cover.preview-pink-glam .full-image-cover-details {
+  border-top-color: #fff0f880;
+}

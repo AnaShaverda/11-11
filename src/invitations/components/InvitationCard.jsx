@@ -19,13 +19,11 @@ import { Link } from "react-router-dom";
 import { getInvitationSample } from "../../localization/cardCopy.js";
 import BirthdayIllustrations from "./BirthdayIllustrations.jsx";
 import { useLanguage } from "../../localization/LanguageContext.jsx";
-import PhotoInvitationPoster from "./PhotoInvitationPoster.jsx";
 import ReferenceSocialPoster from "./ReferenceSocialPoster.jsx";
 import WeddingDayPoster from "./WeddingDayPoster.jsx";
 import WeddingHeartPoster from "./WeddingHeartPoster.jsx";
 import WeddingInkPoster from "./WeddingInkPoster.jsx";
 import FullImageInvitationPoster from "./FullImageInvitationPoster.jsx";
-import { photoCardStyle } from "../data/assetPresentation.js";
 import { recipientArtwork } from "../data/recipientArtwork.js";
 import { recipientLayeredScenes } from "../data/recipientLayeredScenes.js";
 import { recipientTableArtwork } from "../data/recipientTableArtwork.js";
@@ -100,7 +98,6 @@ export function InvitationArtwork({
   if (template.slug === "birthday-ribbon-sketch")
     return <RibbonSketchCardArt />;
   const { design } = template;
-  const photoCard = template.visualAssets?.photoCard;
   const layeredScene =
     presentation === "portrait" &&
     !separatedThemeAssets[template.slug] &&
@@ -118,9 +115,9 @@ export function InvitationArtwork({
         template.visualAssets?.coverImage
       : template.visualAssets?.coverImage;
   const showGeneratedDecor = ![
-    "birthday-coquette",
-    "birthday-floral-affair",
-    "birthday-beer-party",
+
+
+
   ].includes(template.slug);
   return (
     <div
@@ -139,7 +136,7 @@ export function InvitationArtwork({
         !coverImage && template.visualAssets?.invitation?.length
           ? " has-birthday-illustrations"
           : ""
-      }${photoCard ? " photo-invitation-art" : ""}${
+      }${
         coverImage ? " full-image-cover" : ""
       }${separated ? " invitation-art--separated" : ""}${
         large ? " is-large" : ""
@@ -152,7 +149,6 @@ export function InvitationArtwork({
         "--showcase-accent": design.palette[2],
         "--showcase-secondary": design.palette[3],
         ...(coverImage ? { "--cover-image": `url("${coverImage}")` } : {}),
-        ...photoCardStyle(photoCard),
         ...(separated
           ? {
               "--separated-paper":
@@ -272,24 +268,12 @@ export function InvitationArtwork({
         ].includes(template.visual) ? (
         <WeddingInkPoster {...sample} />
       ) : coverImage &&
-        ["cobalt-cheers", "ribbon-social"].includes(template.visual) ? (
+        ["cobalt-cheers"].includes(template.visual) ? (
         <ReferenceSocialPoster
           variant={template.visual}
           {...sample}
           openingFont={typography.opening}
         />
-      ) : coverImage && template.slug === "birthday-pastel-dream" ? (
-        <div className="pastel-image-cover-copy">
-          <span className="pastel-image-opening">{invitedLabel}</span>
-          <strong className="pastel-image-name">{sample.posterName}</strong>
-          <span className="pastel-image-sweet">{t("cards.sweet")}</span>
-          <strong className="pastel-image-age">{sample.posterAge}</strong>
-          <em>{sample.line}</em>
-          <span className="pastel-image-details">
-            {sample.date} ·{" "}
-            <span className="card-text-value">{sample.location}</span>
-          </span>
-        </div>
       ) : coverImage && template.slug === "birthday-y2k-party" ? (
         <div className="y2k-image-cover-copy">
           <span className="y2k-image-opening">{invitedLabel}</span>
@@ -324,28 +308,6 @@ export function InvitationArtwork({
           line={sample.line}
           date={sample.date}
           location={sample.location}
-        />
-      ) : photoCard ? (
-        <PhotoInvitationPoster
-          photoCard={photoCard}
-          components={
-            separated?.container === "paper"
-              ? getSeparatedComponents(separated, presentation)
-              : undefined
-          }
-          name={sample.name}
-          age={sample.age}
-          turns={t("modernToast.turns", { age: sample.age })}
-          opening={t("modernToast.celebration")}
-          closing={invitedLabel}
-          detailDate={sample.date}
-          detailLocation={sample.location}
-          details={
-            sample.details ??
-            (presentation === "portrait"
-              ? `${sample.date} · ${sample.location}`
-              : undefined)
-          }
         />
       ) : template.slug === "birthday-retro-pop" ? (
         <RetroPoster sample={sample} invitedLabel={invitedLabel} />

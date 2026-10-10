@@ -6,6 +6,6 @@ export default function BirthdayPlaygroundPoster({ sample, language, ariaLabel, 
   <p className="playground-poster-intro">{language === "ka" ? "ტორტი, თამაშები და ერთად გატარებული დრო" : "Let’s eat cake, play a little and celebrate together"}</p>
   <p className="playground-poster-date">{sample.date}<br/>{sample.location}</p>
   <img className="playground-poster-gift" src={`${art}gift.webp`} alt="" loading="lazy"/>
-  
+
  </div>;
 }

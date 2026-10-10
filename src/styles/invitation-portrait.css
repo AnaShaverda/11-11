@@ -10,10 +10,10 @@
 }
 .invitation-art--portrait:not(.invitation-art--layered) .bridal-line-opening { font-size:max(4cqw,15px); }
 .invitation-art--portrait:not(.invitation-art--layered) .bridal-line-copy > strong { font-size:max(7.2cqw,28px); }
-.invitation-art--portrait:not(.invitation-art--layered) :is(.wedding-ink-opening,.full-image-cover-opening,.retro-bridal-opening,.day-poster-opening,.ribbon-poster-opening) {
+.invitation-art--portrait:not(.invitation-art--layered) :is(.wedding-ink-opening,.full-image-cover-opening,.retro-bridal-opening,.day-poster-opening) {
   font-size:max(2.8cqw,11px);
 }
-.invitation-art--portrait:not(.invitation-art--layered) :is(.christening-card-closing,.day-poster-details,.reveal-details,.ribbon-poster-date,.ribbon-poster-location,.pastel-image-details,.retro-image-details,.y2k-image-details,.social-menu,.social-info-grid,.social-info-grid b) {
+.invitation-art--portrait:not(.invitation-art--layered) :is(.christening-card-closing,.day-poster-details,.reveal-details,.retro-image-details,.y2k-image-details,.social-menu,.social-info-grid,.social-info-grid b) {
   font-size:max(2.6cqw,11px);
 }
 .invitation-art--portrait:not(.invitation-art--layered).preview-our-people .wedding-ink-opening { top:12%; left:16%; width:68%; }
@@ -21,16 +21,6 @@
 .invitation-art--portrait:not(.invitation-art--layered).preview-our-people .wedding-ink-copy > em { top:31%; left:16%; width:68%; }
 .invitation-art--portrait:not(.invitation-art--layered).preview-our-people .wedding-ink-details { top:auto; bottom:7%; left:16%; width:68%; }
 .invitation-art--portrait:not(.invitation-art--layered) :is(.reveal-poster-bear-hug,.reveal-poster-special-delivery) .reveal-details { top:83%; }
-/* Preserve the native proportions of the two painted paper frames. */
-.invitation-art--portrait.photo-invitation-art :is(.photo-paper-space,.photo-paper-dino) {
-  width:65%; aspect-ratio:2 / 3; min-height:0; padding:0;
-}
-.invitation-art--portrait.photo-invitation-art :is(.modern-toast-details,.photo-paper-caption) {
-  font-size:max(3cqw,11px);
-}
-.invitation-art--portrait.photo-invitation-art .modern-toast-paper:not(.photo-paper-playful,.photo-paper-illustrated) :is(.modern-toast-opening,.modern-toast-closing) {
-  font-size:max(4cqw,11px);
-}
 
 
 
@@ -39,28 +29,6 @@
   position:absolute; z-index:2; left:0; top:50%;
   width:100%; aspect-ratio:1; container-type:size;
   transform:translateY(-50%);
-}
-.invitation-art--portrait.photo-invitation-art .modern-toast-paper {
-  width:65%; aspect-ratio:3 / 4; height:auto; min-height:0;
-}
-.invitation-art--portrait.photo-invitation-art :is(.photo-paper-space,.photo-paper-dino) {
-  aspect-ratio:2 / 3;
-}
-.invitation-art--portrait.photo-invitation-art .modern-toast-paper:not(.photo-paper-playful,.photo-paper-illustrated) { padding:0; }
-.invitation-art--portrait.photo-invitation-art .modern-toast-paper:not(.photo-paper-playful,.photo-paper-illustrated) > :not(.modern-toast-curves,.birthday-illustration) {
-  position:absolute; left:8%; width:84%; max-width:84%; margin:0;
-}
-.invitation-art--portrait.photo-invitation-art .modern-toast-paper:not(.photo-paper-playful,.photo-paper-illustrated) .modern-toast-opening { top:8%; }
-.invitation-art--portrait.photo-invitation-art .modern-toast-paper:not(.photo-paper-playful,.photo-paper-illustrated) .modern-toast-age { top:24%; font-size:60cqw; line-height:.8; text-align:center; }
-.invitation-art--portrait.photo-invitation-art .modern-toast-paper:not(.photo-paper-playful,.photo-paper-illustrated) .modern-toast-name { top:62%; font-size:8cqw; }
-.invitation-art--portrait.photo-invitation-art .modern-toast-paper:not(.photo-paper-playful,.photo-paper-illustrated) .modern-toast-closing { top:83%; }
-.invitation-art--portrait.photo-invitation-art .modern-toast-paper:not(.photo-paper-playful,.photo-paper-illustrated) .modern-toast-details { bottom:3%; }
-.invitation-art--portrait.photo-invitation-art .photo-paper-illustrated > .modern-toast-opening { font-size:8.5cqw; }
-.invitation-art--portrait.photo-invitation-art .photo-paper-illustrated > .modern-toast-name { font-size:8.5cqw; width:43%; max-width:43%; }
-.invitation-art--portrait.photo-invitation-art .photo-paper-tavern > .modern-toast-name { font-size:9cqw; }
-.invitation-art--portrait.photo-invitation-art .photo-paper-tavern > .modern-toast-closing { top:62%; font-size:max(4.5cqw,11px); }
-.invitation-art--portrait.photo-invitation-art .photo-paper-tavern > .photo-paper-caption {
-  top:72%; bottom:auto; width:43%; font-size:max(2.8cqw,9px); line-height:1.4; letter-spacing:.05em;
 }
 
 /* Dates sit above the lower table illustrations, with space between both. */

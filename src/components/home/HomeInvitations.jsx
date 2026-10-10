@@ -5,7 +5,7 @@ import { activeInvitationTemplates } from "../../invitations/data/templates.js";
 import { useLanguage } from "../../localization/LanguageContext.jsx";
 import Icon from "../ui/Icon.jsx";
 
-const featured = ["birthday-retro-pop", "birthday-painted-summer", "birthday-pink-glam", "wedding-heartmarked"]
+const featured = ["birthday-retro-pop", "birthday-pink-glam", "wedding-heartmarked"]
   .map((slug) => activeInvitationTemplates.find((template) => template.slug === slug)).filter(Boolean);
 
 export default function HomeInvitations() {

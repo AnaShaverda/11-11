@@ -13,10 +13,8 @@ test("theme and color filters match the public design metadata", () => {
   const ribbon = getCatalogAppearance(design("birthday-ribbon-sketch"));
   assert.ok(ribbon.colors.includes("pink"));
   assert.ok(ribbon.colors.includes("red"));
-  assert.ok(getCatalogAppearance(design("birthday-strawberry-social")).colors.includes("pink"));
   assert.ok(getCatalogAppearance(design("birthday-peach-fizz")).colors.includes("peach"));
   assert.ok(getCatalogAppearance(design("birthday-midnight-martini")).colors.includes("navy"));
-  assert.ok(getCatalogAppearance(design("birthday-paper-garland")).themes.includes("simple"));
   for (const item of activeInvitationTemplates) {
     const appearance = getCatalogAppearance(item);
     assert.ok(appearance.colors.length, item.id);

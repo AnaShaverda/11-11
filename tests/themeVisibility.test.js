@@ -6,10 +6,9 @@ import { surpriseOccasions } from "../src/surprises/data/surprises.js";
 const hiddenThemeIds = [
   "wedding-little-yes",
   "wedding-garden-table", "wedding-ribbon-revel", "wedding-side-by-side",
-  "wedding-first-dance", "wedding-day-notes", "birthday-pastel-disco",
-  "birthday-coquette", "birthday-garden-party", "bridal-dream-doll-bride",
-  "wedding-blush-lift", "bridal-pink-tea-club", "birthday-race-day",
-  "birthday-dino-adventure", "birthday-space-explorer", "birthday-football-club", "birthday-classic-celebration", "birthday-pastel-dream", "birthday-ballerina", "birthday-beer-party", "birthday-tropical-summer", "birthday-painted-summer", "birthday-floral-affair",
+  "wedding-first-dance", "wedding-day-notes",
+  "bridal-dream-doll-bride",
+  "wedding-blush-lift", "bridal-pink-tea-club",
 ];
 
 test("requested hidden themes stay inactive and remain saved for existing invitations", () => {

@@ -22,5 +22,5 @@ test('only the fitted field shrinks gradually until it fits', () => {
 test('envelope compositions reserve clear paper without moving the assembly', () => {
   assert.equal(flowContentBottom('rose-letter', 640), 320);
   assert.equal(flowContentBottom('sweet-snapshot', 640), 179.20000000000002);
-  assert.equal(flowContentBottom('classic-celebration', 640), 614.4);
+  assert.equal(flowContentBottom('default', 640), 614.4);
 });

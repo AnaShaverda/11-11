@@ -8,11 +8,9 @@
 .retro-bridal-copy em { margin-top:3cqw; max-width:95%; font-size:2cqw; line-height:1.35; }
 .retro-bridal-details { margin-top:4cqw; padding-top:2cqw; border-top:1px solid currentColor; font-size:1.65cqw; letter-spacing:.1em; line-height:1.8; }
 .retro-bridal-copy:lang(ka) strong { font-size:5.4cqw; line-height:1.35; font-style:normal; letter-spacing:-.035em; }
-:is(.theme-bridal-pink-disco-scrapbook,.theme-bridal-peach-cherry,.theme-bridal-electric-pink,.theme-bridal-rose-supper-club) { --theme-bg:var(--retro-paper); --theme-ink:var(--retro-ink); --theme-accent:var(--retro-accent); --theme-panel:var(--retro-panel); --theme-stroke:color-mix(in srgb,var(--retro-ink) 25%,transparent); --theme-display: "Noto Serif Georgian"; --world-paper:var(--retro-paper); background:var(--retro-paper); color:var(--retro-ink); }
 .theme-bridal-pink-disco-scrapbook,.design-theme-bridal-pink-disco-scrapbook { --retro-paper:#f3d5dd; --retro-ink:#792f49; --retro-accent:#bc4c73; --retro-panel:#f7efe4; --retro-display: "Noto Serif Georgian"; --world-photo:url('/images/bridal/pink-disco-scrapbook/invitation-cover.webp'); }
 .theme-bridal-peach-cherry,.design-theme-bridal-peach-cherry { --retro-paper:#f7ebd4; --retro-ink:#792e35; --retro-accent:#e7a080; --retro-panel:#f2d5bd; --retro-display: "Noto Serif Georgian"; --world-photo:url('/images/bridal/peach-cherry/invitation-cover.webp'); }
 .theme-bridal-electric-pink,.design-theme-bridal-electric-pink { --retro-paper:#f5efe5; --retro-ink:#191619; --retro-accent:#ed378c; --retro-panel:#d6c7df; --retro-display: "Noto Serif Georgian"; --world-photo:url('/images/bridal/electric-pink/invitation-cover.webp'); }
-.theme-bridal-rose-supper-club,.design-theme-bridal-rose-supper-club { --retro-paper:#e9c4bd; --retro-ink:#64272d; --retro-accent:#b47d83; --retro-panel:#f5ebdd; --retro-display: "Noto Serif Georgian"; --world-photo:url('/images/bridal/rose-supper-club/invitation-cover.webp'); }
 .preview-bridal-pink-disco-scrapbook .retro-bridal-copy { left:25%; top:19%; width:46%; transform:rotate(-2deg); }
 .preview-bridal-pink-disco-scrapbook .retro-bridal-copy strong { color:#b85a76; font-size:11cqw; font-weight:400; }
 .preview-bridal-peach-cherry .retro-bridal-copy { left:20%; top:20%; width:60%; }
@@ -22,21 +20,13 @@
 .preview-bridal-electric-pink .retro-bridal-copy { left:20%; top:18%; width:42%; transform:rotate(-5deg); align-items:flex-start; text-align:left; }
 .preview-bridal-electric-pink .retro-bridal-copy strong { color:#ed378c; font-size:13cqw; line-height:.9; font-weight:900; font-style:italic; letter-spacing:-.04em; }
 .preview-bridal-electric-pink .retro-bridal-copy em { font-size:1.8cqw; }
-.preview-bridal-rose-supper-club .retro-bridal-copy { left:22%; top:18%; width:56%; }
-.preview-bridal-rose-supper-club .retro-bridal-copy strong { font-size:11cqw; font-weight:400; }
 :root body .retro-bridal-copy:lang(ka) strong span { font-family: "Noto Serif Georgian" !important; }
 .retro-bridal-copy:lang(ka) strong { font-size:5.5cqw; }
-:is([class*="theme-bridal-pink-disco-scrapbook"],[class*="theme-bridal-peach-cherry"],[class*="theme-bridal-electric-pink"],[class*="theme-bridal-rose-supper-club"]) .theme-invitation-card.full-image-cover { width:100%; padding:0; border:0; box-shadow:none; }
-:is(.theme-bridal-pink-disco-scrapbook,.theme-bridal-peach-cherry,.theme-bridal-electric-pink,.theme-bridal-rose-supper-club) .theme-world-hero { background:var(--retro-paper); }
-:is(.theme-bridal-pink-disco-scrapbook,.theme-bridal-peach-cherry,.theme-bridal-electric-pink,.theme-bridal-rose-supper-club) .theme-world-hero-photo,
-:is(.theme-bridal-pink-disco-scrapbook,.theme-bridal-peach-cherry,.theme-bridal-electric-pink,.theme-bridal-rose-supper-club) .theme-world-image > div { background-image:var(--world-photo); background-size:cover; }
 .theme-bridal-electric-pink .theme-world-hero { background:#191619; color:#f5efe5; }
 .theme-bridal-electric-pink .theme-world-eyebrow { color:#ed378c; }
 .theme-bridal-peach-cherry .theme-world-ticker { background:#e7a080; }
-.theme-bridal-rose-supper-club .theme-world-ticker { background:#64272d; color:#f5ebdd; }
 .design-theme-bridal-peach-cherry .design-pattern-panel { background-image:linear-gradient(90deg,#e7a08040 50%,transparent 50%),linear-gradient(#e7a08040 50%,transparent 50%); background-size:32px 32px; }
 .design-theme-bridal-electric-pink .design-pattern-panel { background:repeating-conic-gradient(#ed378c 0 25%,#191619 0 50%) 0 / 32px 32px; color:#fff; }
-.design-theme-bridal-rose-supper-club .design-pattern-panel { background:repeating-linear-gradient(90deg,#e9c4bd 0 24px,#64272d 24px 26px); }
 .design-theme-bridal-pink-disco-scrapbook .design-pattern-panel { background-image:linear-gradient(#792f4930 1px,transparent 1px),linear-gradient(90deg,#792f4930 1px,transparent 1px); background-size:32px 32px; }
 .theme-bridal-peach-cherry,.design-theme-bridal-peach-cherry { --retro-display: "Noto Serif Georgian"; }
 .preview-bridal-peach-cherry .retro-bridal-copy strong { font-variation-settings:'SOFT' 100,'WONK' 1,'opsz' 144; }

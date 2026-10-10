@@ -56,109 +56,6 @@ add(
   ],
   texture,
 );
-add(
-  "birthday-ribbon-social",
-  [
-    frame("ribbon-social-frame"),
-    part("ribbon-social-lips", 5, 4, 17, 14),
-    part("ribbon-social-cake", 83, 4, 16, 24),
-    reused(
-      "/images/birthday/ribbon-social/etched-citrus-coupe.webp",
-      "citrus-coupe",
-      3,
-      59,
-      26,
-      37,
-    ),
-    reused(
-      "/images/birthday/ribbon-social/bow-martini.webp",
-      "martini",
-      80,
-      63,
-      18,
-      30,
-    ),
-  ],
-  texture,
-);
-add("birthday-paper-garland", [
-  named("birthday-paper-garland", "garland", 0, 0, 100, 20),
-  named("birthday-paper-garland", "cake", 33, 70, 34, 25),
-  ...[
-    [7, 31],
-    [90, 42],
-    [18, 65],
-    [79, 74],
-  ].map(([x, y], i) =>
-    named("birthday-paper-garland", "spark", x, y, 3, 4, { id: `spark-${i}` }),
-  ),
-]);
-add(
-  "birthday-strawberry-social",
-  [
-    reused(
-      "/images/birthday/strawberry-social/shortcake-pedestal.webp",
-      "cake",
-      57,
-      40,
-      40,
-      56,
-    ),
-    reused(
-      "/images/birthday/strawberry-social/berries-and-daisy.webp",
-      "berries",
-      1,
-      80,
-      25,
-      18,
-    ),
-  ],
-  background("birthday-strawberry-social-background"),
-);
-add(
-  "birthday-classic-celebration",
-  [
-    frame("birthday-classic-celebration-frame"),
-    named("birthday-classic-celebration", "cake", 46, 16, 54, 79),
-    named("birthday-classic-celebration", "bow", 1, 0, 13, 13),
-  ],
-  background("birthday-classic-celebration-background"),
-);
-add(
-  "birthday-floral-affair",
-  [
-    named("birthday-floral-affair", "vase", 66, 65, 26, 30),
-    named("birthday-floral-affair", "lily", 67, -5, 35, 44),
-    named("birthday-floral-affair", "lily", 46, 27, 52, 44),
-    named("birthday-floral-affair", "magnolia", 68, 44, 32, 34),
-  ],
-  texture,
-);
-add(
-  "birthday-pastel-disco",
-  [
-    named("birthday-pastel-disco", "disco", 59, 0, 40, 46),
-    named("birthday-pastel-disco", "ribbon", 0, 34, 100, 66),
-    ...[
-      [2, 2],
-      [86, 9],
-      [2, 17],
-      [86, 59],
-    ].map(([x, y]) => named("birthday-paper-garland", "spark", x, y, 4, 7)),
-  ],
-  background("birthday-pastel-disco-background"),
-);
-add(
-  "birthday-coquette",
-  [
-    frame("birthday-coquette-frame"),
-    named("birthday-coquette", "bow", 4, 0, 92, 95),
-  ],
-  "/images/bridal/selected/backgrounds/blush-paper.webp",
-);
-add("birthday-beer-party", [
-  named("birthday-beer-party", "left-beer", 18, 57, 38, 39),
-  named("birthday-beer-party", "right-beer", 49, 57, 38, 39),
 ]);
 for (const key of [
   "city-after-dark",
@@ -836,18 +733,6 @@ add(
   ],
   templates.get("birthday-slice-club").visualAssets.coverImage,
 );
-add(
-  "birthday-supper-club",
-  [
-    named("birthday-supper-club", "napkin", 39, 83, 51, 17),
-    named("birthday-supper-club", "candle", 62, 0, 32, 84),
-    named("birthday-supper-club", "coupe", 20, 45, 46, 42),
-    named("birthday-supper-club", "olive-bowl", 50, 76, 32, 16),
-  ],
-  templates.get("birthday-supper-club").visualAssets.photoCard.background,
-);
-proposed["birthday-supper-club"].background.size = "cover";
-proposed["birthday-supper-club"].container = "paper";
 
 const registry = {};
 const pending = [];

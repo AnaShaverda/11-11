@@ -1,6 +1,6 @@
 export const demoEvents = {
   "birthday-retro-pop": {
-    celebrantName: "Nika",
+    celebrantName: "Dea",
     age: 25,
     date: "October 17",
     time: "20:00",

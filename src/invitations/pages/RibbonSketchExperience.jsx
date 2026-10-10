@@ -46,7 +46,7 @@ function addToCalendar() {
     "DTSTAMP:20261009T000000Z",
     "DTSTART:20270523T130000Z",
     "DTEND:20270523T170000Z",
-    "SUMMARY:Mia’s Birthday",
+    "SUMMARY:Aniko’s Birthday",
     "LOCATION:Tbilisi\\, Georgia",
     "DESCRIPTION:A little party\\, a lot of love.",
     "END:VEVENT",
@@ -276,8 +276,8 @@ export default function RibbonSketchExperience() {
   return (
     <>
       <RibbonSketchToolbar motion={motion} onMotion={()=>setMotion(value=>!value)}/>
-      {!opened && <section className="rs-ribbon-opening" aria-label="Mia’s birthday invitation">
-        <InvitationEntrance paperTexture="/images/birthday/ribbon-sketch/sketch-paper.png" sealArtwork="/images/birthday/ribbon-sketch/line-ornament.webp" settings={{ entrance: "ivoryPaperEnvelope", openingEffect: "none" }} design={{ paper: "#fff8f5", ink: "#731d34", accent: "#ad1626" }} title="Mia’s birthday" initials="M" reducedMotion={!motion} onComplete={() => { setOpened(true); window.scrollTo(0, 0); }}>
+      {!opened && <section className="rs-ribbon-opening" aria-label="Aniko’s birthday invitation">
+        <InvitationEntrance paperTexture="/images/birthday/ribbon-sketch/sketch-paper.png" sealArtwork="/images/birthday/ribbon-sketch/line-ornament.webp" settings={{ entrance: "ivoryPaperEnvelope", openingEffect: "none" }} design={{ paper: "#fff8f5", ink: "#731d34", accent: "#ad1626" }} title="Aniko’s birthday" initials="M" reducedMotion={!motion} onComplete={() => { setOpened(true); window.scrollTo(0, 0); }}>
           <div className="rs-ribbon-letter"><RibbonSketchCardArt /></div>
         </InvitationEntrance>
       </section>}

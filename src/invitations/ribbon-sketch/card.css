@@ -10,7 +10,7 @@
 .rs-card-photo { position:absolute;width:27%;padding:2% 2% 1%;background:#fffcf8;box-shadow:1px 4px 9px #731d3424; }
 .rs-card-photo img { display:block;width:100%;aspect-ratio:1;object-fit:cover; }
 .rs-card-photo span { display:block;text-align:center;font:3.2cqw/1.5 "RS Caveat",cursive;white-space:nowrap;color:#731d34; }
-.rs-card-photo-mia { top:25%;right:7%;rotate:8deg; }
+.rs-card-photo-aniko { top:25%;right:7%;rotate:8deg; }
 .rs-card-photo-cake { top:53%;right:18%;width:23%;rotate:-12deg; }
 .rs-card-bow { position:absolute;width:20%;height:auto;right:0;top:51%;rotate:16deg; }
 .rs-card-ribbon { position:absolute;left:3%;bottom:7%;width:51%;height:12%;object-fit:cover; }

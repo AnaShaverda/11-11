@@ -84,9 +84,9 @@ test("tap targets resolve split typography and compound details without matching
 test("an age embedded in turns wording exposes the age as well as the wording", () => {
   const template = invitationTemplates.find(item => item.slug === "birthday-little-pizza-chef");
   const sample = invitationSamples[template.slug];
-  const fields = getEditableCardFields(template, sample, {}, key => key === "modernToast.turns" ? "turns {age}" : key);
-  const matched = matchEditableCardText(`Mia turns ${sample.posterAge}`, fields);
+  const fields = getEditableCardFields(template, sample, {}, key => key === "birthday.turns" ? "turns {age}" : key);
+  const matched = matchEditableCardText(`${sample.posterName} turns ${sample.posterAge}`, fields);
   assert.ok(matched.some(field => field.key === "posterName"));
   assert.ok(matched.some(field => field.key === "posterAge"));
-  assert.ok(matched.some(field => field.key === "modernToast.turns"));
+  assert.ok(matched.some(field => field.key === "birthday.turns"));
 });

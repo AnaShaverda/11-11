@@ -5,11 +5,9 @@
 .preview-y2k-digital .invitation-preview-graphic span { color: #f8ffff; text-shadow: 3px 4px #4263bd, -2px -2px #9cf5ff, 0 0 20px #d8efff; }
 .preview-pink-glam .invitation-preview-graphic { color: #fff5fc; background: radial-gradient(circle at 30% 30%, #ffcbeb, transparent 26%), radial-gradient(circle at 80% 65%, #ff80ca, transparent 31%), #b74090; }
 .preview-midnight-luxury .invitation-preview-graphic { color: #cbb178; background: repeating-radial-gradient(circle at 50% 50%, #292739 0 18px, #bca77b 19px 20px, #111220 21px 42px); }
-.preview-garden-party .invitation-preview-graphic { color: #4d8052; background: radial-gradient(ellipse at 40% 65%, #f2f4d9 0 32%, transparent 33%), repeating-linear-gradient(145deg, #d6e6bf 0 18px, #b6cf9e 19px 20px); }
 .preview-neon-night .invitation-preview-graphic { color: #fb69e4; background: repeating-linear-gradient(0deg, transparent 0 16px, #63eaff35 17px 18px), linear-gradient(135deg, #19194f, #310d5f); }
 .preview-neon-night .invitation-preview-graphic span { text-shadow: 0 0 10px #fa72e4, 0 0 26px #e236c0, 0 0 40px #e236c0; }
 .preview-minimal-editorial .invitation-preview-graphic, .preview-editorial .invitation-preview-graphic { color: #fff; background: linear-gradient(145deg, #1a1a1a 0 65%, #474747 65%); }
-.preview-tropical-summer .invitation-preview-graphic { color: #f67b38; background: repeating-radial-gradient(circle at 50% 70%, #f6dc8b 0 21px, #91d9d4 22px 24px, #c8ece0 25px 44px); }
 .preview-tuscany .invitation-preview-graphic { color: #bd6745; background: repeating-linear-gradient(90deg, #f5dfbc 0 29px, #cf9b70 30px 32px), #f5dfbc; }
 .preview-coastal .invitation-preview-graphic { color: #5799b4; background: repeating-radial-gradient(ellipse at 50% 105%, #dff3f4 0 22px, #b4dce2 23px 25px, #eaf8f5 26px 48px); }
 .preview-bohemian .invitation-preview-graphic { color: #a06942; background: repeating-radial-gradient(circle at 50% 40%, #e7cba8 0 25px, #b99677 26px 28px, #f3e1c6 29px 48px); }
@@ -98,7 +96,7 @@
 .design-type-glam .design-type-words h3, .design-type-romantic .design-type-words h3, .design-type-botanical .design-type-words h3, .design-type-soft .design-type-words h3, .design-type-coastal .design-type-words h3, .design-type-earthy .design-type-words h3 { font-style: italic; }
 .design-type-luxury .design-type-words h3, .design-type-classic .design-type-words h3, .design-type-celestial .design-type-words h3 { font-weight: 400; letter-spacing: .015em; text-transform: uppercase; }
 .design-type-neon .design-type-words h3 { color: var(--showcase-accent); text-shadow: 0 0 16px var(--showcase-accent); }
-.design-type-mediterranean .design-type-mark, .design-type-summer .design-type-mark { font-style: italic; }
+.design-type-mediterranean .design-type-mark { font-style: italic; }
 .design-type-editorial .design-type-words h3 { letter-spacing: -.1em; }
 .design-pattern-grid .design-type-board { background-image: linear-gradient(#1b4fab23 1px, transparent 1px), linear-gradient(90deg, #1b4fab23 1px, transparent 1px); background-size: 38px 38px; }
 .design-pattern-pixels .design-type-board { background-image: linear-gradient(#ffffff25 1px, transparent 1px), linear-gradient(90deg, #ffffff25 1px, transparent 1px); background-size: 25px 25px; }
@@ -108,7 +106,6 @@
 .design-pattern-botanical .design-type-board { background-image: radial-gradient(ellipse at 10% 15%, var(--showcase-secondary) 0 8%, transparent 9%), radial-gradient(ellipse at 94% 85%, var(--showcase-secondary) 0 13%, transparent 14%); }
 .design-pattern-laser .design-type-board { background-image: repeating-linear-gradient(135deg, transparent 0 58px, var(--showcase-accent) 60px 61px, transparent 63px 120px); }
 .design-pattern-cloud .design-type-board { background-image: radial-gradient(ellipse at 20% 75%, var(--showcase-secondary), transparent 35%), radial-gradient(ellipse at 80% 20%, var(--showcase-accent), transparent 30%); }
-.design-pattern-sunrise .design-type-board { background-image: radial-gradient(circle at 8% 85%, var(--showcase-accent) 0 18%, transparent 19%), radial-gradient(circle at 92% 10%, var(--showcase-secondary) 0 13%, transparent 14%); }
 .design-pattern-frame .design-type-board::before { content: ""; position: absolute; inset: 23px; border: 1px solid var(--showcase-accent); }
 .design-pattern-tiles .design-type-board { background-image: repeating-linear-gradient(90deg, transparent 0 65px, var(--showcase-accent) 66px 67px), repeating-linear-gradient(0deg, transparent 0 65px, var(--showcase-accent) 66px 67px); background-size: 66px 66px; background-blend-mode: soft-light; }
 .design-pattern-waves .design-type-board { background-image: repeating-radial-gradient(ellipse at 50% 105%, transparent 0 28px, var(--showcase-secondary) 29px 31px, transparent 32px 62px); }

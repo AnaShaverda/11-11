@@ -104,29 +104,6 @@
   transform: none;
 }
 .theme-experience.theme-birthday .theme-invitation-card::before { display: none; }
-.theme-experience.theme-birthday .theme-invitation-card.photo-invitation-art {
-  background: var(--photo-card-background) var(--photo-card-position, center) / cover;
-}
-/* 1024 × 1536 paper illustrations retain their original 2:3 proportions. */
-:is(.theme-experience.theme-birthday .theme-invitation-card, #collection-birthday .birthday-card-artwork) .modern-toast-paper {
-  width: 57.333%;
-  height: 86%;
-  min-height: 0;
-  padding: 0;
-  aspect-ratio: 2 / 3;
-  transform: none;
-}
-:is(.theme-experience.theme-birthday, #collection-birthday) .modern-toast-paper:not(.photo-paper-playful, .photo-paper-illustrated) > :not(.modern-toast-curves, .birthday-illustration) {
-  position: absolute;
-  margin: 0;
-  left: 10%;
-  max-width: 80%;
-}
-:is(.theme-experience.theme-birthday, #collection-birthday) .modern-toast-paper:not(.photo-paper-playful, .photo-paper-illustrated) .modern-toast-opening { top: 8%; font-size: 4cqw; }
-:is(.theme-experience.theme-birthday, #collection-birthday) .modern-toast-paper:not(.photo-paper-playful, .photo-paper-illustrated) .modern-toast-age { top: 26%; left: 5%; width: 90%; max-width: 90%; text-align: center; font-size: 76cqw; }
-:is(.theme-experience.theme-birthday, #collection-birthday) .modern-toast-paper:not(.photo-paper-playful, .photo-paper-illustrated) .modern-toast-name { top: 64%; font-size: 9cqw; }
-:is(.theme-experience.theme-birthday, #collection-birthday) .modern-toast-paper:not(.photo-paper-playful, .photo-paper-illustrated) .modern-toast-closing { top: 83%; font-size: 3.5cqw; }
-:is(.theme-experience.theme-birthday, #collection-birthday) .modern-toast-paper:not(.photo-paper-playful, .photo-paper-illustrated) .modern-toast-details { bottom: 3%; font-size: 3cqw; line-height: 1.4; }
 .theme-experience.theme-birthday .full-image-cover-copy em { font-size: 3cqw; }
 .theme-experience.theme-birthday .full-image-cover-details { font-size: 2.3cqw; line-height: 1.5; letter-spacing: .04em; }
 .theme-experience.theme-birthday .theme-world-detail-grid { gap: 14px; border: 0; margin-top: 32px; }

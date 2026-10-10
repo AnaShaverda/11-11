@@ -34,7 +34,7 @@ export function normalizeGuestReply(value, limit) {
 // Only simple borders that stay clear at small sizes belong on supporting cards.
 // Bows and substantial floral compositions are reserved for the main invitation.
 const supportFrames = new Set([
-  "blue-frame.webp", "birthday-classic-celebration-frame.webp",
+  "blue-frame.webp",
   "wedding-garden-table-garden-frame.webp", "wedding-come-rain-or-shine-frame.webp",
   "wedding-first-dance-frame.webp", "christening-little-dreamer-gold-frame.webp",
   "bridal-retro-pink-card-frame.webp", "bridal-pink-disco-dream-card-frame.webp",
@@ -170,7 +170,7 @@ export function getGuestGallery(template) {
     }));
   }
   const family = template.subcategory === "bridal-party" ? "bridal"
-    : ["christening", "gender-reveal"].includes(template.subcategory) || /space-explorer|dino-adventure|race-day|ballerina|football-club/.test(template.slug) ? "family"
+    : ["christening", "gender-reveal"].includes(template.subcategory) ? "family"
     : template.category === "Wedding" ? "wedding" : "birthday";
   const row = { birthday: 0, wedding: 1, bridal: 2, family: 3 }[family];
   return [0, 1, 2].map(column => ({

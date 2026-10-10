@@ -34,12 +34,12 @@ test("every active design has valid memberships without duplicating its identity
 });
 
 test("one birthday design appears in both adult and kids collections, with its original slug", () => {
-  const item = items.find((i) => i.id === "birthday-paper-garland");
+  const item = items.find((i) => i.id === "birthday-white-and-blue");
   assert.ok(itemMatchesCategory(item, "birthday", "adult-birthday"));
   assert.ok(itemMatchesCategory(item, "birthday", "kids-birthday"));
   assert.ok(itemMatchesCategory(item, "baby-kids", "kids-birthday"));
   assert.ok(!itemMatchesCategory(item, "baby-kids", "christening"));
-  assert.equal(item.slug, "birthday-paper-garland");
+  assert.equal(item.slug, "birthday-white-and-blue");
   assert.ok(!itemMatchesCategory(items.find((i) => i.id === "birthday-midnight-martini"), "baby-kids"));
 });
 

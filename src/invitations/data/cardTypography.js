@@ -5,21 +5,7 @@ const cardFonts = {
 
 
   "disco-scrapbook": "casmera",
-  "paper-garland": "magnola",
-  "pastel-disco": "elegance",
-  "strawberry-social": "casmera",
   "pink-glam": "elegance",
-  "tropical-summer": "casmera",
-  "painted-summer": "magnola",
-  "classic-celebration": "casmera",
-  "floral-affair": "casmera",
-  "garden-party": "magnola",
-  coquette: "birthday",
-  ballerina: "birthday",
-  "pastel-dream": "magnola",
-  "modern-toast": "zalino",
-  "supper-club": "zalino",
-  "ribbon-social": "elegance",
   "cherry-toast": "casmera",
   "little-yes": "magnola",
   "blush-lift": "elegance",
@@ -64,8 +50,7 @@ const formalWeddings = new Set([
 ]);
 
 const handwrittenAccents = new Set([
-  "pastel-dream",
-   "garden-party", "painted-summer", "pink-disco-bride", "blush-lift",
+   "pink-disco-bride", "blush-lift",
   "bridal-dream-doll-bride", "bridal-pink-tea-club", "bridal-doll-pink-card",
   "bridal-pink-cocktail-card", "christening-blush-grace", "christening-blush-petals",
   "bridal-retro-pink-card", "bridal-pink-disco-dream-card", "bridal-pink-disco-dream",
@@ -73,18 +58,17 @@ const handwrittenAccents = new Set([
 ]);
 
 const retroOpenings = new Set([
-  "retro-pop", "checkerboard-cheers", "paper-garland", "bridal-retro-pink-card",
+  "retro-pop", "checkerboard-cheers", "bridal-retro-pink-card",
   "bridal-pink-disco-dream-card", "bridal-pink-disco-dream", "bridal-malibu-bride",
   "bridal-peach-cherry", "disco-scrapbook", "pink-disco-lines",
 ]);
 const modernOpenings = new Set([
-  "y2k-digital", "football-club", "race-day", "space-explorer", "dino-adventure",
-  "cobalt-cheers", "bridal-electric-pink", "bridal-cool-girl-card", "beer-party",
-  "khinkali-beer",
+  "y2k-digital",
+  "cobalt-cheers", "bridal-electric-pink", "bridal-cool-girl-card",
+
 ]);
 const scriptOpenings = new Set([
-   "painted-summer", "garden-party",  "floral-affair",
-  "pink-glam", "ribbon-social", "pink-disco-bride", "blush-lift",
+  "pink-glam", "pink-disco-bride", "blush-lift",
   "bridal-dream-doll-bride", "bridal-pink-tea-club", "bridal-doll-pink-card",
   "bridal-pink-cocktail-card", "bridal-rose-supper-club",
   "christening-blush-grace", "christening-blush-petals",
@@ -92,7 +76,7 @@ const scriptOpenings = new Set([
 
 // Georgian 3D lettering belongs to classic stationery and Y2K.
 const threeDHeadings = new Set([
-   "classic-celebration", "ribbon-sketch", "paper-garland", "y2k-digital",
+   "ribbon-sketch", "y2k-digital",
 ]);
 
 export function formatCardOpening(text, language, font) {

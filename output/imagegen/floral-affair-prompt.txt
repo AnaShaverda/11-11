@@ -1,9 +1,0 @@
-Mode: built-in image_gen. Reference: Classic Celebration cartoon cover, style only.
-
-Use case: stylized-concept
-Asset type: full-bleed Floral Affair birthday dinner invitation cover.
-Create a single continuous hand-drawn editorial cartoon illustration on warm blush ivory paper. Use the attached image ONLY for its clean ink contours, simplified gouache color shapes and restrained tactile shading, not its cake or ribbon subject.
-Subject: a graceful small bouquet of blush pink lilies and ivory magnolia with sage green leaves, arranged loosely in a simple pale rose ceramic vase in the lower right. Believable six-petal lilies with distinct stamens, a few flowers and natural stems, no busy ornamental microdetails. A couple of loose petals at the bottom. One branching lily stem enters from the upper right edge, a small cropped leaf at the lower left edge; graceful asymmetric composition rather than a closed floral border. Modern illustrated botanical cookbook aesthetic, soft and sophisticated, slightly cartooned but botanically recognizable, confident hand-drawn lines and clean shapes.
-Composition: square canvas, vase and main bouquet on the rightmost 40%, lower half; keep left central 48% and upper middle calm and completely light for live invitation text. Full bleed image, no card object, no inset paper, no containers, no mockup, no collage.
-Colors warm ivory #fff7f1, blush #f2c8d8, dusty pink #bd6183, subtle plum outlines #5d344d, sage greens.
-Avoid photorealism, glossy 3D, ornate gilding, excessive tiny petals, oil painting microtexture, cake, burgundy ribbon, text, letters, watermark.

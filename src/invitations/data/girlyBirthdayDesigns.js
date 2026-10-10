@@ -64,7 +64,7 @@ export const girlyBirthdayAssets = records((study) => study.slug === "playground
 }));
 export const girlyBirthdayPortraits = records((study) => study.slug === "playground" ? null : `/images/recipient/${id(study)}/invitation-portrait.webp`);
 export const girlyBirthdaySamples = records((study) => ({
-  title: "Mia’s Birthday", name: "Mia", headline: study.headline,
+  title: "Aniko’s Birthday", name: "Aniko", headline: study.headline,
   opening: study.slug === "playground" ? "come celebrate" : "you’re invited",
   date: "23 MAY 2027 · 17:00", location: "TBILISI", line: study.phrase,
 }));
@@ -80,7 +80,7 @@ for (const study of studies) {
     for (const [field, value] of Object.entries(values)) girlyBirthdayCaptions[language][`themes.${slug}.${field}`] = value;
   }
   const localized = {
-    samples: { title: "მიას დაბადების დღე", name: "მია", headline: study.kaHeadline, opening: study.slug === "playground" ? "ერთად ვიზეიმოთ" : "გეპატიჟებით", date: "23 მაისი 2027 · 17:00", location: "თბილისი", line: study.kaPhrase },
+    samples: { title: "ანიკოს დაბადების დღე", name: "ანიკო", headline: study.kaHeadline, opening: study.slug === "playground" ? "ერთად ვიზეიმოთ" : "გეპატიჟებით", date: "23 მაისი 2027 · 17:00", location: "თბილისი", line: study.kaPhrase },
     designs: { specimen: study.kaHeadline, phrase: study.kaPhrase, accentCard: "დაბადების დღის სურვილები", accentCopy: study.kaPhrase, finish: study.kaFinish },
   };
   for (const [namespace, fields] of Object.entries(localized)) {

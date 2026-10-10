@@ -821,7 +821,7 @@ to {
  }
 
 @media (max-width: 800px)  {
-  
+
   .lido-chapter  {
    grid-template-columns: 1fr;
    padding: 70px 28px 35px;
@@ -967,12 +967,12 @@ to {
 @keyframes lido-glasses-float { 0%,100% { transform: rotate(12deg) translateY(0); } 50% { transform: rotate(7deg) translateY(-8px); } }
 @media (max-width: 800px) {
   .lido-detail-art { height: 310px; margin-top: 15px; }
-  
+
   .lido-detail-art>.lido-art-word { bottom: 14%; font-size: 38px; }
   .lido-plan-art { height: 260px; margin-top: 18px; }
-  
-  
-  
+
+
+
 }
 @media (prefers-reduced-motion: reduce) { .lido-experience * { animation: none !important; transition: none !important; } }
 

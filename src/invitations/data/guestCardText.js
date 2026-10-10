@@ -6,7 +6,7 @@ const extra = (key, label, values) => ({ key, label, values, maxLength: 160 });
 function getArtworkExtraCopyFields(template, sample) {
   const assets = template.visualAssets ?? {};
   const age = sample.posterAge ?? sample.age;
-  const ageLine = extra("modernToast.turns", "ageLine", { age });
+  const ageLine = extra("birthday.turns", "ageLine", { age });
   if (assets.selectedBridal) return [];
   if (assets.paintedCocktail) return template.subcategory === "bridal-party" ? [] : [ageLine];
   if (assets.comicBirthday) return [ageLine, extra("comicBirthday.turns", "ageWord")];
@@ -20,11 +20,8 @@ function getArtworkExtraCopyFields(template, sample) {
     return [extra(`cards.reveal.${variant}`, "headline"), extra("cards.reveal.invited", "opening"), extra("cards.reveal.closing", "closing")];
   }
   if (template.category === "Wedding") return [extra("cards.wedding.saveDate", "opening"), ...(["wedding-day-notes", "date-and-dinner", "colorful-company"].includes(template.visual) ? [0, 1, 2, 3].map(index => extra(`cards.wedding.step.${index}`, `step${index + 1}`)) : [])];
-  if (["cobalt-cheers", "ribbon-social"].includes(template.visual)) return template.visual === "cobalt-cheers"
-    ? [extra("cards.social.title.0", "occasion"), extra("cards.social.title.1", "occasionSecond"), extra("cards.social.menu", "menu"), extra("cards.social.wear", "dressCode"), extra("cards.social.time", "timeLabel"), extra("cards.social.where", "locationLabel")]
-    : [extra("invitations.invited", "opening"), extra("cards.birthday", "occasion")];
-  if (assets.photoCard) return [extra("invitations.invited", "opening"), extra("modernToast.celebration", "heading"), ageLine, extra("photoCard.turns", "ageWord"), extra("photoCard.celebrate", "closing"), ...[assets.photoCard.noteKey, assets.photoCard.captionKey].filter(Boolean).map((key, index) => extra(key, index ? "caption" : "note"))];
-  return [extra("invitations.invited", "opening"), ...(template.slug === "birthday-pastel-dream" ? [extra("cards.sweet", "occasion")] : template.slug === "birthday-y2k-party" ? [extra("cards.y2k", "occasion"), extra("cards.party", "occasionSecond")] : !assets.coverImage ? [extra("invitations.invites", "closing")] : [])];
+  if (template.visual === "cobalt-cheers") return [extra("cards.social.title.0", "occasion"), extra("cards.social.title.1", "occasionSecond"), extra("cards.social.menu", "menu"), extra("cards.social.wear", "dressCode"), extra("cards.social.time", "timeLabel"), extra("cards.social.where", "locationLabel")];
+  return [extra("invitations.invited", "opening"), ...(template.slug === "birthday-y2k-party" ? [extra("cards.y2k", "occasion"), extra("cards.party", "occasionSecond")] : !assets.coverImage ? [extra("invitations.invites", "closing")] : [])];
 }
 
 export const guestCardWordingKeys = [
@@ -83,8 +80,8 @@ export function getEditableCardFields(template, sample, translations, t) {
   const fields = getCardTextFields(template, sample).map(field => ({ ...field, group: "fields", aliases: [field.value] }));
   const assets = template.visualAssets ?? {};
   const titleIsMetadata = sample.headline !== undefined || assets.christeningCard || assets.retroBridal
-    || ["cobalt-cheers", "ribbon-social"].includes(template.visual)
-    || ["birthday-pastel-dream", "birthday-y2k-party", "birthday-retro-pop"].includes(template.slug)
+    || ["cobalt-cheers"].includes(template.visual)
+    || ["birthday-y2k-party", "birthday-retro-pop"].includes(template.slug)
     || (assets.photoCard && !assets.coverImage);
   const title = fields.find(field => field.key === "title");
   if (titleIsMetadata && title) title.aliases = [];

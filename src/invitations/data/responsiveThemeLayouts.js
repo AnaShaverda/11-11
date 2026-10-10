@@ -2,7 +2,7 @@ import { selectedBridalAssets } from "./selectedBridalDesigns.js";
 
 const at = (left, top, width, height) => ({ left: `${left}%`, top: `${top}%`, width: `${width}%`, height: `${height}%` });
 const portraitFrames = new Set([
-  "ribbon-frame", "ribbon-social-frame", "birthday-coquette-frame",
+  "ribbon-frame",
   "christening-olive-full-frame-olive-frame", "christening-blue-full-frame-blue-floral-frame",
   "christening-little-dreamer-gold-frame", "christening-blush-petals-petal-frame", "christening-olive-ribbon-olive-frame",
   "bridal-doll-pink-card-frame", "bridal-pink-cocktail-card-frame", "bridal-modern-pink-line-card-ribbon-frame",
@@ -73,6 +73,5 @@ export function applyResponsiveThemeLayout(slug, original) {
   if (slug === "wedding-tipsy-together") reposition(component => component.id.includes("bride") || component.id.includes("groom"), { top: "57%", height: "29%" });
   if (slug === "wedding-cherry-toast") reposition(() => true, { top: "55%", height: "32%" });
   if (slug === "birthday-cobalt-cheers") reposition(() => true, { top: "44%", height: "27%" }, { top: "42%", height: "29%" });
-  if (slug === "birthday-coquette") reposition(component => component.id.includes("bow"), { ...at(4, 0, 92, 95), image: "/images/components/separated/birthday-coquette-bow-clean.webp" }, { ...at(0, 0, 100, 100), image: "/images/components/separated/birthday-coquette-bow-frame-portrait.webp", objectFit: "fill" });
   return record;
 }

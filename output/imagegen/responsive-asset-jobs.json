@@ -8,22 +8,6 @@
     "prompt": "Use case: illustration-story. Reference image: the supplied transparent square decorative frame. Generate a NEW matching native 9:16 portrait version for a tall fullscreen invitation, composition 1080 by 1920. Redraw/recompose the same frame around the four edges of the taller canvas; extend ribbon paths or add matching floral/leaf sections along the sides. Keep the same original colors, illustration style, delicate line weight and decorative motifs. Bows, leaves, flowers and lace details must retain natural proportions, NOT stretched vertically. Keep a 3% outer margin and a large entirely transparent empty center for editable text. Only the frame from the reference, no paper or background paint, no additional accessories, no text, no shadows, no watermark. Genuine transparent alpha outside and inside the frame."
   },
   {
-    "id": "ribbon-social-frame-portrait",
-    "originalId": "ribbon-social-frame",
-    "source": "/Users/mac/Desktop/11-11/public/images/components/separated/ribbon-social-frame.webp",
-    "background": false,
-    "kind": "portrait-frame",
-    "prompt": "Use case: illustration-story. Reference image: the supplied transparent square decorative frame. Generate a NEW matching native 9:16 portrait version for a tall fullscreen invitation, composition 1080 by 1920. Redraw/recompose the same frame around the four edges of the taller canvas; extend ribbon paths or add matching floral/leaf sections along the sides. Keep the same original colors, illustration style, delicate line weight and decorative motifs. Bows, leaves, flowers and lace details must retain natural proportions, NOT stretched vertically. Keep a 3% outer margin and a large entirely transparent empty center for editable text. Only the frame from the reference, no paper or background paint, no additional accessories, no text, no shadows, no watermark. Genuine transparent alpha outside and inside the frame."
-  },
-  {
-    "id": "birthday-coquette-frame-portrait",
-    "originalId": "birthday-coquette-frame",
-    "source": "/Users/mac/Desktop/11-11/public/images/components/separated/birthday-coquette-frame.webp",
-    "background": false,
-    "kind": "portrait-frame",
-    "prompt": "Use case: illustration-story. Reference image: the supplied transparent square decorative frame. Generate a NEW matching native 9:16 portrait version for a tall fullscreen invitation, composition 1080 by 1920. Redraw/recompose the same frame around the four edges of the taller canvas; extend ribbon paths or add matching floral/leaf sections along the sides. Keep the same original colors, illustration style, delicate line weight and decorative motifs. Bows, leaves, flowers and lace details must retain natural proportions, NOT stretched vertically. Keep a 3% outer margin and a large entirely transparent empty center for editable text. Only the frame from the reference, no paper or background paint, no additional accessories, no text, no shadows, no watermark. Genuine transparent alpha outside and inside the frame."
-  },
-  {
     "id": "christening-olive-full-frame-olive-frame-portrait",
     "originalId": "christening-olive-full-frame-olive-frame",
     "source": "/Users/mac/Desktop/11-11/public/images/components/separated/christening-olive-full-frame-olive-frame.webp",

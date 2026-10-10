@@ -4,8 +4,7 @@ import { fitFontSize, textSlotHeight, flowContentBottom } from '../data/cardCont
 const copySelector = [
   '.wedding-ink-copy', '.wedding-day-poster', '.retro-bridal-copy', '.bridal-line-copy',
   '.christening-card-copy', '.pool-birthday-copy', '.line-birthday-copy', '.pizza-birthday-copy',
-  '.comic-birthday-copy', '.reveal-poster-copy', '.cobalt-poster-copy', '.ribbon-poster-copy',
-  '.full-image-cover-copy', '.pastel-image-cover-copy', '.y2k-image-cover-copy', '.retro-image-cover-copy',
+  '.comic-birthday-copy', '.reveal-poster-copy', '.cobalt-poster-copy',   '.full-image-cover-copy', '.y2k-image-cover-copy', '.retro-image-cover-copy',
   '.invitation-preview-copy', '.invitation-preview-foot', '.photo-invitation-paper', '.retro-poster',
   '.cocktail-birthday-copy', '.selected-bridal-copy',
 ].join(',');

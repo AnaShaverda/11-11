@@ -42,27 +42,6 @@
     "generatedPath": "/Users/mac/.codex/generated_images/01a100c5-12b3-73a1-a228-9fea27b10b9b/exec-d28e41e3-962a-4f41-87c4-89b80bddfa18.png"
   },
   {
-    "id": "ribbon-social-frame",
-    "source": "/Users/mac/Desktop/11-11/public/images/birthday/ribbon-social/burgundy-ribbon-party.webp",
-    "prompt": "Use case: background-extraction. Edit target: original invitation. Extract ONLY the burgundy etched ribbon bow with long flowing tails making the outer frame. Remove lips, cake, glasses, citrus, bow on glass and all other marks. Exactly one separately movable component centered and closely framed with 3% margin, preserve original aspect ratio, shapes, colors and illustration style. Genuine alpha transparency outside the selected object; remove all paper, backdrop and unrelated marks. Preserve watercolor/ink within the object, no opaque rectangular fill, no added text, no extra objects, no ground shadow.",
-    "background": false,
-    "generatedPath": "/Users/mac/.codex/generated_images/01a100c5-12b3-73a1-a228-9fea27b10b9b/exec-bf6510a0-13cf-4037-b65c-0a46a3ad7f9b.png"
-  },
-  {
-    "id": "ribbon-social-lips",
-    "source": "/Users/mac/Desktop/11-11/public/images/birthday/ribbon-social/burgundy-ribbon-party.webp",
-    "prompt": "Use case: background-extraction. Edit target: original invitation. Extract ONLY the burgundy etched lipstick kiss mark at upper left. Exactly one separately movable component centered and closely framed with 3% margin, preserve original aspect ratio, shapes, colors and illustration style. Genuine alpha transparency outside the selected object; remove all paper, backdrop and unrelated marks. Preserve watercolor/ink within the object, no opaque rectangular fill, no added text, no extra objects, no ground shadow.",
-    "background": false,
-    "generatedPath": "/Users/mac/.codex/generated_images/01a100c5-12b3-73a1-a228-9fea27b10b9b/exec-3e40fe47-9d85-4d45-922b-7564f19a5173.png"
-  },
-  {
-    "id": "ribbon-social-cake",
-    "source": "/Users/mac/Desktop/11-11/public/images/birthday/ribbon-social/burgundy-ribbon-party.webp",
-    "prompt": "Use case: background-extraction. Edit target: original invitation. Extract ONLY the small burgundy etched cake on its pedestal with candles at upper right. Exactly one separately movable component centered and closely framed with 3% margin, preserve original aspect ratio, shapes, colors and illustration style. Genuine alpha transparency outside the selected object; remove all paper, backdrop and unrelated marks. Preserve watercolor/ink within the object, no opaque rectangular fill, no added text, no extra objects, no ground shadow.",
-    "background": false,
-    "generatedPath": "/Users/mac/.codex/generated_images/01a100c5-12b3-73a1-a228-9fea27b10b9b/exec-a2bff4dc-32d8-43ce-8741-090b94507ce4.png"
-  },
-  {
     "id": "wedding-little-yes-ring-hand",
     "source": "/Users/mac/Desktop/11-11/public/images/wedding/little-yes/ring-hand-lines.webp",
     "prompt": "Use case: background-extraction. Edit target: original wedding-little-yes invitation. Extract the single outlined hand with engagement ring and sage cuff, without surrounding gold sparkles. One independently movable component on genuine transparent alpha, centered on its own canvas with 3% margin and original aspect ratio. Preserve original shape, proportions, illustration style, line weight, palette, material and all intrinsic detail. Remove paper and every unrelated object; clean transparent edges, no residual texture or stray marks. For ink drawings, interiors and spaces enclosed by lines must be transparent. For painted or filled objects, retain paint and opaque object interiors. No extra decorations, no text, no letters, no shadows outside the object.",
@@ -1036,41 +1015,6 @@
     "generatedPath": "/Users/mac/.codex/generated_images/01a100c5-12b3-73a1-a228-9fea27b10b9b/exec-ff0dc295-6ace-4066-aef8-10162bb052b3.png"
   },
   {
-    "id": "birthday-paper-garland-cake",
-    "source": "/Users/mac/Desktop/11-11/public/images/birthday/paper-garland/watercolor-wishes-square.webp",
-    "prompt": "Use case: background-extraction. Edit target: original birthday-paper-garland invitation artwork. Extract ONLY the small pink watercolor birthday cake with candles and pedestal near the bottom. Exactly one independently movable object centered on transparent canvas with 3% transparent margin, natural aspect ratio, original shape, colors, illustration style and detail. Genuine alpha outside the selected object; remove paper, background, unrelated objects and stray marks. Ink interiors must be transparent, painted objects retain their paint. No text, letters, shadows, extra objects.",
-    "background": false,
-    "generatedPath": "/Users/mac/.codex/generated_images/01a100c5-12b3-73a1-a228-9fea27b10b9b/exec-53ff294c-a57f-471b-aba8-44067dad5691.png"
-  },
-  {
-    "id": "birthday-paper-garland-garland",
-    "source": "/Users/mac/Desktop/11-11/public/images/birthday/paper-garland/watercolor-wishes-square.webp",
-    "prompt": "Use case: background-extraction. Edit target: original birthday-paper-garland invitation artwork. Extract ONLY the multicolored watercolor triangular bunting across the top, without sparkles or cake. Exactly one independently movable object centered on transparent canvas with 3% transparent margin, natural aspect ratio, original shape, colors, illustration style and detail. Genuine alpha outside the selected object; remove paper, background, unrelated objects and stray marks. Ink interiors must be transparent, painted objects retain their paint. No text, letters, shadows, extra objects.",
-    "background": false,
-    "generatedPath": "/Users/mac/.codex/generated_images/01a100c5-12b3-73a1-a228-9fea27b10b9b/exec-2ee74d3f-dee3-480c-b41d-181acbb75577.png"
-  },
-  {
-    "id": "birthday-paper-garland-spark",
-    "source": "/Users/mac/Desktop/11-11/public/images/birthday/paper-garland/watercolor-wishes-square.webp",
-    "prompt": "Use case: background-extraction. Edit target: original birthday-paper-garland invitation artwork. Extract ONLY one little yellow watercolor sparkle, remove everything else. Exactly one independently movable object centered on transparent canvas with 3% transparent margin, natural aspect ratio, original shape, colors, illustration style and detail. Genuine alpha outside the selected object; remove paper, background, unrelated objects and stray marks. Ink interiors must be transparent, painted objects retain their paint. No text, letters, shadows, extra objects.",
-    "background": false,
-    "generatedPath": "/Users/mac/.codex/generated_images/01a100c5-12b3-73a1-a228-9fea27b10b9b/exec-30c1204d-4101-4807-a551-8dc81044a5aa.png"
-  },
-  {
-    "id": "birthday-beer-party-left-beer",
-    "source": "/Users/mac/Desktop/11-11/public/images/birthday/beer-party/vintage-amber-toast.webp",
-    "prompt": "Use case: background-extraction. Edit target: original birthday-beer-party invitation artwork. Extract ONLY the left tilted amber beer mug with foam and handle; remove other mug, hops and wheat. Exactly one independently movable object centered on transparent canvas with 3% transparent margin, natural aspect ratio, original shape, colors, illustration style and detail. Genuine alpha outside the selected object; remove paper, background, unrelated objects and stray marks. Ink interiors must be transparent, painted objects retain their paint. No text, letters, shadows, extra objects.",
-    "background": false,
-    "generatedPath": "/Users/mac/.codex/generated_images/01a100c5-12b3-73a1-a228-9fea27b10b9b/exec-7763752f-3781-4c22-bb92-24e78be4948a.png"
-  },
-  {
-    "id": "birthday-beer-party-right-beer",
-    "source": "/Users/mac/Desktop/11-11/public/images/birthday/beer-party/vintage-amber-toast.webp",
-    "prompt": "Use case: background-extraction. Edit target: original birthday-beer-party invitation artwork. Extract ONLY the right tilted amber beer mug with foam and handle; remove other mug, hops and wheat. Exactly one independently movable object centered on transparent canvas with 3% transparent margin, natural aspect ratio, original shape, colors, illustration style and detail. Genuine alpha outside the selected object; remove paper, background, unrelated objects and stray marks. Ink interiors must be transparent, painted objects retain their paint. No text, letters, shadows, extra objects.",
-    "background": false,
-    "generatedPath": "/Users/mac/.codex/generated_images/01a100c5-12b3-73a1-a228-9fea27b10b9b/exec-f1253745-fc7b-4f42-a33c-f4702d2082f0.png"
-  },
-  {
     "id": "birthday-city-after-dark-spider",
     "source": "/Users/mac/Desktop/11-11/public/images/birthday/city-after-dark/comic-artwork.webp",
     "prompt": "Use case: background-extraction. Edit target: original birthday-city-after-dark invitation artwork. Extract ONLY the little white outlined hanging spider near the upper right with its thin silk line. Exactly one independently movable object centered on transparent canvas with 3% transparent margin, natural aspect ratio, original shape, colors, illustration style and detail. Genuine alpha outside the selected object; remove paper, background, unrelated objects and stray marks. Ink interiors must be transparent, painted objects retain their paint. No text, letters, shadows, extra objects.",
@@ -1225,13 +1169,6 @@
     "generatedPath": "/Users/mac/.codex/generated_images/01a100c5-12b3-73a1-a228-9fea27b10b9b/exec-d733f27c-8eab-4be6-8b75-663c7155b864.png"
   },
   {
-    "id": "birthday-strawberry-social-background",
-    "source": "/Users/mac/Desktop/11-11/public/images/birthday/strawberry-social/painted-berry-birthday.webp",
-    "prompt": "Use case: precise-object-edit\nAsset type: individual invitation background\nEdit target: attached source artwork.\nPrimary request: Remove ONLY the cake and strawberry/daisy ornament. Preserve the pink painted stripe border and pale textured paper exactly. Empty central paper for editable text.\nConstraints: preserve original hand-painted or line-art style, hues, object details; no text or watermark. Reconstruct removed areas seamlessly. Full square background, no foreground decorations.",
-    "background": true,
-    "generatedPath": "/Users/mac/.codex/generated_images/01a100c5-12b3-73a1-a228-9fea27b10b9b/exec-952b001c-9684-46ff-ad6e-34604baa52eb.png"
-  },
-  {
     "id": "wedding-sweet-snapshot-background",
     "source": "/Users/mac/Desktop/11-11/public/images/wedding/sweet-snapshot/sage-envelope-portrait.webp",
     "prompt": "Use case: precise-object-edit\nAsset type: individual invitation background\nEdit target: attached source artwork.\nPrimary request: Remove the envelope, portrait, bow, tulips and all foreground objects. Preserve ONLY the alternating sage-green and ivory painted horizontal stripes exactly, continuous behind removed objects.\nConstraints: preserve original hand-painted or line-art style, hues, object details; no text or watermark. Reconstruct removed areas seamlessly. Full square background, no foreground decorations.",
@@ -1274,118 +1211,6 @@
     "generatedPath": "/Users/mac/.codex/generated_images/01a100c5-12b3-73a1-a228-9fea27b10b9b/exec-81a93c3a-2797-49f5-8841-7522a1052cf6.png"
   },
   {
-    "id": "birthday-classic-celebration-frame",
-    "source": "/Users/mac/Desktop/11-11/public/images/birthday/classic-celebration/cherry-candle-celebration-cartoon-ribbon-frame.webp",
-    "prompt": "Use case: background-extraction\nEdit target: source invitation image.\nPrimary request: ONLY the thin pink rectangular border, without the upper-left bow, cake, panel or paper.\nConstraints: preserve original hues, linework, brush texture and shape; no text, watermark or extra objects. Real transparent alpha, no paper or matte. Center isolated object with small padding. For borders and frames preserve original full square canvas alignment.",
-    "background": false,
-    "generatedPath": "/Users/mac/.codex/generated_images/01a100c5-12b3-73a1-a228-9fea27b10b9b/exec-0ce8504e-f21f-4b34-ad77-2de169a36a92.png"
-  },
-  {
-    "id": "birthday-classic-celebration-background",
-    "source": "/Users/mac/Desktop/11-11/public/images/birthday/classic-celebration/cherry-candle-celebration-cartoon-ribbon-frame.webp",
-    "prompt": "Use case: precise-object-edit\nEdit target: source invitation image.\nPrimary request: Remove cake, bow and fine pink border. Retain ONLY the pale textured paper and curved soft pink lower tabletop panel. Reconstruct areas behind removed objects.\nConstraints: preserve original hues, linework, brush texture and shape; no text, watermark or extra objects. Square full-bleed background with removed areas restored seamlessly.",
-    "background": true,
-    "generatedPath": "/Users/mac/.codex/generated_images/01a100c5-12b3-73a1-a228-9fea27b10b9b/exec-f436c371-db9b-44a5-bae9-642bae5a24c8.png"
-  },
-  {
-    "id": "birthday-floral-affair-vase",
-    "source": "/Users/mac/Desktop/11-11/public/images/birthday/floral-affair/illustrated-lily-dinner.webp",
-    "prompt": "Use case: background-extraction\nEdit target: source invitation image.\nPrimary request: ONLY the pink rounded vase at bottom right, without any flowers or leaves. Preserve the original watercolor material.\nConstraints: preserve original hues, linework, brush texture and shape; no text, watermark or extra objects. Real transparent alpha, no paper or matte. Center isolated object with small padding. For borders and frames preserve original full square canvas alignment.",
-    "background": false,
-    "generatedPath": "/Users/mac/.codex/generated_images/01a100c5-12b3-73a1-a228-9fea27b10b9b/exec-349857b9-9ecd-4c0b-8add-bbd21b908ae0.png"
-  },
-  {
-    "id": "birthday-pastel-disco-disco",
-    "source": "/Users/mac/Desktop/11-11/public/images/birthday/pastel-disco/painted-pastel-disco.webp",
-    "prompt": "Use case: background-extraction\nEdit target: source invitation image.\nPrimary request: ONLY the silver pastel mirrored disco ball, remove hanging cord, ribbon, confetti and paper.\nConstraints: preserve original hues, linework, brush texture and shape; no text, watermark or extra objects. Real transparent alpha, no paper or matte. Center isolated object with small padding. For borders and frames preserve original full square canvas alignment.",
-    "background": false,
-    "generatedPath": "/Users/mac/.codex/generated_images/01a100c5-12b3-73a1-a228-9fea27b10b9b/exec-ed613bec-ab5d-4a82-ad7a-08ea3fa5e4a4.png"
-  },
-  {
-    "id": "birthday-pastel-disco-ribbon",
-    "source": "/Users/mac/Desktop/11-11/public/images/birthday/pastel-disco/painted-pastel-disco.webp",
-    "prompt": "Use case: background-extraction\nEdit target: source invitation image.\nPrimary request: ONLY the winding pastel multicolor ribbon at the bottom, remove disco ball, confetti, stars and paper.\nConstraints: preserve original hues, linework, brush texture and shape; no text, watermark or extra objects. Real transparent alpha, no paper or matte. Center isolated object with small padding. For borders and frames preserve original full square canvas alignment.",
-    "background": false,
-    "generatedPath": "/Users/mac/.codex/generated_images/01a100c5-12b3-73a1-a228-9fea27b10b9b/exec-d8e19e64-c235-4670-80cc-156654361391.png"
-  },
-  {
-    "id": "birthday-pastel-disco-background",
-    "source": "/Users/mac/Desktop/11-11/public/images/birthday/pastel-disco/painted-pastel-disco.webp",
-    "prompt": "Use case: precise-object-edit\nEdit target: source invitation image.\nPrimary request: Remove the disco ball, winding ribbon, hanging cord and all floating star confetti. Preserve ONLY pale blue and ivory watercolor striped textured paper.\nConstraints: preserve original hues, linework, brush texture and shape; no text, watermark or extra objects. Square full-bleed background with removed areas restored seamlessly.",
-    "background": true,
-    "generatedPath": "/Users/mac/.codex/generated_images/01a100c5-12b3-73a1-a228-9fea27b10b9b/exec-7b9908d5-08b5-45d7-bab8-a861a5750741.png"
-  },
-  {
-    "id": "birthday-coquette-bow",
-    "source": "/Users/mac/Desktop/11-11/public/images/birthday/coquette/blush-bow-lace.webp",
-    "prompt": "Use case: background-extraction\nEdit target: source invitation image.\nPrimary request: ONLY the large satin pink bow near the top with its two long trailing ribbons. Remove lace and patterned paper.\nConstraints: preserve original hues, linework, brush texture and shape; no text, watermark or extra objects. Real transparent alpha, no paper or matte. Center isolated object with small padding. For borders and frames preserve original full square canvas alignment.",
-    "background": false,
-    "generatedPath": "/Users/mac/.codex/generated_images/01a100c5-12b3-73a1-a228-9fea27b10b9b/exec-3583d731-43dd-4bbe-b7dc-00ea12a8342f.png"
-  },
-  {
-    "id": "birthday-coquette-frame",
-    "source": "/Users/mac/Desktop/11-11/public/images/birthday/coquette/blush-bow-lace.webp",
-    "prompt": "Use case: background-extraction\nEdit target: source invitation image.\nPrimary request: ONLY the full delicate pink lace border around the outside. Remove bow, satin ribbons and central paper.\nConstraints: preserve original hues, linework, brush texture and shape; no text, watermark or extra objects. Real transparent alpha, no paper or matte. Center isolated object with small padding. For borders and frames preserve original full square canvas alignment.",
-    "background": false,
-    "generatedPath": "/Users/mac/.codex/generated_images/01a100c5-12b3-73a1-a228-9fea27b10b9b/exec-d5e52bf4-f929-47b8-ae3a-e32c1f60186e.png"
-  },
-  {
-    "id": "birthday-classic-celebration-cake",
-    "source": "/Users/mac/Desktop/11-11/public/images/birthday/classic-celebration/cherry-candle-celebration-cartoon-ribbon-frame.webp",
-    "prompt": "Use case: background-extraction\nEdit target: source invitation image.\nPrimary request: ONLY the pink illustrated birthday cake with cherries, candles, attached bows and cream pedestal. Remove border, corner bow, shadow and paper. Reconstruct the small missing cropped cake edge.\nConstraints: preserve original hues, linework, brush texture and shape; no text, watermark or extra objects. Real transparent alpha, no paper or matte. Center isolated object with small padding. For borders and frames preserve original full square canvas alignment.",
-    "background": false,
-    "generatedPath": "/Users/mac/.codex/generated_images/01a100c5-12b3-73a1-a228-9fea27b10b9b/exec-e0871cdc-9173-4d70-851a-ce5ea01bb327.png"
-  },
-  {
-    "id": "birthday-classic-celebration-bow",
-    "source": "/Users/mac/Desktop/11-11/public/images/birthday/classic-celebration/cherry-candle-celebration-cartoon-ribbon-frame.webp",
-    "prompt": "Use case: background-extraction\nEdit target: source invitation image.\nPrimary request: ONLY the small burgundy-pink corner bow at upper left. Remove cake, border and paper.\nConstraints: preserve original hues, linework, brush texture and shape; no text, watermark or extra objects. Real transparent alpha, no paper or matte. Center isolated object with small padding. For borders and frames preserve original full square canvas alignment.",
-    "background": false,
-    "generatedPath": "/Users/mac/.codex/generated_images/01a100c5-12b3-73a1-a228-9fea27b10b9b/exec-aaf0da65-4bc9-42a0-bb45-7ead254419a3.png"
-  },
-  {
-    "id": "birthday-floral-affair-lily",
-    "source": "/Users/mac/Desktop/11-11/public/images/birthday/floral-affair/illustrated-lily-dinner.webp",
-    "prompt": "Use case: background-extraction\nEdit target: original invitation artwork.\nPrimary request: ONLY the large central pink lily bloom with its nearby green leaves and short stem. Remove vase, magnolias, other flower blooms, buds and paper.\nConstraints: preserve the original flat illustrated watercolor style, colors, petal shape and brush strokes. Exactly one flower illustration, genuinely transparent alpha, no paper or additional objects. Center with small padding.",
-    "background": false,
-    "generatedPath": "/Users/mac/.codex/generated_images/01a100c5-12b3-73a1-a228-9fea27b10b9b/exec-8b0eb3f7-2a3b-478a-a585-89bb04986e1e.png"
-  },
-  {
-    "id": "birthday-floral-affair-magnolia",
-    "source": "/Users/mac/Desktop/11-11/public/images/birthday/floral-affair/illustrated-lily-dinner.webp",
-    "prompt": "Use case: background-extraction\nEdit target: original invitation artwork.\nPrimary request: ONLY the large front ivory magnolia flower bloom with its two nearby green leaves. Remove pink lilies, vase, other magnolias, stems and paper.\nConstraints: preserve the original flat illustrated watercolor style, colors, petal shape and brush strokes. Exactly one flower illustration, genuinely transparent alpha, no paper or additional objects. Center with small padding.",
-    "background": false,
-    "generatedPath": "/Users/mac/.codex/generated_images/01a100c5-12b3-73a1-a228-9fea27b10b9b/exec-b913a18a-80f1-4dc9-a5e0-8c5ecc7588f7.png"
-  },
-  {
-    "id": "birthday-supper-club-coupe",
-    "source": "/Users/mac/Desktop/11-11/public/images/birthday/supper-club/painted-coupe-candle.webp",
-    "prompt": "Use case: background-extraction\nEdit target: existing watercolor still-life illustration.\nPrimary request: ONLY the red cocktail coupe with its olive skewer garnish. Remove all other objects and surrounding shading.\nConstraints: preserve vintage watercolor style, hues and materials. Exactly one independent cutout with genuine transparent alpha; no rectangular brown shading, paper, checkerboard, backdrop or extra objects. Center with small padding.",
-    "background": false,
-    "generatedPath": "/Users/mac/.codex/generated_images/01a100c5-12b3-73a1-a228-9fea27b10b9b/exec-23680ecc-562c-49a4-8e5d-72805c5323c0.png"
-  },
-  {
-    "id": "birthday-supper-club-candle",
-    "source": "/Users/mac/Desktop/11-11/public/images/birthday/supper-club/painted-coupe-candle.webp",
-    "prompt": "Use case: background-extraction\nEdit target: existing watercolor still-life illustration.\nPrimary request: ONLY the burning ivory taper candle and its brass candlestick, remove the bowl in front and restore the hidden base. Remove all other objects and surrounding shading.\nConstraints: preserve vintage watercolor style, hues and materials. Exactly one independent cutout with genuine transparent alpha; no rectangular brown shading, paper, checkerboard, backdrop or extra objects. Center with small padding.",
-    "background": false,
-    "generatedPath": "/Users/mac/.codex/generated_images/01a100c5-12b3-73a1-a228-9fea27b10b9b/exec-c6d4ca5f-5ee5-4c3a-95b2-9efcc539e593.png"
-  },
-  {
-    "id": "birthday-supper-club-olive-bowl",
-    "source": "/Users/mac/Desktop/11-11/public/images/birthday/supper-club/painted-coupe-candle.webp",
-    "prompt": "Use case: background-extraction\nEdit target: existing watercolor still-life illustration.\nPrimary request: ONLY the small brass bowl of green olives. Remove all other objects and surrounding shading.\nConstraints: preserve vintage watercolor style, hues and materials. Exactly one independent cutout with genuine transparent alpha; no rectangular brown shading, paper, checkerboard, backdrop or extra objects. Center with small padding.",
-    "background": false,
-    "generatedPath": "/Users/mac/.codex/generated_images/01a100c5-12b3-73a1-a228-9fea27b10b9b/exec-d4c89fe1-f809-443a-9546-9d4b7fdb6276.png"
-  },
-  {
-    "id": "birthday-supper-club-napkin",
-    "source": "/Users/mac/Desktop/11-11/public/images/birthday/supper-club/painted-coupe-candle.webp",
-    "prompt": "Use case: background-extraction\nEdit target: existing watercolor still-life illustration.\nPrimary request: ONLY the folded ivory cloth napkin near the bottom, remove bowl and other objects and restore folds. Remove all other objects and surrounding shading.\nConstraints: preserve vintage watercolor style, hues and materials. Exactly one independent cutout with genuine transparent alpha; no rectangular brown shading, paper, checkerboard, backdrop or extra objects. Center with small padding.",
-    "background": false,
-    "generatedPath": "/Users/mac/.codex/generated_images/01a100c5-12b3-73a1-a228-9fea27b10b9b/exec-64cf0cc6-471c-4ea0-bd5c-568ae28d30e1.png"
-  },
-  {
     "id": "ribbon-frame-portrait",
     "originalId": "ribbon-frame",
     "source": "/Users/mac/Desktop/11-11/public/images/components/separated/ribbon-frame.webp",
@@ -1393,24 +1218,6 @@
     "kind": "portrait-frame",
     "prompt": "Use case: illustration-story. Reference image: the supplied transparent square decorative frame. Generate a NEW matching native 9:16 portrait version for a tall fullscreen invitation, composition 1080 by 1920. Redraw/recompose the same frame around the four edges of the taller canvas; extend ribbon paths or add matching floral/leaf sections along the sides. Keep the same original colors, illustration style, delicate line weight and decorative motifs. Bows, leaves, flowers and lace details must retain natural proportions, NOT stretched vertically. Keep a 3% outer margin and a large entirely transparent empty center for editable text. Only the frame from the reference, no paper or background paint, no additional accessories, no text, no shadows, no watermark. Genuine transparent alpha outside and inside the frame.",
     "generatedPath": "/Users/mac/.codex/generated_images/01a100c5-12b3-73a1-a228-9fea27b10b9b/exec-ab62f333-12ac-44e3-bd1e-dec1a9dccc28.png"
-  },
-  {
-    "id": "ribbon-social-frame-portrait",
-    "originalId": "ribbon-social-frame",
-    "source": "/Users/mac/Desktop/11-11/public/images/components/separated/ribbon-social-frame.webp",
-    "background": false,
-    "kind": "portrait-frame",
-    "prompt": "Use case: illustration-story. Reference image: the supplied transparent square decorative frame. Generate a NEW matching native 9:16 portrait version for a tall fullscreen invitation, composition 1080 by 1920. Redraw/recompose the same frame around the four edges of the taller canvas; extend ribbon paths or add matching floral/leaf sections along the sides. Keep the same original colors, illustration style, delicate line weight and decorative motifs. Bows, leaves, flowers and lace details must retain natural proportions, NOT stretched vertically. Keep a 3% outer margin and a large entirely transparent empty center for editable text. Only the frame from the reference, no paper or background paint, no additional accessories, no text, no shadows, no watermark. Genuine transparent alpha outside and inside the frame.",
-    "generatedPath": "/Users/mac/.codex/generated_images/01a100c5-12b3-73a1-a228-9fea27b10b9b/exec-9c0bb4d3-1c49-4756-bb03-62a08a32e373.png"
-  },
-  {
-    "id": "birthday-coquette-frame-portrait",
-    "originalId": "birthday-coquette-frame",
-    "source": "/Users/mac/Desktop/11-11/public/images/components/separated/birthday-coquette-frame.webp",
-    "background": false,
-    "kind": "portrait-frame",
-    "prompt": "Use case: illustration-story. Reference image: the supplied transparent square decorative frame. Generate a NEW matching native 9:16 portrait version for a tall fullscreen invitation, composition 1080 by 1920. Redraw/recompose the same frame around the four edges of the taller canvas; extend ribbon paths or add matching floral/leaf sections along the sides. Keep the same original colors, illustration style, delicate line weight and decorative motifs. Bows, leaves, flowers and lace details must retain natural proportions, NOT stretched vertically. Keep a 3% outer margin and a large entirely transparent empty center for editable text. Only the frame from the reference, no paper or background paint, no additional accessories, no text, no shadows, no watermark. Genuine transparent alpha outside and inside the frame.",
-    "generatedPath": "/Users/mac/.codex/generated_images/01a100c5-12b3-73a1-a228-9fea27b10b9b/exec-f956bad8-9fdc-4ed0-af49-8eec3855e1d7.png"
   },
   {
     "id": "christening-olive-full-frame-olive-frame-portrait",
@@ -1597,23 +1404,5 @@
     "kind": "whole-assembly",
     "prompt": "Use case: background-extraction. Edit target: the supplied wedding illustration. Extract the ENTIRE connected assembly of the pink envelope, cream portrait card, bride and groom portrait, and burgundy ribbon bow as ONE complete transparent component. Preserve the envelope-card relationship, original relative scale, line drawing, paper textures and colors exactly. Do not separate the portrait, envelope or bow. Remove only the sage striped backdrop, all tulips, and any unrelated marks. Center the complete assembly with a small 3% transparent margin, natural aspect ratio. Genuine transparent alpha outside the entire connected assembly. No text, no shadows, no watermark.",
     "generatedPath": "/Users/mac/.codex/generated_images/01a100c5-12b3-73a1-a228-9fea27b10b9b/exec-cc708c00-0194-4b21-9a25-06b15f736b17.png"
-  },
-  {
-    "id": "birthday-coquette-bow-frame-portrait",
-    "shape": "native 9:16 portrait canvas, 1080 by 1920 composition. One large horizontal bow at 20% from top and attached long flowing ribbon tails descending near the left and right edges to 88% from top. Leave center x=25% to 75%, y=35% to 75% clear",
-    "kind": "portrait-frame",
-    "background": false,
-    "source": null,
-    "prompt": "Use case: illustration-story. Create a brand-new clean transparent pale blush-pink watercolor satin ribbon bow frame. Composition: native 9:16 portrait canvas, 1080 by 1920 composition. One large horizontal bow at 20% from top and attached long flowing ribbon tails descending near the left and right edges to 88% from top. Leave center x=25% to 75%, y=35% to 75% clear. Soft hand-painted watercolor paper texture within the pink ribbon, delicate darker pink shading, folded satin loops and gently flowing attached tails. Palette is exclusively pale blush pink and muted dusty rose; no bright red. Elegant coquette invitation illustration, flat hand-painted art, not photographic. Natural undistorted bow proportions. The bow and ribbons form one connected component. Everything else MUST be true alpha transparency. There must be absolutely no stray paint specks, no isolated marks, no colored outlines, no white boxes, no checkerboard pattern, no background paint, no paper outside the ribbon, no lettering, no shadows, no watermark. Clean finished cutout edges.",
-    "generatedPath": "/Users/mac/.codex/generated_images/01a100c5-12b3-73a1-a228-9fea27b10b9b/exec-8b31e880-27b9-4077-8f2c-802e4be085de.png"
-  },
-  {
-    "id": "birthday-coquette-bow-clean",
-    "shape": "square 1:1 canvas. A large bow across the top quarter with long attached tails winding down the left and right edges. Leave the center clear",
-    "kind": "clean-component",
-    "background": false,
-    "source": null,
-    "prompt": "Use case: illustration-story. Create a brand-new clean transparent pale blush-pink watercolor satin ribbon bow frame. Composition: square 1:1 canvas. A large bow across the top quarter with long attached tails winding down the left and right edges. Leave the center clear. Soft hand-painted watercolor paper texture within the pink ribbon, delicate darker pink shading, folded satin loops and gently flowing attached tails. Palette is exclusively pale blush pink and muted dusty rose; no bright red. Elegant coquette invitation illustration, flat hand-painted art, not photographic. Natural undistorted bow proportions. The bow and ribbons form one connected component. Everything else MUST be true alpha transparency. There must be absolutely no stray paint specks, no isolated marks, no colored outlines, no white boxes, no checkerboard pattern, no background paint, no paper outside the ribbon, no lettering, no shadows, no watermark. Clean finished cutout edges.",
-    "generatedPath": "/Users/mac/.codex/generated_images/01a100c5-12b3-73a1-a228-9fea27b10b9b/exec-bd14a99c-3e58-4c10-9424-e12f0c5cf226.png"
   }
 ]

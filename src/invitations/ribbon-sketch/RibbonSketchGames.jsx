@@ -4,7 +4,7 @@ import { useLanguage } from "../../localization/LanguageContext.jsx";
 import InvitationArtwork from "../components/InvitationArtwork.jsx";
 
 const questions = [
-  ["When is Mia’s birthday?", "როდის არის მიას დაბადების დღე?", ["23 May", "23 მაისი"], ["17 May", "17 მაისი"], ["23 June", "23 ივნისი"]],
+  ["When is Aniko’s birthday?", "როდის არის ანიკოს დაბადების დღე?", ["23 May", "23 მაისი"], ["17 May", "17 მაისი"], ["23 June", "23 ივნისი"]],
   ["Where are we celebrating?", "სად ვიკრიბებით?", ["Tbilisi", "თბილისი"], ["Batumi", "ბათუმი"], ["Kutaisi", "ქუთაისი"]],
   ["What’s the dress code?", "როგორია ჩაცმის სტილი?", ["Pretty in pink", "ვარდისფერი განწყობა"], ["All in white", "ყველაფერი თეთრი"], ["Black tie", "კლასიკური საღამო"]],
   ["When does the party start?", "როდის იწყება წვეულება?", ["17:00", "17:00"], ["19:00", "19:00"], ["20:00", "20:00"]],
@@ -29,7 +29,7 @@ export default function RibbonSketchGames() {
         <h3>{question[ka ? 1 : 0]}</h3>
         <div className="rsb-game-options">{options.map(option => <button type="button" key={option[0]} disabled={selected !== null} className={selected !== null && option === question[2] ? "is-correct" : selected === option[0] ? "is-wrong" : ""} onClick={() => setSelected(option[0])}>{option[ka ? 1 : 0]}{selected !== null && option === question[2] && <InvitationArtwork name="check" size={20} />}</button>)}</div>
         {selected !== null && <div className="rsb-game-feedback" role="status"><p>{selected === question[2][0] ? t("You remembered!", "გახსოვს!") : t("A little reminder for the party.", "პატარა შეხსენება წვეულებისთვის.")}</p><button className="rsb-button" type="button" onClick={() => { setAnswers(value => [...value, selected === question[2][0]]); setSelected(null); }}>{t("Continue", "გაგრძელება")}<InvitationArtwork name="arrow-right" size={20} /></button></div>}
-      </div> : <div className="rsb-game-result" role="status"><img className="rsb-game-ribbon" src="/images/components/separated/burgundy-bow.webp" alt="" /><h3>{answers.filter(Boolean).length} / {questions.length}</h3><p className="rsb-hand">{t("Ready for Mia’s big day!", "მიას დღისთვის მზად ხარ!")}</p><button type="button" className="rsb-button" onClick={reset}>{t("Play again", "თავიდან თამაში")}</button></div>}
+      </div> : <div className="rsb-game-result" role="status"><img className="rsb-game-ribbon" src="/images/components/separated/burgundy-bow.webp" alt="" /><h3>{answers.filter(Boolean).length} / {questions.length}</h3><p className="rsb-hand">{t("Ready for Aniko’s big day!", "ანიკოს დღისთვის მზად ხარ!")}</p><button type="button" className="rsb-button" onClick={reset}>{t("Play again", "თავიდან თამაში")}</button></div>}
     </div>
   </section>;
 }

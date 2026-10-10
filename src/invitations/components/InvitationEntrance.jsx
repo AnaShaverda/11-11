@@ -110,7 +110,7 @@ export default function InvitationEntrance({ settings, design, title, initials, 
           <path className="guest-envelope-bottom" d="M0 280V264L210 126L420 264V280Z" />
           <path className="guest-envelope-fold" d="M0 264L210 126L420 264" />
         </svg>
-        
+
         <span className="guest-envelope-title">{title}</span>
       </div>
       <div className="guest-envelope guest-envelope-seal-layer" aria-hidden="true">{settings.envelopeStamp && ["pink", "blue"].includes(paperVariant) && <span className="paper-envelope-stamp"><span className="paper-stamp-art"><img src={`/images/christening/${paperVariant === "velvet" ? "pink" : paperVariant}-dove.png`} alt="" /><span>{monogram || <InvitationMotif name="heart" />}</span></span></span>}{paperVariant === "floral" && <><img className="envelope-flower-drawing is-left" src="/images/opening/red-envelope-flowers.webp" alt="" /><img className="envelope-flower-drawing is-right" src="/images/opening/red-envelope-flowers.webp" alt="" /></>}<span className="guest-envelope-seal">{sealArtwork ? <img className="guest-envelope-custom-seal" src={sealArtwork} alt="" /> : paperVariant && monogram ? <span className="paper-envelope-monogram">{monogram}</span> : <InvitationArtwork name="heart" size={21} />}</span></div>

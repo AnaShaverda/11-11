@@ -7,7 +7,7 @@ export default function InvitationMoodBoards({ template, sample }) {
   const { t, language } = useLanguage();
   const design = localizeCardRecord("designs", template.slug, template.design, t);
   const displayFont = getDesignFont(getDesignTypography(template).display, language);
-  const showGeneratedDecor = !template.visualAssets?.lineArt && !["birthday-coquette", "birthday-floral-affair", "birthday-beer-party"].includes(template.slug);
+  const showGeneratedDecor = !template.visualAssets?.lineArt;
 
   return (
     <section className="design-board-section design-elements-compact" aria-label={t("moodboard.language")}>

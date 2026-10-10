@@ -45,7 +45,7 @@ test("event galleries select occasion-appropriate photos with both languages", (
 });
 
 test("supporting cards reserve bow frames and crowded floral frames for the main invitation", () => {
-  for (const slug of ["birthday-ribbon-sketch", "birthday-ribbon-social", "bridal-doll-pink-card", "bridal-modern-pink-line-card", "bridal-pink-cocktail-card", "christening-olive-full-frame", "christening-blue-full-frame"]) {
+  for (const slug of ["birthday-ribbon-sketch", "bridal-doll-pink-card", "bridal-modern-pink-line-card", "bridal-pink-cocktail-card", "christening-olive-full-frame", "christening-blue-full-frame"]) {
     const template = invitationTemplates.find(item => item.slug === slug);
     const design = getGuestCardDesign(template);
     assert.equal(design.frame, undefined, slug);

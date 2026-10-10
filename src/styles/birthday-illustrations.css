@@ -35,10 +35,6 @@
   > :is(span, strong, small) {
   z-index: 3;
 }
-.invitation-preview-art:has(> .birthday-illustration--configured)
-  > :is(.modern-toast-paper, .retro-poster) {
-  z-index: 3;
-}
 
 /* Birthday landing page: real stationery illustrations replace the old CSS orbit. */
 .birthday-hero-art .birthday-illustration--landing-1 {
@@ -139,18 +135,6 @@
   height: 60%;
   transform: rotate(8deg);
 }
-.preview-coquette .birthday-illustration--invitation-1 {
-  top: 29%;
-  right: -7%;
-  width: 27%;
-  height: 54%;
-  transform: rotate(7deg);
-}
-.preview-coquette .birthday-illustration--invitation-2 {
-  top: 6%;
-  right: 3%;
-  width: 18%;
-}
 .preview-midnight-luxury .birthday-illustration--invitation-1 {
   top: 20%;
   right: 2%;
@@ -158,39 +142,12 @@
   height: 63%;
   transform: rotate(7deg);
 }
-.preview-garden-party .birthday-illustration--invitation-1 {
-  top: 22%;
-  right: -1%;
-  width: 35%;
-  height: 64%;
-}
 .preview-neon-night .birthday-illustration--invitation-1 {
   top: 20%;
   right: 0;
   width: 36%;
   height: 64%;
   filter: drop-shadow(0 0 19px #e737be88);
-}
-.preview-pastel-dream .birthday-illustration--invitation-1 {
-  top: 26%;
-  right: 0;
-  width: 30%;
-  height: 59%;
-  transform: rotate(12deg);
-}
-.preview-pastel-dream .birthday-illustration--invitation-2 {
-  top: -11%;
-  right: 4%;
-  width: 65%;
-  height: 30%;
-  transform: rotate(4deg);
-}
-.preview-tropical-summer .birthday-illustration--invitation-1 {
-  top: 20%;
-  right: 0;
-  width: 42%;
-  height: 67%;
-  transform: rotate(6deg);
 }
 
 /* The same source art becomes a restrained specimen or stationery detail on the mood boards. */

@@ -23,15 +23,15 @@ export const pinkChampagneBirthdayAssets = records(assets, (s) => !bridal(s));
 export const pinkChampagneBridalAssets = records(assets, bridal);
 export const pinkChampagnePortraits = records(() => paper);
 export const pinkChampagneSamples = records((s) => ({
-  title: bridal(s) ? "Mariam’s Bridal Party" : "Nino’s Birthday Toast",
-  name: bridal(s) ? "Mariam" : "Nino", posterName: bridal(s) ? "Mariam" : "Nino",
+  title: bridal(s) ? "Mariam’s Bridal Party" : "Dea’s Birthday Toast",
+  name: bridal(s) ? "Mariam" : "Dea", posterName: bridal(s) ? "Mariam" : "Dea",
   ...(bridal(s) ? {} : { posterAge: 30 }), headline: s.headline,
   opening: bridal(s) ? "FOR THE BRIDE" : "BIRTHDAY TOAST",
   date: "12 SEP 2027", time: "20:00", location: "TBILISI", line: phrase(s),
 }));
 export const pinkChampagneEvents = records((s) => ({
-  title: bridal(s) ? "Mariam’s Bridal Party" : "Nino’s Birthday Toast",
-  hostName: bridal(s) ? "Mariam" : "Nino",
+  title: bridal(s) ? "Mariam’s Bridal Party" : "Dea’s Birthday Toast",
+  hostName: bridal(s) ? "Mariam" : "Dea",
   ...(bridal(s) ? { brideName: "Mariam" } : { age: 30 }),
   celebrationName: bridal(s) ? "Bridal Party" : "Birthday Toast",
   date: "12 September 2027", dateISO: "2027-09-12T20:00:00+04:00", time: "20:00", location: "Tbilisi",
@@ -41,10 +41,10 @@ const story = (s) => ({
   eyebrow: bridal(s) ? "A TOAST TO THE BRIDE" : "A BIRTHDAY TOAST", heroLine: phrase(s),
   ticker: bridal(s) ? "THE BRIDE · HER PEOPLE · A LITTLE BUBBLY" : "GOOD FRIENDS · HAPPY BIRTHDAYS",
   storyTitle: bridal(s) ? "Here’s to her next chapter." : "Here’s to another lovely year.",
-  storyText: bridal(s) ? "Join Mariam for a bridal celebration, a toast, and a joyful evening with her favorite people." : "Join Nino for birthday cake, a toast, and a happy evening with friends.",
+  storyText: bridal(s) ? "Join Mariam for a bridal celebration, a toast, and a joyful evening with her favorite people." : "Join Dea for birthday cake, a toast, and a happy evening with friends.",
   inviteMessage: bridal(s) ? "Bring your love for the bride. We’ll save you a place." : "Bring your birthday wishes. We’ll save you a place.",
   galleryTitle: "Our favorite moments.", galleryText: "An evening worth remembering.",
-  storySignoff: bridal(s) ? "With love, Mariam" : "With love, Nino",
+  storySignoff: bridal(s) ? "With love, Mariam" : "With love, Dea",
   photoTag: bridal(s) ? "BRIDAL PARTY" : "LET’S CELEBRATE", inviteOpening: "You’re invited",
   inviteFooter: "GOOD FRIENDS · A LOVELY EVENING",
   communityTitle: bridal(s) ? "A little love for the bride." : "A little birthday love.",
@@ -56,10 +56,10 @@ const kaStory = (s) => ({
   eyebrow: bridal(s) ? "პატარძლის სადღეგრძელო" : "დაბადების დღის სადღეგრძელო", heroLine: kaPhrase(s),
   ticker: bridal(s) ? "პატარძალი · მეგობრები · შამპანური" : "კარგი მეგობრები · ბედნიერი დაბადების დღე",
   storyTitle: bridal(s) ? "მის ახალ თავს გაუმარჯოს." : "კიდევ ერთ მშვენიერ წელს გაუმარჯოს.",
-  storyText: bridal(s) ? "მარიამთან ერთად ვიზეიმოთ პატარძლის წვეულება და გავატაროთ მხიარული საღამო საყვარელ ადამიანებთან." : "ნინოსთან ერთად ვიზეიმოთ ტორტით, სადღეგრძელოთი და მეგობრებთან გატარებული საღამოთი.",
+  storyText: bridal(s) ? "მარიამთან ერთად ვიზეიმოთ პატარძლის წვეულება და გავატაროთ მხიარული საღამო საყვარელ ადამიანებთან." : "დეასთან ერთად ვიზეიმოთ ტორტით, სადღეგრძელოთი და მეგობრებთან გატარებული საღამოთი.",
   inviteMessage: bridal(s) ? "წამოიღე პატარძლისთვის სიყვარული. შენთვის ადგილს შევინახავთ." : "წამოიღე დაბადების დღის სურვილები. შენთვის ადგილს შევინახავთ.",
   galleryTitle: "ჩვენი საყვარელი მომენტები.", galleryText: "დასამახსოვრებელი საღამო.",
-  storySignoff: bridal(s) ? "სიყვარულით, მარიამი" : "სიყვარულით, ნინო",
+  storySignoff: bridal(s) ? "სიყვარულით, მარიამი" : "სიყვარულით, დეა",
   photoTag: bridal(s) ? "პატარძლის წვეულება" : "მოდი ვიზეიმოთ", inviteOpening: "გეპატიჟებით",
   inviteFooter: "კარგი მეგობრები · მშვენიერი საღამო",
   communityTitle: bridal(s) ? "სიყვარულით სავსე სურვილები პატარძალს." : "სიყვარულით სავსე სურვილები.",
@@ -75,9 +75,9 @@ for (const s of variants) {
     for (const [key, value] of Object.entries({ name, description, style: description, mood })) pinkChampagneCaptions[lang][`themes.${s.slug}.${key}`] = value;
   }
   const localized = {
-    samples: { title: bridal(s) ? "მარიამის პატარძლის წვეულება" : "ნინოს დაბადების დღე", name: bridal(s) ? "მარიამი" : "ნინო", posterName: bridal(s) ? "მარიამი" : "ნინო", headline: s.kaHeadline, opening: bridal(s) ? "პატარძლისთვის" : "დაბადების დღე", date: "12 სექტემბერი 2027", location: "თბილისი", line: kaPhrase(s) },
+    samples: { title: bridal(s) ? "მარიამის პატარძლის წვეულება" : "დეას დაბადების დღე", name: bridal(s) ? "მარიამი" : "დეა", posterName: bridal(s) ? "მარიამი" : "დეა", headline: s.kaHeadline, opening: bridal(s) ? "პატარძლისთვის" : "დაბადების დღე", date: "12 სექტემბერი 2027", location: "თბილისი", line: kaPhrase(s) },
     designs: { specimen: s.kaHeadline.replace("\n", " "), phrase: kaPhrase(s), accentCard: bridal(s) ? "პატარძლისთვის" : "დაბადების დღე", accentCopy: bridal(s) ? "მისი მეგობრები. ცოტაოდენი შამპანური." : "კარგი მეგობრები. ბედნიერი დაბადების დღე.", finish: bridal(s) ? "მის ახალ თავს გაუმარჯოს." : "კიდევ ერთ მშვენიერ წელს გაუმარჯოს." },
-    events: { title: bridal(s) ? "მარიამის პატარძლის წვეულება" : "ნინოს დაბადების დღე", hostName: bridal(s) ? "მარიამი" : "ნინო", ...(bridal(s) ? { brideName: "მარიამი" } : {}), celebrationName: bridal(s) ? "პატარძლის წვეულება" : "დაბადების დღე", date: "12 სექტემბერი 2027", location: "თბილისი", description: kaPhrase(s) },
+    events: { title: bridal(s) ? "მარიამის პატარძლის წვეულება" : "დეას დაბადების დღე", hostName: bridal(s) ? "მარიამი" : "დეა", ...(bridal(s) ? { brideName: "მარიამი" } : {}), celebrationName: bridal(s) ? "პატარძლის წვეულება" : "დაბადების დღე", date: "12 სექტემბერი 2027", location: "თბილისი", description: kaPhrase(s) },
   };
   for (const [ns, fields] of Object.entries(localized)) for (const [key, value] of Object.entries(fields)) pinkChampagneCardCopy[`cards.${ns}.${s.slug}.${key}`] = value;
   for (const [key, value] of Object.entries(kaStory(s))) pinkChampagneCardCopy[`cards.stories.${s.visual}.${key}`] = value;

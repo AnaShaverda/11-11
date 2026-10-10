@@ -94,20 +94,11 @@
 :root body .invitation-art--separated.preview-ink-and-ivy .wedding-ink-copy { padding-left: 24%; padding-right: 24%; }
 
 /* Inner illustrated cards retain their frame, with the age below the child's name. */
-.invitation-preview-art :is(.photo-paper-space,.photo-paper-dino) .modern-toast-name { top: 31%; font-size: 7cqw; line-height: 1.25; }
-.invitation-preview-art :is(.photo-paper-space,.photo-paper-dino) .modern-toast-age { top: 43%; font-size: 27cqw; line-height: 1; }
-.invitation-preview-art :is(.photo-paper-space,.photo-paper-dino) .modern-toast-closing { top: 63%; font-size: 4cqw; }
 .invitation-preview-art.preview-retro-pop .retro-image-name { font-size: 5.8cqw; line-height: 1.3; }
 .invitation-preview-art.preview-retro-pop .retro-image-age { top: 38%; }
 .invitation-preview-art.preview-bridal-electric-pink .retro-bridal-copy > strong { line-height: 1.35; margin-top: 3cqw; }
 .invitation-preview-art.preview-bridal-electric-pink .retro-bridal-host { line-height: 1.3; }
 .invitation-preview-art.preview-bridal-electric-pink .retro-bridal-copy > em { margin-top: 4cqw; }
-:root body .invitation-preview-art.preview-modern-toast .modern-toast-age { font-size: 52cqw !important; }
-:root body .invitation-preview-art.invitation-art--portrait.preview-modern-toast .modern-toast-paper:not(.photo-paper-playful,.photo-paper-illustrated) .modern-toast-age { font-size: 52cqw !important; }
-:root body .invitation-art.preview-birthday.preview-race-day .modern-toast-age { top: 32%; font-size: 46cqw; }
-:root body .invitation-art.preview-birthday.preview-race-day .modern-toast-closing { top: 57%; left: 10%; width: 80%; font-size: 4cqw; }
-.invitation-preview-art .photo-paper-dino .modern-toast-name { top: 32%; }
-.invitation-preview-art.preview-race-day .photo-invitation-paper > .birthday-illustration { height: 30% !important; }
 .invitation-preview-art .pizza-birthday-copy > :is(.pizza-make,.pizza-headline,.pizza-host,.slice-the,.slice-pizza,.slice-club) { transform: none; }
 .invitation-preview-art .pizza-headline { top: 16%; }
 .invitation-preview-art:not(.invitation-art--portrait) .pizza-make { top: 5%; }

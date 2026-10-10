@@ -2,7 +2,7 @@ import fs from "node:fs/promises";
 import { createRequire } from "node:module";
 const sharp = createRequire(import.meta.url)("/Users/mac/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/sharp");
 const frames = [
-  "ribbon-frame", "ribbon-social-frame", "birthday-coquette-frame",
+  "ribbon-frame",
   "christening-olive-full-frame-olive-frame", "christening-blue-full-frame-blue-floral-frame",
   "christening-little-dreamer-gold-frame", "christening-blush-petals-petal-frame", "christening-olive-ribbon-olive-frame",
   "bridal-doll-pink-card-frame", "bridal-pink-cocktail-card-frame", "bridal-modern-pink-line-card-ribbon-frame",

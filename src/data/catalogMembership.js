@@ -1,8 +1,6 @@
 // A design keeps one identity and preview URL, with any number of browsing memberships.
 // Add an override here to place a design in additional categories or occasions.
 export const designMembershipOverrides = {
-  "birthday-paper-garland": { birthday: ["adult-birthday", "kids-birthday"], "baby-kids": ["kids-birthday"] },
-  "birthday-strawberry-social": { birthday: ["adult-birthday", "kids-birthday"], "baby-kids": ["kids-birthday"], parties: ["themed"] },
   "birthday-white-and-blue": { birthday: ["adult-birthday", "kids-birthday"], "baby-kids": ["kids-birthday"] },
   "birthday-playground": { birthday: ["adult-birthday", "kids-birthday"], "baby-kids": ["kids-birthday"], parties: ["themed"] },
 
@@ -12,8 +10,6 @@ export const designMembershipOverrides = {
   "birthday-blue-splash": { birthday: ["adult-birthday", "kids-birthday"], "baby-kids": ["kids-birthday"], parties: ["pool"] },
   "birthday-pink-lido": { birthday: ["adult-birthday", "kids-birthday"], "baby-kids": ["kids-birthday"], parties: ["pool"] },
   "birthday-slice-club": { parties: ["dinner", "themed"] },
-  "birthday-supper-club": { parties: ["dinner", "housewarming"] },
-  "birthday-khinkali-beer": { parties: ["dinner", "themed"] },
   "birthday-midnight-martini": { parties: ["themed"] },
   "birthday-peach-fizz": { parties: ["themed"] },
   "birthday-disco-scrapbook": { parties: ["themed"] },
@@ -23,7 +19,7 @@ export const designMembershipOverrides = {
 // Curated features, rather than claiming popularity without usage data.
 export const featuredDesignIds = new Set([
   "wedding-ink-and-ivy", "wedding-garden-dance", "wedding-ivory-vows",
-  "birthday-paper-garland", "birthday-blue-splash", "birthday-little-pizza-chef",
+  "birthday-blue-splash", "birthday-little-pizza-chef",
   "bridal-pink-disco-dream", "bridal-cherry-tower", "gender-reveal-bear-hug",
 ]);
 
