@@ -1,6 +1,7 @@
 // Visibility settings are kept separate from artwork and design metadata.
 // Start every design inactive; reactivate a reviewed design here with "active".
 export const themeStatusOverrides = {
+  "birthday-desktop-sleepover": "active",
   "birthday-ribbon-sketch": "active",
   "birthday-playground": "active",
   "birthday-white-and-blue": "active",
@@ -14,8 +15,8 @@ export const themeStatusOverrides = {
   "birthday-pink-glam": "active",
   "birthday-city-after-dark": "active",
   "birthday-comic-cutout": "active",
-  "birthday-retro-sport": "active",
-  "birthday-upside-down": "active",
+  "birthday-retro-sport": "inactive",
+  "birthday-upside-down": "inactive",
   "birthday-pink-lido": "active",
   "birthday-blue-splash": "active",
   "birthday-little-pizza-chef": "active",

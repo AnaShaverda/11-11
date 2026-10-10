@@ -1766,6 +1766,18 @@ Object.assign(ka, {
 
 Object.assign(ka, girlyBirthdayCardCopy, comicBirthdayCardCopy, poolBirthdayCardCopy, pizzaBirthdayCardCopy, cocktailBirthdayCardCopy, pinkChampagneCardCopy, selectedBridalCardCopy);
 
+Object.assign(ka, {
+  "cards.samples.birthday-desktop-sleepover.title": "მარის რეტრო პიჟამა წვეულება",
+  "cards.samples.birthday-desktop-sleepover.posterName": "მარის",
+  "cards.samples.birthday-desktop-sleepover.date": "24 ოქტომბერი",
+  "cards.samples.birthday-desktop-sleepover.location": "თბილისი",
+  "cards.samples.birthday-desktop-sleepover.line": "კარგი მუსიკა. საუკეთესო მეგობრები.",
+  "cards.designs.birthday-desktop-sleepover.specimen": "მოწვეული ხარ",
+  "cards.designs.birthday-desktop-sleepover.phrase": "კიდევ ცოტა ხანს დარჩი.",
+  "cards.designs.birthday-desktop-sleepover.accentCard": "განწყობა",
+  "cards.designs.birthday-desktop-sleepover.accentCopy": "ვარდისფერი ატლასი და რეტრო ფანჯრები",
+  "cards.designs.birthday-desktop-sleepover.finish": "შენი ადგილი გელოდება.",
+});
 const en = {};
 const sources = { samples: invitationSamples, designs: showcaseDesigns, events: themeDemoEvents, templates: demoEvents, stories: themeStories };
 for (const [namespace, records] of Object.entries(sources)) {

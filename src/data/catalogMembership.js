@@ -6,6 +6,7 @@ export const designMembershipOverrides = {
 
   "birthday-little-pizza-chef": { birthday: ["kids-birthday"], "baby-kids": ["kids-birthday"], parties: ["themed"] },
   "birthday-comic-cutout": { birthday: ["adult-birthday", "kids-birthday"], "baby-kids": ["kids-birthday"], parties: ["themed"] },
+  "birthday-city-after-dark": { birthday: ["adult-birthday", "kids-birthday"], "baby-kids": ["kids-birthday"], parties: ["themed"] },
   "birthday-retro-sport": { birthday: ["adult-birthday", "kids-birthday"], "baby-kids": ["kids-birthday"], parties: ["themed"] },
   "birthday-blue-splash": { birthday: ["adult-birthday", "kids-birthday"], "baby-kids": ["kids-birthday"], parties: ["pool"] },
   "birthday-pink-lido": { birthday: ["adult-birthday", "kids-birthday"], "baby-kids": ["kids-birthday"], parties: ["pool"] },

@@ -1,3 +1,7 @@
+import PinkAfterpartyPoster from "./PinkAfterpartyPoster.jsx";
+import SpiderBirthdayPoster from "./SpiderBirthdayPoster.jsx";
+import PocketArcadePoster from "./PocketArcadePoster.jsx";
+import DesktopSleepoverPoster from "./DesktopSleepoverPoster.jsx";
 import PopDiscoPoster from "./PopDiscoPoster.jsx";
 import CheckerboardCheersPoster from "./CheckerboardCheersPoster.jsx";
 import BirthdayPlaygroundPoster from "./BirthdayPlaygroundPoster.jsx";
@@ -89,6 +93,14 @@ export function InvitationArtwork({
       )
       .map(([, value]) => String(value)),
   );
+  if (template.slug === "birthday-pink-glam")
+    return <PinkAfterpartyPoster sample={sample} language={language} className={className} ariaLabel={ariaLabel}/>;
+  if (["birthday-city-after-dark", "birthday-comic-cutout"].includes(template.slug))
+    return <SpiderBirthdayPoster sample={sample} language={language} theme={template.visual} className={className} ariaLabel={ariaLabel}/>;
+  if (template.slug === "birthday-y2k-party")
+    return <PocketArcadePoster sample={sample} language={language} className={className} ariaLabel={ariaLabel}/>;
+  if (template.slug === "birthday-desktop-sleepover")
+    return <DesktopSleepoverPoster sample={sample} language={language} className={className} ariaLabel={ariaLabel}/>;
   if (template.slug === "birthday-disco-scrapbook")
     return <PopDiscoPoster sample={sample} language={language} presentation={presentation} className={className} ariaLabel={ariaLabel}/>;
   if (template.slug === "birthday-checkerboard-cheers")

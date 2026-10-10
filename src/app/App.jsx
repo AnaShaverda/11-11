@@ -29,6 +29,9 @@ const CherryTowerExperience = lazy(() => import("../invitations/pages/CherryTowe
 const CocktailSummerExperience = lazy(() => import("../invitations/pages/CocktailSummerExperience.jsx"));
 
 const PopDiscoExperience = lazy(() => import("../invitations/pages/PopDiscoExperience.jsx"));
+const PinkGlamExperience = lazy(() => import("../invitations/pages/PinkGlamExperience.jsx"));
+const Y2KPartyExperience = lazy(() => import("../invitations/pages/Y2KPartyExperience.jsx"));
+const SpiderBirthdayExperience = lazy(() => import("../invitations/pages/SpiderBirthdayExperience.jsx"));
 
 const CheckerboardCheersExperience = lazy(() => import("../invitations/pages/CheckerboardCheersExperience.jsx"));
 
@@ -65,6 +68,13 @@ export default function App() {
     <Suspense fallback={<SiteLoader pending />} >
     <SiteLoader key={pathname} />
     <Routes>
+      <Route path="invitations/birthday-city-after-dark" element={<SpiderBirthdayExperience key="city-after-dark" theme="city-after-dark" />} />
+      <Route path="invitations/birthday-comic-cutout" element={<SpiderBirthdayExperience key="comic-cutout" theme="comic-cutout" />} />
+      <Route path="invitations/birthday-upside-down" element={<Navigate to="/invitations/birthday-city-after-dark" replace />} />
+      <Route path="invitations/birthday-retro-sport" element={<Navigate to="/invitations/birthday-comic-cutout" replace />} />
+      <Route path="invitations/birthday-pink-glam" element={<PinkGlamExperience />} />
+      <Route path="invitations/birthday-y2k-party" element={<Y2KPartyExperience key="arcade" theme="arcade" />} />
+      <Route path="invitations/birthday-desktop-sleepover" element={<Y2KPartyExperience key="sleepover" theme="sleepover" />} />
       <Route path="invitations/birthday-disco-scrapbook" element={<PopDiscoExperience />} />
       <Route path="invitations/birthday-checkerboard-cheers" element={<CheckerboardCheersExperience />} />
       <Route path="invitations/birthday-white-and-blue" element={<StationeryBirthdayExperience key="white-and-blue" />} />

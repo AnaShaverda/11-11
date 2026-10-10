@@ -96,6 +96,7 @@ export const invitationSamples = {
     line: "Let’s make it count.",
     mark: "25",
   },
+  "birthday-desktop-sleepover": { title: "Aniko’s Desktop Sleepover", posterName: "Aniko’s", date: "24 OCT", location: "TBILISI", line: "Good music. Better company." },
   "birthday-y2k-party": {
     title: "Aniko’s Y2K Party",
     posterName: "Aniko’s",

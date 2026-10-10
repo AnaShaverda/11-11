@@ -1,6 +1,7 @@
 import { applyThemeStatus } from "./themeStatus.js";
 import { girlyBirthdayThemes } from "../../invitations/data/girlyBirthdayDesigns.js";
 export const birthdayThemes = [
+  { id: "birthday-desktop-sleepover", slug: "birthday-desktop-sleepover", category: "birthday", name: "Desktop Sleepover", description: "Pink satin, nostalgic desktop windows and a little Snake game.", mood: "Soft · nostalgic · playful", visual: "desktop-sleepover", layout: "desktop", decor: "" },
   ...girlyBirthdayThemes,
 
   {"id": "birthday-disco-scrapbook", "slug": "birthday-disco-scrapbook", "category": "birthday", "name": "Disco Scrapbook", "description": "Colorful paper accents, a loose calendar grid, and an invitation to dance.", "mood": "Cream · colorful · analog", "visual": "disco-scrapbook", "layout": "editorial", "decor": ""},

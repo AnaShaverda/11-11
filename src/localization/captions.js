@@ -2831,3 +2831,16 @@ Object.assign(captions.ka, {
 
 Object.assign(captions.en, guestCardCopy.en);
 Object.assign(captions.ka, guestCardCopy.ka);
+
+Object.assign(captions.en, {
+  "themes.birthday-desktop-sleepover.name": "Desktop Sleepover",
+  "themes.birthday-desktop-sleepover.style": "Soft desktop nostalgia",
+  "themes.birthday-desktop-sleepover.description": "Pink satin, nostalgic desktop windows and a little Snake game.",
+  "themes.birthday-desktop-sleepover.mood": "Soft · nostalgic · playful",
+});
+Object.assign(captions.ka, {
+  "themes.birthday-desktop-sleepover.name": "რეტრო პიჟამა წვეულება",
+  "themes.birthday-desktop-sleepover.style": "ნაზი რეტრო განწყობა",
+  "themes.birthday-desktop-sleepover.description": "ვარდისფერი ატლასი, რეტრო ფანჯრები და გველის თამაში.",
+  "themes.birthday-desktop-sleepover.mood": "ნაზი · ნოსტალგიური · მხიარული",
+});
