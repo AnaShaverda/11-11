@@ -16,17 +16,18 @@ export default function InvitationEntrance({ settings, design, title, initials, 
   const { t } = useLanguage();
   const laceEnvelope = ["bordeauxLaceEnvelope", "greenLaceEnvelope", "roseFiberEnvelope"].includes(settings.entrance);
   const roseFiberEnvelope = settings.entrance === "roseFiberEnvelope";
-  const verticalEnvelope = ["redPortraitEnvelope", "embossedIvoryEnvelope", "embossedSageEnvelope", "embossedBurgundyEnvelope"].includes(settings.entrance);
+  const verticalEnvelope = ["redPortraitEnvelope", "embossedBurgundyEnvelope"].includes(settings.entrance);
   const paperVariant = settings.entrance === "embossedIvoryEnvelope" ? "embossed-ivory" : settings.entrance === "embossedSageEnvelope" ? "embossed-sage" : settings.entrance === "embossedBurgundyEnvelope" ? "embossed-burgundy" : settings.entrance === "pastelGreenEnvelope" ? "pastel-green" : verticalEnvelope ? "floral" : settings.entrance === "ivoryPaperEnvelope" ? "ivory" : settings.entrance === "redVelvetEnvelope" ? "velvet" : settings.entrance === "pinkPaperEnvelope" ? "pink" : settings.entrance === "bluePaperEnvelope" ? "blue" : null;
   const softPaperEnvelope = ["ivory", "pink", "blue", "pastel-green"].includes(paperVariant);
   const mutedPaperTexture = ["pink", "blue", "pastel-green"].includes(paperVariant);
-  const softPaperTexture = paperTexture ?? (paperVariant === "ivory" ? "/images/opening/ivory-open-pocket.webp" : paperVariant === "pastel-green" ? "/images/opening/pastel-green-plain-envelope.webp" : `/images/opening/paper-envelope-${paperVariant}.png`);
+  const softPaperTexture = paperTexture ?? (paperVariant === "ivory" ? "/images/opening/ivory-open-pocket.webp" : paperVariant === "pastel-green" ? "/images/opening/pastel-green-plain-envelope.webp" : paperVariant === "velvet" ? "/images/opening/velvet-envelope-red-v2.webp" : paperVariant?.startsWith("embossed-") ? `/images/opening/vertical-${paperVariant}.webp` : paperVariant === "floral" ? "/images/opening/red-floral-envelope.webp" : `/images/opening/paper-envelope-${paperVariant}.webp`);
   const monogram = getWaxMonogram(title, initials);
-  const entrance = paperVariant ? "envelope" : ["doorsBrown", "doorsBlueFloral"].includes(settings.entrance) ? "doors" : settings.entrance;
+  const entrance = ["embossedIvoryEnvelope", "embossedSageEnvelope"].includes(settings.entrance) ? settings.entrance : paperVariant ? "envelope" : ["doorsBrown", "doorsBlueFloral"].includes(settings.entrance) ? "doors" : settings.entrance;
   const embossedVariant = entrance === "embossedIvoryEnvelope" ? "ivory" : entrance === "embossedSageEnvelope" ? "sage" : null;
   const [phase, setPhase] = useState(entrance === "immediate" ? "opened" : "sealed");
   const [celebrating, setCelebrating] = useState(entrance === "immediate");
   const artwork = useRef(null);
+  const [portalTarget, setPortalTarget] = useState(null);
   const openedByGuest = useRef(false);
 
   useEffect(() => {
@@ -49,14 +50,15 @@ export default function InvitationEntrance({ settings, design, title, initials, 
     openedByGuest.current = true;
     const page = artwork.current.closest(".guest-preview-page");
     if (page?.dataset.previewMode === "mobile") {
-      const cardTop = artwork.current.closest(".guest-main-card").getBoundingClientRect().top + window.scrollY;
+      const frameWindow = artwork.current.ownerDocument.defaultView;
+      const cardTop = artwork.current.closest(".guest-main-card").getBoundingClientRect().top + frameWindow.scrollY;
       const toolbarHeight = page.querySelector(".guest-preview-toolbar")?.getBoundingClientRect().height ?? 0;
-      window.scrollTo({ top: Math.max(0, cardTop - toolbarHeight), behavior: "instant" });
+      frameWindow.scrollTo({ top: Math.max(0, cardTop - toolbarHeight), behavior: "instant" });
     }
     setPhase(reducedMotion ? "opened" : "opening");
   }
 
-  return <div className={`guest-invitation-entrance entrance-${entrance} ${entrance === "classicBurgundyEnvelope" ? "classic-burgundy-entrance" : ""} ${paperVariant ? `paper-envelope paper-envelope-${paperVariant}${softPaperEnvelope ? " paper-envelope-soft" : ""}${verticalEnvelope ? " is-vertical-envelope" : ""}` : ""} ${laceEnvelope ? `is-lace-envelope${settings.entrance === "greenLaceEnvelope" ? " is-green-lace" : ""}${settings.entrance === "roseFiberEnvelope" ? " is-rose-fiber" : ""}` : ""} is-${phase}`} data-entrance-state={phase} data-entrance={entrance} style={design.weddingTheme && (entrance === "envelope" || entrance === "doors") ? { "--guest-paper": design.paper, "--guest-ink": design.ink, "--guest-accent": design.accent } : undefined}>
+  return <div ref={node => { if (node) setPortalTarget(node.ownerDocument.body); }} className={`guest-invitation-entrance entrance-${entrance} ${entrance === "classicBurgundyEnvelope" ? "classic-burgundy-entrance" : ""} ${paperVariant ? `paper-envelope paper-envelope-${paperVariant}${softPaperEnvelope ? " paper-envelope-soft" : ""}${verticalEnvelope ? " is-vertical-envelope" : ""}` : ""} ${laceEnvelope ? `is-lace-envelope${settings.entrance === "greenLaceEnvelope" ? " is-green-lace" : ""}${settings.entrance === "roseFiberEnvelope" ? " is-rose-fiber" : ""}` : ""} is-${phase}`} data-entrance-state={phase} data-entrance={entrance} style={design.weddingTheme && (entrance === "envelope" || entrance === "doors") ? { "--guest-paper": design.paper, "--guest-ink": design.ink, "--guest-accent": design.accent } : undefined}>
     <div className="guest-letter-window">
       <div className="guest-invitation-artwork" ref={artwork} tabIndex={-1} aria-label={t("guestCards.invitation")}
         style={{ "--guest-paper": design.paper, "--guest-ink": design.ink, "--guest-accent": design.accent }}
@@ -86,7 +88,7 @@ export default function InvitationEntrance({ settings, design, title, initials, 
       {phase === "sealed" && <button type="button" className="vertical-envelope-tap" aria-label={t("guestCards.envelope.open")} onClick={openInvitation} />}
     </div>}
     {entrance === "envelope" && !verticalEnvelope && phase !== "opened" && <div className="guest-envelope-scene">
-      {paperVariant && <svg width="0" height="0" aria-hidden="true" style={{ position: "absolute" }}><defs><clipPath id="paper-flap-outline" clipPathUnits="objectBoundingBox"><path d="M0 0H1C1 .08 .98 .14 .94 .22L.53 .975Q.5 1.015 .47 .975L.06 .22C.02 .14 0 .08 0 0Z" /></clipPath><pattern id="envelope-photo-paper" width="420" height="280" patternUnits="userSpaceOnUse"><image href={`/images/opening/paper-envelope-${paperVariant}.png`} x="-420" y="-20" width="1260" height="840" preserveAspectRatio="none" /></pattern><linearGradient id="envelope-paper-face" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stopColor="var(--guest-paper)" /><stop offset=".5" stopColor="color-mix(in srgb,var(--guest-paper) 92%,white)" /><stop offset="1" stopColor="color-mix(in srgb,var(--guest-paper) 90%,var(--guest-ink))" /></linearGradient><linearGradient id="envelope-paper-flap" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stopColor="color-mix(in srgb,var(--guest-paper) 80%,white)" /><stop offset="1" stopColor="var(--guest-paper)" /></linearGradient><filter id="envelope-paper-grain" x="0" y="0" width="100%" height="100%"><feTurbulence type="fractalNoise" baseFrequency=".35 .55" numOctaves="4" stitchTiles="stitch" result="grain" /><feColorMatrix in="grain" type="saturate" values="0" /><feComponentTransfer><feFuncA type="linear" slope=".16" /></feComponentTransfer><feBlend in="SourceGraphic" mode="multiply" /></filter></defs></svg>}
+      {paperVariant && <svg width="0" height="0" aria-hidden="true" style={{ position: "absolute" }}><defs><clipPath id="paper-flap-outline" clipPathUnits="objectBoundingBox"><path d="M0 0H1C1 .08 .98 .14 .94 .22L.53 .975Q.5 1.015 .47 .975L.06 .22C.02 .14 0 .08 0 0Z" /></clipPath><pattern id="envelope-photo-paper" width="420" height="280" patternUnits="userSpaceOnUse"><image href={softPaperTexture} x="-420" y="-20" width="1260" height="840" preserveAspectRatio="none" /></pattern><linearGradient id="envelope-paper-face" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stopColor="var(--guest-paper)" /><stop offset=".5" stopColor="color-mix(in srgb,var(--guest-paper) 92%,white)" /><stop offset="1" stopColor="color-mix(in srgb,var(--guest-paper) 90%,var(--guest-ink))" /></linearGradient><linearGradient id="envelope-paper-flap" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stopColor="color-mix(in srgb,var(--guest-paper) 80%,white)" /><stop offset="1" stopColor="var(--guest-paper)" /></linearGradient><filter id="envelope-paper-grain" x="0" y="0" width="100%" height="100%"><feTurbulence type="fractalNoise" baseFrequency=".35 .55" numOctaves="4" stitchTiles="stitch" result="grain" /><feColorMatrix in="grain" type="saturate" values="0" /><feComponentTransfer><feFuncA type="linear" slope=".16" /></feComponentTransfer><feBlend in="SourceGraphic" mode="multiply" /></filter></defs></svg>}
       <p className="guest-envelope-greeting">{t("guestCards.envelope.forYou")}</p>
       <div className="guest-envelope guest-envelope-back-layer" aria-hidden="true">
         <div className="guest-envelope-back" />
@@ -116,10 +118,10 @@ export default function InvitationEntrance({ settings, design, title, initials, 
         <span>{t("guestCards.envelope.open")} <InvitationArtwork name="arrow-up-right" size={17} /></span>
       </button>}
     </div>}
-    {embossedVariant && phase !== "opened" && createPortal(<EmbossedEnvelope variant={embossedVariant} phase={phase} title={title} initials={initials} style={design.weddingTheme ? weddingThemeStyle(design.weddingTheme) : undefined}
-      openLabel={t("guestCards.envelope.open")} onOpen={openInvitation}>{children}</EmbossedEnvelope>, document.body)}
+    {portalTarget && embossedVariant && phase !== "opened" && createPortal(<EmbossedEnvelope variant={embossedVariant} phase={phase} title={title} initials={initials} style={design.weddingTheme ? weddingThemeStyle(design.weddingTheme) : undefined}
+      openLabel={t("guestCards.envelope.open")} onOpen={openInvitation}>{children}</EmbossedEnvelope>, portalTarget)}
     {entrance === "doors" && phase !== "opened" && <DecorativeDoors variant={settings.entrance === "doorsBrown" ? "brown" : settings.entrance === "doorsBlueFloral" ? "blueFloral" : "white"} phase={phase} title={title} onOpen={openInvitation} />}
-    {entrance === "stampedPaper" && phase !== "opened" && createPortal(<StampedPaperOpening phase={phase} onOpen={openInvitation} openLabel={t("guestCards.envelope.open")} />, document.body)}
+    {portalTarget && entrance === "stampedPaper" && phase !== "opened" && createPortal(<StampedPaperOpening phase={phase} onOpen={openInvitation} openLabel={t("guestCards.envelope.open")} />, portalTarget)}
     {celebrating && <OpeningCelebration key={`${settings.openingEffect}:${settings.openingIntensity}:${settings.openingSpeed}:${settings.openingDuration}:${settings.openingPalette}`} settings={settings} design={design} />}
     {phase === "opened" && openedByGuest.current && <span className="guest-screen-reader" role="status">{t("guestCards.envelope.opened")}</span>}
     {phase === "opening" && <span className="guest-screen-reader" role="status">{t("guestCards.doors.opening")}</span>}

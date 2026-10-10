@@ -25,3 +25,12 @@ test("reduced motion skips reveal and dismissal delays without firing a celebrat
     }
   }
 });
+
+test("embossed envelopes hand off after the flap and letter finish, then dissolve", () => {
+  for (const entrance of ["embossedIvoryEnvelope", "embossedSageEnvelope"]) {
+    assert.deepEqual(getEntranceTransition(entrance, "opening", false), { next: "finishing", duration: 2600, celebrationDelay: 2100 });
+    assert.deepEqual(getEntranceTransition(entrance, "finishing", false), { next: "opened", duration: 700, celebrationDelay: null });
+    assert.equal(getEntranceTransition(entrance, "opening", true).duration, 0);
+    assert.equal(getEntranceTransition(entrance, "finishing", true).duration, 0);
+  }
+});

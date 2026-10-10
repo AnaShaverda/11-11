@@ -7,7 +7,7 @@ import { invitationSamples } from "./invitationSamples.js";
 import { MAX_GUEST_NOTE_LENGTH } from "./guestNotes.js";
 
 export const guestPreviewDefaults = { timeZone: "Asia/Tbilisi", details: true, rsvp: true, rsvpDeadline: "", music: false, gallery: false, motion: "none", format: "square", companions: 1, entrance: "ivoryPaperEnvelope", envelopeStamp: false, envelope: true, openingEffect: "none", openingIntensity: "subtle", openingSpeed: "slow", openingDuration: 8, openingPalette: "theme" };
-export const entranceStyles = ["ivoryPaperEnvelope", "pinkPaperEnvelope", "bluePaperEnvelope", "classicBurgundyEnvelope", "redPortraitEnvelope", "pastelGreenEnvelope", "bordeauxLaceEnvelope", "greenLaceEnvelope", "doors", "doorsBrown", "doorsBlueFloral", "stampedPaper", "immediate"];
+export const entranceStyles = ["ivoryPaperEnvelope", "pinkPaperEnvelope", "bluePaperEnvelope", "classicBurgundyEnvelope", "redPortraitEnvelope", "pastelGreenEnvelope", "bordeauxLaceEnvelope", "greenLaceEnvelope", "doors", "doorsBrown", "doorsBlueFloral", "stampedPaper", "redVelvetEnvelope", "embossedIvoryEnvelope", "embossedSageEnvelope", "embossedBurgundyEnvelope", "roseFiberEnvelope", "envelope", "immediate"];
 export const motionStyles = ["none", "gentle", "float", "sparkle", "elegant"];
 export const openingEffects = ["none", "confetti", "streamers", "hearts", "sparkles", "petals"];
 export const openingSpeeds = ["dreamy", "slow", "lively"];
@@ -44,7 +44,7 @@ const supportFrames = new Set([
 
 export function normalizeGuestSettings(value = {}) {
   if (!value || typeof value !== "object") value = {};
-  const entrance = ["portraitEnvelope", "envelope", "redVelvetEnvelope"].includes(value.entrance) ? "ivoryPaperEnvelope" : entranceStyles.includes(value.entrance) ? value.entrance : value.envelope === false ? "immediate" : "ivoryPaperEnvelope";
+  const entrance = ["portraitEnvelope"].includes(value.entrance) ? "ivoryPaperEnvelope" : entranceStyles.includes(value.entrance) ? value.entrance : value.envelope === false ? "immediate" : "ivoryPaperEnvelope";
   return {
     timeZone: eventTimeZones.includes(value.timeZone) ? value.timeZone : "Asia/Tbilisi",
     details: value.details !== false,

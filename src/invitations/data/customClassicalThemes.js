@@ -27,7 +27,6 @@ const themeDetailsDrawings = {
   pressedRose: "pressedRose",
   pearlLetter: "pearlLetter",
   lilacWhisper: "pearlLetter",
-  meadowMorning: "meadowMorning",
   autumn: "autumn",
   rtveli: "rtveli",
   couplePortrait: "pearlLetter",
@@ -171,30 +170,6 @@ export const classicalThemes = [
   },
 
   {
-    id: "meadowMorning",
-    number: "10",
-    name: {
-      en: "Meadow Morning",
-      ka: "მდელოს დილა",
-    },
-    color: "#f4f1e8",
-    ink: "#4b513b",
-    accent: "#9caa91",
-    paper: "ivory",
-    frame: "stationery",
-    frameShape: "rectangle",
-    pattern: "plain",
-    font: "serif",
-    layout: "center",
-    scene: "",
-    footerScene: "none",
-    ornament: "",
-    italic: false,
-    frameAsset: "/images/wedding-themes/meadowMorning-frame.webp",
-    ornamentAsset: "/images/wedding-themes/meadowMorning-ornaments.webp",
-    illustration: "/images/wedding-themes/meadowMorning-illustration.webp",
-  },
-  {
     id: "autumn",
     number: "11",
     name: {
@@ -305,18 +280,18 @@ export function getCustomThemeForOccasion(id, occasion) {
 const legacyThemeIds = {
   ivoryClassic: "somethingBlue",
   blueClassic: "somethingBlue",
-  gardenVeil: "meadowMorning",
+  gardenVeil: "somethingBlue",
   quietParchment: "pearlLetter",
   vellumPromise: "pearlLetter",
   champagneVows: "pearlLetter",
-  forestClassic: "meadowMorning",
+  forestClassic: "somethingBlue",
   sepia: "pearlLetter",
   heritage: "somethingBlue",
   romance: "pressedRose",
   midnight: "pearlLetter",
   gilded: "pearlLetter",
   silver: "pearlLetter",
-  sageMeadow: "meadowMorning",
+  sageMeadow: "somethingBlue",
   pastelBloom: "pressedRose",
   lavenderHour: "lilacWhisper",
   bluePorcelain: "somethingBlue",
@@ -335,5 +310,5 @@ export const getClassicalPaper = (id) => classicalPapers[id] ?? "";
 export const getClassicalOrnament = (id) => classicalOrnaments[id] ?? "";
 
 export function canUploadCustomCover(theme) {
-  return theme?.occasion !== "christening" || theme.squarePhoto === true;
+  return theme?.photoTheme === true || theme?.squarePhoto === true;
 }

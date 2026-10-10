@@ -2,6 +2,7 @@ import React from "react";
 import { createRoot } from "react-dom/client";
 import { BrowserRouter } from "react-router-dom";
 import App from "./app/App.jsx";
+import ScrollManager from "./components/layout/ScrollManager.jsx";
 import { LanguageProvider } from "./localization/LanguageContext.jsx";
 import { AppearanceProvider } from "./appearance/AppearanceContext.jsx";
 import "./styles/fonts.css";
@@ -63,6 +64,7 @@ if (bootScene) {
 createRoot(rootElement).render(
   <React.StrictMode>
     <BrowserRouter>
+      <ScrollManager />
       <LanguageProvider>
         <AppearanceProvider>
           <App />
@@ -104,5 +106,7 @@ import "./styles/page-gutters.css";
 import "./styles/wedding-themes.css";
 import "./styles/invitation-form.css";
 import "./styles/custom-design-gallery.css";
+import "./styles/classical-experience.css";
 
 import "./styles/form-interactions.css";
+import "./styles/custom-builder-flow.css";

@@ -26,13 +26,13 @@ test('switching occasions replaces incompatible saved themes with the right defa
 
 test('removed wedding themes migrate saved drafts while portrait themes retain their styling', () => {
   const themes = getCustomThemes('wedding');
-  for (const [removed, replacement] of [['gardenVeil', 'meadowMorning'], ['quietParchment', 'pearlLetter'], ['vellumPromise', 'pearlLetter'], ['champagneVows', 'pearlLetter']]) {
+  for (const [removed, replacement] of [['gardenVeil', 'somethingBlue'], ['quietParchment', 'pearlLetter'], ['vellumPromise', 'pearlLetter'], ['champagneVows', 'pearlLetter']]) {
     assert.ok(!themes.some(theme => theme.id === removed));
     assert.equal(getCustomThemeForOccasion(removed, 'wedding').id, replacement);
     assert.equal(getClassicalTheme(removed).id, replacement);
     assert.equal(getDetailsArtwork(removed), getDetailsArtwork(replacement));
   }
-  assert.equal(getClassicalTheme('forestClassic').id, 'meadowMorning');
+  assert.equal(getClassicalTheme('forestClassic').id, 'somethingBlue');
   assert.equal(getClassicalTheme('sepia').id, 'pearlLetter');
   for (const id of ['couplePortrait', 'couplePortraitDark']) {
     const theme = getClassicalTheme(id);
@@ -58,5 +58,5 @@ test('baby boy and girl themes both keep cover photos square and separate from t
 
 test('christening cover uploads are limited to the two baby photo themes', () => {
   assert.deepEqual(getCustomThemes('christening').filter(canUploadCustomCover).map(theme => theme.id), ['christeningBabyBoy', 'christeningBabyGirl']);
-  assert.ok(getCustomThemes('wedding').every(canUploadCustomCover));
+  assert.deepEqual(getCustomThemes('wedding').filter(canUploadCustomCover).map(theme => theme.id), ['couplePortrait', 'couplePortraitDark']);
 });

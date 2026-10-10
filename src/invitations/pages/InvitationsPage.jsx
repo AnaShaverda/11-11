@@ -11,7 +11,6 @@ import BirthdayExperience from "../../projects/BirthdayExperience.jsx";
 import WeddingExperience from "../../projects/WeddingExperience.jsx";
 import CorporateExperience from "../../projects/CorporateExperience.jsx";
 import { useLanguage } from "../../localization/LanguageContext.jsx";
-import { customCategories } from "../data/customTemplates.js";
 
 const experiences = { birthday: BirthdayExperience, wedding: WeddingExperience };
 
@@ -29,14 +28,14 @@ export default function InvitationsPage() {
   const hasAppearance = appearance.themes.length > 0 || appearance.colors.length > 0;
   const showAppearance = availableTemplates.length > 0 || hasAppearance;
   const visibleTemplates = availableTemplates.filter((item) => matchesCatalogAppearance(item, appearance));
-  const customCategory = project?.id === "baby-kids" ? (["all", "christening"].includes(occasion) ? "christening" : null) : project?.id && customCategories.includes(project.id) ? project.id : !project || project.id === "trending" ? "all" : null;
+  const customCategory = project?.id === "order-online" ? "all" : null;
   const resultCount = visibleTemplates.length + Number(Boolean(customCategory));
   const resultKey = [project?.id ?? "all", occasion, appearance.themes.join(","), appearance.colors.join(",")].join("|");
   const availableAppearance = availableTemplates.map(getCatalogAppearance);
   const themeOptions = catalogThemeOptions.filter((option) => appearance.themes.includes(option.id) || availableAppearance.some((item) => item.themes.includes(option.id)));
   const availableColors = [...new Set(availableAppearance.flatMap((item) => item.colors))];
   const selectedOccasion = getCelebrationSubcategory(occasion);
-  const title = project ? t(`common.${project.id}`) : t("invitations.all");
+  const title = project ? t(project.captionKey ?? `common.${project.id}`) : t("invitations.all");
   const Experience = experiences[project?.id];
 
   function updateFilters(changes) {
@@ -56,7 +55,7 @@ export default function InvitationsPage() {
       <CatalogControls project={project} occasion={occasion} appearance={appearance} themeOptions={themeOptions} availableColors={availableColors} showAppearance={showAppearance} resultCount={resultCount} hasFilters={Boolean(project) || occasion !== "all" || hasAppearance} onCategoryChange={changeCategory} onChange={updateFilters} onReset={() => updateFilters({ category: "all", occasion: "all", themes: "", colors: "" })} />
       <div className="catalog-results-column">
       <section className="invitation-collection" id={`collection-${project?.id ?? "all"}`} aria-label={title}>
-        <div className="invitation-collection-heading"><div className="collection-heading-copy"><h2>{title} <span className="category-heading-count" aria-live="polite" aria-atomic="true">({resultCount})</span></h2>{project ? <p>{t(`project.${project.id}.description`)}</p> : null}</div></div>
+        <div className="invitation-collection-heading"><div className="collection-heading-copy"><h2>{title} <span className="category-heading-count" aria-live="polite" aria-atomic="true">({resultCount})</span></h2>{project && project.id !== "order-online" ? <p>{t(`project.${project.id}.description`)}</p> : null}</div></div>
         {project?.id === "trending" ? <p className="category-curated-note">{t("category.trending.note")}</p> : null}
         {(visibleTemplates.length || customCategory) ? <InvitationGallery key={resultKey} templates={visibleTemplates} customCategory={customCategory} /> : null}
         {!resultCount && project?.id !== "corporate" ? <div className="invitation-empty-state"><h2>{t(selectedOccasion && !hasAppearance ? "catalog.occasion.empty.title" : "catalog.empty.title", { occasion: selectedOccasion ? t(selectedOccasion.captionKey) : title })}</h2><p>{t(selectedOccasion && !hasAppearance ? "catalog.occasion.empty.description" : "catalog.empty.description")}</p>{hasAppearance ? <button type="button" className="collection-clear-filters" onClick={() => updateFilters({ themes: "", colors: "" })}>{t("catalog.clearAppearance")}</button> : null}</div> : null}

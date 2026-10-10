@@ -96,7 +96,10 @@ export default function App() {
         path="invitations/create/:category"
         element={<CustomInvitationPage />}
       />
+      <Route path="order-online/:category/demo/:theme" element={<CustomDesignExperiencePage />} />
+      <Route path="order-online/:category/create" element={<CustomInvitationPage />} />
       <Route element={<WebsiteLayout />}>
+      <Route path="order-online" element={<CustomDesignGalleryPage />} />
       <Route
         path="invitations/create/:category/designs"
         element={<CustomDesignGalleryPage />}

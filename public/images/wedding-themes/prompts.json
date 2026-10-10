@@ -325,45 +325,6 @@
         1024
       ],
       "bytes": 1484392
-    },
-    {
-      "id": "meadowMorning",
-      "kind": "frame",
-      "source": "/Users/mac/.codex/generated_images/01a10ca0-3f5d-7b82-ad8c-20d9d5315fed/exec-8fc5d448-5a3a-480b-af11-900d686b8b8b.png",
-      "prompt": "Use case: background-extraction. Production asset extraction from APPROVED reference board. Output only the FRAME BORDER of the LEFT invitation cover, isolated with real alpha transparency. Preserve the exact original illustration and character; do not redesign or substitute. fine olive-grey double rectangular border, subtle tiny engraved flourishes at corners. Single straight-on portrait canvas 2:3. Preserve original locations relative to the full cover and keep center empty. REMOVE ALL FLOWERS, LEAVES, CRESTS, BOTANICALS AND SCENES; the frame is a separate reusable layer. Border inset about 5%. Remove all text, numbers, logos, paper, texture background, card body, props, shadows outside artwork, board and swatches. NO opaque fills or background. Transparent interior. Quiet romantic classical wedding stationery detail, exact reference colors. Output ONE transparent PNG artwork, no labels.",
-      "reference": "/Users/mac/.codex/generated_images/01a10ca0-3f5d-7b82-ad8c-20d9d5315fed/exec-2e5ffe00-94ad-4c50-beca-105f5d494c18.png",
-      "destination": "meadowMorning-frame.webp",
-      "size": [
-        1024,
-        1536
-      ],
-      "bytes": 115226
-    },
-    {
-      "id": "meadowMorning",
-      "kind": "ornament",
-      "source": "/Users/mac/.codex/generated_images/01a10ca0-3f5d-7b82-ad8c-20d9d5315fed/exec-0c071b06-d654-4627-8c6f-a7e071261433.png",
-      "prompt": "Use case: background-extraction. Production asset extraction from APPROVED reference board. Output only the BOTANICAL/CREST ORNAMENTS of the LEFT invitation cover, isolated with real alpha transparency. Preserve the exact original illustration and character; do not redesign or substitute. Soft watercolor white cosmos, tiny powder-blue forget-me-nots, wispy sage grasses along very bottom edge; delicate trailing stems in upper corners. Keep exact reference botanical forms and gentle color. No landscape.. Single straight-on portrait canvas 2:3. Preserve original locations relative to the full cover and keep center empty. REMOVE ALL FRAME LINES, OVALS, ARCHES, BORDER RULES; ornament artwork is a separate reusable layer. Keep foliage in outer 18%, top/bottom 20%; empty center. Remove all text, numbers, logos, paper, texture background, card body, props, shadows outside artwork, board and swatches. NO opaque fills or background. Transparent interior. Quiet romantic classical wedding stationery detail, exact reference colors. Output ONE transparent PNG artwork, no labels.",
-      "reference": "/Users/mac/.codex/generated_images/01a10ca0-3f5d-7b82-ad8c-20d9d5315fed/exec-2e5ffe00-94ad-4c50-beca-105f5d494c18.png",
-      "destination": "meadowMorning-ornaments.webp",
-      "size": [
-        1024,
-        1536
-      ],
-      "bytes": 1169192
-    },
-    {
-      "id": "meadowMorning",
-      "kind": "illustration",
-      "source": "/Users/mac/.codex/generated_images/01a10ca0-3f5d-7b82-ad8c-20d9d5315fed/exec-32a05ff3-c2b0-4fa3-a0da-6f334adbb8ea.png",
-      "prompt": "Use case: background-extraction. Input image is the APPROVED DESIGN. Extract only the existing illustration in its CENTER event details card: fine pale sage/powder-blue watercolor stone country villa with tall cypresses, meadow flowers and garden path. Preserve the exact visual subject, composition, delicate painted/engraved lines, colors and ornaments of the reference. This is asset extraction for implementation, not a redesign. Remove all text, UI, borders, paper/card background, other cards, swatches, props and board. Output ONE isolated landscape illustration on a genuinely transparent alpha background. Keep its original quiet classical wedding look and subtle faded edges. No replacement building, new florals, added lettering, shadows, labels or new decorative elements. Fit artwork with a little transparent breathing room.",
-      "reference": "exec-2e5ffe00-94ad-4c50-beca-105f5d494c18.png",
-      "destination": "meadowMorning-illustration.webp",
-      "size": [
-        1536,
-        1024
-      ],
-      "bytes": 1447930
     }
   ]
 }

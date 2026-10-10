@@ -1,3 +1,4 @@
+import RibbonSketchToolbar from "../ribbon-sketch/RibbonSketchToolbar.jsx";
 import GuestMusicControl from "./GuestMusicControl.jsx";
 import { formatRsvpDeadline } from "../data/invitationDate.js";
 import { weddingPartyRoleLabel } from "../data/weddingParty.js";
@@ -276,7 +277,7 @@ function CustomMomentsCard({ moments, city, date, design, images = {} }) {
 }
 
 export default function GuestCardSuite({ template, sample, copyTranslations, editableFields, onEditText, settings, photos, dayPlan = [], noteSettings = normalizeGuestNoteSettings(null), openingReplay = 0, mobile, hasPortrait,
-  creator, showCreatorTools = creator, onSettingsChange, onAddSection, planDraft, onSavePlan, onNoteSettingsChange, galleryTools, customDesign, moments = [], momentImages = {}, city = "", weddingParty = [], initialGuestName = "", initialNote = "", adaptiveCoverArtwork = false }) {
+  creator, previewOpening = false, fullscreenCards = false, showCreatorTools = creator, onSettingsChange, onAddSection, planDraft, onSavePlan, onNoteSettingsChange, galleryTools, customDesign, moments = [], momentImages = {}, city = "", weddingParty = [], initialGuestName = "", initialNote = "", adaptiveCoverArtwork = false }) {
   const { t, language } = useLanguage();
   const root = useRef(null);
   const [guestIdentity, setGuestIdentity] = useState(() => {
@@ -289,12 +290,13 @@ export default function GuestCardSuite({ template, sample, copyTranslations, edi
     return { name: initialGuestName, source: initialGuestName ? "sample" : null };
   });
   const changeGuestName = (name, source) => setGuestIdentity({ name, source });
-  const reducedMotion = useReducedGuestMotion();
+  const prefersReducedMotion = useReducedGuestMotion();
+  const reducedMotion = prefersReducedMotion;
   useGuestComponentReveals(root, reducedMotion);
   const [editingPlan, setEditingPlan] = useState(false);
-  const entranceKey = `${template.slug}:${creator ? "edit" : settings.entrance}:${openingReplay}`;
+  const entranceKey = `${template.slug}:${creator && !previewOpening ? "edit" : settings.entrance}:${openingReplay}`;
   const [completedEntrance, setCompletedEntrance] = useState(null);
-  const entranceComplete = creator || settings.entrance === "immediate" || completedEntrance === entranceKey;
+  const entranceComplete = (creator && !previewOpening) || settings.entrance === "immediate" || completedEntrance === entranceKey;
   const completeEntrance = useCallback(() => setCompletedEntrance(entranceKey), [entranceKey]);
   useElegantGuestMotion(root, !creator && settings.motion === "elegant", entranceComplete, reducedMotion, entranceKey);
   const weddingTheme = template.isCustom ? getClassicalTheme(customDesign.theme) : null;
@@ -314,7 +316,7 @@ export default function GuestCardSuite({ template, sample, copyTranslations, edi
   const details = getGuestEventDetails(template, sample);
   const typography = getCardTypography(template);
   const font = getDesignFont(typography.display, language);
-  const presentation = mobile && hasPortrait ? "portrait" : "square";
+  const presentation = (mobile || template.isCustom) && hasPortrait ? "portrait" : "square";
   const supportPaperKey = weddingTheme?.embossedPaper
     ? (weddingTheme.id === "embossedSage" ? "sagePaper" : "ivory")
     : customDesign.paper;
@@ -349,28 +351,29 @@ export default function GuestCardSuite({ template, sample, copyTranslations, edi
     editor={showCreatorTools && (editingPlan || planDraft) && <GuestDayPlanEditor embedded dayPlan={dayPlan} onSave={items => { onSavePlan(items); setEditingPlan(false); }} />} />;
   const editField = key => editableFields.find(field => field.group === "fields" && field.key === key);
 
-  return <article ref={root} data-classic-frame={design.classicMobilePaper && Boolean(design.mobileFrame)} data-template={template.slug} data-classic-paper={design.classicMobilePaper} data-classic-mobile-paper={mobile && design.classicMobilePaper} data-mobile-frame={mobile && design.classicMobilePaper && Boolean(design.mobileFrame)} data-soft-screen={design.softScreen} data-entrance-complete={entranceComplete} className={`guest-card-suite${showCreatorTools ? " is-canvas-editing" : ""}${template.isCustom ? ` guest-custom-theme wedding-stationery${weddingTheme.occasion === "christening" ? " christening-stationery" : ""} theme-${weddingTheme.id}${lightCoverColors.has(customDesign.color) ? " custom-light-color" : ""}${pastelCustomColors.has(customDesign.color) ? " custom-pastel-color" : ""} custom-frame-${customDesign.frame} custom-pattern-${customDesign.pattern} custom-font-${customDesign.font} custom-paper-${customDesign.paper || "none"} custom-ornament-${customDesign.ornament || "none"}` : ""} guest-pattern-${design.pattern} guest-motion-${creator ? "none" : settings.motion}${design.background ? " has-paper-image" : ""}`} style={style} aria-label={sample.title}>
+  return <article ref={root} data-classic-frame={design.classicMobilePaper && Boolean(design.mobileFrame)} data-template={template.slug} data-classic-paper={design.classicMobilePaper} data-classic-mobile-paper={mobile && design.classicMobilePaper} data-mobile-frame={mobile && design.classicMobilePaper && Boolean(design.mobileFrame)} data-soft-screen={design.softScreen} data-entrance-complete={entranceComplete} className={`guest-card-suite${template.isCustom && (!creator || fullscreenCards) ? " is-classical-fullscreen" : ""}${showCreatorTools ? " is-canvas-editing" : ""}${template.isCustom ? ` guest-custom-theme wedding-stationery${weddingTheme.occasion === "christening" ? " christening-stationery" : ""} theme-${weddingTheme.id}${lightCoverColors.has(customDesign.color) ? " custom-light-color" : ""}${pastelCustomColors.has(customDesign.color) ? " custom-pastel-color" : ""} custom-frame-${customDesign.frame} custom-pattern-${customDesign.pattern} custom-font-${customDesign.font} custom-paper-${customDesign.paper || "none"} custom-ornament-${customDesign.ornament || "none"}` : ""} guest-pattern-${design.pattern} guest-motion-${creator || (template.isCustom && !creator) ? "none" : settings.motion}${design.background ? " has-paper-image" : ""}`} style={style} aria-label={sample.title}>
     {!creator && settings.motion === "elegant" && entranceComplete && !reducedMotion && <div className="guest-elegant-atmosphere" aria-hidden="true">
       {[0, 1, 2, 3, 4, 5].map(index => <i key={index} style={{ "--particle-left": `${8 + index * 17}%`, "--particle-top": `${6 + index * 15}%`, "--particle-delay": `${-index * 3}s` }} />)}
       <span className="guest-elegant-shimmer" />
     </div>}
-    <nav className="guest-nav" aria-label={sample.title}>
+    {template.isCustom && !creator && <RibbonSketchToolbar backTo="/" backHistory showMotion={false} />}
+    {!(template.isCustom && !creator) && <nav className="guest-nav" aria-label={sample.title}>
       <span className="guest-wordmark">11:11</span>
       <div><a href="#guest-invitation">{t("guestCards.invitation")}</a>{settings.gallery && (showCreatorTools || photos.length > 0) && <a href="#guest-photos">{t("guestCards.photos")}</a>}{settings.details && <a href="#guest-event-details">{t("guestCards.details")}</a>}{moments.length > 0 && <a href="#guest-custom-moments">{language === "ka" ? "განრიგი" : "Schedule"}</a>}{dayPlanCard && <a href="#guest-day-plan">{t("guestCards.plan.title")}</a>}{settings.rsvp && <a href="#guest-rsvp">{t("guestCards.rsvp")}</a>}{noteSettings.enabled && <a href="#guest-notes">{t("guestCards.notes.title")}</a>}</div>
-    </nav>
+    </nav>}
     {settings.music && <GuestMusicControl />}
     <div className="guest-card-layout">
       <div className="guest-invitation-column">
         <section className={`guest-main-card${presentation === "portrait" ? " is-portrait" : " is-square-mobile"}`} id="guest-invitation" aria-label={t("guestCards.invitation")}>
           <div className="guest-main-content">
-            <InvitationEntrance key={entranceKey} settings={creator ? { ...settings, entrance: "immediate", openingEffect: "none" } : settings} design={design} title={sample.name ?? sample.posterName ?? sample.title} initials={sample.initials} reducedMotion={reducedMotion} onComplete={completeEntrance}>
-              {template.isCustom ? <CustomInvitationCover design={customDesign} sample={sample} invitationLabel={t("guestCards.invitation")} invitationGreeting={language === "ka" ? "გეპატიჟებით" : "You’re invited"} adaptiveArtwork={adaptiveCoverArtwork} />
+            <InvitationEntrance key={entranceKey} settings={creator && !previewOpening ? { ...settings, entrance: "immediate", openingEffect: "none" } : settings} design={design} title={sample.name ?? sample.posterName ?? sample.title} initials={sample.initials} reducedMotion={reducedMotion} onComplete={completeEntrance}>
+              {template.isCustom ? <CustomInvitationCover design={customDesign} sample={sample} invitationLabel={t("guestCards.invitation")} invitationGreeting={language === "ka" ? "გეპატიჟებით" : "You’re invited"} adaptiveArtwork={weddingTheme.occasion !== "christening" && (adaptiveCoverArtwork || fullscreenCards || !creator)} />
                 : <EditableInvitationArtwork fields={editableFields} onEdit={onEditText}><CardCopyProvider overrides={copyTranslations}><InvitationCardArtwork template={template} large presentation={presentation} sample={sample} ariaLabel={sample.title} /></CardCopyProvider></EditableInvitationArtwork>}
             </InvitationEntrance>
           </div>
         </section>
       </div>
-    {template.isCustom && sample.line?.trim() && <div className="guest-section-screen" data-section="message"><NoteCard design={design} className="guest-custom-message" ornament={0}><p>{sample.line}</p></NoteCard></div>}
+    {template.isCustom && (sample.line?.trim() || sample.opening?.trim()) && <div className="guest-section-screen" data-section="message"><NoteCard design={design} className="guest-custom-message" ornament={0}>{sample.opening?.trim() && <h2>{sample.opening}</h2>}{sample.line?.trim() && <p>{sample.line}</p>}</NoteCard></div>}
     {settings.gallery && (showCreatorTools || photos.length > 0) && <div className="guest-section-screen" data-section="gallery"><PhotoGallery key={photos.map(photo => photo.id).join(":")} photos={photos} design={design} creator={showCreatorTools} galleryTools={galleryTools} headingField={editableFields.find(field => field.key === "guestCards.gallery.title")} onEditText={onEditText}
       tools={showCreatorTools && <CanvasSectionTools title={t("guestCards.gallery")} onRemove={() => removeSection({ gallery: false })} />} /></div>}
     {showCreatorTools && !settings.gallery && <CanvasAddSection section="gallery" onAdd={onAddSection} />}
@@ -413,8 +416,8 @@ export default function GuestCardSuite({ template, sample, copyTranslations, edi
       </div>
     </div>
     <footer className={`guest-footer${template.isCustom && customDesign.showFooter !== false && footerScenes[customDesign.footerScene] ? " has-footer-art" : ""}`}>
-      {template.isCustom && customDesign.showFooter !== false && footerScenes[customDesign.footerScene] && <img className="guest-footer-art" src={footerScenes[customDesign.footerScene]} alt="" aria-hidden="true" />}
       <span>{t("guestCards.made")}</span>
+      {template.isCustom && customDesign.showFooter !== false && footerScenes[customDesign.footerScene] && <img className="guest-footer-art" src={footerScenes[customDesign.footerScene]} alt="" aria-hidden="true" />}
     </footer>
   </article>;
 }

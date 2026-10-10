@@ -1,0 +1,153 @@
+/* One responsive guest experience for every classical online theme.
+   The editor keeps its paper-card layout; the guest view fills the screen. */
+.guest-card-suite.is-classical-fullscreen {
+  --classical-art-width: min(100%, 620px);
+  --classical-gutter: clamp(24px, 7vw, 100px);
+  width: 100%; min-width: 0; padding: 0; overflow-x: clip;
+  color: var(--wedding-ink); background-color: var(--wedding-paper);
+}
+.guest-card-suite.is-classical-fullscreen .guest-card-layout,
+.guest-card-suite.is-classical-fullscreen .guest-support-cards { display: flex; flex-direction: column; width: 100%; max-width: none; gap: 0; }
+.guest-card-suite.is-classical-fullscreen .guest-invitation-column { display: block; width: 100%; padding: 0; min-height: 0; }
+.guest-card-suite.is-classical-fullscreen .guest-main-card.is-portrait { width: 100%; max-width: none; height: 100svh; min-height: 620px; aspect-ratio: auto; box-shadow: none; margin: 0; }
+.guest-card-suite.is-classical-fullscreen .guest-main-card .guest-main-content,
+.guest-card-suite.is-classical-fullscreen .guest-main-card .guest-invitation-entrance,
+.guest-card-suite.is-classical-fullscreen .guest-main-card .guest-letter-window,
+.guest-card-suite.is-classical-fullscreen .guest-main-card .guest-invitation-artwork { position: absolute; inset: 0; width: 100%; height: 100%; }
+.guest-card-suite.is-classical-fullscreen .custom-invitation-cover.wedding-cover { display: grid; place-items: center; width: 100%; height: 100%; min-height: 0; aspect-ratio: auto; }
+.guest-card-suite.is-classical-fullscreen .wedding-cover:not(.has-photo):not(.wedding-portrait-cover) .wedding-artwork { inset: 0; width: 100%; height: 100%; transform: none; aspect-ratio: auto; }
+.guest-card-suite.is-classical-fullscreen .wedding-cover .wedding-adaptive-frame { position: absolute; inset: 20px; border: 1px solid transparent; border-image-source: var(--wedding-frame-image); border-image-slice: 25%; border-image-width: clamp(90px, 25vw, 220px); border-image-repeat: stretch; }
+.guest-card-suite.is-classical-fullscreen .wedding-cover .wedding-preview-ornament { position: absolute; width: var(--classical-art-width); height: min(150vw, 100%); object-fit: contain; opacity: 1; pointer-events: none; }
+.guest-card-suite.is-classical-fullscreen .wedding-preview-ornament-top { left: 0; top: 0; object-position: left top; }
+.guest-card-suite.is-classical-fullscreen .wedding-preview-ornament-bottom { right: 0; bottom: 0; left: auto; object-position: right bottom; }
+.guest-card-suite.is-classical-fullscreen .wedding-cover .custom-cover-copy { position: relative; width: min(65%, 640px); height: auto; min-height: 0; padding: 80px 0; gap: clamp(24px, 4vh, 44px); align-content: center; text-align: center; }
+.guest-card-suite.is-classical-fullscreen .wedding-cover .custom-cover-copy small { font-size: clamp(14px, 1.5vw, 19px); letter-spacing: .08em; }
+.guest-card-suite.is-classical-fullscreen .wedding-cover .custom-cover-copy strong { font-size: clamp(40px, 6vw, 86px); line-height: 1.25; }
+.guest-card-suite.is-classical-fullscreen .wedding-cover .wedding-cover-date { font-size: clamp(16px, 1.6vw, 22px); line-height: 1.5; }
+.guest-card-suite.is-classical-fullscreen :is(.guest-section-screen, .guest-event-screen) { display: grid; grid-template-columns: minmax(0, 1fr); grid-template-areas: none; place-items: center; width: 100%; min-height: 100svh; padding: 0; gap: 0; scroll-margin-top: 0; }
+.guest-card-suite.is-classical-fullscreen :is(.guest-section-screen, .guest-event-screen) > * { grid-area: auto; min-width: 0; }
+.guest-card-suite.is-classical-fullscreen .guest-note.wedding-stationery-note,
+.guest-card-suite.is-classical-fullscreen .guest-section-screen[data-section="rsvp"] .guest-rsvp { display: grid; place-items: center; width: 100%; max-width: none; min-height: 100svh; margin: 0; aspect-ratio: auto; box-shadow: none; }
+.guest-card-suite.is-classical-fullscreen .guest-note.wedding-stationery-note .guest-note-content { width: min(100% - var(--classical-gutter) * 2, 680px); max-width: none; min-height: 0; padding: clamp(80px, 12vh, 140px) 0; margin: 0 auto; }
+.guest-card-suite.is-classical-fullscreen .guest-note.wedding-stationery-note > .wedding-artwork { opacity: .3; }
+.guest-card-suite.is-classical-fullscreen .guest-note .wedding-section-ornament { width: var(--classical-art-width); height: min(150vw, 100%); object-fit: contain; }
+.guest-card-suite.is-classical-fullscreen .guest-note .wedding-section-ornament-bottom { left: auto; right: 0; }
+.guest-card-suite.is-classical-fullscreen .guest-note h2,
+.guest-card-suite.is-classical-fullscreen .guest-gallery h2 { font-size: clamp(30px, 3.4vw, 48px); line-height: 1.3; text-wrap: balance; }
+.guest-card-suite.is-classical-fullscreen .guest-custom-message p { font-size: clamp(23px, 2.8vw, 36px); line-height: 1.65; max-width: 30ch; margin-inline: auto; }
+.guest-card-suite.is-classical-fullscreen .guest-event-tools { width: 100%; max-width: none; }
+.guest-card-suite.is-classical-fullscreen .guest-event-date { font-size: clamp(17px, 1.6vw, 22px); }
+.guest-card-suite.is-classical-fullscreen .guest-countdown { gap: clamp(16px, 4vw, 48px); }
+.guest-card-suite.is-classical-fullscreen .guest-countdown strong { font-size: clamp(32px, 4vw, 56px); }
+.guest-card-suite.is-classical-fullscreen .guest-countdown span { font-size: 13px; }
+.guest-card-suite.is-classical-fullscreen .guest-custom-moments li :is(h3, p, time) { font-size: clamp(16px, 1.5vw, 21px); line-height: 1.6; }
+.guest-card-suite.is-classical-fullscreen .wedding-details-illustration { display: block; width: min(100%, 520px); height: auto; max-height: 340px; object-fit: contain; margin: 28px auto 36px; }
+.guest-card-suite.is-classical-fullscreen .guest-gallery { width: 100%; max-width: none; min-height: 100svh; display: flex; flex-direction: column; justify-content: center; padding: 70px var(--classical-gutter); border: 0; border-radius: 0; background: transparent; }
+.guest-card-suite.is-classical-fullscreen .guest-photo-strip { width: min(100%, 960px); margin-inline: auto; }
+.guest-card-suite.is-classical-fullscreen .guest-rsvp form,
+.guest-card-suite.is-classical-fullscreen .guest-reply-confirmation { width: min(100%, 480px); margin-inline: auto; }
+.guest-card-suite.is-classical-fullscreen .guest-note :is(input, textarea) { min-height: 48px; font-size: 16px; }
+.guest-card-suite.is-classical-fullscreen .guest-note :is(button, summary, .guest-map-link),
+.guest-card-suite.is-classical-fullscreen .guest-custom-moments a { min-height: 44px; }
+.guest-card-suite.is-classical-fullscreen .guest-footer { margin: 0; padding: 56px 24px; background-color: var(--wedding-paper); color: var(--wedding-ink); }
+@media (max-width: 720px) {
+  .guest-card-suite.is-classical-fullscreen .guest-main-card.is-portrait { min-height: 100svh; }
+  .guest-card-suite.is-classical-fullscreen .wedding-cover .wedding-adaptive-frame { inset: 0; border-image-width: 37.5cqw 25cqw; }
+  .guest-card-suite.is-classical-fullscreen .wedding-cover .frame-shape-oval .wedding-adaptive-frame,
+  .guest-card-suite.is-classical-fullscreen .wedding-cover .frame-shape-arch .wedding-adaptive-frame { border-image-slice: 45%; border-image-width: 67.5cqw 45cqw; }
+  .guest-card-suite.is-classical-fullscreen .wedding-cover .custom-cover-copy { width: 65%; }
+}
+
+/* Use the same compact return/language controls as the newer invitations. */
+.guest-card-suite.is-classical-fullscreen { position: relative; }
+.is-classical-fullscreen .rsb-toolbar { position: absolute; z-index: 10; inset: 24px clamp(24px, 5vw, 72px) auto; display: flex; align-items: center; justify-content: space-between; color: var(--wedding-ink); }
+.is-classical-fullscreen .rsb-toolbar > a { display: inline-flex; align-items: center; gap: 10px; min-height: 44px; font: 400 24px/1 Georgia, serif; color: inherit; text-decoration: none; }
+.is-classical-fullscreen .rsb-toolbar > div { display: flex; align-items: center; }
+.is-classical-fullscreen .rsb-toolbar button { min-width: 44px; min-height: 44px; padding: 8px; border: 0; background: none; color: inherit; font: 600 13px/1 Arial, sans-serif; cursor: pointer; }
+.is-classical-fullscreen:has(.wedding-portrait-cover.tone-light) .rsb-toolbar { color: #fffaf2; text-shadow: 0 1px 6px #0009; }
+
+html:has(.is-classical-fullscreen) { scroll-behavior: auto; }
+
+/* Shade the photograph, rather than the narrower text container. */
+.guest-card-suite.is-classical-fullscreen .wedding-cover.wedding-portrait-cover::before,
+.guest-card-suite.is-classical-fullscreen .wedding-cover.has-photo:not(.is-framed-photo)::before {
+  content: ""; display: block; position: absolute; inset: 0; z-index: 1;
+  background: linear-gradient(to bottom, transparent 25%, var(--portrait-wash, #0009));
+  pointer-events: none;
+}
+.guest-card-suite.is-classical-fullscreen .wedding-cover.wedding-portrait-cover .custom-cover-copy,
+.guest-card-suite.is-classical-fullscreen .wedding-cover.has-photo:not(.is-framed-photo) .custom-cover-copy { z-index: 2; background: none; }
+
+@media (min-width: 721px) {
+  .guest-card-suite.is-classical-fullscreen .wedding-cover:not(.has-photo):not(.wedding-portrait-cover) .wedding-artwork { inset: 88px 32px 32px; width: auto; height: auto; overflow: visible; }
+  .guest-card-suite.is-classical-fullscreen .wedding-cover :is(.wedding-adaptive-frame, .wedding-frame-full, .wedding-portrait-frame, .christening-inner-border) { display: none; }
+  .guest-card-suite.is-classical-fullscreen .custom-invitation-cover.wedding-cover::after {
+    content: ""; display: block; position: absolute; inset: 88px 48px 36px; z-index: 3;
+    border: 1px solid color-mix(in srgb, currentColor 60%, transparent);
+    outline: 1px solid color-mix(in srgb, currentColor 30%, transparent); outline-offset: -7px;
+    border-radius: 0; pointer-events: none;
+  }
+  /* Masks are measured against the source's 2:3 canvas, not the viewport. */
+  .guest-card-suite.is-classical-fullscreen .wedding-cover .wedding-preview-ornament { width: min(36vw, 62svh, 560px); height: auto; aspect-ratio: 2 / 3; object-fit: contain; }
+  .guest-card-suite.is-classical-fullscreen .wedding-cover .wedding-preview-ornament-bottom { right: -32px; bottom: -32px; }
+  .guest-card-suite.is-classical-fullscreen .wedding-cover .custom-cover-copy { margin-top: 56px; }
+}
+
+/* Scroll reveals reset outside the viewport, so either scroll direction replays them. */
+@media (prefers-reduced-motion: no-preference) {
+  .is-classical-fullscreen .guest-component-reveal.is-component-visible { animation: guest-component-appear .7s var(--component-delay, 0ms) cubic-bezier(.22, 1, .36, 1) backwards !important; }
+  .is-classical-fullscreen .guest-moments-reveal.is-component-visible > li { animation: wedding-moment-enter .7s var(--moment-delay, 0ms) ease-out both !important; }
+  .is-classical-fullscreen .guest-frame-reveal:not(.is-component-visible) > .wedding-artwork,
+  .is-classical-fullscreen .guest-frame-reveal:not(.is-component-visible) .wedding-cover > .wedding-artwork,
+  .is-classical-fullscreen .guest-frame-reveal:not(.is-component-visible) .wedding-cover::after { opacity: 0; }
+  .is-classical-fullscreen .guest-frame-reveal.is-component-visible > .wedding-artwork,
+  .is-classical-fullscreen .guest-frame-reveal.is-component-visible .wedding-cover > .wedding-artwork,
+  .is-classical-fullscreen .guest-frame-reveal.is-component-visible .wedding-cover::after { animation: classical-frame-appear .9s ease-out backwards !important; }
+  .is-classical-fullscreen .guest-component-reveal.is-component-focused,
+  .is-classical-fullscreen .guest-moments-reveal.is-component-focused > li { animation: none !important; opacity: 1; transform: none; }
+}
+@keyframes classical-frame-appear { from { opacity: 0; } }
+
+/* Keep the next step reachable throughout a full invitation preview. */
+.custom-design-preview-choose { position: fixed; z-index: 30; bottom: max(20px, env(safe-area-inset-bottom)); left: 50%; transform: translateX(-50%); display: flex; align-items: center; justify-content: center; gap: 16px; width: max-content; max-width: calc(100% - 32px); min-height: 48px; padding: 12px 24px; border: 1px solid #ffffff70; border-radius: 999px; background: #383f32; color: #fffaf2; box-shadow: 0 4px 20px #0002; font-size: 14px; font-weight: 600; text-decoration: none; }
+.custom-design-preview-choose:hover { background: #22291d; }
+.custom-design-preview-choose:focus-visible { outline: 3px solid #7a8969; outline-offset: 4px; }
+.custom-design-experience-page .guest-footer { padding-bottom: 100px; }
+
+.guest-card-suite.is-classical-fullscreen .guest-footer { min-height: 0; height: auto; padding: 28px 24px; }
+.guest-card-suite.is-classical-fullscreen .guest-footer.has-footer-art { padding-top: 110px; }
+.guest-card-suite.is-classical-fullscreen .guest-footer-art { height: 100px; max-height: 100px; object-fit: cover; object-position: center bottom; }
+
+/* Keep the entire footer illustration visible in a compact closing section. */
+.guest-card-suite .guest-footer.has-footer-art { display: flex; flex-direction: column; gap: 16px; padding: 24px; height: auto; min-height: 0; }
+.guest-card-suite .guest-footer .guest-footer-art { display: block; position: static; width: min(100%, 760px); height: auto; max-height: 140px; object-fit: contain; object-position: center; }
+.guest-card-suite.is-classical-fullscreen .guest-footer.has-footer-art { padding: 24px; }
+.guest-card-suite.is-classical-fullscreen .guest-footer .guest-footer-art { height: auto; max-height: 140px; object-fit: contain; }
+
+/* Full-width scenery keeps its original proportions, without cropping. */
+.guest-card-suite .guest-footer.has-footer-art,
+.guest-card-suite.is-classical-fullscreen .guest-footer.has-footer-art { padding-inline: 0; }
+.guest-card-suite .guest-footer .guest-footer-art,
+.guest-card-suite.is-classical-fullscreen .guest-footer .guest-footer-art { width: 100%; max-width: none; height: auto; max-height: none; object-fit: contain; }
+/* Portrait envelope artwork retains its proportions on wide screens. */
+@media (min-aspect-ratio: 1/1) {
+ .guest-invitation-entrance.is-vertical-envelope .vertical-double-scene { width: min(100%, 66.667cqh); left: 0; right: 0; margin-inline: auto; box-shadow: 0 20px 70px #0002; }
+ .guest-invitation-entrance.is-vertical-envelope { background: var(--guest-paper); }
+ .vertical-double-scene .vertical-wing-flowers { object-fit: cover; }
+}
+/* The emerging letter must fit the envelope before growing to fullscreen. */
+.guest-card-suite.is-classical-fullscreen .guest-invitation-entrance:not(.is-vertical-envelope) { --letter-scale: min(.8, calc(var(--envelope-width) / 100cqw * .9)); }
+
+.guest-card-suite.is-classical-fullscreen .entrance-doors { --door-letter-scale: calc(min(84cqw, 33cqh) / 100cqw * .94); }
+.guest-invitation-entrance:is(.entrance-embossedIvoryEnvelope,.entrance-embossedSageEnvelope).is-opening .guest-invitation-artwork { opacity: 0; animation: none; }
+/* Lace folds are portrait artwork, not a landscape background. */
+@media (min-aspect-ratio: 1/1) {
+ .guest-invitation-entrance.is-lace-envelope .bordeaux-lace-scene {
+   inset: 0; margin: auto; width: min(460px, 92cqw, 61.333cqh);
+   height: auto; aspect-ratio: 2 / 3; container-type: size;
+   filter: drop-shadow(0 16px 28px #302a2526);
+ }
+}
+/* Legacy paper minimums must not extend an opening below its viewport. */
+.guest-card-suite.is-classical-fullscreen .guest-main-card .guest-invitation-entrance { min-height: 0; }
+.guest-card-suite.is-classical-fullscreen[data-entrance-complete="false"] .guest-invitation-column { inset: 0; padding: 0; }

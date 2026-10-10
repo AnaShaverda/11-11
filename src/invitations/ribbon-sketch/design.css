@@ -697,3 +697,7 @@
  :root body .rsb-postcard-wrap .rs-pink-ink:lang(ka) .rs-ink-title > span:first-child { font-size:min(27cqw,16cqh); }
  :root body .rsb-postcard-wrap .rs-pink-ink:lang(ka) .rs-ink-title > span:last-child { font-size:min(8cqw,5cqh);margin-top:1cqh; }
 }
+
+.rsb-design .maker-credit { min-height: 0; height: auto; padding: 20px 24px; gap: 8px; flex-direction: row; }
+.rsb-design .maker-credit a { min-width: 44px; min-height: 44px; }
+.rsb-design .maker-credit img { width: 42px; }

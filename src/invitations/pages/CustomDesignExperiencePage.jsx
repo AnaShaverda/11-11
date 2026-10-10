@@ -1,6 +1,7 @@
 import { Link, useParams } from "react-router-dom";
 import { useLanguage } from "../../localization/LanguageContext.jsx";
 import GuestCardSuite from "../components/GuestCardSuite.jsx";
+import InvitationArtwork from "../components/InvitationArtwork.jsx";
 import { normalizeCustomDesign } from "../components/CustomInvitationCover.jsx";
 import { getCustomTemplate } from "../data/customTemplates.js";
 import { getCustomThemes, portraitSamplePhoto } from "../data/customClassicalThemes.js";
@@ -26,7 +27,7 @@ export default function CustomDesignExperiencePage() {
   };
   const coverImage = theme.photoTheme ? portraitSamplePhoto : theme.squarePhoto ? "/images/christening/little-dreamer/invitation-cover-square.webp" : "";
   const design = normalizeCustomDesign({ theme: theme.id, coverImage });
-  const settings = normalizeGuestSettings({ ...guestPreviewDefaults, details: true, gallery: true, rsvp: true, companions: 2, motion: "elegant", entrance: "immediate", openingEffect: "none" });
+  const settings = normalizeGuestSettings({ ...guestPreviewDefaults, details: true, gallery: true, rsvp: true, companions: 2, motion: "none", entrance: "immediate", openingEffect: "none" });
   const moments = wedding ? [
     { id: "ceremony", en: "Wedding ceremony", ka: "ქორწილის ცერემონია", time: "16:00", venue: sample.location, mapUrl: "" },
     { id: "reception", en: "Wedding reception", ka: "სადღესასწაულო მიღება", time: "19:00", venue: sample.location, mapUrl: "" },
@@ -44,12 +45,15 @@ export default function CustomDesignExperiencePage() {
   ];
   const previewTemplate = { ...template, slug: `gallery-${category}-${theme.id}`, subcategory: occasion };
 
-  return <main className="guest-preview-page is-guest-preview custom-design-experience-page" data-preview-mode="mobile">
-    <div className="guest-preview-stage is-mobile">
+  return <main className="guest-preview-page is-guest-preview custom-design-experience-page">
+    <Link className="custom-design-preview-choose" target="_top" to={`/order-online/${category}/create?occasion=${occasion}&theme=${encodeURIComponent(theme.id)}`}>
+      {language === "ka" ? "ამ დიზაინის არჩევა" : "Choose this design"}<InvitationArtwork name="arrow-right" size={18} />
+    </Link>
+    <div className="guest-preview-stage">
       <GuestCardSuite template={previewTemplate} sample={sample} customDesign={design} moments={moments} city={sample.city}
         weddingParty={wedding ? [{ id: "maid", role: "maidOfHonour", name: language === "ka" ? "თამარ ბერიძე" : "Tamar Beridze" }, { id: "best", role: "bestMan", name: language === "ka" ? "გიორგი მაისურაძე" : "Giorgi Maisuradze" }] : []}
         copyTranslations={{}} editableFields={[]} settings={settings} photos={photos} dayPlan={dayPlan}
-        noteSettings={{ enabled: true, preset: "wish", prompt: "" }} creator={false} showCreatorTools={false} mobile hasPortrait adaptiveCoverArtwork={wedding}
+        noteSettings={{ enabled: true, preset: "wish", prompt: "" }} creator={false} showCreatorTools={false} hasPortrait adaptiveCoverArtwork={wedding}
         initialGuestName={language === "ka" ? "თამარ ბერიძე" : "Tamar Beridze"}
         initialNote={language === "ka" ? "გილოცავთ! მოუთმენლად ველი ამ დღეს." : "Congratulations! I can’t wait to celebrate with you."} />
     </div>

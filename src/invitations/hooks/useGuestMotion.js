@@ -38,7 +38,9 @@ export function useGuestComponentReveals(root, reduced) {
         ".guest-gallery-heading", ".guest-polaroid", ".guest-plan-items > li", ".guest-reply-confirmation > *",
         ".guest-editable-artwork [data-card-edit]", ".guest-card-decoration > img",
       ].join(","));
-      for (const element of candidates) {
+      const classical = container.classList.contains("is-classical-fullscreen");
+      const revealCandidates = classical ? [...candidates, ...container.querySelectorAll(".custom-cover-copy > *, .wedding-details-illustration")] : candidates;
+      for (const element of revealCandidates) {
         if (tracked.has(element) || element.parentElement.closest(".guest-component-reveal")) continue;
         const card = element.closest(".guest-note, .guest-gallery, .guest-main-card");
         const index = counts.get(card) ?? 0;
@@ -47,6 +49,12 @@ export function useGuestComponentReveals(root, reduced) {
         element.style.setProperty("--component-delay", `${Math.min(index, 4) * 65}ms`);
         element.classList.add("guest-component-reveal");
         observer.observe(element);
+      }
+      if (classical) for (const frame of container.querySelectorAll(".guest-main-card, .wedding-stationery-note")) {
+        if (tracked.has(frame)) continue;
+        tracked.add(frame);
+        frame.classList.add("guest-frame-reveal");
+        observer.observe(frame);
       }
       for (const list of container.querySelectorAll(".wedding-stationery .guest-custom-moments ol")) {
         list.querySelectorAll(":scope > li").forEach((item, index) => item.style.setProperty("--moment-delay", `${150 + index * 190}ms`));
@@ -68,7 +76,7 @@ export function useGuestComponentReveals(root, reduced) {
     return () => {
       observer.disconnect(); changes.disconnect(); container.removeEventListener("focusin", onFocus);
       for (const element of tracked) {
-        element.classList.remove("guest-component-reveal", "guest-moments-reveal", "is-component-visible", "is-component-focused");
+        element.classList.remove("guest-component-reveal", "guest-moments-reveal", "guest-frame-reveal", "is-component-visible", "is-component-focused");
         element.style.removeProperty("--component-delay");
         if (element.matches("ol")) element.querySelectorAll(":scope > li").forEach(item => item.style.removeProperty("--moment-delay"));
       }

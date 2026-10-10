@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import Icon from "../ui/Icon.jsx";
+import HomeOnlineInvitations from "./HomeOnlineInvitations.jsx";
 import HomeInvitations from "./HomeInvitations.jsx";
 import { useLanguage } from "../../localization/LanguageContext.jsx";
 
@@ -19,6 +20,7 @@ export default function HomeSections() {
   const { t } = useLanguage();
   return (
     <div className="home-more">
+      <HomeOnlineInvitations />
       <section className="home-possibilities">
         <div className="home-section-intro"><span className="home-section-index">{t("home.possibilities.index")}</span><h2>{t("home.possibilities.title")}</h2><p>{t("home.possibilities.description")}</p></div>
         <div className="possibility-list">{possibilities.map((item) => <div className="possibility-row" key={item.id}><span aria-hidden="true"><Icon name={item.icon} size={24} /></span><div><strong>{t(`home.possibility.${item.id}.title`)}</strong><small>{t(`home.possibility.${item.id}.detail`)}</small></div></div>)}</div>

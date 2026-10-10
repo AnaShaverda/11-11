@@ -8,7 +8,7 @@ export const themeStatusOverrides = {
   "birthday-disco-scrapbook": "active",
 
   "birthday-checkerboard-cheers": "active",
-  "birthday-pastel-disco": "inactive",
+  "birthday-pastel-disco": "active",
   "birthday-paper-garland": "inactive",
   "birthday-strawberry-social": "inactive",
   "birthday-cobalt-cheers": "inactive",

@@ -9,6 +9,7 @@ const navItems = [
   { to: "/", key: "nav.home", end: true },
   { to: "/surprises", key: "common.gifts" },
   { to: "/invitations", key: "nav.collections" },
+  { to: "/order-online", key: "nav.orderOnline" },
   { to: "/about", key: "nav.about" },
   { to: "/contact", key: "nav.contact" },
 ];

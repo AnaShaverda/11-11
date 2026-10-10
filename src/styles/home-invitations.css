@@ -31,3 +31,27 @@
   .home-carousel-dots span.is-active { width: 18px; opacity: 1; }
   .home-invitations :focus-visible { outline: 2px solid var(--ui-field-focus); outline-offset: 2px; }
 }
+
+/* A welcoming preview of the online invitation studio. */
+.home-online-invitations { display: grid; grid-template-columns: minmax(0, .9fr) minmax(0, 1.2fr); align-items: center; gap: 30px; padding: clamp(28px, 4vw, 56px); border: 1px solid var(--border-strong); border-radius: 28px; background: var(--surface-glass); }
+.home-online-copy { min-width: 0; }
+.home-more .home-online-copy h2 { margin: 0 0 24px; font-size: clamp(28px, 3.2vw, 46px); font-weight: 500; line-height: 1.18; letter-spacing: -.035em; text-wrap: balance; }
+.home-online-copy p { max-width: 34ch; margin: 0 0 30px; font-size: 1.0625rem; line-height: 1.65; }
+.home-online-action { display: inline-flex; align-items: center; justify-content: center; gap: 14px; min-height: 52px; padding: 14px 24px; border-radius: 999px; background: var(--text-link); color: var(--color-bg-start); font-size: .9375rem; font-weight: 700; text-decoration: none; transition: opacity var(--transition-fast); }
+.home-online-action:hover { opacity: .85; }
+.home-online-occasions { display: block; margin-top: 30px; color: var(--color-text-secondary); font-size: .875rem; }
+.home-online-artwork { display: flex; align-items: center; justify-content: center; min-width: 0; padding: 24px 8px; }
+.home-online-card { display: block; position: relative; flex: 0 0 36%; border-radius: 10px; box-shadow: 0 18px 28px #00000030; transition: translate 200ms ease; }
+.home-online-card:first-child { transform: rotate(-8deg) translateX(8%); }
+.home-online-card:nth-child(2) { z-index: 1; transform: translateY(-16px); }
+.home-online-card:last-child { transform: rotate(8deg) translateX(-8%); }
+.home-online-card:hover { translate: 0 -8px; z-index: 2; }
+.home-online-card .wedding-theme-mini { border-radius: 10px; }
+.home-online-invitations a:focus-visible { outline: 3px solid var(--ui-field-focus); outline-offset: 5px; }
+@media (max-width: 800px) {
+  .home-online-invitations { grid-template-columns: 1fr; gap: 24px; padding: 28px 24px; }
+  .home-online-copy p { max-width: 42ch; }
+  .home-online-artwork { width: min(100%, 480px); justify-self: center; padding: 20px 12px 14px; }
+  .home-online-occasions { margin-top: 20px; }
+}
+@media (prefers-reduced-motion: reduce) { .home-online-card { transition: none; } }

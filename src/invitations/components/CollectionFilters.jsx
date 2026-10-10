@@ -1,6 +1,7 @@
 import { useLayoutEffect, useRef, useState } from "react";
 import InvitationArtwork from "./InvitationArtwork.jsx";
 import { catalogColorOptions } from "../data/catalogAppearance.js";
+import { onlineOrderCategory } from "../data/catalogFilters.js";
 import { projects } from "../../data/projects.js";
 import { useLanguage } from "../../localization/LanguageContext.jsx";
 
@@ -33,7 +34,7 @@ function SelectionList({ className, selection, choiceSelector, highlightClassNam
 export default function CollectionFilters({ prefix, project, occasion, appearance, themeOptions, availableColors, showAppearance, hasFilters, onCategoryChange, onChange, onReset }) {
   const { t } = useLanguage();
   const selectedCategory = project?.id ?? "all";
-  const categories = [{ id: "all", captionKey: "invitations.all" }, ...projects.map((item) => ({ ...item, captionKey: `common.${item.id}` }))];
+  const categories = [{ id: "all", captionKey: "invitations.all" }, ...projects.map((item) => ({ ...item, captionKey: `common.${item.id}` })), onlineOrderCategory];
   function toggleChoice(key, id) {
     const selected = appearance[key];
     onChange({ [key]: (selected.includes(id) ? selected.filter((value) => value !== id) : [...selected, id]).join(",") });
@@ -47,7 +48,7 @@ export default function CollectionFilters({ prefix, project, occasion, appearanc
         const selected = selectedCategory === item.id;
         return <div className="sidebar-category-item" key={item.id} data-category={item.id}>
           <label className="sidebar-filter-choice sidebar-category-choice" data-selected={selected}>
-            <input type="radio" name={`${prefix}-category`} value={item.id} checked={selected} onClick={() => { if (selected && item.id !== "all") onCategoryChange(null); }} onKeyDown={(event) => { if (event.currentTarget.checked && item.id !== "all" && event.key === " ") { event.preventDefault(); onCategoryChange(null); } }} onChange={() => onCategoryChange(projects.find((category) => category.id === item.id) ?? null)} />
+            <input type="radio" name={`${prefix}-category`} value={item.id} checked={selected} onClick={() => { if (selected && item.id !== "all") onCategoryChange(null); }} onKeyDown={(event) => { if (event.currentTarget.checked && item.id !== "all" && event.key === " ") { event.preventDefault(); onCategoryChange(null); } }} onChange={() => onCategoryChange(item.id === onlineOrderCategory.id ? onlineOrderCategory : projects.find((category) => category.id === item.id) ?? null)} />
             <span>{t(item.captionKey)}</span>
             {item.subcategories?.length ? <InvitationArtwork name={selected ? "chevron-down" : "chevron-right"} size={16} /> : null}
           </label>
@@ -77,7 +78,7 @@ export default function CollectionFilters({ prefix, project, occasion, appearanc
         <legend>{t("catalog.colorLabel")}</legend>
         <div className="catalog-color-options">{catalogColorOptions.map((option) => {
           const selected = appearance.colors.includes(option.id);
-          return <button key={option.id} type="button" className="catalog-color-choice" data-color-filter={option.id} aria-label={t(`catalog.color.${option.id}`)} title={t(`catalog.color.${option.id}`)} aria-pressed={selected} disabled={!selected && !availableColors.includes(option.id)} onClick={() => toggleChoice("colors", option.id)}><span className="catalog-color-swatch" style={{ backgroundColor: option.hex }} /><span className="catalog-color-check" aria-hidden="true">{selected ? "✓" : ""}</span></button>;
+          return <button key={option.id} type="button" className="catalog-color-choice" data-color-filter={option.id} aria-label={t(`catalog.color.${option.id}`)} title={t(`catalog.color.${option.id}`)} aria-pressed={selected} disabled={!selected && !availableColors.includes(option.id)} onClick={() => toggleChoice("colors", option.id)}><span className="catalog-color-swatch" style={{ backgroundColor: option.hex }} /><span className="catalog-color-check" aria-hidden="true">{selected ? <InvitationArtwork name="check" size={14} /> : null}</span></button>;
         })}</div>
       </fieldset>
     </> : null}

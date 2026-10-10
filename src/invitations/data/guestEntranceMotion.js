@@ -1,5 +1,6 @@
 // Shared timing contract: CSS uses the same durations for its visual transitions.
 export function getEntranceTransition(entrance, phase, reducedMotion) {
+  if (phase === "opening" && ["embossedIvoryEnvelope", "embossedSageEnvelope"].includes(entrance)) return { next: "finishing", duration: reducedMotion ? 0 : 2600, celebrationDelay: reducedMotion ? null : 2100 };
   if (phase === "opening" && ["bordeauxLaceEnvelope", "greenLaceEnvelope", "roseFiberEnvelope"].includes(entrance)) return { next: "opened", duration: reducedMotion ? 0 : 4600, celebrationDelay: reducedMotion ? null : 4100 };
   if (phase === "opening" && entrance === "stampedPaper") return { next: "opened", duration: reducedMotion ? 0 : 2200, celebrationDelay: reducedMotion ? null : 1100 };
   if (phase === "opening" && ["classicBurgundyEnvelope", "ivoryPaperEnvelope", "pinkPaperEnvelope", "bluePaperEnvelope", "redVelvetEnvelope", "redPortraitEnvelope", "pastelGreenEnvelope", "embossedIvoryEnvelope", "embossedSageEnvelope", "embossedBurgundyEnvelope"].includes(entrance)) return { next: "opened", duration: reducedMotion ? 0 : 4600, celebrationDelay: reducedMotion ? null : 3900 };

@@ -1,10 +1,13 @@
 import { getCelebrationSubcategory, normalizeOccasion, projects } from "../../data/projects.js";
 import { invitationStyleOptions } from "./invitationStyles.js";
 
+export const onlineOrderCategory = { id: "order-online", slug: "order-online", captionKey: "nav.orderOnline" };
+
 const legacyStyleKeys = ["birthdayStyle", "weddingStyle", "corporateStyle", "otherStyle"];
 
 export function readCatalogCategory(searchParams) {
   const requested = (searchParams.get("category") ?? searchParams.get("type"))?.toLowerCase();
+  if (requested === onlineOrderCategory.id) return onlineOrderCategory;
   if (["other", "other-celebrations"].includes(requested)) {
     const id = ["gender-reveal", "christening"].includes(searchParams.get("occasion")) ? "baby-kids" : "pre-wedding";
     return projects.find((project) => project.id === id);

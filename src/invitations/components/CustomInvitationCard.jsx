@@ -12,12 +12,12 @@ export default function CustomInvitationCard({ category, animationIndex = 0 }) {
     id={`design-custom-${category}`}
     className="invitation-card invitation-showcase-card invitation-card--glass invitation-card--custom"
     style={{ "--catalog-card-delay": `${Math.min(animationIndex, 6) * 40}ms` }}
-    to={`/invitations/create/${category}/designs`}
-    aria-label={`${t("customCollection.heading")}: ${categoryName}`}>
+    to={`/order-online${category === "christening" || category === "baby-kids" ? "?occasion=christening" : category === "wedding" ? "?occasion=wedding" : ""}`}
+    aria-label={`${t("nav.orderOnline")}: ${categoryName}`}>
     <div className="invitation-card-media custom-design-preview">
       <img className="custom-design-artwork" src="/images/custom-classical/custom-design-envelope.jpg" alt="" />
       <span className="custom-design-copy"><strong>{copy.title}</strong><span>{copy.edit}</span><span className="custom-design-image-hint"><span>{copy.images}</span><InvitationArtwork name="image" size={32} /></span></span>
     </div>
-    <span className="invitation-card-bottom"><span><strong>{t("customCollection.heading")}</strong><small>{hint}</small></span></span>
+    <span className="invitation-card-bottom"><span><strong>{t("nav.orderOnline")}</strong><small>{hint}</small></span></span>
   </Link>;
 }

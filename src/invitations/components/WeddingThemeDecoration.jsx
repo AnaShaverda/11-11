@@ -5,7 +5,7 @@ import EmbossedWaxSeal from './EmbossedWaxSeal.jsx';
 import InvitationArtwork from "./InvitationArtwork.jsx";
 import { useLanguage } from '../../localization/LanguageContext.jsx';
 
-const themeFonts = { somethingBlue: 'magnola', pressedRose: 'elegance', pearlLetter: 'casmera', lilacWhisper: 'magnola', meadowMorning: 'magnola', autumn: 'casmera', rtveli: 'zalino', embossedIvory: 'elegance', embossedSage: 'magnola' };
+const themeFonts = { somethingBlue: 'magnola', pressedRose: 'elegance', pearlLetter: 'casmera', lilacWhisper: 'magnola', autumn: 'casmera', rtveli: 'zalino', embossedIvory: 'elegance', embossedSage: 'magnola' };
 
 // Each mask isolates a complete botanical cluster in the transparent source.
 // The preview positions these pieces independently without scaling either axis.
@@ -16,7 +16,6 @@ const ornamentPieces = {
   pearlLetter: [['top', 'inset(0 0 57% 0)'], ['bottom', 'inset(63% 0 0)']],
   lilacWhisper: [['top', 'inset(0 0 27% 0)'], ['bottom', 'inset(73% 0 0)']],
 
-  meadowMorning: [['top', 'inset(0 0 66% 0)'], ['bottom', 'inset(42% 0 0)']],
   autumn: [['top', 'inset(0 0 57% 0)'], ['bottom', 'inset(49% 0 0)']],
   rtveli: [['top', 'inset(0 0 52% 0)'], ['bottom', 'inset(48% 0 0)']],
 };
