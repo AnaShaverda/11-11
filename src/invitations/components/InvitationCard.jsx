@@ -1,3 +1,4 @@
+import PizzaExperienceCover from "./PizzaExperienceCover.jsx";
 import PinkAfterpartyPoster from "./PinkAfterpartyPoster.jsx";
 import SpiderBirthdayPoster from "./SpiderBirthdayPoster.jsx";
 import PocketArcadePoster from "./PocketArcadePoster.jsx";
@@ -92,6 +93,8 @@ export function InvitationArtwork({
       )
       .map(([, value]) => String(value)),
   );
+  if (["birthday-little-pizza-chef", "birthday-slice-club"].includes(template.slug))
+    return <PizzaExperienceCover variant={template.visual} className={className} ariaLabel={ariaLabel} />;
   if (template.slug === "birthday-pink-glam")
     return <PinkAfterpartyPoster sample={sample} language={language} className={className} ariaLabel={ariaLabel}/>;
   if (["birthday-city-after-dark", "birthday-comic-cutout"].includes(template.slug))

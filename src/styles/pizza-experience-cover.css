@@ -1,0 +1,24 @@
+@font-face{font-family:Pizza Cover Editorial;src:url('/fonts/playground/fraunces.ttf') format('truetype');font-weight:100 900;font-display:swap}
+.pizza-experience-cover{position:relative;width:100%;height:100%;overflow:hidden;container-type:inline-size;background:#fff4db;color:#244a38;text-align:left}
+.pizza-experience-cover *{box-sizing:border-box}
+.pizza-cover-scene{position:absolute;inset:14% 5% 8%;display:grid;grid-template-columns:1.05fr 1fr;align-items:center}
+.pizza-cover-copy{position:relative;z-index:1;min-width:0}
+.pizza-experience-cover p{margin:0}
+.pizza-experience-cover :is(p,.pizza-cover-action){font-family:Arial,'Noto Sans Georgian',sans-serif!important}
+.pizza-cover-eyebrow{font-size:1.9cqw;line-height:1.5;letter-spacing:.12em;font-weight:700;color:#d73525;margin-bottom:4cqw!important}
+.pizza-experience-cover .pizza-cover-title{display:block;font-family:'Pizza Cover Editorial','Noto Serif Georgian',Georgia,serif!important;font-size:8.3cqw;line-height:.96;letter-spacing:-.055em;font-weight:850;font-variation-settings:'SOFT' 0,'WONK' 1,'opsz' 144}
+.pizza-cover-party{font-family:'Pizza Cover Editorial','Noto Serif Georgian',Georgia,serif!important;font-size:3.3cqw;line-height:1.2;margin-top:3cqw!important;font-weight:800}
+.pizza-cover-age{font-size:2.6cqw;font-weight:700;margin-top:2.5cqw!important}
+.pizza-cover-date{font-size:1.8cqw;line-height:1.6;margin-top:1.4cqw!important}
+.pizza-cover-action{display:inline-block;margin-top:4cqw;padding:2cqw 3cqw;background:#d73525;color:#fff4db;border-radius:1.3cqw;font-size:2.2cqw;font-weight:600;line-height:1.4}
+.pizza-cover-art{display:block;width:135%;max-width:none;margin-left:-20%;transform:rotate(-8deg)}
+.pizza-cover-awning{position:absolute;top:0;left:0;width:48%;height:6cqw;background:repeating-linear-gradient(90deg,#d73525 0 3cqw,#f4dba8 3cqw 6cqw);border-radius:0 0 2cqw 2cqw}
+.pizza-experience-cover--club{background:#8caed0;color:#233d58;padding:4%}
+.pizza-experience-cover--club .pizza-cover-scene{inset:4%;padding:5%;border:1.7cqw solid #faf2dc;border-radius:4cqw;grid-template-columns:.85fr 1.15fr;gap:2%}
+.pizza-experience-cover--club .pizza-cover-title{color:#c71f2b;font-size:9cqw}
+.pizza-experience-cover--club .pizza-cover-eyebrow{color:inherit;font-size:2.8cqw;letter-spacing:0;font-weight:400;margin-bottom:2.6cqw!important}
+.pizza-cover-note{font-size:2.6cqw;line-height:1.6;margin-top:3cqw!important}
+.pizza-experience-cover--club .pizza-cover-art{width:100%;margin:0;transform:none}
+.pizza-experience-cover--club .pizza-cover-action{background:#c71f2b;color:#faf2dc;border-radius:5cqw;padding:2cqw 2.8cqw}
+.pizza-experience-cover[lang='ka'] .pizza-cover-title{font-size:6.5cqw;line-height:1.12;letter-spacing:-.035em}
+.pizza-experience-cover::before,.pizza-experience-cover::after{content:none!important}
